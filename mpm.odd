@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Title</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication Information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="mpm" start="mpm">
+<!--        <moduleRef key="header"/>-->
+<!--        <moduleRef key="core"/>-->
+<!--        <moduleRef key="tei"/>-->
+<!--        <moduleRef key="textstructure"/>-->
+        
+        <moduleSpec ident="meta" mode="add" >
+          <desc>metadata</desc>
+        </moduleSpec>
+        
+        <classSpec ident="att.nameable" type="atts">
+          <attList>
+            <attDef ident="name">
+              <datatype>
+                <rng:data type="string"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <classSpec ident="att.midi" type="atts">
+          <attList>
+            <attDef ident="port">
+              <datatype>
+                <rng:data type="integer"/>
+              </datatype>
+            </attDef>
+            <attDef ident="channel">
+              <constraintSpec ident="att.channel" scheme="schematron">
+                <constraint>
+                  <rng:data type="integer"/>
+                </constraint>
+              </constraintSpec>
+              <valList type="closed">
+                <valItem ident="1">
+                  <gloss>1</gloss>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <elementSpec ident="mpm" mode="add" ns="http://www.zemfi.de/ns/mpm/1.0">
+          <desc>root element of mpm</desc>
+          <content>
+            <elementRef key="meta"/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="meta" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+          <desc>metadata concerning the pieces structure</desc>
+          <content>
+            
+            <elementRef key="global"/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="global" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+          <content>
+            <elementRef key="header"/>
+            <elementRef key="dated"/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="part" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+          <content>
+            <!--<attribute xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+              <anyName></anyName>
+              <data></data>
+            </attribute>-->
+            <classRef key="att.named"/>
+            <elementRef key="header"/>
+            <elementRef key="dated"/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="header" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+          <content>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="dated" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+          <content>
+          </content>
+        </elementSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
