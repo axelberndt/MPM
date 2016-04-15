@@ -27,8 +27,26 @@
         <moduleSpec ident="meta" mode="add" >
           <desc>metadata</desc>
         </moduleSpec>
+        <moduleSpec ident="header" mode="add" >
+          <desc>header</desc>
+        </moduleSpec>
+        <moduleSpec ident="dated" mode="add" >
+          <desc>dated</desc>
+        </moduleSpec>
+        <moduleSpec ident="vienna" mode="add" >
+          <desc>dated</desc>
+        </moduleSpec>
+        <moduleSpec ident="artic" mode="add" >
+          <desc>dated</desc>
+        </moduleSpec>
         
-        <classSpec ident="att.nameable" type="atts">
+        <!-- module HEADER -->
+        
+        <classSpec ident="model.header" type="model" module="header" mode="add">
+          <desc>The header class</desc>
+        </classSpec>
+        
+        <classSpec ident="att.nameable" type="atts" mode="add">
           <attList>
             <attDef ident="name">
               <datatype>
@@ -38,7 +56,30 @@
           </attList>
         </classSpec>
         
-        <classSpec ident="att.midi" type="atts">
+        <classSpec ident="att.partLike" type="atts" mode="add">
+          <classes>
+            <memberOf key="att.nameable"/>
+          </classes>
+          <attList>
+            <attDef ident="port">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            <attDef ident="channel">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">15</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <!--<classSpec ident="att.midi" type="atts" mode="add">
           <attList>
             <attDef ident="port">
               <datatype>
@@ -58,49 +99,369 @@
               </valList>
             </attDef>
           </attList>
-        </classSpec>
+        </classSpec>-->
         
-        <elementSpec ident="mpm" mode="add" ns="http://www.zemfi.de/ns/mpm/1.0">
+        <elementSpec ident="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add">
           <desc>root element of mpm</desc>
           <content>
-            <elementRef key="meta"/>
+            <macroRef key="macro.anyName"/>
           </content>
         </elementSpec>
         
-        <elementSpec ident="meta" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+        <macroSpec ident="macro.anyName" mode="add">
+          <desc>An element with an arbitrary name</desc>
+          <content>
+            <rng:oneOrMore>
+              <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
+                <rng:anyName>
+                  <rng:except>
+                    <rng:nsName ns=""/>
+                    <rng:name>mpm</rng:name>
+                    <rng:name>global</rng:name>
+                    <rng:name>header</rng:name>
+                    <rng:name>loop</rng:name>
+                    <rng:name>mute</rng:name>
+                    <rng:name>articulationStyles</rng:name>
+                    <rng:name>dated</rng:name>
+                    <rng:name>part</rng:name>
+                  </rng:except>
+                </rng:anyName>
+                <!--<rng:group mode="add">
+                  <rng:ref key="global" atLeast="1" atMost="1"/>
+                  <rng:oneOrMore atLeast="1">
+                    <rng:ref key="part"/>
+                  </rng:oneOrMore>
+                </rng:group>-->
+                <rng:choice>
+                  <rng:ref name="model.anyName.performance"/>
+                  <rng:ref name="model.anyName.articStyles"/>
+                </rng:choice>
+              </rng:element>
+            </rng:oneOrMore>
+          </content>
+        </macroSpec>
+        
+        <macroSpec ident="model.anyName.performance" mode="add">
+          <desc>content of anyName</desc>
+          <content>
+            <rng:group atLeast="1">
+              <rng:ref name="global"/>
+              <rng:oneOrMore>
+                <rng:ref name="part"  atLeast="1"/>
+              </rng:oneOrMore>
+            </rng:group>
+          </content>
+        </macroSpec>
+        
+        <macroSpec ident="model.anyName.articStyles" mode="add">
+          <desc>content of anyName in articulationStyles</desc>
+          
+          <content autoPrefix="false">
+            <rng:oneOrMore>
+              <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
+                <rng:anyName>
+                  <rng:except>
+                    <rng:nsName ns=""/>
+                    <rng:name>mpm</rng:name>
+                    <rng:name>global</rng:name>
+                    <rng:name>header</rng:name>
+                    <rng:name>loop</rng:name>
+                    <rng:name>mute</rng:name>
+                    <rng:name>articulationStyles</rng:name>
+                    <rng:name>dated</rng:name>
+                    <rng:name>part</rng:name>
+                    <rng:name>articulationStyles</rng:name>
+                  </rng:except>
+                </rng:anyName>
+                <!--<rng:ref name="att.artic" mode="add"/>-->
+                <rng:attribute>
+                  <rng:name>test</rng:name>
+                  <rng:text/>
+                </rng:attribute>
+                
+                <!--<rng:group mode="add">
+                  <rng:ref key="global" atLeast="1" atMost="1"/>
+                  <rng:oneOrMore atLeast="1">
+                    <rng:ref key="part"/>
+                  </rng:oneOrMore>
+                </rng:group>-->
+                <!--<rng:choice>
+                  <rng:ref name="model.anyName.performance"/>
+                  <rng:ref name="model.anyName.articStyles"/>
+                </rng:choice>-->
+                <rng:empty/>
+              </rng:element>
+            </rng:oneOrMore>
+          </content>
+        </macroSpec>
+        
+        <macroSpec ident="model.anyName.articStyles.artic" mode="add">
+          <desc>content of anyName in articulationStyles</desc>
+          <content>
+            
+          </content>
+        </macroSpec>
+        
+        <!--<elementSpec ident="meta" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
           <desc>metadata concerning the pieces structure</desc>
           <content>
             
             <elementRef key="global"/>
           </content>
-        </elementSpec>
+        </elementSpec>-->
         
-        <elementSpec ident="global" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+        
+        <elementSpec ident="global" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
           <content>
             <elementRef key="header"/>
             <elementRef key="dated"/>
           </content>
         </elementSpec>
         
-        <elementSpec ident="part" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+        <elementSpec ident="part" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
+          <classes>
+            <memberOf key="att.partLike"/>
+          </classes>
           <content>
-            <!--<attribute xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+            <!--<attribute xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
               <anyName></anyName>
               <data></data>
             </attribute>-->
-            <classRef key="att.named"/>
+            <classRef key="att.nameable"/>
             <elementRef key="header"/>
             <elementRef key="dated"/>
           </content>
         </elementSpec>
         
-        <elementSpec ident="header" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+        <elementSpec ident="header" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
           <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.header"/>
+            </rng:zeroOrMore>
           </content>
         </elementSpec>
         
-        <elementSpec ident="dated" ns="http://www.zemfi.de/ns/mpm/1.0" module="meta" mode="add">
+        <elementSpec ident="correspondingMidiFile" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
+          <desc>MIDI file reference</desc>
+          <classes>
+            <memberOf key="model.header"/>
+            <memberOf key="att.nameable"/>
+          </classes>
+          <!--<attList>
+            <attRef class="att.nameable"/>
+          </attList>-->
           <content>
+            <rng:empty/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="loop" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="model.header"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="mute" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="model.header"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+        </elementSpec>
+        
+        <classSpec ident="att.vienna" type="atts" module="vienna" mode="add">
+          <classes>
+            <memberOf key="att.velX"/>
+          </classes>
+          <attList>
+            <attDef ident="velXFadeOnOff">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            <attDef ident="velXFade">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            <attDef ident="hSpan">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            <attDef ident="vSpan">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <classSpec ident="att.artic" type="atts" module="artic" mode="add">
+          <attList>
+            <attDef ident="absoluteVelocity">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            <attDef ident="absoluteVelocityChange">
+              <datatype>
+                <rng:data type="int">
+                  <!--<rng:param name="minInclusive">-127</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>-->
+                </rng:data>
+              </datatype>
+            </attDef>
+            <attDef ident="relativeDuration">
+              <datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0.0</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            
+            <attDef ident="absoluteDurationMs">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            
+            <attDef ident="absoluteDurationChange">
+              <datatype>
+                <rng:data type="int"/>
+              </datatype>
+            </attDef>
+            
+          </attList>
+        </classSpec>
+        
+        <elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="model.header"/>
+            <memberOf key="att.vienna"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="model.header"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="macro.anyName"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        
+        <!-- module DATED -->
+        
+        <classSpec ident="class.map" type="model" mode="add">
+          <desc>map elements</desc>
+        </classSpec>
+        
+        <classSpec ident="att.dated" type="atts" mode="add">
+          <attList>
+            <attDef ident="date">
+              <datatype>
+                <rng:data type="int"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="class.map"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="class.map"/>
+            <memberOf key="att.dated"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="element"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="class.map"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="element"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="class.map"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="element"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="class.map"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="element"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="element" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <classes>
+            <memberOf key="class.dated"/>
+            <memberOf key="att.dated"/>
+          </classes>
+          <content>
+            <rng:empty/>
           </content>
         </elementSpec>
       </schemaSpec>
