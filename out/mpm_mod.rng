@@ -210,7 +210,31 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       </attribute>
     </optional>
   </define>
-  <define name="viennaCtrls">
+  <define name="att.beat.attributes">
+      <ref name="att.beat.attribute.bpm"/>
+      <ref name="att.beat.attribute.beatLength"/>
+   </define>
+   <define name="att.beat.attribute.bpm">
+      <optional>
+         <attribute name="bpm">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int">
+               <param name="minInclusive">0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.beat.attribute.beatLength">
+      <optional>
+         <attribute name="beatLength">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="decimal">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="viennaCtrls">
     <element name="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0">
       <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</a:documentation>
       <empty/>
@@ -257,11 +281,14 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
     <element name="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0">
       <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</a:documentation>
       <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
         <ref name="element"/>
       </zeroOrMore>
-      <ref name="att.dated.attributes"/>
-      <empty/>
-    </element>
+      </element>
   </define>
   <define name="articulationmap">
     <element name="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -292,7 +319,8 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</a:documentation>
       <empty/>
       <ref name="att.dated.attributes"/>
-      <empty/>
+      <ref name="att.beat.attributes"/>
+         <empty/>
     </element>
   </define>
 
