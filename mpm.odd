@@ -23,7 +23,9 @@
 <!--        <moduleRef key="core"/>-->
 <!--        <moduleRef key="tei"/>-->
 <!--        <moduleRef key="textstructure"/>-->
-        
+        <moduleSpec ident="mpm" mode="add" >
+          <desc>metadata</desc>
+        </moduleSpec>
         <moduleSpec ident="meta" mode="add" >
           <desc>metadata</desc>
         </moduleSpec>
@@ -34,10 +36,10 @@
           <desc>dated</desc>
         </moduleSpec>
         <moduleSpec ident="vienna" mode="add" >
-          <desc>dated</desc>
+          <desc>vienna</desc>
         </moduleSpec>
         <moduleSpec ident="artic" mode="add" >
-          <desc>dated</desc>
+          <desc>artic</desc>
         </moduleSpec>
         
         <!-- module HEADER -->
@@ -199,6 +201,14 @@
             </rng:oneOrMore>
           </content>
         </macroSpec>
+        
+        <!--<macroSpec ident="macro.att.anyName" mode="add">
+          <content>
+            <rng:attribute>
+              <rng:anyName/>
+            </rng:attribute>
+          </content>
+        </macroSpec>-->
         
         <!--<macroSpec ident="model.anyName.articStyles.artic" mode="add">
           <desc>content of anyName in articulationStyles</desc>
@@ -406,6 +416,31 @@
           </attList>
         </classSpec>
         
+        <classSpec ident="att.beat" type="atts" module="artic" mode="add">
+          <attList>
+            <attDef ident="bpm">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            
+            <attDef ident="beatLength">
+              <datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0.0</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <!--<classSpec ident="class.att.anyName" type="atts" module="mpm" mode="add">
+          <attList>
+            <attDef ident=""></attDef>
+          </attList>
+        </classSpec>-->
+        
         <elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
           <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
           <classes>
@@ -457,9 +492,14 @@
           <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
           <classes>
             <memberOf key="class.map"/>
-            <memberOf key="att.dated"/>
+<!--            <memberOf key="class.att.anyName"/>-->
           </classes>
           <content>
+            <rng:zeroOrMore>
+              <rng:attribute>
+                <rng:anyName/>
+              </rng:attribute>
+            </rng:zeroOrMore>
             <rng:zeroOrMore>
               <rng:ref name="element"/>
             </rng:zeroOrMore>
@@ -505,8 +545,8 @@
         <elementSpec ident="element" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
           <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
           <classes>
-            <memberOf key="class.dated"/>
             <memberOf key="att.dated"/>
+            <memberOf key="att.beat"/>
           </classes>
           <content>
             <rng:empty/>
