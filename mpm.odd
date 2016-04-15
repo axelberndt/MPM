@@ -155,8 +155,11 @@
         
         <macroSpec ident="model.anyName.articStyles" mode="add">
           <desc>content of anyName in articulationStyles</desc>
-          
-          <content autoPrefix="false">
+          <!--<content autoPrefix="false">
+            <classRef key="att.artic"/>
+            <macroRef key="model.anyName.articStyles.artic"/>
+          </content>-->
+          <content>
             <rng:oneOrMore>
               <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
                 <rng:anyName>
@@ -173,11 +176,13 @@
                     <rng:name>articulationStyles</rng:name>
                   </rng:except>
                 </rng:anyName>
-                <!--<rng:ref name="att.artic" mode="add"/>-->
-                <rng:attribute>
-                  <rng:name>test</rng:name>
-                  <rng:text/>
-                </rng:attribute>
+                <rng:ref name="att.artic" mode="add"/>
+                <!--<rng:attribute>
+                  <rng:optional>
+                    <rng:ref name="relativeDuration"/>
+                  </rng:optional>
+                  
+                </rng:attribute>-->
                 
                 <!--<rng:group mode="add">
                   <rng:ref key="global" atLeast="1" atMost="1"/>
@@ -189,19 +194,62 @@
                   <rng:ref name="model.anyName.performance"/>
                   <rng:ref name="model.anyName.articStyles"/>
                 </rng:choice>-->
-                <rng:empty/>
+<!--                <rng:empty/>-->
               </rng:element>
             </rng:oneOrMore>
           </content>
         </macroSpec>
         
-        <macroSpec ident="model.anyName.articStyles.artic" mode="add">
+        <!--<macroSpec ident="model.anyName.articStyles.artic" mode="add">
           <desc>content of anyName in articulationStyles</desc>
           <content>
+            <classRef key="att.artic"/>
+            <macroRef key="content"/>
             
           </content>
-        </macroSpec>
+        </macroSpec>-->
         
+        <!--<macroSpec ident="content">
+          <content>
+            <rng:oneOrMore>
+              <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
+                <rng:anyName>
+                  <rng:except>
+                    <rng:nsName ns=""/>
+                    <rng:name>mpm</rng:name>
+                    <rng:name>global</rng:name>
+                    <rng:name>header</rng:name>
+                    <rng:name>loop</rng:name>
+                    <rng:name>mute</rng:name>
+                    <rng:name>articulationStyles</rng:name>
+                    <rng:name>dated</rng:name>
+                    <rng:name>part</rng:name>
+                    <rng:name>articulationStyles</rng:name>
+                  </rng:except>
+                </rng:anyName>
+                <!-\-                <rng:ref name="att.artic" mode="add"/>-\->
+                <!-\-<rng:attribute>
+                  <rng:optional>
+                    <rng:ref name="relativeDuration"/>
+                  </rng:optional>
+                  
+                </rng:attribute>-\->
+                
+                <!-\-<rng:group mode="add">
+                  <rng:ref key="global" atLeast="1" atMost="1"/>
+                  <rng:oneOrMore atLeast="1">
+                    <rng:ref key="part"/>
+                  </rng:oneOrMore>
+                </rng:group>-\->
+                <!-\-<rng:choice>
+                  <rng:ref name="model.anyName.performance"/>
+                  <rng:ref name="model.anyName.articStyles"/>
+                </rng:choice>-\->
+                <rng:empty/>
+              </rng:element>
+            </rng:oneOrMore>
+          </content>
+        </macroSpec>-->
         <!--<elementSpec ident="meta" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
           <desc>metadata concerning the pieces structure</desc>
           <content>
