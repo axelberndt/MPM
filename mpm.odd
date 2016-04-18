@@ -115,7 +115,7 @@
         </elementSpec>
         
         <macroSpec ident="macro.anyName" mode="add">
-          <desc>An element with an arbitrary name</desc>
+          <desc>An element with an arbitrary name, except those predefine by MSM.</desc>
           <content>
             <rng:oneOrMore>
               <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -124,20 +124,22 @@
                     <rng:nsName ns=""/>
                     <rng:name>mpm</rng:name>
                     <rng:name>global</rng:name>
+                    <rng:name>part</rng:name>
                     <rng:name>header</rng:name>
+                    <rng:name>correspondingMidiFile</rng:name>
                     <rng:name>loop</rng:name>
                     <rng:name>mute</rng:name>
+                    <rng:name>viennaCtrls</rng:name>
                     <rng:name>articulationStyles</rng:name>
                     <rng:name>dated</rng:name>
-                    <rng:name>part</rng:name>
+                    <rng:name>dynamicsmap</rng:name>
+                    <rng:name>articulationmap</rng:name>
+                    <rng:name>tempomap</rng:name>
+                    <rng:name>barEmphasismap</rng:name>
+                    <rng:name>element</rng:name>
+                    <rng:name>switch</rng:name>
                   </rng:except>
                 </rng:anyName>
-                <!--<rng:group mode="add">
-                  <rng:ref key="global" atLeast="1" atMost="1"/>
-                  <rng:oneOrMore atLeast="1">
-                    <rng:ref key="part"/>
-                  </rng:oneOrMore>
-                </rng:group>-->
                 <rng:choice>
                   <rng:ref name="model.anyName.performance"/>
                   <rng:ref name="model.anyName.articStyles"/>
@@ -173,13 +175,20 @@
                     <rng:nsName ns=""/>
                     <rng:name>mpm</rng:name>
                     <rng:name>global</rng:name>
+                    <rng:name>part</rng:name>
                     <rng:name>header</rng:name>
+                    <rng:name>correspondingMidiFile</rng:name>
                     <rng:name>loop</rng:name>
                     <rng:name>mute</rng:name>
+                    <rng:name>viennaCtrls</rng:name>
                     <rng:name>articulationStyles</rng:name>
                     <rng:name>dated</rng:name>
-                    <rng:name>part</rng:name>
-                    <rng:name>articulationStyles</rng:name>
+                    <rng:name>dynamicsmap</rng:name>
+                    <rng:name>articulationmap</rng:name>
+                    <rng:name>tempomap</rng:name>
+                    <rng:name>barEmphasismap</rng:name>
+                    <rng:name>element</rng:name>
+                    <rng:name>switch</rng:name>
                   </rng:except>
                 </rng:anyName>
                 <rng:ref name="att.artic" mode="add"/>
