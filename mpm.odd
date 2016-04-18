@@ -520,11 +520,10 @@
           </content>
         </elementSpec>
         
-        <elementSpec ident="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+        <elementSpec ident="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <desc>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</desc>
           <classes>
             <memberOf key="class.map"/>
-<!--            <memberOf key="class.att.anyName"/>-->
           </classes>
           <content>
             <rng:zeroOrMore>
