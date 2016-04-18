@@ -458,6 +458,7 @@
         </classSpec>
         
         <classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
+          <desc>Group of dynamics attributes.</desc>
           <attList>
             <attDef ident="volume">
               <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
@@ -467,11 +468,6 @@
             </attDef>
           </attList>
         </classSpec>
-        <!--<classSpec ident="class.att.anyName" type="atts" module="mpm" mode="add">
-          <attList>
-            <attDef ident=""></attDef>
-          </attList>
-        </classSpec>-->
         
         <elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
           <desc>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
