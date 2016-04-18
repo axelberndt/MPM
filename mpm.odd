@@ -499,7 +499,7 @@
         <!-- module DATED -->
         
         <classSpec ident="class.map" type="model" mode="add">
-          <desc>map elements</desc>
+          <desc>class.map groups all map elements.</desc>
         </classSpec>
         
         <classSpec ident="att.dated" type="atts" mode="add">
