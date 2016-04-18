@@ -39,7 +39,7 @@
           <desc>dated</desc>
         </moduleSpec>
         <moduleSpec ident="vienna" mode="add" >
-          <desc>vienna</desc>
+          <desc>The vienna module adds features for encoding Vienna Instruments velocityXFade controllers.</desc>
         </moduleSpec>
         <moduleSpec ident="artic" mode="add" >
           <desc>artic</desc>
@@ -337,11 +337,9 @@
         </elementSpec>
         
         <classSpec ident="att.vienna" type="atts" module="vienna" mode="add">
-          <classes>
-            <memberOf key="att.velX"/>
-          </classes>
           <attList>
             <attDef ident="velXFadeOnOff">
+              <desc>Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
               <datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -350,6 +348,7 @@
               </datatype>
             </attDef>
             <attDef ident="velXFade">
+              <desc>Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
               <datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -358,6 +357,7 @@
               </datatype>
             </attDef>
             <attDef ident="hSpan">
+              <desc>Controller number for switching the performance-matrix column (duration), standard value is 21.</desc>
               <datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -366,6 +366,7 @@
               </datatype>
             </attDef>
             <attDef ident="vSpan">
+              <desc>Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</desc>
               <datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -473,7 +474,7 @@
         </classSpec>-->
         
         <elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding.</desc>
+          <desc>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
           <classes>
             <memberOf key="model.header"/>
             <memberOf key="att.vienna"/>
