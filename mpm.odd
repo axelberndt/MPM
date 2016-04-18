@@ -538,8 +538,8 @@
           </content>
         </elementSpec>
         
-        <elementSpec ident="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+        <elementSpec ident="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <desc>Encoded in local contexts dated-element. Articulation instructions are encoded in this map's child elements.</desc>
           <classes>
             <memberOf key="class.map"/>
           </classes>
