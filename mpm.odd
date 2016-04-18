@@ -438,6 +438,7 @@
         </classSpec>
         
         <classSpec ident="att.beat" type="atts" module="artic" mode="add">
+          <desc>Group of attributes corresponding to beats.</desc>
           <attList>
             <attDef ident="bpm">
               <datatype>
