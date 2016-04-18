@@ -473,7 +473,7 @@
         </classSpec>-->
         
         <elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <desc>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding.</desc>
           <classes>
             <memberOf key="model.header"/>
             <memberOf key="att.vienna"/>
