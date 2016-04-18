@@ -553,8 +553,8 @@
           </content>
         </elementSpec>
         
-        <elementSpec ident="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+        <elementSpec ident="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <desc>Allowed in global or local context as child of dated-element. Contains dated tempo instructions.</desc>
           <classes>
             <memberOf key="class.map"/>
           </classes>
@@ -565,8 +565,8 @@
           </content>
         </elementSpec>
         
-        <elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+        <elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <desc>Allowed in global or local context as child of dated-element. Groups information on bar-based beat accentuation.</desc>
           <classes>
             <memberOf key="class.map"/>
           </classes>
@@ -577,8 +577,8 @@
           </content>
         </elementSpec>
         
-        <elementSpec ident="element" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+        <elementSpec ident="element" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <desc>The element-element is used in many different contexts to indicate corresponding context-sensitive events.</desc>
           <classes>
             <memberOf key="att.dated"/>
             <memberOf key="att.beat"/>
@@ -589,7 +589,7 @@
           </content>
         </elementSpec>
         
-        <elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+        <elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <desc>Presence of the switch element indicates a change of articulation style at a certain date.</desc>
           <classes>
             <memberOf key="att.dated"/>
