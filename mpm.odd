@@ -52,6 +52,7 @@
         </classSpec>
         
         <classSpec ident="att.nameable" type="atts" mode="add">
+          <desc>Name attribute class.</desc>
           <attList>
             <attDef ident="name">
               <datatype>
