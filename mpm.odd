@@ -281,15 +281,12 @@
         </elementSpec>
         
         <elementSpec ident="part" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
+          <desc>Defines a part.</desc>
           <classes>
             <memberOf key="att.partLike"/>
           </classes>
           <content>
-            <!--<attribute xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
-              <anyName></anyName>
-              <data></data>
-            </attribute>-->
-            <classRef key="att.nameable"/>
+<!--            <classRef key="att.nameable"/>-->
             <elementRef key="header"/>
             <elementRef key="dated"/>
           </content>
