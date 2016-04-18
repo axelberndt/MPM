@@ -624,7 +624,7 @@
         </elementSpec>
         
         <elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>Presence of the switch element indicates a change of articulation style at a certain date.</desc>
+          <desc>Presence of the switch element indicates a change of articulation style at a certain date. If @style not defined, processing defaults to first child of articulationStyles element if no given value or given value not defined.</desc>
           <classes>
             <memberOf key="att.dated"/>
             <memberOf key="att.artic.ref"/>
