@@ -459,11 +459,9 @@
         <classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
           <attList>
             <attDef ident="volume">
+              <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
               <datatype>
-                <rng:data type="int">
-                  <rng:param name="minInclusive">0</rng:param>
-                  <rng:param name="maxInclusive">127</rng:param>
-                </rng:data>
+                <rng:text/>
               </datatype>
             </attDef>
           </attList>
