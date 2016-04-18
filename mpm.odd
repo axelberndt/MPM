@@ -379,7 +379,10 @@
         
         <classSpec ident="att.artic" type="atts" module="artic" mode="add">
           <attList>
+            
+            <!-- velocity -->
             <attDef ident="absoluteVelocity">
+              <desc>Gives an absolute value for velocity that will replace existing velocity values.</desc>
               <datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -387,15 +390,20 @@
                 </rng:data>
               </datatype>
             </attDef>
+            
             <attDef ident="absoluteVelocityChange">
+              <desc>Gives an absolute value (+/-) that will be added to the local velocity.</desc>
               <datatype>
                 <rng:data type="int">
+                  <!-- TODO: isn't there a sound basis for arguing minInclusive / maxInclusive to be  -127 / 127 -->
                   <!--<rng:param name="minInclusive">-127</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>-->
                 </rng:data>
               </datatype>
             </attDef>
-            <attDef ident="relativeDuration">
+            
+            <attDef ident="relativeVelocity">
+              <desc>Gives a relative amount of velocity change as decimal number, e.g. 1=100% (no change), 0.5% (half velocity), 2.0=200% (double velocity).</desc>
               <datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
@@ -403,7 +411,26 @@
               </datatype>
             </attDef>
             
+            <!-- duration -->
+            <attDef ident="absoluteDuration">
+              <desc>Gives an absolute value for duration (in MIDI ticks) that will replace existing local duration values.</desc>
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+            
+            <attDef ident="absoluteDurationChange">
+              <desc>Gives an absolute value (+/-) in MIDI ticks that will be added to the local duration values.</desc>
+              <datatype>
+                <rng:data type="int"/>
+              </datatype>
+            </attDef>
+            
             <attDef ident="absoluteDurationMs">
+              <desc>Gives an absolute duration in milliseconds that will replace existing local duration values.</desc>
               <datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -411,9 +438,19 @@
               </datatype>
             </attDef>
             
-            <attDef ident="absoluteDurationChange">
+            <attDef ident="absoluteDurationChangeMs">
+              <desc>Gives an absolute value (+/-) in milliseconds that will be added to existing local duration values.</desc>
               <datatype>
                 <rng:data type="int"/>
+              </datatype>
+            </attDef>
+            
+            <attDef ident="relativeDuration">
+              <desc>Gives a relative amount of duration change as decimal number, e.g. 1=100% (no change), 0.5% (half duration), 2.0=200% (double duration).</desc>
+              <datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0.0</rng:param>
+                </rng:data>
               </datatype>
             </attDef>
             
@@ -421,6 +458,7 @@
         </classSpec>
         
         <classSpec ident="att.artic.ref" type="atts" module="artic" mode="add">
+          <desc>Group of attributes for referencing articulation styles.</desc>
           <attList>
             <attDef ident="style">
               <!-- TODO Schematron for controlling allowed values according to header/articulationStyles/* local-name() -->
