@@ -485,7 +485,7 @@
         </elementSpec>
         
         <elementSpec ident="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
+          <desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</desc>
           <classes>
             <memberOf key="model.header"/>
           </classes>
