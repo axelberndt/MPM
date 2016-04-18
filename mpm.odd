@@ -26,6 +26,9 @@
         <moduleSpec ident="mpm" mode="add" >
           <desc>metadata</desc>
         </moduleSpec>
+        <moduleSpec ident="dynamics" mode="add" >
+          <desc>dynamics</desc>
+        </moduleSpec>
         <moduleSpec ident="meta" mode="add" >
           <desc>metadata</desc>
         </moduleSpec>
@@ -435,6 +438,19 @@
             </attDef>
           </attList>
         </classSpec>
+        
+        <classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
+          <attList>
+            <attDef ident="volume">
+              <datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
         <!--<classSpec ident="class.att.anyName" type="atts" module="mpm" mode="add">
           <attList>
             <attDef ident=""></attDef>
@@ -547,6 +563,7 @@
           <classes>
             <memberOf key="att.dated"/>
             <memberOf key="att.beat"/>
+            <memberOf key="att.dynamics"/>
           </classes>
           <content>
             <rng:empty/>
