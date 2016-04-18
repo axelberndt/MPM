@@ -419,6 +419,23 @@
           </attList>
         </classSpec>
         
+        <classSpec ident="att.artic.ref" type="atts" module="artic" mode="add">
+          <attList>
+            <attDef ident="style">
+              <!-- TODO Schematron for controlling allowed values according to header/articulationStyles/* local-name() -->
+              <datatype>
+                <rng:text/>
+              </datatype>
+            </attDef>
+            <attDef ident="standardArticulation">
+              <!-- TODO Schematron for controlling allowed values according to header/articulationStyles/*/* local-name() -->
+              <datatype>
+                <rng:text/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
         <classSpec ident="att.beat" type="atts" module="artic" mode="add">
           <attList>
             <attDef ident="bpm">
@@ -529,7 +546,10 @@
           </classes>
           <content>
             <rng:zeroOrMore>
-              <rng:ref name="element"/>
+              <rng:choice>
+                <rng:ref name="element"/>
+                <rng:ref name="switch"/>
+              </rng:choice>
             </rng:zeroOrMore>
           </content>
         </elementSpec>
@@ -564,6 +584,17 @@
             <memberOf key="att.dated"/>
             <memberOf key="att.beat"/>
             <memberOf key="att.dynamics"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dated" mode="add">
+          <desc>Presence of the switch element indicates a change of articulation style at a certain date.</desc>
+          <classes>
+            <memberOf key="att.dated"/>
+            <memberOf key="att.artic.ref"/>
           </classes>
           <content>
             <rng:empty/>
