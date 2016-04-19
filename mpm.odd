@@ -150,19 +150,53 @@
         </macroSpec>
         
         <macroSpec ident="model.anyName.performance" mode="add">
-          <desc>content of anyName</desc>
+          <desc>Content model for performance styles. The name of the performance style equals the element name.</desc><!-- TODO create metadata block -->
           <content>
             <rng:group atLeast="1">
               <rng:ref name="global"/>
               <rng:oneOrMore>
-                <rng:ref name="part"  atLeast="1"/>
+                <rng:ref name="part" atLeast="1"/>
               </rng:oneOrMore>
             </rng:group>
           </content>
         </macroSpec>
         
-        <macroSpec ident="model.anyName.articStyles" mode="add">
-          <desc>content of anyName in articulationStyles</desc>
+        <!--<classSpec ident="class.articStyles" type="model">
+          <desc>alternative for macro</desc>
+          <classes></classes>
+        </classSpec>-->
+        
+        <!--<elementSpec mode="add"  >
+          <classes>
+            <memberOf key="class.articStyles"/>
+          </classes>
+          <content>
+            <rng:anyName>
+                  <rng:except>
+                    <rng:nsName ns=""/>
+                    <rng:name>mpm</rng:name>
+                    <rng:name>global</rng:name>
+                    <rng:name>part</rng:name>
+                    <rng:name>header</rng:name>
+                    <rng:name>correspondingMidiFile</rng:name>
+                    <rng:name>loop</rng:name>
+                    <rng:name>mute</rng:name>
+                    <rng:name>viennaCtrls</rng:name>
+                    <rng:name>articulationStyles</rng:name>
+                    <rng:name>dated</rng:name>
+                    <rng:name>dynamicsmap</rng:name>
+                    <rng:name>articulationmap</rng:name>
+                    <rng:name>tempomap</rng:name>
+                    <rng:name>barEmphasismap</rng:name>
+                    <rng:name>element</rng:name>
+                    <rng:name>switch</rng:name>
+                  </rng:except>
+                </rng:anyName>
+          </content>
+        </elementSpec>-->
+        
+        <macroSpec ident="model.anyName.articStyles" mode="add" >
+          <desc>Content model for articualtion styles. An articulation style includes an arbitrary number of articulations. The name of an articulation is reflected in its element name.</desc>
           <!--<content autoPrefix="false">
             <classRef key="att.artic"/>
             <macroRef key="model.anyName.articStyles.artic"/>
@@ -191,25 +225,10 @@
                     <rng:name>switch</rng:name>
                   </rng:except>
                 </rng:anyName>
-                <rng:ref name="att.artic" mode="add"/>
-                <!--<rng:attribute>
-                  <rng:optional>
-                    <rng:ref name="relativeDuration"/>
-                  </rng:optional>
-                  
-                </rng:attribute>-->
-                
-                <!--<rng:group mode="add">
-                  <rng:ref key="global" atLeast="1" atMost="1"/>
-                  <rng:oneOrMore atLeast="1">
-                    <rng:ref key="part"/>
-                  </rng:oneOrMore>
-                </rng:group>-->
-                <!--<rng:choice>
-                  <rng:ref name="model.anyName.performance"/>
-                  <rng:ref name="model.anyName.articStyles"/>
-                </rng:choice>-->
-<!--                <rng:empty/>-->
+                <rng:optional><!-- TODO fix this! doesn't make it to rng -->
+                  <rng:ref name="att.artic"></rng:ref>
+                </rng:optional>
+                <rng:empty/>
               </rng:element>
             </rng:oneOrMore>
           </content>
