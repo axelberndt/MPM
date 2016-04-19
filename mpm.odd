@@ -622,11 +622,16 @@
           <desc>The element-element is used in many different contexts to indicate corresponding context-sensitive events.</desc>
           <classes>
             <memberOf key="att.dated"/>
+            <memberOf key="att.artic"/>
             <memberOf key="att.beat"/>
             <memberOf key="att.dynamics"/>
           </classes>
           <content>
-            <rng:empty/>
+            <rng:choice>
+              <rng:ref name="att.artic"/>
+              <rng:ref name="att.beat"/>
+              <rng:ref name="att.dynamics"/>
+            </rng:choice>
           </content>
         </elementSpec>
         
