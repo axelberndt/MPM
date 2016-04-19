@@ -108,14 +108,14 @@
         </classSpec>-->
         
         <elementSpec ident="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add">
-          <desc>root element of mpm</desc>
+          <desc>root element of MPM.</desc>
           <content>
             <macroRef key="macro.anyName"/>
           </content>
         </elementSpec>
         
         <macroSpec ident="macro.anyName" mode="add">
-          <desc>An element with an arbitrary name, except those predefine by MSM.</desc>
+          <desc>An element with an arbitrary name, except those predefine by MSM. First level children of the mpm-element are the so called perfomance styles. The ame of the element equals the name of the performance style.</desc>
           <content>
             <rng:oneOrMore>
               <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
