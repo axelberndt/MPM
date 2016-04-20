@@ -593,6 +593,12 @@
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
+            <tei:attDef ident="protraction"><!-- TODO: how to encode default values? -->
+              <tei:desc>Optional. Indicates how long the level adjustment will be delayed. Value rang -1 to 1. Values smaller than [0] provoke a quicker change at the beginning, values larger than [1] provoke a quicker change at the end of the transgression.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
           </tei:attList>
         </tei:classSpec>
         
