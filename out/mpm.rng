@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.cemfi.de/mpm/ns/1.0"><!--
+Schema generated from ODD source 2016-04-20T14:15:36Z. .  
+--><!---->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <define name="mpm.macro.anyName">
+      <oneOrMore>
+         <element ns="http://www.cemfi.de/mpm/ns/1.0">
+            <anyName>
+               <except>
+                  <nsName ns=""/>
+                  <name>mpm</name>
+                  <name>global</name>
+                  <name>part</name>
+                  <name>header</name>
+                  <name>correspondingMidiFile</name>
+                  <name>loop</name>
+                  <name>mute</name>
+                  <name>viennaCtrls</name>
+                  <name>articulationStyles</name>
+                  <name>dated</name>
+                  <name>dynamicsmap</name>
+                  <name>articulationmap</name>
+                  <name>tempomap</name>
+                  <name>barEmphasismap</name>
+                  <name>element</name>
+                  <name>switch</name>
+                  <name>transition</name>
+                  <name>trans</name>
+               </except>
+            </anyName>
+            <choice>
+               <ref name="mpm.model.anyName.performance"/>
+               <ref name="mpm.model.anyName.articStyles.artic"/>
+            </choice>
+         </element>
+      </oneOrMore>
+   </define>
+   <define name="mpm.model.anyName.performance">
+      <group>
+         <ref name="mpm.global"/>
+         <oneOrMore>
+            <ref name="mpm.part"/>
+         </oneOrMore>
+      </group>
+   </define>
+   <define name="mpm.model.anyName.articStyles">
+      <oneOrMore>
+         <element ns="http://www.cemfi.de/mpm/ns/1.0">
+            <anyName>
+               <except>
+                  <nsName ns=""/>
+                  <name>mpm</name>
+                  <name>global</name>
+                  <name>part</name>
+                  <name>header</name>
+                  <name>correspondingMidiFile</name>
+                  <name>loop</name>
+                  <name>mute</name>
+                  <name>viennaCtrls</name>
+                  <name>articulationStyles</name>
+                  <name>dated</name>
+                  <name>dynamicsmap</name>
+                  <name>articulationmap</name>
+                  <name>tempomap</name>
+                  <name>barEmphasismap</name>
+                  <name>element</name>
+                  <name>switch</name>
+                  <name>transition</name>
+                  <name>trans</name>
+               </except>
+            </anyName>
+            <optional>
+               <ref name="mpm.att.artic.attributes"/>
+            </optional>
+            <empty/>
+         </element>
+      </oneOrMore>
+   </define>
+   <define name="mpm.model.anyName.articStyles.artic">
+      <oneOrMore>
+         <choice>
+            <oneOrMore>
+               <ref name="mpm.asLoudAsPossible"/>
+            </oneOrMore>
+            <ref name="mpm.model.anyName.articStyles"/>
+         </choice>
+      </oneOrMore>
+   </define>
+   <define name="mpm.model.header">
+      <choice>
+         <ref name="mpm.correspondingMidiFile"/>
+         <ref name="mpm.totalLength"/>
+         <ref name="mpm.loop"/>
+         <ref name="mpm.mute"/>
+         <ref name="mpm.viennaCtrls"/>
+         <ref name="mpm.articulationStyles"/>
+      </choice>
+   </define>
+   <define name="mpm.att.nameable.attributes">
+      <ref name="mpm.att.nameable.attribute.name"/>
+   </define>
+   <define name="mpm.att.nameable.attribute.name">
+      <optional>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.partLike.attributes">
+      <ref name="mpm.att.nameable.attributes"/>
+      <ref name="mpm.att.partLike.attribute.port"/>
+      <ref name="mpm.att.partLike.attribute.channel"/>
+   </define>
+   <define name="mpm.att.partLike.attribute.port">
+      <optional>
+         <attribute name="port">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int">
+               <param name="minInclusive">0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.partLike.attribute.channel">
+      <optional>
+         <attribute name="channel">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">15</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.mpm">
+      <element name="mpm" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">root element of MPM.</a:documentation>
+         <ref name="mpm.macro.anyName"/>
+      </element>
+   </define>
+   <define name="mpm.class.element.content">
+      <choice>
+         <ref name="mpm.mute"/>
+         <ref name="mpm.P0"/>
+         <ref name="mpm.P1"/>
+         <ref name="mpm.P2"/>
+      </choice>
+   </define>
+   <define name="mpm.asLoudAsPossible">
+      <element name="asLoudAsPossible" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mpm-asLoudAsPossible-absoluteVelocity-constraint-1">
+            <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:math="http://www.w3.org/1998/Math/MathML"
+                      xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mpm:asLoudAsPossible">
+                <sch:assert role="warning" test="number(./@absoluteVelocity) eq 127">abolute velocity on asLoudAsPossible has to be 127</sch:assert>
+              </sch:rule>
+         </pattern>
+         <ref name="mpm.att.artic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.global">
+      <element name="global" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="mpm.header"/>
+         <ref name="mpm.dated"/>
+      </element>
+   </define>
+   <define name="mpm.part">
+      <element name="part" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</a:documentation>
+         <ref name="mpm.header"/>
+         <ref name="mpm.dated"/>
+         <ref name="mpm.att.partLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.header">
+      <element name="header" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="mpm.model.header"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.correspondingMidiFile">
+      <element name="correspondingMidiFile" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MIDI file reference</a:documentation>
+         <empty/>
+         <ref name="mpm.att.nameable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.totalLength">
+      <element name="totalLength" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MIDI file reference</a:documentation>
+         <empty/>
+         <optional>
+            <attribute name="inTicks">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the total number of MIDI ticks. This element should be generated automatically in the preprocessing of the mpm file.</a:documentation>
+               <data type="int"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.loop">
+      <element name="loop" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">May be present in global or local performance headers. Presence of the loop element in global context indicates that the whole piece will be looped, otherwise only parts with local loop element will be looped. All other parts will end on the first typeEndTrack-event, even if there are events after that. Global loop overrides local. Onverridden by mute element, i.e. a looped part that is muted will stay muted.</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.mute">
+      <element name="mute" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">May be present in global or local context. Globl presence of the mute element mutes all parts. Will be overwritten by local settings.</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.att.vienna.attributes">
+      <ref name="mpm.att.vienna.attribute.velXFadeOnOff"/>
+      <ref name="mpm.att.vienna.attribute.velXFade"/>
+      <ref name="mpm.att.vienna.attribute.hSpan"/>
+      <ref name="mpm.att.vienna.attribute.vSpan"/>
+   </define>
+   <define name="mpm.att.vienna.attribute.velXFadeOnOff">
+      <optional>
+         <attribute name="velXFadeOnOff">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.vienna.attribute.velXFade">
+      <optional>
+         <attribute name="velXFade">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.vienna.attribute.hSpan">
+      <optional>
+         <attribute name="hSpan">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching the performance-matrix column (duration), standard value is 21.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.vienna.attribute.vSpan">
+      <optional>
+         <attribute name="vSpan">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attributes">
+      <ref name="mpm.att.artic.attribute.absoluteVelocity"/>
+      <ref name="mpm.att.artic.attribute.absoluteVelocityChange"/>
+      <ref name="mpm.att.artic.attribute.relativeVelocity"/>
+      <ref name="mpm.att.artic.attribute.absoluteDuration"/>
+      <ref name="mpm.att.artic.attribute.absoluteDurationChange"/>
+      <ref name="mpm.att.artic.attribute.absoluteDurationMs"/>
+      <ref name="mpm.att.artic.attribute.absoluteDurationChangeMs"/>
+      <ref name="mpm.att.artic.attribute.relativeDuration"/>
+   </define>
+   <define name="mpm.att.artic.attribute.absoluteVelocity">
+      <optional>
+         <attribute name="absoluteVelocity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value for velocity that will replace existing velocity values.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.absoluteVelocityChange">
+      <optional>
+         <attribute name="absoluteVelocityChange">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value (+/-) that will be added to the local velocity.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.relativeVelocity">
+      <optional>
+         <attribute name="relativeVelocity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a relative amount of velocity change as decimal number, e.g. 1=100% (no change), 0.5% (half velocity), 2.0=200% (double velocity).</a:documentation>
+            <data type="decimal">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.absoluteDuration">
+      <optional>
+         <attribute name="absoluteDuration">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value for duration (in MIDI ticks) that will replace existing local duration values.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.absoluteDurationChange">
+      <optional>
+         <attribute name="absoluteDurationChange">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value (+/-) in MIDI ticks that will be added to the local duration values.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.absoluteDurationMs">
+      <optional>
+         <attribute name="absoluteDurationMs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute duration in milliseconds that will replace existing local duration values.</a:documentation>
+            <data type="int">
+               <param name="minInclusive">0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.absoluteDurationChangeMs">
+      <optional>
+         <attribute name="absoluteDurationChangeMs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value (+/-) in milliseconds that will be added to existing local duration values.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.attribute.relativeDuration">
+      <optional>
+         <attribute name="relativeDuration">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a relative amount of duration change as decimal number, e.g. 1=100% (no change), 0.5% (half duration), 2.0=200% (double duration).</a:documentation>
+            <data type="decimal">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.ref.attributes">
+      <ref name="mpm.att.artic.ref.attribute.style"/>
+      <ref name="mpm.att.artic.ref.attribute.standardArticulation"/>
+   </define>
+   <define name="mpm.att.artic.ref.attribute.style">
+      <optional>
+         <attribute name="style">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.artic.ref.attribute.standardArticulation">
+      <optional>
+         <attribute name="standardArticulation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.beat.attributes">
+      <ref name="mpm.att.beat.attribute.bpm"/>
+      <ref name="mpm.att.beat.attribute.beatLength"/>
+   </define>
+   <define name="mpm.att.beat.attribute.bpm">
+      <optional>
+         <attribute name="bpm">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int">
+               <param name="minInclusive">0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.beat.attribute.beatLength">
+      <optional>
+         <attribute name="beatLength">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="decimal">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.dynamics.attributes">
+      <ref name="mpm.att.dynamics.attribute.volume"/>
+      <ref name="mpm.att.dynamics.attribute.transition"/>
+      <ref name="mpm.att.dynamics.attribute.straightness"/>
+      <ref name="mpm.att.dynamics.attribute.protraction"/>
+   </define>
+   <define name="mpm.att.dynamics.attribute.volume">
+      <optional>
+         <attribute name="volume">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</a:documentation>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.dynamics.attribute.transition">
+      <optional>
+         <attribute name="transition">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</a:documentation>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.dynamics.attribute.straightness">
+      <optional>
+         <attribute name="straightness">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Optional. Indicates the deviation from a linear volume transition/envelope. Potential values: [0] linear envelope; [1] steep envelop on the curves turning point; [0.3] default value.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.dynamics.attribute.protraction">
+      <optional>
+         <attribute name="protraction">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Optional. Indicates how long the level adjustment will be delayed. Value rang -1 to 1. Values smaller than [0] provoke a quicker change at the beginning, values larger than [1] provoke a quicker change at the end of the transgression.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.viennaCtrls">
+      <element name="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.vienna.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.articulationStyles">
+      <element name="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.macro.anyName"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.class.map">
+      <choice>
+         <ref name="mpm.dynamicsmap"/>
+         <ref name="mpm.articulationmap"/>
+         <ref name="mpm.imprecisionmap"/>
+         <ref name="mpm.rubatomap"/>
+         <ref name="mpm.tempomap"/>
+         <ref name="mpm.barEmphasismap"/>
+      </choice>
+   </define>
+   <define name="mpm.att.dated.attributes">
+      <ref name="mpm.att.dated.attribute.date"/>
+      <ref name="mpm.att.dated.attribute.dateMs"/>
+   </define>
+   <define name="mpm.att.dated.attribute.date">
+      <attribute name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a event date in MIDI ticks.</a:documentation>
+         <data type="int"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.dated.attribute.dateMs">
+      <optional>
+         <attribute name="dateMs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a event date in milliseconds. Preprocessing should calculate this attribute, it should not be necessary to ad it manually.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.tempo.attributes">
+      <ref name="mpm.att.tempo.attribute.transition"/>
+      <ref name="mpm.att.tempo.attribute.intensity"/>
+      <ref name="mpm.att.tempo.attribute.exponent"/>
+   </define>
+   <define name="mpm.att.tempo.attribute.transition">
+      <optional>
+         <attribute name="transition">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the name of the target tempo if differnet from start tempo. Usage is optional. The same beatLength will be assumed.</a:documentation>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.tempo.attribute.intensity">
+      <optional>
+         <attribute name="intensity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Optional. Describes the slope of the curve, i.e. the intensity of the accelerando or ritardando. Example values: [0] constant tempo; [1] instantly switch to target tempo; [0.5] (default) linear tempo transition; gradual tempo changes are implicitly modeled by a quadraatic bezier curve</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.tempo.attribute.exponent">
+      <optional>
+         <attribute name="exponent">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Added on preprocessing. similar entries will be deleted; gives the exponent of the power function for gradual tempo transitions using @model='potential'.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.imp.attributes">
+      <ref name="mpm.att.imp.attribute.standardDeviation"/>
+      <ref name="mpm.att.imp.attribute.maxDeviation"/>
+   </define>
+   <define name="mpm.att.imp.attribute.standardDeviation">
+      <optional>
+         <attribute name="standardDeviation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a standard deviation in milliseconds.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.imp.attribute.maxDeviation">
+      <optional>
+         <attribute name="maxDeviation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a maximum deviation in milliseconds.</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.dated">
+      <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="mpm.class.map"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.dynamicsmap">
+      <element name="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</a:documentation>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mpm.element"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.articulationmap">
+      <element name="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encoded in local contexts dated-element. Articulation instructions are encoded in this map's child elements.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="mpm.element"/>
+               <ref name="mpm.switch"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.imprecisionmap">
+      <element name="imprecisionmap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encoded in global or local contexts dated-element. Allows encoding of imprecision for a more lively or even poor synchronicity of parts. Imprecisions are encoded in child element-elements.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.element"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.rubatomap">
+      <element name="rubatomap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encoded in local contexts dated-element. Rubato instructions are encoded in this map's child elements.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.element"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.tempomap">
+      <element name="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allowed in global or local context as child of dated-element. Contains dated tempo instructions. Multiple tempo instructions with the same date are not allowd.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.element"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.att.bezier.attributes">
+      <ref name="mpm.att.bezier.attribute.d"/>
+      <ref name="mpm.att.bezier.attribute.ms"/>
+   </define>
+   <define name="mpm.att.bezier.attribute.d">
+      <optional>
+         <attribute name="d">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.bezier.attribute.ms">
+      <optional>
+         <attribute name="ms">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.P0">
+      <element name="P0" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Control point "P0" for bezier curve modelling a tempo transition. Will be generated on performance preprocessing.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.bezier.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.P1">
+      <element name="P1" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Control point "P1" for bezier curve modelling a tempo transition. Will be generated on performance preprocessing.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.bezier.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.P2">
+      <element name="P2" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Control point "P2" for bezier curve modelling a tempo transition. Will be generated on performance preprocessing.</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.barEmphasismap">
+      <element name="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allowed in global or local context as child of dated-element. Groups information on bar-based beat accentuation.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.element"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.element">
+      <element name="element" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element-element is used in many different contexts to indicate corresponding context-sensitive events.</a:documentation>
+         <optional>
+            <ref name="mpm.class.element.content"/>
+         </optional>
+         <empty/>
+         <ref name="mpm.att.dated.attributes"/>
+         <ref name="mpm.att.beat.attributes"/>
+         <ref name="mpm.att.dynamics.attributes"/>
+         <ref name="mpm.att.tempo.attributes"/>
+         <ref name="mpm.att.imp.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.switch">
+      <element name="switch" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Presence of the switch element indicates a change of articulation style at a certain date. If @style not defined, processing defaults to first child of articulationStyles element if no given value or given value not defined.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.dated.attributes"/>
+         <ref name="mpm.att.artic.ref.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <start>
+      <choice>
+         <ref name="mpm.mpm"/>
+      </choice>
+   </start>
+</grammar>
