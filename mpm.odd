@@ -262,6 +262,10 @@
           </tei:classes>
         
         </tei:classSpec>
+        
+        <tei:classSpec type="model" ident="class.element.content" mode="add" module="dated">
+          <tei:desc>Content model for element element.</tei:desc>
+        </tei:classSpec>
 
         <tei:macroSpec ident="model.anyName.articStyles.artic" mode="add" module="artic">
           <tei:desc>content of anyName in articulationStyles</tei:desc>
