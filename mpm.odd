@@ -1,89 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
   xmlns:math="http://www.w3.org/1998/Math/MathML"
+  xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0" 
   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-  xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Title</title>
-      </titleStmt>
-      <publicationStmt>
-        <p>Publication Information</p>
-      </publicationStmt>
-      <sourceDesc>
-        <p>Information about the source</p>
-      </sourceDesc>
-    </fileDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <schemaSpec ident="mpm" start="mpm">
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns="http://www.cemfi.de/mpm/ns/1.0">
+  <tei:teiHeader>
+    <tei:fileDesc>
+      <tei:titleStmt>
+        <tei:title>Title</tei:title>
+      </tei:titleStmt>
+      <tei:publicationStmt>
+        <tei:p>Publication Information</tei:p>
+      </tei:publicationStmt>
+      <tei:sourceDesc>
+        <tei:p>Information about the source</tei:p>
+      </tei:sourceDesc>
+    </tei:fileDesc>
+  </tei:teiHeader>
+  <tei:text xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:body>
+      <tei:schemaSpec ident="mpm" start="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" prefix="mpm.">
 <!--        <moduleRef key="header"/>-->
 <!--        <moduleRef key="core"/>-->
 <!--        <moduleRef key="tei"/>-->
 <!--        <moduleRef key="textstructure"/>-->
-        <moduleSpec ident="mpm" mode="add" >
-          <desc>metadata</desc>
-        </moduleSpec>
-        <moduleSpec ident="dynamics" mode="add" >
-          <desc>dynamics</desc>
-        </moduleSpec>
-        <moduleSpec ident="meta" mode="add" >
-          <desc>metadata</desc>
-        </moduleSpec>
-        <moduleSpec ident="header" mode="add" >
-          <desc>header</desc>
-        </moduleSpec>
-        <moduleSpec ident="dated" mode="add" >
-          <desc>dated</desc>
-        </moduleSpec>
-        <moduleSpec ident="vienna" mode="add" >
-          <desc>The vienna module adds features for encoding Vienna Instruments velocityXFade controllers.</desc>
-        </moduleSpec>
-        <moduleSpec ident="artic" mode="add" >
-          <desc>artic</desc>
-        </moduleSpec>
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+          prefix="mpm"
+          uri="http://www.cemfi.de/mpm/ns/1.0"/>
+        <tei:moduleSpec ident="mpm" mode="add" >
+          <tei:desc>metadata</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="dynamics" mode="add" >
+          <tei:desc>dynamics</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="meta" mode="add" >
+          <tei:desc>metadata</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="header" mode="add" >
+          <tei:desc>header</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="dated" mode="add" >
+          <tei:desc>dated</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="vienna" mode="add" >
+          <tei:desc>The vienna module adds features for encoding Vienna Instruments velocityXFade controllers.</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="artic" mode="add" >
+          <tei:desc>artic</tei:desc>
+        </tei:moduleSpec>
         
         <!-- module HEADER -->
         
-        <classSpec ident="model.header" type="model" module="header" mode="add">
-          <desc>The header class</desc>
-        </classSpec>
+        <tei:classSpec ident="model.header" type="model" module="header" mode="add">
+          <tei:desc>The header class</tei:desc>
+        </tei:classSpec>
         
-        <classSpec ident="att.nameable" type="atts" mode="add">
-          <desc>Name attribute class.</desc>
-          <attList>
-            <attDef ident="name">
-              <datatype>
+        <tei:classSpec ident="att.nameable" type="atts" mode="add">
+          <tei:desc>Name attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="name">
+              <tei:datatype>
                 <rng:data type="string"/>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
-        <classSpec ident="att.partLike" type="atts" mode="add">
-          <classes>
-            <memberOf key="att.nameable"/>
-          </classes>
-          <attList>
-            <attDef ident="port">
-              <datatype>
+        <tei:classSpec ident="att.partLike" type="atts" mode="add">
+          <tei:classes>
+            <tei:memberOf key="att.nameable"/>
+          </tei:classes>
+          <tei:attList>
+            <tei:attDef ident="port">
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-            <attDef ident="channel">
-              <datatype>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="channel">
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">15</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
         <!--<classSpec ident="att.midi" type="atts" mode="add">
           <attList>
@@ -107,16 +113,16 @@
           </attList>
         </classSpec>-->
         
-        <elementSpec ident="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add">
-          <desc>root element of MPM.</desc>
-          <content>
-            <macroRef key="macro.anyName"/>
-          </content>
-        </elementSpec>
+        <tei:elementSpec ident="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add">
+          <tei:desc>root element of MPM.</tei:desc>
+          <tei:content>
+            <tei:macroRef key="macro.anyName"/>
+          </tei:content>
+        </tei:elementSpec>
         
-        <macroSpec ident="macro.anyName" mode="add">
-          <desc>An element with an arbitrary name, except those predefine by MSM. First level children of the mpm-element are the so called perfomance styles. The ame of the element equals the name of the performance style.</desc>
-          <content>
+        <tei:macroSpec ident="macro.anyName" mode="add">
+          <tei:desc>An element with an arbitrary name, except those predefine by MSM. First level children of the mpm-element are the so called perfomance styles. The ame of the element equals the name of the performance style.</tei:desc>
+          <tei:content>
             <rng:oneOrMore>
               <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
                 <rng:anyName>
@@ -142,24 +148,25 @@
                 </rng:anyName>
                 <rng:choice>
                   <rng:ref name="model.anyName.performance"/>
-                  <rng:ref name="model.anyName.articStyles"/>
+<!--                  <rng:ref name="model.anyName.articStyles"/>-->
+                  <rng:ref name="model.anyName.articStyles.artic"/>
                 </rng:choice>
               </rng:element>
             </rng:oneOrMore>
-          </content>
-        </macroSpec>
+          </tei:content>
+        </tei:macroSpec>
         
-        <macroSpec ident="model.anyName.performance" mode="add">
-          <desc>Content model for performance styles. The name of the performance style equals the element name.</desc><!-- TODO create metadata block -->
-          <content>
+        <tei:macroSpec ident="model.anyName.performance" mode="add">
+          <tei:desc>Content model for performance styles. The name of the performance style equals the element name.</tei:desc><!-- TODO create metadata block -->
+          <tei:content>
             <rng:group atLeast="1">
               <rng:ref name="global"/>
               <rng:oneOrMore>
                 <rng:ref name="part" atLeast="1"/>
               </rng:oneOrMore>
             </rng:group>
-          </content>
-        </macroSpec>
+          </tei:content>
+        </tei:macroSpec>
         
         <!--<classSpec ident="class.articStyles" type="model">
           <desc>alternative for macro</desc>
@@ -195,13 +202,11 @@
           </content>
         </elementSpec>-->
         
-        <macroSpec ident="model.anyName.articStyles" mode="add" >
-          <desc>Content model for articualtion styles. An articulation style includes an arbitrary number of articulations. The name of an articulation is reflected in its element name.</desc>
-          <!--<content autoPrefix="false">
-            <classRef key="att.artic"/>
-            <macroRef key="model.anyName.articStyles.artic"/>
-          </content>-->
-          <content>
+        <tei:macroSpec ident="model.anyName.articStyles" mode="add" >
+          <tei:desc>Content model for articualtion styles. An articulation style includes an arbitrary number of articulations. The name of an articulation is reflected in its element name.</tei:desc>
+          <tei:content>
+<!--            <classRef key="att.artic"/>-->
+<!--            <macroRef key="model.anyName.articStyles.artic"/>-->
             <rng:oneOrMore>
               <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
                 <rng:anyName>
@@ -226,13 +231,13 @@
                   </rng:except>
                 </rng:anyName>
                 <rng:optional><!-- TODO fix this! doesn't make it to rng -->
-                  <rng:ref name="att.artic"></rng:ref>
+                  <rng:ref name="mpm.att.artic.attributes"></rng:ref>
                 </rng:optional>
                 <rng:empty/>
               </rng:element>
             </rng:oneOrMore>
-          </content>
-        </macroSpec>
+          </tei:content>
+        </tei:macroSpec>
         
         <!--<macroSpec ident="macro.att.anyName" mode="add">
           <content>
@@ -242,56 +247,57 @@
           </content>
         </macroSpec>-->
         
-        <!--<macroSpec ident="model.anyName.articStyles.artic" mode="add">
-          <desc>content of anyName in articulationStyles</desc>
-          <content>
-            <classRef key="att.artic"/>
-            <macroRef key="content"/>
+        <tei:classSpec type="model" ident="elem.artic" mode="add" module="artic">
+          <tei:desc></tei:desc>
+          <tei:classes>
             
-          </content>
-        </macroSpec>-->
+            <tei:memberOf key="att.artic"/>
+            
+          </tei:classes>
         
-        <!--<macroSpec ident="content">
-          <content>
-            <rng:oneOrMore>
-              <rng:element ns="http://www.cemfi.de/mpm/ns/1.0">
-                <rng:anyName>
-                  <rng:except>
-                    <rng:nsName ns=""/>
-                    <rng:name>mpm</rng:name>
-                    <rng:name>global</rng:name>
-                    <rng:name>header</rng:name>
-                    <rng:name>loop</rng:name>
-                    <rng:name>mute</rng:name>
-                    <rng:name>articulationStyles</rng:name>
-                    <rng:name>dated</rng:name>
-                    <rng:name>part</rng:name>
-                    <rng:name>articulationStyles</rng:name>
-                  </rng:except>
-                </rng:anyName>
-                <!-\-                <rng:ref name="att.artic" mode="add"/>-\->
-                <!-\-<rng:attribute>
-                  <rng:optional>
-                    <rng:ref name="relativeDuration"/>
-                  </rng:optional>
-                  
-                </rng:attribute>-\->
-                
-                <!-\-<rng:group mode="add">
-                  <rng:ref key="global" atLeast="1" atMost="1"/>
-                  <rng:oneOrMore atLeast="1">
-                    <rng:ref key="part"/>
-                  </rng:oneOrMore>
-                </rng:group>-\->
-                <!-\-<rng:choice>
-                  <rng:ref name="model.anyName.performance"/>
-                  <rng:ref name="model.anyName.articStyles"/>
-                </rng:choice>-\->
-                <rng:empty/>
-              </rng:element>
-            </rng:oneOrMore>
-          </content>
-        </macroSpec>-->
+        </tei:classSpec>
+
+        <tei:macroSpec ident="model.anyName.articStyles.artic" mode="add" module="artic">
+          <tei:desc>content of anyName in articulationStyles</tei:desc>
+          <tei:content>
+            <!--<rng:choice>
+              <rng:ref name="model.anyName.articStyles"/>
+              <rng:ref name="asLoudAsPossible"></rng:ref>
+            </rng:choice>-->
+<!--            <macroRef key="model.anyName.articStyles"/>-->
+            <tei:alternate maxOccurs="unbounded">
+              <tei:elementRef key="asLoudAsPossible" maxOccurs="unbounded"/>
+              <tei:macroRef key="model.anyName.articStyles"/>  
+            </tei:alternate>
+            
+          </tei:content>
+        </tei:macroSpec>
+        
+        <tei:elementSpec ident="asLoudAsPossible" ns="http://www.cemfi.de/mpm/ns/1.0" module="artic" mode="add">
+          <tei:desc></tei:desc>
+          <tei:classes>
+<!--            <memberOf key="elem.artic"/>-->
+            <tei:memberOf key="att.artic"/>
+          </tei:classes>
+          <tei:constraintSpec ident="absoluteVelocity" scheme="isoschematron" mode="add">
+            <tei:constraint>
+              <sch:rule context="mpm:asLoudAsPossible">
+                <sch:assert role="warning" test="number(./@absoluteVelocity) eq 127">abolute velocity on asLoudAsPossible has to be 127</sch:assert>
+              </sch:rule>
+            </tei:constraint>
+          </tei:constraintSpec>
+          <!--<tei:constraintSpec ident="asLoudAsPossible" scheme="isoschematron">
+            <tei:constraint>
+              <sch:rule context="@absoluteVelocity">
+                <sch:assert role="warning" test="number(.) eq 127">value has to be 127</sch:assert>
+              </sch:rule>
+            </tei:constraint>
+          </tei:constraintSpec>-->
+          <!--<content>
+            <rng:empty/>
+          </content>-->
+        </tei:elementSpec>
+        
         <!--<elementSpec ident="meta" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
           <desc>metadata concerning the pieces structure</desc>
           <content>
@@ -301,292 +307,299 @@
         </elementSpec>-->
         
         
-        <elementSpec ident="global" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
-          <content>
-            <elementRef key="header"/>
-            <elementRef key="dated"/>
-          </content>
-        </elementSpec>
+        <tei:elementSpec ident="global" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
+          <tei:content>
+            <tei:elementRef key="header"/>
+            <tei:elementRef key="dated"/>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="part" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
-          <desc>Defines a part.</desc>
-          <classes>
-            <memberOf key="att.partLike"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="part" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
+          <tei:desc>Defines a part.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.partLike"/>
+          </tei:classes>
+          <tei:content>
 <!--            <classRef key="att.nameable"/>-->
-            <elementRef key="header"/>
-            <elementRef key="dated"/>
-          </content>
-        </elementSpec>
+            <tei:elementRef key="header"/>
+            <tei:elementRef key="dated"/>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="header" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
-          <content>
+        <tei:elementSpec ident="header" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
+          <tei:content>
             <rng:zeroOrMore>
               <rng:ref name="model.header"/>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="correspondingMidiFile" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
-          <desc>MIDI file reference</desc>
-          <classes>
-            <memberOf key="model.header"/>
-            <memberOf key="att.nameable"/>
-          </classes>
+        <tei:elementSpec ident="correspondingMidiFile" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
+          <tei:desc>MIDI file reference</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.header"/>
+            <tei:memberOf key="att.nameable"/>
+          </tei:classes>
           <!--<attList>
             <attRef class="att.nameable"/>
           </attList>-->
-          <content>
+          <tei:content>
             <rng:empty/>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="loop" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
-          <classes>
-            <memberOf key="model.header"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="loop" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <tei:desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.header"/>
+          </tei:classes>
+          <tei:content>
             <rng:empty/>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="mute" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</desc>
-          <classes>
-            <memberOf key="model.header"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="mute" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <tei:desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.header"/>
+          </tei:classes>
+          <tei:content>
             <rng:empty/>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <classSpec ident="att.vienna" type="atts" module="vienna" mode="add">
-          <attList>
-            <attDef ident="velXFadeOnOff">
-              <desc>Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
-              <datatype>
+        <tei:classSpec ident="att.vienna" type="atts" module="vienna" mode="add">
+          <tei:attList>
+            <tei:attDef ident="velXFadeOnOff">
+              <tei:desc>Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-            <attDef ident="velXFade">
-              <desc>Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
-              <datatype>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="velXFade">
+              <tei:desc>Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-            <attDef ident="hSpan">
-              <desc>Controller number for switching the performance-matrix column (duration), standard value is 21.</desc>
-              <datatype>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="hSpan">
+              <tei:desc>Controller number for switching the performance-matrix column (duration), standard value is 21.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-            <attDef ident="vSpan">
-              <desc>Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</desc>
-              <datatype>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="vSpan">
+              <tei:desc>Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
-        <classSpec ident="att.artic" type="atts" module="artic" mode="add">
-          <attList>
+        <tei:classSpec ident="att.artic" type="atts" module="artic" mode="add">
+          <tei:attList>
             
             <!-- velocity -->
-            <attDef ident="absoluteVelocity">
-              <desc>Gives an absolute value for velocity that will replace existing velocity values.</desc>
-              <datatype>
+            <tei:attDef ident="absoluteVelocity">
+              <tei:desc>Gives an absolute value for velocity that will replace existing velocity values.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+              <!--<tei:constraintSpec ident="asLoudAsPossible" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="@absoluteVelocity">
+                    <sch:assert role="warning" test="number(.) eq 127">value has to be 127</sch:assert>
+                  </sch:rule>
+                </tei:constraint>
+              </tei:constraintSpec>-->
+            </tei:attDef>
             
-            <attDef ident="absoluteVelocityChange">
-              <desc>Gives an absolute value (+/-) that will be added to the local velocity.</desc>
-              <datatype>
+            <tei:attDef ident="absoluteVelocityChange">
+              <tei:desc>Gives an absolute value (+/-) that will be added to the local velocity.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <!-- TODO: isn't there a sound basis for arguing minInclusive / maxInclusive to be  -127 / 127 -->
                   <!--<rng:param name="minInclusive">-127</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>-->
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-            <attDef ident="relativeVelocity">
-              <desc>Gives a relative amount of velocity change as decimal number, e.g. 1=100% (no change), 0.5% (half velocity), 2.0=200% (double velocity).</desc>
-              <datatype>
+            <tei:attDef ident="relativeVelocity">
+              <tei:desc>Gives a relative amount of velocity change as decimal number, e.g. 1=100% (no change), 0.5% (half velocity), 2.0=200% (double velocity).</tei:desc>
+              <tei:datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
             <!-- duration -->
-            <attDef ident="absoluteDuration">
-              <desc>Gives an absolute value for duration (in MIDI ticks) that will replace existing local duration values.</desc>
-              <datatype>
+            <tei:attDef ident="absoluteDuration">
+              <tei:desc>Gives an absolute value for duration (in MIDI ticks) that will replace existing local duration values.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-            <attDef ident="absoluteDurationChange">
-              <desc>Gives an absolute value (+/-) in MIDI ticks that will be added to the local duration values.</desc>
-              <datatype>
+            <tei:attDef ident="absoluteDurationChange">
+              <tei:desc>Gives an absolute value (+/-) in MIDI ticks that will be added to the local duration values.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int"/>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-            <attDef ident="absoluteDurationMs">
-              <desc>Gives an absolute duration in milliseconds that will replace existing local duration values.</desc>
-              <datatype>
+            <tei:attDef ident="absoluteDurationMs">
+              <tei:desc>Gives an absolute duration in milliseconds that will replace existing local duration values.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-            <attDef ident="absoluteDurationChangeMs">
-              <desc>Gives an absolute value (+/-) in milliseconds that will be added to existing local duration values.</desc>
-              <datatype>
+            <tei:attDef ident="absoluteDurationChangeMs">
+              <tei:desc>Gives an absolute value (+/-) in milliseconds that will be added to existing local duration values.</tei:desc>
+              <tei:datatype>
                 <rng:data type="int"/>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-            <attDef ident="relativeDuration">
-              <desc>Gives a relative amount of duration change as decimal number, e.g. 1=100% (no change), 0.5% (half duration), 2.0=200% (double duration).</desc>
-              <datatype>
+            <tei:attDef ident="relativeDuration">
+              <tei:desc>Gives a relative amount of duration change as decimal number, e.g. 1=100% (no change), 0.5% (half duration), 2.0=200% (double duration).</tei:desc>
+              <tei:datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-          </attList>
-        </classSpec>
+          </tei:attList>
+        </tei:classSpec>
         
-        <classSpec ident="att.artic.ref" type="atts" module="artic" mode="add">
-          <desc>Group of attributes for referencing articulation styles.</desc>
-          <attList>
-            <attDef ident="style">
+        <tei:classSpec ident="att.artic.ref" type="atts" module="artic" mode="add">
+          <tei:desc>Group of attributes for referencing articulation styles.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="style">
               <!-- TODO Schematron for controlling allowed values according to header/articulationStyles/* local-name() -->
-              <datatype>
+              <tei:datatype>
                 <rng:text/>
-              </datatype>
-            </attDef>
-            <attDef ident="standardArticulation">
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="standardArticulation">
               <!-- TODO Schematron for controlling allowed values according to header/articulationStyles/*/* local-name() -->
-              <datatype>
+              <tei:datatype>
                 <rng:text/>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
-        <classSpec ident="att.beat" type="atts" module="artic" mode="add">
-          <desc>Group of attributes corresponding to beats.</desc>
-          <attList>
-            <attDef ident="bpm">
-              <datatype>
+        <tei:classSpec ident="att.beat" type="atts" module="artic" mode="add">
+          <tei:desc>Group of attributes corresponding to beats.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="bpm">
+              <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
+              </tei:datatype>
+            </tei:attDef>
             
-            <attDef ident="beatLength">
-              <datatype>
+            <tei:attDef ident="beatLength">
+              <tei:datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
                 </rng:data>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
-        <classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
-          <desc>Group of dynamics attributes.</desc>
-          <attList>
-            <attDef ident="volume">
+        <tei:classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
+          <tei:desc>Group of dynamics attributes.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="volume">
               <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
-              <datatype>
+              <tei:datatype>
                 <rng:text/>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
-        <elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</desc>
-          <classes>
-            <memberOf key="model.header"/>
-            <memberOf key="att.vienna"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="viennaCtrls" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <tei:desc>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.header"/>
+            <tei:memberOf key="att.vienna"/>
+          </tei:classes>
+          <tei:content>
             <rng:empty/>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</desc>
-          <classes>
-            <memberOf key="model.header"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
+          <tei:desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.header"/>
+          </tei:classes>
+          <tei:content>
             <rng:zeroOrMore>
               <rng:ref name="macro.anyName"/>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
         <!-- module DATED -->
         
-        <classSpec ident="class.map" type="model" mode="add">
-          <desc>class.map groups all map elements.</desc>
-        </classSpec>
+        <tei:classSpec ident="class.map" type="model" mode="add">
+          <tei:desc>class.map groups all map elements.</tei:desc>
+        </tei:classSpec>
         
-        <classSpec ident="att.dated" type="atts" mode="add">
-          <attList>
-            <attDef ident="date">
-              <datatype>
+        <tei:classSpec ident="att.dated" type="atts" mode="add">
+          <tei:attList>
+            <tei:attDef ident="date">
+              <tei:datatype>
                 <rng:data type="int"/>
-              </datatype>
-            </attDef>
-          </attList>
-        </classSpec>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
         
-        <elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <content>
+        <tei:elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:content>
             <rng:zeroOrMore>
               <rng:ref name="class.map"/>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</desc>
-          <classes>
-            <memberOf key="class.map"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="dynamicsmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.map"/>
+          </tei:classes>
+          <tei:content>
             <rng:zeroOrMore>
               <rng:attribute>
                 <rng:anyName/>
@@ -595,76 +608,74 @@
             <rng:zeroOrMore>
               <rng:ref name="element"/>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>Encoded in local contexts dated-element. Articulation instructions are encoded in this map's child elements.</desc>
-          <classes>
-            <memberOf key="class.map"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="articulationmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>Encoded in local contexts dated-element. Articulation instructions are encoded in this map's child elements.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.map"/>
+          </tei:classes>
+          <tei:content>
             <rng:zeroOrMore>
               <rng:choice>
                 <rng:ref name="element"/>
                 <rng:ref name="switch"/>
               </rng:choice>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>Allowed in global or local context as child of dated-element. Contains dated tempo instructions.</desc>
-          <classes>
-            <memberOf key="class.map"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>Allowed in global or local context as child of dated-element. Contains dated tempo instructions.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.map"/>
+          </tei:classes>
+          <tei:content>
             <rng:zeroOrMore>
               <rng:ref name="element"/>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>Allowed in global or local context as child of dated-element. Groups information on bar-based beat accentuation.</desc>
-          <classes>
-            <memberOf key="class.map"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>Allowed in global or local context as child of dated-element. Groups information on bar-based beat accentuation.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.map"/>
+          </tei:classes>
+          <tei:content>
             <rng:zeroOrMore>
               <rng:ref name="element"/>
             </rng:zeroOrMore>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="element" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>The element-element is used in many different contexts to indicate corresponding context-sensitive events.</desc>
-          <classes>
-            <memberOf key="att.dated"/>
-            <memberOf key="att.artic"/>
-            <memberOf key="att.beat"/>
-            <memberOf key="att.dynamics"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="element" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>The element-element is used in many different contexts to indicate corresponding context-sensitive events.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.dated"/>
+            <tei:memberOf key="att.beat"/>
+            <tei:memberOf key="att.dynamics"/>
+          </tei:classes>
+          <tei:content>
             <rng:choice>
-              <rng:ref name="att.artic"/>
               <rng:ref name="att.beat"/>
               <rng:ref name="att.dynamics"/>
             </rng:choice>
-          </content>
-        </elementSpec>
+          </tei:content>
+        </tei:elementSpec>
         
-        <elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
-          <desc>Presence of the switch element indicates a change of articulation style at a certain date. If @style not defined, processing defaults to first child of articulationStyles element if no given value or given value not defined.</desc>
-          <classes>
-            <memberOf key="att.dated"/>
-            <memberOf key="att.artic.ref"/>
-          </classes>
-          <content>
+        <tei:elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>Presence of the switch element indicates a change of articulation style at a certain date. If @style not defined, processing defaults to first child of articulationStyles element if no given value or given value not defined.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.dated"/>
+            <tei:memberOf key="att.artic.ref"/>
+          </tei:classes>
+          <tei:content>
             <rng:empty/>
-          </content>
-        </elementSpec>
-      </schemaSpec>
-    </body>
-  </text>
+          </tei:content>
+        </tei:elementSpec>
+      </tei:schemaSpec>
+    </tei:body>
+  </tei:text>
 </TEI>
