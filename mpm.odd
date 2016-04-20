@@ -610,7 +610,7 @@
         
         <tei:classSpec ident="att.dated" type="atts" mode="add">
           <tei:attList>
-            <tei:attDef ident="date">
+            <tei:attDef ident="date" usage="req">
               <tei:desc>Gives a event date in MIDI ticks.</tei:desc>
               <tei:datatype>
                 <rng:data type="int"/>
