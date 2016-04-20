@@ -354,6 +354,24 @@
           </tei:content>
         </tei:elementSpec>
         
+        <tei:elementSpec ident="totalLength" ns="http://www.cemfi.de/mpm/ns/1.0" module="header" mode="add">
+          <tei:desc>MIDI file reference</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.header"/>
+          </tei:classes>
+          <tei:attList>
+            <tei:attDef ident="inTicks">
+              <tei:desc>Gives the total number of MIDI ticks. This element should be generated automatically in the preprocessing of the mpm file.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+          <tei:content>
+            <rng:empty/>
+          </tei:content>
+        </tei:elementSpec>
+        
         <tei:elementSpec ident="loop" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
           <tei:desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</tei:desc>
           <tei:classes>
