@@ -56,6 +56,12 @@
         <tei:moduleSpec ident="imp" mode="add" >
           <tei:desc>imprecision</tei:desc>
         </tei:moduleSpec>
+        <tei:moduleSpec ident="rubato" mode="add" >
+          <tei:desc>rubato</tei:desc>
+        </tei:moduleSpec>
+        <tei:moduleSpec ident="emph" mode="add" >
+          <tei:desc>emphasis</tei:desc>
+        </tei:moduleSpec>
         
         <!-- module HEADER -->
         
