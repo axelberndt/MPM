@@ -686,6 +686,7 @@
             <tei:memberOf key="att.dynamics"/>
           </tei:classes>
           <tei:content>
+            <tei:classRef key="class.element.content" minOccurs="0" maxOccurs="1"/>
             <rng:choice>
               <rng:ref name="att.beat"/>
               <rng:ref name="att.dynamics"/>
