@@ -625,6 +625,29 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.tempo" type="atts" mode="add" module="tempo">
+          <tei:attList>
+            <tei:attDef ident="transition">
+              <tei:desc>Gives the name of the target tempo if differnet from start tempo. Usage is optional. The same beatLength will be assumed.</tei:desc>
+              <tei:datatype>
+                <rng:text/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="intensity">
+              <tei:desc>Optional. Describes the slope of the curve, i.e. the intensity of the accelerando or ritardando. Example values: [0] constant tempo; [1] instantly switch to target tempo; [0.5] (default) linear tempo transition; gradual tempo changes are implicitly modeled by a quadraatic bezier curve</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="exponent">
+              <tei:desc>Added on preprocessing. similar entries will be deleted; gives the exponent of the power function for gradual tempo transitions using @model='potential'.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <tei:content>
             <rng:zeroOrMore>
