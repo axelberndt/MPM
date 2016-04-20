@@ -321,7 +321,7 @@
         </tei:elementSpec>
         
         <tei:elementSpec ident="part" ns="http://www.cemfi.de/mpm/ns/1.0" module="meta" mode="add">
-          <tei:desc>Defines a part.</tei:desc>
+          <tei:desc>Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.partLike"/>
           </tei:classes>
