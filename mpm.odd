@@ -601,7 +601,6 @@
         
         <!-- module DATED -->
         
-        <tei:classSpec ident="class.map" type="model" mode="add">
         <tei:classSpec ident="class.map" type="model" mode="add" module="mpm">
           <tei:desc>class.map groups all map elements.</tei:desc>
         </tei:classSpec>
