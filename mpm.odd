@@ -694,7 +694,9 @@
             <tei:memberOf key="class.map"/>
           </tei:classes>
           <tei:content>
-            <rng:empty/>
+            <rng:zeroOrMore>
+              <rng:ref name="element"/>
+            </rng:zeroOrMore>
           </tei:content>
         </tei:elementSpec>
         
