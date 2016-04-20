@@ -651,6 +651,24 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec type="atts" ident="att.imp" module="imp" mode="add">
+          <tei:desc>Attributes for imprecision elements.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="standardDeviation">
+              <tei:desc>Gives a standard deviation in milliseconds.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="maxDeviation">
+              <tei:desc>Gives a maximum deviation in milliseconds.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <tei:content>
             <rng:zeroOrMore>
