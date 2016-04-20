@@ -377,7 +377,7 @@
         </tei:elementSpec>
         
         <tei:elementSpec ident="loop" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <tei:desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</tei:desc>
+          <tei:desc>May be present in global or local performance headers. Presence of the loop element in global context indicates that the whole piece will be looped, otherwise only parts with local loop element will be looped. All other parts will end on the first typeEndTrack-event, even if there are events after that. Global loop overrides local. Onverridden by mute element, i.e. a looped part that is muted will stay muted.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.header"/>
           </tei:classes>
@@ -387,9 +387,10 @@
         </tei:elementSpec>
         
         <tei:elementSpec ident="mute" ns="http://www.cemfi.de/mpm/ns/1.0"  module="header" mode="add">
-          <tei:desc>Presence of the loop element indicates that the piece will be looped. Will be overwritten by local settings.</tei:desc>
+          <tei:desc>May be present in global or local context. Globl presence of the mute element mutes all parts. Will be overwritten by local settings.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.header"/>
+            <tei:memberOf key="class.element.content"/>
           </tei:classes>
           <tei:content>
             <rng:empty/>
