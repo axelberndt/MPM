@@ -608,6 +608,13 @@
         <tei:classSpec ident="att.dated" type="atts" mode="add">
           <tei:attList>
             <tei:attDef ident="date">
+              <tei:desc>Gives a event date in MIDI ticks.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="dateMs">
+              <tei:desc>Gives a event date in milliseconds. Preprocessing should calculate this attribute, it should not be necessary to ad it manually.</tei:desc>
               <tei:datatype>
                 <rng:data type="int"/>
               </tei:datatype>
