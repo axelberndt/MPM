@@ -804,6 +804,7 @@
             <tei:memberOf key="att.beat"/>
             <tei:memberOf key="att.dynamics"/>
             <tei:memberOf key="att.tempo"/>
+            <tei:memberOf key="att.imp"/>
           </tei:classes>
           <tei:content>
             <tei:classRef key="class.element.content" minOccurs="0" maxOccurs="1"/>
@@ -811,6 +812,7 @@
               <rng:ref name="att.beat"/>
               <rng:ref name="att.dynamics"/>
               <rng:ref name="att.tempo"/>
+              <tei:memberOf key="att.imp"/>
             </rng:choice>
           </tei:content>
         </tei:elementSpec>
