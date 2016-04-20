@@ -718,12 +718,14 @@
             <tei:memberOf key="att.dated"/>
             <tei:memberOf key="att.beat"/>
             <tei:memberOf key="att.dynamics"/>
+            <tei:memberOf key="att.tempo"/>
           </tei:classes>
           <tei:content>
             <tei:classRef key="class.element.content" minOccurs="0" maxOccurs="1"/>
-            <rng:choice>
+            <rng:choice><!-- TODO: Schematron rules for controlling allowed attributes by context -->
               <rng:ref name="att.beat"/>
               <rng:ref name="att.dynamics"/>
+              <rng:ref name="att.tempo"/>
             </rng:choice>
           </tei:content>
         </tei:elementSpec>
