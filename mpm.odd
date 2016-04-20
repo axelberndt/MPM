@@ -144,6 +144,9 @@
                     <rng:name>barEmphasismap</rng:name>
                     <rng:name>element</rng:name>
                     <rng:name>switch</rng:name>
+                    <!-- not allowed according to specs -->
+                    <rng:name>transition</rng:name>
+                    <rng:name>trans</rng:name>
                   </rng:except>
                 </rng:anyName>
                 <rng:choice>
@@ -228,6 +231,9 @@
                     <rng:name>barEmphasismap</rng:name>
                     <rng:name>element</rng:name>
                     <rng:name>switch</rng:name>
+                    <!-- not allowed according to specs -->
+                    <rng:name>transition</rng:name>
+                    <rng:name>trans</rng:name>
                   </rng:except>
                 </rng:anyName>
                 <rng:optional><!-- TODO fix this! doesn't make it to rng -->
