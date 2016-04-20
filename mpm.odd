@@ -644,7 +644,7 @@
         
         <tei:classSpec ident="att.tempo" type="atts" mode="add" module="tempo">
           <tei:attList>
-            <tei:attDef ident="transition">
+            <tei:attDef ident="transition"><!-- potentially move to a more global level, as also usein in dynamicsmap -->
               <tei:desc>Gives the name of the target tempo if differnet from start tempo. Usage is optional. The same beatLength will be assumed.</tei:desc>
               <tei:datatype>
                 <rng:text/>
