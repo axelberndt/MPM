@@ -691,6 +691,18 @@
           </tei:content>
         </tei:elementSpec>
         
+        <tei:elementSpec ident="imprecisionmap" ns="http://www.cemfi.de/mpm/ns/1.0" module="imp" mode="add">
+          <tei:desc>Encoded in global or local contexts dated-element. Allows encoding of imprecision for a more lively or even poor synchronicity of parts. Imprecisions are encoded in child element-elements.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.map"/>
+          </tei:classes>
+          <tei:content>
+            <rng:zeroOrMore>
+              <rng:ref name="element"/>
+            </rng:zeroOrMore>
+          </tei:content>
+        </tei:elementSpec>
+        
         <tei:elementSpec ident="rubatomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <tei:desc>Encoded in local contexts dated-element. Rubato instructions are encoded in this map's child elements.</tei:desc>
           <tei:classes>
