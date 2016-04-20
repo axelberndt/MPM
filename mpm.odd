@@ -701,6 +701,45 @@
           </tei:content>
         </tei:elementSpec>
         
+        <tei:classSpec type="atts" ident="att.bezier"><!-- TODO: Schematron rule for allowing in tempomap context only -->
+          <tei:desc>Attribute class for bezier control points.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="d"><!-- TODO: get clear about datatype -->
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="ms"><!-- TODO: get clear about datatype -->
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="P0" ns="http://www.cemfi.de/mpm/ns/1.0" module="tempo" mode="add">
+          <tei:desc>Control point "P0" for bezier curve modelling a tempo transition. Will be generated on performance preprocessing.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.element.content"/>
+            <tei:memberOf key="att.bezier"/>
+          </tei:classes>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="P1" ns="http://www.cemfi.de/mpm/ns/1.0" module="tempo" mode="add">
+          <tei:desc>Control point "P1" for bezier curve modelling a tempo transition. Will be generated on performance preprocessing.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.element.content"/>
+            <tei:memberOf key="att.bezier"/>
+          </tei:classes>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="P2" ns="http://www.cemfi.de/mpm/ns/1.0" module="tempo" mode="add">
+          <tei:desc>Control point "P2" for bezier curve modelling a tempo transition. Will be generated on performance preprocessing.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.element.content"/>
+          </tei:classes>
+        </tei:elementSpec>
+        
         <tei:elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <tei:desc>Allowed in global or local context as child of dated-element. Groups information on bar-based beat accentuation.</tei:desc>
           <tei:classes>
