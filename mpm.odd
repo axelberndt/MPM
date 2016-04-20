@@ -688,6 +688,16 @@
           </tei:content>
         </tei:elementSpec>
         
+        <tei:elementSpec ident="rubatomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+          <tei:desc>Encoded in local contexts dated-element. Rubato instructions are encoded in this map's child elements.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="class.map"/>
+          </tei:classes>
+          <tei:content>
+            <rng:empty/>
+          </tei:content>
+        </tei:elementSpec>
+        
         <tei:elementSpec ident="tempomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <tei:desc>Allowed in global or local context as child of dated-element. Contains dated tempo instructions. Multiple tempo instructions with the same date are not allowd.</tei:desc>
           <!-- TODO: Schematron checking that no two dates are the same -->
