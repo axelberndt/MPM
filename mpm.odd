@@ -50,6 +50,9 @@
         <tei:moduleSpec ident="artic" mode="add" >
           <tei:desc>artic</tei:desc>
         </tei:moduleSpec>
+        <tei:moduleSpec ident="tempo" mode="add" >
+          <tei:desc>tempo</tei:desc>
+        </tei:moduleSpec>
         
         <!-- module HEADER -->
         
