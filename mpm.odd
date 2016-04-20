@@ -549,7 +549,7 @@
         <tei:classSpec ident="att.beat" type="atts" module="artic" mode="add">
           <tei:desc>Group of attributes corresponding to beats.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="bpm">
+            <tei:attDef ident="bpm"><!-- TODO: Schematron requiring presence in tempomap -->
               <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -557,7 +557,7 @@
               </tei:datatype>
             </tei:attDef>
             
-            <tei:attDef ident="beatLength">
+            <tei:attDef ident="beatLength"><!-- TODO: Schematron requiring presence in tempomap -->
               <tei:datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
