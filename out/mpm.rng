@@ -10,6 +10,9 @@ Schema generated from ODD source 2016-04-20T14:15:36Z. .
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
+  <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    prefix="mpm"
+    uri="http://www.cemfi.de/mpm/ns/1.0"/>
    <define name="mpm.macro.anyName">
       <oneOrMore>
          <element ns="http://www.cemfi.de/mpm/ns/1.0">
