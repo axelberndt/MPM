@@ -719,6 +719,36 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec type="atts" ident="att.rubato" module="rubato" mode="add">
+          <tei:desc>Attributes for imprecision elements.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="frameLength">
+              <tei:desc>Gives the lenght of the rubato scheme in MIDI ticks.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="initDelay">
+              <tei:desc>Gives the initial delay.</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="earlyEnd">
+              <tei:desc>Gives the size of theVERFRÜHUNG at the end. 0 small or equal to earlyEnd smaller or equal to 1.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="constAsynch">
+              <tei:desc>Gives constant deviation in milliseconds.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
           <tei:content>
             <rng:zeroOrMore>
