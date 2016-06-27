@@ -811,7 +811,7 @@
           </tei:classes>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+        <tei:elementSpec ident="barEmphasismap" ns="http://www.cemfi.de/mpm/ns/1.0" module="emph" mode="add">
           <tei:desc>Allowed in global or local context as child of dated-element. Groups information on bar-based beat accentuation.</tei:desc>
           <tei:classes>
             <tei:memberOf key="class.map"/>
