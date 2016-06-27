@@ -663,14 +663,29 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec type="atts" ident="att.emph" module="emph" mode="add">
+          <tei:desc>Attributes for emphasis elements.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="dynamicScope">
+              <tei:desc>Gives the dynamic range for bar emphasis calculations.</tei:desc>
+              <tei:datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="att.tempo" type="atts" mode="add" module="tempo">
           <tei:attList>
-            <tei:attDef ident="transition"><!-- potentially move to a more global level, as also usein in dynamicsmap -->
+            <!--<tei:attDef ident="transition"><!-\- potentially move to a more global level, as also usein in dynamicsmap -\->
               <tei:desc>Gives the name of the target tempo if differnet from start tempo. Usage is optional. The same beatLength will be assumed.</tei:desc>
               <tei:datatype>
                 <rng:text/>
               </tei:datatype>
-            </tei:attDef>
+            </tei:attDef>-->
             <tei:attDef ident="intensity">
               <tei:desc>Optional. Describes the slope of the curve, i.e. the intensity of the accelerando or ritardando. Example values: [0] constant tempo; [1] instantly switch to target tempo; [0.5] (default) linear tempo transition; gradual tempo changes are implicitly modeled by a quadraatic bezier curve</tei:desc>
               <tei:datatype>
