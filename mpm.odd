@@ -747,7 +747,7 @@
           </tei:content>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="rubatomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dated" mode="add">
+        <tei:elementSpec ident="rubatomap" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>Encoded in local contexts dated-element. Rubato instructions are encoded in this map's child elements.</tei:desc>
           <tei:classes>
             <tei:memberOf key="class.map"/>
