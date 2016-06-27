@@ -605,6 +605,15 @@
                 <rng:data type="int"/>
               </tei:datatype>
             </tei:attDef>
+            <tei:attDef ident="subNoteDynamics"><!-- TODO: how to encode default values? -->
+              <tei:desc>Gives the density of ChannelVolumeChange-commands. This resembles the slope of 't' in calculating the bezier curve, e.g. for(t = 0; t lte 1; t = t + subNoteDynamics) {calculate X-Y-coordinates at t;}. If no subnote dynamics are wanted, the value is set to 0, 1, or left away</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">1</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
           </tei:attList>
         </tei:classSpec>
         
