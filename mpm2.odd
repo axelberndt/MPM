@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"-->
+<!--	schematypens="http://purl.oclc.org/dsdl/schematron"<!-\-?>-\->-->
+<tei:TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML"
+  xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0" 
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns="http://www.cemfi.de/mpm/ns/1.0">
+  <tei:teiHeader>
+    <tei:fileDesc>
+      <tei:titleStmt>
+        <tei:title>Title</tei:title>
+      </tei:titleStmt>
+      <tei:publicationStmt>
+        <tei:p>Publication Information</tei:p>
+      </tei:publicationStmt>
+      <tei:sourceDesc>
+        <tei:p>Information about the source</tei:p>
+      </tei:sourceDesc>
+    </tei:fileDesc>
+  </tei:teiHeader>
+  <tei:text>
+    <tei:body>
+      <tei:schemaSpec ident="mpm" start="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" prefix="mpm.">
+
+        <tei:moduleSpec ident="mpm" mode="add" >
+          <tei:desc>mpm core module</tei:desc>
+        </tei:moduleSpec>
+        
+        <tei:classSpec ident="att.linking" type="atts" mode="add" module="mpm">
+          <tei:desc>Attribute class for atributes containink link and pointer tarets.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="uri" module="mpm" mode="add">
+              <tei:datatype>
+                <rng:data type="uri"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.name" type="atts" mode="add" module="mpm">
+          <tei:desc>Name attribute class.</tei:desc>
+          <tei:attList org="choice">
+            <tei:attDef ident="name" usage="opt"><!-- ? same attribute required vs optional -->
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="name" usage="req">
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <!--<tei:classSpec ident="att.nameable" type="atts" mode="add" module="mpm">
+          <tei:desc>Name attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attRef class="att.name" name="name"/>
+          </tei:attList>
+        </tei:classSpec>-->
+        
+        <tei:classSpec ident="att.named" type="atts" mode="add" module="mpm">
+          <tei:desc>Name attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attRef class="mpm.att.name" name="name" />
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.typed" type="atts" mode="add" module="mpm">
+          <tei:desc>Type attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="type">
+              <!--<tei:valList type="semi">
+                <tei:valItem ident="midi" mode="add">
+                  <tei:gloss>reference to a MIDI</tei:gloss>
+                </tei:valItem>
+                <tei:valItem ident="mei" mode="add">
+                  <tei:gloss>reference to a MEI file</tei:gloss>
+                </tei:valItem>
+                <tei:valItem ident="musicXML" mode="add">
+                  <tei:gloss>reference to a musicXML file</tei:gloss>
+                </tei:valItem>
+              </tei:valList>-->
+              <tei:datatype>
+                <rng:data type="string"><!-- TODO: mei midi musicXML msm -->
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
+          <tei:desc>root element of mpm.</tei:desc>
+          <tei:content>
+            <rng:zeroOrMore>
+              <rng:ref name="referenceMusic"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref atLeast="1" name="performance"/>
+            </rng:oneOrMore>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="performance" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
+          <tei:desc>groups information for one performance style.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.named"/>
+          </tei:classes>
+          <tei:content>
+            <rng:ref name="model.performance"/>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="referenceMusic" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
+          <tei:desc>list of references to files processable with this performance description</tei:desc>
+          <tei:content>
+            <rng:zeroOrMore>
+              <rng:ref name="reference"/>
+            </rng:zeroOrMore>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="reference" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
+          <tei:desc>reference to a music representation processable by this performance description.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.typed"/>
+          </tei:classes>
+          <tei:content>
+            <rng:empty/><!-- @ implementations -->
+          </tei:content>
+        </tei:elementSpec>
+        
+<!-- module performance -->
+        
+        <tei:moduleSpec ident="performance" mode="add" >
+          <tei:desc>performance</tei:desc>
+        </tei:moduleSpec>
+        
+        <tei:macroSpec ident="model.performance" mode="add" module="performance">
+          <tei:desc>Content model for performance styles.</tei:desc><!-- TODO create metadata block -->
+          <tei:content>
+            <rng:zeroOrMore atMost="1">
+              <rng:ref name="global"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="part"/>
+            </rng:zeroOrMore>
+          </tei:content>
+        </tei:macroSpec>
+        
+        <tei:elementSpec ident="global" ns="http://www.cemfi.de/mpm/ns/1.0" module="performance" mode="add">
+          <tei:content>
+            <tei:elementRef key="header"/>
+            <tei:elementRef key="dated"/>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="part" ns="http://www.cemfi.de/mpm/ns/1.0" module="performance" mode="add">
+          <tei:desc>Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.partLike"/>
+          </tei:classes>
+          <tei:content>
+            <!--            <classRef key="att.nameable"/>-->
+            <tei:elementRef key="header"/>
+            <tei:elementRef key="dated"/>
+          </tei:content>
+        </tei:elementSpec>
+
+      </tei:schemaSpec>
+    </tei:body>
+  </tei:text>
+</tei:TEI>
