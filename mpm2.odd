@@ -616,6 +616,57 @@
           <tei:desc>Groups elements that may occur in mpm:dynamicsMap</tei:desc>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
+          <tei:desc>Group of dynamics attributes.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="curvature">
+              <tei:desc>Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
+              <!-- TODO Schematron ? -->
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="volume">
+              <tei:desc>Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
+              <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
+              <tei:datatype>
+                <rng:text/><!-- TODO: define datatype -->
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="transition">
+              <tei:desc>Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
+              <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
+              <tei:datatype>
+                <rng:text/><!-- TODO: define datatype -->
+              </tei:datatype>
+            </tei:attDef>
+            <!--<tei:attDef ident="straightness"><!-\- TODO: how to encode default values? -\->
+              <tei:desc>Optional. Indicates the deviation from a linear volume transition/envelope. Potential values: [0] linear envelope; [1] steep envelop on the curves turning point; [0.3] default value.</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>-->
+            <tei:attDef ident="protraction"><!-- TODO: how to encode default values? -->
+              <tei:desc>Optional. Indicates how long the level adjustment will be delayed. Value rang -1 to 1. Values smaller than [0] provoke a quicker change at the beginning, values larger than [1] provoke a quicker change at the end of the transgression.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float">
+                  <rng:param name="minInclusive">-1</rng:param>
+                  <rng:param name="maxInclusive">1</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="subNoteDynamics"><!-- TODO: how to encode default values? -->
+              <tei:desc>Gives the density of ChannelVolumeChange-commands. This resembles the slope of 't' in calculating the bezier curve, e.g. for(t = 0; t lte 1; t = t + subNoteDynamics) {calculate X-Y-coordinates at t;}. If no subnote dynamics are wanted, the value is set to 0, 1, or left away</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">1</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:elementSpec ident="dynamics" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
