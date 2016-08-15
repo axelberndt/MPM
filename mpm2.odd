@@ -618,7 +618,7 @@
           <tei:content/>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="dynamicsStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
+        <tei:elementSpec ident="dynamicsStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
