@@ -583,6 +583,7 @@
         <tei:elementSpec ident="dynamicsMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dynamics" mode="add">
           <tei:desc>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</tei:desc>
           <tei:classes>
+            <tei:memberOf key="att.startStyle"/>
             <tei:memberOf key="model.dated_maps"/>
           </tei:classes>
           <tei:content>
