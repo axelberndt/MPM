@@ -527,6 +527,16 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:elementSpec ident="articulation" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
+          <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.dated"/>
+            <tei:memberOf key="att.named"/>
+            <tei:memberOf key="model.articulationMapPart"  min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
         <tei:elementSpec ident="articulationDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
           <tei:desc>Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
