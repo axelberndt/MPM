@@ -516,6 +516,17 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.standardArticulation" type="atts" module="articulation" mode="add">
+          <tei:attList>
+            <tei:attDef ident="standardArticulation">
+              <tei:desc></tei:desc>
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:elementSpec ident="articulationDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
           <tei:desc>Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
