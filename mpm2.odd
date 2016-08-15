@@ -287,7 +287,7 @@
           </tei:attList>
         </tei:classSpec>
         
-        <tei:classSpec ident="att.partLike" type="atts" mode="add"  module="performance">
+        <tei:classSpec ident="att.partLike" type="atts" mode="add" module="performance">
           <tei:classes>
             <tei:memberOf key="att.enumeration"/>
             <tei:memberOf key="att.midi"/>
