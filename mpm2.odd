@@ -299,6 +299,19 @@
           <tei:desc>class.map groups all map elements.</tei:desc>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.instructionLike" type="atts" mode="add" module="performance">
+          <tei:desc>Groups elements that may occur in dated maps.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="date">
+              <tei:datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="model.headerPart" type="model" module="performance" mode="add">
           <tei:desc>The header class groups child elements of the header element.</tei:desc>
         </tei:classSpec>
