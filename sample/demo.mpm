@@ -1,0 +1,127 @@
+<mpm>
+	<!-- there has to be at most 1 referenceMusic element, it indicates all music files which these performances can be applied to, type is semi-open (i.e. midi, msm, mei, and musicXML are supported, other types are allowed but the application has to handle it) -->
+	<referenceMusic>
+		<reference uri="D:\mpmDemo\music.mid" type="midi"/>
+		<reference uri="D:\mpmDemo\music.msm" type="msm"/>
+		<reference uri="D:\mpmDemo\music.mei" type="mei"/>
+		<reference uri="D:\mpmDemo\music.xml" type="musicXML"/>
+		<reference uri="D:\mpmDemo\anotherMusic.mid" type="midi"/>
+		<reference uri="D:\mpmDemo\evenMoreMusic.mei" type="mei"/>
+		<reference uri="D:\mpmDemo\unsupportedMusicType.umt" type="umt"/>
+	</referenceMusic>
+
+	<!-- there has to be at least one performance element, here you put in the actual performance descriptions -->
+	<performance name="Adagio">
+		<global>
+			<header>
+				<!-- the sequencingCommands element and its attributes are all optional, if an attribute or the whole element is missing they are assumed as false -->
+				<sequencingCommands loop="true" mute="false"/>
+				
+				<!-- the viennaCtrls element is used to control the Vienna Instruments sampler; we have a set of prepared performance matrices -->
+				<viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
+				
+				<articulationStyles>
+					<styleDef name="old style">
+						<articulationDef name="nonlegato" absoluteDurationChange="-360"/>
+						<articulationDef name="accent" absoluteVelocityChange="25"/>
+						<articulationDef name="legato" relativeDuration="1"/>
+						<articulationDef name="moltoLegato" absoluteDurationChange="10"/>
+						<articulationDef name="portamento" absoluteDurationChange="50"/>
+						<articulationDef name="portato" relativeDuration="0.8"/>
+						<articulationDef name="marcato" absoluteVelocityChange="25" relativeDuration="0.8"/>
+						<articulationDef name="tenuto" absoluteVelocityChange="12" relativeDuration="0.9"/>
+						<articulationDef name="hat" absoluteVelocityChange="25" relativeDuration="0.75"/>
+						<articulationDef name="staccato" absoluteDurationMs="150"/>
+						<articulationDef name="staccatissimo" absoluteDurationMs="80"/>
+						<articulationDef name="pizzicato" absoluteDurationMs="1"/>
+						<articulationDef name="cesura" absoluteDurationChange="-100"/>
+						<articulationDef name="fortepiano" absoluteVelocity="126"/>
+						<articulationDef name="sforzato" absoluteVelocity="127"/>
+					</styleDef>
+					<styleDef name="mini style">
+						<articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
+					</styleDef>
+				</articulationStyles>
+				
+				<ornamentationStyles>
+					<styleDef name="">
+					</styleDef>
+				</ornamentationStyles>
+				
+				<dynamicsStyles>
+					<styleDef name="the old style">
+						<dynamicsDef name="p" value="40"/>
+						<dynamicsDef name="ff" value="120"/>
+					</styleDef>
+					<styleDef name="another style">
+						<dynamicsDef name="p" value="30"/>
+						<dynamicsDef name="f" value="95"/>
+						<dynamicsDef name="ff" value="125"/>
+					</styleDef>
+				</dynamicsStyles>
+			</header>
+			
+			<dated>
+				<dynamicsMap startStyle="the old style">
+					<instruction date="0"><dynamics volume="p" transition="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/></instruction>
+					<switch date="1440" style="another style"/>
+					<instruction date="1440"><dynamics volume="100"/></instruction>
+					<instruction date="32960"><dynamics volume="f"/></instruction>
+				</dynamicsMap>
+				
+				<articulationMap startStyle="old style" standardArticulation="nonlegato">
+					<instruction date="0"><articulation name="legato"/><articulation name="accent"/></instruction>
+					<switch date="1440" style="mini style" standardArticulation="nonlegato"/>
+				</articulationMap>
+			</dated>
+		</global>
+		
+		<!-- part numbering starts with 1; number is mandatory -->
+		<part name="Soprano" number="1" channel.midi="0" port.midi="0">
+			<header>
+			</header>
+			
+			<dated>
+			</dated>
+		</part>
+		
+		<part name="Alto" number="2" channel.midi="1" port.midi="0">
+			<header>
+			</header>
+			
+			<dated>
+			</dated>
+		</part>
+		
+	</performance>
+	
+	<performance name="Molto Adagio">
+		<global>
+			<header>
+				<viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
+			</header>
+			
+			<dated>
+			</dated>
+		</global>
+		
+		<part name="Soprano" number="1" channel.midi="0" port.midi="0">
+			<header>
+				<sequencingCommands loop="false" mute="true"/>
+			</header>
+			
+			<dated>
+			</dated>
+		</part>
+		
+		<part name="Alto" number="2" channel.midi="1" port.midi="0">
+			<header>
+				<sequencingCommands loop="false" mute="false"/>
+			</header>
+			
+			<dated>
+			</dated>
+		</part>
+		
+	</performance>
+</mpm>
