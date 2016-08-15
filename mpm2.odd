@@ -590,11 +590,10 @@
             <tei:memberOf key="att.startStyle"/>
             <tei:memberOf key="model.dated_maps" min="0" max="1"/>
           </tei:classes>
-          <tei:content><!-- TODO content -->
-            <!--<rng:zeroOrMore>
-              <rng:ref name="macro.anyName"/>
-            </rng:zeroOrMore>-->
-            <tei:classRef key="model.articulationMapPart" expand="sequenceOptionalRepeatable"/><!--TODO check @expand-->
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.articulationMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
           </tei:content>
         </tei:elementSpec>
         
