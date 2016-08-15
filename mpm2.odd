@@ -554,6 +554,7 @@
         <tei:elementSpec ident="articulationMap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
           <tei:desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</tei:desc>
           <tei:classes>
+            <tei:memberOf key="att.standardArticulation"/>
             <tei:memberOf key="att.startStyle"/>
             <tei:memberOf key="model.dated_maps" min="0" max="1"/>
           </tei:classes>
@@ -561,6 +562,7 @@
             <!--<rng:zeroOrMore>
               <rng:ref name="macro.anyName"/>
             </rng:zeroOrMore>-->
+            <tei:classRef key="model.articulationMapPart" expand="sequenceOptionalRepeatable"/><!--TODO check @expand-->
           </tei:content>
         </tei:elementSpec>
         
