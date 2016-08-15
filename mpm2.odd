@@ -131,6 +131,17 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.value" type="atts" mode="add" module="mpm">
+          <tei:desc>Value attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="value">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="model.styleDefPart" type="model" module="mpm" mode="add">
           <tei:desc>The header styleDefPart class groups elements that may appear in styleDef.</tei:desc>
         </tei:classSpec>
