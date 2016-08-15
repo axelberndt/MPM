@@ -619,7 +619,7 @@
         <tei:elementSpec ident="dynamics" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
-            <tei:memberOf key="att.named"/>
+            <tei:memberOf key="att.dynamics"/>
             <tei:memberOf key="att.instructionLike"/>
             <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
           </tei:classes>
