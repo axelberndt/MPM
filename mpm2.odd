@@ -640,11 +640,9 @@
             <tei:memberOf key="model.dated_maps"/>
           </tei:classes>
           <tei:content>
-            <tei:content>
-              <rng:interleave>
-                <tei:classRef key="model.dynamicsMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
-              </rng:interleave>
-            </tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.dynamicsMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
           </tei:content>
         </tei:elementSpec>
         
