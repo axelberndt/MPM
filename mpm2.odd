@@ -425,6 +425,10 @@
           <tei:desc>articulation</tei:desc>
         </tei:moduleSpec>
         
+        <tei:classSpec type="model" ident="model.articulationMapPart">
+          <tei:desc>Groups elements that may occur in mpm:articulationMap</tei:desc>
+        </tei:classSpec>
+        
         <tei:classSpec ident="att.artic" type="atts" module="articulation" mode="add">
           <tei:attList>
             
