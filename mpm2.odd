@@ -108,6 +108,17 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.startStyle" type="atts" mode="add" module="mpm">
+          <tei:desc>startStyle attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="startStyle">
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="att.typed" type="atts" mode="add" module="mpm">
           <tei:desc>Type attribute class.</tei:desc>
           <tei:attList>
