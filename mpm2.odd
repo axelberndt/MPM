@@ -357,9 +357,18 @@
           <tei:desc></tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="att.standardArticulation"/>
             <tei:memberOf key="model.articulationMapPart" min="0" max="unbounded"/>
             <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
           </tei:classes>
+          <tei:attList>
+            <tei:attDef ident="style">
+              <tei:desc></tei:desc><!-- TODO check use on other elements -->
+              <tei:constraintSpec ident="att.style" scheme="isoschematron">
+                <!-- TODO -->
+              </tei:constraintSpec>
+            </tei:attDef>
+          </tei:attList>
         </tei:elementSpec>
 
       <!-- module misc -->
