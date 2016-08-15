@@ -1,4 +1,5 @@
-<mpm>
+<?xml-model href="../../rng/mpm2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
 	<!-- there has to be at most 1 referenceMusic element, it indicates all music files which these performances can be applied to, type is semi-open (i.e. midi, msm, mei, and musicXML are supported, other types are allowed but the application has to handle it) -->
 	<referenceMusic>
 		<reference uri="D:\mpmDemo\music.mid" type="midi"/>
