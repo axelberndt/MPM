@@ -700,6 +700,10 @@
           <tei:desc>ornamentation</tei:desc>
         </tei:moduleSpec>
         
+        <tei:classSpec type="model" ident="model.ornamentationMapPart" mode="add">
+          <tei:desc>Groups elements that may occur in mpm:ornamentationMap</tei:desc>
+        </tei:classSpec>
+        
         <tei:elementSpec ident="ornamentationDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="ornamentation" mode="add">
           <tei:desc><!-- TODO -->.</tei:desc>
           <tei:classes>
