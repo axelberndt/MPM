@@ -12,13 +12,25 @@
   <tei:teiHeader>
     <tei:fileDesc>
       <tei:titleStmt>
-        <tei:title>Title</tei:title>
+        <tei:title>MPM – Music Performance Markup</tei:title>
+        <tei:author>Axel Berndt</tei:author>
+        <tei:author>Benjamin W. Bohl</tei:author>
       </tei:titleStmt>
       <tei:publicationStmt>
-        <tei:p>Publication Information</tei:p>
+        <tei:p>unpublished</tei:p>
+        <!--<tei:publisher>
+          <tei:address>
+            <tei:addrLine>CeMFI – Center of Music and Film Informatics</tei:addrLine>
+            <tei:addrLine>University of Music Detmold &amp; University of Applied Sciences OWL</tei:addrLine>
+            <tei:addrLine>Hornsche Str. 44</tei:addrLine>
+            <tei:addrLine>D-32756 Detmold</tei:addrLine>
+            <tei:addrLine>Germany</tei:addrLine>
+          </tei:address>
+        </tei:publisher>
+        <tei:date when=""/>-->
       </tei:publicationStmt>
       <tei:sourceDesc>
-        <tei:p>Information about the source</tei:p>
+        <tei:p>born digital.</tei:p>
       </tei:sourceDesc>
     </tei:fileDesc>
   </tei:teiHeader>
