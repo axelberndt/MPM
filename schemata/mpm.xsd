@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
+  <!--
+    Schema generated from ODD source 2016-08-16T08:15:19Z. .
+    TEI Edition: Version 3.0.0. Last updated on
+    	29th March 2016, revision 89ba24e
+    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
+    
+  -->
+  <!---->
+  <xs:simpleType name="mpm.data.URI">
+    <xs:restriction base="xs:anyURI"/>
+  </xs:simpleType>
+  <xs:complexType name="mpm.model.performance">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="mpm:global"/>
+      <xs:element ref="mpm:part"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:attributeGroup name="mpm.att.linking.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.linking.attribute.uri"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.linking.attribute.uri">
+    <xs:attribute name="uri" type="mpm:mpm.data.URI">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.enumeration.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.enumeration.attribute.number"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.enumeration.attribute.number">
+    <xs:attribute name="number">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.named.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.named.attribute.name"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.named.attribute.name">
+    <xs:attribute name="name" type="xs:string">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.startStyle.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.startStyle.attribute.startStyle"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.startStyle.attribute.startStyle">
+    <xs:attribute name="startStyle" type="xs:string">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.typed.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.typed.attribute.type"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.typed.attribute.type">
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.value.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.value.attribute.value"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.value.attribute.value">
+    <xs:attribute name="value" type="xs:float">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="mpm">
+    <xs:annotation>
+      <xs:documentation>root element of mpm.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:referenceMusic"/>
+        <xs:element maxOccurs="unbounded" ref="mpm:performance"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="performance">
+    <xs:annotation>
+      <xs:documentation>groups information for one performance style.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mpm:mpm.model.performance">
+          <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="referenceMusic">
+    <xs:annotation>
+      <xs:documentation>list of references to files processable with this performance description</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:reference"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reference">
+    <xs:annotation>
+      <xs:documentation>reference to a music representation processable by this performance description.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.typed.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.linking.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="styleDef">
+    <xs:annotation>
+      <xs:documentation>Element used in header sections for defining styles that can be referenced from the corresponding map elements. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:articulationDef"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:dynamicsDef"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:ornamentationDef"/>
+      </xs:choice>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="mpm.att.midi.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.midi.attribute.midi.port"/>
+    <xs:attributeGroup ref="mpm:mpm.att.midi.attribute.midi.channel"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.midi.attribute.midi.port">
+    <xs:attribute name="midi.port">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.midi.attribute.midi.channel">
+    <xs:attribute name="midi.channel">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="15"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.partLike.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.enumeration.attributes"/>
+    <xs:attributeGroup ref="mpm:mpm.att.midi.attributes"/>
+    <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+  </xs:attributeGroup>
+  <xs:group name="mpm.model.dated_maps">
+    <xs:choice>
+      <xs:element minOccurs="0" ref="mpm:articulationMap"/>
+      <xs:element ref="mpm:dynamicsMap"/>
+      <xs:element ref="mpm:ornamentationMap"/>
+    </xs:choice>
+  </xs:group>
+  <xs:attributeGroup name="mpm.att.instructionLike.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attribute.date"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.instructionLike.attribute.date">
+    <xs:attribute name="date">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="dated">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="mpm:mpm.model.dated_maps"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="global">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mpm:header"/>
+        <xs:element ref="mpm:dated"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="header">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:sequencingCommands"/>
+        <xs:element ref="mpm:viennaCtrls"/>
+        <xs:element ref="mpm:articulationStyles"/>
+        <xs:element ref="mpm:dynamicsStyles"/>
+        <xs:element ref="mpm:ornamentationStyles"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="part">
+    <xs:annotation>
+      <xs:documentation>Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mpm:header"/>
+        <xs:element ref="mpm:dated"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="mpm:mpm.att.partLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="switch">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.standardArticulation.attributes"/>
+      <xs:attribute name="style">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="mpm.att.vienna.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.vienna.attribute.velXFadeOnOff"/>
+    <xs:attributeGroup ref="mpm:mpm.att.vienna.attribute.velXFade"/>
+    <xs:attributeGroup ref="mpm:mpm.att.vienna.attribute.hSpan"/>
+    <xs:attributeGroup ref="mpm:mpm.att.vienna.attribute.vSpan"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.vienna.attribute.velXFadeOnOff">
+    <xs:attribute name="velXFadeOnOff">
+      <xs:annotation>
+        <xs:documentation>Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="127"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.vienna.attribute.velXFade">
+    <xs:attribute name="velXFade">
+      <xs:annotation>
+        <xs:documentation>Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="127"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.vienna.attribute.hSpan">
+    <xs:attribute name="hSpan">
+      <xs:annotation>
+        <xs:documentation>Controller number for switching the performance-matrix column (duration), standard value is 21.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="127"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.vienna.attribute.vSpan">
+    <xs:attribute name="vSpan">
+      <xs:annotation>
+        <xs:documentation>Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="127"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="sequencingCommands">
+    <xs:annotation>
+      <xs:documentation>Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="loop" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="mute" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="viennaCtrls">
+    <xs:annotation>
+      <xs:documentation>Vienna Instruments allow control of "Velocity-Cross-Fade", that influences velocity, expression, ChannelVolume and tone color accordingly. It can be addressed via specific controllers. To provide the engine with the right controller data this element allows the corresponding encoding. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.vienna.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="mpm.att.artic.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.absoluteVelocity"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.absoluteVelocityChange"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.relativeVelocity"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.absoluteDuration"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.absoluteDurationChange"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.absoluteDurationMs"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.absoluteDurationChangeMs"/>
+    <xs:attributeGroup ref="mpm:mpm.att.artic.attribute.relativeDuration"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.absoluteVelocity">
+    <xs:attribute name="absoluteVelocity">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value for velocity that will replace existing velocity values.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="127"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.absoluteVelocityChange">
+    <xs:attribute name="absoluteVelocityChange" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value (+/-) that will be added to the local velocity.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.relativeVelocity">
+    <xs:attribute name="relativeVelocity">
+      <xs:annotation>
+        <xs:documentation>Gives a relative amount of velocity change as decimal number, e.g. 1=100% (no change), 0.5% (half velocity), 2.0=200% (double velocity).</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.absoluteDuration">
+    <xs:attribute name="absoluteDuration">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value for duration (in MIDI ticks) that will replace existing local duration values.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="127"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.absoluteDurationChange">
+    <xs:attribute name="absoluteDurationChange" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value (+/-) in MIDI ticks that will be added to the local duration values.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.absoluteDurationMs">
+    <xs:attribute name="absoluteDurationMs">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute duration in milliseconds that will replace existing local duration values.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.absoluteDurationChangeMs">
+    <xs:attribute name="absoluteDurationChangeMs" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value (+/-) in milliseconds that will be added to existing local duration values.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.artic.attribute.relativeDuration">
+    <xs:attribute name="relativeDuration">
+      <xs:annotation>
+        <xs:documentation>Gives a relative amount of duration change as decimal number, e.g. 1=100% (no change), 0.5% (half duration), 2.0=200% (double duration).</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.standardArticulation.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.standardArticulation.attribute.standardArticulation"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.standardArticulation.attribute.standardArticulation">
+    <xs:attribute name="standardArticulation" type="xs:string">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="articulation">
+    <xs:annotation>
+      <xs:documentation>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="articulationDef">
+    <xs:annotation>
+      <xs:documentation>Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.artic.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="articulationStyles">
+    <xs:annotation>
+      <xs:documentation>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:styleDef"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="articulationMap">
+    <xs:annotation>
+      <xs:documentation>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:switch"/>
+        <xs:element ref="mpm:articulation"/>
+      </xs:choice>
+      <xs:attributeGroup ref="mpm:mpm.att.standardArticulation.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.startStyle.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="mpm.att.dynamics.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.curvature"/>
+    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.volume"/>
+    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.transition"/>
+    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.protraction"/>
+    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.subNoteDynamics"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.dynamics.attribute.curvature">
+    <xs:attribute name="curvature" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>Optional. Indicates the deviation from a linear volume transition/envelope. Potential values: [0] linear envelope; [1] steep envelop on the curves turning point; [0.3] default value.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.dynamics.attribute.volume">
+    <xs:attribute name="volume">
+      <xs:annotation>
+        <xs:documentation>Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.dynamics.attribute.transition">
+    <xs:attribute name="transition">
+      <xs:annotation>
+        <xs:documentation>Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.dynamics.attribute.protraction">
+    <xs:attribute name="protraction">
+      <xs:annotation>
+        <xs:documentation>Optional. Indicates how long the level adjustment will be delayed. Value rang -1 to 1. Values smaller than [0] provoke a quicker change at the beginning, values larger than [1] provoke a quicker change at the end of the transgression.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:float">
+          <xs:minInclusive value="-1"/>
+          <xs:maxInclusive value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.dynamics.attribute.subNoteDynamics">
+    <xs:attribute name="subNoteDynamics">
+      <xs:annotation>
+        <xs:documentation>Gives the density of ChannelVolumeChange-commands. This resembles the slope of 't' in calculating the bezier curve, e.g. for(t = 0; t lte 1; t = t + subNoteDynamics) {calculate X-Y-coordinates at t;}. If no subnote dynamics are wanted, the value is set to 0, 1, or left away</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="dynamics">
+    <xs:annotation>
+      <xs:documentation>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.dynamics.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dynamicsDef">
+    <xs:annotation>
+      <xs:documentation>Defines `dynamincs with a stylewide unique @name nad respective velocity values.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.artic.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.value.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dynamicsStyles">
+    <xs:annotation>
+      <xs:documentation>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:styleDef"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dynamicsMap">
+    <xs:annotation>
+      <xs:documentation>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:switch"/>
+        <xs:element ref="mpm:dynamics"/>
+      </xs:choice>
+      <xs:attributeGroup ref="mpm:mpm.att.startStyle.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ornamentationDef">
+    <xs:annotation>
+      <xs:documentation>.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.artic.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ornamentationStyles">
+    <xs:annotation>
+      <xs:documentation>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:styleDef"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ornamentationMap">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+</xs:schema>
