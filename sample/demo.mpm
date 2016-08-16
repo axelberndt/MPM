@@ -65,7 +65,7 @@
                     <styleDef name="my accentuation pattern pool">
                         <!-- the following accentuation pattern is of 4 beats length -->
                         <accentuationPatternDef name="accentuation pattern 1" length="4">
-                            <!-- an accentuation defines the beat to be accentuated (float), the accentuation value (typically between -1.0 and 1.0) and a linear transition (values also typically between -1.0 and 1.0) inbetween this and the succeeding accentuation -->
+                            <!-- an accentuation defines the beat to be accentuated (float), the accentuation value (typically between -1.0 and 1.0) and a linear transition (values also typically between -1.0 and 1.0) in-between this and the succeeding accentuation -->
                             <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
                             <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>	<!-- this accentuation lies between beats 2 and 3 -->
                             <accentuation beat="4" value="0.5" transition.from="0.0" transition.to="1.0"/>
@@ -90,9 +90,10 @@
                 </articulationMap>
 
                 <metricalAccentuationMap startStyle="my accentuation pattern pool">
-                    <accentuationPattern date="0" name="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations -->
+                    <accentuationPattern date="0" name="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result is specifies the offset from the underlying macro dynamics) -->
                     <switch date="1440" style="my accentuation pattern pool"/>                              <!-- this switch does not make so much sense, it switches to the same style that is already running, but you can switch to other styles this way -->
                     <accentuationPattern date="1440" name="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
+                    <accentuationPattern date="394760" name="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
                 </metricalAccentuationMap>
             </dated>
         </global>
