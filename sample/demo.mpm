@@ -132,6 +132,10 @@
                     <switch date="1440" style="my rubato style"/>
                     <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9"/>
                 </rubatoMap>
+
+                <ornamentationMap>
+                    <!-- not yet defined -->
+                </ornamentationMap>
             </dated>
         </global>
 
