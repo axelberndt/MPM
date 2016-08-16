@@ -620,7 +620,7 @@
                 <rng:text/><!-- TODO: define datatype -->
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="transition">
+            <tei:attDef ident="transition.to">
               <tei:desc>Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
               <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
               <tei:datatype>
