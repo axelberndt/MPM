@@ -454,7 +454,7 @@
           <tei:desc>Groups elements that may occur in mpm:articulationMap</tei:desc>
         </tei:classSpec>
         
-        <tei:classSpec ident="att.artic" type="atts" module="articulation" mode="add">
+        <tei:classSpec ident="att.articulation" type="atts" module="articulation" mode="add">
           <tei:attList>
             
             <!-- velocity -->
@@ -562,7 +562,7 @@
           <tei:desc>Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.named"/>
-            <tei:memberOf key="att.artic"/>
+            <tei:memberOf key="att.articulation"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded" exclude="dynamicsDef"/>
           </tei:classes>
           <tei:content/>
@@ -661,7 +661,7 @@
         <tei:elementSpec ident="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Defines `dynamincs with a stylewide unique @name nad respective velocity values.</tei:desc>
           <tei:classes>
-            <tei:memberOf key="att.artic"/>
+            <tei:memberOf key="att.articulation"/>
             <tei:memberOf key="att.named"/>
             <tei:memberOf key="att.value"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
