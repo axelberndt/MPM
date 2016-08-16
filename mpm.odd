@@ -355,6 +355,7 @@
             <tei:memberOf key="att.standardArticulation"/>
             <tei:memberOf key="model.articulationMapPart" min="0" max="unbounded"/>
             <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
             <tei:attDef ident="style" usage="req">
@@ -724,7 +725,6 @@
           </tei:content>
         </tei:elementSpec>
         
-        
         <tei:elementSpec ident="ornamentationMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="ornamentation" mode="add">
           <tei:desc><!-- TODO --></tei:desc>
           <tei:classes>
@@ -736,7 +736,111 @@
             </rng:zeroOrMore>
           </tei:content>
         </tei:elementSpec>
-
+        
+        <!-- MODULE metricalAccentuation -->
+        
+        <tei:moduleSpec ident="metricalAccentuation" mode="add">
+          <tei:desc>Module defining metrical accentuation.</tei:desc>
+        </tei:moduleSpec>
+        
+        <tei:classSpec type="atts" ident="att.accentuation" module="metricalAccentuation" mode="add">
+          <tei:desc></tei:desc>
+          <tei:attList>
+            <tei:attDef ident="beat">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="transition.from">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="transition.to">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec type="model" ident="model.accentuationPatternDefPart" mode="add">
+          <tei:desc>Groups elements that may occur in mpm:metricalAccentuationMap</tei:desc>
+        </tei:classSpec>
+        
+        <tei:classSpec type="model" ident="model.metricalAccentuationMapPart" mode="add">
+          <tei:desc>Groups elements that may occur in mpm:metricalAccentuationMap</tei:desc>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="accentuation" ns="http://www.cemfi.de/mpm/ns/1.0"  module="metricalAccentuation" mode="add">
+          <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.accentuation"/>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.accentuationPatternDefPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="accentuationPattern" ns="http://www.cemfi.de/mpm/ns/1.0"  module="metricalAccentuation" mode="add">
+          <tei:desc>.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.named"/>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="accentuationPatternDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="metricalAccentuation" mode="add">
+          <tei:desc><!-- TODO -->.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.named"/>
+            <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:attList>
+            <tei:attDef ident="length">
+              <tei:desc>Gives the pattern length in metrical beats.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+          <tei:content>
+            <tei:classRef key="model.accentuationPatternDefPart"/>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="metricalAccentuationMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="metricalAccentuation" mode="add">
+          <tei:desc></tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.startStyle"/>
+            <tei:memberOf key="model.mapLike"/>
+          </tei:classes>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.metricalAccentuationMapPart" expand="sequenceOptional"/><!--TODO check @expand and rng:interleave invalid but works-->
+            </rng:interleave>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="metricalAccentuationStyles" ns="http://www.cemfi.de/mpm/ns/1.0" module="metricalAccentuation" mode="add">
+          <tei:desc></tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.headerPart"/>
+            <tei:memberOf key="model.styleDefContainerLike"/>
+          </tei:classes>
+          <tei:content>
+            <tei:classRef key="model.styleDefLike" expand="sequenceOptionalRepeatable"/>
+          </tei:content>
+        </tei:elementSpec>
+        
+ 
       </tei:schemaSpec>
     </tei:body>
   </tei:text>
