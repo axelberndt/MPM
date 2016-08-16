@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-16T18:47:32Z. 
+Schema generated from ODD source 2016-08-16T18:58:27Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -249,6 +249,9 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </optional>
          <optional>
             <ref name="mpm.rubatoMap"/>
+         </optional>
+         <optional>
+            <ref name="mpm.asynchronyMap"/>
          </optional>
       </choice>
    </define>
@@ -861,6 +864,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.rubato.attribute.intensity"/>
       <ref name="mpm.att.rubato.attribute.lateStart"/>
       <ref name="mpm.att.rubato.attribute.earlyEnd"/>
+      <ref name="mpm.att.rubato.attribute.loop"/>
       <ref name="mpm.att.named.attribute.name"/>
    </define>
    <define name="mpm.att.rubato.attribute.frameLength">
@@ -892,6 +896,14 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <attribute name="earlyEnd">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
             <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.rubato.attribute.loop">
+      <optional>
+         <attribute name="loop">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+            <data type="boolean"/>
          </attribute>
       </optional>
    </define>
@@ -933,6 +945,36 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <zeroOrMore>
             <ref name="mpm.styleDef"/>
          </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.att.asynchrony.attributes">
+      <ref name="mpm.att.asynchrony.attribute.milliseconds.offset"/>
+   </define>
+   <define name="mpm.att.asynchrony.attribute.milliseconds.offset">
+      <optional>
+         <attribute name="milliseconds.offset">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an offset in milliseconds.</a:documentation>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.asynchrony">
+      <element name="asynchrony" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A asynchrony instruction.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <ref name="mpm.att.asynchrony.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.asynchronyMap">
+      <element name="asynchronyMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List dated asynchrony instructions.</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="mpm.asynchrony"/>
+            </zeroOrMore>
+         </interleave>
       </element>
    </define>
    <start>

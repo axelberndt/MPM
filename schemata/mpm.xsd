@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-16T16:47:39Z. .
+    Schema generated from ODD source 2016-08-16T16:58:35Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -181,6 +181,7 @@
       <xs:element ref="mpm:metricalAccentuationMap"/>
       <xs:element minOccurs="0" ref="mpm:tempoMap"/>
       <xs:element minOccurs="0" ref="mpm:rubatoMap"/>
+      <xs:element minOccurs="0" ref="mpm:asynchronyMap"/>
     </xs:choice>
   </xs:group>
   <xs:attributeGroup name="mpm.att.instructionLike.attributes">
@@ -799,6 +800,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.intensity"/>
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.lateStart"/>
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.earlyEnd"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.loop"/>
     <xs:attributeGroup ref="mpm:mpm.att.named.attribute.name"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.frameLength">
@@ -824,6 +826,13 @@
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.earlyEnd">
     <xs:attribute name="earlyEnd" type="xs:decimal">
+      <xs:annotation>
+        <xs:documentation>?</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.rubato.attribute.loop">
+    <xs:attribute name="loop" type="xs:boolean">
       <xs:annotation>
         <xs:documentation>?</xs:documentation>
       </xs:annotation>
@@ -865,6 +874,35 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:styleDef"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="mpm.att.asynchrony.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.asynchrony.attribute.milliseconds.offset"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.asynchrony.attribute.milliseconds.offset">
+    <xs:attribute name="milliseconds.offset" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>defines an offset in milliseconds.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="asynchrony">
+    <xs:annotation>
+      <xs:documentation>A asynchrony instruction.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.asynchrony.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="asynchronyMap">
+    <xs:annotation>
+      <xs:documentation>List dated asynchrony instructions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:asynchrony"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
