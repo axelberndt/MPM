@@ -704,8 +704,7 @@
           <tei:desc><!-- TODO -->.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.named"/>
-            <tei:memberOf key="att.artic"/>
-            <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.ornamentationDefPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
         </tei:elementSpec>
