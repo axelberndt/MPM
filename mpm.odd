@@ -659,7 +659,7 @@
         </tei:elementSpec>
         
         <tei:elementSpec ident="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
-          <tei:desc>Defines `dynamincs with a stylewide unique @name nad respective velocity values.</tei:desc>
+          <tei:desc>Defines dynamincs with a stylewide unique @name nad respective velocity values.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.articulation"/>
             <tei:memberOf key="att.named"/>
