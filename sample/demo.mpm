@@ -60,6 +60,9 @@
 						<dynamicsDef name="ff" value="125"/>
 					</styleDef>
 				</dynamicsStyles>
+				
+				<metricalAccentuationStyles>
+				</metricalAccentuationStyles>
 			</header>
 			
 			<dated>
