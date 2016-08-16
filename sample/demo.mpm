@@ -82,6 +82,12 @@
                         <tempoDef name="my own tempo" value="106.87"/>
                     </styleDef>
                 </tempoStyles>
+
+                <rubatoStyles>
+                    <styleDef name="my rubato style">
+                        <rubatoDef name="swing" frameLength="720" intensity="0.6" lateStart="0.0" earlyEnd="0.0"/>
+                    </styleDef>
+                </rubatoStyles>
             </header>
 
             <dated>
@@ -114,11 +120,16 @@
                 </tempoMap>
 
                 <asynchronyMap>
-                    <asynchrony date="0" milliseconds.offset="-36"/>
-                    <asynchrony date="34650" milliseconds.offset="20"/>
+                    <asynchrony date="0" milliseconds.offset="-36.0"/>
+                    <asynchrony date="34650" milliseconds.offset="20.0"/>
                 </asynchronyMap>
 
-
+                <rubatoMap startStyle="my rubato style">                <!-- startStyle may be left empty "" if the instructions do not use literal rubato names (which have been defined by a rubatoDef) -->
+                    <!-- a rubato instruction either refers to a rubatoDef or specify the rubato itself with all the attributes -->
+                    <rubato date="0" name="swing" loop="true"/>
+                    <switch date="1440" style="my rubato style"/>
+                    <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9"/>
+                </rubatoMap>
             </dated>
         </global>
 
