@@ -112,6 +112,13 @@
                     <!-- meanTempoAt says at which relative position between this and the succeeding instruction (in [0, 1]) the tempo curve reaches the mean tempo -->
                     <tempo date="1440" bpm="100" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.5"/>
                 </tempoMap>
+
+                <asynchronyMap>
+                    <asynchrony date="0" milliseconds.offset="-36"/>
+                    <asynchrony date="34650" milliseconds.offset="20"/>
+                </asynchronyMap>
+
+
             </dated>
         </global>
 
