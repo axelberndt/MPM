@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-16T12:43:49Z. .
+    Schema generated from ODD source 2016-08-16T15:18:30Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -132,6 +132,7 @@
       <xs:choice>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:articulationDef"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:dynamicsDef"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:accentuationPatternDef"/>
       </xs:choice>
       <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
     </xs:complexType>
@@ -175,6 +176,7 @@
       <xs:element minOccurs="0" ref="mpm:articulationMap"/>
       <xs:element ref="mpm:dynamicsMap"/>
       <xs:element ref="mpm:ornamentationMap"/>
+      <xs:element ref="mpm:metricalAccentuationMap"/>
     </xs:choice>
   </xs:group>
   <xs:attributeGroup name="mpm.att.instructionLike.attributes">
@@ -222,6 +224,7 @@
         <xs:element ref="mpm:articulationStyles"/>
         <xs:element ref="mpm:dynamicsStyles"/>
         <xs:element ref="mpm:ornamentationStyles"/>
+        <xs:element ref="mpm:metricalAccentuationStyles"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -481,7 +484,7 @@
   <xs:attributeGroup name="mpm.att.dynamics.attributes">
     <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.curvature"/>
     <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.volume"/>
-    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.transition"/>
+    <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.transition.to"/>
     <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.protraction"/>
     <xs:attributeGroup ref="mpm:mpm.att.dynamics.attribute.subNoteDynamics"/>
   </xs:attributeGroup>
@@ -499,8 +502,8 @@
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.dynamics.attribute.transition">
-    <xs:attribute name="transition">
+  <xs:attributeGroup name="mpm.att.dynamics.attribute.transition.to">
+    <xs:attribute name="transition.to">
       <xs:annotation>
         <xs:documentation>Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</xs:documentation>
       </xs:annotation>
@@ -543,7 +546,7 @@
   </xs:element>
   <xs:element name="dynamicsDef">
     <xs:annotation>
-      <xs:documentation>Defines `dynamincs with a stylewide unique @name nad respective velocity values.</xs:documentation>
+      <xs:documentation>Defines dynamincs with a stylewide unique @name nad respective velocity values.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.articulation.attributes"/>
@@ -588,5 +591,101 @@
       <xs:documentation/>
     </xs:annotation>
     <xs:complexType/>
+  </xs:element>
+  <xs:attributeGroup name="mpm.att.accentuation.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.accentuation.attribute.beat"/>
+    <xs:attributeGroup ref="mpm:mpm.att.accentuation.attribute.value"/>
+    <xs:attributeGroup ref="mpm:mpm.att.accentuation.attribute.transition.from"/>
+    <xs:attributeGroup ref="mpm:mpm.att.accentuation.attribute.transition.to"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.accentuation.attribute.beat">
+    <xs:attribute name="beat" type="xs:float">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.accentuation.attribute.value">
+    <xs:attribute name="value" type="xs:float">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.accentuation.attribute.transition.from">
+    <xs:attribute name="transition.from" type="xs:float">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.accentuation.attribute.transition.to">
+    <xs:attribute name="transition.to" type="xs:float">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:complexType name="mpm.model.accentuationPatternDefPart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:accentuation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="accentuation">
+    <xs:annotation>
+      <xs:documentation>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.accentuation.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accentuationPattern">
+    <xs:annotation>
+      <xs:documentation>.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accentuationPatternDef">
+    <xs:annotation>
+      <xs:documentation>.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mpm:mpm.model.accentuationPatternDefPart">
+          <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
+          <xs:attribute name="length" type="xs:float">
+            <xs:annotation>
+              <xs:documentation>Gives the pattern length in metrical beats.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metricalAccentuationMap">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:switch"/>
+        <xs:element ref="mpm:accentuationPattern"/>
+      </xs:choice>
+      <xs:attributeGroup ref="mpm:mpm.att.startStyle.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metricalAccentuationStyles">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:styleDef"/>
+      </xs:sequence>
+    </xs:complexType>
   </xs:element>
 </xs:schema>

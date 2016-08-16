@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-16T14:43:42Z. 
+Schema generated from ODD source 2016-08-16T17:18:24Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -192,6 +192,9 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             <zeroOrMore>
                <ref name="mpm.dynamicsDef"/>
             </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.accentuationPatternDef"/>
+            </zeroOrMore>
          </choice>
          <ref name="mpm.att.named.attributes"/>
          <empty/>
@@ -234,6 +237,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </optional>
          <ref name="mpm.dynamicsMap"/>
          <ref name="mpm.ornamentationMap"/>
+         <ref name="mpm.metricalAccentuationMap"/>
       </choice>
    </define>
    <define name="mpm.att.instructionLike.attributes">
@@ -282,6 +286,9 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             </optional>
             <optional>
                <ref name="mpm.ornamentationStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.metricalAccentuationStyles"/>
             </optional>
          </interleave>
       </element>
@@ -527,7 +534,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
    <define name="mpm.att.dynamics.attributes">
       <ref name="mpm.att.dynamics.attribute.curvature"/>
       <ref name="mpm.att.dynamics.attribute.volume"/>
-      <ref name="mpm.att.dynamics.attribute.transition"/>
+      <ref name="mpm.att.dynamics.attribute.transition.to"/>
       <ref name="mpm.att.dynamics.attribute.protraction"/>
       <ref name="mpm.att.dynamics.attribute.subNoteDynamics"/>
    </define>
@@ -547,9 +554,9 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.dynamics.attribute.transition">
+   <define name="mpm.att.dynamics.attribute.transition.to">
       <optional>
-         <attribute name="transition">
+         <attribute name="transition.to">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</a:documentation>
             <text/>
          </attribute>
@@ -588,7 +595,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
    </define>
    <define name="mpm.dynamicsDef">
       <element name="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines `dynamincs with a stylewide unique @name nad respective velocity values.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines dynamincs with a stylewide unique @name nad respective velocity values.</a:documentation>
          <empty/>
          <ref name="mpm.att.articulation.attributes"/>
          <ref name="mpm.att.named.attributes"/>
@@ -631,6 +638,106 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <element name="ornamentationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.att.accentuation.attributes">
+      <ref name="mpm.att.accentuation.attribute.beat"/>
+      <ref name="mpm.att.accentuation.attribute.value"/>
+      <ref name="mpm.att.accentuation.attribute.transition.from"/>
+      <ref name="mpm.att.accentuation.attribute.transition.to"/>
+   </define>
+   <define name="mpm.att.accentuation.attribute.beat">
+      <optional>
+         <attribute name="beat">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.accentuation.attribute.value">
+      <optional>
+         <attribute name="value">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.accentuation.attribute.transition.from">
+      <optional>
+         <attribute name="transition.from">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.accentuation.attribute.transition.to">
+      <optional>
+         <attribute name="transition.to">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.model.accentuationPatternDefPart">
+      <choice>
+         <zeroOrMore>
+            <ref name="mpm.accentuation"/>
+         </zeroOrMore>
+      </choice>
+   </define>
+   <define name="mpm.accentuation">
+      <element name="accentuation" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.accentuation.attributes"/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.accentuationPattern">
+      <element name="accentuationPattern" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.named.attributes"/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.accentuationPatternDef">
+      <element name="accentuationPatternDef" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">.</a:documentation>
+         <ref name="mpm.model.accentuationPatternDefPart"/>
+         <ref name="mpm.att.named.attributes"/>
+         <optional>
+            <attribute name="length">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the pattern length in metrical beats.</a:documentation>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.metricalAccentuationMap">
+      <element name="metricalAccentuationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <interleave>
+            <zeroOrMore>
+               <ref name="mpm.switch"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.accentuationPattern"/>
+            </zeroOrMore>
+         </interleave>
+         <ref name="mpm.att.startStyle.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.metricalAccentuationStyles">
+      <element name="metricalAccentuationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="mpm.styleDef"/>
+         </zeroOrMore>
       </element>
    </define>
    <start>
