@@ -715,7 +715,7 @@
             <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
             <tei:memberOf key="model.styleDefContainerLike"/>
           </tei:classes>
-          <tei:content><!-- TODO content -->
+          <tei:content>
             <tei:classRef key="model.styleDefLike" expand="sequenceOptionalRepeatable"/>
           </tei:content>
         </tei:elementSpec>
