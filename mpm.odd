@@ -357,6 +357,7 @@
             <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
             <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
             <tei:memberOf key="model.tempoMapPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.rubatoMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
             <tei:attDef ident="style" usage="req">
@@ -877,6 +878,18 @@
                 </rng:data>
               </tei:datatype>
             </tei:attDef>
+            <tei:attDef ident="meanTempoAt"><!-- TODO: Schematron requiring presence in tempomap -->
+              <tei:datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0.0</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="transition.to"><!-- TODO: Schematron requiring presence in tempomap -->
+              <tei:datatype>
+                <rng:data type="string"/><!-- TODO mixed values string-name or int -->
+              </tei:datatype>
+            </tei:attDef>
           </tei:attList>
         </tei:classSpec>
         
@@ -919,6 +932,91 @@
         
         <tei:elementSpec ident="tempoStyles" ns="http://www.cemfi.de/mpm/ns/1.0" module="tempo" mode="add">
           <tei:desc>Groups definition of tempo styles.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
+            <tei:memberOf key="model.styleDefContainerLike"/>
+          </tei:classes>
+          <tei:content>
+            <tei:classRef key="model.styleDefLike" expand="sequenceOptionalRepeatable"/>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <!-- MODULE timing -->
+        
+        <tei:moduleSpec ident="timing" mode="add">
+          <tei:desc>Module for decribing timing information.</tei:desc>
+        </tei:moduleSpec>
+        
+        <tei:classSpec type="atts" ident="att.rubato" module="timing" mode="add">
+          <tei:desc>Attributes for rubato definitions.</tei:desc>
+          <tei:attList>
+            <tei:attRef class="att.named" name="name"/>
+            <tei:attDef ident="frameLength">
+              <tei:desc>defines the length of the potential rubato</tei:desc>
+              <tei:datatype>
+                <rng:data type="int"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="intensity">
+              <tei:desc>defines the itensity of the rubato</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="lateStart">
+              <tei:desc>?</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="earlyEnd">
+              <tei:desc>?</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec type="model" ident="model.rubatoMapPart" module="timing" mode="add">
+          <tei:desc>Model grouping rubatoMap contents.</tei:desc>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="rubato" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+          <tei:desc>A rubato instruction.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="att.rubato"/>
+            <tei:memberOf key="model.rubatoMapPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0" module="tempo" mode="add">
+          <tei:desc>Defines a rubato.</tei:desc>
+          <tei:classes>
+<!--            <tei:memberOf key="att.named"/>-->
+            <tei:memberOf key="att.rubato"/>
+            <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+          <tei:desc>List dated rubato instructions.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.startStyle"/>
+            <tei:memberOf key="model.mapLike" min="0" max="1"/>
+          </tei:classes>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.rubatoMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="rubatoStyles" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+          <tei:desc>Groups definition of rubato styles.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
             <tei:memberOf key="model.styleDefContainerLike"/>
