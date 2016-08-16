@@ -1,4 +1,6 @@
-<?xml-model href="../../rng/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemata/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schemata/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
     <!-- there has to be at most 1 referenceMusic element, it indicates all music files which these performances can be applied to, type is semi-open (i.e. midi, msm, mei, and musicXML are supported, other types are allowed but the application has to handle it) -->
     <referenceMusic>
