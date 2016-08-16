@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-16T10:15:12Z. 
+Schema generated from ODD source 2016-08-16T14:43:42Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -192,9 +192,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             <zeroOrMore>
                <ref name="mpm.dynamicsDef"/>
             </zeroOrMore>
-            <zeroOrMore>
-               <ref name="mpm.ornamentationDef"/>
-            </zeroOrMore>
          </choice>
          <ref name="mpm.att.named.attributes"/>
          <empty/>
@@ -230,7 +227,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.midi.attributes"/>
       <ref name="mpm.att.named.attributes"/>
    </define>
-   <define name="mpm.model.dated_maps">
+   <define name="mpm.model.mapLike">
       <choice>
          <optional>
             <ref name="mpm.articulationMap"/>
@@ -256,7 +253,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <zeroOrMore>
-            <ref name="mpm.model.dated_maps"/>
+            <ref name="mpm.model.mapLike"/>
          </zeroOrMore>
       </element>
    </define>
@@ -304,12 +301,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <empty/>
          <ref name="mpm.att.instructionLike.attributes"/>
          <ref name="mpm.att.standardArticulation.attributes"/>
-         <optional>
-            <attribute name="style">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <text/>
-            </attribute>
-         </optional> 
+         <attribute name="style">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute> 
          <empty/>
       </element>
    </define>
@@ -390,17 +385,17 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <empty/>
       </element>
    </define>
-   <define name="mpm.att.artic.attributes">
-      <ref name="mpm.att.artic.attribute.absoluteVelocity"/>
-      <ref name="mpm.att.artic.attribute.absoluteVelocityChange"/>
-      <ref name="mpm.att.artic.attribute.relativeVelocity"/>
-      <ref name="mpm.att.artic.attribute.absoluteDuration"/>
-      <ref name="mpm.att.artic.attribute.absoluteDurationChange"/>
-      <ref name="mpm.att.artic.attribute.absoluteDurationMs"/>
-      <ref name="mpm.att.artic.attribute.absoluteDurationChangeMs"/>
-      <ref name="mpm.att.artic.attribute.relativeDuration"/>
+   <define name="mpm.att.articulation.attributes">
+      <ref name="mpm.att.articulation.attribute.absoluteVelocity"/>
+      <ref name="mpm.att.articulation.attribute.absoluteVelocityChange"/>
+      <ref name="mpm.att.articulation.attribute.relativeVelocity"/>
+      <ref name="mpm.att.articulation.attribute.absoluteDuration"/>
+      <ref name="mpm.att.articulation.attribute.absoluteDurationChange"/>
+      <ref name="mpm.att.articulation.attribute.absoluteDurationMs"/>
+      <ref name="mpm.att.articulation.attribute.absoluteDurationChangeMs"/>
+      <ref name="mpm.att.articulation.attribute.relativeDuration"/>
    </define>
-   <define name="mpm.att.artic.attribute.absoluteVelocity">
+   <define name="mpm.att.articulation.attribute.absoluteVelocity">
       <optional>
          <attribute name="absoluteVelocity">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value for velocity that will replace existing velocity values.</a:documentation>
@@ -411,7 +406,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.absoluteVelocityChange">
+   <define name="mpm.att.articulation.attribute.absoluteVelocityChange">
       <optional>
          <attribute name="absoluteVelocityChange">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value (+/-) that will be added to the local velocity.</a:documentation>
@@ -419,7 +414,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.relativeVelocity">
+   <define name="mpm.att.articulation.attribute.relativeVelocity">
       <optional>
          <attribute name="relativeVelocity">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a relative amount of velocity change as decimal number, e.g. 1=100% (no change), 0.5% (half velocity), 2.0=200% (double velocity).</a:documentation>
@@ -429,7 +424,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.absoluteDuration">
+   <define name="mpm.att.articulation.attribute.absoluteDuration">
       <optional>
          <attribute name="absoluteDuration">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value for duration (in MIDI ticks) that will replace existing local duration values.</a:documentation>
@@ -440,7 +435,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.absoluteDurationChange">
+   <define name="mpm.att.articulation.attribute.absoluteDurationChange">
       <optional>
          <attribute name="absoluteDurationChange">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value (+/-) in MIDI ticks that will be added to the local duration values.</a:documentation>
@@ -448,7 +443,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.absoluteDurationMs">
+   <define name="mpm.att.articulation.attribute.absoluteDurationMs">
       <optional>
          <attribute name="absoluteDurationMs">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute duration in milliseconds that will replace existing local duration values.</a:documentation>
@@ -458,7 +453,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.absoluteDurationChangeMs">
+   <define name="mpm.att.articulation.attribute.absoluteDurationChangeMs">
       <optional>
          <attribute name="absoluteDurationChangeMs">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value (+/-) in milliseconds that will be added to existing local duration values.</a:documentation>
@@ -466,7 +461,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.artic.attribute.relativeDuration">
+   <define name="mpm.att.articulation.attribute.relativeDuration">
       <optional>
          <attribute name="relativeDuration">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives a relative amount of duration change as decimal number, e.g. 1=100% (no change), 0.5% (half duration), 2.0=200% (double duration).</a:documentation>
@@ -501,7 +496,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</a:documentation>
          <empty/>
          <ref name="mpm.att.named.attributes"/>
-         <ref name="mpm.att.artic.attributes"/>
+         <ref name="mpm.att.articulation.attributes"/>
          <empty/>
       </element>
    </define>
@@ -595,7 +590,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <element name="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines `dynamincs with a stylewide unique @name nad respective velocity values.</a:documentation>
          <empty/>
-         <ref name="mpm.att.artic.attributes"/>
+         <ref name="mpm.att.articulation.attributes"/>
          <ref name="mpm.att.named.attributes"/>
          <ref name="mpm.att.value.attributes"/>
          <empty/>
@@ -621,15 +616,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             </zeroOrMore>
          </interleave>
          <ref name="mpm.att.startStyle.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="mpm.ornamentationDef">
-      <element name="ornamentationDef" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">.</a:documentation>
-         <empty/>
-         <ref name="mpm.att.named.attributes"/>
-         <ref name="mpm.att.artic.attributes"/>
          <empty/>
       </element>
    </define>

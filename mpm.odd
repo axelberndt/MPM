@@ -290,7 +290,7 @@
           </tei:classes>
         </tei:classSpec>
         
-        <tei:classSpec ident="model.dated_maps" type="model" mode="add" module="mpm">
+        <tei:classSpec ident="model.mapLike" type="model" mode="add" module="mpm">
           <tei:desc>class.map groups all map elements.</tei:desc>
         </tei:classSpec>
         
@@ -314,7 +314,7 @@
         <tei:elementSpec ident="dated" ns="http://www.cemfi.de/mpm/ns/1.0" module="performance" mode="add">
           <tei:content>
             <rng:zeroOrMore>
-              <rng:ref name="model.dated_maps"/>
+              <rng:ref name="model.mapLike"/>
             </rng:zeroOrMore>
           </tei:content>
         </tei:elementSpec>
@@ -584,7 +584,7 @@
           <tei:classes>
             <tei:memberOf key="att.standardArticulation"/>
             <tei:memberOf key="att.startStyle"/>
-            <tei:memberOf key="model.dated_maps" min="0" max="1"/>
+            <tei:memberOf key="model.mapLike" min="0" max="1"/>
           </tei:classes>
           <tei:content>
             <rng:interleave>
@@ -685,7 +685,7 @@
           <tei:desc>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.startStyle"/>
-            <tei:memberOf key="model.dated_maps"/>
+            <tei:memberOf key="model.mapLike"/>
           </tei:classes>
           <tei:content>
             <rng:interleave>
@@ -724,7 +724,7 @@
         <tei:elementSpec ident="ornamentationMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="ornamentation" mode="add">
           <tei:desc><!-- TODO --></tei:desc>
           <tei:classes>
-            <tei:memberOf key="model.dated_maps"/>
+            <tei:memberOf key="model.mapLike"/>
           </tei:classes>
           <tei:content>
             <rng:zeroOrMore>
