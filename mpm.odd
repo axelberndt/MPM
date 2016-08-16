@@ -794,6 +794,21 @@
             <tei:memberOf key="att.instructionLike"/>
             <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
           </tei:classes>
+          <tei:attList>
+            <tei:attDef ident="scale">
+              <tei:datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">127</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="loop">
+              <tei:datatype>
+                <rng:data type="boolean"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
           <tei:content/>
         </tei:elementSpec>
         
