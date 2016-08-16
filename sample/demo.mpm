@@ -73,11 +73,20 @@
                         <!-- this style may define further accentuation patterns -->
                     </styleDef>
                 </metricalAccentuationStyles>
+
+                <tempoStyles>
+                    <styleDef name="my tempo style">
+                        <tempoDef name="Adagio" value="60"/>
+                        <tempoDef name="Allegro" value="130"/>
+                        <tempoDef name="Vivace" value="140"/>
+                        <tempoDef name="my own tempo" value="106.87"/>
+                    </styleDef>
+                </tempoStyles>
             </header>
 
             <dated>
-                <dynamicsMap startStyle="the old style">
-                    <dynamics date="0" volume="p" transition="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/>
+                <dynamicsMap startStyle="the old style">            <!-- startStyle may be left empty "" if the instructions do not use literal dynamics (such as "ff", which has to be defined by a dynamicsDef) -->
+                    <dynamics date="0" volume="p" transition.to="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/>
                     <switch date="1440" style="another style"/>
                     <dynamics date="1440" volume="100"/>
                     <dynamics date="32960" volume="f"/>
@@ -95,6 +104,14 @@
                     <accentuationPattern date="1440" name="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
                     <accentuationPattern date="394760" name="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
                 </metricalAccentuationMap>
+
+                <tempoMap startStyle="my tempo style">                  <!-- startStyle may be left empty "" if the instructions do not use literal tempi (such as "Allegro", which has to be defined by a tempoDef) -->
+                    <tempo date="0" bpm="Allegro" beatLength="0.25"/>   <!-- this is a minimal tempo instruction, all three attributes are required, beatLength specifies the musical value of one beat (required to decode bpm values; 0.25 is 1/4) -->
+                    <switch date="1440" style="my tempo style"/>
+                    <!-- the following instruction defines a continuous tempo transition starting with bpm (either a string identifier from a tempoDef or a numeric value, i.e. float) and ending up with the tempo in transition.to (like bpm either a string identifier from a tempoDef or a numeric value, i.e. float) -->
+                    <!-- meanTempoAt says at which relative position between this and the succeeding instruction (in [0, 1]) the tempo curve reaches the mean tempo -->
+                    <tempo date="1440" bpm="100" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.5"/>
+                </tempoMap>
             </dated>
         </global>
 
