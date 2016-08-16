@@ -40,7 +40,7 @@
 						<articulationDef name="sforzato" absoluteVelocity="127"/>
 					</styleDef>
 					<styleDef name="mini style">
-						<articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing, a typical standard articulation -->
+						<articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
 					</styleDef>
 				</articulationStyles>
 				
@@ -67,15 +67,15 @@
 			
 			<dated>
 				<dynamicsMap startStyle="the old style">
-					<dynamics date="0" volume="p" transition="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/>
+				  <dynamics date="0" volume="p" transition="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/>
 					<switch date="1440" style="another style"/>
 					<dynamics date="1440" volume="100"/>
 					<dynamics date="32960" volume="f"/>
 				</dynamicsMap>
 				
 				<articulationMap startStyle="old style" standardArticulation="nonlegato">
-					<articulation date="0" name="legato"/>
-					<articulation date="0" name="accent"/>
+				  <articulation date="0" name="legato"/>
+				  <articulation date="0" name="accent"/>
 					<switch date="1440" style="mini style" standardArticulation="nonlegato"/>
 				</articulationMap>
 			</dated>

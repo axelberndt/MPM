@@ -108,6 +108,17 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.startStyle" type="atts" mode="add" module="mpm">
+          <tei:desc>startStyle attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="startStyle">
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="att.typed" type="atts" mode="add" module="mpm">
           <tei:desc>Type attribute class.</tei:desc>
           <tei:attList>
@@ -126,6 +137,17 @@
               <tei:datatype>
                 <rng:data type="string"><!-- TODO: mei midi musicXML msm -->
                 </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.value" type="atts" mode="add" module="mpm">
+          <tei:desc>Value attribute class.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="value">
+              <tei:datatype>
+                <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
           </tei:attList>
@@ -265,7 +287,7 @@
           </tei:attList>
         </tei:classSpec>
         
-        <tei:classSpec ident="att.partLike" type="atts" mode="add"  module="performance">
+        <tei:classSpec ident="att.partLike" type="atts" mode="add" module="performance">
           <tei:classes>
             <tei:memberOf key="att.enumeration"/>
             <tei:memberOf key="att.midi"/>
@@ -275,6 +297,19 @@
         
         <tei:classSpec ident="model.dated_maps" type="model" mode="add" module="mpm">
           <tei:desc>class.map groups all map elements.</tei:desc>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.instructionLike" type="atts" mode="add" module="performance">
+          <tei:desc>Groups elements that may occur in dated maps.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="date">
+              <tei:datatype>
+                <rng:data type="int">
+                  <rng:param name="minInclusive">0</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
         </tei:classSpec>
         
         <tei:classSpec ident="model.headerPart" type="model" module="performance" mode="add">
@@ -316,6 +351,24 @@
             <tei:elementRef key="header"/>
             <tei:elementRef key="dated"/>
           </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="performance">
+          <tei:desc></tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="att.standardArticulation"/>
+            <tei:memberOf key="model.articulationMapPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:attList>
+            <tei:attDef ident="style">
+              <tei:desc></tei:desc><!-- TODO check use on other elements -->
+              <tei:constraintSpec ident="att.style" scheme="isoschematron">
+                <!-- TODO -->
+              </tei:constraintSpec>
+            </tei:attDef>
+          </tei:attList>
         </tei:elementSpec>
 
       <!-- module misc -->
@@ -402,6 +455,10 @@
         <tei:moduleSpec ident="articulation" mode="add">
           <tei:desc>articulation</tei:desc>
         </tei:moduleSpec>
+        
+        <tei:classSpec type="model" ident="model.articulationMapPart">
+          <tei:desc>Groups elements that may occur in mpm:articulationMap</tei:desc>
+        </tei:classSpec>
         
         <tei:classSpec ident="att.artic" type="atts" module="articulation" mode="add">
           <tei:attList>
@@ -490,6 +547,27 @@
           </tei:attList>
         </tei:classSpec>
         
+        <tei:classSpec ident="att.standardArticulation" type="atts" module="articulation" mode="add">
+          <tei:attList>
+            <tei:attDef ident="standardArticulation">
+              <tei:desc></tei:desc>
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="articulation" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
+          <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.named"/>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.articulationMapPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
         <tei:elementSpec ident="articulationDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
           <tei:desc>Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
@@ -517,12 +595,14 @@
         <tei:elementSpec ident="articulationMap" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
           <tei:desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</tei:desc>
           <tei:classes>
+            <tei:memberOf key="att.standardArticulation"/>
+            <tei:memberOf key="att.startStyle"/>
             <tei:memberOf key="model.dated_maps" min="0" max="1"/>
           </tei:classes>
-          <tei:content><!-- TODO content -->
-            <!--<rng:zeroOrMore>
-              <rng:ref name="macro.anyName"/>
-            </rng:zeroOrMore>-->
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.articulationMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
           </tei:content>
         </tei:elementSpec>
         
@@ -532,17 +612,77 @@
           <tei:desc>dynamics</tei:desc>
         </tei:moduleSpec>
         
-        <tei:elementSpec ident="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
+        <tei:classSpec type="model" ident="model.dynamicsMapPart">
+          <tei:desc>Groups elements that may occur in mpm:dynamicsMap</tei:desc>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.dynamics" type="atts" module="dynamics" mode="add">
+          <tei:desc>Group of dynamics attributes.</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="curvature">
+              <tei:desc>Optional. Indicates the deviation from a linear volume transition/envelope. Potential values: [0] linear envelope; [1] steep envelop on the curves turning point; [0.3] default value.</tei:desc>
+              <!-- TODO Schematron ? -->
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="volume">
+              <tei:desc>Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
+              <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
+              <tei:datatype>
+                <rng:text/><!-- TODO: define datatype -->
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="transition">
+              <tei:desc>Gives the target dynamics/volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
+              <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
+              <tei:datatype>
+                <rng:text/><!-- TODO: define datatype -->
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="protraction"><!-- TODO: how to encode default values? -->
+              <tei:desc>Optional. Indicates how long the level adjustment will be delayed. Value rang -1 to 1. Values smaller than [0] provoke a quicker change at the beginning, values larger than [1] provoke a quicker change at the end of the transgression.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float">
+                  <rng:param name="minInclusive">-1</rng:param>
+                  <rng:param name="maxInclusive">1</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="subNoteDynamics"><!-- TODO: how to encode default values? -->
+              <tei:desc>Gives the density of ChannelVolumeChange-commands. This resembles the slope of 't' in calculating the bezier curve, e.g. for(t = 0; t lte 1; t = t + subNoteDynamics) {calculate X-Y-coordinates at t;}. If no subnote dynamics are wanted, the value is set to 0, 1, or left away</tei:desc>
+              <tei:datatype>
+                <rng:data type="decimal">
+                  <rng:param name="minInclusive">0</rng:param>
+                  <rng:param name="maxInclusive">1</rng:param>
+                </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="dynamics" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
+          <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.dynamics"/>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Defines `dynamincs with a stylewide unique @name nad respective velocity values.</tei:desc>
           <tei:classes>
-            <tei:memberOf key="att.named"/>
             <tei:memberOf key="att.artic"/>
+            <tei:memberOf key="att.named"/>
+            <tei:memberOf key="att.value"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="dynamicsStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
+        <tei:elementSpec ident="dynamicsStyles" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Enoded in global or local context's header-element. Groups style definitions. Global an local info may complement each other. If definitions with the same name exist in global and local context, the local instructions will override global definitions.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
@@ -560,17 +700,13 @@
         <tei:elementSpec ident="dynamicsMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="dynamics" mode="add">
           <tei:desc>Allowed in global or local context as child of dated-element. Contains dated dynamics instructions. Preprocessing has to make sure a global dynamicsmap exists for every style, and pass them to lokal contexts (part-element) if no dynamicsmap is present there. So to say, the global dynamicsmap has to be propagated to local contexts if not overridden there.</tei:desc>
           <tei:classes>
+            <tei:memberOf key="att.startStyle"/>
             <tei:memberOf key="model.dated_maps"/>
           </tei:classes>
           <tei:content>
-            <!--<rng:zeroOrMore>
-              <rng:attribute>
-                <rng:anyName/>
-              </rng:attribute>
-            </rng:zeroOrMore>-->
-            <rng:zeroOrMore>
-              <rng:ref name="element"/>
-            </rng:zeroOrMore>
+            <rng:interleave>
+              <tei:classRef key="model.dynamicsMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
           </tei:content>
         </tei:elementSpec>
         
