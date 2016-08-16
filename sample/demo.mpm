@@ -1,4 +1,5 @@
-<mpm>
+<?xml-model href="../../rng/mpm2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
 	<!-- there has to be at most 1 referenceMusic element, it indicates all music files which these performances can be applied to, type is semi-open (i.e. midi, msm, mei, and musicXML are supported, other types are allowed but the application has to handle it) -->
 	<referenceMusic>
 		<reference uri="D:\mpmDemo\music.mid" type="midi"/>
@@ -78,7 +79,7 @@
 		</global>
 		
 		<!-- part numbering starts with 1; number is mandatory -->
-		<part name="Soprano" number="1" channel.midi="0" port.midi="0">
+		<part name="Soprano" number="1" midi.channel="0" midi.port="0">
 			<header>
 			</header>
 			
@@ -86,7 +87,7 @@
 			</dated>
 		</part>
 		
-		<part name="Alto" number="2" channel.midi="1" port.midi="0">
+		<part name="Alto" number="2" midi.channel="1" midi.port="0">
 			<header>
 			</header>
 			
@@ -106,7 +107,7 @@
 			</dated>
 		</global>
 		
-		<part name="Soprano" number="1" channel.midi="0" port.midi="0">
+		<part name="Soprano" number="1" midi.channel="0" midi.port="0">
 			<header>
 				<sequencingCommands loop="false" mute="true"/>
 			</header>
@@ -115,7 +116,7 @@
 			</dated>
 		</part>
 		
-		<part name="Alto" number="2" channel.midi="1" port.midi="0">
+		<part name="Alto" number="2" midi.channel="1" midi.port="0">
 			<header>
 				<sequencingCommands loop="false" mute="false"/>
 			</header>
