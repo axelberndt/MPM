@@ -68,16 +68,6 @@
           </tei:content>
         </tei:macroSpec>
         
-        <!--<tei:macroSpec ident="macro.MapLike" mode="add" module="mpm">
-          <tei:desc>macro for map content</tei:desc>
-          <tei:content>
-            <tei:alternate>
-              <tei:classRef/><!-\- instruction mit dynamics -\->
-              <tei:classRef/><!-\- instruction mit articulation -\->
-            </tei:alternate>
-          </tei:content>
-        </tei:macroSpec>-->
-        
         <tei:classSpec ident="att.linking" type="atts" mode="add" module="mpm">
           <tei:desc>Attribute class for attributes containink link and pointer targets.</tei:desc>
           <tei:attList>
@@ -88,13 +78,6 @@
             </tei:attDef>
             </tei:attList>
         </tei:classSpec>
-        
-        <!--<tei:classSpec ident="att.nameable" type="atts" mode="add" module="mpm">
-          <tei:desc>Name attribute class.</tei:desc>
-          <tei:attList>
-            <tei:attRef class="att.name" name="name"/>
-          </tei:attList>
-        </tei:classSpec>-->
         
         <tei:classSpec ident="att.enumeration" type="atts" mode="add" module="mpm">
           <tei:desc>Enumeration attribute class.</tei:desc>
@@ -374,7 +357,7 @@
             <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
-            <tei:attDef ident="style">
+            <tei:attDef ident="style" usage="req">
               <tei:desc></tei:desc><!-- TODO check use on other elements -->
               <tei:constraintSpec ident="att.style" scheme="isoschematron">
                 <!-- TODO -->
@@ -462,7 +445,6 @@
 
         
 <!-- module articulations -->
-        <!-- switch hat standardArticulation in articulationMap -->
         
         <tei:moduleSpec ident="articulation" mode="add">
           <tei:desc>articulation</tei:desc>
@@ -472,7 +454,7 @@
           <tei:desc>Groups elements that may occur in mpm:articulationMap</tei:desc>
         </tei:classSpec>
         
-        <tei:classSpec ident="att.artic" type="atts" module="articulation" mode="add">
+        <tei:classSpec ident="att.articulation" type="atts" module="articulation" mode="add">
           <tei:attList>
             
             <!-- velocity -->
@@ -496,11 +478,7 @@
             <tei:attDef ident="absoluteVelocityChange">
               <tei:desc>Gives an absolute value (+/-) that will be added to the local velocity.</tei:desc>
               <tei:datatype>
-                <rng:data type="int">
-                  <!-- TODO: isn't there a sound basis for arguing minInclusive / maxInclusive to be  -127 / 127 -->
-                  <!--<rng:param name="minInclusive">-127</rng:param>
-                  <rng:param name="maxInclusive">127</rng:param>-->
-                </rng:data>
+                <rng:data type="int"/>
               </tei:datatype>
             </tei:attDef>
             
@@ -584,7 +562,7 @@
           <tei:desc>Defines an articulation with a stylewide unique @name nad respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.named"/>
-            <tei:memberOf key="att.artic"/>
+            <tei:memberOf key="att.articulation"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded" exclude="dynamicsDef"/>
           </tei:classes>
           <tei:content/>
@@ -596,10 +574,7 @@
             <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
             <tei:memberOf key="model.styleDefContainerLike"/>
           </tei:classes>
-          <tei:content><!-- TODO content -->
-            <!--<rng:zeroOrMore>
-              <rng:ref name="macro.anyName"/>
-            </rng:zeroOrMore>-->
+          <tei:content>
             <tei:classRef key="model.styleDefLike" expand="sequenceOptionalRepeatable"/>
           </tei:content>
         </tei:elementSpec>
@@ -686,7 +661,7 @@
         <tei:elementSpec ident="dynamicsDef" ns="http://www.cemfi.de/mpm/ns/1.0"  module="dynamics" mode="add">
           <tei:desc>Defines `dynamincs with a stylewide unique @name nad respective velocity values.</tei:desc>
           <tei:classes>
-            <tei:memberOf key="att.artic"/>
+            <tei:memberOf key="att.articulation"/>
             <tei:memberOf key="att.named"/>
             <tei:memberOf key="att.value"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
@@ -701,9 +676,6 @@
             <tei:memberOf key="model.styleDefContainerLike"/>
           </tei:classes>
           <tei:content><!-- TODO content -->
-            <!--<rng:zeroOrMore>
-              <rng:ref name="macro.anyName"/>
-            </rng:zeroOrMore>-->
             <tei:classRef key="model.styleDefLike" expand="sequenceOptionalRepeatable"/>
           </tei:content>
         </tei:elementSpec>
@@ -732,8 +704,7 @@
           <tei:desc><!-- TODO -->.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.named"/>
-            <tei:memberOf key="att.artic"/>
-            <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.ornamentationDefPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
         </tei:elementSpec>
@@ -745,9 +716,6 @@
             <tei:memberOf key="model.styleDefContainerLike"/>
           </tei:classes>
           <tei:content><!-- TODO content -->
-            <!--<rng:zeroOrMore>
-              <rng:ref name="macro.anyName"/>
-            </rng:zeroOrMore>-->
             <tei:classRef key="model.styleDefLike" expand="sequenceOptionalRepeatable"/>
           </tei:content>
         </tei:elementSpec>
@@ -759,11 +727,6 @@
             <tei:memberOf key="model.dated_maps"/>
           </tei:classes>
           <tei:content>
-            <!--<rng:zeroOrMore>
-              <rng:attribute>
-                <rng:anyName/>
-              </rng:attribute>
-            </rng:zeroOrMore>-->
             <rng:zeroOrMore>
               <rng:ref name="element"/>
             </rng:zeroOrMore>
