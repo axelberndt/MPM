@@ -357,7 +357,7 @@
             <tei:memberOf key="model.dynamicsMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
-            <tei:attDef ident="style">
+            <tei:attDef ident="style" usage="req">
               <tei:desc></tei:desc><!-- TODO check use on other elements -->
               <tei:constraintSpec ident="att.style" scheme="isoschematron">
                 <!-- TODO -->
