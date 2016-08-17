@@ -87,7 +87,7 @@
 
                 <rubatoStyles>
                     <styleDef name="my rubato style">
-                        <rubatoDef name="swing" frameLength="720" intensity="0.6" lateStart="0.0" earlyEnd="0.0"/>
+                        <rubatoDef name="swing" frameLength="720" intensity="0.6" lateStart="0.0" earlyEnd="1.0"/>
                     </styleDef>
                 </rubatoStyles>
             </header>
