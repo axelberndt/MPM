@@ -37,10 +37,12 @@
                         <articulationDef name="staccato" absoluteDurationMs="150"/>
                         <articulationDef name="staccatissimo" absoluteDurationMs="80"/>
                         <articulationDef name="pizzicato" absoluteDurationMs="1"/>
-                        <articulationDef name="cesura" absoluteDurationChange="-100"/>
+                        <articulationDef name="cesura" absoluteDurationChangeMs="-100"/>
                         <articulationDef name="fortepiano" absoluteVelocity="126"/>
                         <articulationDef name="sforzato" absoluteVelocity="127"/>
                         <articulationDef name="agogicAccent" absoluteDelayMs="-25"/>  <!-- with this articulation a note come 25 milliseconds early -->
+                        <articulationDef name="sharpTuning" detuneCents="50"/>        <!-- with this articulation a note is detuned by 50 cents (quartertone) -->
+                        <articulationDef name="lowered" detuneHz="-2"/>               <!-- with this articulation a note is detuned by -2 Hertz -->
                     </styleDef>
                     <styleDef name="mini style">
                         <articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
@@ -150,8 +152,8 @@
                     <toneDurationImprecision>
                         <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
                     </toneDurationImprecision>
-                    <tuningImprecision>
-                        <!-- the imprecision instructions for tuning variations; question: how are the values interpreted? semitones? This may be an attribute  of the tuningImprecision element. -->
+                    <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz" -->
+                        <!-- the imprecision instructions for tuning variations -->
                     </tuningImprecision>
                 </imprecisionMap>
             </dated>
