@@ -40,7 +40,7 @@
                         <articulationDef name="cesura" absoluteDurationChange="-100"/>
                         <articulationDef name="fortepiano" absoluteVelocity="126"/>
                         <articulationDef name="sforzato" absoluteVelocity="127"/>
-                        <articulationDef name="agogicAccent" absoluteTimingOffsetMs="-25"/>  <!-- with this articulation a note come 25 milliseconds early -->
+                        <articulationDef name="agogicAccent" absoluteDelayMs="-25"/>  <!-- with this articulation a note come 25 milliseconds early -->
                     </styleDef>
                     <styleDef name="mini style">
                         <articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
@@ -150,6 +150,9 @@
                     <toneDurationImpr5ecision>
                         <!-- the imprecision instructions for variations of tone durations -->
                     </toneDurationImpr5ecision>
+                    <tuningImprecision>
+                        <!-- the imprecision instructions for tuning variations; question: how are the values interpreted? semitones? This may be an attribute  of the tuningImprecision element. -->
+                    </tuningImprecision>
                 </imprecisionMap>
             </dated>
         </global>
