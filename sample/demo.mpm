@@ -140,16 +140,16 @@
 
                 <imprecisionMap>
                     <timingImprecision>
-                        <!-- the imprecision instructions for timing offsets -->
+                        <!-- the imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds -->
                         <distribution.uniform date="0" value.min="-10" value.max="20"/>                     <!-- this is a uniform distribution, applied to the timing of musical events from date 0 on -->
                         <distribution.gaussian date="1440" deviation.standard="20" deviation.max="10"/>     <!-- this is a gaussian distribution, applied from date 1440 on -->
                     </timingImprecision>
                     <dynamicsImprecision>
                         <!-- the imprecision instructions for dynamics deviations -->
                     </dynamicsImprecision>
-                    <toneDurationImpr5ecision>
-                        <!-- the imprecision instructions for variations of tone durations -->
-                    </toneDurationImpr5ecision>
+                    <toneDurationImprecision>
+                        <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
+                    </toneDurationImprecision>
                     <tuningImprecision>
                         <!-- the imprecision instructions for tuning variations; question: how are the values interpreted? semitones? This may be an attribute  of the tuningImprecision element. -->
                     </tuningImprecision>
