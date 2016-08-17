@@ -41,6 +41,7 @@
                         <articulationDef name="fortepiano" absoluteVelocity="126"/>
                         <articulationDef name="sforzato" absoluteVelocity="127"/>
                         <articulationDef name="agogicAccent" absoluteDelayMs="-25"/>  <!-- with this articulation a note come 25 milliseconds early -->
+                        <articulationDef name="laidBack" absoluteDelay="-5"/>         <!-- with this articulation a note come 5 midi ticks early -->
                         <articulationDef name="sharpTuning" detuneCents="50"/>        <!-- with this articulation a note is detuned by 50 cents (quartertone) -->
                         <articulationDef name="lowered" detuneHz="-2"/>               <!-- with this articulation a note is detuned by -2 Hertz -->
                     </styleDef>
@@ -152,7 +153,7 @@
                     <toneDurationImprecision>
                         <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
                     </toneDurationImprecision>
-                    <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz" -->
+                    <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz" -->
                         <!-- the imprecision instructions for tuning variations -->
                     </tuningImprecision>
                 </imprecisionMap>
