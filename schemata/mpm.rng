@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-16T17:18:24Z. 
+Schema generated from ODD source 2016-08-16T18:58:27Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -195,6 +195,12 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             <zeroOrMore>
                <ref name="mpm.accentuationPatternDef"/>
             </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.tempoDef"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.rubatoDef"/>
+            </zeroOrMore>
          </choice>
          <ref name="mpm.att.named.attributes"/>
          <empty/>
@@ -238,6 +244,15 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <ref name="mpm.dynamicsMap"/>
          <ref name="mpm.ornamentationMap"/>
          <ref name="mpm.metricalAccentuationMap"/>
+         <optional>
+            <ref name="mpm.tempoMap"/>
+         </optional>
+         <optional>
+            <ref name="mpm.rubatoMap"/>
+         </optional>
+         <optional>
+            <ref name="mpm.asynchronyMap"/>
+         </optional>
       </choice>
    </define>
    <define name="mpm.att.instructionLike.attributes">
@@ -289,6 +304,12 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             </optional>
             <optional>
                <ref name="mpm.metricalAccentuationStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.tempoStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.rubatoStyles"/>
             </optional>
          </interleave>
       </element>
@@ -700,6 +721,21 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <empty/>
          <ref name="mpm.att.named.attributes"/>
          <ref name="mpm.att.instructionLike.attributes"/>
+         <optional>
+            <attribute name="scale">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="int">
+                  <param name="minInclusive">0</param>
+                  <param name="maxInclusive">127</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="loop">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -738,6 +774,207 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <zeroOrMore>
             <ref name="mpm.styleDef"/>
          </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.att.tempo.attributes">
+      <ref name="mpm.att.tempo.attribute.bpm"/>
+      <ref name="mpm.att.tempo.attribute.beatLength"/>
+      <ref name="mpm.att.tempo.attribute.meanTempoAt"/>
+      <ref name="mpm.att.tempo.attribute.transition.to"/>
+   </define>
+   <define name="mpm.att.tempo.attribute.bpm">
+      <optional>
+         <attribute name="bpm">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.tempo.attribute.beatLength">
+      <optional>
+         <attribute name="beatLength">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="decimal">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.tempo.attribute.meanTempoAt">
+      <optional>
+         <attribute name="meanTempoAt">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="decimal">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.tempo.attribute.transition.to">
+      <optional>
+         <attribute name="transition.to">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.tempo">
+      <element name="tempo" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A tempo instruction.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <ref name="mpm.att.tempo.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.tempoDef">
+      <element name="tempoDef" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a tempo.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.named.attributes"/>
+         <ref name="mpm.att.value.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.tempoMap">
+      <element name="tempoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List dated tempo instructions.</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="mpm.switch"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.tempo"/>
+            </zeroOrMore>
+         </interleave>
+         <ref name="mpm.att.startStyle.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.tempoStyles">
+      <element name="tempoStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups definition of tempo styles.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.styleDef"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.att.rubato.attributes">
+      <ref name="mpm.att.rubato.attribute.frameLength"/>
+      <ref name="mpm.att.rubato.attribute.intensity"/>
+      <ref name="mpm.att.rubato.attribute.lateStart"/>
+      <ref name="mpm.att.rubato.attribute.earlyEnd"/>
+      <ref name="mpm.att.rubato.attribute.loop"/>
+      <ref name="mpm.att.named.attribute.name"/>
+   </define>
+   <define name="mpm.att.rubato.attribute.frameLength">
+      <optional>
+         <attribute name="frameLength">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the length of the potential rubato</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.rubato.attribute.intensity">
+      <optional>
+         <attribute name="intensity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the itensity of the rubato</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.rubato.attribute.lateStart">
+      <optional>
+         <attribute name="lateStart">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.rubato.attribute.earlyEnd">
+      <optional>
+         <attribute name="earlyEnd">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.rubato.attribute.loop">
+      <optional>
+         <attribute name="loop">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+            <data type="boolean"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.rubato">
+      <element name="rubato" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A rubato instruction.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <ref name="mpm.att.rubato.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.rubatoDef">
+      <element name="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a rubato.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.rubato.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.rubatoMap">
+      <element name="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List dated rubato instructions.</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="mpm.switch"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.rubato"/>
+            </zeroOrMore>
+         </interleave>
+         <ref name="mpm.att.startStyle.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.rubatoStyles">
+      <element name="rubatoStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups definition of rubato styles.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.styleDef"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.att.asynchrony.attributes">
+      <ref name="mpm.att.asynchrony.attribute.milliseconds.offset"/>
+   </define>
+   <define name="mpm.att.asynchrony.attribute.milliseconds.offset">
+      <optional>
+         <attribute name="milliseconds.offset">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an offset in milliseconds.</a:documentation>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.asynchrony">
+      <element name="asynchrony" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A asynchrony instruction.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <ref name="mpm.att.asynchrony.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.asynchronyMap">
+      <element name="asynchronyMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List dated asynchrony instructions.</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="mpm.asynchrony"/>
+            </zeroOrMore>
+         </interleave>
       </element>
    </define>
    <start>
