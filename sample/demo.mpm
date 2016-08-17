@@ -40,6 +40,7 @@
                         <articulationDef name="cesura" absoluteDurationChange="-100"/>
                         <articulationDef name="fortepiano" absoluteVelocity="126"/>
                         <articulationDef name="sforzato" absoluteVelocity="127"/>
+                        <articulationDef name="agogicAccent" absoluteTimingOffsetMs="-25"/>  <!-- with this articulation a note come 25 milliseconds early -->
                     </styleDef>
                     <styleDef name="mini style">
                         <articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
@@ -136,6 +137,20 @@
                 <ornamentationMap>
                     <!-- not yet defined -->
                 </ornamentationMap>
+
+                <imprecisionMap>
+                    <timingImprecision>
+                        <!-- the imprecision instructions for timing offsets -->
+                        <distribution.uniform date="0" value.min="-10" value.max="20"/>                     <!-- this is a uniform distribution, applied to the timing of musical events from date 0 on -->
+                        <distribution.gaussian date="1440" deviation.standard="20" deviation.max="10"/>     <!-- this is a gaussian distribution, applied from date 1440 on -->
+                    </timingImprecision>
+                    <dynamicsImprecision>
+                        <!-- the imprecision instructions for dynamics deviations -->
+                    </dynamicsImprecision>
+                    <toneDurationImpr5ecision>
+                        <!-- the imprecision instructions for variations of tone durations -->
+                    </toneDurationImpr5ecision>
+                </imprecisionMap>
             </dated>
         </global>
 
