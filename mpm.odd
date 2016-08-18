@@ -90,6 +90,34 @@
                 <rng:ref name="data.name.ref"/>
               </tei:datatype>
               <!-- constraint spec -->
+              <tei:constraintSpec ident="name.ref" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="@name.ref[not(local-name(parent::*) = 'style')]">
+                    <sch:let name="ancestorMap" value="ancestor::*[ends-with(local-name(),'Map')][1]"/>
+                    <sch:let name="mapType"
+                      value="substring-before(local-name($ancestorMap), 'Map')"/>
+                    <sch:let name="precStyleInstrNameRefVal" value="string((/mpm/performance[1]/global[1]/dated[1]/articulationMap[1]/articulation[4]/preceding-sibling::style)[last()]/@name.ref)"/>
+                    <sch:let name="mapStartStyleName" value="string($ancestorMap/@startStyle)"></sch:let>
+                    <sch:let name="styleName" value="string(if($precStyleInstrNameRefVal != '')then($precStyleInstrNameRefVal)else($mapStartStyleName))"/>
+                    <sch:let name="defName" value="string(.)"/>
+                    <sch:let name="stylesEl" value="concat($mapType,'Styles')"/>
+                    <sch:let name="localStyles"
+                      value="ancestor::mpm:part//*[local-name()=$stylesEl]/mpm:styleDef"/>
+                    <sch:let name="localStyleNames" value="for $i in $localStyles return $i/@name"/>
+                    <sch:let name="globalStyles"
+                      value="ancestor::mpm:performance//mpm:header/*[local-name()=$stylesEl]/mpm:styleDef"/>
+                    <sch:let name="globalStyleNames" value="for $i in $globalStyles return $i/@name"/>
+                    <sch:assert role="error"
+                      test="if($styleName = $localStyleNames and $defName = $localStyles[@name = $styleName]/*/@name)
+                      then(true())
+                      else(
+                      if($styleName = $globalStyleNames and $defName = $globalStyles[@name = $styleName]/*/@name)
+                      then(true())
+                      else(false())
+                      )">No <sch:value-of select="concat($mapType,'Def')"/> with @name "<sch:value-of select="$defName"/>" found in styleDef with @name "<sch:value-of select="$styleName"/>"</sch:assert><!-- if($styleName = $localStyles) then(true()) else(if($styleName = $globalStyles) then(true())else(false())) -->
+                  </sch:rule>
+                </tei:constraint>
+              </tei:constraintSpec>
             </tei:attDef>
             </tei:attList>
         </tei:classSpec>
