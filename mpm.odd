@@ -299,9 +299,7 @@
           <tei:attList>
             <tei:attDef ident="date">
               <tei:datatype>
-                <rng:data type="int">
-                  <rng:param name="minInclusive">0</rng:param>
-                </rng:data>
+                <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
           </tei:attList>

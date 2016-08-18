@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-18T07:12:46Z. .
+    Schema generated from ODD source 2016-08-18T07:23:36Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -188,15 +188,10 @@
     <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attribute.date"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.instructionLike.attribute.date">
-    <xs:attribute name="date">
+    <xs:attribute name="date" type="xs:decimal">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
-      <xs:simpleType>
-        <xs:restriction base="xs:int">
-          <xs:minInclusive value="0"/>
-        </xs:restriction>
-      </xs:simpleType>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:element name="dated">
