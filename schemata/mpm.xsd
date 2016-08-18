@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-18T07:32:21Z. .
+    Schema generated from ODD source 2016-08-18T08:14:12Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -182,6 +182,7 @@
       <xs:element minOccurs="0" ref="mpm:tempoMap"/>
       <xs:element minOccurs="0" ref="mpm:rubatoMap"/>
       <xs:element minOccurs="0" ref="mpm:asynchronyMap"/>
+      <xs:element minOccurs="0" ref="mpm:imprecisionMap"/>
     </xs:choice>
   </xs:group>
   <xs:attributeGroup name="mpm.att.instructionLike.attributes">
@@ -931,6 +932,104 @@
       <xs:sequence>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:asynchrony"/>
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distribution.gaussian">
+    <xs:annotation>
+      <xs:documentation>This is a gaussian distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attribute name="deviation.standard" use="required" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="deviation.max" use="required" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distribution.uniform">
+    <xs:annotation>
+      <xs:documentation>This is a uniform distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attribute name="value.min" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.max" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dynamicsImprecision">
+    <xs:annotation>
+      <xs:documentation>The imprecision instructions for dynamics deviations.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="imprecisionMap">
+    <xs:annotation>
+      <xs:documentation>List dated asynchrony instructions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:dynamicsImprecision"/>
+        <xs:element ref="mpm:timingImprecision"/>
+        <xs:element ref="mpm:toneDurationImprecision"/>
+        <xs:element ref="mpm:tuningImprecision"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timingImprecision">
+    <xs:annotation>
+      <xs:documentation>The imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.uniform"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="toneDurationImprecision">
+    <xs:annotation>
+      <xs:documentation>The imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="tuningImprecision">
+    <xs:annotation>
+      <xs:documentation>The detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz".</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="detuneUnit" use="required">
+        <xs:annotation>
+          <xs:documentation>Gives the unit for imprecision instructions child elements of the mpm:tuningImprecision element.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="cents">
+              <xs:annotation>
+                <xs:documentation/>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Hz">
+              <xs:annotation>
+                <xs:documentation>dgr</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
 </xs:schema>

@@ -1101,6 +1101,121 @@
             </rng:interleave>
           </tei:content>
         </tei:elementSpec>
+        
+        <!-- MODULE imprecision -->
+        
+        <tei:moduleSpec ident="imprecision" mode="add">
+          <tei:desc>Module for decribing imprecision information.</tei:desc>
+        </tei:moduleSpec>
+        
+        <tei:classSpec type="model" ident="model.imprecisionMapPart" module="imprecision" mode="add">
+          <tei:desc>Model grouping imprecisionMap contents.</tei:desc>
+        </tei:classSpec>
+        
+        <tei:classSpec type="model" ident="model.timingImprecisionPart" module="imprecision" mode="add">
+          <tei:desc>Model grouping timinpImpreision contents.</tei:desc>
+        </tei:classSpec>
+        
+        <tei:elementSpec ident="distribution.gaussian" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>This is a gaussian distribution, applied to the timing of musical events starting from the given date.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.timingImprecisionPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="deviation.standard" usage="req">
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="deviation.max" usage="req">
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="distribution.uniform" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>This is a uniform distribution, applied to the timing of musical events starting from the given date.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.timingImprecisionPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="value.min" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.max" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="dynamicsImprecision" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>The imprecision instructions for dynamics deviations.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="imprecisionMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="asynchrony" mode="add">
+          <tei:desc>List dated asynchrony instructions.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.mapLike" min="0" max="1"/>
+          </tei:classes>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.imprecisionMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="timingImprecision" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>The imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
+          </tei:classes>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.timingImprecisionPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="toneDurationImprecision" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>The imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
+          </tei:classes>
+          <tei:content/>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="tuningImprecision" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>The detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz".</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="detuneUnit" usage="req">
+              <tei:desc>Gives the unit for imprecision instructions child elements of the mpm:tuningImprecision element.</tei:desc>
+              <tei:valList type="closed">
+                <tei:valItem ident="cents"/>
+                <tei:valItem ident="Hz">
+                  <tei:desc>dgr</tei:desc>
+                </tei:valItem>
+              </tei:valList>
+            </tei:attDef>
+          </tei:attList>
+        </tei:elementSpec>
  
       </tei:schemaSpec>
     </tei:body>

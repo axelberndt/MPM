@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-18T09:32:09Z. 
+Schema generated from ODD source 2016-08-18T10:14:03Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -252,6 +252,9 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </optional>
          <optional>
             <ref name="mpm.asynchronyMap"/>
+         </optional>
+         <optional>
+            <ref name="mpm.imprecisionMap"/>
          </optional>
       </choice>
    </define>
@@ -1009,6 +1012,106 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                <ref name="mpm.asynchrony"/>
             </zeroOrMore>
          </interleave>
+      </element>
+   </define>
+   <define name="mpm.distribution.gaussian">
+      <element name="distribution.gaussian" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a gaussian distribution, applied to the timing of musical events starting from the given date.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <attribute name="deviation.standard">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="decimal"/>
+         </attribute>
+         <attribute name="deviation.max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="decimal"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.uniform">
+      <element name="distribution.uniform" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a uniform distribution, applied to the timing of musical events starting from the given date.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <attribute name="value.min">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <attribute name="value.max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.dynamicsImprecision">
+      <element name="dynamicsImprecision" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The imprecision instructions for dynamics deviations.</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.imprecisionMap">
+      <element name="imprecisionMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List dated asynchrony instructions.</a:documentation>
+         <interleave>
+            <optional>
+               <optional>
+                  <ref name="mpm.dynamicsImprecision"/>
+               </optional>
+            </optional>
+            <optional>
+               <optional>
+                  <ref name="mpm.timingImprecision"/>
+               </optional>
+            </optional>
+            <optional>
+               <optional>
+                  <ref name="mpm.toneDurationImprecision"/>
+               </optional>
+            </optional>
+            <optional>
+               <optional>
+                  <ref name="mpm.tuningImprecision"/>
+               </optional>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="mpm.timingImprecision">
+      <element name="timingImprecision" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds.</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="mpm.distribution.gaussian"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.uniform"/>
+            </zeroOrMore>
+         </interleave>
+      </element>
+   </define>
+   <define name="mpm.toneDurationImprecision">
+      <element name="toneDurationImprecision" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds.</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.tuningImprecision">
+      <element name="tuningImprecision" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz".</a:documentation>
+         <empty/>
+         <attribute name="detuneUnit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the unit for imprecision instructions child elements of the mpm:tuningImprecision element.</a:documentation>
+            <choice>
+               <value>cents</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Hz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dgr</a:documentation>
+            </choice>
+         </attribute>
+         <empty/>
       </element>
    </define>
    <start>
