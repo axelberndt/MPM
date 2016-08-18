@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-18T09:23:28Z. 
+Schema generated from ODD source 2016-08-18T09:32:09Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -420,6 +420,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.articulation.attribute.absoluteDurationMs"/>
       <ref name="mpm.att.articulation.attribute.absoluteDurationChangeMs"/>
       <ref name="mpm.att.articulation.attribute.relativeDuration"/>
+      <ref name="mpm.att.articulation.attribute.absoluteDelay"/>
+      <ref name="mpm.att.articulation.attribute.absoluteDelayMs"/>
+      <ref name="mpm.att.articulation.attribute.detuneCents"/>
+      <ref name="mpm.att.articulation.attribute.detuneHz"/>
    </define>
    <define name="mpm.att.articulation.attribute.absoluteVelocity">
       <optional>
@@ -494,6 +498,38 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
             <data type="decimal">
                <param name="minInclusive">0.0</param>
             </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.articulation.attribute.absoluteDelay">
+      <optional>
+         <attribute name="absoluteDelay">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value for delay in MIDI ticks.</a:documentation>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.articulation.attribute.absoluteDelayMs">
+      <optional>
+         <attribute name="absoluteDelayMs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an absolute value for delay in milliseconds.</a:documentation>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.articulation.attribute.detuneCents">
+      <optional>
+         <attribute name="detuneCents">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an detune value in cents.</a:documentation>
+            <data type="float"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.articulation.attribute.detuneHz">
+      <optional>
+         <attribute name="detuneHz">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives an detune value in Hz.</a:documentation>
+            <data type="float"/>
          </attribute>
       </optional>
    </define>

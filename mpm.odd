@@ -535,6 +535,34 @@
               </tei:datatype>
             </tei:attDef>
             
+            <tei:attDef ident="absoluteDelay">
+              <tei:desc>Gives an absolute value for delay in MIDI ticks.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            
+            <tei:attDef ident="absoluteDelayMs">
+              <tei:desc>Gives an absolute value for delay in milliseconds.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            
+            <tei:attDef ident="detuneCents">
+              <tei:desc>Gives an detune value in cents.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            
+            <tei:attDef ident="detuneHz">
+              <tei:desc>Gives an detune value in Hz.</tei:desc>
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            
           </tei:attList>
         </tei:classSpec>
         

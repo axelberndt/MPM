@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-18T07:23:36Z. .
+    Schema generated from ODD source 2016-08-18T07:32:21Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -348,6 +348,10 @@
     <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.absoluteDurationMs"/>
     <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.absoluteDurationChangeMs"/>
     <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.relativeDuration"/>
+    <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.absoluteDelay"/>
+    <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.absoluteDelayMs"/>
+    <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.detuneCents"/>
+    <xs:attributeGroup ref="mpm:mpm.att.articulation.attribute.detuneHz"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.articulation.attribute.absoluteVelocity">
     <xs:attribute name="absoluteVelocity">
@@ -430,6 +434,34 @@
           <xs:minInclusive value="0.0"/>
         </xs:restriction>
       </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.articulation.attribute.absoluteDelay">
+    <xs:attribute name="absoluteDelay" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value for delay in MIDI ticks.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.articulation.attribute.absoluteDelayMs">
+    <xs:attribute name="absoluteDelayMs" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>Gives an absolute value for delay in milliseconds.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.articulation.attribute.detuneCents">
+    <xs:attribute name="detuneCents" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>Gives an detune value in cents.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.articulation.attribute.detuneHz">
+    <xs:attribute name="detuneHz" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>Gives an detune value in Hz.</xs:documentation>
+      </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.standardArticulation.attributes">
