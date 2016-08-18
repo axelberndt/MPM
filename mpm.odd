@@ -68,6 +68,15 @@
           </tei:content>
         </tei:macroSpec>
         
+        <tei:macroSpec ident="data.name.ref" module="mpm" type="dt">
+          <tei:desc>A reference to a @name in the document.</tei:desc>
+          <tei:content>
+            <rng:data>
+              <rng:data type="string"/>
+            </rng:data>
+          </tei:content>
+        </tei:macroSpec>
+        
         <tei:classSpec ident="att.linking" type="atts" mode="add" module="mpm">
           <tei:desc>Attribute class for attributes containink link and pointer targets.</tei:desc>
           <tei:attList>
@@ -75,6 +84,12 @@
               <tei:datatype>
                 <rng:ref name="data.URI"/>
               </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="name.ref" module="mpm" mode="add">
+              <tei:datatype>
+                <rng:ref name="data.name.ref"/>
+              </tei:datatype>
+              <!-- constraint spec -->
             </tei:attDef>
             </tei:attList>
         </tei:classSpec>
