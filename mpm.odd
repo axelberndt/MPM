@@ -205,6 +205,13 @@
         
         <tei:elementSpec ident="reference" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
           <tei:desc>reference to a music representation processable by this performance description.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.typed"/>
+            <tei:memberOf key="att.linking"/>
+          </tei:classes>
+          <tei:content>
+            <rng:empty/><!-- @ implementations -->
+          </tei:content>
           <tei:constraintSpec ident="reference.att.type" scheme="isoschematron">
             <tei:desc><!-- TODO --></tei:desc>
             <tei:constraint>
@@ -224,13 +231,6 @@
               </sch:rule>
             </tei:constraint>
           </tei:constraintSpec>
-          <tei:classes>
-            <tei:memberOf key="att.typed"/>
-          <tei:memberOf key="att.linking"/>
-          </tei:classes>
-          <tei:content>
-            <rng:empty/><!-- @ implementations -->
-          </tei:content>
         </tei:elementSpec>
         
         <tei:elementSpec ident="styleDef" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
