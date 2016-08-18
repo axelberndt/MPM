@@ -177,6 +177,12 @@
         
         <tei:elementSpec ident="performance" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
           <tei:desc>groups information for one performance style.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.named"/>
+          </tei:classes>
+          <tei:content>
+            <rng:ref name="model.performance"/>
+          </tei:content>
           <tei:constraintSpec ident="performance.att.name" scheme="isoschematron">
             <tei:desc><!-- TODO --></tei:desc>
             <tei:constraint>
@@ -186,12 +192,6 @@
               <sch:report role="error" test="(@name = ./preceding::mpm:performance/@name) or (@name = ./following::mpm:performance/@name)">The performance element must have a unique value of @name. The current elements value "<sch:value-of select="@name"/>" has already been taken by a mpm:performance element <sch:value-of select="if(@name = ./preceding::mpm:performance/@name) then('preceding')else('following')"/> the current element.</sch:report>
             </tei:constraint>
           </tei:constraintSpec>
-          <tei:classes>
-            <tei:memberOf key="att.named"/>
-          </tei:classes>
-          <tei:content>
-            <rng:ref name="model.performance"/>
-          </tei:content>
         </tei:elementSpec>
         
         <tei:elementSpec ident="referenceMusic" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
