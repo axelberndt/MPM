@@ -99,6 +99,15 @@
               <tei:datatype>
                 <rng:data type="string"/>
               </tei:datatype>
+              <tei:constraintSpec ident="att.name.unique" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="@name">
+                    <sch:let name="element" value="local-name(parent::*)"/>
+                    <sch:let name="siblingNames" value="parent::*/preceding-sibling::*/string(@name),parent::*/following-sibling::*/string(@name)"/>
+                    <sch:assert role="error" test="if(count(parent::*/parent::*/*) gt 1)then(string(.) != $siblingNames)else(true())">Duplicate @name "<sch:value-of select="."/>" value in current context.<!--: <sch:value-of select="name(parent::*/parent::*),'/',name(parent::*)"/>--></sch:assert>
+                  </sch:rule>
+                </tei:constraint>
+              </tei:constraintSpec>
             </tei:attDef>
           </tei:attList>
         </tei:classSpec>
