@@ -149,12 +149,16 @@
                     </timingImprecision>
                     <dynamicsImprecision>
                         <!-- the imprecision instructions for dynamics deviations -->
+                        <distribution.uniform date="0" value.min="-10" value.max="20"/>
                     </dynamicsImprecision>
                     <toneDurationImprecision>
                         <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
+                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>
                     </toneDurationImprecision>
                     <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz" -->
                         <!-- the imprecision instructions for tuning variations -->
+                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>
+                        <distribution.uniform date="0" value.min="0" value.max="0"/>                            <!-- this effectively switches random offsets off -->
                     </tuningImprecision>
                 </imprecisionMap>
             </dated>
