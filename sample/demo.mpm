@@ -167,9 +167,40 @@
         <!-- part numbering starts with 1; number is mandatory -->
         <part name="Soprano" number="1" midi.channel="0" midi.port="0">
             <header>
+              <articulationStyles>
+                <styleDef name="old style">
+                  <articulationDef name="nonlegato" absoluteDurationChange="-360"/>
+                  <articulationDef name="accent" absoluteVelocityChange="25"/>
+                  <articulationDef name="legato" relativeDuration="1"/>
+                  <articulationDef name="moltoLegato" absoluteDurationChange="10"/>
+                  <articulationDef name="portamento" absoluteDurationChange="50"/>
+                  <articulationDef name="portato" relativeDuration="0.8"/>
+                  <articulationDef name="marcato" absoluteVelocityChange="25" relativeDuration="0.8"/>
+                  <articulationDef name="tenuto" absoluteVelocityChange="12" relativeDuration="0.9"/>
+                  <articulationDef name="hat" absoluteVelocityChange="25" relativeDuration="0.75"/>
+                  <articulationDef name="staccato" absoluteDurationMs="150"/>
+                  <articulationDef name="staccatissimo" absoluteDurationMs="80"/>
+                  <articulationDef name="pizzicato" absoluteDurationMs="1"/>
+                  <articulationDef name="cesura" absoluteDurationChangeMs="-100"/>
+                  <articulationDef name="fortepiano" absoluteVelocity="126"/>
+                  <articulationDef name="sforzato" absoluteVelocity="127"/>
+                  <articulationDef name="agogicAccent" absoluteDelayMs="-25"/>  <!-- with this articulation a note come 25 milliseconds early -->
+                  <articulationDef name="laidBack" absoluteDelay="-5"/>         <!-- with this articulation a note come 5 midi ticks early -->
+                  <articulationDef name="sharpTuning" detuneCents="50"/>        <!-- with this articulation a note is detuned by 50 cents (quartertone) -->
+                  <articulationDef name="lowered" detuneHz="-2"/>               <!-- with this articulation a note is detuned by -2 Hertz -->
+                </styleDef>
+                <styleDef name="mini style">
+                  <articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
+                </styleDef>
+              </articulationStyles>
             </header>
 
             <dated>
+              <articulationMap startStyle="old style" standardArticulation="nonlegato">
+                <articulation date="0" name="legato"/>
+                <articulation date="0" name="accent"/>
+                <switch date="1440" style="mini style" standardArticulation="nonlegato"/>
+              </articulationMap>
             </dated>
         </part>
 

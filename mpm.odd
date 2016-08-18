@@ -99,6 +99,15 @@
               <tei:datatype>
                 <rng:data type="string"/>
               </tei:datatype>
+              <tei:constraintSpec ident="att.name.unique" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="@name">
+                    <sch:let name="element" value="local-name(parent::*)"/>
+                    <sch:let name="siblingNames" value="parent::*/preceding-sibling::*/string(@name),parent::*/following-sibling::*/string(@name)"/>
+                    <sch:assert role="error" test="if(count(parent::*/parent::*/*) gt 1)then(string(.) != $siblingNames)else(true())">Duplicate @name "<sch:value-of select="."/>" value in current context.<!--: <sch:value-of select="name(parent::*/parent::*),'/',name(parent::*)"/>--></sch:assert>
+                  </sch:rule>
+                </tei:constraint>
+              </tei:constraintSpec>
             </tei:attDef>
           </tei:attList>
         </tei:classSpec>
@@ -177,6 +186,12 @@
         
         <tei:elementSpec ident="performance" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
           <tei:desc>groups information for one performance style.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.named"/>
+          </tei:classes>
+          <tei:content>
+            <rng:ref name="model.performance"/>
+          </tei:content>
           <tei:constraintSpec ident="performance.att.name" scheme="isoschematron">
             <tei:desc><!-- TODO --></tei:desc>
             <tei:constraint>
@@ -186,12 +201,6 @@
               <sch:report role="error" test="(@name = ./preceding::mpm:performance/@name) or (@name = ./following::mpm:performance/@name)">The performance element must have a unique value of @name. The current elements value "<sch:value-of select="@name"/>" has already been taken by a mpm:performance element <sch:value-of select="if(@name = ./preceding::mpm:performance/@name) then('preceding')else('following')"/> the current element.</sch:report>
             </tei:constraint>
           </tei:constraintSpec>
-          <tei:classes>
-            <tei:memberOf key="att.named"/>
-          </tei:classes>
-          <tei:content>
-            <rng:ref name="model.performance"/>
-          </tei:content>
         </tei:elementSpec>
         
         <tei:elementSpec ident="referenceMusic" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
@@ -205,6 +214,13 @@
         
         <tei:elementSpec ident="reference" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
           <tei:desc>reference to a music representation processable by this performance description.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.typed"/>
+            <tei:memberOf key="att.linking"/>
+          </tei:classes>
+          <tei:content>
+            <rng:empty/><!-- @ implementations -->
+          </tei:content>
           <tei:constraintSpec ident="reference.att.type" scheme="isoschematron">
             <tei:desc><!-- TODO --></tei:desc>
             <tei:constraint>
@@ -224,13 +240,6 @@
               </sch:rule>
             </tei:constraint>
           </tei:constraintSpec>
-          <tei:classes>
-            <tei:memberOf key="att.typed"/>
-          <tei:memberOf key="att.linking"/>
-          </tei:classes>
-          <tei:content>
-            <rng:empty/><!-- @ implementations -->
-          </tei:content>
         </tei:elementSpec>
         
         <tei:elementSpec ident="styleDef" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
@@ -359,9 +368,21 @@
           </tei:classes>
           <tei:attList>
             <tei:attDef ident="style" usage="req">
-              <tei:desc></tei:desc><!-- TODO check use on other elements -->
-              <tei:constraintSpec ident="att.style" scheme="isoschematron">
-                <!-- TODO -->
+              <tei:desc>Gives the name of the style to switch to.</tei:desc><!-- TODO check use on other elements -->
+              <tei:datatype>
+                <rng:data type="string"/>
+              </tei:datatype>
+              <tei:constraintSpec ident="switch.style" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="mpm:switch">
+                    <sch:let name="mapType" value="substring-before(local-name(parent::*), 'Map')"/>
+                    <sch:let name="styleName" value="string(@style)"/>
+                    <sch:let name="stylesEl" value="concat($mapType,'Styles')"/>
+                    <sch:let name="localStyles" value="ancestor::mpm:part//*[local-name()=$stylesEl]/mpm:styleDef/@name"/>
+                    <sch:let name="globalStyles" value="ancestor::mpm:performance//mpm:header/*[local-name()=$stylesEl]/mpm:styleDef/@name"/>
+                    <sch:assert role="error" test="if($styleName = $localStyles) then(true()) else(if($styleName = $globalStyles) then(true())else(false()))">no mpm:styleDef with @name = "<sch:value-of select="$styleName"/>" found in <sch:value-of select="if($styleName = $localStyles) then('local') else(if($styleName = $globalStyles) then('global')else('local or global'))"/> definitions, i.e. the ancestor mpm:part/mpm:header/mpm:<sch:value-of select="$stylesEl"/> element.</sch:assert>
+                  </sch:rule>
+                </tei:constraint>
               </tei:constraintSpec>
             </tei:attDef>
           </tei:attList>
@@ -1112,15 +1133,15 @@
           <tei:desc>Model grouping imprecisionMap contents.</tei:desc>
         </tei:classSpec>
         
-        <tei:classSpec type="model" ident="model.timingImprecisionPart" module="imprecision" mode="add">
-          <tei:desc>Model grouping timinpImpreision contents.</tei:desc>
+        <tei:classSpec type="model" ident="model.imprecisionInstructionPart" module="imprecision" mode="add">
+          <tei:desc>Model grouping imprecision instruction contents.</tei:desc>
         </tei:classSpec>
         
         <tei:elementSpec ident="distribution.gaussian" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
           <tei:desc>This is a gaussian distribution, applied to the timing of musical events starting from the given date.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
-            <tei:memberOf key="model.timingImprecisionPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.imprecisionInstructionPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
           <tei:attList>
@@ -1141,7 +1162,7 @@
           <tei:desc>This is a uniform distribution, applied to the timing of musical events starting from the given date.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
-            <tei:memberOf key="model.timingImprecisionPart" min="0" max="unbounded"/>
+            <tei:memberOf key="model.imprecisionInstructionPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
           <tei:attList>
@@ -1163,7 +1184,11 @@
           <tei:classes>
             <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
           </tei:classes>
-          <tei:content/>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.imprecisionInstructionPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
+          </tei:content>
         </tei:elementSpec>
         
         <tei:elementSpec ident="imprecisionMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="asynchrony" mode="add">
@@ -1185,7 +1210,7 @@
           </tei:classes>
           <tei:content>
             <rng:interleave>
-              <tei:classRef key="model.timingImprecisionPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+              <tei:classRef key="model.imprecisionInstructionPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
             </rng:interleave>
           </tei:content>
         </tei:elementSpec>
@@ -1195,7 +1220,11 @@
           <tei:classes>
             <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
           </tei:classes>
-          <tei:content/>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.imprecisionInstructionPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
+          </tei:content>
         </tei:elementSpec>
         
         <tei:elementSpec ident="tuningImprecision" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
@@ -1203,7 +1232,11 @@
           <tei:classes>
             <tei:memberOf key="model.imprecisionMapPart" min="0" max="1"/>
           </tei:classes>
-          <tei:content/>
+          <tei:content>
+            <rng:interleave>
+              <tei:classRef key="model.imprecisionInstructionPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
+            </rng:interleave>
+          </tei:content>
           <tei:attList>
             <tei:attDef ident="detuneUnit" usage="req">
               <tei:desc>Gives the unit for imprecision instructions child elements of the mpm:tuningImprecision element.</tei:desc>
