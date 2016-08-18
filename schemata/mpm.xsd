@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-18T08:14:12Z. .
+    Schema generated from ODD source 2016-08-18T08:21:35Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -974,7 +974,12 @@
     <xs:annotation>
       <xs:documentation>The imprecision instructions for dynamics deviations.</xs:documentation>
     </xs:annotation>
-    <xs:complexType/>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.uniform"/>
+      </xs:choice>
+    </xs:complexType>
   </xs:element>
   <xs:element name="imprecisionMap">
     <xs:annotation>
@@ -1004,13 +1009,22 @@
     <xs:annotation>
       <xs:documentation>The imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds.</xs:documentation>
     </xs:annotation>
-    <xs:complexType/>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.uniform"/>
+      </xs:choice>
+    </xs:complexType>
   </xs:element>
   <xs:element name="tuningImprecision">
     <xs:annotation>
       <xs:documentation>The detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz".</xs:documentation>
     </xs:annotation>
     <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.uniform"/>
+      </xs:choice>
       <xs:attribute name="detuneUnit" use="required">
         <xs:annotation>
           <xs:documentation>Gives the unit for imprecision instructions child elements of the mpm:tuningImprecision element.</xs:documentation>
