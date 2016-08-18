@@ -157,8 +157,8 @@
                     </toneDurationImprecision>
                     <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz" -->
                         <!-- the imprecision instructions for tuning variations -->
-                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>
-                        <distribution.uniform date="0" value.min="0" value.max="0"/>                            <!-- this effectively switches random offsets off -->
+                        <distribution.gaussian date="0" deviation.standard="20.0" deviation.max="10.0"/>
+                        <distribution.uniform date="12340" value.min="0" value.max="0"/>                            <!-- this effectively switches random offsets off -->
                     </tuningImprecision>
                 </imprecisionMap>
             </dated>
