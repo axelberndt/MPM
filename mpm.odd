@@ -357,7 +357,7 @@
           </tei:content>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="switch" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="performance">
+        <tei:elementSpec ident="style" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="performance">
           <tei:desc></tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
