@@ -197,9 +197,9 @@
 
             <dated>
               <articulationMap startStyle="old style" standardArticulation="nonlegato">
-                <articulation date="0" name="legato"/>
-                <articulation date="0" name="accent"/>
-                <switch date="1440" style="mini style" standardArticulation="nonlegato"/>
+                <articulation date="0" name.ref="legato"/>
+                <articulation date="0" name.ref="accent"/>
+                <style date="1440" name.ref="mini style" standardArticulation="nonlegato"/>
               </articulationMap>
             </dated>
         </part>
