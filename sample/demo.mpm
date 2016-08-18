@@ -113,8 +113,8 @@
                 <metricalAccentuationMap startStyle="my accentuation pattern pool">
                     <accentuationPattern date="0" name="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result is specifies the offset from the underlying macro dynamics) -->
                     <switch date="1440" style="my accentuation pattern pool"/>                              <!-- this switch does not make so much sense, it switches to the same style that is already running, but you can switch to other styles this way -->
-                    <accentuationPattern date="1440" name="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
-                    <accentuationPattern date="394760" name="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
+                    <accentuationPattern date="1440" name="accentuation pattern 2" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
+                    <accentuationPattern date="394760" name="accentuation pattern 3" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
                 </metricalAccentuationMap>
 
                 <tempoMap startStyle="my tempo style">                  <!-- startStyle may be left empty "" if the instructions do not use literal tempi (such as "Allegro", which has to be defined by a tempoDef) -->
