@@ -359,7 +359,6 @@
           </tei:classes>
           <tei:attList>
             <tei:attDef ident="style" usage="req">
-              <tei:desc></tei:desc><!-- TODO check use on other elements -->
               <tei:desc>Gives the name of the style to switch to.</tei:desc><!-- TODO check use on other elements -->
               <tei:constraintSpec ident="att.style" scheme="isoschematron">
                 <!-- TODO -->
