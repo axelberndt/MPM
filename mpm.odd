@@ -941,15 +941,13 @@
           </tei:content>
         </tei:elementSpec>
         
-        <!-- MODULE timing -->
+        <!-- MODULE rubato -->
         
-        <tei:moduleSpec ident="timing" mode="add">
-          <tei:desc>Module for decribing timing information.</tei:desc>
+        <tei:moduleSpec ident="rubato" mode="add">
+          <tei:desc>Module for decribing rubato information.</tei:desc>
         </tei:moduleSpec>
         
-        <!-- rubato -->
-        
-        <tei:classSpec type="atts" ident="att.rubato" module="timing" mode="add">
+        <tei:classSpec type="atts" ident="att.rubato" module="rubato" mode="add">
           <tei:desc>Attributes for rubato definitions.</tei:desc>
           <tei:attList>
             <tei:attRef class="att.named" name="name"/>
@@ -986,11 +984,11 @@
           </tei:attList>
         </tei:classSpec>
         
-        <tei:classSpec type="model" ident="model.rubatoMapPart" module="timing" mode="add">
+        <tei:classSpec type="model" ident="model.rubatoMapPart" module="rubato" mode="add">
           <tei:desc>Model grouping rubatoMap contents.</tei:desc>
         </tei:classSpec>
         
-        <tei:elementSpec ident="rubato" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+        <tei:elementSpec ident="rubato" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>A rubato instruction.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
@@ -1000,7 +998,7 @@
           <tei:content/>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0" module="tempo" mode="add">
+        <tei:elementSpec ident="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>Defines a rubato.</tei:desc>
           <tei:classes>
 <!--            <tei:memberOf key="att.named"/>-->
@@ -1010,7 +1008,7 @@
           <tei:content/>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+        <tei:elementSpec ident="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>List dated rubato instructions.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.startStyle"/>
@@ -1023,7 +1021,7 @@
           </tei:content>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="rubatoStyles" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+        <tei:elementSpec ident="rubatoStyles" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>Groups definition of rubato styles.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.headerPart" /><!-- TODO check min="0" max="1" -->
@@ -1034,9 +1032,13 @@
           </tei:content>
         </tei:elementSpec>
         
-        <!-- asynchrony -->
+        <!-- MODULE asynchrony -->
         
-        <tei:classSpec type="atts" ident="att.asynchrony" module="timing" mode="add">
+        <tei:moduleSpec ident="asynchrony" mode="add">
+          <tei:desc>Module for decribing asynchrony information.</tei:desc>
+        </tei:moduleSpec>
+        
+        <tei:classSpec type="atts" ident="att.asynchrony" module="asynchrony" mode="add">
           <tei:desc>Attributes for asynchrony instructions.</tei:desc>
           <tei:attList>
             <tei:attDef ident="milliseconds.offset">
@@ -1048,11 +1050,11 @@
           </tei:attList>
         </tei:classSpec>
         
-        <tei:classSpec type="model" ident="model.asynchronyMapPart" module="timing" mode="add">
+        <tei:classSpec type="model" ident="model.asynchronyMapPart" module="asynchrony" mode="add">
           <tei:desc>Model grouping asynchronyMap contents.</tei:desc>
         </tei:classSpec>
         
-        <tei:elementSpec ident="asynchrony" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+        <tei:elementSpec ident="asynchrony" ns="http://www.cemfi.de/mpm/ns/1.0" module="asynchrony" mode="add">
           <tei:desc>A asynchrony instruction.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
@@ -1062,7 +1064,7 @@
           <tei:content/>
         </tei:elementSpec>
         
-        <tei:elementSpec ident="asynchronyMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="timing" mode="add">
+        <tei:elementSpec ident="asynchronyMap" ns="http://www.cemfi.de/mpm/ns/1.0" module="asynchrony" mode="add">
           <tei:desc>List dated asynchrony instructions.</tei:desc>
           <tei:classes>
             <tei:memberOf key="model.mapLike" min="0" max="1"/>
