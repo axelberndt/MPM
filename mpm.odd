@@ -95,7 +95,7 @@
         <tei:classSpec ident="att.named" type="atts" mode="add" module="mpm">
           <tei:desc>Name attribute class.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="name"><!-- ? same attribute required vs optional -->
+            <tei:attDef ident="name" usage="req"><!-- ? same attribute required vs optional -->
               <tei:datatype>
                 <rng:data type="string"/>
               </tei:datatype>
