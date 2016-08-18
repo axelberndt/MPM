@@ -363,8 +363,17 @@
               <tei:datatype>
                 <rng:data type="string"/>
               </tei:datatype>
-              <tei:constraintSpec ident="att.style" scheme="isoschematron">
-                <!-- TODO -->
+              <tei:constraintSpec ident="switch.style" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="mpm:switch">
+                    <sch:let name="mapType" value="substring-before(local-name(parent::*), 'Map')"/>
+                    <sch:let name="styleName" value="string(@style)"/>
+                    <sch:let name="stylesEl" value="concat($mapType,'Styles')"/>
+                    <sch:let name="localStyles" value="ancestor::mpm:part//*[local-name()=$stylesEl]/mpm:styleDef/@name"/>
+                    <sch:let name="globalStyles" value="ancestor::mpm:performance//mpm:header/*[local-name()=$stylesEl]/mpm:styleDef/@name"/>
+                    <sch:assert role="error" test="if($styleName = $localStyles) then(true()) else(if($styleName = $globalStyles) then(true())else(false()))">no mpm:styleDef with @name = "<sch:value-of select="$styleName"/>" found in <sch:value-of select="if($styleName = $localStyles) then('local') else(if($styleName = $globalStyles) then('global')else('local or global'))"/> definitions, i.e. the ancestor mpm:part/mpm:header/mpm:<sch:value-of select="$stylesEl"/> element.</sch:assert>
+                  </sch:rule>
+                </tei:constraint>
               </tei:constraintSpec>
             </tei:attDef>
           </tei:attList>
