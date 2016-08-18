@@ -107,6 +107,7 @@
                 <articulationMap startStyle="old style" standardArticulation="nonlegato">
                     <articulation date="0" name.ref="legato"/>
                     <articulation date="0" name.ref="accent"/>
+                    <articulation date="19530" absoluteDurationChange="-360" relativeDuration="1" absoluteDurationMs="150" absoluteDurationChangeMs="-100" absoluteVelocityChange="25" absoluteVelocity="126" absoluteDelayMs="-25" absoluteDelay="-5" detuneCents="50" detuneHz="-2"/>
                     <style date="1440" name.ref="mini style" standardArticulation="nonlegato"/>
                 </articulationMap>
 
