@@ -99,27 +99,27 @@
             <dated>
                 <dynamicsMap startStyle="the old style">            <!-- startStyle may be left empty "" if the instructions do not use literal dynamics (such as "ff", which has to be defined by a dynamicsDef) -->
                     <dynamics date="0" volume="p" transition.to="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/>
-                    <switch date="1440" style="another style"/>
+                    <style date="1440" name.ref="another style"/>
                     <dynamics date="1440" volume="100"/>
                     <dynamics date="32960" volume="f"/>
                 </dynamicsMap>
 
                 <articulationMap startStyle="old style" standardArticulation="nonlegato">
-                    <articulation date="0" name="legato"/>
-                    <articulation date="0" name="accent"/>
-                    <switch date="1440" style="mini style" standardArticulation="nonlegato"/>
+                    <articulation date="0" name.ref="legato"/>
+                    <articulation date="0" name.ref="accent"/>
+                    <style date="1440" name.ref="mini style" standardArticulation="nonlegato"/>
                 </articulationMap>
 
                 <metricalAccentuationMap startStyle="my accentuation pattern pool">
-                    <accentuationPattern date="0" name="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result is specifies the offset from the underlying macro dynamics) -->
-                    <switch date="1440" style="my accentuation pattern pool"/>                              <!-- this switch does not make so much sense, it switches to the same style that is already running, but you can switch to other styles this way -->
-                    <accentuationPattern date="1440" name="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
-                    <accentuationPattern date="394760" name="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
+                    <accentuationPattern date="0" name.ref="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result is specifies the offset from the underlying macro dynamics) -->
+                    <style date="1440" name.ref="my accentuation pattern pool"/>                              <!-- this switch does not make so much sense, it switches to the same style that is already running, but you can switch to other styles this way -->
+                    <accentuationPattern date="1440" name.ref="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
+                    <accentuationPattern date="394760" name.ref="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
                 </metricalAccentuationMap>
 
                 <tempoMap startStyle="my tempo style">                  <!-- startStyle may be left empty "" if the instructions do not use literal tempi (such as "Allegro", which has to be defined by a tempoDef) -->
                     <tempo date="0" bpm="Allegro" beatLength="0.25"/>   <!-- this is a minimal tempo instruction, all three attributes are required, beatLength specifies the musical value of one beat (required to decode bpm values; 0.25 is 1/4) -->
-                    <switch date="1440" style="my tempo style"/>
+                    <style date="1440" name.ref="my tempo style"/>
                     <!-- the following instruction defines a continuous tempo transition starting with bpm (either a string identifier from a tempoDef or a numeric value, i.e. float) and ending up with the tempo in transition.to (like bpm either a string identifier from a tempoDef or a numeric value, i.e. float) -->
                     <!-- meanTempoAt says at which relative position between this and the succeeding instruction (in [0, 1]) the tempo curve reaches the mean tempo -->
                     <tempo date="1440" bpm="100" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.5"/>
@@ -132,8 +132,8 @@
 
                 <rubatoMap startStyle="my rubato style">                <!-- startStyle may be left empty "" if the instructions do not use literal rubato names (which have been defined by a rubatoDef) -->
                     <!-- a rubato instruction either refers to a rubatoDef or specify the rubato itself with all the attributes -->
-                    <rubato date="0" name="swing" loop="true"/>
-                    <switch date="1440" style="my rubato style"/>
+                    <rubato date="0" name.ref="swing" loop="true"/>
+                    <style date="1440" name.ref="my rubato style"/>
                     <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9"/>
                 </rubatoMap>
 
