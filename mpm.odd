@@ -344,6 +344,7 @@
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
+            <tei:attRef class="att.linking" name="name.ref"/>
           </tei:attList>
         </tei:classSpec>
         
@@ -634,7 +635,6 @@
         <tei:elementSpec ident="articulation" ns="http://www.cemfi.de/mpm/ns/1.0"  module="articulation" mode="add">
           <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
-            <tei:memberOf key="att.named"/>
             <tei:memberOf key="att.instructionLike"/>
             <tei:memberOf key="model.articulationMapPart" min="0" max="unbounded"/>
           </tei:classes>
@@ -872,7 +872,6 @@
         <tei:elementSpec ident="accentuationPattern" ns="http://www.cemfi.de/mpm/ns/1.0"  module="metricalAccentuation" mode="add">
           <tei:desc>.</tei:desc>
           <tei:classes>
-            <tei:memberOf key="att.named"/>
             <tei:memberOf key="att.instructionLike"/>
             <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
           </tei:classes>
