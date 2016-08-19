@@ -81,7 +81,8 @@
           <tei:attList>
             <tei:attDef ident="uri" module="mpm" mode="add">
               <tei:datatype>
-                <rng:ref name="data.URI"/>
+                <tei:dataRef key="data.URI"/>
+<!--                <rng:ref name="data.URI"/>-->
               </tei:datatype>
             </tei:attDef>
             <tei:attDef ident="name.ref" module="mpm" mode="add">
