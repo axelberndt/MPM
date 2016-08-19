@@ -1056,7 +1056,6 @@
         <tei:classSpec type="atts" ident="att.rubato" module="rubato" mode="add">
           <tei:desc>Attributes for rubato definitions.</tei:desc>
           <tei:attList>
-            <tei:attRef class="att.named" name="name"/>
             <tei:attDef ident="frameLength">
               <tei:desc>defines the length of the potential rubato</tei:desc>
               <tei:datatype>
@@ -1104,7 +1103,7 @@
         <tei:elementSpec ident="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>Defines a rubato.</tei:desc>
           <tei:classes>
-<!--            <tei:memberOf key="att.named"/>-->
+            <tei:memberOf key="att.named"/>
             <tei:memberOf key="att.rubato"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
           </tei:classes>
