@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemata/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schemata/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <!-- there has to be at most 1 referenceMusic element, it indicates all music files which these performances can be applied to, type is semi-open (i.e. midi, msm, mei, and musicXML are supported, other types are allowed but the application has to handle it) -->
+    <referenceMusic>
+        <reference uri="D:\mpmDemo\music.mid" type="midi"/>
+    </referenceMusic>
+
+    <!-- there has to be at least one performance element, here you put in the actual performance descriptions -->
+    <performance name="Adagio">
+        <global>
+            <header>
+                <!-- the sequencingCommands element and its attributes are all optional, if an attribute or the whole element is missing they are assumed as false -->
+                <sequencingCommands loop="true" mute="false"/>
+
+                <!-- the viennaCtrls element is used to control the Vienna Instruments sampler; we have a set of prepared performance matrices -->
+                <viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
+
+                <articulationStyles>
+                    <styleDef name="old style">
+                        <articulationDef name="nonlegato"/>
+                    </styleDef>
+                    <styleDef name="mini style">
+                        <articulationDef name="nonlegato"/> <!-- this articulation actually makes nothing -->
+                    </styleDef>
+                </articulationStyles>
+
+                <ornamentationStyles>
+                    <styleDef name="">
+                    </styleDef>
+                </ornamentationStyles>
+
+                <dynamicsStyles>
+                    <styleDef name="the old style">
+                        <dynamicsDef name="p" value="40"/>
+                        <dynamicsDef name="ff" value="120"/>
+                    </styleDef>
+                    <styleDef name="another style">
+                        <dynamicsDef name="p" value="30"/>
+                        <dynamicsDef name="f" value="95"/>
+                        <dynamicsDef name="ff" value="125"/>
+                    </styleDef>
+                </dynamicsStyles>
+
+                <metricalAccentuationStyles>
+                    <styleDef name="my accentuation pattern pool">
+                        <!-- the following accentuation pattern is of 4 beats length -->
+                        <accentuationPatternDef name="accentuation pattern 1" length="4">
+                            <!-- an accentuation defines the beat to be accentuated (float), the accentuation value (typically between -1.0 and 1.0) and a linear transition (values also typically between -1.0 and 1.0) in-between this and the succeeding accentuation -->
+                            <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
+                            <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>	<!-- this accentuation lies between beats 2 and 3 -->
+                            <accentuation beat="4" value="0.5" transition.from="0.0" transition.to="1.0"/>
+                        </accentuationPatternDef>
+                        <!-- this style may define further accentuation patterns -->
+                    </styleDef>
+                </metricalAccentuationStyles>
+
+                <tempoStyles>
+                    <styleDef name="my tempo style">
+                        <tempoDef name="Adagio" value="60"/>
+                        <tempoDef name="Allegro" value="130"/>
+                        <tempoDef name="Vivace" value="140"/>
+                        <tempoDef name="my own tempo" value="106.87"/>
+                    </styleDef>
+                </tempoStyles>
+
+                <rubatoStyles>
+                    <styleDef name="my rubato style">
+                        <rubatoDef name="swing" frameLength="720" intensity="0.6" lateStart="0.0" earlyEnd="1.0"/>  <!-- default values? 0 <= lateStart < earlyEnd <= 1.0 -->
+                    </styleDef>
+                </rubatoStyles>
+            </header>
+
+            <dated>
+                <dynamicsMap startStyle="the old style">            <!-- startStyle may be left empty "" if the instructions do not use literal dynamics (such as "ff", which has to be defined by a dynamicsDef) -->
+                    <dynamics date="0" volume="p"/>
+                    <style date="1440" name.ref="another style"/>
+                    <dynamics date="1440" volume="100"/>
+                    <dynamics date="32960" volume="f"/>
+                </dynamicsMap>
+
+                <articulationMap startStyle="old style" standardArticulation="nonlegato">
+                    <articulation date="19530"/>
+                    <style date="1440" name.ref="mini style" standardArticulation="nonlegato"/>
+                </articulationMap>
+
+                <metricalAccentuationMap startStyle="my accentuation pattern pool">
+                    <accentuationPattern date="0" name.ref="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result is specifies the offset from the underlying macro dynamics) -->
+                    <style date="1440" name.ref="my accentuation pattern pool"/>                              <!-- this switch does not make so much sense, it switches to the same style that is already running, but you can switch to other styles this way -->
+                    <accentuationPattern date="1440" name.ref="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
+                    <accentuationPattern date="394760" name.ref="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
+                </metricalAccentuationMap>
+
+                <tempoMap startStyle="my tempo style">                  <!-- startStyle may be left empty "" if the instructions do not use literal tempi (such as "Allegro", which has to be defined by a tempoDef) -->
+                    <tempo date="0" bpm="Allegro" beatLength="0.5"/>   <!-- this is a minimal tempo instruction, all three attributes are required, beatLength specifies the musical value of one beat (required to decode bpm values; 0.25 is 1/4) -->
+                    <style date="1440" name.ref="my tempo style"/>
+                    <!-- the following instruction defines a continuous tempo transition starting with bpm (either a string identifier from a tempoDef or a numeric value, i.e. float) and ending up with the tempo in transition.to (like bpm either a string identifier from a tempoDef or a numeric value, i.e. float) -->
+                    <!-- meanTempoAt says at which relative position between this and the succeeding instruction (in [0, 1]) the tempo curve reaches the mean tempo -->
+                    <tempo date="1440" bpm="100" beatLength="0.25"/>
+                </tempoMap>
+
+                <asynchronyMap>
+                    <asynchrony date="0" milliseconds.offset="-36.0"/>
+                    <asynchrony date="34650" milliseconds.offset="20.0"/>
+                </asynchronyMap>
+
+                <rubatoMap startStyle="my rubato style">                <!-- startStyle may be left empty "" if the instructions do not use literal rubato names (which have been defined by a rubatoDef) -->
+                    <!-- a rubato instruction either refers to a rubatoDef or specify the rubato itself with all the attributes -->
+                    <rubato date="0" name.ref="swing" loop="true"/>
+                    <style date="1440" name.ref="my rubato style"/>
+                    <rubato date="1440" frameLength="720" intensity="1" lateStart="0.0" earlyEnd="1.0" loop="false"/>   <!-- this effectively deactivates any rubato -->
+                </rubatoMap>
+
+                <ornamentationMap>
+                    <!-- not yet defined -->
+                </ornamentationMap>
+
+                <imprecisionMap>
+                    <timingImprecision>
+                        <!-- the imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds -->
+                        <distribution.uniform date="0" value.min="-10" value.max="20"/>                         <!-- this is a uniform distribution, applied to the timing of musical events from date 0 on -->
+                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>     <!-- this is a gaussian distribution, applied from date 1440 on; the deviation values have to be >=0 -->
+                    </timingImprecision>
+                    <dynamicsImprecision>
+                        <!-- the imprecision instructions for dynamics deviations -->
+                        <distribution.uniform date="0" value.min="-10" value.max="20"/>
+                    </dynamicsImprecision>
+                    <toneDurationImprecision>
+                        <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
+                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>
+                    </toneDurationImprecision>
+                    <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz" -->
+                        <!-- the imprecision instructions for tuning variations -->
+                        <distribution.gaussian date="0" deviation.standard="20.0" deviation.max="10.0"/>
+                        <distribution.uniform date="12340" value.min="0" value.max="0"/>                            <!-- this effectively switches random offsets off -->
+                    </tuningImprecision>
+                </imprecisionMap>
+            </dated>
+        </global>
+
+        <!-- part numbering starts with 1; number is mandatory -->
+        <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+            <header>
+            </header>
+
+            <dated>
+            </dated>
+        </part>
+
+        <part name="Alto" number="2" midi.channel="1" midi.port="0">
+            <header>
+            </header>
+
+            <dated>
+            </dated>
+        </part>
+
+    </performance>
+
+</mpm>
