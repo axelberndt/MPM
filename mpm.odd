@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
-<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"-->
-<!--	schematypens="http://purl.oclc.org/dsdl/schematron"<!-\-?>-\->-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
   xmlns:math="http://www.w3.org/1998/Math/MathML"
   xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0" 
@@ -114,7 +113,7 @@
                       if($styleName = $globalStyleNames and $defName = $globalStyles[@name = $styleName]/*/@name)
                       then(true())
                       else(false())
-                      )">No <sch:value-of select="concat($mapType,'Def')"/> with @name "<sch:value-of select="$defName"/>" found in styleDef with @name "<sch:value-of select="$styleName"/>"</sch:assert><!-- if($styleName = $localStyles) then(true()) else(if($styleName = $globalStyles) then(true())else(false())) -->
+                      )">No <sch:value-of select="concat($mapType,'Def')"/> with @name "<sch:value-of select="$defName"/>" found in styleDef with @name "<sch:value-of select="$styleName"/>"</sch:assert>
                   </sch:rule>
                 </tei:constraint>
               </tei:constraintSpec>
@@ -148,7 +147,6 @@
                     <sch:let name="element" value="local-name(parent::*)"/>
                     <sch:let name="siblingNames" value="parent::*/preceding-sibling::*[local-name() = $element]/string(@name),parent::*/following-sibling::*[local-name() = $element]/string(@name)"/>
                     <sch:let name="siblingCount" value="count($siblingNames)"/>
-                    <!--<sch:assert role="error" test="if($siblingCount gt 0)then(string(.) != $siblingNames)else(true())">Duplicate @name "<sch:value-of select="."/>" value in current context. <sch:value-of select="$siblingNames"/>; <sch:value-of select="$siblingCount"/></sch:assert>-->
                     <sch:report role="error" test="if($siblingCount gt 0)then(string(.) = $siblingNames)else(false())">Duplicate @name "<sch:value-of select="."/>" value in current context. <sch:value-of select="$siblingNames"/>;<sch:value-of select="not(string(.) = $siblingNames)"/></sch:report>
                   </sch:rule>
                 </tei:constraint>
@@ -228,9 +226,6 @@
         
         <tei:classSpec ident="model.styleDefContainerLike" type="model" module="mpm" mode="add">
           <tei:desc>The styleDefGrpLike class groups container elements for styleDef elements, such as the articulationStyles element.</tei:desc>
-          <!--<tei:classes>
-            <tei:memberOf key="model.styleDefLike"/>
-          </tei:classes>-->
         </tei:classSpec>
         
         <tei:elementSpec ident="mpm" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
@@ -253,15 +248,6 @@
           <tei:content>
             <rng:ref name="model.performance"/>
           </tei:content>
-          <!--<tei:constraintSpec ident="performance.att.name" scheme="isoschematron">
-            <tei:desc><!-\- TODO -\-></tei:desc>
-            <tei:constraint>
-              <sch:rule context="mpm:performance">
-                <sch:assert role="error" test="@name">The performance element must have @name.</sch:assert>
-              </sch:rule>
-              <sch:report role="error" test="(@name = ./preceding::mpm:performance/@name) or (@name = ./following::mpm:performance/@name)">The performance element must have a unique value of @name. The current elements value "<sch:value-of select="@name"/>" has already been taken by a mpm:performance element <sch:value-of select="if(@name = ./preceding::mpm:performance/@name) then('preceding')else('following')"/> the current element.</sch:report>
-            </tei:constraint>
-          </tei:constraintSpec>-->
         </tei:elementSpec>
         
         <tei:elementSpec ident="referenceMusic" ns="http://www.cemfi.de/mpm/ns/1.0" mode="add" module="mpm">
@@ -409,7 +395,6 @@
           <tei:content>
             <rng:interleave>
               <tei:classRef key="model.headerPart" expand="sequenceOptional"/><!-- invalid but works ;-) -->
-<!--              <rng:ref name="model.headerPart"/><!-\- besser model.headerPart -\->-->
             </rng:interleave>
           </tei:content>
           
@@ -421,7 +406,6 @@
             <tei:memberOf key="att.partLike"/>
           </tei:classes>
           <tei:content>
-            <!--            <classRef key="att.nameable"/>-->
             <tei:elementRef key="header"/>
             <tei:elementRef key="dated"/>
           </tei:content>
@@ -552,13 +536,6 @@
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
               </tei:datatype>
-              <!--<tei:constraintSpec ident="asLoudAsPossible" scheme="isoschematron">
-                <tei:constraint>
-                  <sch:rule context="@absoluteVelocity">
-                    <sch:assert role="warning" test="number(.) eq 127">value has to be 127</sch:assert>
-                  </sch:rule>
-                </tei:constraint>
-              </tei:constraintSpec>-->
             </tei:attDef>
             
             <tei:attDef ident="absoluteVelocityChange">
