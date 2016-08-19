@@ -135,7 +135,7 @@
                     <!-- a rubato instruction either refers to a rubatoDef or specify the rubato itself with all the attributes -->
                     <rubato date="0" name.ref="swing" loop="true"/>
                     <style date="1440" name.ref="my rubato style"/>
-                    <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9"/>
+                    <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9" loop="false"/>
                 </rubatoMap>
 
                 <ornamentationMap>
