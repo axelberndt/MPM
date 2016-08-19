@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-18T17:43:12Z. .
+    Schema generated from ODD source 2016-08-19T07:49:29Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -150,6 +150,16 @@
       <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
     </xs:complexType>
   </xs:element>
+  <xs:attributeGroup name="mpm.att.loopable.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.loopable.attribute.loop"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.loopable.attribute.loop">
+    <xs:attribute name="loop" use="required" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.midi.attributes">
     <xs:attributeGroup ref="mpm:mpm.att.midi.attribute.midi.port"/>
     <xs:attributeGroup ref="mpm:mpm.att.midi.attribute.midi.channel"/>
@@ -327,11 +337,7 @@
       <xs:documentation>Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:attribute name="loop" type="xs:boolean">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attributeGroup ref="mpm:mpm.att.loopable.attributes"/>
       <xs:attribute name="mute" type="xs:boolean">
         <xs:annotation>
           <xs:documentation/>
@@ -688,6 +694,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.loopable.attributes"/>
       <xs:attribute name="scale">
         <xs:annotation>
           <xs:documentation/>
@@ -698,11 +705,6 @@
             <xs:maxInclusive value="127"/>
           </xs:restriction>
         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="loop" type="xs:boolean">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
       </xs:attribute>
     </xs:complexType>
   </xs:element>
@@ -834,8 +836,6 @@
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.intensity"/>
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.lateStart"/>
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.earlyEnd"/>
-    <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.loop"/>
-    <xs:attributeGroup ref="mpm:mpm.att.named.attribute.name"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.frameLength">
     <xs:attribute name="frameLength" type="xs:int">
@@ -865,13 +865,6 @@
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.rubato.attribute.loop">
-    <xs:attribute name="loop" type="xs:boolean">
-      <xs:annotation>
-        <xs:documentation>?</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:attributeGroup>
   <xs:element name="rubato">
     <xs:annotation>
       <xs:documentation>A rubato instruction.</xs:documentation>
@@ -879,6 +872,7 @@
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
       <xs:attributeGroup ref="mpm:mpm.att.rubato.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.loopable.attribute.loop"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="rubatoDef">
@@ -886,6 +880,7 @@
       <xs:documentation>Defines a rubato.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
       <xs:attributeGroup ref="mpm:mpm.att.rubato.attributes"/>
     </xs:complexType>
   </xs:element>

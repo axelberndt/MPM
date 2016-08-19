@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-18T19:43:04Z. 
+Schema generated from ODD source 2016-08-19T09:49:21Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -262,6 +262,15 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <empty/>
       </element>
    </define>
+   <define name="mpm.att.loopable.attributes">
+      <ref name="mpm.att.loopable.attribute.loop"/>
+   </define>
+   <define name="mpm.att.loopable.attribute.loop">
+      <attribute name="loop">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="boolean"/>
+      </attribute>
+   </define>
    <define name="mpm.att.midi.attributes">
       <ref name="mpm.att.midi.attribute.midi.port"/>
       <ref name="mpm.att.midi.attribute.midi.channel"/>
@@ -466,12 +475,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <element name="sequencingCommands" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</a:documentation>
          <empty/>
-         <optional>
-            <attribute name="loop">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <data type="boolean"/>
-            </attribute>
-         </optional>
+         <ref name="mpm.att.loopable.attributes"/>
          <optional>
             <attribute name="mute">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -832,6 +836,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">.</a:documentation>
          <empty/>
          <ref name="mpm.att.instructionLike.attributes"/>
+         <ref name="mpm.att.loopable.attributes"/>
          <optional>
             <attribute name="scale">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -839,12 +844,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                   <param name="minInclusive">0</param>
                   <param name="maxInclusive">127</param>
                </data>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="loop">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <data type="boolean"/>
             </attribute>
          </optional>
          <empty/>
@@ -975,8 +974,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.rubato.attribute.intensity"/>
       <ref name="mpm.att.rubato.attribute.lateStart"/>
       <ref name="mpm.att.rubato.attribute.earlyEnd"/>
-      <ref name="mpm.att.rubato.attribute.loop"/>
-      <ref name="mpm.att.named.attribute.name"/>
    </define>
    <define name="mpm.att.rubato.attribute.frameLength">
       <optional>
@@ -1010,20 +1007,13 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </attribute>
       </optional>
    </define>
-   <define name="mpm.att.rubato.attribute.loop">
-      <optional>
-         <attribute name="loop">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
-            <data type="boolean"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="mpm.rubato">
       <element name="rubato" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A rubato instruction.</a:documentation>
          <empty/>
          <ref name="mpm.att.instructionLike.attributes"/>
          <ref name="mpm.att.rubato.attributes"/>
+         <ref name="mpm.att.loopable.attribute.loop"/>
          <empty/>
       </element>
    </define>
@@ -1031,6 +1021,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <element name="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a rubato.</a:documentation>
          <empty/>
+         <ref name="mpm.att.named.attributes"/>
          <ref name="mpm.att.rubato.attributes"/>
          <empty/>
       </element>
