@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-19T09:49:21Z. 
+Schema generated from ODD source 2016-08-19T11:57:29Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -12,9 +12,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
-   <define name="mpm.data.URI">
-      <data type="anyURI"/>
-   </define>
    <define name="mpm.data.name.ref">
       <data type="string"/>
    </define>
@@ -34,7 +31,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <optional>
          <attribute name="uri">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <ref name="mpm.data.URI"/>
+            <text/>
          </attribute>
       </optional>
    </define>
@@ -115,7 +112,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                     <sch:let name="siblingNames"
                   value="parent::*/preceding-sibling::*[local-name() = $element]/string(@name),parent::*/following-sibling::*[local-name() = $element]/string(@name)"/>
                     <sch:let name="siblingCount" value="count($siblingNames)"/>
-                    
                     <sch:report role="error"
                      test="if($siblingCount gt 0)then(string(.) = $siblingNames)else(false())">Duplicate @name "<sch:value-of select="."/>" value in current context. <sch:value-of select="$siblingNames"/>;<sch:value-of select="not(string(.) = $siblingNames)"/>
          </sch:report>
@@ -125,12 +121,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.startStyle.attribute.startStyle"/>
    </define>
    <define name="mpm.att.startStyle.attribute.startStyle">
-      <optional>
-         <attribute name="startStyle">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="string"/>
-         </attribute>
-      </optional>
+      <attribute name="startStyle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="string"/>
+      </attribute>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mpm-att.startStyle-startStyle-constraint-4">
@@ -167,12 +161,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.value.attribute.value"/>
    </define>
    <define name="mpm.att.value.attribute.value">
-      <optional>
-         <attribute name="value">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
-      </optional>
+      <attribute name="value">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="float"/>
+      </attribute>
    </define>
    <define name="mpm.mpm">
       <element name="mpm" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -328,12 +320,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.linking.attribute.name.ref"/>
    </define>
    <define name="mpm.att.instructionLike.attribute.date">
-      <optional>
-         <attribute name="date">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="decimal"/>
-         </attribute>
-      </optional>
+      <attribute name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="decimal"/>
+      </attribute>
    </define>
    <define name="mpm.dated">
       <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -428,60 +418,50 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.vienna.attribute.vSpan"/>
    </define>
    <define name="mpm.att.vienna.attribute.velXFadeOnOff">
-      <optional>
-         <attribute name="velXFadeOnOff">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
-            <data type="int">
-               <param name="minInclusive">0</param>
-               <param name="maxInclusive">127</param>
-            </data>
-         </attribute>
-      </optional>
+      <attribute name="velXFadeOnOff">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
+         <data type="int">
+            <param name="minInclusive">0</param>
+            <param name="maxInclusive">127</param>
+         </data>
+      </attribute>
    </define>
    <define name="mpm.att.vienna.attribute.velXFade">
-      <optional>
-         <attribute name="velXFade">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
-            <data type="int">
-               <param name="minInclusive">0</param>
-               <param name="maxInclusive">127</param>
-            </data>
-         </attribute>
-      </optional>
+      <attribute name="velXFade">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</a:documentation>
+         <data type="int">
+            <param name="minInclusive">0</param>
+            <param name="maxInclusive">127</param>
+         </data>
+      </attribute>
    </define>
    <define name="mpm.att.vienna.attribute.hSpan">
-      <optional>
-         <attribute name="hSpan">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching the performance-matrix column (duration), standard value is 21.</a:documentation>
-            <data type="int">
-               <param name="minInclusive">0</param>
-               <param name="maxInclusive">127</param>
-            </data>
-         </attribute>
-      </optional>
+      <attribute name="hSpan">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching the performance-matrix column (duration), standard value is 21.</a:documentation>
+         <data type="int">
+            <param name="minInclusive">0</param>
+            <param name="maxInclusive">127</param>
+         </data>
+      </attribute>
    </define>
    <define name="mpm.att.vienna.attribute.vSpan">
-      <optional>
-         <attribute name="vSpan">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</a:documentation>
-            <data type="int">
-               <param name="minInclusive">0</param>
-               <param name="maxInclusive">127</param>
-            </data>
-         </attribute>
-      </optional>
+      <attribute name="vSpan">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</a:documentation>
+         <data type="int">
+            <param name="minInclusive">0</param>
+            <param name="maxInclusive">127</param>
+         </data>
+      </attribute>
    </define>
    <define name="mpm.sequencingCommands">
       <element name="sequencingCommands" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</a:documentation>
          <empty/>
          <ref name="mpm.att.loopable.attributes"/>
-         <optional>
-            <attribute name="mute">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <data type="boolean"/>
-            </attribute>
-         </optional>
+         <attribute name="mute">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="boolean"/>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -684,12 +664,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       </optional>
    </define>
    <define name="mpm.att.dynamics.attribute.volume">
-      <optional>
-         <attribute name="volume">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</a:documentation>
-            <text/>
-         </attribute>
-      </optional>
+      <attribute name="volume">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</a:documentation>
+         <text/>
+      </attribute>
    </define>
    <define name="mpm.att.dynamics.attribute.transition.to">
       <optional>
@@ -784,36 +762,28 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.accentuation.attribute.transition.to"/>
    </define>
    <define name="mpm.att.accentuation.attribute.beat">
-      <optional>
-         <attribute name="beat">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
-      </optional>
+      <attribute name="beat">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="float"/>
+      </attribute>
    </define>
    <define name="mpm.att.accentuation.attribute.value">
-      <optional>
-         <attribute name="value">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
-      </optional>
+      <attribute name="value">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="float"/>
+      </attribute>
    </define>
    <define name="mpm.att.accentuation.attribute.transition.from">
-      <optional>
-         <attribute name="transition.from">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
-      </optional>
+      <attribute name="transition.from">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="float"/>
+      </attribute>
    </define>
    <define name="mpm.att.accentuation.attribute.transition.to">
-      <optional>
-         <attribute name="transition.to">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
-      </optional>
+      <attribute name="transition.to">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="float"/>
+      </attribute>
    </define>
    <define name="mpm.model.accentuationPatternDefPart">
       <choice>
@@ -827,7 +797,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</a:documentation>
          <empty/>
          <ref name="mpm.att.accentuation.attributes"/>
-         <ref name="mpm.att.instructionLike.attributes"/>
          <empty/>
       </element>
    </define>
@@ -837,15 +806,13 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <empty/>
          <ref name="mpm.att.instructionLike.attributes"/>
          <ref name="mpm.att.loopable.attributes"/>
-         <optional>
-            <attribute name="scale">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <data type="int">
-                  <param name="minInclusive">0</param>
-                  <param name="maxInclusive">127</param>
-               </data>
-            </attribute>
-         </optional>
+         <attribute name="scale">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="int">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">127</param>
+            </data>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -854,12 +821,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">.</a:documentation>
          <ref name="mpm.model.accentuationPatternDefPart"/>
          <ref name="mpm.att.named.attributes"/>
-         <optional>
-            <attribute name="length">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the pattern length in metrical beats.</a:documentation>
-               <data type="float"/>
-            </attribute>
-         </optional>
+         <attribute name="length">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gives the pattern length in metrical beats, e.g. 4 would resemble four metrical beats.</a:documentation>
+            <data type="float"/>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -893,22 +858,18 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.tempo.attribute.transition.to"/>
    </define>
    <define name="mpm.att.tempo.attribute.bpm">
-      <optional>
-         <attribute name="bpm">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="string"/>
-         </attribute>
-      </optional>
+      <attribute name="bpm">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="string"/>
+      </attribute>
    </define>
    <define name="mpm.att.tempo.attribute.beatLength">
-      <optional>
-         <attribute name="beatLength">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="decimal">
-               <param name="minInclusive">0.0</param>
-            </data>
-         </attribute>
-      </optional>
+      <attribute name="beatLength">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="decimal">
+            <param name="minInclusive">0.0</param>
+         </data>
+      </attribute>
    </define>
    <define name="mpm.att.tempo.attribute.meanTempoAt">
       <optional>
@@ -976,36 +937,28 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.rubato.attribute.earlyEnd"/>
    </define>
    <define name="mpm.att.rubato.attribute.frameLength">
-      <optional>
-         <attribute name="frameLength">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the length of the potential rubato</a:documentation>
-            <data type="int"/>
-         </attribute>
-      </optional>
+      <attribute name="frameLength">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the length of the potential rubato</a:documentation>
+         <data type="int"/>
+      </attribute>
    </define>
    <define name="mpm.att.rubato.attribute.intensity">
-      <optional>
-         <attribute name="intensity">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the itensity of the rubato</a:documentation>
-            <data type="decimal"/>
-         </attribute>
-      </optional>
+      <attribute name="intensity">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the itensity of the rubato</a:documentation>
+         <data type="decimal"/>
+      </attribute>
    </define>
    <define name="mpm.att.rubato.attribute.lateStart">
-      <optional>
-         <attribute name="lateStart">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
-            <data type="decimal"/>
-         </attribute>
-      </optional>
+      <attribute name="lateStart">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+         <data type="decimal"/>
+      </attribute>
    </define>
    <define name="mpm.att.rubato.attribute.earlyEnd">
-      <optional>
-         <attribute name="earlyEnd">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
-            <data type="decimal"/>
-         </attribute>
-      </optional>
+      <attribute name="earlyEnd">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+         <data type="decimal"/>
+      </attribute>
    </define>
    <define name="mpm.rubato">
       <element name="rubato" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -1053,12 +1006,10 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       <ref name="mpm.att.asynchrony.attribute.milliseconds.offset"/>
    </define>
    <define name="mpm.att.asynchrony.attribute.milliseconds.offset">
-      <optional>
-         <attribute name="milliseconds.offset">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an offset in milliseconds.</a:documentation>
-            <data type="float"/>
-         </attribute>
-      </optional>
+      <attribute name="milliseconds.offset">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an offset in milliseconds.</a:documentation>
+         <data type="float"/>
+      </attribute>
    </define>
    <define name="mpm.asynchrony">
       <element name="asynchrony" ns="http://www.cemfi.de/mpm/ns/1.0">

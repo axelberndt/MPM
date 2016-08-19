@@ -85,7 +85,7 @@
 <!--                <rng:ref name="data.URI"/>-->
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="name.ref" module="mpm" mode="add">
+            <tei:attDef ident="name.ref" module="mpm" mode="add"><!-- TODO reuired on style, accentuationPattern -->
               <tei:datatype>
                 <rng:ref name="data.name.ref"/>
               </tei:datatype>
@@ -175,7 +175,7 @@
             </tei:constraint>
           </tei:constraintSpec>
           <tei:attList>
-            <tei:attDef ident="startStyle">
+            <tei:attDef ident="startStyle" usage="req">
               <tei:datatype>
                 <rng:data type="string"/>
               </tei:datatype>
@@ -209,7 +209,7 @@
         <tei:classSpec ident="att.value" type="atts" mode="add" module="mpm">
           <tei:desc>Value attribute class.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="value">
+            <tei:attDef ident="value" usage="req">
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
@@ -364,7 +364,7 @@
         <tei:classSpec ident="att.instructionLike" type="atts" mode="add" module="performance">
           <tei:desc>Groups elements that may occur in dated maps.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="date">
+            <tei:attDef ident="date" usage="req">
               <tei:datatype>
                 <rng:data type="decimal"/>
               </tei:datatype>
@@ -449,7 +449,7 @@
         
         <tei:classSpec ident="att.vienna" type="atts" module="misc" mode="add">
           <tei:attList>
-            <tei:attDef ident="velXFadeOnOff">
+            <tei:attDef ident="velXFadeOnOff" usage="req">
               <tei:desc>Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</tei:desc>
               <tei:datatype>
                 <rng:data type="int">
@@ -458,7 +458,7 @@
                 </rng:data>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="velXFade">
+            <tei:attDef ident="velXFade" usage="req">
               <tei:desc>Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</tei:desc>
               <tei:datatype>
                 <rng:data type="int">
@@ -467,7 +467,7 @@
                 </rng:data>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="hSpan">
+            <tei:attDef ident="hSpan" usage="req">
               <tei:desc>Controller number for switching the performance-matrix column (duration), standard value is 21.</tei:desc>
               <tei:datatype>
                 <rng:data type="int">
@@ -476,7 +476,7 @@
                 </rng:data>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="vSpan">
+            <tei:attDef ident="vSpan" usage="req">
               <tei:desc>Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</tei:desc>
               <tei:datatype>
                 <rng:data type="int">
@@ -495,7 +495,7 @@
             <tei:memberOf key="model.headerPart" /><!-- min="0" max="1" -->
           </tei:classes>
           <tei:attList>
-            <tei:attDef ident="mute">
+            <tei:attDef ident="mute" usage="req">
               <tei:datatype>
                 <rng:data type="boolean"/>
               </tei:datatype>
@@ -631,7 +631,7 @@
         
         <tei:classSpec ident="att.standardArticulation" type="atts" module="articulation" mode="add">
           <tei:attList>
-            <tei:attDef ident="standardArticulation">
+            <tei:attDef ident="standardArticulation"><!-- TODO require on style in articulationMap -->
               <tei:desc></tei:desc>
               <tei:datatype>
                 <rng:data type="string"/>
@@ -705,7 +705,7 @@
                 <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="volume">
+            <tei:attDef ident="volume" usage="req">
               <tei:desc>Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</tei:desc>
               <!-- TODO Schematron for controlling allowed values according to parent::dynamicsmap/@* name() -->
               <tei:datatype>
@@ -837,22 +837,22 @@
         <tei:classSpec type="atts" ident="att.accentuation" module="metricalAccentuation" mode="add">
           <tei:desc></tei:desc>
           <tei:attList>
-            <tei:attDef ident="beat">
+            <tei:attDef ident="beat" usage="req">
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="value">
+            <tei:attDef ident="value" usage="req"><!-- TODO: other value atts in schema defined? -->
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="transition.from">
+            <tei:attDef ident="transition.from" usage="req">
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="transition.to">
+            <tei:attDef ident="transition.to" usage="req">
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
@@ -872,7 +872,7 @@
           <tei:desc>Defines an articulation with a stylewide unique @name and respective duration and velocity modifiers.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.accentuation"/>
-            <tei:memberOf key="att.instructionLike"/>
+<!--            <tei:memberOf key="att.instructionLike"/>-->
             <tei:memberOf key="model.accentuationPatternDefPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
@@ -886,7 +886,7 @@
             <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
-            <tei:attDef ident="scale">
+            <tei:attDef ident="scale" usage="req">
               <tei:datatype>
                 <rng:data type="int">
                   <rng:param name="minInclusive">0</rng:param>
@@ -905,8 +905,8 @@
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
-            <tei:attDef ident="length">
-              <tei:desc>Gives the pattern length in metrical beats.</tei:desc>
+            <tei:attDef ident="length" usage="req">
+              <tei:desc>Gives the pattern length in metrical beats, e.g. 4 would resemble four metrical beats.</tei:desc>
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
@@ -950,26 +950,26 @@
         <tei:classSpec type="atts" ident="att.tempo" module="tempo" mode="add">
           <tei:desc>tempo attributes</tei:desc>
           <tei:attList>
-            <tei:attDef ident="bpm">
+            <tei:attDef ident="bpm" usage="req">
               <tei:datatype>
                 <rng:data type="string"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="beatLength"><!-- TODO: Schematron requiring presence in tempomap -->
+            <tei:attDef ident="beatLength" usage="req">
               <tei:datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
                 </rng:data>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="meanTempoAt"><!-- TODO: Schematron requiring presence in tempomap -->
+            <tei:attDef ident="meanTempoAt">
               <tei:datatype>
                 <rng:data type="decimal">
                   <rng:param name="minInclusive">0.0</rng:param>
                 </rng:data>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="transition.to"><!-- TODO: Schematron requiring presence in tempomap -->
+            <tei:attDef ident="transition.to">
               <tei:datatype>
                 <rng:data type="string"/><!-- TODO mixed values string-name or int -->
               </tei:datatype>
@@ -1034,25 +1034,25 @@
         <tei:classSpec type="atts" ident="att.rubato" module="rubato" mode="add">
           <tei:desc>Attributes for rubato definitions.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="frameLength">
+            <tei:attDef ident="frameLength" usage="req">
               <tei:desc>defines the length of the potential rubato</tei:desc>
               <tei:datatype>
                 <rng:data type="int"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="intensity">
+            <tei:attDef ident="intensity" usage="req">
               <tei:desc>defines the itensity of the rubato</tei:desc>
               <tei:datatype>
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="lateStart">
+            <tei:attDef ident="lateStart" usage="req">
               <tei:desc>?</tei:desc>
               <tei:datatype>
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="earlyEnd">
+            <tei:attDef ident="earlyEnd" usage="req">
               <tei:desc>?</tei:desc>
               <tei:datatype>
                 <rng:data type="decimal"/>
@@ -1066,7 +1066,7 @@
         </tei:classSpec>
         
         <tei:elementSpec ident="rubato" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
-          <tei:desc>A rubato instruction.</tei:desc>
+          <tei:desc>A rubato instruction.</tei:desc><!-- TODO either @nameRef or all of the other @:s -->
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
             <tei:memberOf key="att.rubato"/>
@@ -1121,7 +1121,7 @@
         <tei:classSpec type="atts" ident="att.asynchrony" module="asynchrony" mode="add">
           <tei:desc>Attributes for asynchrony instructions.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="milliseconds.offset">
+            <tei:attDef ident="milliseconds.offset" usage="req">
               <tei:desc>defines an offset in milliseconds.</tei:desc>
               <tei:datatype>
                 <rng:data type="float"/>

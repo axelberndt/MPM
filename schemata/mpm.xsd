@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-19T07:49:29Z. .
+    Schema generated from ODD source 2016-08-19T09:57:38Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
     
   -->
   <!---->
-  <xs:simpleType name="mpm.data.URI">
-    <xs:restriction base="xs:anyURI"/>
-  </xs:simpleType>
   <xs:simpleType name="mpm.data.name.ref">
     <xs:restriction base="xs:string"/>
   </xs:simpleType>
@@ -25,7 +22,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.linking.attribute.name.ref"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.linking.attribute.uri">
-    <xs:attribute name="uri" type="mpm:mpm.data.URI">
+    <xs:attribute name="uri" type="xs:anyURI">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -67,7 +64,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.startStyle.attribute.startStyle"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.startStyle.attribute.startStyle">
-    <xs:attribute name="startStyle" type="xs:string">
+    <xs:attribute name="startStyle" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -87,7 +84,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.value.attribute.value"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.value.attribute.value">
-    <xs:attribute name="value" type="xs:float">
+    <xs:attribute name="value" use="required" type="xs:float">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -211,7 +208,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.linking.attribute.name.ref"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.instructionLike.attribute.date">
-    <xs:attribute name="date" type="xs:decimal">
+    <xs:attribute name="date" use="required" type="xs:decimal">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -281,7 +278,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.vienna.attribute.vSpan"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.vienna.attribute.velXFadeOnOff">
-    <xs:attribute name="velXFadeOnOff">
+    <xs:attribute name="velXFadeOnOff" use="required">
       <xs:annotation>
         <xs:documentation>Controller number for switching VelocityXFade on or off. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</xs:documentation>
       </xs:annotation>
@@ -294,7 +291,7 @@
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.vienna.attribute.velXFade">
-    <xs:attribute name="velXFade">
+    <xs:attribute name="velXFade" use="required">
       <xs:annotation>
         <xs:documentation>Controller number for VelocityXFade. On performance processing a global standard-tag will be generated if none exists in order to provide one for each part, with @velXFade=20 and @velXFadeOnOff=20.</xs:documentation>
       </xs:annotation>
@@ -307,7 +304,7 @@
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.vienna.attribute.hSpan">
-    <xs:attribute name="hSpan">
+    <xs:attribute name="hSpan" use="required">
       <xs:annotation>
         <xs:documentation>Controller number for switching the performance-matrix column (duration), standard value is 21.</xs:documentation>
       </xs:annotation>
@@ -320,7 +317,7 @@
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.vienna.attribute.vSpan">
-    <xs:attribute name="vSpan">
+    <xs:attribute name="vSpan" use="required">
       <xs:annotation>
         <xs:documentation>Controller number for switching the performance-matrix row (articulation), standard value is 1 (pitchwheel), because in Vienna Instruments this is the corresponding standard controller.</xs:documentation>
       </xs:annotation>
@@ -338,7 +335,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.loopable.attributes"/>
-      <xs:attribute name="mute" type="xs:boolean">
+      <xs:attribute name="mute" use="required" type="xs:boolean">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
@@ -544,7 +541,7 @@
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.dynamics.attribute.volume">
-    <xs:attribute name="volume">
+    <xs:attribute name="volume" use="required">
       <xs:annotation>
         <xs:documentation>Gives the volume either as defined in parent::dynamicsmap attributes or as absolute MIDI velocity (0 to 127).</xs:documentation>
       </xs:annotation>
@@ -647,28 +644,28 @@
     <xs:attributeGroup ref="mpm:mpm.att.accentuation.attribute.transition.to"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.accentuation.attribute.beat">
-    <xs:attribute name="beat" type="xs:float">
+    <xs:attribute name="beat" use="required" type="xs:float">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.accentuation.attribute.value">
-    <xs:attribute name="value" type="xs:float">
+    <xs:attribute name="value" use="required" type="xs:float">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.accentuation.attribute.transition.from">
-    <xs:attribute name="transition.from" type="xs:float">
+    <xs:attribute name="transition.from" use="required" type="xs:float">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.accentuation.attribute.transition.to">
-    <xs:attribute name="transition.to" type="xs:float">
+    <xs:attribute name="transition.to" use="required" type="xs:float">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -685,7 +682,6 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.accentuation.attributes"/>
-      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="accentuationPattern">
@@ -695,7 +691,7 @@
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
       <xs:attributeGroup ref="mpm:mpm.att.loopable.attributes"/>
-      <xs:attribute name="scale">
+      <xs:attribute name="scale" use="required">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
@@ -716,9 +712,9 @@
       <xs:complexContent>
         <xs:extension base="mpm:mpm.model.accentuationPatternDefPart">
           <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
-          <xs:attribute name="length" type="xs:float">
+          <xs:attribute name="length" use="required" type="xs:float">
             <xs:annotation>
-              <xs:documentation>Gives the pattern length in metrical beats.</xs:documentation>
+              <xs:documentation>Gives the pattern length in metrical beats, e.g. 4 would resemble four metrical beats.</xs:documentation>
             </xs:annotation>
           </xs:attribute>
         </xs:extension>
@@ -754,14 +750,14 @@
     <xs:attributeGroup ref="mpm:mpm.att.tempo.attribute.transition.to"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.tempo.attribute.bpm">
-    <xs:attribute name="bpm" type="xs:string">
+    <xs:attribute name="bpm" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.tempo.attribute.beatLength">
-    <xs:attribute name="beatLength">
+    <xs:attribute name="beatLength" use="required">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -838,28 +834,28 @@
     <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.earlyEnd"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.frameLength">
-    <xs:attribute name="frameLength" type="xs:int">
+    <xs:attribute name="frameLength" use="required" type="xs:int">
       <xs:annotation>
         <xs:documentation>defines the length of the potential rubato</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.intensity">
-    <xs:attribute name="intensity" type="xs:decimal">
+    <xs:attribute name="intensity" use="required" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>defines the itensity of the rubato</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.lateStart">
-    <xs:attribute name="lateStart" type="xs:decimal">
+    <xs:attribute name="lateStart" use="required" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>?</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.rubato.attribute.earlyEnd">
-    <xs:attribute name="earlyEnd" type="xs:decimal">
+    <xs:attribute name="earlyEnd" use="required" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>?</xs:documentation>
       </xs:annotation>
@@ -910,7 +906,7 @@
     <xs:attributeGroup ref="mpm:mpm.att.asynchrony.attribute.milliseconds.offset"/>
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.asynchrony.attribute.milliseconds.offset">
-    <xs:attribute name="milliseconds.offset" type="xs:float">
+    <xs:attribute name="milliseconds.offset" use="required" type="xs:float">
       <xs:annotation>
         <xs:documentation>defines an offset in milliseconds.</xs:documentation>
       </xs:annotation>
