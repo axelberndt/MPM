@@ -332,6 +332,16 @@
             </tei:content>
         </tei:macroSpec>
         
+        <tei:classSpec ident="att.loopable" type="atts" mode="add" module="performance">
+          <tei:attList>
+            <tei:attDef ident="loop" usage="req">
+              <tei:datatype>
+                <rng:data type="boolean"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="att.midi" type="atts" mode="add" module="performance">
           <tei:attList>
             <tei:attDef ident="midi.port">
@@ -496,14 +506,10 @@
         <tei:elementSpec ident="sequencingCommands" ns="http://www.cemfi.de/mpm/ns/1.0" module="misc" mode="add">
           <tei:desc>Defines a part. Parts with @port and @channel that do not match any MIDI data will be ignored.</tei:desc>
           <tei:classes>
+            <tei:memberOf key="att.loopable"/>
             <tei:memberOf key="model.headerPart" /><!-- min="0" max="1" -->
           </tei:classes>
           <tei:attList>
-            <tei:attDef ident="loop">
-              <tei:datatype>
-                <rng:data type="boolean"/>
-              </tei:datatype>
-            </tei:attDef>
             <tei:attDef ident="mute">
               <tei:datatype>
                 <rng:data type="boolean"/>
@@ -898,6 +904,7 @@
           <tei:desc>.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="att.loopable"/>
             <tei:memberOf key="model.metricalAccentuationMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:attList>
@@ -907,11 +914,6 @@
                   <rng:param name="minInclusive">0</rng:param>
                   <rng:param name="maxInclusive">127</rng:param>
                 </rng:data>
-              </tei:datatype>
-            </tei:attDef>
-            <tei:attDef ident="loop">
-              <tei:datatype>
-                <rng:data type="boolean"/>
               </tei:datatype>
             </tei:attDef>
           </tei:attList>
@@ -1079,12 +1081,6 @@
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="loop"><!-- TODO there's already another loop attribute defined in this spec -->
-              <tei:desc>?</tei:desc>
-              <tei:datatype>
-                <rng:data type="boolean"/>
-              </tei:datatype>
-            </tei:attDef>
           </tei:attList>
         </tei:classSpec>
         
@@ -1100,6 +1096,9 @@
             <tei:memberOf key="model.rubatoMapPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
+          <tei:attList>
+            <tei:attRef class="att.loopable" name="loop"/>
+          </tei:attList>
         </tei:elementSpec>
         
         <tei:elementSpec ident="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
