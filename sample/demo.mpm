@@ -146,7 +146,7 @@
                     <timingImprecision>
                         <!-- the imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds -->
                         <distribution.uniform date="0" value.min="-10" value.max="20"/>                         <!-- this is a uniform distribution, applied to the timing of musical events from date 0 on -->
-                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>     <!-- this is a gaussian distribution, applied from date 1440 on; the deviation values have to be >=0 -->
+                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>     <!-- this is a gaussian distribution (expectation value is 0.0; asynchrony can be used to shift it elsewhere) applied from date 1440 on; the deviation values have to be >=0.0 -->
                     </timingImprecision>
                     <dynamicsImprecision>
                         <!-- the imprecision instructions for dynamics deviations -->
