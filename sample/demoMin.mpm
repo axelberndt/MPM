@@ -121,7 +121,7 @@
                         <!-- the imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds -->
                         <distribution.uniform date="0" value.min="-10" value.max="20"/>
                         <distribution.gaussian date="1440" deviation.standard="20.0" value.min="-10" value.max="20"/>
-                        <distribution.skew date="2880" deviation.standard="20.0" scale.left="1.0" scale.right="2.5" value.min="-10" value.max="20"/>
+                        <distribution.skew date="2880" scale.left="1.0" scale.right="2.5" value.min="-10" value.max="20"/>
                         <distribution.correlated date="289550" alpha="1.56" value.min="-10" value.max="20"/>
                         <distribution.table date="58562950">
                             <measurement value="20.7"/>
