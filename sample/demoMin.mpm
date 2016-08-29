@@ -123,7 +123,7 @@
                         <distribution.gaussian date="1440" deviation.standard="20.0" value.min="-10" value.max="20"/>
                         <distribution.correlated date="289550" alpha="1.56" value.min="-10" value.max="20"/>
                         <distribution.triangular date="329573" limit.lower="-20" limit.upper="30" mode="4.2" value.min="-10" value.max="20"/>   <!-- this specifies a triangular distribution with lower and upper limit, the peak (i.e., highest probability) at the mode value, and just as the other distributions it can be clipped at a max an min value -->
-                        <distribution.table date="58562950">
+                        <distribution.list date="58562950">
                             <measurement value="20.7"/>
                         </distribution>
                     </timingImprecision>

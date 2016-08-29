@@ -149,7 +149,7 @@
                         <distribution.gaussian date="1440" deviation.standard="20.0" value.min="-10" value.max="20"/>     <!-- this is a gaussian distribution (expectation value is 0.0; asynchrony can be used to shift it elsewhere) applied from date 1440 on; the deviation values have to be >=0.0; value.min and value.max clip the deviations at a lower and upper border -->
                         <distribution.correlated date="289550" alpha="1.56" value.min="-10" value.max="20"/>    <!-- this represents pink noise with an 1/(f^alpha) noise signal; value.min and value.max clip the deviations at a lower and upper border -->
                         <distribution.triangular date="329573" limit.lower="-20" limit.upper="30" mode="4.2" value.min="-10" value.max="20"/>   <!-- this specifies a triangular distribution with lower and upper limit, the peak (i.e., highest probability) at the mode value, and just as the other distributions it can be clipped at a max and min value -->
-                        <distribution.table date="58562950">     <!-- this is a table of values of deviations from 0.0 (perfect value); the values may have been obtained by measurements of human musicians' performances -->
+                        <distribution.list date="58562950">     <!-- this is a table of values of deviations from 0.0 (perfect value); the values may have been obtained by measurements of human musicians' performances -->
                             <measurement value="20.7"/>
                             <measurement value="65.67"/>
                             <measurement value="13.45"/>
