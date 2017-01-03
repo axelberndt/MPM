@@ -91,7 +91,7 @@
 
                 <rubatoStyles>
                     <styleDef name="my rubato style">
-                        <rubatoDef name="swing" frameLength="720" intensity="0.6" lateStart="0.0" earlyEnd="1.0"/>
+                        <rubatoDef name="swing" frameLength="720" intensity="0.6" lateStart="0.0" earlyEnd="1.0"/>  <!-- default values? 0 <= lateStart < earlyEnd <= 1.0 -->
                     </styleDef>
                 </rubatoStyles>
             </header>
@@ -133,9 +133,9 @@
 
                 <rubatoMap startStyle="my rubato style">                <!-- startStyle may be left empty "" if the instructions do not use literal rubato names (which have been defined by a rubatoDef) -->
                     <!-- a rubato instruction either refers to a rubatoDef or specify the rubato itself with all the attributes -->
-                    <rubato date="0" name.ref="swing" loop="true"/>
+                    <rubato date="0" name.ref="swing" loop="true" />
                     <style date="1440" name.ref="my rubato style"/>
-                    <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9" loop="false"/>
+                    <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9" loop="false"/>   <!-- this effectively deactivates any rubato -->
                 </rubatoMap>
 
                 <ornamentationMap>
