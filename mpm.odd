@@ -79,17 +79,17 @@
         <tei:classSpec ident="att.linking" type="atts" mode="add" module="mpm">
           <tei:desc>Attribute class for attributes containink link and pointer targets.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="uri" module="mpm" mode="add">
+            <!--<tei:attDef ident="uri" module="mpm" mode="add">
               <tei:datatype>
                 <tei:dataRef key="data.URI"/>
-<!--                <rng:ref name="data.URI"/>-->
+<!-\-                <rng:ref name="data.URI"/>-\->
               </tei:datatype>
-            </tei:attDef>
-            <tei:attDef ident="name.ref" module="mpm" mode="add"><!-- TODO reuired on style, accentuationPattern -->
+            </tei:attDef>-->
+            <!--<tei:attDef ident="name.ref" module="mpm" mode="add"><!-\- TODO reuired on style, accentuationPattern -\->
               <tei:datatype>
                 <rng:ref name="data.name.ref"/>
               </tei:datatype>
-              <!-- constraint spec -->
+              <!-\- constraint spec -\->
               <tei:constraintSpec ident="name.ref" scheme="isoschematron">
                 <tei:constraint>
                   <sch:rule context="@name.ref[not(local-name(parent::*) = 'style')]">
@@ -118,7 +118,7 @@
                   </sch:rule>
                 </tei:constraint>
               </tei:constraintSpec>
-            </tei:attDef>
+            </tei:attDef>-->
             </tei:attList>
         </tei:classSpec>
         
@@ -149,6 +149,50 @@
                     <sch:let name="siblingNames" value="parent::*/preceding-sibling::*[local-name() = $element]/string(@name),parent::*/following-sibling::*[local-name() = $element]/string(@name)"/>
                     <sch:let name="siblingCount" value="count($siblingNames)"/>
                     <sch:report role="error" test="if($siblingCount gt 0)then(string(.) = $siblingNames)else(false())">Duplicate @name "<sch:value-of select="."/>" value in current context. <sch:value-of select="$siblingNames"/>;<sch:value-of select="not(string(.) = $siblingNames)"/></sch:report>
+                  </sch:rule>
+                </tei:constraint>
+              </tei:constraintSpec>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.refLike" type="atts" mode="add" module="mpm">
+          <tei:desc>Attribute class that defines allowed attributes for elements capturing references to external resources.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.linking"/>
+          </tei:classes>
+          <tei:attList>
+            <!--<tei:attRef class="att.linking" name="name.ref"/>-->
+            <tei:attDef ident="name.ref" module="mpm" mode="add"><!-- TODO reuired on style, accentuationPattern -->
+              <tei:datatype>
+                <rng:ref name="data.name.ref"/>
+              </tei:datatype>
+              <!-- constraint spec -->
+              <tei:constraintSpec ident="name.ref" scheme="isoschematron">
+                <tei:constraint>
+                  <sch:rule context="@name.ref[not(local-name(parent::*) = 'style')]">
+                    <sch:let name="ancestorMap" value="ancestor::*[ends-with(local-name(),'Map')][1]"/>
+                    <sch:let name="mapType"
+                      value="substring-before(local-name($ancestorMap), 'Map')"/>
+                    <sch:let name="precStyleInstrNameRefVal" value="string((/mpm/performance[1]/global[1]/dated[1]/articulationMap[1]/articulation[4]/preceding-sibling::style)[last()]/@name.ref)"/>
+                    <sch:let name="mapStartStyleName" value="string($ancestorMap/@startStyle)"></sch:let>
+                    <sch:let name="styleName" value="string(if($precStyleInstrNameRefVal != '')then($precStyleInstrNameRefVal)else($mapStartStyleName))"/>
+                    <sch:let name="defName" value="string(.)"/>
+                    <sch:let name="stylesEl" value="concat($mapType,'Styles')"/>
+                    <sch:let name="localStyles"
+                      value="ancestor::mpm:part//*[local-name()=$stylesEl]/mpm:styleDef"/>
+                    <sch:let name="localStyleNames" value="for $i in $localStyles return $i/@name"/>
+                    <sch:let name="globalStyles"
+                      value="ancestor::mpm:performance//mpm:header/*[local-name()=$stylesEl]/mpm:styleDef"/>
+                    <sch:let name="globalStyleNames" value="for $i in $globalStyles return $i/@name"/>
+                    <sch:assert role="error"
+                      test="if($styleName = $localStyleNames and $defName = $localStyles[@name = $styleName]/*/@name)
+                      then(true())
+                      else(
+                      if($styleName = $globalStyleNames and $defName = $globalStyles[@name = $styleName]/*/@name)
+                      then(true())
+                      else(false())
+                      )">No <sch:value-of select="concat($mapType,'Def')"/> with @name "<sch:value-of select="$defName"/>" found in styleDef with @name "<sch:value-of select="$styleName"/>"</sch:assert>
                   </sch:rule>
                 </tei:constraint>
               </tei:constraintSpec>
@@ -201,6 +245,22 @@
               <tei:datatype>
                 <rng:data type="string"><!-- TODO: mei midi musicXML msm -->
                 </rng:data>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec ident="att.uriLike" type="atts" mode="add" module="mpm">
+          <tei:desc>Attribute class that defines allowed attributes for elements capturing references to external resources.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.linking"/>
+          </tei:classes>
+          <tei:attList>
+            <!--<tei:attRef class="att.linking" name="uri"/>-->
+            <tei:attDef ident="uri" module="mpm" mode="add">
+              <tei:datatype>
+                <tei:dataRef key="data.URI"/>
+                <!--                <rng:ref name="data.URI"/>-->
               </tei:datatype>
             </tei:attDef>
           </tei:attList>
@@ -264,27 +324,25 @@
           <tei:desc>reference to a music representation processable by this performance description.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.typed"/>
-            <tei:memberOf key="att.linking"/>
+            <tei:memberOf key="att.uriLike"/>
           </tei:classes>
-          <tei:content>
-            <rng:empty/><!-- @ implementations -->
-          </tei:content>
+          <tei:content/>
           <tei:constraintSpec ident="reference.att.type" scheme="isoschematron">
-            <tei:desc><!-- TODO --></tei:desc>
+            <tei:desc>The mpm:reference element must have @type specified with one of the following values: mei, midi, msm, musicXML, umt</tei:desc>
             <tei:constraint>
               <sch:rule context="mpm:reference">
                 <sch:assert role="error" test="@type">The reference element must have @type.</sch:assert>
               </sch:rule>
-              <!--<sch:rule context="mpm:reference">
-                <sch:assert role="error" test="@type = ('midi', 'msm', 'mei', 'musicXML')">The @type on mpm:reference must have one of the following string values: midi, mei, musicXML.</sch:assert><!-\- TODO make semi-open attribute value list -\->
-              </sch:rule>-->
+              <sch:rule context="mpm:reference">
+                <sch:assert role="error" test="@type = ('mei', 'midi', 'msm', 'musicXML', 'umt')">The @type on mpm:reference must have one of the following string values: mei, midi, msm, musicXML, umt.</sch:assert><!-- TODO make semi-open attribute value list -->
+              </sch:rule>
             </tei:constraint>
           </tei:constraintSpec>
           <tei:constraintSpec ident="reference.att.uri" scheme="isoschematron">
-            <tei:desc><!-- TODO --></tei:desc>
+            <tei:desc>The mpm:reference element must have @uri defined.</tei:desc>
             <tei:constraint>
               <sch:rule context="mpm:reference">
-                <sch:assert role="error" test="@uri">The reference element must have @uri.</sch:assert>
+                <sch:assert role="error" test="@uri">The mpm:reference element must have @uri.</sch:assert>
               </sch:rule>
             </tei:constraint>
           </tei:constraintSpec>
@@ -363,13 +421,16 @@
         
         <tei:classSpec ident="att.instructionLike" type="atts" mode="add" module="performance">
           <tei:desc>Groups elements that may occur in dated maps.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.refLike"/>
+          </tei:classes>
           <tei:attList>
             <tei:attDef ident="date" usage="req">
               <tei:datatype>
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attRef class="att.linking" name="name.ref"/>
+<!--            <tei:attRef class="att.linking" name="name.ref"/>-->
           </tei:attList>
         </tei:classSpec>
         
