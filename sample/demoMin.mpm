@@ -126,7 +126,7 @@
                         <distribution.correlated.compensatingTriangle date="284560" degreeOfCorrelation="20.0" limit.lower="-10" limit.upper="20"/>
                         <distribution.list date="58562950">
                             <measurement value="20.7"/>
-                        </distribution>
+                        </distribution.list>
                     </timingImprecision>
                     <dynamicsImprecision>
                         <!-- the imprecision instructions for dynamics deviations -->

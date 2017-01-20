@@ -159,7 +159,7 @@
                             <measurement value="-24.63"/>
                             <measurement value="-8.4"/>
                             <measurement value="65.0"/>
-                        </distribution>
+                        </distribution.list>
                     </timingImprecision>
                     <dynamicsImprecision>
                         <!-- the imprecision instructions for dynamics deviations -->
