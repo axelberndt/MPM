@@ -1223,6 +1223,10 @@
           <tei:desc>Module for decribing imprecision information.</tei:desc>
         </tei:moduleSpec>
         
+        <tei:classSpec type="model" ident="model.distributionListPart" module="imprecision" mode="add">
+          <tei:desc>Model grouping distribution.list instruction contents.</tei:desc>
+        </tei:classSpec>
+        
         <tei:classSpec type="model" ident="model.imprecisionMapPart" module="imprecision" mode="add">
           <tei:desc>Model grouping imprecisionMap contents.</tei:desc>
         </tei:classSpec>
@@ -1239,14 +1243,133 @@
           </tei:classes>
           <tei:content/>
           <tei:attList>
-            <tei:attDef ident="deviation.standard" usage="req">
+            <tei:attDef ident="deviation.max">
               <tei:datatype>
-                <rng:data type="decimal"/>
+                <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="deviation.max" usage="req">
+            <tei:attDef ident="deviation.standard" usage="req">
               <tei:datatype>
-                <rng:data type="decimal"/>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.min">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.max">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="distribution.correlated.pinkNoise" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>This is a correlated pink noise distribution, applied to the timing of musical events starting from the given date.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.imprecisionInstructionPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="alpha" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.min">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.max">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="distribution.correlated.compensatingTriangle" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>This is a correlated complensationg triangle distribution, applied to the timing of musical events starting from the given date.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.imprecisionInstructionPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="degreeOfCorrelation" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="limit.lower" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="limit.upper" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.min">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.max">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="distribution.list" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>This is a correlated pink noise distribution, applied to the timing of musical events starting from the given date.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.imprecisionInstructionPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content>
+            <tei:classRef key="model.distributionListPart"/>
+          </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="distribution.triangular" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc>This is a correlated complensationg triangle distribution, applied to the timing of musical events starting from the given date.</tei:desc>
+          <tei:classes>
+            <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="model.imprecisionInstructionPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="limit.lower" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="limit.upper" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="mode" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.min">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.max">
+              <tei:datatype>
+                <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
           </tei:attList>
@@ -1260,12 +1383,22 @@
           </tei:classes>
           <tei:content/>
           <tei:attList>
-            <tei:attDef ident="value.min" usage="req">
+            <tei:attDef ident="limit.lower">
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="value.max" usage="req">
+            <tei:attDef ident="limit.upper">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.min">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+            <tei:attDef ident="value.max">
               <tei:datatype>
                 <rng:data type="float"/>
               </tei:datatype>
@@ -1295,6 +1428,21 @@
               <tei:classRef key="model.imprecisionMapPart" expand="sequenceOptional"/><!--TODO check @expand invalid but works-->
             </rng:interleave>
           </tei:content>
+        </tei:elementSpec>
+        
+        <tei:elementSpec ident="measurement" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
+          <tei:desc></tei:desc>
+          <tei:classes>
+            <tei:memberOf key="model.distributionListPart" min="0" max="unbounded"/>
+          </tei:classes>
+          <tei:content/>
+          <tei:attList>
+            <tei:attDef ident="value" usage="req">
+              <tei:datatype>
+                <rng:data type="float"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
         </tei:elementSpec>
         
         <tei:elementSpec ident="timingImprecision" ns="http://www.cemfi.de/mpm/ns/1.0" module="imprecision" mode="add">
