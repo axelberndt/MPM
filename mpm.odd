@@ -1095,7 +1095,6 @@
         <tei:classSpec type="atts" ident="att.rubato" module="rubato" mode="add">
           <tei:desc>Attributes for rubato definitions.</tei:desc>
           <tei:attList>
-            <tei:attDef ident="frameLength" usage="req">
             <tei:attDef ident="frameLength"><!-- usage="req" -->
               <tei:desc>defines the length of the potential rubato</tei:desc>
               <tei:datatype>
