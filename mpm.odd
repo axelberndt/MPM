@@ -78,18 +78,18 @@
         
         <tei:classSpec ident="att.linking" type="atts" mode="add" module="mpm">
           <tei:desc>Attribute class for attributes containink link and pointer targets.</tei:desc>
-          <tei:attList>
-            <!--<tei:attDef ident="uri" module="mpm" mode="add">
+          <!--<tei:attList>
+            <!-\-<tei:attDef ident="uri" module="mpm" mode="add">
               <tei:datatype>
                 <tei:dataRef key="data.URI"/>
-<!-\-                <rng:ref name="data.URI"/>-\->
+<!-\\-                <rng:ref name="data.URI"/>-\\->
               </tei:datatype>
-            </tei:attDef>-->
-            <!--<tei:attDef ident="name.ref" module="mpm" mode="add"><!-\- TODO reuired on style, accentuationPattern -\->
+            </tei:attDef>-\->
+            <!-\-<tei:attDef ident="name.ref" module="mpm" mode="add"><!-\\- TODO reuired on style, accentuationPattern -\\->
               <tei:datatype>
                 <rng:ref name="data.name.ref"/>
               </tei:datatype>
-              <!-\- constraint spec -\->
+              <!-\\- constraint spec -\\->
               <tei:constraintSpec ident="name.ref" scheme="isoschematron">
                 <tei:constraint>
                   <sch:rule context="@name.ref[not(local-name(parent::*) = 'style')]">
@@ -118,8 +118,8 @@
                   </sch:rule>
                 </tei:constraint>
               </tei:constraintSpec>
-            </tei:attDef>-->
-            </tei:attList>
+            </tei:attDef>-\->
+            </tei:attList>-->
         </tei:classSpec>
         
         <tei:classSpec ident="att.enumeration" type="atts" mode="add" module="mpm">
@@ -1099,6 +1099,21 @@
         <tei:classSpec type="atts" ident="att.rubato" module="rubato" mode="add">
           <tei:desc>Attributes for rubato definitions.</tei:desc>
           <tei:attList>
+            <tei:attList xml:id="rubato.defs" exclude="#rubato.ref">
+              <tei:attRef class="att.rubatoDef" name="frameLength"/><!-- usage="req" -->
+              <tei:attRef class="att.rubatoDef" name="intensity"/><!-- usage="req" -->
+              <tei:attRef class="att.rubatoDef" name="lateStart"/><!-- usage="req" -->
+              <tei:attRef class="att.rubatoDef" name="earlyEnd"/><!-- usage="req" -->
+            </tei:attList>
+            <tei:attList xml:id="rubato.ref" exclude="#rubato.defs">
+              <tei:attRef class="att.refLike" name="name.ref"/>
+            </tei:attList>
+          </tei:attList>
+        </tei:classSpec>
+        
+        <tei:classSpec type="atts" ident="att.rubatoDef" module="rubato" mode="add">
+          <tei:desc>Attributes for rubato definitions.</tei:desc>
+          <tei:attList>
             <tei:attDef ident="frameLength"><!-- usage="req" -->
               <tei:desc>defines the length of the potential rubato</tei:desc>
               <tei:datatype>
@@ -1133,22 +1148,28 @@
         <tei:elementSpec ident="rubato" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>A rubato instruction.</tei:desc><!-- TODO either @nameRef or all of the other @:s -->
           <tei:classes>
-            <tei:memberOf key="att.instructionLike"/>
+<!--            <tei:memberOf key="att.instructionLike"/>-->
             <tei:memberOf key="att.dateLike"/>
             <tei:memberOf key="att.rubato"/>
             <tei:memberOf key="model.rubatoMapPart" min="0" max="unbounded"/>
+            <tei:memberOf key="att.loopable"/>
           </tei:classes>
-          <tei:content/>
-          <tei:attList>
-            <tei:attRef class="att.loopable" name="loop"/>
-          </tei:attList>
+          <!--<tei:content>
+            <tei:macroRef key="model.rubato"/>
+          </tei:content>-->
+          <!--<tei:attList>
+            <tei:alternate>
+              <tei:classRef key="att.rubatoDef"/>
+              <tei:classRef key="att.refLike"/>
+            </tei:alternate>
+          </tei:attList>-->
         </tei:elementSpec>
         
         <tei:elementSpec ident="rubatoDef" ns="http://www.cemfi.de/mpm/ns/1.0" module="rubato" mode="add">
           <tei:desc>Defines a rubato.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.named"/>
-            <tei:memberOf key="att.rubato"/>
+            <tei:memberOf key="att.rubatoDef"/>
             <tei:memberOf key="model.styleDefPart" min="0" max="unbounded"/>
           </tei:classes>
           <tei:content/>
