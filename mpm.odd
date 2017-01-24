@@ -377,6 +377,17 @@
             </tei:content>
         </tei:macroSpec>
         
+        <tei:classSpec ident="att.dateLike" type="atts">
+          <tei:desc>Date attributes</tei:desc>
+          <tei:attList>
+            <tei:attDef ident="date" usage="req">
+              <tei:datatype>
+                <rng:data type="decimal"/>
+              </tei:datatype>
+            </tei:attDef>
+          </tei:attList>
+        </tei:classSpec>
+        
         <tei:classSpec ident="att.loopable" type="atts" mode="add" module="performance">
           <tei:attList>
             <tei:attDef ident="loop" usage="req">
@@ -423,15 +434,8 @@
           <tei:desc>Groups elements that may occur in dated maps.</tei:desc>
           <tei:classes>
             <tei:memberOf key="att.refLike"/>
+            <tei:memberOf key="att.dateLike"/>
           </tei:classes>
-          <tei:attList>
-            <tei:attDef ident="date" usage="req">
-              <tei:datatype>
-                <rng:data type="decimal"/>
-              </tei:datatype>
-            </tei:attDef>
-<!--            <tei:attRef class="att.linking" name="name.ref"/>-->
-          </tei:attList>
         </tei:classSpec>
         
         <tei:classSpec ident="model.headerPart" type="model" module="performance" mode="add">
@@ -1130,6 +1134,7 @@
           <tei:desc>A rubato instruction.</tei:desc><!-- TODO either @nameRef or all of the other @:s -->
           <tei:classes>
             <tei:memberOf key="att.instructionLike"/>
+            <tei:memberOf key="att.dateLike"/>
             <tei:memberOf key="att.rubato"/>
             <tei:memberOf key="model.rubatoMapPart" min="0" max="unbounded"/>
           </tei:classes>
