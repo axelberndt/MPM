@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2016-08-19T11:57:29Z. 
-Edition: Version 2.7.0. Last updated on
-	16th September 2014, revision 13036
-Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
+Schema generated from ODD source 2017-01-24T08:36:15Z. .
+TEI Edition: Version 3.0.0. Last updated on
+	29th March 2016, revision 89ba24e
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
   
 --><!---->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -24,57 +26,8 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       </interleave>
    </define>
    <define name="mpm.att.linking.attributes">
-      <ref name="mpm.att.linking.attribute.uri"/>
-      <ref name="mpm.att.linking.attribute.name.ref"/>
+      <empty/>
    </define>
-   <define name="mpm.att.linking.attribute.uri">
-      <optional>
-         <attribute name="uri">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <text/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mpm.att.linking.attribute.name.ref">
-      <optional>
-         <attribute name="name.ref">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <ref name="mpm.data.name.ref"/>
-         </attribute>
-      </optional>
-   </define>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mpm-att.linking-name.ref-name.ref-constraint-2">
-      <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:svg="http://www.w3.org/2000/svg"
-                xmlns:math="http://www.w3.org/1998/Math/MathML"
-                xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:tei="http://www.tei-c.org/ns/1.0"
-                context="@name.ref[not(local-name(parent::*) = 'style')]">
-                    <sch:let name="ancestorMap"
-                  value="ancestor::*[ends-with(local-name(),'Map')][1]"/>
-                    <sch:let name="mapType"
-                  value="substring-before(local-name($ancestorMap), 'Map')"/>
-                    <sch:let name="precStyleInstrNameRefVal"
-                  value="string((/mpm/performance[1]/global[1]/dated[1]/articulationMap[1]/articulation[4]/preceding-sibling::style)[last()]/@name.ref)"/>
-                    <sch:let name="mapStartStyleName" value="string($ancestorMap/@startStyle)"/>
-                    <sch:let name="styleName"
-                  value="string(if($precStyleInstrNameRefVal != '')then($precStyleInstrNameRefVal)else($mapStartStyleName))"/>
-                    <sch:let name="defName" value="string(.)"/>
-                    <sch:let name="stylesEl" value="concat($mapType,'Styles')"/>
-                    <sch:let name="localStyles"
-                  value="ancestor::mpm:part//*[local-name()=$stylesEl]/mpm:styleDef"/>
-                    <sch:let name="localStyleNames" value="for $i in $localStyles return $i/@name"/>
-                    <sch:let name="globalStyles"
-                  value="ancestor::mpm:performance//mpm:header/*[local-name()=$stylesEl]/mpm:styleDef"/>
-                    <sch:let name="globalStyleNames" value="for $i in $globalStyles return $i/@name"/>
-                    <sch:assert role="error"
-                     test="if($styleName = $localStyleNames and $defName = $localStyles[@name = $styleName]/*/@name)                       then(true())                       else(                       if($styleName = $globalStyleNames and $defName = $globalStyles[@name = $styleName]/*/@name)                       then(true())                       else(false())                       )">No <sch:value-of select="concat($mapType,'Def')"/> with @name "<sch:value-of select="$defName"/>" found in styleDef with @name "<sch:value-of select="$styleName"/>"</sch:assert>
-                  </sch:rule>
-   </pattern>
    <define name="mpm.att.enumeration.attributes">
       <ref name="mpm.att.enumeration.attribute.number"/>
    </define>
@@ -98,7 +51,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       </attribute>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mpm-att.named-name-att.name.unique-constraint-3">
+            id="mpm-att.named-name-att.name.unique-constraint-2">
       <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:svg="http://www.w3.org/2000/svg"
@@ -106,7 +59,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                 xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:tei="http://www.tei-c.org/ns/1.0"
                 context="@name">
                     <sch:let name="element" value="local-name(parent::*)"/>
                     <sch:let name="siblingNames"
@@ -115,6 +67,49 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                     <sch:report role="error"
                      test="if($siblingCount gt 0)then(string(.) = $siblingNames)else(false())">Duplicate @name "<sch:value-of select="."/>" value in current context. <sch:value-of select="$siblingNames"/>;<sch:value-of select="not(string(.) = $siblingNames)"/>
          </sch:report>
+                  </sch:rule>
+   </pattern>
+   <define name="mpm.att.refLike.attributes">
+      <ref name="mpm.att.linking.attributes"/>
+      <ref name="mpm.att.refLike.attribute.name.ref"/>
+   </define>
+   <define name="mpm.att.refLike.attribute.name.ref">
+      <optional>
+         <attribute name="name.ref">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <ref name="mpm.data.name.ref"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mpm-att.refLike-name.ref-name.ref-constraint-3">
+      <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns:svg="http://www.w3.org/2000/svg"
+                xmlns:math="http://www.w3.org/1998/Math/MathML"
+                xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="@name.ref[not(local-name(parent::*) = 'style')]">
+                    <sch:let name="ancestorMap"
+                  value="ancestor::*[ends-with(local-name(),'Map')][1]"/>
+                    <sch:let name="mapType"
+                  value="substring-before(local-name($ancestorMap), 'Map')"/>
+                    <sch:let name="precStyleInstrNameRefVal"
+                  value="string((/mpm/performance[1]/global[1]/dated[1]/articulationMap[1]/articulation[4]/preceding-sibling::style)[last()]/@name.ref)"/>
+                    <sch:let name="mapStartStyleName" value="string($ancestorMap/@startStyle)"/>
+                    <sch:let name="styleName"
+                  value="string(if($precStyleInstrNameRefVal != '')then($precStyleInstrNameRefVal)else($mapStartStyleName))"/>
+                    <sch:let name="defName" value="string(.)"/>
+                    <sch:let name="stylesEl" value="concat($mapType,'Styles')"/>
+                    <sch:let name="localStyles"
+                  value="ancestor::mpm:part//*[local-name()=$stylesEl]/mpm:styleDef"/>
+                    <sch:let name="localStyleNames" value="for $i in $localStyles return $i/@name"/>
+                    <sch:let name="globalStyles"
+                  value="ancestor::mpm:performance//mpm:header/*[local-name()=$stylesEl]/mpm:styleDef"/>
+                    <sch:let name="globalStyleNames" value="for $i in $globalStyles return $i/@name"/>
+                    <sch:assert role="error"
+                     test="if($styleName = $localStyleNames and $defName = $localStyles[@name = $styleName]/*/@name)                       then(true())                       else(                       if($styleName = $globalStyleNames and $defName = $globalStyles[@name = $styleName]/*/@name)                       then(true())                       else(false())                       )">No <sch:value-of select="concat($mapType,'Def')"/> with @name "<sch:value-of select="$defName"/>" found in styleDef with @name "<sch:value-of select="$styleName"/>"</sch:assert>
                   </sch:rule>
    </pattern>
    <define name="mpm.att.startStyle.attributes">
@@ -135,7 +130,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                 xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:tei="http://www.tei-c.org/ns/1.0"
                 context="@startStyle">
                 <sch:let name="mapType" value="substring-before(local-name(parent::*), 'Map')"/>
                 <sch:let name="styleName" value="string(.)"/>
@@ -156,6 +150,18 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <data type="string"/>
       </attribute>
+   </define>
+   <define name="mpm.att.uriLike.attributes">
+      <ref name="mpm.att.linking.attributes"/>
+      <ref name="mpm.att.uriLike.attribute.uri"/>
+   </define>
+   <define name="mpm.att.uriLike.attribute.uri">
+      <optional>
+         <attribute name="uri">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="anyURI"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mpm.att.value.attributes">
       <ref name="mpm.att.value.attribute.value"/>
@@ -196,7 +202,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
    <define name="mpm.reference">
       <element name="reference" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">reference to a music representation processable by this performance description.</a:documentation>
-         <empty/> 
+         <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mpm-reference-reference.att.type-constraint-5">
             <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
@@ -206,13 +212,12 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                       xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0"
                       context="mpm:reference">
                 <sch:assert role="error" test="@type">The reference element must have @type.</sch:assert>
               </sch:rule>
-         </pattern> 
+         </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mpm-reference-reference.att.uri-constraint-6">
+                  id="mpm-reference-reference.att.type-constraint-6">
             <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:svg="http://www.w3.org/2000/svg"
@@ -220,13 +225,25 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                       xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0"
                       context="mpm:reference">
-                <sch:assert role="error" test="@uri">The reference element must have @uri.</sch:assert>
+                <sch:assert role="error" test="@type = ('mei', 'midi', 'msm', 'musicXML', 'umt')">The @type on mpm:reference must have one of the following string values: mei, midi, msm, musicXML, umt.</sch:assert>
+              </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mpm-reference-reference.att.uri-constraint-7">
+            <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:math="http://www.w3.org/1998/Math/MathML"
+                      xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="mpm:reference">
+                <sch:assert role="error" test="@uri">The mpm:reference element must have @uri.</sch:assert>
               </sch:rule>
          </pattern>
          <ref name="mpm.att.typed.attributes"/>
-         <ref name="mpm.att.linking.attributes"/>
+         <ref name="mpm.att.uriLike.attributes"/>
          <empty/>
       </element>
    </define>
@@ -253,6 +270,15 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <ref name="mpm.att.named.attributes"/>
          <empty/>
       </element>
+   </define>
+   <define name="mpm.att.dateLike.attributes">
+      <ref name="mpm.att.dateLike.attribute.date"/>
+   </define>
+   <define name="mpm.att.dateLike.attribute.date">
+      <attribute name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="decimal"/>
+      </attribute>
    </define>
    <define name="mpm.att.loopable.attributes">
       <ref name="mpm.att.loopable.attribute.loop"/>
@@ -316,14 +342,8 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       </choice>
    </define>
    <define name="mpm.att.instructionLike.attributes">
-      <ref name="mpm.att.instructionLike.attribute.date"/>
-      <ref name="mpm.att.linking.attribute.name.ref"/>
-   </define>
-   <define name="mpm.att.instructionLike.attribute.date">
-      <attribute name="date">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <data type="decimal"/>
-      </attribute>
+      <ref name="mpm.att.refLike.attributes"/>
+      <ref name="mpm.att.dateLike.attributes"/>
    </define>
    <define name="mpm.dated">
       <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -385,7 +405,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mpm-style-style-name.ref-constraint-7">
+                  id="mpm-style-style-name.ref-constraint-8">
             <sch:rule xmlns="http://www.cemfi.de/mpm/ns/1.0"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:svg="http://www.w3.org/2000/svg"
@@ -393,7 +413,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                       xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0"
                       context="mpm:style">
                 <sch:let name="mapType" value="substring-before(local-name(parent::*), 'Map')"/>
                 <sch:let name="styleName" value="string(@name.ref)"/>
@@ -931,42 +950,57 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
       </element>
    </define>
    <define name="mpm.att.rubato.attributes">
-      <ref name="mpm.att.rubato.attribute.frameLength"/>
-      <ref name="mpm.att.rubato.attribute.intensity"/>
-      <ref name="mpm.att.rubato.attribute.lateStart"/>
-      <ref name="mpm.att.rubato.attribute.earlyEnd"/>
+      <ref name="mpm.att.rubatoDef.attribute.frameLength"/>
+      <ref name="mpm.att.rubatoDef.attribute.intensity"/>
+      <ref name="mpm.att.rubatoDef.attribute.lateStart"/>
+      <ref name="mpm.att.rubatoDef.attribute.earlyEnd"/>
+      <ref name="mpm.att.refLike.attribute.name.ref"/>
    </define>
-   <define name="mpm.att.rubato.attribute.frameLength">
-      <attribute name="frameLength">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the length of the potential rubato</a:documentation>
-         <data type="int"/>
-      </attribute>
+   <define name="mpm.att.rubatoDef.attributes">
+      <ref name="mpm.att.rubatoDef.attribute.frameLength"/>
+      <ref name="mpm.att.rubatoDef.attribute.intensity"/>
+      <ref name="mpm.att.rubatoDef.attribute.lateStart"/>
+      <ref name="mpm.att.rubatoDef.attribute.earlyEnd"/>
    </define>
-   <define name="mpm.att.rubato.attribute.intensity">
-      <attribute name="intensity">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the itensity of the rubato</a:documentation>
-         <data type="decimal"/>
-      </attribute>
+   <define name="mpm.att.rubatoDef.attribute.frameLength">
+      <optional>
+         <attribute name="frameLength">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the length of the potential rubato</a:documentation>
+            <data type="int"/>
+         </attribute>
+      </optional>
    </define>
-   <define name="mpm.att.rubato.attribute.lateStart">
-      <attribute name="lateStart">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
-         <data type="decimal"/>
-      </attribute>
+   <define name="mpm.att.rubatoDef.attribute.intensity">
+      <optional>
+         <attribute name="intensity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines the itensity of the rubato</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
    </define>
-   <define name="mpm.att.rubato.attribute.earlyEnd">
-      <attribute name="earlyEnd">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
-         <data type="decimal"/>
-      </attribute>
+   <define name="mpm.att.rubatoDef.attribute.lateStart">
+      <optional>
+         <attribute name="lateStart">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mpm.att.rubatoDef.attribute.earlyEnd">
+      <optional>
+         <attribute name="earlyEnd">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">?</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mpm.rubato">
       <element name="rubato" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A rubato instruction.</a:documentation>
          <empty/>
-         <ref name="mpm.att.instructionLike.attributes"/>
+         <ref name="mpm.att.dateLike.attributes"/>
          <ref name="mpm.att.rubato.attributes"/>
-         <ref name="mpm.att.loopable.attribute.loop"/>
+         <ref name="mpm.att.loopable.attributes"/>
          <empty/>
       </element>
    </define>
@@ -975,7 +1009,7 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines a rubato.</a:documentation>
          <empty/>
          <ref name="mpm.att.named.attributes"/>
-         <ref name="mpm.att.rubato.attributes"/>
+         <ref name="mpm.att.rubatoDef.attributes"/>
          <empty/>
       </element>
    </define>
@@ -1030,19 +1064,138 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </interleave>
       </element>
    </define>
+   <define name="mpm.model.distributionListPart">
+      <choice>
+         <zeroOrMore>
+            <ref name="mpm.measurement"/>
+         </zeroOrMore>
+      </choice>
+   </define>
    <define name="mpm.distribution.gaussian">
       <element name="distribution.gaussian" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a gaussian distribution, applied to the timing of musical events starting from the given date.</a:documentation>
          <empty/>
          <ref name="mpm.att.instructionLike.attributes"/>
+         <optional>
+            <attribute name="deviation.max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
          <attribute name="deviation.standard">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="decimal"/>
+            <data type="float"/>
          </attribute>
-         <attribute name="deviation.max">
+         <optional>
+            <attribute name="value.min">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value.max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.correlated.pinkNoise">
+      <element name="distribution.correlated.pinkNoise"
+               ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a correlated pink noise distribution, applied to the timing of musical events starting from the given date.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <attribute name="alpha">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="decimal"/>
+            <data type="float"/>
          </attribute>
+         <optional>
+            <attribute name="value.min">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value.max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.correlated.compensatingTriangle">
+      <element name="distribution.correlated.compensatingTriangle"
+               ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a correlated complensationg triangle distribution, applied to the timing of musical events starting from the given date.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <attribute name="degreeOfCorrelation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <attribute name="limit.lower">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <attribute name="limit.upper">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <optional>
+            <attribute name="value.min">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value.max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.list">
+      <element name="distribution.list" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a correlated pink noise distribution, applied to the timing of musical events starting from the given date.</a:documentation>
+         <ref name="mpm.model.distributionListPart"/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.triangular">
+      <element name="distribution.triangular" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a correlated complensationg triangle distribution, applied to the timing of musical events starting from the given date.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.instructionLike.attributes"/>
+         <attribute name="limit.lower">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <attribute name="limit.upper">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <attribute name="mode">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <optional>
+            <attribute name="value.min">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value.max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -1051,14 +1204,30 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This is a uniform distribution, applied to the timing of musical events starting from the given date.</a:documentation>
          <empty/>
          <ref name="mpm.att.instructionLike.attributes"/>
-         <attribute name="value.min">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
-         <attribute name="value.max">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="float"/>
-         </attribute>
+         <optional>
+            <attribute name="limit.lower">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="limit.upper">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value.min">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value.max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="float"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -1068,6 +1237,18 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <interleave>
             <zeroOrMore>
                <ref name="mpm.distribution.gaussian"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.pinkNoise"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.compensatingTriangle"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.list"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.triangular"/>
             </zeroOrMore>
             <zeroOrMore>
                <ref name="mpm.distribution.uniform"/>
@@ -1102,12 +1283,35 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          </interleave>
       </element>
    </define>
+   <define name="mpm.measurement">
+      <element name="measurement" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <attribute name="value">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="float"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
    <define name="mpm.timingImprecision">
       <element name="timingImprecision" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds.</a:documentation>
          <interleave>
             <zeroOrMore>
                <ref name="mpm.distribution.gaussian"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.pinkNoise"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.compensatingTriangle"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.list"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.triangular"/>
             </zeroOrMore>
             <zeroOrMore>
                <ref name="mpm.distribution.uniform"/>
@@ -1123,6 +1327,18 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                <ref name="mpm.distribution.gaussian"/>
             </zeroOrMore>
             <zeroOrMore>
+               <ref name="mpm.distribution.correlated.pinkNoise"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.compensatingTriangle"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.list"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.triangular"/>
+            </zeroOrMore>
+            <zeroOrMore>
                <ref name="mpm.distribution.uniform"/>
             </zeroOrMore>
          </interleave>
@@ -1134,6 +1350,18 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
          <interleave>
             <zeroOrMore>
                <ref name="mpm.distribution.gaussian"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.pinkNoise"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.correlated.compensatingTriangle"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.list"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mpm.distribution.triangular"/>
             </zeroOrMore>
             <zeroOrMore>
                <ref name="mpm.distribution.uniform"/>
@@ -1162,6 +1390,14 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
    <ns xmlns="http://purl.oclc.org/dsdl/schematron"
        prefix="mpm"
        uri="http://www.cemfi.de/mpm/ns/1.0"/> 
+   <sch:report xmlns:xi="http://www.w3.org/2001/XInclude"
+               xmlns:svg="http://www.w3.org/2000/svg"
+               xmlns:math="http://www.w3.org/1998/Math/MathML"
+               xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               xmlns="http://www.cemfi.de/mpm/ns/1.0"
+               test="tei:constraint/sch:*  and  @scheme ne 'isoschematron'">Rules in the ISO Schematron language must be inside a constraintSpec with a value of 'isoschematron' on the scheme attribute</sch:report>
    <ns xmlns="http://purl.oclc.org/dsdl/schematron"
        prefix="sch"
        uri="http://purl.oclc.org/dsdl/schematron"/> 
@@ -1173,7 +1409,6 @@ Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
                 xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:tei="http://www.tei-c.org/ns/1.0"
                 xmlns="http://www.cemfi.de/mpm/ns/1.0"
                 context="tei:macroSpec/tei:constraintSpec[@scheme='isoschematron']/tei:constraint">
               <sch:report test="sch:assert|sch:report">An ISO Schematron constraint specification for a macro should not have an 'assert' or 'report' element without a parent 'rule' element</sch:report>
