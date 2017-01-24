@@ -1096,24 +1096,25 @@
           <tei:desc>Attributes for rubato definitions.</tei:desc>
           <tei:attList>
             <tei:attDef ident="frameLength" usage="req">
+            <tei:attDef ident="frameLength"><!-- usage="req" -->
               <tei:desc>defines the length of the potential rubato</tei:desc>
               <tei:datatype>
                 <rng:data type="int"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="intensity" usage="req">
+            <tei:attDef ident="intensity"><!-- usage="req" -->
               <tei:desc>defines the itensity of the rubato</tei:desc>
               <tei:datatype>
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="lateStart" usage="req">
+            <tei:attDef ident="lateStart"><!-- usage="req" -->
               <tei:desc>?</tei:desc>
               <tei:datatype>
                 <rng:data type="decimal"/>
               </tei:datatype>
             </tei:attDef>
-            <tei:attDef ident="earlyEnd" usage="req">
+            <tei:attDef ident="earlyEnd"><!-- usage="req" -->
               <tei:desc>?</tei:desc>
               <tei:datatype>
                 <rng:data type="decimal"/>
