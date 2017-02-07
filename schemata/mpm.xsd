@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cemfi.de/mpm/ns/1.0" xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
   <!--
-    Schema generated from ODD source 2016-08-19T09:57:38Z. .
+    Schema generated from ODD source 2017-02-07T23:19:59Z. .
     TEI Edition: Version 3.0.0. Last updated on
     	29th March 2016, revision 89ba24e
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -17,24 +17,6 @@
       <xs:element ref="mpm:part"/>
     </xs:choice>
   </xs:complexType>
-  <xs:attributeGroup name="mpm.att.linking.attributes">
-    <xs:attributeGroup ref="mpm:mpm.att.linking.attribute.uri"/>
-    <xs:attributeGroup ref="mpm:mpm.att.linking.attribute.name.ref"/>
-  </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.linking.attribute.uri">
-    <xs:attribute name="uri" type="xs:anyURI">
-      <xs:annotation>
-        <xs:documentation/>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.linking.attribute.name.ref">
-    <xs:attribute name="name.ref" type="mpm:mpm.data.name.ref">
-      <xs:annotation>
-        <xs:documentation/>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.enumeration.attributes">
     <xs:attributeGroup ref="mpm:mpm.att.enumeration.attribute.number"/>
   </xs:attributeGroup>
@@ -60,6 +42,16 @@
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.refLike.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.refLike.attribute.name.ref"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.refLike.attribute.name.ref">
+    <xs:attribute name="name.ref" type="mpm:mpm.data.name.ref">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.startStyle.attributes">
     <xs:attributeGroup ref="mpm:mpm.att.startStyle.attribute.startStyle"/>
   </xs:attributeGroup>
@@ -75,6 +67,16 @@
   </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.typed.attribute.type">
     <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.uriLike.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.uriLike.attribute.uri"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.uriLike.attribute.uri">
+    <xs:attribute name="uri" type="xs:anyURI">
       <xs:annotation>
         <xs:documentation/>
       </xs:annotation>
@@ -129,7 +131,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.typed.attributes"/>
-      <xs:attributeGroup ref="mpm:mpm.att.linking.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.uriLike.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="styleDef">
@@ -147,6 +149,16 @@
       <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
     </xs:complexType>
   </xs:element>
+  <xs:attributeGroup name="mpm.att.dateLike.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.dateLike.attribute.date"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.dateLike.attribute.date">
+    <xs:attribute name="date" use="required" type="xs:decimal">
+      <xs:annotation>
+        <xs:documentation/>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
   <xs:attributeGroup name="mpm.att.loopable.attributes">
     <xs:attributeGroup ref="mpm:mpm.att.loopable.attribute.loop"/>
   </xs:attributeGroup>
@@ -204,15 +216,8 @@
     </xs:choice>
   </xs:group>
   <xs:attributeGroup name="mpm.att.instructionLike.attributes">
-    <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attribute.date"/>
-    <xs:attributeGroup ref="mpm:mpm.att.linking.attribute.name.ref"/>
-  </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.instructionLike.attribute.date">
-    <xs:attribute name="date" use="required" type="xs:decimal">
-      <xs:annotation>
-        <xs:documentation/>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attributeGroup ref="mpm:mpm.att.refLike.attributes"/>
+    <xs:attributeGroup ref="mpm:mpm.att.dateLike.attributes"/>
   </xs:attributeGroup>
   <xs:element name="dated">
     <xs:annotation>
@@ -828,34 +833,41 @@
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="mpm.att.rubato.attributes">
-    <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.frameLength"/>
-    <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.intensity"/>
-    <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.lateStart"/>
-    <xs:attributeGroup ref="mpm:mpm.att.rubato.attribute.earlyEnd"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.frameLength"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.intensity"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.lateStart"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.earlyEnd"/>
+    <xs:attributeGroup ref="mpm:mpm.att.refLike.attribute.name.ref"/>
   </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.rubato.attribute.frameLength">
-    <xs:attribute name="frameLength" use="required" type="xs:int">
+  <xs:attributeGroup name="mpm.att.rubatoDef.attributes">
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.frameLength"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.intensity"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.lateStart"/>
+    <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attribute.earlyEnd"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="mpm.att.rubatoDef.attribute.frameLength">
+    <xs:attribute name="frameLength" type="xs:int">
       <xs:annotation>
         <xs:documentation>defines the length of the potential rubato</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.rubato.attribute.intensity">
-    <xs:attribute name="intensity" use="required" type="xs:decimal">
+  <xs:attributeGroup name="mpm.att.rubatoDef.attribute.intensity">
+    <xs:attribute name="intensity" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>defines the itensity of the rubato</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.rubato.attribute.lateStart">
-    <xs:attribute name="lateStart" use="required" type="xs:decimal">
+  <xs:attributeGroup name="mpm.att.rubatoDef.attribute.lateStart">
+    <xs:attribute name="lateStart" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>?</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
-  <xs:attributeGroup name="mpm.att.rubato.attribute.earlyEnd">
-    <xs:attribute name="earlyEnd" use="required" type="xs:decimal">
+  <xs:attributeGroup name="mpm.att.rubatoDef.attribute.earlyEnd">
+    <xs:attribute name="earlyEnd" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>?</xs:documentation>
       </xs:annotation>
@@ -866,9 +878,9 @@
       <xs:documentation>A rubato instruction.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.dateLike.attributes"/>
       <xs:attributeGroup ref="mpm:mpm.att.rubato.attributes"/>
-      <xs:attributeGroup ref="mpm:mpm.att.loopable.attribute.loop"/>
+      <xs:attributeGroup ref="mpm:mpm.att.loopable.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="rubatoDef">
@@ -877,7 +889,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.named.attributes"/>
-      <xs:attributeGroup ref="mpm:mpm.att.rubato.attributes"/>
+      <xs:attributeGroup ref="mpm:mpm.att.rubatoDef.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="rubatoMap">
@@ -931,18 +943,134 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:complexType name="mpm.model.distributionListPart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="mpm:measurement"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:element name="distribution.gaussian">
     <xs:annotation>
       <xs:documentation>This is a gaussian distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
-      <xs:attribute name="deviation.standard" use="required" type="xs:decimal">
+      <xs:attribute name="deviation.max" type="xs:float">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="deviation.max" use="required" type="xs:decimal">
+      <xs:attribute name="deviation.standard" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.min" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.max" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distribution.correlated.pinkNoise">
+    <xs:annotation>
+      <xs:documentation>This is a correlated pink noise distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attribute name="alpha" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.min" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.max" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distribution.correlated.compensatingTriangle">
+    <xs:annotation>
+      <xs:documentation>This is a correlated complensationg triangle distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attribute name="degreeOfCorrelation" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="limit.lower" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="limit.upper" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.min" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.max" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distribution.list">
+    <xs:annotation>
+      <xs:documentation>This is a correlated pink noise distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mpm:mpm.model.distributionListPart">
+          <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distribution.triangular">
+    <xs:annotation>
+      <xs:documentation>This is a correlated complensationg triangle distribution, applied to the timing of musical events starting from the given date.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
+      <xs:attribute name="limit.lower" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="limit.upper" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="mode" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.min" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.max" type="xs:float">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
@@ -955,12 +1083,22 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="mpm:mpm.att.instructionLike.attributes"/>
-      <xs:attribute name="value.min" use="required" type="xs:float">
+      <xs:attribute name="limit.lower" type="xs:float">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="value.max" use="required" type="xs:float">
+      <xs:attribute name="limit.upper" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.min" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value.max" type="xs:float">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
@@ -974,6 +1112,10 @@
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.correlated.pinkNoise"/>
+        <xs:element ref="mpm:distribution.correlated.compensatingTriangle"/>
+        <xs:element ref="mpm:distribution.list"/>
+        <xs:element ref="mpm:distribution.triangular"/>
         <xs:element ref="mpm:distribution.uniform"/>
       </xs:choice>
     </xs:complexType>
@@ -991,6 +1133,18 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
+  <xs:element name="measurement">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:float">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="timingImprecision">
     <xs:annotation>
       <xs:documentation>The imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds.</xs:documentation>
@@ -998,6 +1152,10 @@
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.correlated.pinkNoise"/>
+        <xs:element ref="mpm:distribution.correlated.compensatingTriangle"/>
+        <xs:element ref="mpm:distribution.list"/>
+        <xs:element ref="mpm:distribution.triangular"/>
         <xs:element ref="mpm:distribution.uniform"/>
       </xs:choice>
     </xs:complexType>
@@ -1009,6 +1167,10 @@
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.correlated.pinkNoise"/>
+        <xs:element ref="mpm:distribution.correlated.compensatingTriangle"/>
+        <xs:element ref="mpm:distribution.list"/>
+        <xs:element ref="mpm:distribution.triangular"/>
         <xs:element ref="mpm:distribution.uniform"/>
       </xs:choice>
     </xs:complexType>
@@ -1020,6 +1182,10 @@
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mpm:distribution.gaussian"/>
+        <xs:element ref="mpm:distribution.correlated.pinkNoise"/>
+        <xs:element ref="mpm:distribution.correlated.compensatingTriangle"/>
+        <xs:element ref="mpm:distribution.list"/>
+        <xs:element ref="mpm:distribution.triangular"/>
         <xs:element ref="mpm:distribution.uniform"/>
       </xs:choice>
       <xs:attribute name="detuneUnit" use="required">
