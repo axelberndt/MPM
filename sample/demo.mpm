@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemata/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schemata/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
     <!-- there has to be at most 1 referenceMusic element, it indicates all music files which these performances can be applied to, type is semi-open (i.e. midi, msm, mei, and musicXML are supported, other types are allowed but the application has to handle it) -->
     <referenceMusic>
@@ -22,7 +20,6 @@
 
                 <!-- the viennaCtrls element is used to control the Vienna Instruments sampler; we have a set of prepared performance matrices -->
                 <viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
-
                 <articulationStyles>
                     <styleDef name="old style">
                         <articulationDef name="nonlegato" absoluteDurationChange="-360"/>
@@ -138,9 +135,7 @@
                     <rubato date="1440" frameLength="720" intensity="0.6" lateStart="0.1" earlyEnd="0.9" loop="false"/>   <!-- this effectively deactivates any rubato -->
                 </rubatoMap>
 
-                <ornamentationMap>
-                    <!-- not yet defined -->
-                </ornamentationMap>
+                <ornamentationMap/>     <!-- not yet defined -->
 
                 <imprecisionMap>        <!-- all the value.min and value.max attributes are optional, they effectively clip the distribution -->
                     <timingImprecision>
