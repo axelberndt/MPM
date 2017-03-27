@@ -1,10 +1,10 @@
-Music Performance Markup (mpm)
-==============================
+# Music Performance Markup (mpm)
 
 An XML-model for encoding performance parameters
 
-Potential future license
-========================
+### License Information
 
-MEI: https://opensource.org/licenses/ECL-2.0
-TEI: http://creativecommons.org/licenses/by/3.0/ && https://opensource.org/licenses/BSD-2-Clause
+In the MPM format definition we make use of
+- TEI, licensed under CC-BY-3.0 and BSD-2.0.
+
+We publish this format under BSD-2 and CC-BY-4.0. If you use MPM in your project make sure that you do not conflict with any of the above licenses.
