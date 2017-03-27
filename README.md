@@ -1,6 +1,6 @@
 # Music Performance Markup (mpm)
 
-An XML-model for encoding performance parameters
+An XML-model for encoding expressive music performances.
 
 ### License Information
 
