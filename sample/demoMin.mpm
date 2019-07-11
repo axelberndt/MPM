@@ -8,15 +8,9 @@
     </referenceMusic>
 
     <!-- there has to be at least one performance element, here you put in the actual performance descriptions -->
-    <performance name="Adagio">
+    <performance name="Adagio" pulsesPerQuarter="720">
         <global>
             <header>
-                <!-- the sequencingCommands element and its attributes are all optional, if an attribute or the whole element is missing they are assumed as false -->
-                <sequencingCommands loop="true" mute="false"/>
-
-                <!-- the viennaCtrls element is used to control the Vienna Instruments sampler; we have a set of prepared performance matrices -->
-                <viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
-
                 <articulationStyles>
                     <styleDef name="old style">
                         <articulationDef name="nonlegato"/>

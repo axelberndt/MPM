@@ -12,7 +12,7 @@
     </referenceMusic>
 
     <!-- there has to be at least one performance element, here you put in the actual performance descriptions -->
-    <performance name="Adagio">
+    <performance name="Adagio" pulsesPerQuarter="720">
         <global>
             <header>
                 <!-- the sequencingCommands element and its attributes are all optional, if an attribute or the whole element is missing they are assumed as false -->
@@ -223,7 +223,7 @@
 
     </performance>
 
-    <performance name="Molto Adagio">
+    <performance name="Molto Adagio" pulsesPerQuarter="720">
         <global>
             <header>
                 <viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
