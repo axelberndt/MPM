@@ -15,16 +15,12 @@
     <performance name="Adagio" pulsesPerQuarter="720">
         <global>
             <header>
-                <!-- the sequencingCommands element and its attributes are all optional, if an attribute or the whole element is missing they are assumed as false -->
-                <sequencingCommands loop="true" mute="false"/>
-
-                <!-- the viennaCtrls element is used to control the Vienna Instruments sampler; we have a set of prepared performance matrices -->
-                <viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
                 <articulationStyles>
                     <styleDef name="old style">
                         <articulationDef name="nonlegato" absoluteDurationChange="-360"/>
                         <articulationDef name="accent" absoluteVelocityChange="25"/>
                         <articulationDef name="legato" relativeDuration="1"/>
+                        <articulationDef name="legatoStop" relativeVelocity="0.75" absoluteDurationChangeMs="-25.0"/>
                         <articulationDef name="moltoLegato" absoluteDurationChange="10"/>
                         <articulationDef name="portamento" absoluteDurationChange="50"/>
                         <articulationDef name="portato" relativeDuration="0.8"/>
@@ -68,7 +64,7 @@
                 <metricalAccentuationStyles>
                     <styleDef name="my accentuation pattern pool">
                         <!-- the following accentuation pattern is of 4 beats length -->
-                        <accentuationPatternDef name="accentuation pattern 1" length="4">
+                        <accentuationPatternDef name="accentuation pattern 1" length="4" stickToMeasures="true">
                             <!-- an accentuation defines the beat to be accentuated (float), the accentuation value (typically between -1.0 and 1.0) and a linear transition (values also typically between -1.0 and 1.0) in-between this and the succeeding accentuation -->
                             <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
                             <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>	<!-- this accentuation lies between beats 2 and 3 -->
@@ -96,21 +92,21 @@
 
             <dated>
                 <dynamicsMap startStyle="the old style">            <!-- startStyle may be left empty "" if the instructions do not use literal dynamics (such as "ff", which has to be defined by a dynamicsDef) -->
-                    <dynamics date="0" volume="p" transition.to="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="0.01"/>
+                    <dynamics date="0" volume="p" transition.to="ff" curvature="0.3" protraction="-0.2" subNoteDynamics="true"/>
                     <style date="1440" name.ref="another style"/>
                     <dynamics date="1440" volume="100"/>
                     <dynamics date="32960" volume="f"/>
                 </dynamicsMap>
 
-                <articulationMap startStyle="old style" standardArticulation="nonlegato">
-                    <articulation date="0" name.ref="legato"/>
+                <articulationMap startStyle="old style" defaultArticulation="nonlegato">
+                    <articulation date="0" name.ref="legato" noteid="#myid93205"/>
                     <articulation date="0" name.ref="accent"/>
                     <articulation date="19530" absoluteDurationChange="-360" relativeDuration="1" absoluteDurationMs="150" absoluteDurationChangeMs="-100" absoluteVelocityChange="25" absoluteVelocity="126" absoluteDelayMs="-25" absoluteDelay="-5" detuneCents="50" detuneHz="-2"/>
-                    <style date="1440" name.ref="mini style" standardArticulation="nonlegato"/>
+                    <style date="1440" name.ref="mini style" defaultArticulation="nonlegato"/>
                 </articulationMap>
 
                 <metricalAccentuationMap startStyle="my accentuation pattern pool">
-                    <accentuationPattern date="0" name.ref="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result is specifies the offset from the underlying macro dynamics) -->
+                    <accentuationPattern date="0" name.ref="accentuation pattern 1" scale="50" loop="false"/>   <!-- this accentuation pattern is applied only once (loop="false"), the scale attribute (float) specifies the actual numeric range of the accentuations (the accentuation values are multiplied by this, the result specifies the offset from the underlying macro dynamics) -->
                     <style date="1440" name.ref="my accentuation pattern pool"/>                              <!-- this switch does not make so much sense, it switches to the same style that is already running, but you can switch to other styles this way -->
                     <accentuationPattern date="1440" name.ref="accentuation pattern 1" scale="28" loop="true"/> <!-- this accentuation pattern is repeatedly applied until the date of the next instruction or the end of the piece -->
                     <accentuationPattern date="394760" name.ref="accentuation pattern 1" scale="0" loop="true"/>    <!-- this instruction effectively mutes the metrical accentuation (scale="0") -->
@@ -138,39 +134,38 @@
 
                 <ornamentationMap/>     <!-- not yet defined -->
 
-                <imprecisionMap>        <!-- all the value.min and value.max attributes are optional, they effectively clip the distribution -->
-                    <timingImprecision>
-                        <!-- the imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds -->
-                        <distribution.uniform date="0" limit.lower="-10" limit.upper="20"/>                         <!-- this is a uniform distribution, applied to the timing of musical events from date 0 on -->
-                        <distribution.gaussian date="1440" deviation.standard="20.0" value.min="-10" value.max="20"/>     <!-- this is a gaussian distribution (expectation value is 0.0; asynchrony can be used to shift it elsewhere) applied from date 1440 on; the deviation values have to be >=0.0; value.min and value.max clip the deviations at a lower and upper border -->
-                        <distribution.correlated.pinkNoise date="289550" alpha="1.56" value.min="-10" value.max="20"/>    <!-- this represents pink noise with an 1/(f^alpha) noise signal; value.min and value.max clip the deviations at a lower and upper border -->
-                        <distribution.correlated.compensatingTriangle date="284560" degreeOfCorrelation="20.0" limit.lower="-10" limit.upper="20" value.min="-10" value.max="20"/>  <!-- in this triangular distribution the mode is wandering with the random values; degreeOfCorrelation must be >=0.0; this method is an alternative to pinkNoise and is experimental -->
-                        <distribution.triangular date="329573" limit.lower="-20" limit.upper="30" mode="4.2" value.min="-10" value.max="20"/>   <!-- this specifies a triangular distribution with lower and upper limit, the peak (i.e., highest probability) at the mode value, and just as the other distributions it can be clipped at a max and min value -->
-                        <distribution.list date="58562950">     <!-- this is a table of values of deviations from 0.0 (perfect value); the values may have been obtained by measurements of human musicians' performances -->
-                            <measurement value="20.7"/>
-                            <measurement value="65.67"/>
-                            <measurement value="13.45"/>
-                            <measurement value="-79.13"/>
-                            <measurement value="34.2"/>
-                            <measurement value="-24.63"/>
-                            <measurement value="-8.4"/>
-                            <measurement value="65.0"/>
-                        </distribution.list>
-                    </timingImprecision>
-                    <dynamicsImprecision>
-                        <!-- the imprecision instructions for dynamics deviations -->
-                        <distribution.uniform date="0" value.min="-10" value.max="20"/>
-                    </dynamicsImprecision>
-                    <toneDurationImprecision>
-                        <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
-                        <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>
-                    </toneDurationImprecision>
-                    <tuningImprecision detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz" -->
-                        <!-- the imprecision instructions for tuning variations -->
-                        <distribution.gaussian date="0" deviation.standard="20.0" deviation.max="10.0"/>
-                        <distribution.uniform date="12340" value.min="0" value.max="0"/>                            <!-- this effectively switches random offsets off -->
-                    </tuningImprecision>
-                </imprecisionMap>
+                <!-- In the ...-imprecisionMaps all the value.min and value.max attributes are optional, they effectively clip the distribution -->
+                <imprecisionMap.timing>
+                    <!-- the imprecision instructions for timing offsets; computed deviations are interpreted as milliseconds -->
+                    <distribution.uniform date="0" limit.lower="-10" limit.upper="20"/>                         <!-- this is a uniform distribution, applied to the timing of musical events from date 0 on -->
+                    <distribution.gaussian date="1440" deviation.standard="20.0" limit.lower="-10" limit.upper="20"/>     <!-- this is a gaussian distribution (expectation value is 0.0; asynchrony can be used to shift it elsewhere) applied from date 1440 on; the deviation values have to be >=0.0; limit.lower and limit.upper limit the deviations at a lower and upper border; this contains no expectation value because the shift of the expectation would conflict with, for instance, asynchrony which should be used to set the expectation value off, same for the other domains (generally louder or longer durations etc.) -->
+                    <distribution.correlated.brownianNoise date="289550" stepWidth.max="1.56" limit.lower="-10" limit.upper="20" timingBasis.milliseconds="100"/>    <!-- this represents pink noise with an 1/(f^alpha) noise signal; value.min and value.max clip the deviations at a lower and upper border -->
+                    <distribution.correlated.compensatingTriangle date="284560" degreeOfCorrelation="20.0" limit.lower="-10" limit.upper="20" value.min="-10" value.max="20" timingBasis.milliseconds="100"/>  <!-- in this triangular distribution the mode is wandering with the random values; degreeOfCorrelation must be >=0.0; this method is an alternative to pinkNoise and is experimental -->
+                    <distribution.triangular date="329573" limit.lower="-20" limit.upper="30" mode="4.2" value.min="-10" value.max="20"/>   <!-- this specifies a triangular distribution with lower and upper limit, the peak (i.e., highest probability) at the mode value, and just as the other distributions it can be clipped at a max and min value -->
+                    <distribution.list date="58562950" timingBasis.milliseconds="100">     <!-- this is a table of values of deviations from 0.0 (perfect value); the values may have been obtained by measurements of human musicians' performances -->
+                        <measurement value="20.7"/>
+                        <measurement value="65.67"/>
+                        <measurement value="13.45"/>
+                        <measurement value="-79.13"/>
+                        <measurement value="34.2"/>
+                        <measurement value="-24.63"/>
+                        <measurement value="-8.4"/>
+                        <measurement value="65.0"/>
+                    </distribution.list>
+                </imprecisionMap.timing>
+                <imprecisionMap.dynamics>
+                    <!-- the imprecision instructions for dynamics deviations -->
+                    <distribution.uniform date="0" value.min="-10" value.max="20"/>
+                </imprecisionMap.dynamics>
+                <imprecisionMap.toneduration>
+                    <!-- the imprecision instructions for variations of tone durations; computed deviations are interpreted as milliseconds -->
+                    <distribution.gaussian date="1440" deviation.standard="20.0" deviation.max="10.0"/>
+                </imprecisionMap.toneduration>
+                <imprecisionMap.tuning detuneUnit="cents">  <!-- the detune unit defines how the computed deviations are measured; possible values are "cents" and "Hertz"/"Hz" -->
+                    <!-- the imprecision instructions for tuning variations -->
+                    <distribution.gaussian date="0" deviation.standard="20.0" deviation.max="10.0"/>
+                    <distribution.uniform date="12340" value.min="0" value.max="0"/>                            <!-- this effectively switches random offsets off -->
+                </imprecisionMap.tuning>
             </dated>
         </global>
 
@@ -206,10 +201,10 @@
             </header>
 
             <dated>
-              <articulationMap startStyle="old style" standardArticulation="nonlegato">
+              <articulationMap startStyle="old style" defaultArticulation="nonlegato">
                 <articulation date="0" name.ref="legato"/>
                 <articulation date="0" name.ref="accent"/>
-                <style date="1440" name.ref="mini style" standardArticulation="nonlegato"/>
+                <style date="1440" name.ref="mini style" defaultArticulation="nonlegato"/>
               </articulationMap>
             </dated>
         </part>
@@ -227,7 +222,6 @@
     <performance name="Molto Adagio" pulsesPerQuarter="720">
         <global>
             <header>
-                <viennaCtrls velXFadeOnOff="19" velXFade="20" hSpan="21" vSpan="1"/>
             </header>
 
             <dated>
@@ -236,7 +230,6 @@
 
         <part name="Soprano" number="1" midi.channel="0" midi.port="0">
             <header>
-                <sequencingCommands loop="false" mute="true"/>
             </header>
 
             <dated>
@@ -245,7 +238,6 @@
 
         <part name="Alto" number="2" midi.channel="1" midi.port="0">
             <header>
-                <sequencingCommands loop="false" mute="false"/>
             </header>
 
             <dated>
