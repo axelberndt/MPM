@@ -10,10 +10,4 @@
         <tei:memberOf key="att.pulsesPerQuarter"/>
     </tei:classes>
 
-    <tei:listRef>
-        <tei:content>
-            <tei:elementRef key="global" minOccurs="1" maxOccurs="1"/>
-            <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
-        </tei:content>
-    </tei:listRef>
 </tei:classSpec>

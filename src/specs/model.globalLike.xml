@@ -4,12 +4,4 @@
     
     <tei:desc>This model class defines the basic structure of MPM <tei:gi>global</tei:gi> elements.</tei:desc>
     
-    <tei:listRef>
-        <tei:content>
-            <tei:sequence preserveOrder="false">
-                <tei:elementRef key="header" minOccurs="1" maxOccurs="1"/>
-                <tei:elementRef key="dated" minOccurs="1" maxOccurs="1"/>
-            </tei:sequence>
-        </tei:content>
-    </tei:listRef>
 </tei:classSpec>
