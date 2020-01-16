@@ -78,6 +78,8 @@
                 <xinclude:include href="specs/performance.xml"/>
                 <xinclude:include href="specs/global.xml"/>
                 <xinclude:include href="specs/part.xml"/>
+                <xinclude:include href="specs/header.xml"/>
+                <xinclude:include href="specs/dated.xml"/>
 
                 
                 

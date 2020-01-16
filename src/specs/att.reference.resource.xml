@@ -27,7 +27,7 @@
     <tei:exemplum>
         <tei:p>This attribute class is used by the <tei:gi>resource</tei:gi> elements.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <reslatedResources>
+            <relatedResources>
                 <resource uri="pathTo/music.mei" type="mei"/>
                 <resource uri="pathTo/music.msm" type="msm"/>
                 <resource uri="pathTo/music.mid" type="midi"/>
