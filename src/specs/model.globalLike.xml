@@ -6,8 +6,10 @@
     
     <tei:listRef>
         <tei:content>
-            <tei:elementRef key="header" minOccurs="1" maxOccurs="1"/>
-            <tei:elementRef key="dated" minOccurs="1" maxOccurs="1"/>
+            <tei:sequence preserveOrder="false">
+                <tei:elementRef key="header" minOccurs="1" maxOccurs="1"/>
+                <tei:elementRef key="dated" minOccurs="1" maxOccurs="1"/>
+            </tei:sequence>
         </tei:content>
     </tei:listRef>
 </tei:classSpec>
