@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.reference.resource" type="atts" module="mpm.resources" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>resource reference attributes</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes for referencing an external resource.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="uri" usage="req">
+            <tei:gloss>Uniform Resource Identifier</tei:gloss>
+            <tei:datatype>
+                <tei:dataRef name="teidata.pointer"/>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="type" usage="req">
+            <tei:gloss>type identifier</tei:gloss>
+            <tei:desc>This attribute should be used to indicate the type of the resource.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="teidata.word"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>As most XML-based formats do not necessarily have a file extension other than <tei:code>.xml</tei:code> it is not always obvious from the file name what kind of data the file holds. Same with URIs in general. Attribute <tei:att>type</tei:att> should be used to bring clarity.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+
+    <tei:exemplum>
+        <tei:p>This attribute class is used by the <tei:gi>resource</tei:gi> elements.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <reslatedResources>
+                <resource uri="pathTo/music.mei" type="mei"/>
+                <resource uri="pathTo/music.msm" type="msm"/>
+                <resource uri="pathTo/music.mid" type="midi"/>
+                <resource uri="pathTo/another.mid" type="midi"/>
+                <resource uri="pathTo/music.xml" type="musicXML"/>
+                <resource uri="pathTo/music.mxl" type="musicXML"/>
+                <resource uri="pathTo/unsupportedMusicType.umt" type="umt"/>
+            </relatedResources>
+        </egXML>
+    </tei:exemplum>
+</tei:classSpec>

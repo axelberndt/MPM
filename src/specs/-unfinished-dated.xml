@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="header" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>header information</tei:gloss>
+    
+    <tei:desc>...</tei:desc>
+
+    <!--<tei:classes>
+        ...
+    </tei:classes>-->
+
+    <!--<tei:content>
+        ...
+    </tei:content>-->
+    
+    <!--<tei:exemplum>
+        <tei:p>...</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            ...
+        </egXML>
+    </tei:exemplum>-->
+    
+    <!--<tei:remarks>
+        <tei:p>...</tei:p>
+    </tei:remarks>-->
+</tei:elementSpec>

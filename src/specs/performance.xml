@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="performance" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>performance description</tei:gloss>
+    
+    <tei:desc>This element includes all information of a single musical performance.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.performanceLike"/>
+    </tei:classes>
+
+    <tei:exemplum>
+        <tei:p>This is the typical structure of a <tei:gi>performance</tei:gi>.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <performance name="a performance" pulsesPerQuarter="720">
+                <global>
+                    <header>
+                        <!-- header information for all parts -->
+                    </header>
+                    <dated>
+                        <!-- performance maps (tempoMap, dynamicsMap etc.) that apply to all parts -->
+                    </dated>
+                </global>
+                <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+                    <header>
+                        <!-- header information for this part -->
+                    </header>
+                    <dated>
+                        <!-- performance maps that apply to this part -->
+                    </dated>
+                </part>
+                <!-- further parts -->
+            </performance>
+        </egXML>
+    </tei:exemplum>
+
+    
+    <tei:remarks>
+        <tei:p>A musical performance description comprises all information necessary to transform symbolic music data (e.g. sheet music represented as MEI or MSM) into a representation (MIDI) that can be played back by any kind of sound generator (e.g. synthesizer or sampler) and, thus, be synthesised to audio. While the symbolic music data may already be playable via a trivial transformation (similar to an empty <tei:gi>performance</tei:gi>) the result will sound very mechanic and non-human. With a performance description the performance transformation adds all the details that are require for an expressive interpretation of the symbolic raw data, such as tempo variations, micro timing, dynamics, metrical accentuation, and articulation. This <tei:gi>performance</tei:gi> element provides these information in a formalised way that is also accessible to analytical, creative and scientific application domains. Obviously, there can be more than one ways to perform a piece of music. Hence, an MPM can have more than one <tei:gi>performance</tei:gi>. It is even possible to apply a <tei:gi>performance</tei:gi> to multiple pieces of music to experiment how it transfers to a different music context.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

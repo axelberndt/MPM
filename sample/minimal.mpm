@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <performance name="a performance" pulsesPerQuarter="720">
+        <global>
+            <header/>
+            <dated/>
+        </global>
+    </performance>
+</mpm>

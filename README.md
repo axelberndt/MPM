@@ -1,6 +1,6 @@
 # Music Performance Markup (MPM)
 
-An XML-model for encoding expressive music performances. The ODD schema definition and documentation will get a comprehensive revision in early 2020! The official API and expressive MIDI rendering engine are integrated with the [meico](https://github.com/cemfi/meico) framework, ready to be used by application developers. Users of the meico app can also already take advantage of MPM's capabilities.
+An XML-model for encoding expressive music performances. The ODD schema definition and documentation will undergo a comprehensive revision in early 2020! More background information, details, sample encodings, etc. will follow. The official API and expressive MIDI rendering engine are integrated with the [meico](https://github.com/cemfi/meico) framework, ready to be used by application developers. Users of the meico app can also already take advantage of MPM's capabilities.
 
 ### License Information
 

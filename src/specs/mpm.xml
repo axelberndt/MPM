@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="mpm" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>MPM document</tei:gloss>
+    
+    <tei:desc>The root element of an MPM-conformant document.</tei:desc>
+    
+    <tei:content>
+        <tei:elementRef key="relatedResources" minOccurs="0" maxOccurs="1"/>
+        <tei:elementRef key="performance" minOccurs="1" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>The basic structure of an MPM document looks like this.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <mpm>
+                <relatedResources>
+                    <resource uri="pathTo/music.mei" type="mei"/>
+                    <resource uri="pathTo/music.msm" type="msm"/>
+                    <!-- further resource references -->
+                </relatedResources>
+                <performance name="a performance" pulsesPerQuarter="720">
+                    <global>
+                        <header>
+                            <!-- header information for all parts -->
+                        </header>
+                        <dated>
+                            <!-- performance maps (tempoMap, dynamicsMap etc.) that apply to all parts -->
+                        </dated>
+                    </global>
+                    <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+                        <header>
+                            <!-- header information for this part -->
+                        </header>
+                        <dated>
+                            <!-- performance maps that apply to this part -->
+                        </dated>
+                    </part>
+                    <!-- further parts -->
+                </performance>
+                <!-- further performances -->
+            </mpm>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:exemplum>
+        <tei:p>This is a minimal MPM document.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <mpm>
+                <performance name="a performance" pulsesPerQuarter="720">
+                    <global>
+                        <header/>
+                        <dated/>
+                    </global>
+                </performance>
+            </mpm>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>This element is required. It is customary to specify the MPM namespace <tei:code>http://www.cemfi.de/mpm/ns/1.0</tei:code> on it, using the <tei:att>xmlns</tei:att> attribute.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

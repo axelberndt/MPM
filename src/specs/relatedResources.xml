@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="relatedResources" module="mpm.resources" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>related resources</tei:gloss>
+    
+    <tei:desc>This element can be used to proved references to related resources of (musical) data.</tei:desc>
+    
+    <tei:content>
+        <tei:elementRef key="resource" minOccurs="1" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>The element <gi>relatedResources</gi> holds one or more references to other resources, e.g. the MEI file from which it was derived or an MSM file which it is intended to be applied to.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <relatedResources>
+                <resource uri="pathTo/music.mei" type="mei"/>
+                <resource uri="pathTo/music.msm" type="msm"/>
+                <resource uri="pathTo/music.mid" type="midi"/>
+                <resource uri="pathTo/another.mid" type="midi"/>
+                <resource uri="pathTo/music.xml" type="musicXML"/>
+                <resource uri="pathTo/music.mxl" type="musicXML"/>
+                <resource uri="pathTo/unsupportedMusicType.umt" type="umt"/>
+            </relatedResources>
+        </egXML>
+    </tei:exemplum>
+
+    <tei:remarks>
+        <tei:p>This list of resource references is basically of an informal nature and does not imply any specific meaning. E.g., performances are not restricted to be applied only to the MSM objects listed here. It is up to the user/application to be more specific with this, e.g. by means of edition guidelines for a historical-critical music edition.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

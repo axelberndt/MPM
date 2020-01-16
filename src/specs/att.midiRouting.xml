@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.midiRouting" type="atts" module="mpm.midi" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>MIDI routing attributes class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes <tei:att>midi.channel</tei:att> and <tei:att>midi.port</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="midi.channel" usage="req">
+            <tei:gloss>MIDI channel number</tei:gloss>
+            <tei:desc>Channel numbering starts with 0! The first MIDI channel is 0. the 16th MIDI channel is 15.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="nonNegativeInteger">
+                    <tei:dataFacet name="minInclusive" value="0"/>
+                    <tei:dataFacet name="maxInclusive" value="15"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+
+        <tei:attDef ident="midi.port" usage="req">
+            <tei:gloss>MIDI port number</tei:gloss>
+            <tei:desc>Each MIDI device (MIDI port) can have up to 16 channels (i.e. voices) which is sometimes not enough, e.g. for an orchestral setup. To address further voices choose another port.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="nonNegativeInteger">
+                    <tei:dataFacet name="minInclusive" value="0"/>
+                    <tei:dataFacet name="maxInclusive" value="255"/>
+                </tei:dataRef>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>Keep in mind that the playback of a MIDI file that addresses multiple ports requires the system (or digital audio workstation) to provide multiple MIDI devices/outputs accordingly.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>
