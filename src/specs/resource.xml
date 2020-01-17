@@ -13,7 +13,7 @@
     </tei:content>
     
     <tei:exemplum>
-        <tei:p>The element <gi>relatedResources</gi> holds one or more references to other sources, e.g. the MEI file from which it was derived or an MSM file which it is intended to be applied to.</tei:p>
+        <tei:p>The element <tei:gi>relatedResources</tei:gi> holds one or more references to other sources, e.g. the MEI file from which it was derived or an MSM file which it is intended to be applied to.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <relatedResources>
                 <resource uri="pathTo/music.mei" type="mei"/>
