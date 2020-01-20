@@ -71,9 +71,13 @@
                     <xinclude:include href="specs/att.id.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
 
                     <!-- the model classes -->
+                    <xinclude:include href="specs/model.partLike.xml"/>
+                    <xinclude:include href="specs/model.headerLike.xml"/>
+                    <xinclude:include href="specs/model.datedLike.xml"/>
                     
                     <!-- the elements -->
                     <xinclude:include href="specs/mpm.xml"/>
@@ -82,7 +86,14 @@
                     <xinclude:include href="specs/performance.xml"/>
                     <xinclude:include href="specs/global.xml"/>
                     <xinclude:include href="specs/part.xml"/>
+                    
                     <xinclude:include href="specs/header.xml"/>
+                    <xinclude:include href="specs/articulationStyles.xml"/>
+                    <xinclude:include href="specs/dynamicsStyles.xml"/>
+                    <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
+                    <xinclude:include href="specs/rubatoStyles.xml"/>
+                    <xinclude:include href="specs/tempoStyles.xml"/>
+                    
                     <xinclude:include href="specs/dated.xml"/>
                     
                 </tei:schemaSpec>

@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2020-01-20T11:00:08Z. .
+Schema generated from ODD source 2020-01-20T15:59:23Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -47,6 +47,28 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
       <attribute name="number">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(numeric identifier) This attribute should be used to specify an integer identifier for the element, which is not necessarily unique within the document.</a:documentation>
          <data type="integer"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.midiRouting.attributes">
+      <ref name="mpm.att.midiRouting.attribute.midi.channel"/>
+      <ref name="mpm.att.midiRouting.attribute.midi.port"/>
+   </define>
+   <define name="mpm.att.midiRouting.attribute.midi.channel">
+      <attribute name="midi.channel">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MIDI channel number) Channel numbering starts with 0! The first MIDI channel is 0. the 16th MIDI channel is 15.</a:documentation>
+         <data type="nonNegativeInteger">
+            <param name="minInclusive">0</param> 
+            <param name="maxInclusive">15</param>
+         </data>
+      </attribute>
+   </define>
+   <define name="mpm.att.midiRouting.attribute.midi.port">
+      <attribute name="midi.port">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MIDI port number) Each MIDI device (MIDI port) can have up to 16 channels (i.e. voices) which is sometimes not enough, e.g. for an orchestral setup. To address further voices choose another port.</a:documentation>
+         <data type="nonNegativeInteger">
+            <param name="minInclusive">0</param> 
+            <param name="maxInclusive">255</param>
+         </data>
       </attribute>
    </define>
    <define name="mpm.att.pulsesPerQuarter.attributes">
@@ -100,33 +122,76 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.global">
       <element name="global" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(global performance data) This element includes all information that apply to all parts of a musical performance.</a:documentation>
-         <group>
-            <ref name="mpm.header"/>
-            <ref name="mpm.dated"/>
-         </group>
+         <ref name="mpm.header"/>
+         <ref name="mpm.dated"/>
       </element>
    </define>
    <define name="mpm.part">
       <element name="part" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(part-specific performance data) This element includes all information that applies to a specific musical part or voice.</a:documentation>
-         <group>
-            <ref name="mpm.header"/>
-            <ref name="mpm.dated"/>
-         </group>
+         <ref name="mpm.header"/>
+         <ref name="mpm.dated"/>
          <ref name="mpm.att.name.attributes"/>
          <ref name="mpm.att.number.attributes"/>
+         <ref name="mpm.att.midiRouting.attributes"/>
          <empty/>
       </element>
    </define>
    <define name="mpm.header">
       <element name="header" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(header information) The header environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, e.g. style definitions.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(header information) The header environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, such as style definitions.</a:documentation>
+         <optional>
+            <optional>
+               <ref name="mpm.articulationStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.dynamicsStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.metricalAccentuationStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.rubatoStyles"/>
+            </optional>
+            <optional>
+               <ref name="mpm.tempoStyles"/>
+            </optional>
+         </optional>
+      </element>
+   </define>
+   <define name="mpm.articulationStyles">
+      <element name="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation style collection) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.dynamicsStyles">
+      <element name="dynamicsStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamics style collection) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.metricalAccentuationStyles">
+      <element name="metricalAccentuationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collection of styles for metrical accentuation) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.rubatoStyles">
+      <element name="rubatoStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rubato style collection) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.tempoStyles">
+      <element name="tempoStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(teampo style collection) ...</a:documentation>
          <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
       </element>
    </define>
    <define name="mpm.dated">
       <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(header information) ...</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dated information) ...</a:documentation>
          <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
       </element>
    </define>

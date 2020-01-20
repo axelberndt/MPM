@@ -2,22 +2,47 @@
 <tei:elementSpec ident="header" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>header information</tei:gloss>
     
-    <tei:desc>The <tei:gi>header</tei:gi> environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, e.g. style definitions.</tei:desc>
+    <tei:desc>The <tei:gi>header</tei:gi> environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, such as style definitions.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.partLike"/>
+    </tei:classes>
 
-    <!--<tei:content>
-        <tei:sequence preserveOrder="false">
-            the maps
-        </tei:sequence>
-    </tei:content>-->
-    
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:content>
+        <tei:classRef key="model.headerLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
+    </tei:content>
+        
+    <tei:exemplum>
+        <tei:p>A typical <tei:gi>header</tei:gi> looks like this.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <header>
+                <tempoStyles>
+                    <styleDef name="Baumgartner">
+                        <tempoDef name="Allegro" value="147.0"/>
+                        <tempoDef name="Andante" value="100.0"/>
+                    </styleDef>
+                </tempoStyles>
+                <dynamicsStyles>
+                    <styleDef name="Baumgartner">
+                        <dynamicsDef name="p" value="48.0"/>
+                        <dynamicsDef name="f" value="97.0"/>
+                        <dynamicsDef name="sf" value="127.0"/>
+                    </styleDef>
+                </dynamicsStyles>
+                <articulationStyles>
+                    <styleDef name="Baumgartner">
+                        <articulationDef name="nonlegato" relativeDuration="0.95"/>
+                        <articulationDef name="stacc" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                        <articulationDef name="legato" relativeDuration="1.0"/>
+                        <articulationDef name="legatoStop" relativeDuration="0.8" relativeVelocity="0.7"/>
+                        <articulationDef name="spicc" absoluteDurationMs="140.0" absoluteVelocityChange="25.0"/>
+                    </styleDef>
+                </articulationStyles>
+            </header>
         </egXML>
-    </tei:exemplum>-->
+    </tei:exemplum>
     
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    <tei:remarks>
+        <tei:p>Each style type is allowed only once in the <tei:gi>header</tei:gi> environment. There cannot be, e.g., more than one <tei:gi>tempoStyles</tei:gi> in the <tei:gi>header</tei:gi>.</tei:p>
+    </tei:remarks>
 </tei:elementSpec>
