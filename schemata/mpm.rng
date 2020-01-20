@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.cemfi.de/mpm/ns/1.0"><!--
+Schema generated from ODD source 2020-01-20T11:00:08Z. .
+TEI Edition: Version 3.5.0. Last updated on
+	29th January 2019, revision 3c0c64ec4
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
+  
+--><!--This material is dual-licensed.
+[http://creativecommons.org/licenses/by-sa/4.0/] Distributed under Creative Commons Attribution-ShareAlike 4.0 License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2020 Axel Berndt. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. In the MPM format definition we make use of the TEI ODD format that is published under CC-BY-3.0 and BSD-2.0. MPM material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC BY-SA and BSD-2 licences. The CC BY-SA licence is generally appropriate for usages which treat MPM content as data or documentation. The BSD-2 licence is generally appropriate for usage of MPM content in a software environment. For further information or clarification, please contact the Axel Berndt.-->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <define name="mpm.att.reference.resource.attributes">
+      <ref name="mpm.att.reference.resource.attribute.uri"/>
+      <ref name="mpm.att.reference.resource.attribute.type"/>
+   </define>
+   <define name="mpm.att.reference.resource.attribute.uri">
+      <attribute name="uri">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Uniform Resource Identifier) </a:documentation>
+         <data type="teidata.pointer"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.reference.resource.attribute.type">
+      <attribute name="type">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(type identifier) This attribute should be used to indicate the type of the resource.</a:documentation>
+         <data type="teidata.word"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.name.attributes">
+      <ref name="mpm.att.name.attribute.name"/>
+   </define>
+   <define name="mpm.att.name.attribute.name">
+      <attribute name="name">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name identifier) This attribute should be used to specify a name identifier for the element.</a:documentation>
+         <data type="teidata.text"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.number.attributes">
+      <ref name="mpm.att.number.attribute.number"/>
+   </define>
+   <define name="mpm.att.number.attribute.number">
+      <attribute name="number">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(numeric identifier) This attribute should be used to specify an integer identifier for the element, which is not necessarily unique within the document.</a:documentation>
+         <data type="integer"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.pulsesPerQuarter.attributes">
+      <ref name="mpm.att.pulsesPerQuarter.attribute.pulsesPerQuarter"/>
+   </define>
+   <define name="mpm.att.pulsesPerQuarter.attribute.pulsesPerQuarter">
+      <attribute name="pulsesPerQuarter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pulses per quarter note) This attribute specifies the timing resolution of the maps, i.e. of attributes with a symbolic time value such as date and duration.</a:documentation>
+         <data type="nonNegativeInteger"/>
+      </attribute>
+   </define>
+   <define name="mpm.mpm">
+      <element name="mpm" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MPM document) The root element of an MPM-conformant document.</a:documentation>
+         <optional>
+            <ref name="mpm.relatedResources"/>
+         </optional>
+         <oneOrMore>
+            <ref name="mpm.performance"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="mpm.relatedResources">
+      <element name="relatedResources" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(related resources) This element can be used to proved references to related resources of (musical) data.</a:documentation>
+         <oneOrMore>
+            <ref name="mpm.resource"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="mpm.resource">
+      <element name="resource" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(data reference) This element represents a reference to a related resource of (musical) data.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.reference.resource.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.performance">
+      <element name="performance" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(performance description) This element includes all information of a single musical performance.</a:documentation>
+         <ref name="mpm.global"/>
+         <zeroOrMore>
+            <ref name="mpm.part"/>
+         </zeroOrMore>
+         <ref name="mpm.att.name.attributes"/>
+         <ref name="mpm.att.pulsesPerQuarter.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.global">
+      <element name="global" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(global performance data) This element includes all information that apply to all parts of a musical performance.</a:documentation>
+         <group>
+            <ref name="mpm.header"/>
+            <ref name="mpm.dated"/>
+         </group>
+      </element>
+   </define>
+   <define name="mpm.part">
+      <element name="part" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(part-specific performance data) This element includes all information that applies to a specific musical part or voice.</a:documentation>
+         <group>
+            <ref name="mpm.header"/>
+            <ref name="mpm.dated"/>
+         </group>
+         <ref name="mpm.att.name.attributes"/>
+         <ref name="mpm.att.number.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.header">
+      <element name="header" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(header information) The header environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, e.g. style definitions.</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.dated">
+      <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(header information) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <start>
+      <choice>
+         <ref name="mpm.mpm"/>
+      </choice>
+   </start>
+</grammar>

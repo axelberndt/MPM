@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tei:classSpec ident="model.globalLike" type="model" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>globalLike model class</tei:gloss>
-    
-    <tei:desc>This model class defines the basic structure of MPM <tei:gi>global</tei:gi> elements.</tei:desc>
-    
-</tei:classSpec>

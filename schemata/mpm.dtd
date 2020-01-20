@@ -1,0 +1,69 @@
+
+<!--
+DTD generated from ODD source 2020-01-20T11:00:11Z. .This material is dual-licensed.
+[http://creativecommons.org/licenses/by-sa/4.0/] Distributed under Creative Commons Attribution-ShareAlike 4.0 License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2020 Axel Berndt. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. In the MPM format definition we make use of the TEI ODD format that is published under CC-BY-3.0 and BSD-2.0. MPM material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC BY-SA and BSD-2 licences. The CC BY-SA licence is generally appropriate for usages which treat MPM content as data or documentation. The BSD-2 licence is generally appropriate for usage of MPM content in a software environment. For further information or clarification, please contact the Axel Berndt.
+TEI Edition: Version 3.5.0. Last updated on
+	29th January 2019, revision 3c0c64ec4
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
+
+-->
+
+<!-- start classes -->
+
+<!ENTITY % mpm.att.reference.resource.attribute.uri '
+uri CDATA #REQUIRED'>
+
+<!ENTITY % mpm.att.reference.resource.attribute.type '
+type CDATA #REQUIRED'>
+<!ENTITY % mpm.att.reference.resource.attributes '
+ %mpm.att.reference.resource.attribute.uri;
+ %mpm.att.reference.resource.attribute.type;'> 
+<!ENTITY % mpm.att.name.attribute.name '
+name CDATA #REQUIRED'>
+<!ENTITY % mpm.att.name.attributes '
+ %mpm.att.name.attribute.name;'> 
+<!ENTITY % mpm.att.number.attribute.number '
+number CDATA #REQUIRED'>
+<!ENTITY % mpm.att.number.attributes '
+ %mpm.att.number.attribute.number;'> 
+<!ENTITY % mpm.att.pulsesPerQuarter.attribute.pulsesPerQuarter '
+pulsesPerQuarter CDATA #REQUIRED'>
+<!ENTITY % mpm.att.pulsesPerQuarter.attributes '
+ %mpm.att.pulsesPerQuarter.attribute.pulsesPerQuarter;'> 
+<!-- stop classes -->
+
+<!-- start elements -->
+
+<!--doc:(header information) ... -->
+<!ELEMENT dated  EMPTY>
+<!ATTLIST dated xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(global performance data) This element includes all information that apply to all parts of a musical performance. -->
+<!ELEMENT global ((header,dated))>
+<!ATTLIST global xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(header information) The header environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, e.g. style definitions. -->
+<!ELEMENT header  EMPTY>
+<!ATTLIST header xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(MPM document) The root element of an MPM-conformant document. -->
+<!ELEMENT mpm (relatedResources)?(performance)+>
+<!ATTLIST mpm xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(part-specific performance data) This element includes all information that applies to a specific musical part or voice. -->
+<!ELEMENT part ((header,dated))>
+<!ATTLIST part xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST part
+ %mpm.att.name.attributes;
+ %mpm.att.number.attributes; >
+<!--doc:(performance description) This element includes all information of a single musical performance. -->
+<!ELEMENT performance global(part)*>
+<!ATTLIST performance xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST performance
+ %mpm.att.name.attributes;
+ %mpm.att.pulsesPerQuarter.attributes; >
+<!--doc:(related resources) This element can be used to proved references to related resources of (musical) data. -->
+<!ELEMENT relatedResources (resource)+>
+<!ATTLIST relatedResources xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(data reference) This element represents a reference to a related resource of (musical) data. -->
+<!ELEMENT resource  EMPTY>
+<!ATTLIST resource xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST resource
+ %mpm.att.reference.resource.attributes; >
+<!-- end elements -->

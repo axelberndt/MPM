@@ -4,9 +4,12 @@
     
     <tei:desc>This element includes all information that apply to all parts of a musical performance.</tei:desc>
     
-    <tei:classes>
-        <tei:memberOf key="model.globalLike"/>
-    </tei:classes>
+    <tei:content>
+        <tei:sequence preserveOrder="false">
+            <tei:elementRef key="header" minOccurs="1" maxOccurs="1"/>
+            <tei:elementRef key="dated" minOccurs="1" maxOccurs="1"/>
+        </tei:sequence>
+    </tei:content>
     
     <tei:exemplum>
         <tei:p>This is the typical structure of a <tei:gi>performance</tei:gi>.</tei:p>

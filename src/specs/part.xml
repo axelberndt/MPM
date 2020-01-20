@@ -5,9 +5,18 @@
     <tei:desc>This element includes all information that applies to a specific musical part or voice.</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.partLike"/>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.number"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="att.midiRouting"/>
     </tei:classes>
     
+    <tei:content>
+        <tei:sequence preserveOrder="false">
+            <tei:elementRef key="header" minOccurs="1" maxOccurs="1"/>
+            <tei:elementRef key="dated" minOccurs="1" maxOccurs="1"/>
+        </tei:sequence>
+    </tei:content>
     <tei:exemplum>
         <tei:p>This is the typical structure of a <tei:gi>performance</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">

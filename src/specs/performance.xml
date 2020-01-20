@@ -5,8 +5,15 @@
     <tei:desc>This element includes all information of a single musical performance.</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.performanceLike"/>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="att.pulsesPerQuarter"/>
     </tei:classes>
+    
+    <tei:content>
+        <tei:elementRef key="global" minOccurs="1" maxOccurs="1"/>
+        <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
 
     <tei:exemplum>
         <tei:p>This is the typical structure of a <tei:gi>performance</tei:gi>.</tei:p>
