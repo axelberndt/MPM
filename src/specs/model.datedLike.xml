@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="model.datedLike" type="model" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>dated content model</tei:gloss>
+    
+    <tei:desc>The content model for element <tei:gi>dated</tei:gi>.</tei:desc>
+</tei:classSpec>

@@ -5,8 +5,15 @@
     <tei:desc>This element includes all information that applies to a specific musical part or voice.</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.partLike"/>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.number"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="att.midiRouting"/>
     </tei:classes>
+    
+    <tei:content>
+        <tei:classRef key="model.partLike" expand="sequence" minOccurs="1" maxOccurs="1"/>
+    </tei:content>
     
     <tei:exemplum>
         <tei:p>This is the typical structure of a <tei:gi>performance</tei:gi>.</tei:p>
@@ -35,10 +42,10 @@
 
 
     <tei:remarks>
-        <tei:p>Basically, a part in MPM can also be polyphonic, i.e. it represents a collection of parts. E.g., in orchestral music notation one staff may contain two parts, but the performance instructions notated in the staff apply to both.</tei:p>
+        <tei:p>Basically, a part in MPM can also be polyphonic, i.e. it represents a collection of parts. E.g., in orchestral music notation one staff may contain two parts. Thus, the performance instructions notated in the staff apply to both.</tei:p>
     </tei:remarks>
 
     <tei:remarks>
-        <tei:p>The interplay between global and local (i.e. part-specific) information can be understood as follows. A global map (e.g. <tei:gi>tempoMap</tei:gi>) is applied to each part that does not define a local map of the same type. Even if that local map is empty, its presence signals that the part has its own map and will, thus, ignore the global map. A typical scenario is that the <tei:gi>tempoMap</tei:gi> is defined globally, i.e. all parts follow the same tempo, "follow the same conductor" and stay synchronised. Each part, however, can add individual timing details via a local <tei:gi>rubatoMap</tei:gi>, <tei:gi>asynchronyMap</tei:gi>, <tei:gi>imprecisionMap.timing</tei:gi> etc. The same rule applies to global vs. local style definitions. A part prefers its local information over the global ones.</tei:p>
+        <tei:p>The interplay between global and local (i.e. part-specific) information can be understood as follows. A global map (e.g. <tei:gi>tempoMap</tei:gi>) is applied to each part as long as it does not define a local map of the same type. Even if that local map is empty, its presence signals that the part has its own map and will, thus, ignore the global map. A typical scenario is that the <tei:gi>tempoMap</tei:gi> is defined globally, i.e. all parts follow the same tempo, "follow the same conductor" and stay synchronised. Each part, however, can add individual timing details via a local <tei:gi>rubatoMap</tei:gi>, <tei:gi>asynchronyMap</tei:gi>, <tei:gi>imprecisionMap.timing</tei:gi> etc. The same rule applies to global vs. local style definitions. A part prefers its local information over the global ones.</tei:p>
     </tei:remarks>
 </tei:elementSpec>

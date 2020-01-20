@@ -60,23 +60,24 @@
         <tei:back>
             <tei:div>
                 <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="http://www.cemfi.de/mpm/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML http://www.cemfi.de/mpm/ns/1.0">
-                    
+
                     <!-- the modules -->
                     <xinclude:include href="specs/mpm.core.xml"/>
                     <xinclude:include href="specs/mpm.resources.xml"/>
                     <xinclude:include href="specs/mpm.midi.xml"/>
-                    
+
                     <!-- the attribute classes -->
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.id.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
-                    
+
                     <!-- the model classes -->
-                    <xinclude:include href="specs/model.performanceLike.xml"/>
-                    <xinclude:include href="specs/model.globalLike.xml"/>
                     <xinclude:include href="specs/model.partLike.xml"/>
+                    <xinclude:include href="specs/model.headerLike.xml"/>
+                    <xinclude:include href="specs/model.datedLike.xml"/>
                     
                     <!-- the elements -->
                     <xinclude:include href="specs/mpm.xml"/>
@@ -85,48 +86,16 @@
                     <xinclude:include href="specs/performance.xml"/>
                     <xinclude:include href="specs/global.xml"/>
                     <xinclude:include href="specs/part.xml"/>
+                    
                     <xinclude:include href="specs/header.xml"/>
+                    <xinclude:include href="specs/articulationStyles.xml"/>
+                    <xinclude:include href="specs/dynamicsStyles.xml"/>
+                    <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
+                    <xinclude:include href="specs/rubatoStyles.xml"/>
+                    <xinclude:include href="specs/tempoStyles.xml"/>
+                    
                     <xinclude:include href="specs/dated.xml"/>
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <tei:classSpec ident="model.mapLike" type="model" module="mpm.core" mode="add">
-                        <tei:gloss>MPM core module</tei:gloss>
-                        <tei:desc>All elements, attributes, macros, classes, and models of the MPM format are part of this module.</tei:desc>
-                    </tei:classSpec>
-                    
-                    <tei:elementSpec ident="dynamicsMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0">
-                        <tei:classes>
-                            <tei:memberOf key="model.mapLike"/>
-                        </tei:classes>
-                        <tei:content>
-                            <tei:alternate minOccurs="0" maxOccurs="unbounded">
-                                <tei:elementRef key="dynamics" minOccurs="0"/>
-                                <tei:elementRef key="style" minOccurs="0"/>
-                            </tei:alternate>
-                        </tei:content>
-                        <!-- dokuzeugs -->
-                    </tei:elementSpec>
-                    
-                    <tei:classSpec ident="att.startStyle" type="atts" module="mpm.core" mode="add">
-                        <tei:attList>
-                            <tei:attDef ident="startStyle" usage="req">
-                                <tei:gloss>MPM core module</tei:gloss>
-                                <tei:desc>All elements, attributes, macros, classes, and models of the MPM format are part of this module.</tei:desc>
-                                <tei:datatype>
-                                    <tei:dataRef name="teidata.text"/>  <!-- teidata.text für mehrere Worte, .word für ein Wort, .count für nichtnegative Integers, double, int -->
-                                </tei:datatype>
-                            </tei:attDef>
-                        </tei:attList>
-                    </tei:classSpec>
-                    
-                    <!-- ... -->
                 </tei:schemaSpec>
             </tei:div>
         </tei:back>

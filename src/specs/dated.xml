@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="header" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>header information</tei:gloss>
+<tei:elementSpec ident="dated" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>dated information</tei:gloss>
     
     <tei:desc>...</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.partLike"/>
+    </tei:classes>
 
-    <!--<tei:classes>
-        ...
-    </tei:classes>-->
-
-    <!--<tei:content>
-        ...
-    </tei:content>-->
+    <tei:content>
+        <tei:classRef key="model.datedLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
+    </tei:content>
     
     <!--<tei:exemplum>
         <tei:p>...</tei:p>
@@ -19,7 +19,7 @@
         </egXML>
     </tei:exemplum>-->
     
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    <tei:remarks>
+        <tei:p>Each type of map is allowed only once in the <tei:gi>dated</tei:gi> environment. There cannot be, e.g., more than one <tei:gi>tempoMap</tei:gi> in the <tei:gi>dated</tei:gi>.</tei:p>
+    </tei:remarks>
 </tei:elementSpec>

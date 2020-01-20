@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tei:classSpec ident="model.partLike" type="model" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>partLike model class</tei:gloss>
+    <tei:gloss>global and part content model</tei:gloss>
     
-    <tei:desc>This model class defines the basic structure of MPM <tei:gi>part</tei:gi> elements.</tei:desc>
-    
-    <tei:classes>
-        <tei:memberOf key="model.globalLike"/>
-        <tei:memberOf key="att.name"/>
-        <tei:memberOf key="att.number"/>
-        <tei:memberOf key="att.id"/>
-        <tei:memberOf key="att.midiRouting"/>
-    </tei:classes>
+    <tei:desc>The content model for elements <tei:gi>global</tei:gi> and <tei:gi>part</tei:gi>.</tei:desc>
 </tei:classSpec>
