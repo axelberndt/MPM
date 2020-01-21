@@ -12,7 +12,7 @@
     </tei:classes>
     
     <tei:content>
-        <tei:classRef key="model.partLike" expand="sequence" minOccurs="1" maxOccurs="1"/>
+        <tei:classRef key="model.partContent" expand="sequence" minOccurs="1" maxOccurs="1"/>
     </tei:content>
     
     <tei:exemplum>

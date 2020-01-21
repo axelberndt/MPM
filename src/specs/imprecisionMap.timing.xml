@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="metricalAccentuationStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>collection of styles for metrical accentuation</tei:gloss>
+<tei:elementSpec ident="imprecisionMap.timing" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>imprecision map timing</tei:gloss>
     
     <tei:desc>...</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.styleCollectionLike"/>
+        <tei:memberOf key="model.mapLike"/>
     </tei:classes>
     
     <tei:content>
-        <tei:empty/>
-        <!-- more to come -->
+        <tei:classRef key="model.distributionLike" minOccurs="0" maxOccurs="unbounded"/>
     </tei:content>
     
     <!--<tei:exemplum>

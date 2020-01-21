@@ -9,7 +9,7 @@
             <tei:gloss>name identifier</tei:gloss>
             <tei:desc>This attribute should be used to specify a name identifier for the element.</tei:desc>
             <tei:datatype>
-                <tei:dataRef name="teidata.text"/>
+                <tei:dataRef name="string"/>
             </tei:datatype>
             <tei:remarks>
                 <tei:p>As opposed to attribute <tei:att>xml:id</tei:att> there can be multiple occurences of the same name in the document. Some <tei:gi>styleDef</tei:gi> elements from different domains (e.g. tempo, dynamics and articulation) may use the same name to indicate affiliation. Different <tei:gi>styleDef</tei:gi> elements within the same domain may contain elements with the same name, e.g. two <tei:gi>tempoDef</tei:gi> elements may associate different numeric tempi with the same name (say Allegro).</tei:p>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="metricalAccentuationStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>collection of styles for metrical accentuation</tei:gloss>
+<tei:elementSpec ident="metricalAccentuationMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>metrical accentuation map</tei:gloss>
     
     <tei:desc>...</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.styleCollectionLike"/>
+        <tei:memberOf key="model.mapLike"/>
     </tei:classes>
     
     <tei:content>

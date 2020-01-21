@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.time.physical" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>physical time attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes for the physical time domain.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.physical.milliseconds.offset"/>
+    </tei:classes>
+    
+</tei:classSpec>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="model.distributionLike" type="model" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>imprecisionMap content model</tei:gloss>
+    
+    <tei:desc>The content model for all types of imprecision maps.</tei:desc>
+</tei:classSpec>

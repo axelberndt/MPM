@@ -52,8 +52,9 @@
     
     <tei:text>
         <tei:body>
-            <tei:div>
-                <!-- prose about MPM and everything ... -->
+            <tei:div type="chapter" n="1">
+                <tei:head>Introduction to MPM</tei:head>
+                <tei:p>Some introductory prose about the concepts behind MPM, the format's history, development and structure ...</tei:p>
             </tei:div>
         </tei:body>
         
@@ -73,28 +74,49 @@
                     <xinclude:include href="specs/att.number.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
-
+                    <xinclude:include href="specs/att.time.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.date.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.duration.xml"/>
+                    <xinclude:include href="specs/att.time.physical.xml"/>
+                    <xinclude:include href="specs/att.time.physical.milliseconds.offset.xml"/>
+                    
                     <!-- the model classes -->
-                    <xinclude:include href="specs/model.partLike.xml"/>
-                    <xinclude:include href="specs/model.headerLike.xml"/>
-                    <xinclude:include href="specs/model.datedLike.xml"/>
+                    <xinclude:include href="specs/model.partContentLike.xml"/>
+                    <xinclude:include href="specs/model.styleCollectionLike.xml"/>
+                    <xinclude:include href="specs/model.mapLike.xml"/>
+                    <xinclude:include href="specs/model.distributionLike.xml"/>
                     
                     <!-- the elements -->
                     <xinclude:include href="specs/mpm.xml"/>
+                    
                     <xinclude:include href="specs/relatedResources.xml"/>
                     <xinclude:include href="specs/resource.xml"/>
+                    
                     <xinclude:include href="specs/performance.xml"/>
                     <xinclude:include href="specs/global.xml"/>
                     <xinclude:include href="specs/part.xml"/>
-                    
                     <xinclude:include href="specs/header.xml"/>
+                    <xinclude:include href="specs/dated.xml"/>
+                    
                     <xinclude:include href="specs/articulationStyles.xml"/>
                     <xinclude:include href="specs/dynamicsStyles.xml"/>
                     <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
                     <xinclude:include href="specs/rubatoStyles.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
                     
-                    <xinclude:include href="specs/dated.xml"/>
+                    <xinclude:include href="specs/articulationMap.xml"/>
+                    <xinclude:include href="specs/asynchronyMap.xml"/>
+                        <xinclude:include href="specs/asynchrony.xml"/>
+                    <xinclude:include href="specs/dynamicsMap.xml"/>
+                    <xinclude:include href="specs/metricalAccentuationMap.xml"/>
+                    <xinclude:include href="specs/tempoMap.xml"/>
+                    <xinclude:include href="specs/rubatoMap.xml"/>
+                    <xinclude:include href="specs/imprecisionMap.xml"/>
+                    <xinclude:include href="specs/imprecisionMap.timing.xml"/>
+                    <xinclude:include href="specs/imprecisionMap.dynamics.xml"/>
+                    <xinclude:include href="specs/imprecisionMap.toneduration.xml"/>
+                    <xinclude:include href="specs/imprecisionMap.tuning.xml"/>
                     
                 </tei:schemaSpec>
             </tei:div>
