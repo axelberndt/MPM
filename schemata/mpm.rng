@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2020-01-20T15:59:23Z. .
+Schema generated from ODD source 2020-01-21T16:09:44Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -22,13 +22,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.att.reference.resource.attribute.uri">
       <attribute name="uri">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Uniform Resource Identifier) </a:documentation>
-         <data type="teidata.pointer"/>
+         <data type="anyURI"/>
       </attribute>
    </define>
    <define name="mpm.att.reference.resource.attribute.type">
       <attribute name="type">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(type identifier) This attribute should be used to indicate the type of the resource.</a:documentation>
-         <data type="teidata.word"/>
+         <data type="token">
+            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+         </data>
       </attribute>
    </define>
    <define name="mpm.att.name.attributes">
@@ -37,7 +39,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.att.name.attribute.name">
       <attribute name="name">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name identifier) This attribute should be used to specify a name identifier for the element.</a:documentation>
-         <data type="teidata.text"/>
+         <data type="string"/>
       </attribute>
    </define>
    <define name="mpm.att.number.attributes">
@@ -79,6 +81,29 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pulses per quarter note) This attribute specifies the timing resolution of the maps, i.e. of attributes with a symbolic time value such as date and duration.</a:documentation>
          <data type="nonNegativeInteger"/>
       </attribute>
+   </define>
+   <define name="mpm.att.time.symbolic.date.attributes">
+      <ref name="mpm.att.time.symbolic.date.attribute.date"/>
+   </define>
+   <define name="mpm.att.time.symbolic.date.attribute.date">
+      <attribute name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(symbolic date) Attribute date provides a symbolic (i.e. tempo-independent) position in time for a map element. The basis to convert this date into a musical note value is the performance's pulsesPerQuarter value.</a:documentation>
+         <data type="double">
+            <param name="minInclusive">0.0</param>
+         </data>
+      </attribute>
+   </define>
+   <define name="mpm.att.time.physical.milliseconds.offset.attributes">
+      <ref name="mpm.att.time.physical.milliseconds.offset.attribute.milliseconds.offset"/>
+   </define>
+   <define name="mpm.att.time.physical.milliseconds.offset.attribute.milliseconds.offset">
+      <attribute name="milliseconds.offset">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(offset in milliseconds) This attribute defines an offset/delay (positive or negative) in milliseconds.</a:documentation>
+         <data type="double"/>
+      </attribute>
+   </define>
+   <define name="mpm.model.distributionLike">
+      <notAllowed/>
    </define>
    <define name="mpm.mpm">
       <element name="mpm" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -159,6 +184,46 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
       </element>
    </define>
+   <define name="mpm.dated">
+      <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dated information) The dated environment is the place for all datable information, ie. that are located at a specific position in time. They are organised in maps. Each map represents a specific domain, such as tempo, rubato, asynchrony, dynamics, metrical accentuation, articulation, etc.</a:documentation>
+         <optional>
+            <optional>
+               <ref name="mpm.articulationMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.asynchronyMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.dynamicsMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.metricalAccentuationMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.tempoMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.rubatoMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.imprecisionMap"/>
+            </optional>
+            <optional>
+               <ref name="mpm.imprecisionMap.timing"/>
+            </optional>
+            <optional>
+               <ref name="mpm.imprecisionMap.dynamics"/>
+            </optional>
+            <optional>
+               <ref name="mpm.imprecisionMap.toneduration"/>
+            </optional>
+            <optional>
+               <ref name="mpm.imprecisionMap.tuning"/>
+            </optional>
+         </optional>
+      </element>
+   </define>
    <define name="mpm.articulationStyles">
       <element name="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation style collection) ...</a:documentation>
@@ -189,10 +254,91 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
       </element>
    </define>
-   <define name="mpm.dated">
-      <element name="dated" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dated information) ...</a:documentation>
+   <define name="mpm.articulationMap">
+      <element name="articulationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation map) ...</a:documentation>
          <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.asynchronyMap">
+      <element name="asynchronyMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(asynchrony map) The asynchronyMap is used to specify timing offsets/delays of a musical part or group of parts.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.asynchrony"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.asynchrony">
+      <element name="asynchrony" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(asynchrony) This element sets a constant milliseconds offset starting a the musical position specified via attribute date ans lasting until the subsequent asynchrony element in the asynchronyMap specifies a different offset.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.time.physical.milliseconds.offset.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.dynamicsMap">
+      <element name="dynamicsMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamics map) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.metricalAccentuationMap">
+      <element name="metricalAccentuationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical accentuation map) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.tempoMap">
+      <element name="tempoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tempo map) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.rubatoMap">
+      <element name="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rubato map) ...</a:documentation>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="mpm.imprecisionMap">
+      <element name="imprecisionMap" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map) ...</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.model.distributionLike"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.imprecisionMap.timing">
+      <element name="imprecisionMap.timing" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map timing) ...</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.model.distributionLike"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.imprecisionMap.dynamics">
+      <element name="imprecisionMap.dynamics" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map dynamics) ...</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.model.distributionLike"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.imprecisionMap.toneduration">
+      <element name="imprecisionMap.toneduration" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map tone duration) ...</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.model.distributionLike"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="mpm.imprecisionMap.tuning">
+      <element name="imprecisionMap.tuning" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map tuning) ...</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.model.distributionLike"/>
+         </zeroOrMore>
       </element>
    </define>
    <start>

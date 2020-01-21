@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2020-01-20T16:00:16Z. .This material is dual-licensed.
+DTD generated from ODD source 2020-01-21T16:09:47Z. .This material is dual-licensed.
 [http://creativecommons.org/licenses/by-sa/4.0/] Distributed under Creative Commons Attribution-ShareAlike 4.0 License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2020 Axel Berndt. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. In the MPM format definition we make use of the TEI ODD format that is published under CC-BY-3.0 and BSD-2.0. MPM material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC BY-SA and BSD-2 licences. The CC BY-SA licence is generally appropriate for usages which treat MPM content as data or documentation. The BSD-2 licence is generally appropriate for usage of MPM content in a software environment. For further information or clarification, please contact the Axel Berndt.
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
@@ -10,21 +10,26 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
 
 <!-- predeclared classes -->
 
-<!ENTITY % model.partLike "header |dated"> 
-<!ENTITY % model.partLike_sequence "header, dated"> 
-<!ENTITY % model.partLike_sequenceOptional "header?, dated?"> 
-<!ENTITY % model.partLike_sequenceOptionalRepeatable "header*, dated*"> 
-<!ENTITY % model.partLike_sequenceRepeatable "header+, dated+"> 
-<!ENTITY % model.headerLike "articulationStyles |dynamicsStyles |metricalAccentuationStyles |rubatoStyles |tempoStyles"> 
-<!ENTITY % model.headerLike_sequence "articulationStyles, dynamicsStyles, metricalAccentuationStyles, rubatoStyles, tempoStyles"> 
-<!ENTITY % model.headerLike_sequenceOptional "articulationStyles?, dynamicsStyles?, metricalAccentuationStyles?, rubatoStyles?, tempoStyles?"> 
-<!ENTITY % model.headerLike_sequenceOptionalRepeatable "articulationStyles*, dynamicsStyles*, metricalAccentuationStyles*, rubatoStyles*, tempoStyles*"> 
-<!ENTITY % model.headerLike_sequenceRepeatable "articulationStyles+, dynamicsStyles+, metricalAccentuationStyles+, rubatoStyles+, tempoStyles+"> 
-<!ENTITY % model.datedLike ""> 
-<!ENTITY % model.datedLike_sequence ""> 
-<!ENTITY % model.datedLike_sequenceOptional ""> 
-<!ENTITY % model.datedLike_sequenceOptionalRepeatable ""> 
-<!ENTITY % model.datedLike_sequenceRepeatable ""> 
+<!ENTITY % model.partContent "header |dated"> 
+<!ENTITY % model.partContent_sequence "header, dated"> 
+<!ENTITY % model.partContent_sequenceOptional "header?, dated?"> 
+<!ENTITY % model.partContent_sequenceOptionalRepeatable "header*, dated*"> 
+<!ENTITY % model.partContent_sequenceRepeatable "header+, dated+"> 
+<!ENTITY % model.styleCollectionLike "articulationStyles |dynamicsStyles |metricalAccentuationStyles |rubatoStyles |tempoStyles"> 
+<!ENTITY % model.styleCollectionLike_sequence "articulationStyles, dynamicsStyles, metricalAccentuationStyles, rubatoStyles, tempoStyles"> 
+<!ENTITY % model.styleCollectionLike_sequenceOptional "articulationStyles?, dynamicsStyles?, metricalAccentuationStyles?, rubatoStyles?, tempoStyles?"> 
+<!ENTITY % model.styleCollectionLike_sequenceOptionalRepeatable "articulationStyles*, dynamicsStyles*, metricalAccentuationStyles*, rubatoStyles*, tempoStyles*"> 
+<!ENTITY % model.styleCollectionLike_sequenceRepeatable "articulationStyles+, dynamicsStyles+, metricalAccentuationStyles+, rubatoStyles+, tempoStyles+"> 
+<!ENTITY % model.mapLike "articulationMap |asynchronyMap |dynamicsMap |metricalAccentuationMap |tempoMap |rubatoMap |imprecisionMap |imprecisionMap.timing |imprecisionMap.dynamics |imprecisionMap.toneduration |imprecisionMap.tuning"> 
+<!ENTITY % model.mapLike_sequence "articulationMap, asynchronyMap, dynamicsMap, metricalAccentuationMap, tempoMap, rubatoMap, imprecisionMap, imprecisionMap.timing, imprecisionMap.dynamics, imprecisionMap.toneduration, imprecisionMap.tuning"> 
+<!ENTITY % model.mapLike_sequenceOptional "articulationMap?, asynchronyMap?, dynamicsMap?, metricalAccentuationMap?, tempoMap?, rubatoMap?, imprecisionMap?, imprecisionMap.timing?, imprecisionMap.dynamics?, imprecisionMap.toneduration?, imprecisionMap.tuning?"> 
+<!ENTITY % model.mapLike_sequenceOptionalRepeatable "articulationMap*, asynchronyMap*, dynamicsMap*, metricalAccentuationMap*, tempoMap*, rubatoMap*, imprecisionMap*, imprecisionMap.timing*, imprecisionMap.dynamics*, imprecisionMap.toneduration*, imprecisionMap.tuning*"> 
+<!ENTITY % model.mapLike_sequenceRepeatable "articulationMap+, asynchronyMap+, dynamicsMap+, metricalAccentuationMap+, tempoMap+, rubatoMap+, imprecisionMap+, imprecisionMap.timing+, imprecisionMap.dynamics+, imprecisionMap.toneduration+, imprecisionMap.tuning+"> 
+<!ENTITY % model.distributionLike ""> 
+<!ENTITY % model.distributionLike_sequence ""> 
+<!ENTITY % model.distributionLike_sequenceOptional ""> 
+<!ENTITY % model.distributionLike_sequenceOptionalRepeatable ""> 
+<!ENTITY % model.distributionLike_sequenceRepeatable ""> 
 <!-- end of predeclared classes -->
 
 <!ENTITY % mpm.att.reference.resource.attribute.uri '
@@ -55,38 +60,84 @@ midi.port CDATA #REQUIRED'>
 pulsesPerQuarter CDATA #REQUIRED'>
 <!ENTITY % mpm.att.pulsesPerQuarter.attributes '
  %mpm.att.pulsesPerQuarter.attribute.pulsesPerQuarter;'> 
-<!ENTITY % model.partLike "header |dated"> 
-<!ENTITY % model.partLike_sequence "header, dated"> 
-<!ENTITY % model.partLike_sequenceOptional "header?, dated?"> 
-<!ENTITY % model.partLike_sequenceOptionalRepeatable "header*, dated*"> 
-<!ENTITY % model.partLike_sequenceRepeatable "header+, dated+"> 
-<!ENTITY % model.headerLike "articulationStyles |dynamicsStyles |metricalAccentuationStyles |rubatoStyles |tempoStyles"> 
-<!ENTITY % model.headerLike_sequence "articulationStyles, dynamicsStyles, metricalAccentuationStyles, rubatoStyles, tempoStyles"> 
-<!ENTITY % model.headerLike_sequenceOptional "articulationStyles?, dynamicsStyles?, metricalAccentuationStyles?, rubatoStyles?, tempoStyles?"> 
-<!ENTITY % model.headerLike_sequenceOptionalRepeatable "articulationStyles*, dynamicsStyles*, metricalAccentuationStyles*, rubatoStyles*, tempoStyles*"> 
-<!ENTITY % model.headerLike_sequenceRepeatable "articulationStyles+, dynamicsStyles+, metricalAccentuationStyles+, rubatoStyles+, tempoStyles+"> 
-<!ENTITY % model.datedLike ""> 
-<!ENTITY % model.datedLike_sequence ""> 
-<!ENTITY % model.datedLike_sequenceOptional ""> 
-<!ENTITY % model.datedLike_sequenceOptionalRepeatable ""> 
-<!ENTITY % model.datedLike_sequenceRepeatable ""> 
+<!ENTITY % mpm.att.time.symbolic.date.attribute.date '
+date CDATA #REQUIRED'>
+<!ENTITY % mpm.att.time.symbolic.date.attributes '
+ %mpm.att.time.symbolic.date.attribute.date;'> 
+<!ENTITY % mpm.att.time.physical.milliseconds.offset.attribute.milliseconds.offset '
+milliseconds.offset CDATA #REQUIRED'>
+<!ENTITY % mpm.att.time.physical.milliseconds.offset.attributes '
+ %mpm.att.time.physical.milliseconds.offset.attribute.milliseconds.offset;'> 
+<!ENTITY % model.partContent "header |dated"> 
+<!ENTITY % model.partContent_sequence "header, dated"> 
+<!ENTITY % model.partContent_sequenceOptional "header?, dated?"> 
+<!ENTITY % model.partContent_sequenceOptionalRepeatable "header*, dated*"> 
+<!ENTITY % model.partContent_sequenceRepeatable "header+, dated+"> 
+<!ENTITY % model.styleCollectionLike "articulationStyles |dynamicsStyles |metricalAccentuationStyles |rubatoStyles |tempoStyles"> 
+<!ENTITY % model.styleCollectionLike_sequence "articulationStyles, dynamicsStyles, metricalAccentuationStyles, rubatoStyles, tempoStyles"> 
+<!ENTITY % model.styleCollectionLike_sequenceOptional "articulationStyles?, dynamicsStyles?, metricalAccentuationStyles?, rubatoStyles?, tempoStyles?"> 
+<!ENTITY % model.styleCollectionLike_sequenceOptionalRepeatable "articulationStyles*, dynamicsStyles*, metricalAccentuationStyles*, rubatoStyles*, tempoStyles*"> 
+<!ENTITY % model.styleCollectionLike_sequenceRepeatable "articulationStyles+, dynamicsStyles+, metricalAccentuationStyles+, rubatoStyles+, tempoStyles+"> 
+<!ENTITY % model.mapLike "articulationMap |asynchronyMap |dynamicsMap |metricalAccentuationMap |tempoMap |rubatoMap |imprecisionMap |imprecisionMap.timing |imprecisionMap.dynamics |imprecisionMap.toneduration |imprecisionMap.tuning"> 
+<!ENTITY % model.mapLike_sequence "articulationMap, asynchronyMap, dynamicsMap, metricalAccentuationMap, tempoMap, rubatoMap, imprecisionMap, imprecisionMap.timing, imprecisionMap.dynamics, imprecisionMap.toneduration, imprecisionMap.tuning"> 
+<!ENTITY % model.mapLike_sequenceOptional "articulationMap?, asynchronyMap?, dynamicsMap?, metricalAccentuationMap?, tempoMap?, rubatoMap?, imprecisionMap?, imprecisionMap.timing?, imprecisionMap.dynamics?, imprecisionMap.toneduration?, imprecisionMap.tuning?"> 
+<!ENTITY % model.mapLike_sequenceOptionalRepeatable "articulationMap*, asynchronyMap*, dynamicsMap*, metricalAccentuationMap*, tempoMap*, rubatoMap*, imprecisionMap*, imprecisionMap.timing*, imprecisionMap.dynamics*, imprecisionMap.toneduration*, imprecisionMap.tuning*"> 
+<!ENTITY % model.mapLike_sequenceRepeatable "articulationMap+, asynchronyMap+, dynamicsMap+, metricalAccentuationMap+, tempoMap+, rubatoMap+, imprecisionMap+, imprecisionMap.timing+, imprecisionMap.dynamics+, imprecisionMap.toneduration+, imprecisionMap.tuning+"> 
+<!ENTITY % model.distributionLike ""> 
+<!ENTITY % model.distributionLike_sequence ""> 
+<!ENTITY % model.distributionLike_sequenceOptional ""> 
+<!ENTITY % model.distributionLike_sequenceOptionalRepeatable ""> 
+<!ENTITY % model.distributionLike_sequenceRepeatable ""> 
 <!-- start elements -->
 
+<!--doc:(articulation map) ... -->
+<!ELEMENT articulationMap  EMPTY>
+<!ATTLIST articulationMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(articulation style collection) ... -->
 <!ELEMENT articulationStyles  EMPTY>
 <!ATTLIST articulationStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
-<!--doc:(dated information) ... -->
-<!ELEMENT dated (%model.datedLike_sequenceOptional;)?>
+<!--doc:(asynchrony) This element sets a constant milliseconds offset starting a the musical position specified via attribute date ans lasting until the subsequent asynchrony element in the asynchronyMap specifies a different offset. -->
+<!ELEMENT asynchrony  EMPTY>
+<!ATTLIST asynchrony xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST asynchrony
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.time.physical.milliseconds.offset.attributes; >
+<!--doc:(asynchrony map) The asynchronyMap is used to specify timing offsets/delays of a musical part or group of parts. -->
+<!ELEMENT asynchronyMap (asynchrony)*>
+<!ATTLIST asynchronyMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(dated information) The dated environment is the place for all datable information, ie. that are located at a specific position in time. They are organised in maps. Each map represents a specific domain, such as tempo, rubato, asynchrony, dynamics, metrical accentuation, articulation, etc. -->
+<!ELEMENT dated (%model.mapLike_sequenceOptional;)?>
 <!ATTLIST dated xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(dynamics map) ... -->
+<!ELEMENT dynamicsMap  EMPTY>
+<!ATTLIST dynamicsMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(dynamics style collection) ... -->
 <!ELEMENT dynamicsStyles  EMPTY>
 <!ATTLIST dynamicsStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(global performance data) This element includes all information that apply to all parts of a musical performance. -->
-<!ELEMENT global (%model.partLike_sequence;)>
+<!ELEMENT global (%model.partContent_sequence;)>
 <!ATTLIST global xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(header information) The header environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, such as style definitions. -->
-<!ELEMENT header (%model.headerLike_sequenceOptional;)?>
+<!ELEMENT header (%model.styleCollectionLike_sequenceOptional;)?>
 <!ATTLIST header xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(imprecision map) ... -->
+<!ELEMENT imprecisionMap (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(imprecision map dynamics) ... -->
+<!ELEMENT imprecisionMap.dynamics (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.dynamics xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(imprecision map timing) ... -->
+<!ELEMENT imprecisionMap.timing (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.timing xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(imprecision map tone duration) ... -->
+<!ELEMENT imprecisionMap.toneduration (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.toneduration xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(imprecision map tuning) ... -->
+<!ELEMENT imprecisionMap.tuning (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.tuning xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(metrical accentuation map) ... -->
+<!ELEMENT metricalAccentuationMap  EMPTY>
+<!ATTLIST metricalAccentuationMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(collection of styles for metrical accentuation) ... -->
 <!ELEMENT metricalAccentuationStyles  EMPTY>
 <!ATTLIST metricalAccentuationStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
@@ -94,7 +145,7 @@ pulsesPerQuarter CDATA #REQUIRED'>
 <!ELEMENT mpm (relatedResources)?(performance)+>
 <!ATTLIST mpm xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(part-specific performance data) This element includes all information that applies to a specific musical part or voice. -->
-<!ELEMENT part (%model.partLike_sequence;)>
+<!ELEMENT part (%model.partContent_sequence;)>
 <!ATTLIST part xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST part
  %mpm.att.name.attributes;
@@ -114,9 +165,15 @@ pulsesPerQuarter CDATA #REQUIRED'>
 <!ATTLIST resource xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST resource
  %mpm.att.reference.resource.attributes; >
+<!--doc:(rubato map) ... -->
+<!ELEMENT rubatoMap  EMPTY>
+<!ATTLIST rubatoMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(rubato style collection) ... -->
 <!ELEMENT rubatoStyles  EMPTY>
 <!ATTLIST rubatoStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(tempo map) ... -->
+<!ELEMENT tempoMap  EMPTY>
+<!ATTLIST tempoMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(teampo style collection) ... -->
 <!ELEMENT tempoStyles  EMPTY>
 <!ATTLIST tempoStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
