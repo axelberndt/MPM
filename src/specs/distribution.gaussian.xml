@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="distribution.gaussian" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>gaussian distribution</tei:gloss>
+    
+    <tei:desc>This defines a gaussian distribution. Its expectation value is 0.0. Attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att> are used to limit the range of random values.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.distribution.deviation.standard"/>
+        <tei:memberOf key="att.distribution.limits"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.distributionLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <distribution.gaussian date="0.0" deviation.standard="20.0" limit.lower="-30.0" limit.upper="14.5"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>An expectation value other than 0.0 would conflict with constant offsets and base values of the specific domain, such as <tei:gi>asynchrony</tei:gi> in the timing domain, <tei:gi>dynamics</tei:gi> in the dynamics domain, or duration modifiers in the articulation domain. These should be used to set an expectation value.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

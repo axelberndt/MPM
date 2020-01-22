@@ -6,6 +6,7 @@
     
     <tei:classes>
         <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
     </tei:classes>
     
     <tei:content>

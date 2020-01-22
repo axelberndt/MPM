@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.distribution.deviation.standard" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>standard deviation attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>deviation.standard</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="deviation.standard" usage="req">
+            <tei:gloss>standard deviation</tei:gloss>
+            <tei:desc>defines the standard deviation.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

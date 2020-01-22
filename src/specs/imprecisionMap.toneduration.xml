@@ -2,24 +2,27 @@
 <tei:elementSpec ident="imprecisionMap.toneduration" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>imprecision map tone duration</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>This map is used to model random imprecision in articulation/tone duration.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
     </tei:classes>
     
     <tei:content>
         <tei:classRef key="model.distributionLike" minOccurs="0" maxOccurs="unbounded"/>
     </tei:content>
         
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>The following tone duration imprecision map varies the tone durations by up to -30.0 milliseconds.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <imprecisionMap.toneduration>
+                <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" value.min="-30.0" value.max="0.0"/>
+            </imprecisionMap.toneduration>
         </egXML>
-    </tei:exemplum>-->
+    </tei:exemplum>
     
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    <tei:remarks>
+        <tei:p>Editors should keep in mind that the random variations that this imprecision map generates are additive. The values do not represent absolute tone durations but changes of already given tone durations. Hence, this does not overwrite articulation but adds variation to it. These variations are measured in milliseconds.</tei:p>
+    </tei:remarks>
 </tei:elementSpec>

@@ -6,6 +6,7 @@
     
     <tei:classes>
         <tei:memberOf key="att.time.physical.milliseconds.offset"/>
+        <tei:memberOf key="att.time.physical.milliseconds.timingBasis"/>
     </tei:classes>
     
 </tei:classSpec>

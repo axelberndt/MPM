@@ -2,24 +2,27 @@
 <tei:elementSpec ident="imprecisionMap.dynamics" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>imprecision map dynamics</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>This map is used to model random dynamics fluctuations.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
     </tei:classes>
     
     <tei:content>
         <tei:classRef key="model.distributionLike" minOccurs="0" maxOccurs="unbounded"/>
     </tei:content>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>The following dynamics imprecision map has only one entry, a Gaussian distribution starting at symbolic date 0.0 (the very beginning). This means that this distribution is applied throughout the whole musical piece. The distribution values are between -15.0 and 15.0. These are deviations that add to the underlying dynamics.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <imprecisionMap.dynamics>
+                <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/>
+            </imprecisionMap.dynamics>
         </egXML>
-    </tei:exemplum>-->
+    </tei:exemplum>
     
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    <tei:remarks>
+        <tei:p>Editors should keep in mind that the dynamics fluctuations are additive. At the end of the dynamics computation pipeline each musical event has a certain dynamics value. The distribution function applied in the <tei:gi>imprecisionMap.dynamics</tei:gi> adds a random offset to this. Hence, the distribution values are interpreted as relate (no absolute) dynamics values.</tei:p>
+    </tei:remarks>
 </tei:elementSpec>
