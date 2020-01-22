@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2020-01-21T16:09:44Z. .
+Schema generated from ODD source 2020-01-22T15:50:36Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -32,6 +32,17 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
             <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
          </data>
       </attribute>
+   </define>
+   <define name="mpm.att.id.attributes">
+      <ref name="mpm.att.id.attribute.xmlid"/>
+   </define>
+   <define name="mpm.att.id.attribute.xmlid">
+      <optional>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) This provides a unique identifier for the element bearing the attribute.</a:documentation>
+            <data type="ID"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mpm.att.name.attributes">
       <ref name="mpm.att.name.attribute.name"/>
@@ -102,8 +113,48 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <data type="double"/>
       </attribute>
    </define>
+   <define name="mpm.att.time.physical.milliseconds.timingBasis.attributes">
+      <ref name="mpm.att.time.physical.milliseconds.timingBasis.attribute.milliseconds.timingBasis"/>
+   </define>
+   <define name="mpm.att.time.physical.milliseconds.timingBasis.attribute.milliseconds.timingBasis">
+      <attribute name="milliseconds.timingBasis">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(timing basis in milliseconds) defines the timing basis in milliseconds.</a:documentation>
+         <data type="double">
+            <param name="minExclusive">0.0</param>
+         </data>
+      </attribute>
+   </define>
+   <define name="mpm.att.distribution.limits.attributes">
+      <ref name="mpm.att.distribution.limits.attribute.limit.lower"/>
+      <ref name="mpm.att.distribution.limits.attribute.limit.upper"/>
+   </define>
+   <define name="mpm.att.distribution.limits.attribute.limit.lower">
+      <attribute name="limit.lower">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lower limit) defines the lowest possible value.</a:documentation>
+         <data type="double"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.distribution.limits.attribute.limit.upper">
+      <attribute name="limit.upper">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(limit.upper) defines the highest possible value.</a:documentation>
+         <data type="double"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.distribution.deviation.standard.attributes">
+      <ref name="mpm.att.distribution.deviation.standard.attribute.deviation.standard"/>
+   </define>
+   <define name="mpm.att.distribution.deviation.standard.attribute.deviation.standard">
+      <attribute name="deviation.standard">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(standard deviation) defines the standard deviation.</a:documentation>
+         <data type="double"/>
+      </attribute>
+   </define>
    <define name="mpm.model.distributionLike">
-      <notAllowed/>
+      <choice>
+         <ref name="mpm.distribution.uniform"/>
+         <ref name="mpm.distribution.gaussian"/>
+         <ref name="mpm.distribution.correlated.brownianNoise"/>
+      </choice>
    </define>
    <define name="mpm.mpm">
       <element name="mpm" ns="http://www.cemfi.de/mpm/ns/1.0">
@@ -140,6 +191,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
             <ref name="mpm.part"/>
          </zeroOrMore>
          <ref name="mpm.att.name.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
          <ref name="mpm.att.pulsesPerQuarter.attributes"/>
          <empty/>
       </element>
@@ -158,6 +210,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <ref name="mpm.dated"/>
          <ref name="mpm.att.name.attributes"/>
          <ref name="mpm.att.number.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
          <ref name="mpm.att.midiRouting.attributes"/>
          <empty/>
       </element>
@@ -227,37 +280,49 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.articulationStyles">
       <element name="articulationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation style collection) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.dynamicsStyles">
       <element name="dynamicsStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamics style collection) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.metricalAccentuationStyles">
       <element name="metricalAccentuationStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collection of styles for metrical accentuation) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.rubatoStyles">
       <element name="rubatoStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rubato style collection) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.tempoStyles">
       <element name="tempoStyles" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(teampo style collection) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.articulationMap">
       <element name="articulationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation map) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.asynchronyMap">
@@ -266,6 +331,8 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <zeroOrMore>
             <ref name="mpm.asynchrony"/>
          </zeroOrMore>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.asynchrony">
@@ -274,71 +341,140 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
          <ref name="mpm.att.time.symbolic.date.attributes"/>
          <ref name="mpm.att.time.physical.milliseconds.offset.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
          <empty/>
       </element>
    </define>
    <define name="mpm.dynamicsMap">
       <element name="dynamicsMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamics map) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.metricalAccentuationMap">
       <element name="metricalAccentuationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical accentuation map) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.tempoMap">
       <element name="tempoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tempo map) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.rubatoMap">
       <element name="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rubato map) ...</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <empty/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.imprecisionMap">
       <element name="imprecisionMap" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map) ...</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map) This map is used to model random fluctuations. The domain, however, is unspecified.</a:documentation>
          <zeroOrMore>
             <ref name="mpm.model.distributionLike"/>
          </zeroOrMore>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.imprecisionMap.timing">
       <element name="imprecisionMap.timing" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map timing) ...</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map timing) This map is used to model random timing/rhythmical fluctuations.</a:documentation>
          <zeroOrMore>
             <ref name="mpm.model.distributionLike"/>
          </zeroOrMore>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.imprecisionMap.dynamics">
       <element name="imprecisionMap.dynamics" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map dynamics) ...</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map dynamics) This map is used to model random dynamics fluctuations.</a:documentation>
          <zeroOrMore>
             <ref name="mpm.model.distributionLike"/>
          </zeroOrMore>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.imprecisionMap.toneduration">
       <element name="imprecisionMap.toneduration" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map tone duration) ...</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map tone duration) This map is used to model random imprecision in articulation/tone duration.</a:documentation>
          <zeroOrMore>
             <ref name="mpm.model.distributionLike"/>
          </zeroOrMore>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="mpm.imprecisionMap.tuning">
       <element name="imprecisionMap.tuning" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map tuning) ...</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(imprecision map tuning) This map is used to model random fluctuations in tuning.</a:documentation>
          <zeroOrMore>
             <ref name="mpm.model.distributionLike"/>
          </zeroOrMore>
+         <ref name="mpm.att.id.attributes"/>
+         <attribute name="detuneUnit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(detune unit) specifies the measure of detuning.</a:documentation>
+            <choice>
+               <value>cents</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Hz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Hertz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.uniform">
+      <element name="distribution.uniform" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(uniform distribution) This defines a uniform distribution within the specified limits (inclusive).</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.distribution.limits.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.gaussian">
+      <element name="distribution.gaussian" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(gaussian distribution) This defines a gaussian distribution. Its expectation value is 0.0. Attributes limit.lower and limit.upper are used to limit the range of random values.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.distribution.deviation.standard.attributes"/>
+         <ref name="mpm.att.distribution.limits.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.correlated.brownianNoise">
+      <element name="distribution.correlated.brownianNoise"
+               ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Brownian noise distribution) This defines a correlated distribution based on Brownian noise.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.distribution.limits.attributes"/>
+         <ref name="mpm.att.time.physical.milliseconds.timingBasis.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <attribute name="stepWidth.max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(maximum step width) specifies the maximum value change width from one time step to the next.</a:documentation>
+            <data type="double">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+         <empty/>
       </element>
    </define>
    <start>

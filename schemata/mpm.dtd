@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2020-01-21T16:09:47Z. .This material is dual-licensed.
+DTD generated from ODD source 2020-01-22T15:50:40Z. .This material is dual-licensed.
 [http://creativecommons.org/licenses/by-sa/4.0/] Distributed under Creative Commons Attribution-ShareAlike 4.0 License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2020 Axel Berndt. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. In the MPM format definition we make use of the TEI ODD format that is published under CC-BY-3.0 and BSD-2.0. MPM material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC BY-SA and BSD-2 licences. The CC BY-SA licence is generally appropriate for usages which treat MPM content as data or documentation. The BSD-2 licence is generally appropriate for usage of MPM content in a software environment. For further information or clarification, please contact the Axel Berndt.
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
@@ -25,11 +25,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
 <!ENTITY % model.mapLike_sequenceOptional "articulationMap?, asynchronyMap?, dynamicsMap?, metricalAccentuationMap?, tempoMap?, rubatoMap?, imprecisionMap?, imprecisionMap.timing?, imprecisionMap.dynamics?, imprecisionMap.toneduration?, imprecisionMap.tuning?"> 
 <!ENTITY % model.mapLike_sequenceOptionalRepeatable "articulationMap*, asynchronyMap*, dynamicsMap*, metricalAccentuationMap*, tempoMap*, rubatoMap*, imprecisionMap*, imprecisionMap.timing*, imprecisionMap.dynamics*, imprecisionMap.toneduration*, imprecisionMap.tuning*"> 
 <!ENTITY % model.mapLike_sequenceRepeatable "articulationMap+, asynchronyMap+, dynamicsMap+, metricalAccentuationMap+, tempoMap+, rubatoMap+, imprecisionMap+, imprecisionMap.timing+, imprecisionMap.dynamics+, imprecisionMap.toneduration+, imprecisionMap.tuning+"> 
-<!ENTITY % model.distributionLike ""> 
-<!ENTITY % model.distributionLike_sequence ""> 
-<!ENTITY % model.distributionLike_sequenceOptional ""> 
-<!ENTITY % model.distributionLike_sequenceOptionalRepeatable ""> 
-<!ENTITY % model.distributionLike_sequenceRepeatable ""> 
+<!ENTITY % model.distributionLike "distribution.uniform |distribution.gaussian |distribution.correlated.brownianNoise"> 
+<!ENTITY % model.distributionLike_sequence "distribution.uniform, distribution.gaussian, distribution.correlated.brownianNoise"> 
+<!ENTITY % model.distributionLike_sequenceOptional "distribution.uniform?, distribution.gaussian?, distribution.correlated.brownianNoise?"> 
+<!ENTITY % model.distributionLike_sequenceOptionalRepeatable "distribution.uniform*, distribution.gaussian*, distribution.correlated.brownianNoise*"> 
+<!ENTITY % model.distributionLike_sequenceRepeatable "distribution.uniform+, distribution.gaussian+, distribution.correlated.brownianNoise+"> 
 <!-- end of predeclared classes -->
 
 <!ENTITY % mpm.att.reference.resource.attribute.uri '
@@ -40,6 +40,10 @@ type CDATA #REQUIRED'>
 <!ENTITY % mpm.att.reference.resource.attributes '
  %mpm.att.reference.resource.attribute.uri;
  %mpm.att.reference.resource.attribute.type;'> 
+<!ENTITY % mpm.att.id.attribute.xmlid '
+xml:id ID #IMPLIED'>
+<!ENTITY % mpm.att.id.attributes '
+ %mpm.att.id.attribute.xmlid;'> 
 <!ENTITY % mpm.att.name.attribute.name '
 name CDATA #REQUIRED'>
 <!ENTITY % mpm.att.name.attributes '
@@ -68,6 +72,22 @@ date CDATA #REQUIRED'>
 milliseconds.offset CDATA #REQUIRED'>
 <!ENTITY % mpm.att.time.physical.milliseconds.offset.attributes '
  %mpm.att.time.physical.milliseconds.offset.attribute.milliseconds.offset;'> 
+<!ENTITY % mpm.att.time.physical.milliseconds.timingBasis.attribute.milliseconds.timingBasis '
+milliseconds.timingBasis CDATA #REQUIRED'>
+<!ENTITY % mpm.att.time.physical.milliseconds.timingBasis.attributes '
+ %mpm.att.time.physical.milliseconds.timingBasis.attribute.milliseconds.timingBasis;'> 
+<!ENTITY % mpm.att.distribution.limits.attribute.limit.lower '
+limit.lower CDATA #REQUIRED'>
+
+<!ENTITY % mpm.att.distribution.limits.attribute.limit.upper '
+limit.upper CDATA #REQUIRED'>
+<!ENTITY % mpm.att.distribution.limits.attributes '
+ %mpm.att.distribution.limits.attribute.limit.lower;
+ %mpm.att.distribution.limits.attribute.limit.upper;'> 
+<!ENTITY % mpm.att.distribution.deviation.standard.attribute.deviation.standard '
+deviation.standard CDATA #REQUIRED'>
+<!ENTITY % mpm.att.distribution.deviation.standard.attributes '
+ %mpm.att.distribution.deviation.standard.attribute.deviation.standard;'> 
 <!ENTITY % model.partContent "header |dated"> 
 <!ENTITY % model.partContent_sequence "header, dated"> 
 <!ENTITY % model.partContent_sequenceOptional "header?, dated?"> 
@@ -83,64 +103,114 @@ milliseconds.offset CDATA #REQUIRED'>
 <!ENTITY % model.mapLike_sequenceOptional "articulationMap?, asynchronyMap?, dynamicsMap?, metricalAccentuationMap?, tempoMap?, rubatoMap?, imprecisionMap?, imprecisionMap.timing?, imprecisionMap.dynamics?, imprecisionMap.toneduration?, imprecisionMap.tuning?"> 
 <!ENTITY % model.mapLike_sequenceOptionalRepeatable "articulationMap*, asynchronyMap*, dynamicsMap*, metricalAccentuationMap*, tempoMap*, rubatoMap*, imprecisionMap*, imprecisionMap.timing*, imprecisionMap.dynamics*, imprecisionMap.toneduration*, imprecisionMap.tuning*"> 
 <!ENTITY % model.mapLike_sequenceRepeatable "articulationMap+, asynchronyMap+, dynamicsMap+, metricalAccentuationMap+, tempoMap+, rubatoMap+, imprecisionMap+, imprecisionMap.timing+, imprecisionMap.dynamics+, imprecisionMap.toneduration+, imprecisionMap.tuning+"> 
-<!ENTITY % model.distributionLike ""> 
-<!ENTITY % model.distributionLike_sequence ""> 
-<!ENTITY % model.distributionLike_sequenceOptional ""> 
-<!ENTITY % model.distributionLike_sequenceOptionalRepeatable ""> 
-<!ENTITY % model.distributionLike_sequenceRepeatable ""> 
+<!ENTITY % model.distributionLike "distribution.uniform |distribution.gaussian |distribution.correlated.brownianNoise"> 
+<!ENTITY % model.distributionLike_sequence "distribution.uniform, distribution.gaussian, distribution.correlated.brownianNoise"> 
+<!ENTITY % model.distributionLike_sequenceOptional "distribution.uniform?, distribution.gaussian?, distribution.correlated.brownianNoise?"> 
+<!ENTITY % model.distributionLike_sequenceOptionalRepeatable "distribution.uniform*, distribution.gaussian*, distribution.correlated.brownianNoise*"> 
+<!ENTITY % model.distributionLike_sequenceRepeatable "distribution.uniform+, distribution.gaussian+, distribution.correlated.brownianNoise+"> 
 <!-- start elements -->
 
 <!--doc:(articulation map) ... -->
 <!ELEMENT articulationMap  EMPTY>
 <!ATTLIST articulationMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST articulationMap
+ %mpm.att.id.attributes; >
 <!--doc:(articulation style collection) ... -->
 <!ELEMENT articulationStyles  EMPTY>
 <!ATTLIST articulationStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST articulationStyles
+ %mpm.att.id.attributes; >
 <!--doc:(asynchrony) This element sets a constant milliseconds offset starting a the musical position specified via attribute date ans lasting until the subsequent asynchrony element in the asynchronyMap specifies a different offset. -->
 <!ELEMENT asynchrony  EMPTY>
 <!ATTLIST asynchrony xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST asynchrony
  %mpm.att.time.symbolic.date.attributes;
- %mpm.att.time.physical.milliseconds.offset.attributes; >
+ %mpm.att.time.physical.milliseconds.offset.attributes;
+ %mpm.att.id.attributes; >
 <!--doc:(asynchrony map) The asynchronyMap is used to specify timing offsets/delays of a musical part or group of parts. -->
 <!ELEMENT asynchronyMap (asynchrony)*>
 <!ATTLIST asynchronyMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST asynchronyMap
+ %mpm.att.id.attributes; >
 <!--doc:(dated information) The dated environment is the place for all datable information, ie. that are located at a specific position in time. They are organised in maps. Each map represents a specific domain, such as tempo, rubato, asynchrony, dynamics, metrical accentuation, articulation, etc. -->
 <!ELEMENT dated (%model.mapLike_sequenceOptional;)?>
 <!ATTLIST dated xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!--doc:(Brownian noise distribution) This defines a correlated distribution based on Brownian noise. -->
+<!ELEMENT distribution.correlated.brownianNoise  EMPTY>
+<!ATTLIST distribution.correlated.brownianNoise xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST distribution.correlated.brownianNoise
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.distribution.limits.attributes;
+ %mpm.att.time.physical.milliseconds.timingBasis.attributes;
+ %mpm.att.id.attributes;
+stepWidth.max CDATA #REQUIRED >
+<!--doc:(gaussian distribution) This defines a gaussian distribution. Its expectation value is 0.0. Attributes limit.lower and limit.upper are used to limit the range of random values. -->
+<!ELEMENT distribution.gaussian  EMPTY>
+<!ATTLIST distribution.gaussian xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST distribution.gaussian
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.distribution.deviation.standard.attributes;
+ %mpm.att.distribution.limits.attributes;
+ %mpm.att.id.attributes; >
+<!--doc:(uniform distribution) This defines a uniform distribution within the specified limits (inclusive). -->
+<!ELEMENT distribution.uniform  EMPTY>
+<!ATTLIST distribution.uniform xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST distribution.uniform
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.distribution.limits.attributes;
+ %mpm.att.id.attributes; >
 <!--doc:(dynamics map) ... -->
 <!ELEMENT dynamicsMap  EMPTY>
 <!ATTLIST dynamicsMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST dynamicsMap
+ %mpm.att.id.attributes; >
 <!--doc:(dynamics style collection) ... -->
 <!ELEMENT dynamicsStyles  EMPTY>
 <!ATTLIST dynamicsStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST dynamicsStyles
+ %mpm.att.id.attributes; >
 <!--doc:(global performance data) This element includes all information that apply to all parts of a musical performance. -->
 <!ELEMENT global (%model.partContent_sequence;)>
 <!ATTLIST global xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!--doc:(header information) The header environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, such as style definitions. -->
 <!ELEMENT header (%model.styleCollectionLike_sequenceOptional;)?>
 <!ATTLIST header xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
-<!--doc:(imprecision map) ... -->
-<!ELEMENT imprecisionMap (_DUMMY_model.distributionLike)*>
+<!--doc:(imprecision map) This map is used to model random fluctuations. The domain, however, is unspecified. -->
+<!ELEMENT imprecisionMap (%model.distributionLike;)*>
 <!ATTLIST imprecisionMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
-<!--doc:(imprecision map dynamics) ... -->
-<!ELEMENT imprecisionMap.dynamics (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap
+ %mpm.att.id.attributes; >
+<!--doc:(imprecision map dynamics) This map is used to model random dynamics fluctuations. -->
+<!ELEMENT imprecisionMap.dynamics (%model.distributionLike;)*>
 <!ATTLIST imprecisionMap.dynamics xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
-<!--doc:(imprecision map timing) ... -->
-<!ELEMENT imprecisionMap.timing (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.dynamics
+ %mpm.att.id.attributes; >
+<!--doc:(imprecision map timing) This map is used to model random timing/rhythmical fluctuations. -->
+<!ELEMENT imprecisionMap.timing (%model.distributionLike;)*>
 <!ATTLIST imprecisionMap.timing xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
-<!--doc:(imprecision map tone duration) ... -->
-<!ELEMENT imprecisionMap.toneduration (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.timing
+ %mpm.att.id.attributes; >
+<!--doc:(imprecision map tone duration) This map is used to model random imprecision in articulation/tone duration. -->
+<!ELEMENT imprecisionMap.toneduration (%model.distributionLike;)*>
 <!ATTLIST imprecisionMap.toneduration xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
-<!--doc:(imprecision map tuning) ... -->
-<!ELEMENT imprecisionMap.tuning (_DUMMY_model.distributionLike)*>
+<!ATTLIST imprecisionMap.toneduration
+ %mpm.att.id.attributes; >
+<!--doc:(imprecision map tuning) This map is used to model random fluctuations in tuning. -->
+<!ELEMENT imprecisionMap.tuning (%model.distributionLike;)*>
 <!ATTLIST imprecisionMap.tuning xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST imprecisionMap.tuning
+ %mpm.att.id.attributes;
+detuneUnit (cents|Hz|Hertz) #REQUIRED >
 <!--doc:(metrical accentuation map) ... -->
 <!ELEMENT metricalAccentuationMap  EMPTY>
 <!ATTLIST metricalAccentuationMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST metricalAccentuationMap
+ %mpm.att.id.attributes; >
 <!--doc:(collection of styles for metrical accentuation) ... -->
 <!ELEMENT metricalAccentuationStyles  EMPTY>
 <!ATTLIST metricalAccentuationStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST metricalAccentuationStyles
+ %mpm.att.id.attributes; >
 <!--doc:(MPM document) The root element of an MPM-conformant document. -->
 <!ELEMENT mpm (relatedResources)?(performance)+>
 <!ATTLIST mpm xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
@@ -150,12 +220,14 @@ milliseconds.offset CDATA #REQUIRED'>
 <!ATTLIST part
  %mpm.att.name.attributes;
  %mpm.att.number.attributes;
+ %mpm.att.id.attributes;
  %mpm.att.midiRouting.attributes; >
 <!--doc:(performance description) This element includes all information of a single musical performance. -->
 <!ELEMENT performance global(part)*>
 <!ATTLIST performance xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST performance
  %mpm.att.name.attributes;
+ %mpm.att.id.attributes;
  %mpm.att.pulsesPerQuarter.attributes; >
 <!--doc:(related resources) This element can be used to proved references to related resources of (musical) data. -->
 <!ELEMENT relatedResources (resource)+>
@@ -168,13 +240,21 @@ milliseconds.offset CDATA #REQUIRED'>
 <!--doc:(rubato map) ... -->
 <!ELEMENT rubatoMap  EMPTY>
 <!ATTLIST rubatoMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST rubatoMap
+ %mpm.att.id.attributes; >
 <!--doc:(rubato style collection) ... -->
 <!ELEMENT rubatoStyles  EMPTY>
 <!ATTLIST rubatoStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST rubatoStyles
+ %mpm.att.id.attributes; >
 <!--doc:(tempo map) ... -->
 <!ELEMENT tempoMap  EMPTY>
 <!ATTLIST tempoMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST tempoMap
+ %mpm.att.id.attributes; >
 <!--doc:(teampo style collection) ... -->
 <!ELEMENT tempoStyles  EMPTY>
 <!ATTLIST tempoStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST tempoStyles
+ %mpm.att.id.attributes; >
 <!-- end elements -->
