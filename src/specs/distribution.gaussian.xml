@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tei:elementSpec ident="distribution.gaussian" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>gaussian distribution</tei:gloss>
+    <tei:gloss>Gaussian distribution</tei:gloss>
     
-    <tei:desc>This defines a gaussian distribution. Its expectation value is 0.0. Attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att> are used to limit the range of random values.</tei:desc>
+    <tei:desc>This defines a gaussian distribution. Its expectation value is 0.0. Attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att> are used to clip the range of random values.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="att.time.symbolic.date"/>
-        <tei:memberOf key="att.distribution.deviation.standard"/>
         <tei:memberOf key="att.distribution.limits"/>
         <tei:memberOf key="att.id"/>
         <tei:memberOf key="model.distributionLike"/>
@@ -15,6 +14,16 @@
     <tei:content>
         <tei:empty/>
     </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="deviation.standard" usage="req">
+            <tei:gloss>standard deviation</tei:gloss>
+            <tei:desc>defines the standard deviation.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
     
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">

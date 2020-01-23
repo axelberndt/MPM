@@ -81,8 +81,8 @@
                     <xinclude:include href="specs/att.time.physical.xml"/>
                     <xinclude:include href="specs/att.time.physical.milliseconds.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.milliseconds.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.distribution.clips.xml"/>
                     <xinclude:include href="specs/att.distribution.limits.xml"/>
-                    <xinclude:include href="specs/att.distribution.deviation.standard.xml"/>
                     
                     <!-- the model classes -->
                     <xinclude:include href="specs/model.partContentLike.xml"/>
@@ -122,7 +122,9 @@
                     <xinclude:include href="specs/imprecisionMap.tuning.xml"/>
                         <xinclude:include href="specs/distribution.uniform.xml"/>
                         <xinclude:include href="specs/distribution.gaussian.xml"/>
+                        <xinclude:include href="specs/distribution.triangular.xml"/>
                         <xinclude:include href="specs/distribution.correlated.brownianNoise.xml"/>
+                        <xinclude:include href="specs/distribution.correlated.compensatingTriangle.xml"/>
                     
                 </tei:schemaSpec>
             </tei:div>

@@ -17,7 +17,7 @@
         <tei:p>The following timing imprecision map starts with a Compensating Triangle Distribution. The values of <tei:att>limit.lower</tei:att>, <tei:att>limit.upper</tei:att>, <tei:att>value.min</tei:att>, and <tei:att>value.max</tei:att> are interpreted in milliseconds. Thus, this creates timing fluctuations (rhythmic offsets) of +/- 80.0 milliseconds. This is also true for the uniform distribution that follows at symbolic date 256,490.0 but generates a clearly different type of fluctuations.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <imprecisionMap.timing>
-                <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" value.min="-80.0" value.max="80.0" milliseconds.timingBasis="300.0"/>
+                <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/>
                 <distribution.uniform date="256490.0" limit.lower="-80.0" limit.upper="80.0"/>
             </imprecisionMap.timing>
         </egXML>

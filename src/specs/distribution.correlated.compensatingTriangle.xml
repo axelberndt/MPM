@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="distribution.correlated.compensatingTriangle" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>Compensating Triangle Distribution</tei:gloss>
+    
+    <tei:desc>This defines a Compensating Triangle Distribution.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.distribution.limits"/>
+        <tei:memberOf key="att.distribution.clips"/>
+        <tei:memberOf key="att.time.physical.milliseconds.timingBasis"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.distributionLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="degreeOfCorrelation" usage="req">
+            <tei:gloss>degree of correlation</tei:gloss>
+            <tei:desc>The higher this value the more correlated is the random number series, i.e. the more does a random value depend on its predecessors in the series.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>The value of this attribute must be >=0.0. To prevent outliers in the random number output (beyond the lower and upper limit) this value should also be set >=1.0. 1.0 keeps the triangle's left and right edge at the lower and upper limit. The greater this value, the narrower is the triangle while wandering around between the limits.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>The following can be used to create plausible timing fluctuations in polyphonic music.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>Compensating Triangle Distribution is a custom type of distribution. A detailed documentation will follow soon.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

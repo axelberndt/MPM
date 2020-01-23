@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2020-01-22T15:50:36Z. .
+Schema generated from ODD source 2020-01-23T10:31:21Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -124,6 +124,22 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </data>
       </attribute>
    </define>
+   <define name="mpm.att.distribution.clips.attributes">
+      <ref name="mpm.att.distribution.clips.attribute.clip.lower"/>
+      <ref name="mpm.att.distribution.clips.attribute.clip.upper"/>
+   </define>
+   <define name="mpm.att.distribution.clips.attribute.clip.lower">
+      <attribute name="clip.lower">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lower limit) defines the lowest clipping border. If random values get below this they will be set to this value.</a:documentation>
+         <data type="double"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.distribution.clips.attribute.clip.upper">
+      <attribute name="clip.upper">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(limit.upper) defines the highest clipping border. Random values greater than this will be set to this value.</a:documentation>
+         <data type="double"/>
+      </attribute>
+   </define>
    <define name="mpm.att.distribution.limits.attributes">
       <ref name="mpm.att.distribution.limits.attribute.limit.lower"/>
       <ref name="mpm.att.distribution.limits.attribute.limit.upper"/>
@@ -136,16 +152,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="mpm.att.distribution.limits.attribute.limit.upper">
       <attribute name="limit.upper">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(limit.upper) defines the highest possible value.</a:documentation>
-         <data type="double"/>
-      </attribute>
-   </define>
-   <define name="mpm.att.distribution.deviation.standard.attributes">
-      <ref name="mpm.att.distribution.deviation.standard.attribute.deviation.standard"/>
-   </define>
-   <define name="mpm.att.distribution.deviation.standard.attribute.deviation.standard">
-      <attribute name="deviation.standard">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(standard deviation) defines the standard deviation.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(upper limit) defines the highest possible value.</a:documentation>
          <data type="double"/>
       </attribute>
    </define>
@@ -153,7 +160,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
       <choice>
          <ref name="mpm.distribution.uniform"/>
          <ref name="mpm.distribution.gaussian"/>
+         <ref name="mpm.distribution.triangular"/>
          <ref name="mpm.distribution.correlated.brownianNoise"/>
+         <ref name="mpm.distribution.correlated.compensatingTriangle"/>
       </choice>
    </define>
    <define name="mpm.mpm">
@@ -450,12 +459,30 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="mpm.distribution.gaussian">
       <element name="distribution.gaussian" ns="http://www.cemfi.de/mpm/ns/1.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(gaussian distribution) This defines a gaussian distribution. Its expectation value is 0.0. Attributes limit.lower and limit.upper are used to limit the range of random values.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Gaussian distribution) This defines a gaussian distribution. Its expectation value is 0.0. Attributes limit.lower and limit.upper are used to clip the range of random values.</a:documentation>
          <empty/>
          <ref name="mpm.att.time.symbolic.date.attributes"/>
-         <ref name="mpm.att.distribution.deviation.standard.attributes"/>
          <ref name="mpm.att.distribution.limits.attributes"/>
          <ref name="mpm.att.id.attributes"/>
+         <attribute name="deviation.standard">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(standard deviation) defines the standard deviation.</a:documentation>
+            <data type="double"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.triangular">
+      <element name="distribution.triangular" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(triangular distribution) This defines a triangular distribution.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.distribution.clips.attributes"/>
+         <ref name="mpm.att.distribution.limits.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <attribute name="mode">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mode) defines the mode of the triangular distribution, i.e. the position of the triangle's peak.</a:documentation>
+            <data type="double"/>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -470,6 +497,25 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <ref name="mpm.att.id.attributes"/>
          <attribute name="stepWidth.max">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(maximum step width) specifies the maximum value change width from one time step to the next.</a:documentation>
+            <data type="double">
+               <param name="minInclusive">0.0</param>
+            </data>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.correlated.compensatingTriangle">
+      <element name="distribution.correlated.compensatingTriangle"
+               ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Compensating Triangle Distribution) This defines a Compensating Triangle Distribution.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.distribution.limits.attributes"/>
+         <ref name="mpm.att.distribution.clips.attributes"/>
+         <ref name="mpm.att.time.physical.milliseconds.timingBasis.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <attribute name="degreeOfCorrelation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(degree of correlation) The higher this value the more correlated is the random number series, i.e. the more does a random value depend on its predecessors in the series.</a:documentation>
             <data type="double">
                <param name="minInclusive">0.0</param>
             </data>

@@ -17,7 +17,7 @@
         <tei:p>The following tone duration imprecision map varies the tone durations by up to -30.0 milliseconds.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <imprecisionMap.toneduration>
-                <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" value.min="-30.0" value.max="0.0"/>
+                <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0"/>
             </imprecisionMap.toneduration>
         </egXML>
     </tei:exemplum>
