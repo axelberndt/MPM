@@ -1,4 +1,4 @@
-![](https://github.com/cemfi/meico/blob/master/figures/mpmLogo.png)
+![](https://github.com/axelberndt/MPM/blob/master/figures/mpmLogo.png)
 
 # Music Performance Markup (MPM)
 
