@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="distribution.list" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>distribution list</tei:gloss>
+    
+    <tei:desc>This defines a list of distribution values.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.time.physical.milliseconds.timingBasis"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.distributionLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:elementRef key="measurement" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>This example shows a distribution list that captures dynamics fluctuations.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <imprecisionMap.dynamics>
+                <distribution.list date="0.0" timingBasis.milliseconds="300.0">
+                    <measurement value="2.7"/>
+                    <measurement value="6.67"/>
+                    <measurement value="10.45"/>
+                    <measurement value="-7.13"/>
+                    <measurement value="3.2"/>
+                    <measurement value="-2.63"/>
+                    <measurement value="-8.4"/>
+                    <measurement value="6.0"/>
+                    <!-- ... -->
+                </distribution.list>
+            </imprecisionMap.dynamics>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>Distribution lists are deterministic alternatives to stochastic distributions. Instead of random values a distribution list contains a fixed sequence of values that can be applied in any type of imprecision map.</tei:p>
+    </tei:remarks>
+    
+    <tei:remarks>
+        <tei:p>A typical scenario for the usage of a distribution list is the following. During timing analysis of a music recording we already created a global <tei:gi>tempoMap</tei:gi> and a local <tei:gi>rubatoMap</tei:gi> for a musician. But there are still timing offsets left that we cannot (yet) explain systematically. We put these offsets into a distribution list for further analysis and to reproduce them during performance rendering. It is important to set the timing basis (the milliseconds length of one measurement sample) as fine as necessary as these lists can become very long.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

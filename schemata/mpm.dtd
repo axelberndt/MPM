@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2020-01-23T10:31:23Z. .This material is dual-licensed.
+DTD generated from ODD source 2020-01-24T15:06:54Z. .This material is dual-licensed.
 [http://creativecommons.org/licenses/by-sa/4.0/] Distributed under Creative Commons Attribution-ShareAlike 4.0 License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2020 Axel Berndt. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. In the MPM format definition we make use of the TEI ODD format that is published under CC-BY-3.0 and BSD-2.0. MPM material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC BY-SA and BSD-2 licences. The CC BY-SA licence is generally appropriate for usages which treat MPM content as data or documentation. The BSD-2 licence is generally appropriate for usage of MPM content in a software environment. For further information or clarification, please contact the Axel Berndt.
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
@@ -25,11 +25,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
 <!ENTITY % model.mapLike_sequenceOptional "articulationMap?, asynchronyMap?, dynamicsMap?, metricalAccentuationMap?, tempoMap?, rubatoMap?, imprecisionMap?, imprecisionMap.timing?, imprecisionMap.dynamics?, imprecisionMap.toneduration?, imprecisionMap.tuning?"> 
 <!ENTITY % model.mapLike_sequenceOptionalRepeatable "articulationMap*, asynchronyMap*, dynamicsMap*, metricalAccentuationMap*, tempoMap*, rubatoMap*, imprecisionMap*, imprecisionMap.timing*, imprecisionMap.dynamics*, imprecisionMap.toneduration*, imprecisionMap.tuning*"> 
 <!ENTITY % model.mapLike_sequenceRepeatable "articulationMap+, asynchronyMap+, dynamicsMap+, metricalAccentuationMap+, tempoMap+, rubatoMap+, imprecisionMap+, imprecisionMap.timing+, imprecisionMap.dynamics+, imprecisionMap.toneduration+, imprecisionMap.tuning+"> 
-<!ENTITY % model.distributionLike "distribution.uniform |distribution.gaussian |distribution.triangular |distribution.correlated.brownianNoise |distribution.correlated.compensatingTriangle"> 
-<!ENTITY % model.distributionLike_sequence "distribution.uniform, distribution.gaussian, distribution.triangular, distribution.correlated.brownianNoise, distribution.correlated.compensatingTriangle"> 
-<!ENTITY % model.distributionLike_sequenceOptional "distribution.uniform?, distribution.gaussian?, distribution.triangular?, distribution.correlated.brownianNoise?, distribution.correlated.compensatingTriangle?"> 
-<!ENTITY % model.distributionLike_sequenceOptionalRepeatable "distribution.uniform*, distribution.gaussian*, distribution.triangular*, distribution.correlated.brownianNoise*, distribution.correlated.compensatingTriangle*"> 
-<!ENTITY % model.distributionLike_sequenceRepeatable "distribution.uniform+, distribution.gaussian+, distribution.triangular+, distribution.correlated.brownianNoise+, distribution.correlated.compensatingTriangle+"> 
+<!ENTITY % model.distributionLike "distribution.uniform |distribution.gaussian |distribution.triangular |distribution.correlated.brownianNoise |distribution.correlated.compensatingTriangle |distribution.list"> 
+<!ENTITY % model.distributionLike_sequence "distribution.uniform, distribution.gaussian, distribution.triangular, distribution.correlated.brownianNoise, distribution.correlated.compensatingTriangle, distribution.list"> 
+<!ENTITY % model.distributionLike_sequenceOptional "distribution.uniform?, distribution.gaussian?, distribution.triangular?, distribution.correlated.brownianNoise?, distribution.correlated.compensatingTriangle?, distribution.list?"> 
+<!ENTITY % model.distributionLike_sequenceOptionalRepeatable "distribution.uniform*, distribution.gaussian*, distribution.triangular*, distribution.correlated.brownianNoise*, distribution.correlated.compensatingTriangle*, distribution.list*"> 
+<!ENTITY % model.distributionLike_sequenceRepeatable "distribution.uniform+, distribution.gaussian+, distribution.triangular+, distribution.correlated.brownianNoise+, distribution.correlated.compensatingTriangle+, distribution.list+"> 
 <!-- end of predeclared classes -->
 
 <!ENTITY % mpm.att.reference.resource.attribute.uri '
@@ -40,6 +40,10 @@ type CDATA #REQUIRED'>
 <!ENTITY % mpm.att.reference.resource.attributes '
  %mpm.att.reference.resource.attribute.uri;
  %mpm.att.reference.resource.attribute.type;'> 
+<!ENTITY % mpm.att.reference.name.attribute.name.ref '
+name.ref CDATA #IMPLIED'>
+<!ENTITY % mpm.att.reference.name.attributes '
+ %mpm.att.reference.name.attribute.name.ref;'> 
 <!ENTITY % mpm.att.id.attribute.xmlid '
 xml:id ID #IMPLIED'>
 <!ENTITY % mpm.att.id.attributes '
@@ -52,6 +56,10 @@ name CDATA #REQUIRED'>
 number CDATA #REQUIRED'>
 <!ENTITY % mpm.att.number.attributes '
  %mpm.att.number.attribute.number;'> 
+<!ENTITY % mpm.att.value.double.attribute.value '
+value CDATA #REQUIRED'>
+<!ENTITY % mpm.att.value.double.attributes '
+ %mpm.att.value.double.attribute.value;'> 
 <!ENTITY % mpm.att.midiRouting.attribute.midi.channel '
 midi.channel CDATA #REQUIRED'>
 
@@ -107,15 +115,15 @@ limit.upper CDATA #REQUIRED'>
 <!ENTITY % model.mapLike_sequenceOptional "articulationMap?, asynchronyMap?, dynamicsMap?, metricalAccentuationMap?, tempoMap?, rubatoMap?, imprecisionMap?, imprecisionMap.timing?, imprecisionMap.dynamics?, imprecisionMap.toneduration?, imprecisionMap.tuning?"> 
 <!ENTITY % model.mapLike_sequenceOptionalRepeatable "articulationMap*, asynchronyMap*, dynamicsMap*, metricalAccentuationMap*, tempoMap*, rubatoMap*, imprecisionMap*, imprecisionMap.timing*, imprecisionMap.dynamics*, imprecisionMap.toneduration*, imprecisionMap.tuning*"> 
 <!ENTITY % model.mapLike_sequenceRepeatable "articulationMap+, asynchronyMap+, dynamicsMap+, metricalAccentuationMap+, tempoMap+, rubatoMap+, imprecisionMap+, imprecisionMap.timing+, imprecisionMap.dynamics+, imprecisionMap.toneduration+, imprecisionMap.tuning+"> 
-<!ENTITY % model.distributionLike "distribution.uniform |distribution.gaussian |distribution.triangular |distribution.correlated.brownianNoise |distribution.correlated.compensatingTriangle"> 
-<!ENTITY % model.distributionLike_sequence "distribution.uniform, distribution.gaussian, distribution.triangular, distribution.correlated.brownianNoise, distribution.correlated.compensatingTriangle"> 
-<!ENTITY % model.distributionLike_sequenceOptional "distribution.uniform?, distribution.gaussian?, distribution.triangular?, distribution.correlated.brownianNoise?, distribution.correlated.compensatingTriangle?"> 
-<!ENTITY % model.distributionLike_sequenceOptionalRepeatable "distribution.uniform*, distribution.gaussian*, distribution.triangular*, distribution.correlated.brownianNoise*, distribution.correlated.compensatingTriangle*"> 
-<!ENTITY % model.distributionLike_sequenceRepeatable "distribution.uniform+, distribution.gaussian+, distribution.triangular+, distribution.correlated.brownianNoise+, distribution.correlated.compensatingTriangle+"> 
+<!ENTITY % model.distributionLike "distribution.uniform |distribution.gaussian |distribution.triangular |distribution.correlated.brownianNoise |distribution.correlated.compensatingTriangle |distribution.list"> 
+<!ENTITY % model.distributionLike_sequence "distribution.uniform, distribution.gaussian, distribution.triangular, distribution.correlated.brownianNoise, distribution.correlated.compensatingTriangle, distribution.list"> 
+<!ENTITY % model.distributionLike_sequenceOptional "distribution.uniform?, distribution.gaussian?, distribution.triangular?, distribution.correlated.brownianNoise?, distribution.correlated.compensatingTriangle?, distribution.list?"> 
+<!ENTITY % model.distributionLike_sequenceOptionalRepeatable "distribution.uniform*, distribution.gaussian*, distribution.triangular*, distribution.correlated.brownianNoise*, distribution.correlated.compensatingTriangle*, distribution.list*"> 
+<!ENTITY % model.distributionLike_sequenceRepeatable "distribution.uniform+, distribution.gaussian+, distribution.triangular+, distribution.correlated.brownianNoise+, distribution.correlated.compensatingTriangle+, distribution.list+"> 
 <!-- start elements -->
 
 <!--doc:(articulation map) ... -->
-<!ELEMENT articulationMap  EMPTY>
+<!ELEMENT articulationMap ((style)*|(articulation)*)*>
 <!ATTLIST articulationMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST articulationMap
  %mpm.att.id.attributes; >
@@ -166,6 +174,13 @@ degreeOfCorrelation CDATA #REQUIRED >
  %mpm.att.distribution.limits.attributes;
  %mpm.att.id.attributes;
 deviation.standard CDATA #REQUIRED >
+<!--doc:(distribution list) This defines a list of distribution values. -->
+<!ELEMENT distribution.list (measurement)*>
+<!ATTLIST distribution.list xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST distribution.list
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.time.physical.milliseconds.timingBasis.attributes;
+ %mpm.att.id.attributes; >
 <!--doc:(triangular distribution) This defines a triangular distribution. -->
 <!ELEMENT distribution.triangular  EMPTY>
 <!ATTLIST distribution.triangular xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
@@ -183,7 +198,7 @@ mode CDATA #REQUIRED >
  %mpm.att.distribution.limits.attributes;
  %mpm.att.id.attributes; >
 <!--doc:(dynamics map) ... -->
-<!ELEMENT dynamicsMap  EMPTY>
+<!ELEMENT dynamicsMap ((style)*|(dynamics)*)*>
 <!ATTLIST dynamicsMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST dynamicsMap
  %mpm.att.id.attributes; >
@@ -224,8 +239,14 @@ mode CDATA #REQUIRED >
 <!ATTLIST imprecisionMap.tuning
  %mpm.att.id.attributes;
 detuneUnit (cents|Hz|Hertz) #REQUIRED >
+<!--doc:(measurement) This element represents a 64 bit floating-point list entry. -->
+<!ELEMENT measurement  EMPTY>
+<!ATTLIST measurement xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST measurement
+ %mpm.att.value.double.attributes;
+ %mpm.att.id.attributes; >
 <!--doc:(metrical accentuation map) ... -->
-<!ELEMENT metricalAccentuationMap  EMPTY>
+<!ELEMENT metricalAccentuationMap ((style)*|(accentuationPattern)*)*>
 <!ATTLIST metricalAccentuationMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST metricalAccentuationMap
  %mpm.att.id.attributes; >
@@ -261,7 +282,7 @@ detuneUnit (cents|Hz|Hertz) #REQUIRED >
 <!ATTLIST resource
  %mpm.att.reference.resource.attributes; >
 <!--doc:(rubato map) ... -->
-<!ELEMENT rubatoMap  EMPTY>
+<!ELEMENT rubatoMap ((style)*|(rubato)*)*>
 <!ATTLIST rubatoMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST rubatoMap
  %mpm.att.id.attributes; >
@@ -270,8 +291,26 @@ detuneUnit (cents|Hz|Hertz) #REQUIRED >
 <!ATTLIST rubatoStyles xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST rubatoStyles
  %mpm.att.id.attributes; >
+<!--doc:(style switch) This element is used to switch between styles which are defined in the global or local header environment via styleDef elements. -->
+<!ELEMENT style  EMPTY>
+<!ATTLIST style xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST style
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.id.attributes;
+name.ref CDATA #REQUIRED
+defaultArticulation CDATA #IMPLIED >
+<!--doc:(tempo) A tempo instruction -->
+<!ELEMENT tempo  EMPTY>
+<!ATTLIST tempo xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
+<!ATTLIST tempo
+ %mpm.att.time.symbolic.date.attributes;
+ %mpm.att.id.attributes;
+bpm CDATA #REQUIRED
+beatLength CDATA #REQUIRED
+transition.to CDATA #IMPLIED
+meanTempoAt CDATA #IMPLIED >
 <!--doc:(tempo map) ... -->
-<!ELEMENT tempoMap  EMPTY>
+<!ELEMENT tempoMap ((style)*|(tempo)*)*>
 <!ATTLIST tempoMap xmlns CDATA "http://www.cemfi.de/mpm/ns/1.0">
 <!ATTLIST tempoMap
  %mpm.att.id.attributes; >

@@ -69,9 +69,11 @@
 
                     <!-- the attribute classes -->
                     <xinclude:include href="specs/att.reference.resource.xml"/>
+                    <xinclude:include href="specs/att.reference.name.xml"/>
                     <xinclude:include href="specs/att.id.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.value.double.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
@@ -108,12 +110,14 @@
                     <xinclude:include href="specs/rubatoStyles.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
                     
+                    <xinclude:include href="specs/style.xml"/>
                     <xinclude:include href="specs/articulationMap.xml"/>
                     <xinclude:include href="specs/asynchronyMap.xml"/>
                         <xinclude:include href="specs/asynchrony.xml"/>
                     <xinclude:include href="specs/dynamicsMap.xml"/>
                     <xinclude:include href="specs/metricalAccentuationMap.xml"/>
                     <xinclude:include href="specs/tempoMap.xml"/>
+                        <xinclude:include href="specs/tempo.xml"/>
                     <xinclude:include href="specs/rubatoMap.xml"/>
                     <xinclude:include href="specs/imprecisionMap.xml"/>
                     <xinclude:include href="specs/imprecisionMap.timing.xml"/>
@@ -125,6 +129,8 @@
                         <xinclude:include href="specs/distribution.triangular.xml"/>
                         <xinclude:include href="specs/distribution.correlated.brownianNoise.xml"/>
                         <xinclude:include href="specs/distribution.correlated.compensatingTriangle.xml"/>
+                        <xinclude:include href="specs/distribution.list.xml"/>
+                            <xinclude:include href="specs/measurement.xml"/>
                     
                 </tei:schemaSpec>
             </tei:div>

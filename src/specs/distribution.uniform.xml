@@ -16,7 +16,6 @@
     </tei:content>
     
     <tei:exemplum>
-        <tei:p>...</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <distribution.uniform date="345.0" limit.lower="-10.0" limit.upper="35.6"/>
         </egXML>

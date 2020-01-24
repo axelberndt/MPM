@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.cemfi.de/mpm/ns/1.0"><!--
-Schema generated from ODD source 2020-01-23T10:31:21Z. .
+Schema generated from ODD source 2020-01-24T15:06:51Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -60,6 +60,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
       <attribute name="number">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(numeric identifier) This attribute should be used to specify an integer identifier for the element, which is not necessarily unique within the document.</a:documentation>
          <data type="integer"/>
+      </attribute>
+   </define>
+   <define name="mpm.att.value.double.attributes">
+      <ref name="mpm.att.value.double.attribute.value"/>
+   </define>
+   <define name="mpm.att.value.double.attribute.value">
+      <attribute name="value">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(numeric value) A 64 bit floating-point value.</a:documentation>
+         <data type="double"/>
       </attribute>
    </define>
    <define name="mpm.att.midiRouting.attributes">
@@ -163,6 +172,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <ref name="mpm.distribution.triangular"/>
          <ref name="mpm.distribution.correlated.brownianNoise"/>
          <ref name="mpm.distribution.correlated.compensatingTriangle"/>
+         <ref name="mpm.distribution.list"/>
       </choice>
    </define>
    <define name="mpm.mpm">
@@ -326,10 +336,35 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
+   <define name="mpm.style">
+      <element name="style" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(style switch) This element is used to switch between styles which are defined in the global or local header environment via styleDef elements.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <attribute name="name.ref">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name reference) This attribute should be used for references by name.</a:documentation>
+            <data type="string"/>
+         </attribute>
+         <optional>
+            <attribute name="defaultArticulation">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulationname reference) This attribute should be used to refer to an articulationDef.</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="mpm.articulationMap">
       <element name="articulationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation map) ...</a:documentation>
-         <empty/>
+         <zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mpm.style"/>
+               </zeroOrMore>
+            </choice>
+         </zeroOrMore>
          <ref name="mpm.att.id.attributes"/>
          <empty/>
       </element>
@@ -357,7 +392,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.dynamicsMap">
       <element name="dynamicsMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamics map) ...</a:documentation>
-         <empty/>
+         <zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mpm.style"/>
+               </zeroOrMore>
+            </choice>
+         </zeroOrMore>
          <ref name="mpm.att.id.attributes"/>
          <empty/>
       </element>
@@ -365,7 +406,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.metricalAccentuationMap">
       <element name="metricalAccentuationMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical accentuation map) ...</a:documentation>
-         <empty/>
+         <zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mpm.style"/>
+               </zeroOrMore>
+            </choice>
+         </zeroOrMore>
          <ref name="mpm.att.id.attributes"/>
          <empty/>
       </element>
@@ -373,15 +420,64 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <define name="mpm.tempoMap">
       <element name="tempoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tempo map) ...</a:documentation>
-         <empty/>
+         <zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mpm.style"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mpm.tempo"/>
+               </zeroOrMore>
+            </choice>
+         </zeroOrMore>
          <ref name="mpm.att.id.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.tempo">
+      <element name="tempo" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tempo) A tempo instruction</a:documentation>
+         <empty/>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <attribute name="bpm">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(beats per minute) The initial tempo of this instruction.</a:documentation>
+            <data type="string"/>
+         </attribute>
+         <attribute name="beatLength">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(beat length) The length of one beat in musical terms, e.g. quarter note=0.25, half note=0.5 etc. Without this, the tempi in beats per minute cannot be interpreted.</a:documentation>
+            <data type="double">
+               <param name="minExclusive">0.0</param>
+            </data>
+         </attribute>
+         <optional>
+            <attribute name="transition.to">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(target tempo) If this attribute is specified, the tempo instruction represents a continuous transition (accel., rit.) from the initial tempo (bpm) to the tempo given in this attribute.</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="meanTempoAt">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(relative position of the mean tempo) If attribute transition.to is specified and, thus, the element describes a continuous tempo transition (accel., rit.) the shape of the transition can be further refined by this attribute. Its value in the interval [0.0; 1.0] indicates the realtive position (symbolic time) between start and end of the tempo transition at which the half of the tempo change is achieved, i.e. the mean tempo is reached.</a:documentation>
+               <data type="double">
+                  <param name="minInclusive">0.0</param> 
+                  <param name="maxInclusive">1.0</param>
+               </data>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
    <define name="mpm.rubatoMap">
       <element name="rubatoMap" ns="http://www.cemfi.de/mpm/ns/1.0">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rubato map) ...</a:documentation>
-         <empty/>
+         <zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mpm.style"/>
+               </zeroOrMore>
+            </choice>
+         </zeroOrMore>
          <ref name="mpm.att.id.attributes"/>
          <empty/>
       </element>
@@ -520,6 +616,27 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
                <param name="minInclusive">0.0</param>
             </data>
          </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.distribution.list">
+      <element name="distribution.list" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(distribution list) This defines a list of distribution values.</a:documentation>
+         <zeroOrMore>
+            <ref name="mpm.measurement"/>
+         </zeroOrMore>
+         <ref name="mpm.att.time.symbolic.date.attributes"/>
+         <ref name="mpm.att.time.physical.milliseconds.timingBasis.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mpm.measurement">
+      <element name="measurement" ns="http://www.cemfi.de/mpm/ns/1.0">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measurement) This element represents a 64 bit floating-point list entry.</a:documentation>
+         <empty/>
+         <ref name="mpm.att.value.double.attributes"/>
+         <ref name="mpm.att.id.attributes"/>
          <empty/>
       </element>
    </define>

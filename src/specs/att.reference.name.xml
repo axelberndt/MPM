@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.reference.name" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>name reference attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>name.ref</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="name.ref" usage="opt">
+            <tei:gloss>name reference</tei:gloss>
+            <tei:desc>This attribute should be used for references by name.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>As opposed to attribute <tei:att>xml:id</tei:att> there can be multiple occurences of the same name in the document. Some <tei:gi>styleDef</tei:gi> elements from different domains (e.g. tempo, dynamics and articulation) may use the same name to indicate affiliation. Different <tei:gi>styleDef</tei:gi> elements within the same domain may contain elements with the same name, e.g. two <tei:gi>tempoDef</tei:gi> elements may associate different numeric tempi with the same name (say Allegro).</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>
