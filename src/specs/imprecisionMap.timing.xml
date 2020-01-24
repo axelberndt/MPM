@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="imprecisionMap.timing" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>imprecision map timing</tei:gloss>
+    
+    <tei:desc>This map is used to model random timing/rhythmical fluctuations.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:classRef key="model.distributionLike" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>The following timing imprecision map starts with a Compensating Triangle Distribution. The values of <tei:att>limit.lower</tei:att>, <tei:att>limit.upper</tei:att>, <tei:att>value.min</tei:att>, and <tei:att>value.max</tei:att> are interpreted in milliseconds. Thus, this creates timing fluctuations (rhythmic offsets) of +/- 80.0 milliseconds. This is also true for the uniform distribution that follows at symbolic date 256,490.0 but generates a clearly different type of fluctuations.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <imprecisionMap.timing>
+                <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/>
+                <distribution.uniform date="256490.0" limit.lower="-80.0" limit.upper="80.0"/>
+            </imprecisionMap.timing>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>Editors should keep in mind that the timing fluctuations are additive. At the end of the timing computation pipeline each musical event has a physical date in milliseconds. The distribution function applied in the <tei:gi>imprecisionMap.timing</tei:gi> adds a random offset to this. Hence, the distribution values are interpreted as milliseconds.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

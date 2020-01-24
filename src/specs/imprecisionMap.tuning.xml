@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="imprecisionMap.tuning" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>imprecision map tuning</tei:gloss>
+    
+    <tei:desc>This map is used to model random fluctuations in tuning.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:classRef key="model.distributionLike" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="detuneUnit" usage="req">
+            <tei:gloss>detune unit</tei:gloss>
+            <tei:desc>specifies the measure of detuning.</tei:desc>
+            <tei:valList type="closed">
+                <tei:valItem ident="cents"/>
+                <tei:valItem ident="Hz"/>
+                <tei:valItem ident="Hertz"/>
+            </tei:valList>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>This code snippet introduces random tuning fluctuations by up to +/- 40.0 cents.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <imprecisionMap.tuning detuneUnit="cents">
+                <distribution.correlated.brownianNoise date="0.0" stepWidth.max="10.0" limit.lower="-40.0" limit.upper="40.0" milliseconds.timingBasis="300.0"/>
+            </imprecisionMap.tuning>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The tuning fluctuations that this type of impreceision map generates are additive, i.e. they do not overwrite tuning specifications from articulation but add to it.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

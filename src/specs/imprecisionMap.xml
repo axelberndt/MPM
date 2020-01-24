@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="imprecisionMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>imprecision map</tei:gloss>
+    
+    <tei:desc>This map is used to model random fluctuations. The domain, however, is unspecified.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:classRef key="model.distributionLike" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <!--<tei:exemplum>
+        <tei:p>...</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            ...
+        </egXML>
+    </tei:exemplum>-->
+    
+    <tei:remarks>
+        <tei:p>The domain of this type of imprecision map is unspecified. This means it is up to the user/application to interpret it or introduce a domain-specific imprecision map (e.g. <tei:gi>imprecisionMap.myDomain</tei:gi>) to the format.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

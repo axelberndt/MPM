@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.time.physical.milliseconds.offset" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>milliseconds offset attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>milliseconds.offset</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="milliseconds.offset" usage="req">
+            <tei:gloss>offset in milliseconds</tei:gloss>
+            <tei:desc>This attribute defines an offset/delay (positive or negative) in milliseconds.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

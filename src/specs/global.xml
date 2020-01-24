@@ -5,7 +5,7 @@
     <tei:desc>This element includes all information that apply to all parts of a musical performance.</tei:desc>
     
     <tei:content>
-        <tei:classRef key="model.partLike" expand="sequence" minOccurs="1" maxOccurs="1"/>
+        <tei:classRef key="model.partContent" expand="sequence" minOccurs="1" maxOccurs="1"/>
     </tei:content>
     
     <tei:exemplum>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="asynchronyMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>asynchrony map</tei:gloss>
+    
+    <tei:desc>The <tei:gi>asynchronyMap</tei:gi> is used to specify timing offsets/delays of a musical part or group of parts.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.mapLike"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:elementRef key="asynchrony" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>With the following <tei:gi>asynchronyMap</tei:gi> the musical part starts with a delay of 100 milliseconds. Later the offset changes to -50 milliseconds, i.e. the part comes 50 milliseconds early.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <asnchronyMap>
+                <asynchrony date="0.0" milliseconds.offset="100.0"/>
+                <asynchrony date="34650.0" milliseconds.offset="-50.0"/>
+            </asnchronyMap>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>Asynchrony should be used to model timing offsets between musical parts that remain constant for a certain time. It is not very handy (even though possible) for fine-grained offset changes, e.g. in terms of continuously varying imprecision in the interaction between the musicians. Therefore, <tei:gi>imprecisionMap.timing</tei:gi> should be used. If the variations are of a more systematic fashion, <tei:gi>rubatoMap</tei:gi> is probably a better tool. All these micro-timing maps can, of course, be used in combination to create more complex effects, e.g. a swinging (via <tei:gi>rubatoMap</tei:gi>) laid-back (via <tei:gi>asynchronyMap</tei:gi>) double bass with a bit of random imprecision (via <tei:gi>imprecisionMap.timing</tei:gi>).</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.time.symbolic" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>symbolic time attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes for the symbolic time domain.</tei:desc>
+
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.time.symbolic.duration"/>
+    </tei:classes>
+
+</tei:classSpec>

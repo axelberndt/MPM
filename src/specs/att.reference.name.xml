@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:classSpec ident="att.name" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>name attribute class</tei:gloss>
+<tei:classSpec ident="att.reference.name" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>name reference attribute class</tei:gloss>
     
-    <tei:desc>This attribute class provides attribute <tei:att>name</tei:att>.</tei:desc>
+    <tei:desc>This attribute class provides attribute <tei:att>name.ref</tei:att>.</tei:desc>
     
     <tei:attList>
-        <tei:attDef ident="name" usage="req">
-            <tei:gloss>name identifier</tei:gloss>
-            <tei:desc>This attribute should be used to specify a name identifier for the element.</tei:desc>
+        <tei:attDef ident="name.ref" usage="opt">
+            <tei:gloss>name reference</tei:gloss>
+            <tei:desc>This attribute should be used for references by name.</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>

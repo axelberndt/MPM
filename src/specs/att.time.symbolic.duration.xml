@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.time.symbolic.duration" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>duration attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>duration</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="duration" usage="req">
+            <tei:gloss>symbolic duration</tei:gloss>
+            <tei:desc>Attribute <tei:att>duration</tei:att> provides a symbolic (i.e. tempo-independent) timeframe. The basis to convert this into a musical note value is the performance's <tei:att>pulsesPerQuarter</tei:att> value.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

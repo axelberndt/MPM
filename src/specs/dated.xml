@@ -2,22 +2,37 @@
 <tei:elementSpec ident="dated" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>dated information</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>The <tei:gi>dated</tei:gi> environment is the place for all datable information, ie. that are located at a specific position in time. They are organised in maps. Each map represents a specific domain, such as tempo, rubato, asynchrony, dynamics, metrical accentuation, articulation, etc.</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.partLike"/>
+        <tei:memberOf key="model.partContent"/>
     </tei:classes>
 
     <tei:content>
-        <tei:classRef key="model.datedLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
+        <tei:classRef key="model.mapLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
     </tei:content>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>The following <tei:gi>dated</tei:gi> element holds two maps, one for tempo instructions, the other for dynamics instructions.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <dated>
+                <tempoMap>
+                    <style date="0.0" name.ref="Karajan"/>
+                    <tempo date="0.0" xml:id="tempo_1" bpm="Allegro" beatLength="0.25"/>
+                    <tempo date="345960.0" xml:id="tempo_2" bpm="Allegro" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.9"/>
+                    <tempo date="360360.0" xml:id="tempo_3" bpm="Adagio" beatLength="0.25"/>
+                </tempoMap>
+                <dynamicsMap>
+                    <style date="0.0" name.ref="Karajan"/>
+                    <dynamics date="11880.0" xml:id="dynam_8448" volume="f"/>
+                    <dynamics date="60480.0" xml:id="dynam_27024" volume="p"/>
+                    <dynamics date="164520.0" xml:id="dynam_55404" volume="f"/>
+                    <dynamics date="334080.0" xml:id="dynam_109086" volume="p"/>
+                    <dynamics date="360360.0" xml:id="dynam_117000" volume="f"/>
+                </dynamicsMap>
+            </dated>
         </egXML>
-    </tei:exemplum>-->
+    </tei:exemplum>
     
     <tei:remarks>
         <tei:p>Each type of map is allowed only once in the <tei:gi>dated</tei:gi> environment. There cannot be, e.g., more than one <tei:gi>tempoMap</tei:gi> in the <tei:gi>dated</tei:gi>.</tei:p>

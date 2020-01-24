@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="distribution.triangular" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>triangular distribution</tei:gloss>
+    
+    <tei:desc>This defines a triangular distribution.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.distribution.clips"/>
+        <tei:memberOf key="att.distribution.limits"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.distributionLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="mode" usage="req">
+            <tei:gloss>mode</tei:gloss>
+            <tei:desc>defines the mode of the triangular distribution, i.e. the position of the triangle's peak.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <distribution.triangular date="42.0" limit.lower="-20.0" limit.upper="30.0" mode="5.0" clip.lower="-20.0" clip.upper="20.0"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The lower and upper limit of the triangular distribution are set by attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The peak of the triangular distribution is set by attribute <tei:att>mode</tei:att>. Attributes <tei:att>clip.lower</tei:att> and <tei:att>clip.upper</tei:att> can be used to narrow the output range even further, i.e. values outside the clipping window are set to the closest clipping border.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

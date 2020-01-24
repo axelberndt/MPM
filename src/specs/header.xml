@@ -5,11 +5,11 @@
     <tei:desc>The <tei:gi>header</tei:gi> environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, such as style definitions.</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.partLike"/>
+        <tei:memberOf key="model.partContent"/>
     </tei:classes>
 
     <tei:content>
-        <tei:classRef key="model.headerLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
+        <tei:classRef key="model.styleCollectionLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
     </tei:content>
         
     <tei:exemplum>
@@ -21,12 +21,21 @@
                         <tempoDef name="Allegro" value="147.0"/>
                         <tempoDef name="Andante" value="100.0"/>
                     </styleDef>
+                    <styleDef name="Gould">
+                        <tempoDef name="Allegro" value="151.0"/>
+                        <tempoDef name="Andante" value="93.0"/>
+                    </styleDef>
                 </tempoStyles>
                 <dynamicsStyles>
                     <styleDef name="Baumgartner">
                         <dynamicsDef name="p" value="48.0"/>
                         <dynamicsDef name="f" value="97.0"/>
                         <dynamicsDef name="sf" value="127.0"/>
+                    </styleDef>
+                    <styleDef name="Gould">
+                        <dynamicsDef name="p" value="44.0"/>
+                        <dynamicsDef name="f" value="102.0"/>
+                        <dynamicsDef name="sf" value="126.0"/>
                     </styleDef>
                 </dynamicsStyles>
                 <articulationStyles>
@@ -35,11 +44,17 @@
                         <articulationDef name="stacc" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
                         <articulationDef name="legato" relativeDuration="1.0"/>
                         <articulationDef name="legatoStop" relativeDuration="0.8" relativeVelocity="0.7"/>
-                        <articulationDef name="spicc" absoluteDurationMs="140.0" absoluteVelocityChange="25.0"/>
+                    </styleDef>
+                    <styleDef name="Gould">
+                        <articulationDef name="nonlegato" relativeDuration="0.98"/>
+                        <articulationDef name="stacc" absoluteDurationMs="105.0" absoluteVelocityChange="2.0"/>
+                        <articulationDef name="legato" relativeDuration="1.1"/>
+                        <articulationDef name="legatoStop" relativeDuration="0.78" relativeVelocity="0.8"/>
                     </styleDef>
                 </articulationStyles>
             </header>
         </egXML>
+        <tei:p>Here we see how two different styles are contrasted in the <tei:gi>header</tei:gi>. In the maps a <tei:gi>style</tei:gi> element can be used to switch between the styles.</tei:p>
     </tei:exemplum>
     
     <tei:remarks>

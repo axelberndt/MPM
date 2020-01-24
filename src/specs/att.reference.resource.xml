@@ -8,7 +8,7 @@
         <tei:attDef ident="uri" usage="req">
             <tei:gloss>Uniform Resource Identifier</tei:gloss>
             <tei:datatype>
-                <tei:dataRef name="teidata.pointer"/>
+                <tei:dataRef name="anyURI"/>
             </tei:datatype>
         </tei:attDef>
         
@@ -16,7 +16,7 @@
             <tei:gloss>type identifier</tei:gloss>
             <tei:desc>This attribute should be used to indicate the type of the resource.</tei:desc>
             <tei:datatype>
-                <tei:dataRef name="teidata.word"/>
+                <tei:dataRef name="token" restriction="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
             </tei:datatype>
             <tei:remarks>
                 <tei:p>As most XML-based formats do not necessarily have a file extension other than <tei:code>.xml</tei:code> it is not always obvious from the file name what kind of data the file holds. Same with URIs in general. Attribute <tei:att>type</tei:att> should be used to bring clarity.</tei:p>

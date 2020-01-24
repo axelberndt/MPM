@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.value.double" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>double value attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>value</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="value" usage="req">
+            <tei:gloss>numeric value</tei:gloss>
+            <tei:desc>A 64 bit floating-point value.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

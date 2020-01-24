@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="asynchrony" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>asynchrony</tei:gloss>
+    
+    <tei:desc>This element sets a constant milliseconds offset starting a the musical position specified via attribute <tei:att>date</tei:att> ans lasting until the subsequent <tei:gi>asynchrony</tei:gi> element in the <tei:gi>asynchronyMap</tei:gi> specifies a different offset.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.time.physical.milliseconds.offset"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>With the following <tei:gi>asynchronyMap</tei:gi> the musical part starts with a delay of 100 milliseconds. Later the offset changes to -50 milliseconds, i.e. the part comes 50 milliseconds early.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <asnchronyMap>
+                <asynchrony date="0.0" milliseconds.offset="100.0"/>
+                <asynchrony date="34650.0" milliseconds.offset="-50.0"/>
+            </asnchronyMap>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>A negative offset at the beginning that shifts the physical date (milliseconds date) below 0.0 will take no effect in most applications. Take, e.g., a media player; how can it play a note before the user hit the play button? Hence, a negative offset should be avoided if it evoke such a situation.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

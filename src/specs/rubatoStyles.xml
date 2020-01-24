@@ -5,7 +5,8 @@
     <tei:desc>...</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="model.headerLike"/>
+        <tei:memberOf key="model.styleCollectionLike"/>
+        <tei:memberOf key="att.id"/>
     </tei:classes>
     
     <tei:content>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.distribution.limits" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>limit attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="limit.lower" usage="req">
+            <tei:gloss>lower limit</tei:gloss>
+            <tei:desc>defines the lowest possible value.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+
+        <tei:attDef ident="limit.upper" usage="req">
+            <tei:gloss>upper limit</tei:gloss>
+            <tei:desc>defines the highest possible value.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

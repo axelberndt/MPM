@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="style" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>style switch</tei:gloss>
+    
+    <tei:desc>This element is used to switch between styles which are defined in the global or local <tei:gi>header</tei:gi> environment via <tei:gi>styleDef</tei:gi> elements.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="att.reference.name"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="name.ref" mode="change" usage="req"/>
+        <tei:attDef ident="defaultArticulation" usage="opt">
+            <tei:gloss>articulationname reference</tei:gloss>
+            <tei:desc>This attribute should be used to refer to an <tei:gi>articulationDef</tei:gi>.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>This attribute is optional and meaningful only within an <tei:gi>articulationMap</tei:gi>.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>Switching the style reference in maps is generally done by placing the <tei:gi>style</tei:gi> element within the map.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <style date="654.0" name.ref="Karajan"/>
+        </egXML>
+    </tei:exemplum>
+    <tei:exemplum>
+        <tei:p>Switching the style reference in an <tei:gi>articulationMap</tei:gi> is a special case. Here an optional further attribute is available, <tei:att>defaultArticulation</tei:att>.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <style date="654.0" name.ref="Karajan" defaultArticulation="nonlegato"/>
+        </egXML>
+        <tei:p>The default articulation refers to the <tei:gi>articulationDef</tei:gi> that should be applied to every note that is not articulated otherwise.</tei:p>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>If the performance instructions in a map rely on a style definition, the style switch must be placed in the map before the first such instruction, typically right at the beginning at date 0.0. </tei:p>
+    </tei:remarks>
+</tei:elementSpec>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="tempo" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>tempo</tei:gloss>
+    
+    <tei:desc>A tempo instruction</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="bpm" usage="req">
+            <tei:gloss>beats per minute</tei:gloss>
+            <tei:desc>The initial tempo of this instruction.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>The value can be purely numeric and will be interpreted as the number of beats per minute. Alternatively, the value can also be literal and, thus, refer to a <tei:gi>tempoDef</tei:gi> in the underlying tempo style definition.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+        
+        <tei:attDef ident="beatLength" usage="req">
+            <tei:gloss>beat length</tei:gloss>
+            <tei:desc>The length of one beat in musical terms, e.g. quarter note=0.25, half note=0.5 etc. Without this, the tempi in beats per minute cannot be interpreted.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minExclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="transition.to" usage="opt">
+            <tei:gloss>target tempo</tei:gloss>
+            <tei:desc>If this attribute is specified, the tempo instruction represents a continuous transition (accel., rit.) from the initial tempo (<tei:att>bpm</tei:att>) to the tempo given in this attribute.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>The value can be purely numeric and will be interpreted as the number of beats per minute. Alternatively, the value can also be literal and, thus, refer to a <tei:gi>tempoDef</tei:gi> in the underlying tempo style definition.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+        
+        <tei:attDef ident="meanTempoAt" usage="opt">
+            <tei:gloss>relative position of the mean tempo</tei:gloss>
+            <tei:desc>If attribute <tei:att>transition.to</tei:att> is specified and, thus, the element describes a continuous tempo transition (accel., rit.) the shape of the transition can be further refined by this attribute. Its value in the interval [0.0; 1.0] indicates the realtive position (symbolic time) between start and end of the tempo transition at which the half of the tempo change is achieved, i.e. the mean tempo is reached.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>If this attribute is not specified, the default value is 0.5, i.e. right in the middle between the <tei:att>date</tei:att> of this instruction and its end at the <tei:att>date</tei:att> of the subsequent tempo instruction.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+    
+    <!--<tei:exemplum>
+        <tei:p>...</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            ...
+        </egXML>
+    </tei:exemplum>-->
+    
+    <!--<tei:remarks>
+        <tei:p>...</tei:p>
+    </tei:remarks>-->
+</tei:elementSpec>

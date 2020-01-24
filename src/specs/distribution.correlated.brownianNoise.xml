@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="distribution.correlated.brownianNoise" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>Brownian noise distribution</tei:gloss>
+    
+    <tei:desc>This defines a correlated distribution based on Brownian noise.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.distribution.limits"/>
+        <tei:memberOf key="att.time.physical.milliseconds.timingBasis"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.distributionLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="stepWidth.max" usage="req">
+            <tei:gloss>maximum step width</tei:gloss>
+            <tei:desc>specifies the maximum value change width from one time step to the next.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <distribution.correlated.brownianNoise date="0.0" stepWidth.max="10.0" limit.lower="-40.0" limit.upper="40.0" milliseconds.timingBasis="300.0"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>An intuitive explanation of Brownian noise in MPM is the random walk in 1D. Suppose at time position t we have a random value x. The next time position is at t+<tei:att>milliseconds.timingBasis</tei:att>. The value at this position is determined by making a random step starting at x. The step width is delimited by <tei:att>stepWidth.max</tei:att>. Thus, possible values are in the interval [x-<tei:att>stepWidth.max</tei:att>; x+<tei:att>stepWidth.max</tei:att>] and further delimited by <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The fact that the value range at any iteration depends on the values of previous iterations makes this distribution a correlated distribution.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>
