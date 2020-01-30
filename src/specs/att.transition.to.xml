@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.transition.to" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>transition.to attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>transition.to</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="transition.to" usage="opt">
+            <tei:gloss>target value or identifier</tei:gloss>
+            <tei:desc>If this attribute is specified, the instruction represents a continuous transition (e.g. accel./rit. or cresc./decresc.) from an initial value to the target value given in this attribute.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>The value can be purely numeric or a literal identifier and, thus, refer to a lookup in a corresponding <tei:gi>styleDef</tei:gi>.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

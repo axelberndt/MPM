@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.loop" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>loop attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>loop</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="loop" usage="opt">
+            <tei:gloss>loop flag</tei:gloss>
+            <tei:desc>This attribute should be used to set the behavior of an element as being applied only once (false) or repeatedly (true).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="boolean"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>If the attribute is not specified it is assumed false by default.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>
