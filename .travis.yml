@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get install -y libxml2-utils
 
 script:
-  - xmllint --xinclude src/mpm.odd > mpm.odd
+  - xmllint --xinclude src/mpm.odd > mpm-monolithic.odd
   - curl -s -o mpm.rng -F upload=@mpm.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/conversion
   - curl -s -o mpm.dtd -F upload=@mpm.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/dtd%3Aapplication%3Axml-dtd/conversion
   - mkdir -p docs
@@ -29,7 +29,7 @@ deploy:
     file:
       - "mpm.rng"
       - "mpm.dtd"
-      - "mpm.odd"
+      - "mpm-monolithic.odd"
       - "docs.html"
 
   - provider: pages
