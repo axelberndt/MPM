@@ -35,9 +35,7 @@
                     <tei:dataFacet name="maxInclusive" value="1.0"/>
                 </tei:dataRef>
             </tei:datatype>
-            <tei:remarks>
-                <tei:p>If this attribute is not specified, the default value is 0.0.</tei:p>
-            </tei:remarks>
+            <tei:defaultVal>0.0</tei:defaultVal>
         </tei:attDef>
 
         <tei:attDef ident="protraction" usage="opt">
@@ -49,9 +47,7 @@
                     <tei:dataFacet name="maxInclusive" value="1.0"/>
                 </tei:dataRef>
             </tei:datatype>
-            <tei:remarks>
-                <tei:p>If this attribute is not specified, the default value is 0.0.</tei:p>
-            </tei:remarks>
+            <tei:defaultVal>0.0</tei:defaultVal>
         </tei:attDef>
 
         <tei:attDef ident="subNoteDynamics" usage="opt">
@@ -60,8 +56,9 @@
             <tei:datatype>
                 <tei:dataRef name="boolean"/>
             </tei:datatype>
+            <tei:defaultVal>false</tei:defaultVal>
             <tei:remarks>
-                <tei:p>If this attribute is not specified, the default value is false. If the value is false, dynamics applies only to note onsets, the remainder of the note keeps that volume. If true, the volume of the held tone modulates.</tei:p>
+                <tei:p>If the value is false (default), dynamics applies only to note onsets, the remainder of the note keeps that volume. If true, the volume of the held tone modulates.</tei:p>
             </tei:remarks>
         </tei:attDef>
     </tei:attList>

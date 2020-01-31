@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="articulation" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>articulation</tei:gloss>
+    
+    <tei:desc>An articulation instruction</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.reference.noteid"/>
+        <tei:memberOf key="att.articulationDef"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="name.ref" mode="change" usage="opt"/>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>...</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            ...
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>...</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

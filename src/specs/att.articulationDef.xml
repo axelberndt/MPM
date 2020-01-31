@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.articulationDef" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>articulation definition attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes needed to define an articulation.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="absoluteDuration" usage="opt">
+            <tei:gloss>absolute duration</tei:gloss>
+            <tei:desc>Set the asolute duration of the note (in symbolic time).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

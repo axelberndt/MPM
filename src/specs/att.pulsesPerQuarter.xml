@@ -14,6 +14,9 @@
             <tei:remarks>
                 <tei:p>Following the convention established by the MIDI standard and step sequencers, we distinguish between two concepts of time in MPM, physical time and symbolic time. Physical time is measured in minutes, seconds, milliseconds etc. Typical attributes using physical time values are <tei:att>absoluteDelayMs</tei:att> and <tei:att>absoluteDurationChangeMs</tei:att>. Symbolic time, by contrast, represents the temporal order of events (such as notes, rests, performance instructions) in musical terms. In symbolic time the musical note values and time positions are indifferent of the underlying tempo, e.g. a quarter note has always the same duration even though the physical duration varies when played in a different tempo. The pulses per quarter note (PPQ) unit, also known as ticks per quarter (TPQ) specifies the smalles integer unit of symbolic time, i.e. the integer resolution of the timing grid.</tei:p>
             </tei:remarks>
+            <tei:remarks>
+                <tei:p>Recommended values are 360 and 720.</tei:p>
+            </tei:remarks>
         </tei:attDef>
     </tei:attList>
 </tei:classSpec>

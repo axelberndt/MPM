@@ -16,14 +16,10 @@
         </tei:alternate>
     </tei:content>
     
-    <!--<tei:exemplum>
+    <tei:exemplum>
         <tei:p>...</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             ...
         </egXML>
-    </tei:exemplum>-->
-    
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    </tei:exemplum>
 </tei:elementSpec>
