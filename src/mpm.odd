@@ -78,7 +78,7 @@
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
-                    <xinxlude:include href="specs/att.rubatoDef.xml"/>
+                    <xinclude:include href="specs/att.rubatoDef.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.date.xml"/>
