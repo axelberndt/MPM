@@ -15,7 +15,6 @@
     </tei:content>
     
     <tei:attList>
-        <tei:attDef ident="name.ref" mode="change" usage="req"/>
         <tei:attDef ident="defaultArticulation" usage="opt">
             <tei:gloss>articulationname reference</tei:gloss>
             <tei:desc>This attribute should be used to refer to an <tei:gi>articulationDef</tei:gi>.</tei:desc>

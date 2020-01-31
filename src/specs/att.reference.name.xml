@@ -5,7 +5,7 @@
     <tei:desc>This attribute class provides attribute <tei:att>name.ref</tei:att>.</tei:desc>
     
     <tei:attList>
-        <tei:attDef ident="name.ref" usage="opt">
+        <tei:attDef ident="name.ref" usage="req">
             <tei:gloss>name reference</tei:gloss>
             <tei:desc>This attribute should be used for references by name.</tei:desc>
             <tei:datatype>

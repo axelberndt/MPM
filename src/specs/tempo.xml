@@ -6,6 +6,7 @@
     
     <tei:classes>
         <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.transition.to"/>
         <tei:memberOf key="att.id"/>
     </tei:classes>
     
@@ -35,20 +36,9 @@
             </tei:datatype>
         </tei:attDef>
         
-        <tei:attDef ident="transition.to" usage="opt">
-            <tei:gloss>target tempo</tei:gloss>
-            <tei:desc>If this attribute is specified, the tempo instruction represents a continuous transition (accel., rit.) from the initial tempo (<tei:att>bpm</tei:att>) to the tempo given in this attribute.</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="string"/>
-            </tei:datatype>
-            <tei:remarks>
-                <tei:p>The value can be purely numeric and will be interpreted as the number of beats per minute. Alternatively, the value can also be literal and, thus, refer to a <tei:gi>tempoDef</tei:gi> in the underlying tempo style definition.</tei:p>
-            </tei:remarks>
-        </tei:attDef>
-        
         <tei:attDef ident="meanTempoAt" usage="opt">
             <tei:gloss>relative position of the mean tempo</tei:gloss>
-            <tei:desc>If attribute <tei:att>transition.to</tei:att> is specified and, thus, the element describes a continuous tempo transition (accel., rit.) the shape of the transition can be further refined by this attribute. Its value in the interval [0.0; 1.0] indicates the realtive position (symbolic time) between start and end of the tempo transition at which the half of the tempo change is achieved, i.e. the mean tempo is reached.</tei:desc>
+            <tei:desc>If attribute <tei:att>transition.to</tei:att> is specified and, thus, the element describes a continuous tempo transition (accel., rit.) the shape of the transition can be further refined by this attribute. Its value in the interval [0.0; 1.0] indicates the realtive position (symbolic time) between start and end of the tempo transition at which half of the tempo change is achieved, i.e. the mean tempo is reached.</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="double">
                     <tei:dataFacet name="minInclusive" value="0.0"/>
@@ -61,14 +51,21 @@
         </tei:attDef>
     </tei:attList>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>A constant tempo instruction with a numeric bpm value, a constant tempo instruction with a literal tempo value (requires an according <tei:gi>tempoDef</tei:gi>), a ritardando instruction, and an accelerando instruction. The first three have a beat length of a quarter note (1/4 = 0.25), the fourth is an eighth note (1/8 = 0.125).</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <tempo date="0.0" bpm="110.0" beatLength="0.25"/>
+            <tempo date="14400.0" bpm="Vivace" beatLength="0.25"/>
+            <tempo date="286500.0" bpm="Vivace" transition.to="Grave" beatLength="0.25" meanTempoAt="0.8"/>
+            <tempo date="447500.0" bpm="Grave" transition.to="125.0" beatLength="0.125" meanTempoAt="0.4"/>
         </egXML>
-    </tei:exemplum>-->
+    </tei:exemplum>
     
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    <tei:remarks>
+        <tei:p>The tempo instruction starts at the specified <tei:att>date</tei:att> and ends at the <tei:att>date</tei:att> of the subsequent tempo instruction. Within this time interval the tempo is either constant, monotonically increasing or monotonically decreasing. Non-monotonic shapes (e.g. acccel. followed by rit.) are composed of a sequence of multiple <tei:gi>tempo</tei:gi> elements.</tei:p>
+    </tei:remarks>
+    
+    <tei:remarks>
+        <tei:p>When using literal tempo values (in attributes <tei:att>bpm</tei:att> and <tei:att>transition.to</tei:att>) make sure that the according tempo style is associated. This is done by placing a <tei:gi>style</tei:gi> element in the tempo map before the first use of literal tempo values.</tei:p>        
+    </tei:remarks>
 </tei:elementSpec>

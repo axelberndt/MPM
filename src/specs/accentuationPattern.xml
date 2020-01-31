@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="accentuationPattern" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>accentuation pattern</tei:gloss>
+    
+    <tei:desc>A metrical accentuation instruction specifies which accentuation pattern should be applied at and after its <tei:att>date</tei:att>.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.loop"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="scale" usage="req">
+            <tei:gloss>accentuation scaling factor</tei:gloss>
+            <tei:desc>This attribute is required to scale the pattern's accentuation values (which are defined in [0.0; 1.0]) to actual loudness values.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>Typically, the value is non-negative. It sets the value of the strongest accentuation. Its negative marks the strongest restraint. Setting scale to a negative value will invert the accentuation pattern. Setting scale to 0.0 effectively deactivates the accentuation.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+        
+        <tei:attDef ident="stickToMeasures" usage="opt">
+            <tei:gloss>stick to measures flag</tei:gloss>
+            <tei:desc>Set this attribute true if the accentuation pattern should restart at the beginning of each measure.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="boolean"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>Accentuation patterns do not need to have the same length as a measure. Thus,its beginning does not necessarily coincide with the beginning of a measure. In other words, the first beat in the accentuation pattern is not necessarily the first beat of the measure, same for all further beats. This behaviour is essential to model, for instance, hemiolas. However, if the accentuation pattern is ment to run synchonously with the measures, this attribute should be set true.</tei:p>
+            </tei:remarks>
+            <tei:remarks>
+                <tei:p>Default value is true.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>A minimal and a complete accentuation pattern instruction. Note that, according to the values of <tei:att>scale</tei:att>, the former is less pronounced than the latter.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <accentuationPattern date="0.0" name.ref="my accentuation pattern 1" scale="6.0"/>
+            <accentuationPattern date="165000.0" name.ref="my accentuation pattern 2" scale="25.0" loop="true" stickToMeasures="true"/>
+        </egXML>
+        <tei:p>Note also that a <tei:gi>style</tei:gi> element must be added before the first accentuation pattern instruction and it must refer to a metrical accentuation style with the two patterns in attribute <tei:att>name.ref</tei:att>. Otherwise, "my accentuation pattern 1" and "my accentuation pattern 2" are undefined.</tei:p>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>If the accentuation pattern is looping, it will be repeatedly applied starting at <tei:att>date</tei:att> until the <tei:att>date</tei:att> of the subsequent <tei:gi>accentuationPattern</tei:gi> element.</tei:p>        
+    </tei:remarks>
+</tei:elementSpec>

@@ -13,7 +13,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.0.0"/>
+                <tei:edition n="0.2.9"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -71,11 +71,14 @@
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.reference.name.xml"/>
                     <xinclude:include href="specs/att.id.xml"/>
+                    <xinclude:include href="specs/att.loop.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
+                    <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
+                    <xinxlude:include href="specs/att.rubatoDef.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.date.xml"/>
@@ -115,10 +118,13 @@
                     <xinclude:include href="specs/asynchronyMap.xml"/>
                         <xinclude:include href="specs/asynchrony.xml"/>
                     <xinclude:include href="specs/dynamicsMap.xml"/>
+                        <xinclude:include href="specs/dynamics.xml"/>
                     <xinclude:include href="specs/metricalAccentuationMap.xml"/>
+                        <xinclude:include href="specs/accentuationPattern.xml"/>
                     <xinclude:include href="specs/tempoMap.xml"/>
                         <xinclude:include href="specs/tempo.xml"/>
                     <xinclude:include href="specs/rubatoMap.xml"/>
+                        <xinclude:include href="specs/rubato.xml"/>
                     <xinclude:include href="specs/imprecisionMap.xml"/>
                     <xinclude:include href="specs/imprecisionMap.timing.xml"/>
                     <xinclude:include href="specs/imprecisionMap.dynamics.xml"/>
