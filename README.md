@@ -1,4 +1,4 @@
-![](https://github.com/axelberndt/MPM/blob/master/figures/MPM_black.png)
+<img src="https://github.com/axelberndt/MPM/blob/master/figures/MPM_black.png" alt="MPM logo" width="600"/>
 
 Author: [Axel Berndt](https://github.com/axelberndt)<br>
 Contributors: [Benjamin W. Bohl](https://github.com/bwbohl), [Peter Stadler](https://github.com/peterstadler), [Simon Waloschek](https://github.com/sonovice)<br>
