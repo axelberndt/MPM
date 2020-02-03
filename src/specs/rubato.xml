@@ -7,6 +7,7 @@
     <tei:classes>
         <tei:memberOf key="att.time.symbolic.date"/>
         <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.rubatoDef"/>
         <tei:memberOf key="att.loop"/>
         <tei:memberOf key="att.id"/>
     </tei:classes>
@@ -16,73 +17,21 @@
     </tei:content>
     
     <tei:attList>
-        <tei:attDef ident="volume" usage="req">
-            <tei:gloss>volume</tei:gloss>
-            <tei:desc>The initial volume of this instruction.</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="string"/>
-            </tei:datatype>
-            <tei:remarks>
-                <tei:p>The value can be purely numeric. Alternatively, the value can also be literal and, thus, refer to a <tei:gi>dynamicsDef</tei:gi> in the underlying dynamics style definition.</tei:p>
-            </tei:remarks>
-        </tei:attDef>
-        
-        <tei:attDef ident="curvature" usage="opt">
-            <tei:gloss>sigmoidal curvature of the dynamics transition</tei:gloss>
-            <tei:desc>If attribute <tei:att>transition.to</tei:att> is specified and, thus, the element describes a continuous dynamics transition (cresc., decresc.) the shape of the transition can be further refined by this attribute. Its value in the interval [0.0; 1.0] indicates a distinct sigmoidal (S) shape of the dynamics curve (value &gt; 0.0) or a straight linear transition (value = 0.0).</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="double">
-                    <tei:dataFacet name="minInclusive" value="0.0"/>
-                    <tei:dataFacet name="maxInclusive" value="1.0"/>
-                </tei:dataRef>
-            </tei:datatype>
-            <tei:remarks>
-                <tei:p>If this attribute is not specified, the default value is 0.0.</tei:p>
-            </tei:remarks>
-        </tei:attDef>
-
-        <tei:attDef ident="protraction" usage="opt">
-            <tei:gloss>asymmetry of the dynamics transition</tei:gloss>
-            <tei:desc>If attribute <tei:att>transition.to</tei:att> is specified and, thus, the element describes a continuous dynamics transition (cresc., decresc.) the shape of the transition can be further refined by this attribute. Its value in the interval [-1.0; 1.0] indicates whether the transition comes relatively early (value &lt; 0.0), relatively late (value &gt; 0.0) or is equally shared between first and second half of the interval between <tei:gi>date</tei:gi> and the subsequent dynamics instruction's<tei:gi>date</tei:gi>.</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="double">
-                    <tei:dataFacet name="minInclusive" value="-1.0"/>
-                    <tei:dataFacet name="maxInclusive" value="1.0"/>
-                </tei:dataRef>
-            </tei:datatype>
-            <tei:remarks>
-                <tei:p>If this attribute is not specified, the default value is 0.0.</tei:p>
-            </tei:remarks>
-        </tei:attDef>
-
-        <tei:attDef ident="subNoteDynamics" usage="opt">
-            <tei:gloss>sub-note dynamics flag</tei:gloss>
-            <tei:desc>If attribute <tei:att>transition.to</tei:att> is specified and, thus, the element describes a continuous dynamics transition (cresc., decresc.) this attribute can be used to indicate whether the dynamics are performed note-wise (false) or on the sub-note level (true).</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="boolean"/>
-            </tei:datatype>
-            <tei:remarks>
-                <tei:p>If this attribute is not specified, the default value is false. If the value is false, dynamics applies only to note onsets, the remainder of the note keeps that volume. If true, the volume of the held tone modulates.</tei:p>
-            </tei:remarks>
-        </tei:attDef>
+        <tei:attDef ident="name.ref" mode="change" usage="opt"/>
+        <tei:attDef ident="frameLength" mode="change" usage="opt"/>
     </tei:attList>
     
     <tei:exemplum>
-        <tei:p>A constant dynamics instruction with a numeric volume value, a constant dynamics instruction with a literal volume value (requires an according <tei:gi>dynamicsDef</tei:gi>), a decrescendo instruction, and a crescendo instruction. The fifth instruction is a "decrescendo al niente" with a perfectly linear shape.</tei:p>
+        <tei:p>The first rubato instruction refers to a <tei:gi>rubatoDef</tei:gi>. The second specifies its own rubato. The third takes the <tei:gi>rubatoDef</tei:gi> for "Viennese waltz" but adds/changes its <tei:att>intensity</tei:att>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <dynamics date="0.0" volume="96.0"/>
-            <dynamics date="720.0" volume="forte"/>
-            <dynamics date="6500.0" volume="mf" transition.to="pp" curvature="0.7" protraction="-0.4"/>
-            <dynamics date="90500.0" volume="pp" transition.to="127.0" curvature="0.5" protraction="0.6" subNoteDynamics="true"/>
-            <dynamics date="120700.0" volume="100.0" transition.to="0.0" curvature="0.0" protraction="0.0" subNoteDynamics="true"/>
+            <rubato date="0.0" name.ref="swing" loop="true"/>
+            <rubato date="28800.0" frameLength="2160.0" intensity="0.8" lateStart="0.0" earlyEnd="1.0" loop="true"/>
+            <rubato date="65400.0" name.ref="Viennese waltz" intensity="0.7" loop="true"/>
         </egXML>
+        <tei:p>Note that in the <tei:gi>rubatoMap</tei:gi> a <tei:gi>style</tei:gi> element must be added before the first rubato instruction and it must refer to a rubato style with the two <tei:gi>rubatoDefs</tei:gi> in attribute <tei:att>name.ref</tei:att>. Otherwise, "swing" and "Viennese waltz" are undefined.</tei:p>
     </tei:exemplum>
     
     <tei:remarks>
-        <tei:p>The dynamics instruction starts at the specified <tei:att>date</tei:att> and ends at the <tei:att>date</tei:att> of the subsequent dynamics instruction. Within this time interval the dynamics is either constant, monotonically increasing or monotonically decreasing. Non-monotonic shapes (e.g. cresc. followed by decresc.) are composed of a sequence of multiple <tei:gi>dynamics</tei:gi> elements.</tei:p>
-    </tei:remarks>
-    
-    <tei:remarks>
-        <tei:p>When using literal volume values (in attributes <tei:att>volume</tei:att> and <tei:att>transition.to</tei:att>) make sure that the according dynamics style is associated. This is done by placing a <tei:gi>style</tei:gi> element in the dynamics map before the first use of literal volume values.</tei:p>        
+        <tei:p>The rubato definition refered by attribute <tei:att>name.ref</tei:att> can be edited/overwritten by the local attributes <tei:att>frameLength</tei:att>, <tei:att>intensity</tei:att>, <tei:att>lateStart</tei:att>, and <tei:att>earlyEnd</tei:att>. The values of local attributes dominate imported ones. If no <tei:att>name.ref</tei:att>is given, attribute <tei:att>frameLength</tei:att> is required.</tei:p>
     </tei:remarks>
 </tei:elementSpec>

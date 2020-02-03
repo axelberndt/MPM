@@ -8,7 +8,7 @@
         <tei:memberOf key="att.time.symbolic.date"/>
         <tei:memberOf key="att.distribution.limits"/>
         <tei:memberOf key="att.distribution.clips"/>
-        <tei:memberOf key="att.time.physical.milliseconds.timingBasis"/>
+        <tei:memberOf key="att.time.physical.timingBasis"/>
         <tei:memberOf key="att.id"/>
         <tei:memberOf key="model.distributionLike"/>
     </tei:classes>

@@ -33,11 +33,9 @@
             <tei:datatype>
                 <tei:dataRef name="boolean"/>
             </tei:datatype>
+            <tei:defaultVal>true</tei:defaultVal>
             <tei:remarks>
                 <tei:p>Accentuation patterns do not need to have the same length as a measure. Thus,its beginning does not necessarily coincide with the beginning of a measure. In other words, the first beat in the accentuation pattern is not necessarily the first beat of the measure, same for all further beats. This behaviour is essential to model, for instance, hemiolas. However, if the accentuation pattern is ment to run synchonously with the measures, this attribute should be set true.</tei:p>
-            </tei:remarks>
-            <tei:remarks>
-                <tei:p>Default value is true.</tei:p>
             </tei:remarks>
         </tei:attDef>
     </tei:attList>

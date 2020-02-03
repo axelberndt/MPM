@@ -5,8 +5,9 @@
     <tei:desc>This attribute class provides attributes for the physical time domain.</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="att.time.physical.milliseconds.offset"/>
-        <tei:memberOf key="att.time.physical.milliseconds.timingBasis"/>
+        <tei:memberOf key="att.time.physical.articulation"/>
+        <tei:memberOf key="att.time.physical.offset"/>
+        <tei:memberOf key="att.time.physical.timingBasis"/>
     </tei:classes>
     
 </tei:classSpec>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.time.physical.articulation" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>articulation attribute class for physical time</tei:gloss>
+    
+    <tei:desc>This class provides physical time based attributes used for articulation definitions.</tei:desc>
+
+    <tei:attList>
+        <tei:attDef ident="absoluteDurationMs" usage="opt">
+            <tei:gloss>absolute milliseconds duration</tei:gloss>
+            <tei:desc>Set the absolute duration of the note (in milliseconds).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="absoluteDurationChangeMs" usage="opt">
+            <tei:gloss>absolute milliseconds duration change</tei:gloss>
+            <tei:desc>Change the absolute duration of the note by the specified value (in milliseceonds).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
+
+        <tei:attDef ident="absoluteDelayMs" usage="opt">
+            <tei:gloss>absolute milliseconds delay</tei:gloss>
+            <tei:desc>Delay the note by the specified value (in milliseconds).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+            <tei:remarks>
+                <tei:p>The delay shifts the whole note along the time axis, i.e. its onset and offset. If only the onset should be shifted, use attribute <tei:att>absoluteDurationChangeMs</tei:att> to compensate the delay for the offset. In this case, the editor should take care that the note's duration is greater than the delay/compensation, i.e. no negative durations are created thereby.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

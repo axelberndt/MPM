@@ -13,7 +13,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.9"/>
+                <tei:edition n="0.2.11"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -70,6 +70,7 @@
                     <!-- the attribute classes -->
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.reference.name.xml"/>
+                    <xinclude:include href="specs/att.reference.noteid.xml"/>
                     <xinclude:include href="specs/att.id.xml"/>
                     <xinclude:include href="specs/att.loop.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
@@ -78,14 +79,17 @@
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
+                    <xinclude:include href="specs/att.articulationDef.xml"/>
                     <xinclude:include href="specs/att.rubatoDef.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.date.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.duration.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.xml"/>
-                    <xinclude:include href="specs/att.time.physical.milliseconds.offset.xml"/>
-                    <xinclude:include href="specs/att.time.physical.milliseconds.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.time.physical.articulation.xml"/>
+                    <xinclude:include href="specs/att.time.physical.offset.xml"/>
+                    <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
                     <xinclude:include href="specs/att.distribution.clips.xml"/>
                     <xinclude:include href="specs/att.distribution.limits.xml"/>
                     
@@ -115,6 +119,7 @@
                     
                     <xinclude:include href="specs/style.xml"/>
                     <xinclude:include href="specs/articulationMap.xml"/>
+                        <xinclude:include href="specs/articulation.xml"/>
                     <xinclude:include href="specs/asynchronyMap.xml"/>
                         <xinclude:include href="specs/asynchrony.xml"/>
                     <xinclude:include href="specs/dynamicsMap.xml"/>

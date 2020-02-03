@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="articulation" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>articulation</tei:gloss>
+    
+    <tei:desc>An articulation instruction</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.reference.noteid"/>
+        <tei:memberOf key="att.articulationDef"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="name.ref" mode="change" usage="opt"/>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>The first element articulates all notes at date 3450.0 legato. The second sets the note with the specified ID at date 5670.0 staccato. The third articulates another note at the same date. Furthermore, it does not refer to an <tei:gi>articulationDef</tei:gi> but defines its own effects to the note. The forth articulates the same note as the third, its effect adds to the prior.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <articulation date="3450.0" name.ref="legato"/>
+            <articulation date="5670.0" name.ref="staccato" noteid="#note04706"/>
+            <articulation date="5670.0" noteid="#note05821" relativeDuration="0.4" absoluteDelayMs="14.0" absoluteVelocityChange="-21.0"/>
+            <articulation date="5670.0" noteid="#note05821" absoluteDurationChangeMs="40.0"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The use of attribute <tei:att>name.ref</tei:att> requires the presence of an <tei:gi>articulationDef</tei:gi> with the same name and within an articulation style. In the <tei:gi>articulationMap</tei:gi> there must be a <tei:gi>style</tei:gi> element switching to this style before the first reference to an <tei:gi>articulationDef</tei:gi> within that style.</tei:p>
+    </tei:remarks>
+
+    <tei:remarks>
+        <tei:p>Articulations are interpreted sequentially. Let us say that an articulation halves the toneduration. If it is applied a second time to the same not, the already shortened note is shourtened again by 50 percent. In the end the note has 25 percent of its initial duration.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

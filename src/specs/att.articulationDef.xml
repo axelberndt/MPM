@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.articulationDef" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>articulation definition attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes needed to define an articulation.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.articulation"/>
+        <tei:memberOf key="att.time.physical.articulation"/>
+    </tei:classes>
+    
+    <tei:attList>
+        <tei:attDef ident="absoluteVelocity" usage="opt">
+            <tei:gloss>absolute velocity</tei:gloss>
+            <tei:desc>Set the absolute velocity of a note.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+
+        <tei:attDef ident="relativeVelocity" usage="opt">
+            <tei:gloss>relative velocity change</tei:gloss>
+            <tei:desc>Change the velocity of a note relative to its initial velocity. E.g., a value of 0.5 halves the velocity.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+            <tei:defaultVal>1.0</tei:defaultVal>
+        </tei:attDef>
+
+        <tei:attDef ident="absoluteVelocityChange" usage="opt">
+            <tei:gloss>absolute velocity change</tei:gloss>
+            <tei:desc>Change the velocity of a note by the specified amount.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
+
+        <tei:attDef ident="detuneCents" usage="opt">
+            <tei:gloss>detune in cents</tei:gloss>
+            <tei:desc>Change a note's tuning by the specified amount in cents.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
+
+        <tei:attDef ident="detuneHz" usage="opt">
+            <tei:gloss>detune in cents</tei:gloss>
+            <tei:desc>Change a note's tuning by the specified amount in Hertz.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

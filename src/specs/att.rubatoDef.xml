@@ -15,7 +15,7 @@
             </tei:datatype>
         </tei:attDef>
 
-        <tei:attDef ident="intensity" usage="req">
+        <tei:attDef ident="intensity" usage="opt">
             <tei:gloss>intensity</tei:gloss>
             <tei:desc>The intensity of the rubato's timing distortion effect.</tei:desc>
             <tei:datatype>
@@ -23,6 +23,7 @@
                     <tei:dataFacet name="minExclusive" value="0.0"/>
                 </tei:dataRef>
             </tei:datatype>
+            <tei:defaultVal>1.0</tei:defaultVal>
             <tei:remarks>
                 <tei:p>This attribute specifies the type of the rubato distortion: short-long (0.0 &lt; <tei:att>intensity</tei:att> &lt; 1.0; e.g. Viennese waltz), long-short (1.0 &lt; <tei:att>intensity</tei:att>; e.g. swing timing), even timing (<tei:att>intensity</tei:att> = 1.0). The more the value differs from 0.0 the more pronounced is the rubato distortion.</tei:p>
             </tei:remarks>
@@ -37,6 +38,7 @@
                     <tei:dataFacet name="maxExclusive" value="1.0"/>
                 </tei:dataRef>
             </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
             <tei:remarks>
                 <tei:p>The allowed value range is 0.0 &#8804; <tei:att>lateStart</tei:att> &lt; <tei:att>earlyEnd</tei:att> &#8804; 1.0. It is not reasonable to shift the initial delay past the end point. The values are relative to the length of the rubato frame, i.e., 0.0 is the beginning and 1.0 corresponds with the end of the rubato frame.</tei:p>
             </tei:remarks>
@@ -44,13 +46,14 @@
 
         <tei:attDef ident="earlyEnd" usage="opt">
             <tei:gloss>early end</tei:gloss>
-            <tei:desc>Add an initial delay to the rubato frame.</tei:desc>
+            <tei:desc>Make the rubato frame end early.</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="double">
-                    <tei:dataFacet name="minInclusive" value="0.0"/>
-                    <tei:dataFacet name="maxExclusive" value="1.0"/>
+                    <tei:dataFacet name="minExclusive" value="0.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
                 </tei:dataRef>
             </tei:datatype>
+            <tei:defaultVal>1.0</tei:defaultVal>
             <tei:remarks>
                 <tei:p>The allowed value range is 0.0 &#8804; <tei:att>lateStart</tei:att> &lt; <tei:att>earlyEnd</tei:att> &#8804; 1.0. It is not reasonable to shift the initial delay past the end point. The values are relative to the length of the rubato frame, i.e., 0.0 is the beginning and 1.0 corresponds with the end of the rubato frame.</tei:p>
             </tei:remarks>

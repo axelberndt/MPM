@@ -1,12 +1,10 @@
-![](https://github.com/axelberndt/MPM/blob/master/figures/mpmLogo.png)
-
-# Music Performance Markup (MPM)
+![](https://github.com/axelberndt/MPM/blob/master/figures/MPM_black.png)
 
 Author: [Axel Berndt](https://github.com/axelberndt)<br>
 Contributors: [Benjamin W. Bohl](https://github.com/bwbohl), [Peter Stadler](https://github.com/peterstadler), [Simon Waloschek](https://github.com/sonovice)<br>
 [Center of Music and Film Informatics](http://www.cemfi.de/), Detmold
 
-An XML-model for encoding expressive music performances. The ODD schema definition and documentation will undergo a comprehensive revision in early 2020! More background information, details, sample encodings, etc. will follow. The [schema documentation](https://axelberndt.github.io/MPM/) is published in the ´gh-pages´ branch and also available as release asset. The official API and expressive MIDI rendering engine are integrated with the [meico](https://github.com/cemfi/meico) framework, ready to be used by application developers. Users of the meico app can also already take advantage of MPM's capabilities.
+An XML-model for the encoding of expressive music performances. The ODD schema definition and documentation undergo a comprehensive revision in early 2020! More background information, details, sample encodings, etc. will follow. The [schema documentation](https://axelberndt.github.io/MPM/) is published in the `gh-pages` branch and also available as release asset. The official API and expressive MIDI rendering engine are integrated with the [meico](https://github.com/cemfi/meico) framework, ready to be used by application developers. Users of the meico app can also already take advantage of MPM's capabilities.
 
 ### License Information
 

@@ -11,9 +11,7 @@
             <tei:datatype>
                 <tei:dataRef name="boolean"/>
             </tei:datatype>
-            <tei:remarks>
-                <tei:p>If the attribute is not specified it is assumed false by default.</tei:p>
-            </tei:remarks>
+            <tei:defaultVal>false</tei:defaultVal>
         </tei:attDef>
     </tei:attList>
 </tei:classSpec>

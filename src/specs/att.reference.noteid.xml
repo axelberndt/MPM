@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.reference.noteid" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>note identifier attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>noteid</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="noteid" usage="opt">
+            <tei:gloss>note identifier</tei:gloss>
+            <tei:desc>This attribute should be used for references to note elements (e.g. in MEI and MSM).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="anyURI"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>
