@@ -13,7 +13,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.11"/>
+                <tei:edition n="0.2.12"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -92,10 +92,12 @@
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
                     <xinclude:include href="specs/att.distribution.clips.xml"/>
                     <xinclude:include href="specs/att.distribution.limits.xml"/>
+                    <xinclude:include href="specs/att.distribution.seed.xml"/>
                     
                     <!-- the model classes -->
                     <xinclude:include href="specs/model.partContentLike.xml"/>
                     <xinclude:include href="specs/model.styleCollectionLike.xml"/>
+                    <xinclude:include href="specs/model.defLike.xml"/>
                     <xinclude:include href="specs/model.mapLike.xml"/>
                     <xinclude:include href="specs/model.distributionLike.xml"/>
                     
@@ -111,6 +113,7 @@
                     <xinclude:include href="specs/header.xml"/>
                     <xinclude:include href="specs/dated.xml"/>
                     
+                    <xinclude:include href="specs/styleDef.xml"/>
                     <xinclude:include href="specs/articulationStyles.xml"/>
                     <xinclude:include href="specs/dynamicsStyles.xml"/>
                     <xinclude:include href="specs/metricalAccentuationStyles.xml"/>

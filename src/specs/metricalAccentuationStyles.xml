@@ -10,8 +10,7 @@
     </tei:classes>
     
     <tei:content>
-        <tei:empty/>
-        <!-- more to come -->
+        <tei:elementRef key="styleDef" minOccurs="1" maxOccurs="unbounded"/>
     </tei:content>
     
     <!--<tei:exemplum>
