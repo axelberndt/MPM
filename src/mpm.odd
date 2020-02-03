@@ -13,7 +13,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.10"/>
+                <tei:edition n="0.2.11"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -85,9 +85,11 @@
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.date.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.duration.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.xml"/>
-                    <xinclude:include href="specs/att.time.physical.milliseconds.offset.xml"/>
-                    <xinclude:include href="specs/att.time.physical.milliseconds.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.time.physical.articulation.xml"/>
+                    <xinclude:include href="specs/att.time.physical.offset.xml"/>
+                    <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
                     <xinclude:include href="specs/att.distribution.clips.xml"/>
                     <xinclude:include href="specs/att.distribution.limits.xml"/>
                     

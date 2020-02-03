@@ -2,7 +2,7 @@
 <tei:elementSpec ident="articulationMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>articulation map</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>The articulation map is the container for articulation instructions.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.mapLike"/>
@@ -17,9 +17,18 @@
     </tei:content>
     
     <tei:exemplum>
-        <tei:p>...</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <articulationMap>
+                <style date="0.0" name.ref="Rattle" defaultArticulation="nonlegato"/>
+                <articulation date="3450.0" name.ref="legato"/>
+                <articulation date="5670.0" name.ref="staccato" noteid="#note04706"/>
+                <articulation date="5670.0" noteid="#note05821" relativeDuration="0.4" absoluteDelayMs="14.0" absoluteVelocityChange="-21.0"/>
+                <articulation date="5670.0" noteid="#note05821" absoluteDurationChangeMs="40.0"/>
+            </articulationMap>
         </egXML>
     </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The <tei:gi>style</tei:gi> element when used within an <tei:gi>articulationMap</tei:gi> should also provide attribute <tei:att>defaultArticulation</tei:att>. This articulation will be applied to all notes that are not articulated otherwise. If no default articulation is given, the note remains unaltered.</tei:p>
+    </tei:remarks>
 </tei:elementSpec>

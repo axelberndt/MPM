@@ -7,7 +7,7 @@
     <tei:attList>
         <tei:attDef ident="noteid" usage="opt">
             <tei:gloss>note identifier</tei:gloss>
-            <tei:desc>This attribute should be used references to note elements (e.g. in MEI and MSM).</tei:desc>
+            <tei:desc>This attribute should be used for references to note elements (e.g. in MEI and MSM).</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="anyURI"/>
             </tei:datatype>
