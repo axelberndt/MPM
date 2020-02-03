@@ -1,7 +1,5 @@
 ![](https://github.com/axelberndt/MPM/blob/master/figures/MPM_black.png)
 
-# Music Performance Markup (MPM)
-
 Author: [Axel Berndt](https://github.com/axelberndt)<br>
 Contributors: [Benjamin W. Bohl](https://github.com/bwbohl), [Peter Stadler](https://github.com/peterstadler), [Simon Waloschek](https://github.com/sonovice)<br>
 [Center of Music and Film Informatics](http://www.cemfi.de/), Detmold
