@@ -35,6 +35,6 @@
     </tei:exemplum>
     
     <tei:remarks>
-        <tei:p>The tuning fluctuations that this type of impreceision map generates are additive, i.e. they do not overwrite tuning specifications from articulation but add to it.</tei:p>
+        <tei:p>The tuning fluctuations that this type of imprecision map generates are additive, i.e. they do not overwrite tuning specifications from articulation but add to it.</tei:p>
     </tei:remarks>
 </tei:elementSpec>

@@ -2,7 +2,7 @@
 <tei:elementSpec ident="metricalAccentuationStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>collection of styles for metrical accentuation</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>This element groups definitions of metrical accentuation styles.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.styleCollectionLike"/>
@@ -10,18 +10,34 @@
     </tei:classes>
     
     <tei:content>
-        <tei:empty/>
-        <!-- more to come -->
+        <tei:elementRef key="styleDef" minOccurs="1" maxOccurs="unbounded"/>
     </tei:content>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>This example shows the definition of a metrical accentuation style with two accentuation patterns and the later use of one of them in a <tei:gi>metricalAccentuationMap</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <header>
+                <metricalAccentuationStyles>
+                    <styleDef name="my accentuation patterns">
+                        <accentuationPatternDef name="quad time" length="4.0" stickToMeasures="true">
+                            <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
+                            <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>
+                            <accentuation beat="4" value="0.5" transition.from="0.0" transition.to="1.0"/>
+                        </accentuationPatternDef>
+                        <accentuationPatternDef name="triple time" length="3.0" stickToMeasures="true">
+                            <accentuation beat="1.0" value="1.0" transition.from="1.0" transition.to="0.0"/>
+                            <accentuation beat="2.0" value="0.5" transition.from="0.5" transition.to="-1.0"/>
+                            <accentuation beat="3.0" value="0.0" transition.from="0.0" transition.to="1.0"/>
+                        </accentuationPatternDef>
+                    </styleDef>
+                </metricalAccentuationStyles>
+            </header>
+            <dated>
+                <metricalAccentuationMap>
+                    <style date="0.0" name.ref="my accentuation patterns"/>
+                    <accentuationPattern date="0.0" name.ref="quad time" scale="50.0" loop="true" stickToMeasures="true"/>
+                </metricalAccentuationMap>
+            </dated>
         </egXML>
-    </tei:exemplum>-->
-    
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    </tei:exemplum>
 </tei:elementSpec>

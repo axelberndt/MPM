@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="articulationDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>articulation definition</tei:gloss>
+    
+    <tei:desc>An articulation definition associates a literal articulation instruction with a series of modifiers.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.articulationDef"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.defLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <articulationDef name="accent" absoluteVelocityChange="25.0"/>
+            <articulationDef name="legato" relativeDuratio ="1.0"/>
+            <articulationDef name="nonlegato" relativeDuration="0.95"/>
+            <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>

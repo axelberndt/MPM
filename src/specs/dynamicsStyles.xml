@@ -2,7 +2,7 @@
 <tei:elementSpec ident="dynamicsStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>dynamics style collection</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>This element groups definitions of dynamics styles.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.styleCollectionLike"/>
@@ -10,18 +10,33 @@
     </tei:classes>
     
     <tei:content>
-        <tei:empty/>
-        <!-- more to come -->
+        <tei:elementRef key="styleDef" minOccurs="1" maxOccurs="unbounded"/>
     </tei:content>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>This example shows the definition of two dynamics styles and the later use of one of them in a <tei:gi>dynamicsMap</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <header>
+                <dynamicsStyles>
+                    <styleDef name="Karajan">
+                        <dynamicsDef name="p" value="30.0"/>
+                        <dynamicsDef name="f" value="95.0"/>
+                        <dynamicsDef name="ff" value="122.0"/>
+                    </styleDef>
+                    <styleDef name="Rattle">
+                        <dynamicsDef name="p" value="26.0"/>
+                        <dynamicsDef name="f" value="101.0"/>
+                        <dynamicsDef name="ff" value="125.0"/>
+                    </styleDef>
+                </dynamicsStyles>
+            </header>
+            <dated>
+                <dynamicsMap>
+                    <style date="0.0" name.ref="Rattle"/>
+                    <dynamics date="0.0" bpm="f" transition.to="p" protraction="0.8"/>
+                    <dynamics date="47000.0" bpm="ff"/>
+                </dynamicsMap>
+            </dated>
         </egXML>
-    </tei:exemplum>-->
-    
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    </tei:exemplum>
 </tei:elementSpec>

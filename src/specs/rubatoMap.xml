@@ -2,7 +2,7 @@
 <tei:elementSpec ident="rubatoMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>rubato map</tei:gloss>
     
-    <tei:desc>Rubato in MPM is defined as a timing distortion that compensates within a certain frame of symbolic time. The <tei:gi>rubatoMap</tei:gi> is the place to add rubati to a performance. Rubato distortions are micro timing features, i.e. they add onto the macro timing curve specified by the <tei:gi>tempoMap</tei:gi>.</tei:desc>
+    <tei:desc>Rubato in MPM is defined as a metronomic tempo variation, i.e. it compensates within a certain frame of symbolic time so that the end of the frame is synchronous again with the underlying meter. The <tei:gi>rubatoMap</tei:gi> is the place to add rubati to a performance. Rubato distortions are micro timing features, i.e. they add onto the macro timing curve specified by the <tei:gi>tempoMap</tei:gi>.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.mapLike"/>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="styleDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>style definition</tei:gloss>
+    
+    <tei:desc>A style definition in MPM is a collection of performance feature definitions. These can then be referenced in the maps instead of defining them anew everytime they are needed. The feature domain is restricted by the <tei:gi>styleDef</tei:gi>'s parent element, i.e. tempo styles should define only tempo features, articulation styles only articulations and so forth.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:classRef key="model.defLike" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>This example shows that the type of children of a <tei:gi>styleDef</tei:gi> is restricted by the parent as it defines the domain. It makes no sense to to place, e.g., a <tei:gi>tempoDef</tei:gi> in a dynamics style.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <header>
+                <dynamicsStyles>
+                    <styleDef name="Karajan">
+                        <dynamicsDef name="p" value="30.0"/>
+                        <dynamicsDef name="f" value="95.0"/>
+                    </styleDef>
+                    <styleDef name="Rattle">
+                        <dynamicsDef name="p" value="26.0"/>
+                        <dynamicsDef name="f" value="101.0"/>
+                    </styleDef>
+                </dynamicsStyles>
+                <tempoStyles>
+                    <styleDef name="Karajan">
+                        <tempoDef name="Adagio" value="60.0"/>
+                        <tempoDef name="Allegro" value="130.0"/>
+                    </styleDef>
+                    <styleDef name="Rattle">
+                        <tempoDef name="Adagio" value="67.0"/>
+                        <tempoDef name="Allegro" value="133.6"/>
+                    </styleDef>
+                </tempoStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <style date="0.0" name.ref="Rattle"/>
+                    <tempo date="0.0" bpm="Allegro" beatLength="0.25"/>
+                </tempoMap>
+                <dynamicsMap>
+                    <style date="0.0" name.ref="Rattle"/>
+                    <dynamics date="0.0" bpm="f"/>
+                </dynamicsMap>
+            </dated>
+        </egXML>
+        <tei:p>Using the same names for style definitions in different domains makes style switching easier in the maps and prevents confusion. And it is, of course, possible to experiment with style mixtures.</tei:p>
+    </tei:exemplum>
+</tei:elementSpec>

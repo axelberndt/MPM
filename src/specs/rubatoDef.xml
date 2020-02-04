@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="rubatoDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>rubato definition</tei:gloss>
+    
+    <tei:desc>A rubato definition associates a literal rubato instruction with a rubato scheme. Rubato in MPM is defined as a metronomic tempo variation, i.e. it compensates within a certain frame of symbolic time so that the end of the frame is synchronous again with the underlying meter.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.rubatoDef"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.defLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <rubatoDef name="swing" frameLength="720.0" intensity="0.6"/>
+            <rubatoDef name="Viennese waltz" frameLength="2160.0" intensity="1.5" lateStart="0.0" earlyEnd="1.0"/>
+            <rubatoDef name="late on 1st beat" frameLength="2880.0" lateStart="0.2"/>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>

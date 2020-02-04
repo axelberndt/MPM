@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="accentuation" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>accentuation</tei:gloss>
+    
+    <tei:desc>An accentuation is a building block for the definition of accentuation patterns. It defines a relative loudness offset (in the interval [-1.0; 1.0]) from the underlying absolute loudness (which is defined by the <tei:gi>dynamicsMap</tei:gi>).</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.beat"/>
+        <tei:memberOf key="att.value.double"/>
+        <tei:memberOf key="att.transition.from"/>
+        <tei:memberOf key="att.transition.to"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="value" mode="change">
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="-1.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="transition.from" mode="change">
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="-1.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="transition.to" mode="change" usage="opt">
+            <tei:gloss>target value of continuous transition</tei:gloss>
+            <tei:desc>This attribute specifies the final value that a continuous transition ends with.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="-1.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>The first element sets the maximum accentuation for the first beat and all notes that follow until the beat position of the subsequent element. The second element sets an accentuation of -0.5 at and only at the second beat. All notes between this ant the beat position of the next element are set to -1.0 accentuation (full restraint). The third element sets 0.5 accentuation at and only at the third beat. The remaining notes are accentuated according to a linear function starting at -0.5 ant transitioning to 1.0. As this is the last accentuation in this pattern the transition goes to the end of the pattern length.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <accentuation beat="1.0" value="1.0"/>
+            <accentuation beat="2.0" value="-0.5" transition.from="-1.0"/>
+            <accentuation beat="3.0" value="0.5" transition.from="-0.5" transition.to="1.0"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The values of attributes <tei:att>value</tei:att>, <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att> are limited to the interval [-1.0; 1.0]. These are relative values, 1.0 marks the maximum accentuation, -1.0 the minimum (the strongest restraint). When used in articulation maps they get scaled to actual loudness values; therefore, each <tei:gi>accentuationPattern</tei:gi> element comes with a <tei:att>scale</tei:att> attribute.</tei:p>        
+    </tei:remarks>
+</tei:elementSpec>

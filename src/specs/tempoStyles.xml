@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tei:elementSpec ident="tempoStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>teampo style collection</tei:gloss>
+    <tei:gloss>tempo style collection</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>This element groups definitions of tempo styles.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.styleCollectionLike"/>
@@ -10,18 +10,33 @@
     </tei:classes>
     
     <tei:content>
-        <tei:empty/>
-        <!-- more to come -->
+        <tei:elementRef key="styleDef" minOccurs="1" maxOccurs="unbounded"/>
     </tei:content>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>This example shows the definition of two tempo styles and the later use of one of them in a <tei:gi>tempoMap</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <header>
+                <tempoStyles>
+                    <styleDef name="Karajan">
+                        <tempoDef name="Adagio" value="60.0"/>
+                        <tempoDef name="Allegro" value="130.0"/>
+                        <tempoDef name="Vivace" value="152.0"/>
+                    </styleDef>
+                    <styleDef name="Rattle">
+                        <tempoDef name="Adagio" value="67.0"/>
+                        <tempoDef name="Allegro" value="133.6"/>
+                        <tempoDef name="Vivace" value="163.0"/>
+                    </styleDef>
+                </tempoStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <style date="0.0" name.ref="Rattle"/>
+                    <tempo date="0.0" bpm="Allegro" beatLength="0.25"/>
+                    <tempo date="47000.0" bpm="Adagio" beatLength="0.5"/>
+                </tempoMap>
+            </dated>
         </egXML>
-    </tei:exemplum>-->
-    
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    </tei:exemplum>
 </tei:elementSpec>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:classSpec ident="att.distribution.seed" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>seed attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>seed</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="seed" usage="opt">
+            <tei:gloss>seed</tei:gloss>
+            <tei:desc>This attribute allows the user to specify a seed for the random distributions. Initialized with this seed, a random number generator generates always the same series of "random" numbers. Thus, by using the seed attribute the imprecisions (timing, dynamics etc.) become reproducible.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="long"/>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

@@ -2,7 +2,7 @@
 <tei:elementSpec ident="articulationStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>articulation style collection</tei:gloss>
     
-    <tei:desc>...</tei:desc>
+    <tei:desc>This element groups definitions of articulation styles.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="model.styleCollectionLike"/>
@@ -10,18 +10,36 @@
     </tei:classes>
     
     <tei:content>
-        <tei:empty/>
-        <!-- more to come -->
+        <tei:elementRef key="styleDef" minOccurs="1" maxOccurs="unbounded"/>
     </tei:content>
     
-    <!--<tei:exemplum>
-        <tei:p>...</tei:p>
+    <tei:exemplum>
+        <tei:p>This example shows the definition of two articulation styles and the later use of one of them in an <tei:gi>articulationMap</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            ...
+            <header>
+                <articulationStyles>
+                    <styleDef name="Bob">
+                        <articulationDef name="accent" absoluteVelocityChange="25.0"/>
+                        <articulationDef name="legato" relativeDuratio ="1.0"/>
+                        <articulationDef name="nonlegato" relativeDuration="0.95"/>
+                        <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                    </styleDef>
+                    <styleDef name="Alice">
+                        <articulationDef name="accent" absoluteVelocityChange="30.0" absoluteDurationChangeMs="-15.0"/>
+                        <articulationDef name="legato" relativeDuratio ="1.1" absoluteVelocityChange="-1.0"/>
+                        <articulationDef name="nonlegato" relativeDuration="0.93"/>
+                        <articulationDef name="staccato" absoluteDurationMs="152.0" absoluteVelocityChange="8.0"/>
+                    </styleDef>
+                </articulationStyles>
+            </header>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Alice" defaultArticulation="nonlegato"/>
+                    <articulation date="0.0" name.ref="staccato"/>
+                    <articulation date="3450.0" name.ref="legato"/>
+                    <articulation date="5670.0" name.ref="staccato" noteid="#note04706"/>
+                </articulationMap>
+            </dated>
         </egXML>
-    </tei:exemplum>-->
-    
-    <!--<tei:remarks>
-        <tei:p>...</tei:p>
-    </tei:remarks>-->
+    </tei:exemplum>
 </tei:elementSpec>
