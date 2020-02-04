@@ -13,7 +13,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.12"/>
+                <tei:edition n="0.2.13"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
