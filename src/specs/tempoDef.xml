@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="tempoDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>tempo definition</tei:gloss>
+    
+    <tei:desc>A tempo definition associates a literal tempo instruction with a value beats per minute (bpm).</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.value.double"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.defLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <tempoDef name="Adagio" value="79.0"/>
+            <tempoDef name="Vivace" value="164.0"/>
+            <tempoDef name="too fast" value="243.0"/>
+            <tempoDef name="my own tempo" value="106.87"/>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>

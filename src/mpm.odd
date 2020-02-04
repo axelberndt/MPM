@@ -76,6 +76,7 @@
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
+                    <xinclude:include href="specs/att.transition.from.xml"/>
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
@@ -83,9 +84,11 @@
                     <xinclude:include href="specs/att.rubatoDef.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.beat.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.date.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.duration.xml"/>
-                    <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
+                    <xinclude:include href="specs/att.time.symbolic.length.xml"/>
                     <xinclude:include href="specs/att.time.physical.xml"/>
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
@@ -115,10 +118,16 @@
                     
                     <xinclude:include href="specs/styleDef.xml"/>
                     <xinclude:include href="specs/articulationStyles.xml"/>
+                        <xinclude:include href="specs/articulationDef.xml"/>
                     <xinclude:include href="specs/dynamicsStyles.xml"/>
+                        <xinclude:include href="specs/dynamicsDef.xml"/>
                     <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
+                        <xinclude:include href="specs/accentuationPatternDef.xml"/>
+                            <xinclude:include href="specs/accentuation.xml"/>
                     <xinclude:include href="specs/rubatoStyles.xml"/>
+                        <xinclude:include href="specs/rubatoDef.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
+                        <xinclude:include href="specs/tempoDef.xml"/>
                     
                     <xinclude:include href="specs/style.xml"/>
                     <xinclude:include href="specs/articulationMap.xml"/>

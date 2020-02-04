@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:elementSpec ident="accentuationPatternDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>accentuation pattern definition</tei:gloss>
+    
+    <tei:desc>An accentuation pattern definition associates a literal accentuation instruction with an accentuation pattern.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.time.symbolic.length"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.defLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:elementRef key="accentuation" minOccurs="0" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <accentuationPatternDef name="my pattern" length="3.0">
+                <accentuation beat="1.0" value="1.0" transition.from="1.0" transition.to="0.0"/>
+                <accentuation beat="2.0" value="0.5" transition.from="0.5" transition.to="-1.0"/>
+                <accentuation beat="3.0" value="0.0" transition.from="0.0" transition.to="1.0"/>
+            </accentuationPatternDef>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>
