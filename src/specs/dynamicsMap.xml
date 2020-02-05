@@ -21,11 +21,11 @@
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <dynamicsMap>
                 <style date="0.0" name.ref="Karajan"/>
-                <dynamics date="11880.0" xml:id="dynam_8448" volume="f"/>
-                <dynamics date="60480.0" xml:id="dynam_27024" volume="p" transition.to="114.0" curvature="0.3" protraction="0.5"/>
-                <dynamics date="164520.0" xml:id="dynam_55404" volume="114.0"/>
-                <dynamics date="334080.0" xml:id="dynam_109086" volume="p" transition.to="ppp"/>
-                <dynamics date="360360.0" xml:id="dynam_117000" volume="f"/>
+                <dynamics date="11880.0" volume="f"/>
+                <dynamics date="60480.0" volume="p" transition.to="114.0" curvature="0.3" protraction="0.5"/>
+                <dynamics date="164520.0" volume="114.0"/>
+                <dynamics date="334080.0" volume="p" transition.to="ppp"/>
+                <dynamics date="360360.0" volume="f"/>
             </dynamicsMap>
         </egXML>
     </tei:exemplum>

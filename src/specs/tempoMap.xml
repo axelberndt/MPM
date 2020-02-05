@@ -20,9 +20,9 @@
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <tempoMap>
                 <style date="0.0" name.ref="Karajan"/>
-                <tempo date="0.0" xml:id="tempo_1" bpm="123.0" beatLength="0.25"/>
-                <tempo date="345960.0" xml:id="tempo_2" bpm="Allegro" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.9"/>
-                <tempo date="360360.0" xml:id="tempo_3" bpm="Adagio" beatLength="0.25"/>
+                <tempo date="0.0" bpm="123.0" beatLength="0.25"/>
+                <tempo date="345960.0" bpm="Allegro" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.9"/>
+                <tempo date="360360.0" bpm="Adagio" beatLength="0.25"/>
             </tempoMap>
         </egXML>
     </tei:exemplum>

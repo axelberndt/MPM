@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="performance" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="performance" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
     <tei:gloss>performance description</tei:gloss>
     
     <tei:desc>This element includes all information of a single musical performance.</tei:desc>
@@ -11,9 +13,14 @@
     </tei:classes>
     
     <tei:content>
-        <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
-        <tei:elementRef key="global" minOccurs="1" maxOccurs="1"/>
-        <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
+        <relaxng:interleave>
+            <!--<relaxng:ref name="mpm.global"/>
+            <relaxng:zeroOrMore>
+                <relaxng:ref name="mpm.part"/>
+            </relaxng:zeroOrMore>-->
+            <tei:elementRef key="global" minOccurs="1" maxOccurs="1"/>
+            <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
+        </relaxng:interleave>
     </tei:content>
     
     <tei:exemplum>
