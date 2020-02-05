@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="header" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="header" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
     <tei:gloss>header information</tei:gloss>
     
     <tei:desc>The <tei:gi>header</tei:gi> environment in MPM is the place for non-dateable information, i.e. information that are not tied to a particular position on the time axis, such as style definitions.</tei:desc>
@@ -9,7 +11,9 @@
     </tei:classes>
 
     <tei:content>
-        <tei:classRef key="model.styleCollectionLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
+        <relaxng:interleave>
+            <tei:classRef key="model.styleCollectionLike" expand="sequenceOptional" minOccurs="1" maxOccurs="1"/>
+        </relaxng:interleave>
     </tei:content>
         
     <tei:exemplum>

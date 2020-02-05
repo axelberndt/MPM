@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="part" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="part" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
     <tei:gloss>part-specific performance data</tei:gloss>
     
     <tei:desc>This element includes all information that applies to a specific musical part or voice.</tei:desc>
@@ -12,7 +14,9 @@
     </tei:classes>
     
     <tei:content>
-        <tei:classRef key="model.partContent" expand="sequence" minOccurs="1" maxOccurs="1"/>
+        <relaxng:interleave>
+            <tei:classRef key="model.partContent" expand="sequence" minOccurs="1" maxOccurs="1"/>
+        </relaxng:interleave>
     </tei:content>
     
     <tei:exemplum>

@@ -11,10 +11,11 @@
     </tei:classes>
     
     <tei:content>
+        <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
         <tei:elementRef key="global" minOccurs="1" maxOccurs="1"/>
         <tei:elementRef key="part" minOccurs="0" maxOccurs="unbounded"/>
     </tei:content>
-
+    
     <tei:exemplum>
         <tei:p>This is the typical structure of a <tei:gi>performance</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">

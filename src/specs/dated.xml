@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="dated" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="dated" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
     <tei:gloss>dated information</tei:gloss>
     
     <tei:desc>The <tei:gi>dated</tei:gi> environment is the place for all datable information, ie. that are located at a specific position in time. They are organised in maps. Each map represents a specific domain, such as tempo, rubato, asynchrony, dynamics, metrical accentuation, articulation, etc.</tei:desc>
@@ -9,7 +11,9 @@
     </tei:classes>
 
     <tei:content>
-        <tei:classRef key="model.mapLike" expand="sequenceOptional" minOccurs="0" maxOccurs="1"/>
+        <relaxng:interleave>
+            <tei:classRef key="model.mapLike" expand="sequenceOptional" minOccurs="1" maxOccurs="1"/>
+        </relaxng:interleave>
     </tei:content>
     
     <tei:exemplum>

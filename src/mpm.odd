@@ -2,8 +2,8 @@
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:rng="http://relaxng.org/ns/structure/1.0"
-    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron"
     xmlns:xinclude="http://www.w3.org/2001/XInclude">
     <tei:teiHeader>
         <tei:fileDesc>
@@ -13,7 +13,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.13"/>
+                <tei:edition n="0.2.14"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -98,7 +98,7 @@
                     <xinclude:include href="specs/att.distribution.seed.xml"/>
                     
                     <!-- the model classes -->
-                    <xinclude:include href="specs/model.partContentLike.xml"/>
+                    <xinclude:include href="specs/model.partContent.xml"/>
                     <xinclude:include href="specs/model.styleCollectionLike.xml"/>
                     <xinclude:include href="specs/model.defLike.xml"/>
                     <xinclude:include href="specs/model.mapLike.xml"/>
