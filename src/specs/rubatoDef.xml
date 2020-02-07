@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="rubatoDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="rubatoDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>rubato definition</tei:gloss>
     
     <tei:desc>A rubato definition associates a literal rubato instruction with a rubato scheme. Rubato in MPM is defined as a metronomic tempo variation, i.e. it compensates within a certain frame of symbolic time so that the end of the frame is synchronous again with the underlying meter.</tei:desc>
@@ -14,6 +18,15 @@
     <tei:content>
         <tei:empty/>
     </tei:content>
+    
+    <tei:constraintSpec scheme="schematron" ident="rubatoDef_ancestor_constraint">
+        <tei:desc>This element is allowed only within the <tei:gi>rubatoStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
+        <tei:constraint>
+            <schematron:assert test="parent::node()/parent::mpm:rubatoStyles">
+                Element rubatoDef is allowed only as child of a styleDef that is child of a rubatoStyles element.
+            </schematron:assert>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">

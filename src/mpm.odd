@@ -4,7 +4,8 @@
 <tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:relaxng="http://relaxng.org/ns/structure/1.0"
     xmlns:schematron="http://purl.oclc.org/dsdl/schematron"
-    xmlns:xinclude="http://www.w3.org/2001/XInclude">
+    xmlns:xinclude="http://www.w3.org/2001/XInclude"
+    xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
     <tei:teiHeader>
         <tei:fileDesc>
             <tei:titleStmt>
@@ -61,7 +62,16 @@
         <tei:back>
             <tei:div>
                 <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="http://www.cemfi.de/mpm/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML http://www.cemfi.de/mpm/ns/1.0">
-
+                    
+                    <!-- declare the mpm namespace prefix, required to be done once before any Schematron tests are defined -->
+                    <tei:constraintSpec scheme="schematron" ident="mpmPrefixDeclaration">
+                        <tei:gloss>MPM namespace prefix declaration</tei:gloss>
+                        <tei:desc>This declares the namespace prefix to be usesd in Schematron tests.</tei:desc>
+                        <tei:constraint>
+                            <schematron:ns prefix="mpm" uri="http://www.cemfi.de/mpm/ns/1.0"/>
+                        </tei:constraint>
+                    </tei:constraintSpec>
+                    
                     <!-- the modules -->
                     <xinclude:include href="specs/mpm.core.xml"/>
                     <xinclude:include href="specs/mpm.resources.xml"/>
