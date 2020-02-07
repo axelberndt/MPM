@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:classSpec ident="model.defLike" type="model" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:classSpec ident="model.defLike" type="model" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>style definition content model</tei:gloss>
     
     <tei:desc>The content model for style definitions.</tei:desc>

@@ -2,9 +2,10 @@
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:rng="http://relaxng.org/ns/structure/1.0"
-    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-    xmlns:xinclude="http://www.w3.org/2001/XInclude">
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron"
+    xmlns:xinclude="http://www.w3.org/2001/XInclude"
+    xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
     <tei:teiHeader>
         <tei:fileDesc>
             <tei:titleStmt>
@@ -13,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.13"/>
+                <tei:edition n="0.2.15"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -61,7 +62,16 @@
         <tei:back>
             <tei:div>
                 <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="http://www.cemfi.de/mpm/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML http://www.cemfi.de/mpm/ns/1.0">
-
+                    
+                    <!-- declare the mpm namespace prefix, required to be done once before any Schematron tests are defined -->
+                    <tei:constraintSpec scheme="schematron" ident="mpmPrefixDeclaration">
+                        <tei:gloss>MPM namespace prefix declaration</tei:gloss>
+                        <tei:desc>This declares the namespace prefix to be usesd in Schematron tests.</tei:desc>
+                        <tei:constraint>
+                            <schematron:ns prefix="mpm" uri="http://www.cemfi.de/mpm/ns/1.0"/>
+                        </tei:constraint>
+                    </tei:constraintSpec>
+                    
                     <!-- the modules -->
                     <xinclude:include href="specs/mpm.core.xml"/>
                     <xinclude:include href="specs/mpm.resources.xml"/>
@@ -98,7 +108,7 @@
                     <xinclude:include href="specs/att.distribution.seed.xml"/>
                     
                     <!-- the model classes -->
-                    <xinclude:include href="specs/model.partContentLike.xml"/>
+                    <xinclude:include href="specs/model.partContent.xml"/>
                     <xinclude:include href="specs/model.styleCollectionLike.xml"/>
                     <xinclude:include href="specs/model.defLike.xml"/>
                     <xinclude:include href="specs/model.mapLike.xml"/>

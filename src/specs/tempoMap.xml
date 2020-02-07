@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:elementSpec ident="tempoMap" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>tempo map</tei:gloss>
     
@@ -20,9 +22,9 @@
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <tempoMap>
                 <style date="0.0" name.ref="Karajan"/>
-                <tempo date="0.0" xml:id="tempo_1" bpm="123.0" beatLength="0.25"/>
-                <tempo date="345960.0" xml:id="tempo_2" bpm="Allegro" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.9"/>
-                <tempo date="360360.0" xml:id="tempo_3" bpm="Adagio" beatLength="0.25"/>
+                <tempo date="0.0" bpm="123.0" beatLength="0.25"/>
+                <tempo date="345960.0" bpm="Allegro" beatLength="0.25" transition.to="Adagio" meanTempoAt="0.9"/>
+                <tempo date="360360.0" bpm="Adagio" beatLength="0.25"/>
             </tempoMap>
         </egXML>
     </tei:exemplum>

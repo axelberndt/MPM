@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei:elementSpec ident="articulationDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="articulationDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>articulation definition</tei:gloss>
     
     <tei:desc>An articulation definition associates a literal articulation instruction with a series of modifiers.</tei:desc>
@@ -15,6 +19,15 @@
         <tei:empty/>
     </tei:content>
     
+    <tei:constraintSpec scheme="schematron" ident="articulationDef_ancestor_constraint">
+        <tei:desc>This element is allowed only within the <tei:gi>articulationStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
+        <tei:constraint>
+            <schematron:assert test="parent::node()/parent::mpm:articulationStyles">
+                Element articulationDef is allowed only as child of a styleDef that is child of an articulationStyles element.
+            </schematron:assert>
+        </tei:constraint>
+    </tei:constraintSpec>
+
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <articulationDef name="accent" absoluteVelocityChange="25.0"/>
