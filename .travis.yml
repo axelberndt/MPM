@@ -10,7 +10,7 @@ before_install:
 
 script:
   - curl -s -o tei.rng https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng
-  - xmllint --xinclude --relaxng tei.rng src/mpm.odd > mpm-monolithic.odd
+  - xmllint --xinclude src/mpm.odd > mpm-monolithic.odd
   - curl -s -o mpm.rng -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/conversion
   - curl -s -o mpm.dtd -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/dtd%3Aapplication%3Axml-dtd/conversion
   - mkdir -p docs
