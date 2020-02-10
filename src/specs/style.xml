@@ -42,21 +42,14 @@
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
-<<<<<<< HEAD
             
             <tei:constraintSpec ident="defaultArticulation_only_in_articulationMaps" scheme="schematron">
                 <tei:gloss>default articulation constraints</tei:gloss>
                 <tei:desc>Attribute defaultArticulation can be used only within an articulationMap. Its reference articulationDef must exist.</tei:desc>
-=======
-            <tei:constraintSpec ident="defaultArticulation_only_in_articulationMaps" scheme="schematron">
-                <tei:gloss>default articulation constraint</tei:gloss>
-                <tei:desc>Attribute defaultArticulation can be used only within an articulationMap.</tei:desc>
->>>>>>> 5fcbf410d2bf3302a0acee2e98af11aa0cd12e37
                 <tei:constraint>
                     <schematron:assert test="parent::*/parent::mpm:articulationMap">
                         Element <schematron:value-of select="local-name(parent::*)"/> can hold @<schematron:value-of select="local-name()"/> only within an articulationMap.
                     </schematron:assert>
-<<<<<<< HEAD
                     
                     <schematron:rule context="attribute::defaultArticulation">
                         <schematron:let name="this" value="string()"/>
@@ -70,10 +63,6 @@
                 </tei:constraint>
             </tei:constraintSpec>
             
-=======
-                </tei:constraint>
-            </tei:constraintSpec>
->>>>>>> 5fcbf410d2bf3302a0acee2e98af11aa0cd12e37
             <tei:remarks>
                 <tei:p>This attribute is optional and meaningful only within an <tei:gi>articulationMap</tei:gi>.</tei:p>
             </tei:remarks>
