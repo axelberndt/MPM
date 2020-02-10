@@ -14,7 +14,11 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
+<<<<<<< HEAD
+                <tei:edition n="0.2.18"/>
+=======
                 <tei:edition n="0.2.17"/>
+>>>>>>> 5fcbf410d2bf3302a0acee2e98af11aa0cd12e37
             </tei:editionStmt>
             
             <tei:publicationStmt>
