@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.name" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.name" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>name attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attribute <tei:att>name</tei:att>.</tei:desc>
@@ -13,6 +15,19 @@
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
+            <tei:constraintSpec ident="att.name_unique" scheme="schematron">
+                <tei:gloss>Unique name</tei:gloss>
+                <tei:desc>Names should be locally unique.</tei:desc>
+                <tei:constraint>
+                    <schematron:rule context="attribute::name">
+                        <schematron:let name="this" value="string()"/>
+                        <schematron:let name="element" value="local-name(parent::*)"/>
+                        <schematron:report test="parent::*/parent::*/child::*[local-name() = $element][string(attribute::name) = $this][2]">
+                            Duplicate @name "<schematron:value-of select="."/>" value in current context. There are sibling elements of the same type with the same name. Names should be locally unique.
+                        </schematron:report>
+                    </schematron:rule>
+                </tei:constraint>
+            </tei:constraintSpec>
             <tei:remarks>
                 <tei:p>As opposed to attribute <tei:att>xml:id</tei:att> there can be multiple occurences of the same name in the document. Some <tei:gi>styleDef</tei:gi> elements from different domains (e.g. tempo, dynamics and articulation) may use the same name to indicate affiliation. Different <tei:gi>styleDef</tei:gi> elements within the same domain may contain elements with the same name, e.g. two <tei:gi>tempoDef</tei:gi> elements may associate different numeric tempi with the same name (say Allegro).</tei:p>
             </tei:remarks>

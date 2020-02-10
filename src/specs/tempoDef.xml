@@ -22,8 +22,8 @@
     <tei:constraintSpec scheme="schematron" ident="tempoDef_ancestor_constraint">
         <tei:desc>This element is allowed only within the <tei:gi>tempoStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
         <tei:constraint>
-            <schematron:assert test="parent::node()/parent::mpm:tempoStyles">
-                Element tempoDef is allowed only as child of a styleDef that is child of a tempoStyles element.
+            <schematron:assert test="parent::*/parent::mpm:tempoStyles">
+                Element <schematron:value-of select="local-name()"/> is allowed only as child of a styleDef that is child of a tempoStyles element.
             </schematron:assert>
         </tei:constraint>
     </tei:constraintSpec>
