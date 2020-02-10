@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:elementSpec ident="style" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="style" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>style switch</tei:gloss>
     
     <tei:desc>This element is used to switch between styles which are defined in the global or local <tei:gi>header</tei:gi> environment via <tei:gi>styleDef</tei:gi> elements.</tei:desc>
@@ -23,6 +25,15 @@
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
+            <tei:constraintSpec ident="defaultArticulation_only_in_articulationMaps" scheme="schematron">
+                <tei:gloss>default articulation constraint</tei:gloss>
+                <tei:desc>Attribute defaultArticulation can be used only within an articulationMap.</tei:desc>
+                <tei:constraint>
+                    <schematron:assert test="parent::*/parent::mpm:articulationMap">
+                        Element <schematron:value-of select="local-name(parent::*)"/> can hold @<schematron:value-of select="local-name()"/> only within an articulationMap.
+                    </schematron:assert>
+                </tei:constraint>
+            </tei:constraintSpec>
             <tei:remarks>
                 <tei:p>This attribute is optional and meaningful only within an <tei:gi>articulationMap</tei:gi>.</tei:p>
             </tei:remarks>

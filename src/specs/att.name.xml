@@ -23,7 +23,7 @@
                         <schematron:let name="this" value="string()"/>
                         <schematron:let name="element" value="local-name(parent::*)"/>
                         <schematron:report test="parent::*/parent::*/child::*[local-name() = $element][string(attribute::name) = $this][2]">
-                            Duplicate @name "<schematron:value-of select="."/>" value in current context. There are sibling elements of the same type with the same name. Names should be locally unique.
+                            Duplicate @name: There are multiple sibling <schematron:value-of select="$element"/> elements with @name "<schematron:value-of select="$this"/>". Names must be locally unique.
                         </schematron:report>
                     </schematron:rule>
                 </tei:constraint>
