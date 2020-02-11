@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.rubatoDef" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.rubatoDef" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>rubato definition attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attributes needed to define a rubato.</tei:desc>
+    
+    <tei:constraintSpec ident="lateStart_earlyEnd_constraint" scheme="schematron">
+        <tei:gloss>lateStar earlyEnd constraint</tei:gloss>
+        <tei:desc>Attributes <tei:att>lateStart</tei:att> and <tei:att>earlyEnd</tei:att> have to conform with the following relation: 0.0 &#x2264; <tei:att>lateStart</tei:att> &lt; <tei:att>earlyEnd</tei:att> &#x2264; 1.0</tei:desc>
+        <tei:constraint>
+            <schematron:rule context="attribute::lateStart[parent::*[attribute::earlyEnd]]">
+                <schematron:let name="lateStart" value="number()"/>
+                <schematron:let name="earlyEnd" value="number(parent::*/attribute::earlyEnd)"/>
+                <schematron:assert test="$lateStart lt $earlyEnd">
+                    Value constraint validation in element <schematron:value-of select="local-name(parent::*)"/>: 0.0 &#x2264; @lateStart &lt; @earlyEnd &#x2264; 1.0  
+                </schematron:assert>
+            </schematron:rule>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:attList>
         <tei:attDef ident="frameLength" usage="req">

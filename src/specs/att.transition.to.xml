@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.transition.to" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.transition.to" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>transition.to attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attribute <tei:att>transition.to</tei:att>.</tei:desc>
+    
+    <tei:constraintSpec ident="transition.to_reference_exists" scheme="schematron">
+        <tei:gloss>transition.to reference exists constraint</tei:gloss>
+        <tei:desc>>With its <tei:att>transition.to</tei:att> the element can refer only to existing definition elements.</tei:desc>
+        <tei:constraint>
+            <schematron:pattern>
+                <!-- if the transition.to value is numeric, all is fine -->
+                <schematron:rule context="attribute::transition.to[number(.) = number(.)]">
+                    <schematron:assert test="true()"/>
+                </schematron:rule>
+                
+                <!-- this rule captures all literal @transition.to but no preceding style element -->
+                <schematron:rule context="attribute::transition.to[not(parent::*/preceding-sibling::mpm:style)]">
+                    <schematron:report test="true()">
+                        No preceding style element in the <schematron:value-of select="local-name(parent::*/parent::*)"/>. This is required to resolve the reference given by @<schematron:value-of select="local-name()"/>="<schematron:value-of select="string()"/>".
+                    </schematron:report>
+                </schematron:rule>
+                
+                <!-- all remaining literal @transition.to that did not fall under the previous rule -->
+                <schematron:rule context="attribute::transition.to">
+                    <schematron:let name="this" value="self"/>
+                    <schematron:let name="nameRef" value="string()"/>
+                    <schematron:let name="domain" value="substring-before(local-name(parent::*/parent::*), 'Map')"/>
+                    <schematron:let name="styleName" value="string(parent::*/preceding-sibling::mpm:style[1]/attribute::name.ref)"/>  <!-- read the style reference from the last style element in the map before this element (preceding siblings are in reverse order, last() would return the first node in the set) -->
+                    <schematron:let name="header" value="(ancestor::mpm:part, ancestor::mpm:performance/child::mpm:global)/child::mpm:header"/>
+                    <schematron:let name="style" value="$header/child::*[local-name() = concat($domain, 'Styles')]/child::mpm:styleDef[string(attribute::name) = $styleName]"/>
+                    <schematron:assert test="$style/child::*[concat(local-name($this/parent::*), 'Def')][string(attribute::name) = $nameRef]">
+                        Invalid @transition.to value: Cannot find a local or global <schematron:value-of select="$domain"/> style "<schematron:value-of select="$styleName"/>" with a <schematron:value-of select="$domain"/>Def that matches @name="<schematron:value-of select="$nameRef"/>".
+                    </schematron:assert>
+                </schematron:rule>
+            </schematron:pattern>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:attList>
         <tei:attDef ident="transition.to" usage="opt">
