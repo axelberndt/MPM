@@ -15,6 +15,7 @@
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
+            
             <tei:constraintSpec ident="att.name_unique" scheme="schematron">
                 <tei:gloss>Unique name</tei:gloss>
                 <tei:desc>Names should be locally unique.</tei:desc>
@@ -23,7 +24,7 @@
                         <schematron:let name="this" value="string()"/>
                         <schematron:let name="element" value="local-name(parent::*)"/>
                         <schematron:report test="parent::*/parent::*/child::*[local-name() = $element][string(attribute::name) = $this][2]">
-                            Duplicate @name: There are multiple sibling <schematron:value-of select="$element"/> elements with @name "<schematron:value-of select="$this"/>". Names must be locally unique.
+                            Duplicate @name: There are multiple sibling <schematron:value-of select="$element"/> elements with @name="<schematron:value-of select="$this"/>". Names must be locally unique.
                         </schematron:report>
                     </schematron:rule>
                 </tei:constraint>

@@ -8,13 +8,54 @@
     
     <tei:desc>This attribute class provides attribute <tei:att>name.ref</tei:att>.</tei:desc>
     
+    <tei:constraintSpec ident="name.ref_constraints" scheme="schematron">
+        <tei:gloss>name.ref constraint</tei:gloss>
+        <tei:desc>name.ref is allowed refer only to existing elements.</tei:desc>
+        <tei:constraint>
+            <schematron:pattern>
+                <!-- if the @name.ref if part of a style element -->
+                <schematron:rule context="attribute::name.ref[parent::mpm:style]">
+                    <schematron:let name="nameRef" value="string()"/>
+                    <schematron:let name="domain" value="concat(substring-before(local-name(parent::*/parent::*), 'Map'), 'Styles')"/>
+                    <schematron:let name="header" value="(ancestor::mpm:part, ancestor::mpm:performance/child::mpm:global)/child::mpm:header"/>
+                    <schematron:assert test="$header/child::*[local-name() = $domain]/child::mpm:styleDef[string(attribute::name) = $nameRef]">
+                        Invalid style reference: There exists no <schematron:value-of select="$domain"/>/styleDef with @name="<schematron:value-of select="$nameRef"/>". 
+                    </schematron:assert>
+                </schematron:rule>
+                
+                <!-- this rule captures all @name.ref but with no preceding style element -->
+                <schematron:rule context="attribute::name.ref[not(parent::*/preceding-sibling::mpm:style)]">
+                    <schematron:report test="true()">
+                        No preceding style element in <schematron:value-of select="local-name(parent::*/parent::*)"/>. This is required to resolve the reference given by @<schematron:value-of select="local-name()"/>="<schematron:value-of select="string()"/>".
+                    </schematron:report>
+                </schematron:rule>
+                
+                <!-- all remaining @name.ref that did not fall under the previous rules -->
+                <schematron:rule context="attribute::name.ref">
+                    <schematron:let name="this" value="self"/>
+                    <schematron:let name="nameRef" value="string()"/>
+                    <schematron:let name="domain" value="substring-before(local-name(parent::*/parent::*), 'Map')"/>
+                    <schematron:let name="styleName" value="string(parent::*/preceding-sibling::mpm:style[1]/attribute::name.ref)"/>  <!-- read the style reference from the last style element in the map before this element (preceding siblings are in reverse order, last() would return the first node in the set) -->
+                    <schematron:let name="header" value="(ancestor::mpm:part, ancestor::mpm:performance/child::mpm:global)/child::mpm:header"/>
+                    <schematron:let name="style" value="$header/child::*[local-name() = concat($domain, 'Styles')]/child::mpm:styleDef[string(attribute::name) = $styleName]"/>
+                    <schematron:assert test="$style/child::*[concat(local-name($this/parent::*), 'Def')][string(attribute::name) = $nameRef]">
+                        Invalid @name.ref value: Cannot find a local or global <schematron:value-of select="$domain"/> style "<schematron:value-of select="$styleName"/>" with a <schematron:value-of select="$domain"/>Def that matches @name="<schematron:value-of select="$nameRef"/>".
+                    </schematron:assert>
+                </schematron:rule>
+            </schematron:pattern>
+        </tei:constraint>
+    </tei:constraintSpec>
+    
     <tei:attList>
         <tei:attDef ident="name.ref" usage="req">
             <tei:gloss>name reference</tei:gloss>
+            
             <tei:desc>This attribute should be used for references by name.</tei:desc>
+            
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
+            
             <tei:remarks>
                 <tei:p>As opposed to attribute <tei:att>xml:id</tei:att> there can be multiple occurences of the same name in the document. Some <tei:gi>styleDef</tei:gi> elements from different domains (e.g. tempo, dynamics and articulation) may use the same name to indicate affiliation. Different <tei:gi>styleDef</tei:gi> elements within the same domain may contain elements with the same name, e.g. two <tei:gi>tempoDef</tei:gi> elements may associate different numeric tempi with the same name (say Allegro).</tei:p>
             </tei:remarks>

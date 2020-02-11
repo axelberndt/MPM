@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.time.symbolic.date" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.time.symbolic.date" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>date attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attribute <tei:att>date</tei:att>.</tei:desc>
+    
+    <tei:constraintSpec ident="monotonous_dates_constraint" scheme="schematron">
+        <tei:gloss>monotonous date constraint</tei:gloss>
+        <tei:desc>Map elements must be sorted in chronologically ascending order.</tei:desc>
+        <tei:constraint>
+            <!-- for every @date on an element that is not the first in the map -->
+            <schematron:rule context="attribute::date[parent::*/preceding-sibling::*]">
+                <schematron:let name="dateThis" value="number()"/>
+                <schematron:let name="datePrev" value="number(parent::*/preceding-sibling::*[1]/attribute::date)"/>
+                <schematron:assert test="$datePrev le $dateThis">
+                    This element's @date is before the @date of its predecessor. Map elements must be sorted in chronologically ascending order.
+                </schematron:assert>
+            </schematron:rule>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:attList>
         <tei:attDef ident="date" usage="req">

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:elementSpec ident="tempo" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="tempo" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>tempo</tei:gloss>
     
     <tei:desc>A tempo instruction</tei:desc>
@@ -23,6 +25,36 @@
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
+            <tei:constraintSpec ident="bpm_reference_exists" scheme="schematron">
+                <tei:gloss>bpm reference exists constraint</tei:gloss>
+                <tei:desc>With its <tei:att>bpm</tei:att> the <tei:gi>tempo</tei:gi> element can refer only to existing <tei:gi>tempoDef</tei:gi> elements.</tei:desc>
+                <tei:constraint>
+                    <schematron:pattern>
+                        <!-- if the value is numeric, all is fine -->
+                        <schematron:rule context="attribute::bpm[number(.) = number(.)]">
+                            <schematron:assert test="true()"/>
+                        </schematron:rule>
+                        
+                        <!-- this rule captures all literal @bpm but with no preceding style element -->
+                        <schematron:rule context="attribute::bpm[not(parent::*/preceding-sibling::mpm:style)]">
+                            <schematron:report test="true()">
+                                No preceding style element in the <schematron:value-of select="local-name(parent::*/parent::*)"/>. This is required to resolve the reference given by @<schematron:value-of select="local-name()"/>="<schematron:value-of select="string()"/>".
+                            </schematron:report>
+                        </schematron:rule>
+                        
+                        <!-- all remaining literal @bpm that did not fall under the previous rules -->
+                        <schematron:rule context="attribute::bpm">
+                            <schematron:let name="nameRef" value="string()"/>
+                            <schematron:let name="styleName" value="string(parent::*/preceding-sibling::mpm:style[1]/attribute::name.ref)"/>  <!-- read the style reference from the last style element in the map before this element (preceding siblings are in reverse order, last() would return the first node in the set) -->
+                            <schematron:let name="header" value="(ancestor::mpm:part, ancestor::mpm:performance/child::mpm:global)/child::mpm:header"/>
+                            <schematron:let name="style" value="$header/child::mpm:tempoStyles/child::mpm:styleDef[string(attribute::name) = $styleName]"/>
+                            <schematron:assert test="$style/child::mpm:tempoDef[string(attribute::name) = $nameRef]">
+                                Invalid @<schematron:value-of select="local-name()"/> value: Cannot find a local or global tempo style "<schematron:value-of select="$styleName"/>" with a tempoDef that matches @name="<schematron:value-of select="$nameRef"/>".
+                            </schematron:assert>
+                        </schematron:rule>
+                    </schematron:pattern>
+                </tei:constraint>
+            </tei:constraintSpec>
             <tei:remarks>
                 <tei:p>The value can be purely numeric and will be interpreted as the number of beats per minute. Alternatively, the value can also be literal and, thus, refer to a <tei:gi>tempoDef</tei:gi> in the underlying tempo style definition.</tei:p>
             </tei:remarks>

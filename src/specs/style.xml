@@ -18,21 +18,6 @@
         <tei:empty/>
     </tei:content>
     
-    <tei:constraintSpec ident="style_exists" scheme="schematron">
-        <tei:gloss>style exists constraint</tei:gloss>
-        <tei:desc>Within its @name.ref the style element can refer only to styleDef elements in the same domain. These must actually exist.</tei:desc>
-        <tei:constraint>
-            <schematron:rule context="mpm:style">
-                <schematron:let name="nameRef" value="string(attribute::name.ref)"/>
-                <schematron:let name="domain" value="concat(substring-before(local-name(parent::*), 'Map'), 'Styles')"/>
-                <schematron:let name="header" value="(ancestor::mpm:part, ancestor::mpm:performance/child::mpm:global)/child::mpm:header"/>
-                <schematron:assert test="$header/child::*[local-name() = $domain]/child::mpm:styleDef[string(attribute::name) = $nameRef]">
-                    Invalid style reference: There exists no <schematron:value-of select="$domain"/>/styleDef with @name="<schematron:value-of select="$nameRef"/>". 
-                </schematron:assert>
-            </schematron:rule>
-        </tei:constraint>
-    </tei:constraintSpec>
-    
     <tei:attList>
         <tei:attDef ident="defaultArticulation" usage="opt">
             <tei:gloss>articulationname reference</tei:gloss>
@@ -45,7 +30,7 @@
             
             <tei:constraintSpec ident="defaultArticulation_only_in_articulationMaps" scheme="schematron">
                 <tei:gloss>default articulation constraints</tei:gloss>
-                <tei:desc>Attribute defaultArticulation can be used only within an articulationMap. Its reference articulationDef must exist.</tei:desc>
+                <tei:desc>Attribute defaultArticulation can be used only within an <tei:gi>articulationMap</tei:gi>. Its reference <tei:gi>articulationDef</tei:gi> must exist.</tei:desc>
                 <tei:constraint>
                     <schematron:assert test="parent::*/parent::mpm:articulationMap">
                         Element <schematron:value-of select="local-name(parent::*)"/> can hold @<schematron:value-of select="local-name()"/> only within an articulationMap.
@@ -57,7 +42,7 @@
                         <schematron:let name="header" value="(ancestor::mpm:part, ancestor::mpm:performance/child::mpm:global)/child::mpm:header"/>
                         <schematron:let name="style" value="$header/child::mpm:articulationStyles/child::mpm:styleDef[string(attribute::name) = $styleRef]"/>
                         <schematron:assert test="$style/child::mpm:articulationDef[string(attribute::name) = $this]">
-                            Invalid @<schematron:value-of select="local-name()"/>: Cannot find an articulationDef in the local and global scope that matches @name="<schematron:value-of select="$this"/>". 
+                            Invalid @<schematron:value-of select="local-name()"/> value: Cannot find an articulationDef in the local and global scope that matches @name="<schematron:value-of select="$this"/>".
                         </schematron:assert>
                     </schematron:rule>
                 </tei:constraint>
