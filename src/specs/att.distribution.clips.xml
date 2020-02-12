@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.distribution.clips" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.distribution.clips" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>lower and upper clipping value attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attributes <tei:att>clip.lower</tei:att> and <tei:att>clip.upper</tei:att>. They are used to clip the range of random values.</tei:desc>
+    
+    <tei:constraintSpec ident="clip_constraint" scheme="schematron">
+        <tei:gloss>clip constraint</tei:gloss>
+        <tei:desc><tei:att>clip.lower</tei:att> &#x2264; <tei:att>clip.upper</tei:att></tei:desc>
+        <tei:constraint>
+            <!-- for every @clip.lower in conjunction with @clip.upper -->
+            <schematron:rule context="attribute::clip.lower[parent::*[attribute::clip.upper]]">
+                <schematron:let name="clipLower" value="number()"/>
+                <schematron:let name="clipUpper" value="number(parent::*/attribute::clip.upper)"/>
+                <schematron:assert test="$clipLower le $clipUpper">
+                    Value constraint validation in element <schematron:value-of select="local-name(parent::*)"/>: @clip.lower &#x2264; @clip.upper
+                </schematron:assert>
+            </schematron:rule>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:attList>
         <tei:attDef ident="clip.lower" usage="req">

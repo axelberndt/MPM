@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="0.2.19"/>
+                <tei:edition n="2.0.0"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -78,20 +78,22 @@
                     <xinclude:include href="specs/mpm.midi.xml"/>
 
                     <!-- the attribute classes -->
+                    <xinclude:include href="specs/att.articulationDef.xml"/>
+                    <xinclude:include href="specs/att.distribution.clips.xml"/>
+                    <xinclude:include href="specs/att.distribution.limits.xml"/>
+                    <xinclude:include href="specs/att.distribution.seed.xml"/>
+                    <xinclude:include href="specs/att.id.xml"/>
+                    <xinclude:include href="specs/att.loop.xml"/>
+                    <xinclude:include href="specs/att.midiRouting.xml"/>
+                    <xinclude:include href="specs/att.name.xml"/>
+                    <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.reference.name.xml"/>
                     <xinclude:include href="specs/att.reference.noteid.xml"/>
-                    <xinclude:include href="specs/att.id.xml"/>
-                    <xinclude:include href="specs/att.loop.xml"/>
-                    <xinclude:include href="specs/att.name.xml"/>
-                    <xinclude:include href="specs/att.number.xml"/>
-                    <xinclude:include href="specs/att.value.double.xml"/>
+                    <xinclude:include href="specs/att.rubatoDef.xml"/>
                     <xinclude:include href="specs/att.transition.from.xml"/>
                     <xinclude:include href="specs/att.transition.to.xml"/>
-                    <xinclude:include href="specs/att.midiRouting.xml"/>
-                    <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
-                    <xinclude:include href="specs/att.articulationDef.xml"/>
-                    <xinclude:include href="specs/att.rubatoDef.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
@@ -103,9 +105,7 @@
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
-                    <xinclude:include href="specs/att.distribution.clips.xml"/>
-                    <xinclude:include href="specs/att.distribution.limits.xml"/>
-                    <xinclude:include href="specs/att.distribution.seed.xml"/>
+                    <xinclude:include href="specs/att.value.double.xml"/>
                     
                     <!-- the model classes -->
                     <xinclude:include href="specs/model.partContent.xml"/>

@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.distribution.limits" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.distribution.limits" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>limit attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>.</tei:desc>
+    
+    <tei:constraintSpec ident="limits_constraint" scheme="schematron">
+        <tei:gloss>limits constraint</tei:gloss>
+        <tei:desc><tei:att>limit.lower</tei:att> &#x2264; <tei:att>limit.upper</tei:att></tei:desc>
+        <tei:constraint>
+            <!-- for every @limit.lower in conjunction with @limit.upper -->
+            <schematron:rule context="attribute::limit.lower[parent::*[attribute::limit.upper]]">
+                <schematron:let name="limitLower" value="number()"/>
+                <schematron:let name="limitUpper" value="number(parent::*/attribute::limit.upper)"/>
+                <schematron:assert test="$limitLower le $limitUpper">
+                    Value constraint validation in element <schematron:value-of select="local-name(parent::*)"/>: @limit.lower &#x2264; @limit.upper
+                </schematron:assert>
+            </schematron:rule>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:attList>
         <tei:attDef ident="limit.lower" usage="req">

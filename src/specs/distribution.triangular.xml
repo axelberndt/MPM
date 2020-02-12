@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:elementSpec ident="distribution.triangular" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="distribution.triangular" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>triangular distribution</tei:gloss>
     
     <tei:desc>This defines a triangular distribution.</tei:desc>
@@ -26,6 +28,20 @@
             <tei:datatype>
                 <tei:dataRef name="double"/>
             </tei:datatype>
+            <tei:constraintSpec ident="distribution_mode_constraint" scheme="schematron">
+                <tei:gloss>triangular distribution mode constraint</tei:gloss>
+                <tei:desc>The <tei:att>mode</tei:att> of a triangular distribution must conform the following condition: <tei:att>limit.lower</tei:att> &#x2264; <tei:att>mode</tei:att> &#x2264; <tei:att>limit.upper</tei:att>.</tei:desc>
+                <tei:constraint>
+                    <schematron:rule context="attribute::mode[parent::*[attribute::limit.lower][attribute::limit.upper]]">
+                        <schematron:let name="mode" value="number()"/>
+                        <schematron:let name="limitLower" value="number(parent::*/attribute::limit.lower)"/>
+                        <schematron:let name="limitUpper" value="number(parent::*/attribute::limit.upper)"/>
+                        <schematron:assert test="($limitLower le $mode) and ($mode le $limitUpper)">
+                            Value constraint validation for @mode in element <schematron:value-of select="local-name(parent::*)"/>: @limit.lower &#x2264; @mode &#x2264; @limit.upper
+                        </schematron:assert>
+                    </schematron:rule>
+                </tei:constraint>
+            </tei:constraintSpec>
         </tei:attDef>
     </tei:attList>
     
