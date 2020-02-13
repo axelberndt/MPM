@@ -54,9 +54,68 @@
     
     <tei:text>
         <tei:body>
-            <tei:div type="chapter" n="1">
+            <tei:div type="chapter">
                 <tei:head>Introduction to MPM</tei:head>
-                <tei:p>Some introductory prose about the concepts behind MPM, the format's history, development and structure ...</tei:p>
+                <tei:p>Some introductory prose about the concepts behind MPM, the format's history, development ...</tei:p>
+                <tei:list>
+                    <tei:item>What is a musical performance? What is MPM?</tei:item>
+                    <tei:item>Each performance feature, its design and parameterization are based upon empirical reasearch</tei:item>
+                    <tei:item>Application scenarios of MPM</tei:item>
+                    <tei:item>Software tools for MPM</tei:item>
+                </tei:list>
+            </tei:div>
+            
+            <tei:div type="chapter">
+                <tei:head>The Basic Structure of an MPM Document</tei:head>
+                <tei:list>
+                    <tei:item>No notes, MPM focusses on performance data</tei:item>
+                    <tei:item>Reference resources</tei:item>
+                    <tei:item>Multiple performances</tei:item>
+                    <tei:item>Global vs. part-specific data</tei:item>
+                    <tei:item>Header vs. datable information</tei:item>
+                    <tei:item>Symbolic timing: pulses per quarter</tei:item>
+                </tei:list>
+            </tei:div>
+            
+            <tei:div type="chapter">
+                <tei:head>Timing</tei:head>
+                <tei:list>
+                    <tei:item>Macro and micro timing features and how they interact</tei:item>
+                    <tei:item>All the following definitions include header and datable information</tei:item>
+                    <tei:item>Tempo</tei:item>
+                    <tei:item>Rubato</tei:item>
+                    <tei:item>Asynchrony</tei:item>
+                    <tei:item>Reference to the articulation and imprecision section</tei:item>
+                </tei:list>
+            </tei:div>
+            
+            <tei:div type="chapter">
+                <tei:head>Dynamics</tei:head>
+                <tei:list>
+                    <tei:item>Macro and micro dynamics features and how they interact</tei:item>
+                    <tei:item>All the following definitions include header and datable information</tei:item>
+                    <tei:item>Dynamics</tei:item>
+                    <tei:item>Metrical Accentuation</tei:item>
+                    <tei:item>Reference to the articulation and imprecision section</tei:item>
+                </tei:list>
+            </tei:div>
+            
+            <tei:div type="chapter">
+                <tei:head>Articulation</tei:head>
+                <tei:list>
+                    <tei:item>Articulations shapes a tone. It can affect all of its facets and may even affect its dynamics and timing.</tei:item>
+                    <tei:item>Articulations are defined by modifiers ...</tei:item>
+                    <tei:item>Reference to the imprecision section</tei:item>
+                </tei:list>
+            </tei:div>
+            
+            <tei:div type="chapter">
+                <tei:head>Random Imprecisions</tei:head>
+                <tei:list>
+                    <tei:item>What is humanization?</tei:item>
+                    <tei:item>Domains for applying humanization</tei:item>
+                    <tei:item>Distribution types</tei:item>
+                </tei:list>
             </tei:div>
         </tei:body>
         
