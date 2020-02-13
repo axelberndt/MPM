@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.0.0"/>
+                <tei:edition n="2.0.1"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -48,6 +48,7 @@
         <tei:revisionDesc>
             <tei:change status="1.0.0" who="Benjamin Wolff Bohl">Initial schema definition.</tei:change>
             <tei:change status="2.0.0" who="Axel Berndt">Reboot of the schema definition after some conceptual revisions and in compliance with the <tei:ref target="https://github.com/cemfi/meico">MPM API implementation</tei:ref>.</tei:change>
+            <tei:change status="2.0.1" who="Axel Berndt">The order of child elements of <tei:gi>mpm</tei:gi> has been removed.</tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
     
