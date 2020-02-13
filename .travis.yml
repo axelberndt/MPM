@@ -13,6 +13,7 @@ script:
   - xmllint --xinclude src/mpm.odd > mpm-monolithic.odd
   - curl -s -o mpm.rng -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/conversion
   - curl -s -o mpm.dtd -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/dtd%3Aapplication%3Axml-dtd/conversion
+  - curl -s -o mpm.xsd -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/xsd%3Aapplication%3Axml-xsd/conversion
   - mkdir -p docs
   - curl -s -o docs/index.html -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/TEI%3Atext%3Axml/xhtml%3Aapplication%3Axhtml%2Bxml/conversion
   - sed -i -e 's/href="http:/href="https:/g' docs/index.html
