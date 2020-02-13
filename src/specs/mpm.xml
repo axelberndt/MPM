@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:elementSpec ident="mpm" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="mpm" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
     <tei:gloss>MPM document</tei:gloss>
     
     <tei:desc>The root element of an MPM-conformant document.</tei:desc>
     
     <tei:content>
-        <tei:elementRef key="relatedResources" minOccurs="0" maxOccurs="1"/>
-        <tei:elementRef key="performance" minOccurs="1" maxOccurs="unbounded"/>
+        <relaxng:interleave>
+            <tei:elementRef key="relatedResources" minOccurs="0" maxOccurs="1"/>
+            <tei:elementRef key="performance" minOccurs="1" maxOccurs="unbounded"/>
+        </relaxng:interleave>
     </tei:content>
     
     <tei:exemplum>
