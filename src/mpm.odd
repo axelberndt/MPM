@@ -55,44 +55,106 @@
     <tei:text>
         <tei:body>
             <tei:div type="chapter">
-                <tei:head>Introduction to MPM</tei:head>
+                <tei:head>The Music Performance Markup Format</tei:head>
+                
                 <tei:p>A musical performance of some symbolic music data (e.g. the score, MusicXML, MEI) is the entirety of all transformations necessary to make the music sound. This includes the temporal order of sound events as well as their specific execution. The Music Performance Markup format (MPM) is dedicated to describe and model musical performances in large detail in the manner of a construction kit. It comes packed with a series of performance features from several domains incl. the following:</tei:p> 
+                
                 <tei:list>
                     <tei:item>Timing features: tempo (incl. discrete and continuous tempo changes), rubato, asynchrony, random/non-systematical deviations from precise timing,</tei:item>
                     <tei:item>Dynamics features: macro dynamics (incl. discrete and continuous dynamics changes), metrical accentuation, random/non-systematical deviations from precise dynamics,</tei:item>
                     <tei:item>Articulation: absolute and relative modifications of a tone's duration, dynamics, timing (e.g. agogic accent), and intonation, random/non-systematic variations of tone duration and intonation.</tei:item>
                 </tei:list>
+                
                 <tei:p>Each feature is designed on the basis of a mathematical model that was derived from empirical performance research. These models not only reproduce the typical characteristics of their respective features. Two musicians may perform the same features (say an articulation, a crescendo, or a ritardando) very differently. Thus, the models are also equipped with expressive parameters to recreate the whole bandwidth of such variations.</tei:p>
 
                 <tei:div type="chapter">
                     <tei:head>Application Scenarios</tei:head>
-                    <tei:p>MPM was developed with several application scenarios in mind. It is an editorial tool for the philological registration and critical analysis of musical interpretations in the context of digital music editions. This directly leads to usage scenarios in the library context for archiving sound documents and their editions. For the analysis of individual performances, the model-based approach of MPM provides feature classes that allow for an abstracted and differentiated view. With larger data sets of musical performances, corpus analyses with methods from the field of information retrieval promise new insights, e.g. into personal and contemporary styles or the influence of performers from certain schools. MPM does not primarily serve a purely positivistic quantification of music, though. Along the lines of "transformative digital intermedia studies" and coupled with the possibilities to apply the modeled performances to symbolic music data in the standard MIDI file format and render them into audio files, MPM can be a tool for the hermeneutic approximation of the interpretation description. As an experimenting tool, it can be used for the (re-)construction of performances that have not been handed down as sound documents but in textual form, e.g. in music-practical texts and performance scores. Beyond the purely scientific use, it has also applications in digital music production, e.g. for creating expressive performances which can then be rendered into high-quality music productions using sound libraries and synthesizers. Last but not least, the model-based basic concept of MPM also motivates new research questions in the field of music performance research that could not be approached systematically before.</tei:p>
+                    
+                    <tei:p>MPM was developed with several application scenarios in mind. It is an editorial tool for the philological registration and critical analysis of musical interpretations in the context of digital music editions. This directly leads to usage scenarios in the library context for archiving sound documents and their editions. For the analysis of individual performances, the model-based approach of MPM provides feature classes that allow for an abstracted and differentiated view. With larger data sets of musical performances, corpus analyses with methods from the field of information retrieval promise new insights, e.g. into personal and contemporary styles or the influence of performers from certain schools.</tei:p> 
+                    
+                    <tei:p>MPM does not primarily serve a purely positivistic quantification of music, though. Along the lines of "transformative digital intermedia studies" and coupled with the possibilities to apply the modeled performances to symbolic music data in the standard MIDI file format and render them into audio files, MPM can be a tool for the hermeneutic approximation of the interpretation description. As an experimenting tool, it can be used for the (re-)construction of performances that have not been handed down as sound documents but in textual form, e.g. in music-practical texts and performance scores. Beyond the purely scientific use, it has also applications in digital music production, e.g. for creating expressive performances which can then be rendered into high-quality music productions using sound libraries and synthesizers. Last but not least, the model-based basic concept of MPM also motivates new research questions in the field of music performance research that could not be approached systematically before.</tei:p>
                 </tei:div>
                 
                 <tei:div type="chapter">
                     <tei:head>Development History</tei:head>
-                    <tei:p>The roots of MPM lie in a performance research project in 2008-2011. In cooperation with the <tei:ref target="https://www.telemann.org">"Zentrum für Telemann-Pflege und -Forschung Magdeburg"</tei:ref> (Center for Telemann Care and Research Magdeburg) Tilo Hähnel and Axel Berndt conducted a series of empirical studies with musicians, measurements in music recordings, experiments with listeners and software implementations that ultimately yielded a corpus of mathematical models used to synthesize musical performances. What was used as a proprietary scripting format was effectively the first incarnation of what would later become MPM. However, it took another five years until in 2016 Benjamin Wolff Bohl and Axel Berndt, in the context of the <tei:ref target="https://www.zenmem.de/">Center "Music - Edition - Media"</tei:ref> project, started a comprehensive redesign and created version 1 of MPM, yet incomplete in some regards but the initiation of a project dedicated to MPM exclusively. Funded by the <tei:ref target="https://www.fritz-thyssen-stiftung.de/en/">Fritz Thyssen Foundation</tei:ref> the MPM schema definition was fully revamped into version 2. Throughout 2019-2022 the project is dedicated to the development of comprehensive documentation, guidelines, sample encodings, workshops, and several software tools.</tei:p>
+                    
+                    <tei:p>The roots of MPM lie in a performance research project in 2008-2011. In cooperation with the <tei:ref target="https://www.telemann.org">"Zentrum für Telemann-Pflege und -Forschung Magdeburg"</tei:ref> (Center for Telemann Care and Research Magdeburg) Tilo Hähnel and Axel Berndt conducted a series of empirical studies with musicians, measurements in music recordings, experiments with listeners and software implementations that ultimately yielded a corpus of mathematical models used to synthesize musical performances. What was used as a proprietary scripting format was effectively the first incarnation of what would later become MPM.</tei:p> 
+                    
+                    <tei:p>It took another five years until in 2016 Benjamin Wolff Bohl and Axel Berndt, in the context of the <tei:ref target="https://www.zenmem.de/">Center "Music - Edition - Media"</tei:ref> project, started a comprehensive redesign and created version 1 of MPM, yet incomplete in some regards but the initiation of a project dedicated to MPM exclusively. Funded by the <tei:ref target="https://www.fritz-thyssen-stiftung.de/en/">Fritz Thyssen Foundation</tei:ref> the MPM schema definition was fully revamped into the present version 2. Throughout 2019-2022 the project is dedicated to the development of comprehensive documentation, guidelines, sample encodings, workshops, and several software tools.</tei:p>
                 </tei:div>
                 <tei:div type="chapter">
-                    <tei:head>Software tools for MPM</tei:head>
+                    <tei:head>Software Tools for MPM</tei:head>
                     <tei:list>
                         <tei:item>The official MPM API (application programming interface) has been written in Java and is published under GPL 3.0 as part of the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework.</tei:item>
-                        <tei:item>A performance rendering engine is also part of the MPM API. It can be utilized via meico's graphical user interface. It can be used to combine MEI, MSM or MIDI data with performance encodings and render them into expressive MIDI sequences and audio data. As part of the API it may also be integrated with other applications.</tei:item>
+                        <tei:item>An MEI to MPM converter is part of the meico framework.</tei:item>
+                        <tei:item>A performance rendering engine is also part of the MPM API. End users can utilize it via meico's graphical user interface. It can be used to combine MEI, MSM or MIDI data with performance encodings and render them into expressive MIDI sequences and audio data. As part of the API it may also be integrated with other applications.</tei:item>
                         <tei:item>Further editing and analysis tools will follow.</tei:item>
                     </tei:list>
                 </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
-                <tei:head>The Basic Structure of an MPM Document</tei:head>
-                <tei:list>
-                    <tei:item>No notes, MPM focusses on performance data</tei:item>
-                    <tei:item>Reference resources</tei:item>
-                    <tei:item>Multiple performances</tei:item>
-                    <tei:item>Global vs. part-specific data</tei:item>
-                    <tei:item>Header vs. datable information</tei:item>
-                    <tei:item>Symbolic timing: pulses per quarter</tei:item>
-                </tei:list>
+                <tei:head>Introduction to MPM</tei:head>
+                
+                <tei:p>The performance of a piece of music transforms the symbolic music data (also called logical music data, typically a score representation) into sounding output. An MPM encoded performance describes this transformation. One piece of music can be performed in many different ways. In other words, there can be many different performances for the same logical music data rendering it impractical to combine both domains in one and the same data structure. Thus, in the MPM ecosystem both are clearly separated. MPM itself represents only the gestural domain, i.e. the performance descriptions. Logical domain data comes as a separate entity, e.g. as MIDI, MEI or MSM (Musical Sequence Markup) file. The <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> converter framework can be used to convert these formats. Hence, MPM is always used in tandem with a logical music representation format. Simply put, the latter contributes the notes, MPM says how they are performed.</tei:p>
+                
+                <tei:p>Yet not included in MPM's vocabulary is the sound generation. The typical workflow for listening to a music performance is to transform the logical music representation and an MPM performance into an expressive MIDI sequence, then play it back directly or render it to audio (meico is a convenient tool for doing this). In both cases certain sound generators are involved, be it sample libraries or synthesizers. If the sounds do not match the requirements, others may be tested. It is even possible to import the generated expressive MIDI file in a Digital Audio Workstation (DAW) and produce the music in a more dedicated, professional environment.</tei:p>
+
+                <tei:div type="chapter">
+                    <tei:head>The Basic Structure</tei:head>
+                    
+                    <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has two kinds of children, one element <tei:gi>relatedResources</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <mpm>
+                            <relatedResources> 
+                                ... 
+                            </relatedResources>
+                            <performance name="a performance" pulsesPerQuarter="720">
+                                ...
+                            </performance>
+                            <performance name="another performance" pulsesPerQuarter="720">
+                                ...
+                            </performance>
+                            ...
+                        </mpm>
+                    </egXML>
+                </tei:div>
+
+                <tei:div type="chapter">
+                    <tei:head>Linking Related Resources</tei:head>
+
+                    <tei:p>Element <tei:gi>relatedResources</tei:gi> provides a list of references to other data resources that are somehow related to this MPM. This might be the logical music data file, an audio file whose performance is recreated here or an accompanying text document. This list is basically of an informal nature and does not imply any specific meaning. E.g., performances are not restricted to be applied only to the sources listed here. It is up to the user/application to be more specific with this, e.g. by means of edition guidelines for a historical-critical music edition.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relatedResources>
+                            <resource uri="pathTo/music.mei" type="mei"/>
+                            <resource uri="pathTo/music.msm" type="msm"/>
+                            <resource uri="pathTo/music.mid" type="midi"/>
+                            <resource uri="pathTo/another.mid" type="midi"/>
+                            <resource uri="pathTo/music.xml" type="musicXML"/>
+                            <resource uri="pathTo/music.mxl" type="musicXML"/>
+                            <resource uri="pathTo/text.tei" type="tei"/>
+                            <resource uri="pathTo/unsupportedMusicType.umt" type="umt"/>
+                        </relatedResources>
+                    </egXML>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Timing Concept</tei:head>
+
+                    <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 time. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. This measure is independent of tempo, i.e. the duration and timing values stay the same regardless of the tempo of the music. Even if the music play twice as fast, a quarter note has 720 ticks, only the clock ticks faster. If we place an articulation on a note at tick position 54320, it will be that same position even if another tempo is set. Later, in the timing section, we will see how this translates to milliseconds.</tei:p>
+                    
+                    <tei:p>...</tei:p>
+                </tei:div>
+
+                <tei:div type="chapter">
+                    <tei:head>Scopes</tei:head>
+                    <tei:list>
+                        <tei:item>Global vs. part-specific data</tei:item>
+                        <tei:item>Header vs. datable information</tei:item>
+                    </tei:list>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
