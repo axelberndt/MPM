@@ -11,7 +11,6 @@
     <tei:classes>
         <tei:memberOf key="att.time.symbolic.date"/>
         <tei:memberOf key="att.reference.name"/>
-        <tei:memberOf key="att.accentuationPatternDef"/>
         <tei:memberOf key="att.loop"/>
         <tei:memberOf key="att.id"/>
     </tei:classes>
