@@ -9,6 +9,7 @@
     <tei:attList>
         <tei:attDef ident="uri" usage="req">
             <tei:gloss>Uniform Resource Identifier</tei:gloss>
+            <tei:desc>A uniform resource identifier for the resource to be referenced.</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="anyURI"/>
             </tei:datatype>

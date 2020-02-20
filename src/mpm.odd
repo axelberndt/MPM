@@ -68,7 +68,7 @@
                 
                 <tei:p>Each feature is designed on the basis of a mathematical model that was derived from empirical performance research. These models not only reproduce the typical characteristics of their respective features. Two musicians may perform the same features (say an articulation, a crescendo, or a ritardando) very differently. Thus, the models are also equipped with expressive parameters to recreate the whole bandwidth of such variations.</tei:p>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Application Scenarios</tei:head>
                     
                     <tei:p>MPM was developed with several application scenarios in mind. It is an editorial tool for the philological registration and critical analysis of musical interpretations in the context of digital music editions. This directly leads to usage scenarios in the library context for archiving sound documents and their editions. For the analysis of individual performances, the model-based approach of MPM provides feature classes that allow for an abstracted and differentiated view. With larger data sets of musical performances, corpus analyses with methods from the field of information retrieval promise new insights, e.g. into personal and contemporary styles or the influence of performers from certain schools.</tei:p> 
@@ -76,14 +76,14 @@
                     <tei:p>MPM does not primarily serve a purely positivistic quantification of music, though. Along the lines of "transformative digital intermedia studies" and coupled with the possibilities to apply the modeled performances to symbolic music data in the standard MIDI file format and render them into audio files, MPM can be a tool for the hermeneutic approximation of the interpretation description. As an experimenting tool, it can be used for the (re-)construction of performances that have not been handed down as sound documents but in textual form, e.g. in music-practical texts and performance scores. Beyond the purely scientific use, it has also applications in digital music production, e.g. for creating expressive performances which can then be rendered into high-quality music productions using sound libraries and synthesizers. Last but not least, the model-based basic concept of MPM also motivates new research questions in the field of music performance research that could not be approached systematically before.</tei:p>
                 </tei:div>
                 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Development History</tei:head>
                     
                     <tei:p>The roots of MPM lie in a performance research project in 2008-2011. In cooperation with the <tei:ref target="https://www.telemann.org">"Zentrum für Telemann-Pflege und -Forschung Magdeburg"</tei:ref> (Center for Telemann Care and Research Magdeburg) Tilo Hähnel and Axel Berndt conducted a series of empirical studies with musicians, measurements in music recordings, experiments with listeners and software implementations that ultimately yielded a corpus of mathematical models used to synthesize musical performances. What was used as a proprietary scripting format was effectively the first incarnation of what would later become MPM.</tei:p> 
                     
                     <tei:p>It took another five years until in 2016 Benjamin Wolff Bohl and Axel Berndt, in the context of the <tei:ref target="https://www.zenmem.de/">Center "Music - Edition - Media"</tei:ref> project, started a comprehensive redesign and created version 1 of MPM, yet incomplete in some regards but the initiation of a project dedicated to MPM exclusively. Funded by the <tei:ref target="https://www.fritz-thyssen-stiftung.de/en/">Fritz Thyssen Foundation</tei:ref> the MPM schema definition was fully revamped into the present version 2. Throughout 2019-2022 the project is dedicated to the development of comprehensive documentation, guidelines, sample encodings, workshops, and several software tools.</tei:p>
                 </tei:div>
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Software Tools for MPM</tei:head>
                     <tei:list>
                         <tei:item>The official MPM API (application programming interface) has been written in Java and is published under GPL 3.0 as part of the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework.</tei:item>
@@ -94,14 +94,14 @@
                 </tei:div>
             </tei:div>
             
-            <tei:div type="chapter">
+            <tei:div type="section">
                 <tei:head>Introduction to MPM</tei:head>
                 
                 <tei:p>The performance of a piece of music transforms the symbolic music data (also called logical music data, typically a score representation) into sounding output. An MPM encoded performance describes this transformation. One piece of music can be performed in many different ways. In other words, there can be many different performances for the same logical music data rendering it impractical to combine both domains in one and the same data structure. Thus, in the MPM ecosystem both are clearly separated. MPM itself represents only the gestural domain, i.e. the performance descriptions. Logical domain data comes as a separate entity, e.g. as MIDI, MEI or MSM (Musical Sequence Markup) file. The <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> converter framework can be used to convert these formats. Hence, MPM is always used in tandem with a logical music representation format. Simply put, the latter contributes the notes, MPM says how they are performed.</tei:p>
                 
                 <tei:p>Yet not included in MPM's vocabulary is the sound generation. The typical workflow for listening to a music performance is to transform the logical music representation and an MPM performance into an expressive MIDI sequence, then play it back directly or render it to audio (meico is a convenient tool for doing this). In both cases certain sound generators are involved, be it sample libraries or synthesizers. If the sounds do not match the requirements, others may be tested. It is even possible to import the generated expressive MIDI file in a Digital Audio Workstation (DAW) and produce the music in a more dedicated, professional environment.</tei:p>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>The Basic Structure</tei:head>
                     
                     <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has two kinds of children, one element <tei:gi>relatedResources</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
@@ -122,7 +122,7 @@
                     </egXML>
                 </tei:div>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Linking Related Resources</tei:head>
 
                     <tei:p>Element <tei:gi>relatedResources</tei:gi> provides a list of references to other data resources that are somehow related to this MPM. This might be the logical music data file, an audio file whose performance is recreated here or an accompanying text document. This list is basically of an informal nature and does not imply any specific meaning. E.g., performances are not restricted to be applied only to the sources listed here. It is up to the user/application to be more specific with this, e.g. by means of edition guidelines for a historical-critical music edition.</tei:p>
@@ -141,7 +141,7 @@
                     </egXML>
                 </tei:div>
                 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Timing Concept</tei:head>
 
                     <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 time. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. This measure is independent of tempo, i.e. the duration and timing values stay the same regardless of the tempo of the music. Even if the music plays twice as fast, a quarter note has 720 ticks, only the clock ticks faster. If we place an articulation on a note at tick position 54320, it will be that same position even if another tempo is set. Later, in the timing section, we will see how this translates to milliseconds.</tei:p>
@@ -149,28 +149,61 @@
                     <tei:p>Typical <tei:att>pulsesPerQuarter</tei:att> values are 360, 480 and 720. Why this? Now, in MPM time positions (dates) and durations can be floating point numbers which provide very high precision, but in MIDI they are integers. If a quarter note would have just 1 tick, it would be impossible to express eighth notes or sexteenth notes etc. The same with dotted note values. In the MIDI world the granularity of the timing grid must provide integer representation of such smaller subdivisions and even odd subdivisions such as triplets and quintuplets. It is not really necessary to follow this convention in the MPM world and the API implementation in meico can even handle differing <tei:att>pulsesPerQuarter</tei:att> values in the logical source and MPM. But it makes editing easier and prevents numeric problems when the dates and durations align.</tei:p>
                 </tei:div>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Scopes</tei:head>
                     
-                    <tei:p>...</tei:p>
+                    <tei:p>All information of a <tei:gi>performance</tei:gi> are organizes along two categorizations that define the scope of the information.</tei:p>
                     
-                    <tei:list>
-                        <tei:item>Global vs. part-specific data</tei:item>
-                        <tei:item>Header vs. datable information</tei:item>
-                    </tei:list>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <performance name="a performance" pulsesPerQuarter="720">
+                            <global>
+                                <header>...</header>
+                                <dated>...</dated>
+                            </global>
+                            <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+                                <header>...</header>
+                                <dated>...</dated>
+                            </part>
+                            <part name="Alto" number="2" midi.channel="1" midi.port="0">
+                                <header>...</header>
+                                <dated>...</dated>
+                            </part>
+                            ...
+                        </performance>
+                    </egXML>
+                    
+                    <tei:p>Information can be global, i.e. they apply to all musical parts, and local, i.e. they apply to a single part. Technically, the parts correspond with MEI staffs and MIDI channels. Here is a typical example: If dynamics instructions are placed in the <tei:gi>global</tei:gi> environment, they are performed by all parts. If the dynamics instructions are placed in a <tei:gi>part</tei:gi> environment, only this particular part will perform them. If both is given, global and part-specific dynamics instructions, the specific part will ignore the global ones and perform its local intructions while all others will follow the global instructions as long they have no local ones. In other words: Local information dominate the global. This pays off, e.g., in solo-plus-accompaniment constellations. Global performance instructions are executed by the whole ensemble; only the solo part features its own local instructions that "overwrite" the global.</tei:p>
+                    
+                    <tei:p>The interplay of global and local information is the key to complex polyphonic performance structures. Each part can feature its own performance plan. One part may perform a decrescendo while another part plays a crescendo. One part may perform a swing timing, another an even timing, while they all follow the same basic tempo. A key feature of our models to allow such multifarious performance representations is the self-containedness of each single model. This gives precise and independent control of each performance detail without any distorting interference from another detail. It is possible, for instance, to change the tempo completely while keeping all micro timing features unaltered.</tei:p>
+                    
+                    <tei:p>Both, global and local information, are subdivided into <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> information. Header information apply to the whole movement, it is the place for style definitions, the place to define articulations, literal dynamics instructions etc. Dated information are organized in sequential lists, so-called maps, one for each type of performance features. Each element in a map has a required date attribute (in ticks). Discrete performance features, e.g. articulation instructions, are applied at the respective time position. Most performance features, however, extend over a certain timeframe. A dynamics instruction, such as forte for instance, lasts from its date until the date of the subsequent instruction.</tei:p>
                 </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
                 <tei:head>Timing</tei:head>
-                <tei:list>
-                    <tei:item>Macro and micro timing features and how they interact</tei:item>
-                    <tei:item>All the following definitions include header and datable information</tei:item>
-                    <tei:item>Tempo</tei:item>
-                    <tei:item>Rubato</tei:item>
-                    <tei:item>Asynchrony</tei:item>
-                    <tei:item>Reference to the articulation and imprecision section</tei:item>
-                </tei:list>
+                
+                <tei:p>Generally speaking, timing is a mapping of symbolic time (e.g. score time and the tick dates in MIDI) to physical time (typically measured in milliseconds). MPM distinguishes between macro and micro timing features. The macro timing, i.e. tempo, defines the rough timing function. The micro timing features (rubato, asynchrony, random imprecision and parts of articulation) add fine-grained details to this timing curve.</tei:p>
+                
+                <tei:div type="section">
+                    <tei:head>Tempo</tei:head>
+                    <tei:p>Tempo information can be located int the <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> environment. In the header, tempo styles can be defined. A tempo style is, basically, a lookup table that associates literal tempo instructions with numerical values. These can then be used in the <tei:gi>tempoMap</tei:gi>.</tei:p>
+                </tei:div>
+
+                <tei:div type="section">
+                    <tei:head>Rubato</tei:head>
+                    <tei:p>...</tei:p>
+                </tei:div>
+
+                <tei:div type="section">
+                    <tei:head>Asynchrony</tei:head>
+                    <tei:p>...</tei:p>
+                </tei:div>
+
+                <tei:div type="section">
+                    <tei:head>Further Timing Features</tei:head>
+                    <tei:p>Reference to the articulation and random section ...</tei:p>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
@@ -180,7 +213,7 @@
                     <tei:item>All the following definitions include header and datable information</tei:item>
                     <tei:item>Dynamics</tei:item>
                     <tei:item>Metrical Accentuation</tei:item>
-                    <tei:item>Reference to the articulation and imprecision section</tei:item>
+                    <tei:item>Reference to the articulation and random section</tei:item>
                 </tei:list>
             </tei:div>
             
@@ -189,12 +222,12 @@
                 <tei:list>
                     <tei:item>Articulations shapes a tone. It can affect all of its facets and may even affect its dynamics and timing.</tei:item>
                     <tei:item>Articulations are defined by modifiers ...</tei:item>
-                    <tei:item>Reference to the imprecision section</tei:item>
+                    <tei:item>Reference to the random section</tei:item>
                 </tei:list>
             </tei:div>
             
             <tei:div type="chapter">
-                <tei:head>Random Imprecisions</tei:head>
+                <tei:head>Random Variations</tei:head>
                 <tei:list>
                     <tei:item>What is humanization?</tei:item>
                     <tei:item>Domains for applying humanization</tei:item>
