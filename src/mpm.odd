@@ -143,13 +143,16 @@
                 <tei:div type="chapter">
                     <tei:head>Timing Concept</tei:head>
 
-                    <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 time. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. This measure is independent of tempo, i.e. the duration and timing values stay the same regardless of the tempo of the music. Even if the music play twice as fast, a quarter note has 720 ticks, only the clock ticks faster. If we place an articulation on a note at tick position 54320, it will be that same position even if another tempo is set. Later, in the timing section, we will see how this translates to milliseconds.</tei:p>
+                    <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 time. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. This measure is independent of tempo, i.e. the duration and timing values stay the same regardless of the tempo of the music. Even if the music plays twice as fast, a quarter note has 720 ticks, only the clock ticks faster. If we place an articulation on a note at tick position 54320, it will be that same position even if another tempo is set. Later, in the timing section, we will see how this translates to milliseconds.</tei:p>
                     
-                    <tei:p>...</tei:p>
+                    <tei:p>Typical <tei:att>pulsesPerQuarter</tei:att> values are 360, 480 and 720. Why this? Now, in MPM time positions (dates) and durations can be floating point numbers which provide very high precision, but in MIDI they are integers. If a quarter note would have just 1 tick, it would be impossible to express eighth notes or sexteenth notes etc. The same with dotted note values. In the MIDI world the granularity of the timing grid must provide integer representation of such smaller subdivisions and even odd subdivisions such as triplets and quintuplets. It is not really necessary to follow this convention in the MPM world and the API implementation in meico can even handle differing <tei:att>pulsesPerQuarter</tei:att> values in the logical source and MPM. But it makes editing easier and prevents numeric problems when the dates and durations align.</tei:p>
                 </tei:div>
 
                 <tei:div type="chapter">
                     <tei:head>Scopes</tei:head>
+                    
+                    <tei:p>...</tei:p>
+                    
                     <tei:list>
                         <tei:item>Global vs. part-specific data</tei:item>
                         <tei:item>Header vs. datable information</tei:item>
