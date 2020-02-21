@@ -187,11 +187,82 @@
                 
                 <tei:div type="section">
                     <tei:head>Tempo</tei:head>
-                    <tei:p>Tempo information can be located int the <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> environment. In the header, tempo styles can be defined. A tempo style is, basically, a lookup table that associates literal tempo instructions with numerical values. These can then be used in the <tei:gi>tempoMap</tei:gi>.</tei:p>
+                    <tei:p>Tempo information can be located in the <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> environment. In the header, tempo styles can be defined. A tempo style is, basically, a lookup table that associates literal tempo instructions with numerical values (in beats per minute). These can then be used in the <tei:gi>tempoMap</tei:gi> as shown in the following example.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <tempoStyles>
+                                <styleDef name="Karajan">
+                                    <tempoDef name="Adagio" value="60.0"/>
+                                    <tempoDef name="Allegro" value="130.0"/>
+                                    <tempoDef name="Vivace" value="152.0"/>
+                                </styleDef>
+                                <styleDef name="Rattle">
+                                    <tempoDef name="Adagio" value="67.0"/>
+                                    <tempoDef name="Allegro" value="133.6"/>
+                                    <tempoDef name="Vivace" value="163.0"/>
+                                </styleDef>
+                            </tempoStyles>
+                        </header>
+                        <dated>
+                            <tempoMap>
+                                <style date="0.0" name.ref="Rattle"/>
+                                <tempo date="0.0" bpm="Allegro" beatLength="0.25"/>
+                                <tempo date="47000.0" bpm="Adagio" beatLength="0.5"/>
+                            </tempoMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>Let us have a closer look at the <tei:gi>tempoMap</tei:gi>. This is the place where the actual <tei:gi>tempo</tei:gi> instructions are formulated and placed along the symbolic time axis, together with <tei:gi>style</tei:gi> switches. The latter are required only if literal tempo values are used as in the above example. The style switch informs about the tempo style at which the corresponding numeric value is to be found. <tei:gi>tempo</tei:gi> instructions can dictate either a constant tempo or a continuous tempo transition (accelerando/ritardando).</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <!-- constant tempo -->
+                        <tempo date="0.0" bpm="100.0" beatLength="0.25"/>
+                        
+                        <!-- continuous tempo transition -->
+                        <tempo date="0.0" bpm="100.0" transition.to="120.0" beatLength="0.25"/>
+                    </egXML>
+                    
+                    <tei:p>In the above example we used numeric instead of literal tempo values. Both, <tei:att>bpm</tei:att> and <tei:att>transition.to</tei:att> can be either numeric bpm values or literals from the underlying tempo style. If <tei:att>transition.to</tei:att> is present and has a different value than <tei:att>bpm</tei:att> the tempo instructions represents a continuous tempo transition beginning at <tei:att>date</tei:att> and ending at the <tei:att>date</tei:att> of the subsequent tempo instruction in the map. Hence, it is not advisable to have a continuous tempo transition as last child of a <tei:gi>tempoMap</tei:gi>.</tei:p>
+                    
+                    <tei:p>Since the tempo values are in beats per minute, we need to know the note value of one beat. This is specified by the required attribute <tei:att>beatLength</tei:att>. Here the numerical interpretation of musical note values are used, e.g. quarter note = 1/4 = 0.25, eighth note = 1/8 = 0.125, half note = 1/2 = 0.5, whole note = 1.0 and so forth.</tei:p>
+                    
+                    <tei:p>The shape of continuous tempo transitions can be further refined by attribute <tei:att>meanTempoAt</tei:att>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <tempo date="0.0" bpm="100.0" transition.to="120.0" beatLength="0.25" meanTempoAt="0.2"/>
+                    </egXML>
+                    
+                    <tei:p>This is a value between 0.0 and 1.0 indicating a relative position between start date and end date of the tempo transition. This is the position where half of the tempo change is done. Placing it in the first half (between 0.0 and 0.5) will shift the bulk part of the tempo change at the beginning (the performers get sooner faster/slower), vice versa for the second half (between 0.5 and 1.0, performers get later faster/slower). Value 0.5 will create a perfectly linear tempo transition that typically sounds rather neutral or mechanic.</tei:p>
+                    
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/tempoCurves.PNG" height="420px"/>
+                        <tei:head>Tempo curves are constructed from power functions. The shape is specified via <tei:att>meanTempoAt</tei:att>.</tei:head>
+                    </tei:figure>
                 </tei:div>
 
                 <tei:div type="section">
                     <tei:head>Rubato</tei:head>
+                    <tei:p>Several different definitions of rubato can be found in the literature. It is often understood according to Riemann as a free treatment of tempo, short-term tempo fluctuations or "expressive timing". This is already covered by the concept of tempo (see the section on tempo) and needs no further concurrent representation. Reginald Gatty ("Tempo Rubato". In The Musical Times 53, 1912, No. 829, pp 160-162), however, lists three further definitions:</tei:p>
+                    
+                    <tei:list>
+                        <tei:item>accent shifts (see metrical accentuation),</tei:item>
+                        <tei:item>non-metronomic irregular timing (agogic offsets of single notes, see articulation), and</tei:item>
+                        <tei:item>the metronomic tempo variation in the sense of a deceleration or acceleration, which is compensated within a defined timeframe, so that the end of the timeframe is again synchronous with the underlying meter.</tei:item>
+                    </tei:list>
+                    
+                    <tei:p>The latter definition is also ideal for describing phenomena such as swing timing, Viennese waltz and inégalité. And it is not covered by any other feature type, so this is MPM's definition of rubato. Rubato instructions are organized in maps in the <tei:gi>dated</tei:gi> environment. The following <tei:gi>rubatoMap</tei:gi> features three variants of <tei:gi>rubato</tei:gi> instructions.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <dated>
+                            <rubatoMap>
+                                <rubato date="0.0" intensity="0.3" frameLength="720.0"/>
+                                <rubato date="720.0" intensity="2.0" frameLength="2160.0" loop="true"/>
+                                <rubato date="14400.0" frameLength="2160.0" lateStart="0.1" earlyEnd="0.9" loop="false"/>
+                            </rubatoMap>
+                        </dated>
+                    </egXML>
+                    
                     <tei:p>...</tei:p>
                 </tei:div>
 
