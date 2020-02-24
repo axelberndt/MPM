@@ -27,6 +27,6 @@
     </tei:exemplum>
     
     <tei:remarks>
-        <tei:p>A negative offset at the beginning that shifts the physical date (milliseconds date) below 0.0 will take no effect in most applications. Take, e.g., a media player; how can it play a note before the user hit the play button? Hence, a negative offset should be avoided if it evoke such a situation.</tei:p>
+        <tei:p>A negative offset at the beginning that shifts the physical date (milliseconds date) below 0.0 will take no effect in most applications. Take, e.g., a media player; how can it play a note before the user hit the play button? Hence, a negative offset should be avoided if it might evoke such a situation.</tei:p>
     </tei:remarks>
 </tei:elementSpec>
