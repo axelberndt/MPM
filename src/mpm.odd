@@ -322,13 +322,30 @@
             
             <tei:div type="chapter">
                 <tei:head>Dynamics</tei:head>
-                <tei:list>
-                    <tei:item>Macro and micro dynamics features and how they interact</tei:item>
-                    <tei:item>All the following definitions include header and datable information</tei:item>
-                    <tei:item>Dynamics</tei:item>
-                    <tei:item>Metrical Accentuation</tei:item>
-                    <tei:item>Reference to the articulation and random section</tei:item>
-                </tei:list>
+                
+                <tei:p>The concept of macro and micro features in dynamics is similar to that of timing. Macro dynamics (simply called dynamics in MPM) defines a basic loudness curve while micro dynamics (metrical accentuation, articulation, random imprecision) add deviations to the curve. However, the loudness of a tone is not sufficiently defined by its amplitude. Equally important is its timbre. Loud tones sound loud. The attack phase of a tone’s amplitude envelope influences its loudness perception, too. And even if we focus solely on amplitude, what is the unit of measurement of our values? Consequently, it is important to be aware of what the dynamics values in a particular context should actually express. MPM makes no restrictions in this regard. MPM's dynamics values are plain floating point numbers. It is up to the user/application to decide about the feature domain, unit of measurement and scaling.</tei:p>
+                
+                <tei:p>If MPM is used for expressive performance rendering, most probably in combination with the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework that integrates the official MPM API and rendering engine, dynamics values are interpreted as MIDI velocity values. In this case it is important to be aware of the numerical limits of MIDI that reach from 0 to 127. It is up to the sound generators in use, i.e. synthesizers and/or samplers, to create audio and, thus, interpret the dynamics/velocity values. Since this in not standardized, the results can be very different with each sound generator. If the audio is unsatisfactory it is not the fault of MIDI or the dynamics values! But it might help to adapt the dynamics values or import the expressive MIDI data in a digital audio workstation where both the MIDI data and the sound generators may be further edited. Regarding the numerical limits of MIDI velocity, the interplay of macro and micro dynamics features may, nonetheless, sometimes go beyond these limits (i.e. below 0 or above 127). These cases are detected by the rendering engine (in meico) which then scales down the dynamics range, accordingly. The result should be sufficient in most cases. Otherwise the dynamics values should be adapted.</tei:p>
+                
+                <tei:p>dynamics computation pipeline ...</tei:p>
+                
+                <tei:div type="chapter">
+                    <tei:head>Macro Dynamics</tei:head>
+                    
+                    <tei:p>... don't forget sub-note dynamics!</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Metrical Accentuation</tei:head>
+                    
+                    <tei:p>...</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Further Dynamics Features</tei:head>
+                    
+                    <tei:p>The musical dynamics can be further enriched by articulation (see the articulation model) and by non-systematic/quasi-random timing fluctuations via <tei:gi>imprecisionMap.dynamics</tei:gi>. This is described in section "Random Variations".</tei:p>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
