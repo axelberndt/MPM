@@ -323,22 +323,120 @@
             <tei:div type="chapter">
                 <tei:head>Dynamics</tei:head>
                 
-                <tei:p>The concept of macro and micro features in dynamics is similar to that of timing. Macro dynamics (simply called dynamics in MPM) defines a basic loudness curve while micro dynamics (metrical accentuation, articulation, random imprecision) add deviations to the curve. However, the loudness of a tone is not sufficiently defined by its amplitude. Equally important is its timbre. Loud tones sound loud. The attack phase of a tone’s amplitude envelope influences its loudness perception, too. And even if we focus solely on amplitude, what is the unit of measurement of our values? Consequently, it is important to be aware of what the dynamics values in a particular context should actually express. MPM makes no restrictions in this regard. MPM's dynamics values are plain floating point numbers. It is up to the user/application to decide about the feature domain, unit of measurement and scaling.</tei:p>
+                <tei:p>The concept of macro and micro features in dynamics is similar to that of timing. Macro dynamics (simply called dynamics in MPM) defines a basic loudness curve while micro dynamics (metrical accentuation, articulation, random imprecision) add deviations to the curve. This additive relation also implies that the micro dynamics features are relative values, the respective sections will expand on this. However, the loudness of a tone is not sufficiently defined by its amplitude. Equally important is its timbre. Loud tones sound loud. The attack phase of a tone’s amplitude envelope influences its loudness perception, too. And even if we focus solely on amplitude, what is the unit of measurement of our values? Consequently, it is important to be aware of what the dynamics values in a particular context should actually express. MPM makes no restrictions in this regard. MPM's dynamics values are plain floating point numbers. It is up to the user/application to decide about the feature domain, unit of measurement and scaling.</tei:p>
                 
-                <tei:p>If MPM is used for expressive performance rendering, most probably in combination with the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework that integrates the official MPM API and rendering engine, dynamics values are interpreted as MIDI velocity values. In this case it is important to be aware of the numerical limits of MIDI that reach from 0 to 127. It is up to the sound generators in use, i.e. synthesizers and/or samplers, to create audio and, thus, interpret the dynamics/velocity values. Since this in not standardized, the results can be very different with each sound generator. If the audio is unsatisfactory it is not the fault of MIDI or the dynamics values! But it might help to adapt the dynamics values or import the expressive MIDI data in a digital audio workstation where both the MIDI data and the sound generators may be further edited. Regarding the numerical limits of MIDI velocity, the interplay of macro and micro dynamics features may, nonetheless, sometimes go beyond these limits (i.e. below 0 or above 127). These cases are detected by the rendering engine (in meico) which then scales down the dynamics range, accordingly. The result should be sufficient in most cases. Otherwise the dynamics values should be adapted.</tei:p>
-                
-                <tei:p>dynamics computation pipeline ...</tei:p>
+                <tei:p>If MPM is used for expressive performance rendering, most probably in combination with the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework that integrates the official MPM API and rendering engine, dynamics values are interpreted as MIDI velocity values. In this case it is important to be aware of the numerical limits of MIDI that reach from 0 to 127. It is up to the sound generators in use, i.e. synthesizers and/or samplers, to create audio and, thus, interpret the dynamics/velocity values. Since this in not standardized, the results can be very different with each sound generator. If the audio is unsatisfactory it is not the fault of MIDI or the dynamics values! But it might help to adapt the dynamics values or import the expressive MIDI data in a digital audio workstation where both the MIDI data and the sound generators may be further edited. Regarding the numerical limits of MIDI velocity, the interplay of macro and micro dynamics features may, nonetheless, sometimes go beyond these limits (i.e. below 0 or above 127). The rendering engine will detect these situations and scale down the dynamics range, accordingly. The result should suffice for most cases. Alternatively the dynamics values should be adapted.</tei:p>
                 
                 <tei:div type="chapter">
                     <tei:head>Macro Dynamics</tei:head>
                     
-                    <tei:p>... don't forget sub-note dynamics!</tei:p>
+                    <tei:p>MPM's macro dynamics defines the basic dynamics curve, including discrete changes (terraced dynamics) and continuous transitions (crescendo, decrescendo). These are defined in the <tei:gi>dated</tei:gi> environment's <tei:gi>dynamicsMap</tei:gi>. The following code snippet shows a <tei:gi>dynamicsMap</tei:gi> with three <tei:gi>dynamics</tei:gi> instructions. It starts with a volume level of 80.0. At date 14400.0 we see a terraced dynamics change from 80.0 to 50.0. However, this second dynamics instruction does not remain constant as it actually defines a crescendo from 50.0 to 115.0 starting at date 14400.0 and ending right before the subsequent dynamics instruction at date 164520.0. That third dynamics instruction defines a constant dynamics level of 80.0, just as the first instruction did. Hence, we have a crescendo followed by "subito 80.0".</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <dynamicsMap>
+                            <dynamics date="0.0" volume="80.0"/>
+                            <dynamics date="14400.0" volume="50.0" transition.to="115.0" curvature="0.3" protraction="0.5" subNoteDynamics="true"/>
+                            <dynamics date="164520.0" volume="80.0"/>
+                        </dynamicsMap>
+                    </egXML>
+                    
+                    <tei:p>Each continuous dynamics transition should be followed by another dynamics instruction (continuous or constant) as it provides the end date of the transition. Otherwise the transition would stretch to infinity. The second dynamics instruction sets the optional attribute <tei:att>subNoteDynamics</tei:att> true (default value is false) which expresses that the dynamics transition is performed not only in a note-wise fashion but also within each tone. This feature may not be applicable to, e.g., struck instruments such as piano and harp. Other instruments, however, have the possibility to modulate the dynamics of a held tone, such as the human voice, wind and string instruments.</tei:p> 
+                    
+                    <tei:p>The shape of continuous dynamics transitions can be further refined by attributes <tei:att>curvature</tei:att> and <tei:att>protraction</tei:att>. Attribute <tei:att>curvature</tei:att> is defined in the interval [0.0, 1.0] and indicates a distinct sigmoidal (S) shape of the dynamics curve (value &gt; 0.0) or a straight linear transition (value = 0.0). The higher the value the more accentuated is the transition. Attribute <tei:att>protraction</tei:att> is defined in the interval [-1.0, 1.0] and indicates whether the transition comes relatively early (value &lt; 0.0), relatively late (value &gt; 0.0) or is equally shared between first and second half of the interval between <tei:gi>date</tei:gi> and the subsequent dynamics instruction's<tei:gi>date</tei:gi>. The mathematical model to construct dynamics curves translates these attributes into cubic Bézier curves as shown in the following figures.</tei:p>
+                    
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/dynamics.png" height="250px"/>
+                        <tei:head>Continuous dynamics transitions are constructed from cubic Bézier curves (dashed lines are the control polygon). Their shape is specified by attributes <tei:att>curvature</tei:att> and <tei:att>protraction</tei:att>.</tei:head>
+                    </tei:figure>
+                    
+                    <tei:p>Attributes <tei:att>volume</tei:att> and <tei:att>transition.to</tei:att> are not restricted to purely numeric values. It is also possible to use literals such as "pp", "mf", "forte", "as loud as possible". These literals must be associated with a numeric value in the <tei:gi>header</tei:gi>/<tei:gi>dynamicsStyles</tei:gi> environment as shown below.</tei:p>
+                
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <dynamicsStyles>
+                                <styleDef name="Karajan">
+                                    <dynamicsDef name="p" value="30.0"/>
+                                    <dynamicsDef name="f" value="95.0"/>
+                                    <dynamicsDef name="ff" value="122.0"/>
+                                </styleDef>
+                                <styleDef name="Rattle">
+                                    <dynamicsDef name="p" value="26.0"/>
+                                    <dynamicsDef name="f" value="101.0"/>
+                                    <dynamicsDef name="ff" value="125.0"/>
+                                </styleDef>
+                            </dynamicsStyles>
+                        </header>
+                        <dated>
+                            <dynamicsMap>
+                                <style date="0.0" name.ref="Rattle"/>
+                                <dynamics date="0.0" bpm="f" transition.to="p" protraction="0.8"/>
+                                <dynamics date="32000" bpm="p" transition.to="105.0"/>
+                                <dynamics date="47000.0" bpm="ff"/>
+                            </dynamicsMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The third dynamics instruction shows that literals and numeric values can be mixed. The preceding <tei:gi>style</tei:gi> element is mandatory to make clear which dynamics style should be used.</tei:p>
                 </tei:div>
                 
                 <tei:div type="chapter">
                     <tei:head>Metrical Accentuation</tei:head>
                     
-                    <tei:p>...</tei:p>
+                    <tei:p>Metrical and rhythmical structure often suggest specific accentuation patterns that recur usually measure-wise. They render the distinction between "weak" beats and "strong" beats, the perceptual grouping of pulses according to a metrical and rhythmical structure. Such an accentuation pattern specifies the contour of deviations from the underlying macro dynamics curve. In MPM accentuation patterns are defined in the <tei:gi>header</tei:gi> environment's <tei:gi>metricalAccentuationStyles</tei:gi>. Their application at a specific position in the music takes place in the <tei:gi>dated</tei:gi> environment's <tei:gi>metricalAccentuationMap</tei:gi>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <metricalAccentuationStyles>
+                                <styleDef name="my accentuation patterns">
+                                    <accentuationPatternDef name="quad time" length="4.0">
+                                        <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
+                                        <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>
+                                        <accentuation beat="4" value="0.5" transition.from="0.0" transition.to="1.0"/>
+                                    </accentuationPatternDef>
+                                    <accentuationPatternDef name="triple time" length="3.0">
+                                        <accentuation beat="1.0" value="1.0" transition.from="1.0" transition.to="0.0"/>
+                                        <accentuation beat="2.0" value="0.5" transition.from="0.5" transition.to="-1.0"/>
+                                        <accentuation beat="3.0" value="0.0" transition.from="0.0" transition.to="1.0"/>
+                                    </accentuationPatternDef>
+                                </styleDef>
+                            </metricalAccentuationStyles>
+                        </header>
+                        <dated>
+                            <metricalAccentuationMap>
+                                <style date="0.0" name.ref="my accentuation patterns"/>
+                                <accentuationPattern date="0.0" name.ref="quad time" scale="50.0" loop="true" stickToMeasures="true"/>
+                            </metricalAccentuationMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The above code example defines two accentuation patterns, "quad time" and "triple time" and applies the former in the <tei:gi>metricalAccentuationMap</tei:gi>. Element <tei:gi>accentuationPattern</tei:gi>'s attribute <tei:att>loop</tei:att> indicates that the pattern is repeatedly applied. Attribute <tei:att>stickToMeasures</tei:att> (true by default) sais that the pattern starts anew with each measure, even if the measure is shorter than the pattern's <tei:att>length</tei:att>, and will not loop within the same measure. This behavior can be deactivated by setting <tei:att>stickToMeasures</tei:att> false.</tei:p>
+                    
+                    <tei:p>Of key importance for the interpretation of accentuation patterns is attribute <tei:att>scale</tei:att> because the patterns are defined in the range [-1.0, 1.0] and need to be scaled up to actual dynamics values. In the above example, the actual dynamics range is set to [-50.0, 50.0] by attribute <tei:att>scale</tei:att>. This means that the maximum accentuation (1.0 in the <tei:gi>accentuationPatternDef</tei:gi>/<tei:gi>accentuation</tei:gi>/<tei:att>value</tei:att>) is 50.0 and the maximum restraint (-1.0) is actually -50.0.</tei:p>
+                    
+                    <tei:p>Let us have a closer look at the definition of metrical accentuation patterns in element <tei:gi>accentuationPatternDef</tei:gi>. The element itself defines a <tei:att>name</tei:att> that is refered in the <tei:gi>metricalAccentuationMap</tei:gi> and the <tei:att>length</tei:att> of the pattern in musical beats. Pattern "quad time" is 4.0 beats long and "triple time" 3.0 beats. The length of a beat is defined by the time signature's denominator at the musical position where the pattern is applied. The child elements of <tei:gi>accentuationPatternDef</tei:gi> define each an individual <tei:gi>accentuation</tei:gi>, i.e., a dynamics change (attribute <tei:att>value</tei:att> in [-1.0, 1.0]) at a the specified <tei:att>beat</tei:att> position. If nothing else is given, this accentuation level will also be used for all notes that might occur between this beat and the subsequent accentuation's beat position. Often, however, this should be accentuated different than the beat itself. Therefor, attributes <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att> are used. Here, we have the following options, also illustrated in the figures below.</tei:p>
+                    <tei:list type="gloss">
+                        <tei:label><tei:att>value</tei:att> is specified, nothing else</tei:label>
+                        <tei:item>The accentuation level will be used for all notes that might occur between this and the next <tei:gi>accentuation</tei:gi> (see subfigure 1).</tei:item>
+                        
+                        <tei:label><tei:att>value</tei:att> and <tei:att>transition.from</tei:att> are specified</tei:label>
+                        <tei:item>For all notes between this and the next <tei:gi>accentuation</tei:gi>, their accentuation levels are set to a constant accentuation level of <tei:att>transition.from</tei:att>. Only the notes that are placed exactly at the <tei:att>beat</tei:att> position are accentuated with <tei:att>value</tei:att> (see subfigure 2).</tei:item>
+                        
+                        <tei:label><tei:att>value</tei:att> and <tei:att>transition.to</tei:att> are specified</tei:label>
+                        <tei:item>For all notes between this and the next <tei:gi>accentuation</tei:gi>, their accentuation levels are linearly interpolated from <tei:att>value</tei:att> to <tei:att>transition.to</tei:att> (see subfigure 3).</tei:item>
+                        
+                        <tei:label><tei:att>value</tei:att>, <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att> are specified</tei:label>
+                        <tei:item>For all notes between this and the next <tei:gi>accentuation</tei:gi>, their accentuation levels are linearly interpolated from <tei:att>transition.from</tei:att> to <tei:att>transition.to</tei:att>. Only the notes that are placed exactly at the <tei:att>beat</tei:att> position are accentuated with <tei:att>value</tei:att> (see subfigure 4).</tei:item>
+                    </tei:list>
+                    
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation1.png" height="130px"/>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation2.png" height="130px"/>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation3.png" height="130px"/>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation4.png" height="130px"/>
+                        <tei:head>Some example accentuation patterns with varying combinations of attributes <tei:att>value</tei:att>, <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att>. See the above list for details.</tei:head>
+                    </tei:figure>
+                    
+                    <tei:p>By the way, <tei:att>beat</tei:att> does not have to be integer. Accentuations can also be defined for positions between integer beat positions. And not every beat needs to have an accentuation.</tei:p>
                 </tei:div>
                 
                 <tei:div type="chapter">
