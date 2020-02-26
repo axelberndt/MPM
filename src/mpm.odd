@@ -316,7 +316,7 @@
 
                 <tei:div type="section">
                     <tei:head>Further Timing Features</tei:head>
-                    <tei:p>The timing function can be further enriched by single-note offsets (e.g. agogic accents) that are part of the articulation model. Furthermore, MPM offers <tei:gi>imprecisionMap.timing</tei:gi> to model non-systematic/quasi-random timing fluctuations. This is described in section "Random Variations".</tei:p>
+                    <tei:p>The timing function can be further enriched by single-note offsets (e.g. agogic accents) that are part of the articulation model. Furthermore, MPM offers <tei:gi>imprecisionMap.timing</tei:gi> to model non-systematic/quasi-random timing fluctuations. This is described in section "Randomization".</tei:p>
                 </tei:div>
             </tei:div>
             
@@ -443,7 +443,7 @@
                 <tei:div type="chapter">
                     <tei:head>Further Dynamics Features</tei:head>
                     
-                    <tei:p>The musical dynamics can be further enriched by articulation (see the articulation model) and by non-systematic/quasi-random timing fluctuations via <tei:gi>imprecisionMap.dynamics</tei:gi>. This is described in section "Random Variations".</tei:p>
+                    <tei:p>The musical dynamics can be further enriched by articulation (see the articulation model) and by non-systematic/quasi-random timing fluctuations via <tei:gi>imprecisionMap.dynamics</tei:gi>. This is described in section "Randomization".</tei:p>
                 </tei:div>
             </tei:div>
             
@@ -532,7 +532,7 @@
                         <tei:item><tei:att>absoluteDelayMs</tei:att></tei:item>
                         <tei:item><tei:att>absoluteDurationMs</tei:att></tei:item>
                         <tei:item><tei:att>absoluteDurationChangeMs</tei:att></tei:item>
-                        <tei:item>the randomizations (see section Random Variations) are applied after articulation rendering is completed.</tei:item>
+                        <tei:item>the randomizations (see section Randomization) are applied after articulation rendering is completed.</tei:item>
                     </tei:list>
                     
                     <tei:p>The non-milliseconds duration modifiers (3-5) are omitted if <tei:att>absoluteDurationMs</tei:att> is specified as this will overwrite them anyway. The detune modifiers are not yet supported by the official rendering engine, hence, they do not occur in the sequence so far. Randomizations are applied at the end of the performance rendering pipeline. This includes timing, dynamics and duration randomization.</tei:p>
@@ -584,10 +584,13 @@
             </tei:div>
             
             <tei:div type="chapter">
-                <tei:head>Random Variations</tei:head>
+                <tei:head>Randomization</tei:head>
+                
+                <tei:p>Anyone who has ever tried to analyze a musical performance by measuring the audio recording knows that quite a substantial amount of variations in timing, dynamics etc. exhibits a rather unsystematic behavior. This can hardly be emulated by the feature models described so far. On the one hand, this is an interesting indication that can help musical performance researchers to identify new and relevant research questions, investigate these phenomena systematically and develop new models that could be added to MPM. On the other hand, MPM needs to provide a way to recreate these phenomena now, at least in an approximate fashion, for those who simply want to create rich expressive performances for their music production.</tei:p>
+                
+                <tei:p>This is the point where "humanizing" comes into play. In music production so far, humanizers are almost exclusively applied to the timing domain. A humanizer shakes up, i.e. randomizes, the timing of the musical events so they are played less precise. MPM goes further. Randomization can be applied not only to the timing domain but also to dynamics, tone duration and tuning (the official rendering engine in <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> does not support tuning, yet). Moreover, MPM offers a variety of different stochastic models to shape the randomizations in a number of ways. Randomization is the last step in the performance rendering pipeline, added after all other features have been computed. This also implies that it is a micro feature, i.e. it does not set absolute values but adds deviations.</tei:p>
+                
                 <tei:list>
-                    <tei:item>What is humanization?</tei:item>
-                    <tei:item>Domains for applying humanization</tei:item>
                     <tei:item>Distribution types</tei:item>
                 </tei:list>
             </tei:div>
