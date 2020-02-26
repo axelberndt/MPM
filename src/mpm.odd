@@ -414,6 +414,7 @@
                     <tei:p>Of key importance for the interpretation of accentuation patterns is attribute <tei:att>scale</tei:att> because the patterns are defined in the range [-1.0, 1.0] and need to be scaled up to actual dynamics values. In the above example, the actual dynamics range is set to [-50.0, 50.0] by attribute <tei:att>scale</tei:att>. This means that the maximum accentuation (1.0 in the <tei:gi>accentuationPatternDef</tei:gi>/<tei:gi>accentuation</tei:gi>/<tei:att>value</tei:att>) is 50.0 and the maximum restraint (-1.0) is actually -50.0.</tei:p>
                     
                     <tei:p>Let us have a closer look at the definition of metrical accentuation patterns in element <tei:gi>accentuationPatternDef</tei:gi>. The element itself defines a <tei:att>name</tei:att> that is refered in the <tei:gi>metricalAccentuationMap</tei:gi> and the <tei:att>length</tei:att> of the pattern in musical beats. Pattern "quad time" is 4.0 beats long and "triple time" 3.0 beats. The length of a beat is defined by the time signature's denominator at the musical position where the pattern is applied. The child elements of <tei:gi>accentuationPatternDef</tei:gi> define each an individual <tei:gi>accentuation</tei:gi>, i.e., a dynamics change (attribute <tei:att>value</tei:att> in [-1.0, 1.0]) at a the specified <tei:att>beat</tei:att> position. If nothing else is given, this accentuation level will also be used for all notes that might occur between this beat and the subsequent accentuation's beat position. Often, however, this should be accentuated different than the beat itself. Therefor, attributes <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att> are used. Here, we have the following options, also illustrated in the figures below.</tei:p>
+                    
                     <tei:list type="gloss">
                         <tei:label><tei:att>value</tei:att> is specified, nothing else</tei:label>
                         <tei:item>The accentuation level will be used for all notes that might occur between this and the next <tei:gi>accentuation</tei:gi> (see subfigure 1).</tei:item>
@@ -448,11 +449,138 @@
             
             <tei:div type="chapter">
                 <tei:head>Articulation</tei:head>
-                <tei:list>
-                    <tei:item>Articulations shapes a tone. It can affect all of its facets and may even affect its dynamics and timing.</tei:item>
-                    <tei:item>Articulations are defined by modifiers ...</tei:item>
-                    <tei:item>Reference to the random section</tei:item>
-                </tei:list>
+                <tei:p>An articulation shapes a tone. While the note symbol gives only rough information about how the corresponding tone should be played (pitch and rhythmical indication) articulations provide information about how the tone is shaped in terms of duration, dynamics, timing, and tuning. In contrast to all other performance features in MPM articulations are discrete, i.e. an articulation instruction does not span over a certain time frame. It takes effect only at the symbolic time position where it is positioned in the <tei:gi>articulationMap</tei:gi> and only on those notes that are placed at this same date. An articulation that does not coincide with a note has no effect.</tei:p>
+
+                <tei:div type="chapter">
+                    <tei:head>Note Associtation</tei:head>
+
+                    <tei:p>The <tei:gi>articulationMap</tei:gi>, just as all maps in MPM, is child of the <tei:gi>dated</tei:gi> environment. Let us start with the following incomplete code snippet.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <articulationMap>
+                            <articulation date="0.0"/>
+                            <articulation date="720.0" noteid="#2358d"/>
+                        </articulationMap>
+                    </egXML>
+                    
+                    <tei:p>This map has two articulation instructions. Yet, they do nothing but we will add more information soon. The first articulation affects all notes at symbolic date 0.0. If the map is in the <tei:gi>global</tei:gi> environment, it affects all notes of all parts at this time position. If it is in a <tei:gi>part</tei:gi> environment, then it affects only notes of this particular part. The second instruction uses a further attribute, <tei:att>noteid</tei:att>, to make sure that only one particular note will be affected, even if further notes occur at the same date.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Modifiers</tei:head>
+                    
+                    <tei:p>Articulations are defined by modifiers. These affect the properties of a note-tone mapping. The following list gives an overview of which modifiers MPM currently includes.</tei:p>
+                    
+                    <tei:list type="gloss">
+                        <tei:label><tei:att>absoluteDuration</tei:att></tei:label>
+                        <tei:item>Set the absolute duration of the note (in symbolic time).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDurationChange</tei:att></tei:label>
+                        <tei:item>Change the absolute duration of the note by the specified value (in symbolic time).</tei:item>
+                        
+                        <tei:label><tei:att>relativeDuration</tei:att></tei:label>
+                        <tei:item>Change the duration of the note relatively to its initial value. E.g. a value of 0.5 halves the duration.</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDurationMs</tei:att></tei:label>
+                        <tei:item>Set the absolute duration of the note (in milliseconds).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDurationChangeMs</tei:att></tei:label>
+                        <tei:item>Change the absolute duration of the note by the specified value (in milliseceonds).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDelay</tei:att></tei:label>
+                        <tei:item>Delay the note by the specified value (in symbolic time).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDelayMs</tei:att></tei:label>
+                        <tei:item>Delay the note by the specified value (in milliseconds).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteVelocity</tei:att></tei:label>
+                        <tei:item>Set the absolute velocity of a note.</tei:item>
+                        
+                        <tei:label><tei:att>relativeVelocity</tei:att></tei:label>
+                        <tei:item>Change the velocity of a note relative to its initial velocity. E.g., a value of 0.5 halves the velocity.</tei:item>
+                        
+                        <tei:label><tei:att>absoluteVelocityChange</tei:att></tei:label>
+                        <tei:item>Change the velocity of a note by the specified amount.</tei:item>
+                        
+                        <tei:label><tei:att>detuneCents</tei:att></tei:label>
+                        <tei:item>Change a note's tuning by the specified amount in cents.</tei:item>
+                        
+                        <tei:label><tei:att>detuneHz</tei:att></tei:label>
+                        <tei:item>Change a note's tuning by the specified amount in Hertz.</tei:item>
+                    </tei:list>
+                    
+                    <tei:p>An <tei:gi>articulation</tei:gi> element can apply any combination of modifiers.</tei:p>
+
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <articulation date="6570.0" relativeDuration="0.4" absoluteDelayMs="14.0" absoluteVelocityChange="-21.0"/>
+                        <articulation date="7850.0" noteid="#note05821" absoluteDurationChangeMs="40.0" detuneCents="-13.0"/>
+                        <articulation date="8765.0" relativeDuration="0.5" absoluteDurationChange="3.0" absoluteDurationChangeMa="-10.0"/>
+                    </egXML>
+
+                    <tei:p>Some of these modifiers affect the same domain and may conflict. Thus it is useful to know the sequence in which the performance rendering engine applies them. The official MPM rendering engine in <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> does the following sequence.</tei:p>
+
+                    <tei:list rend="numbered">
+                        <tei:item>dynamics rendering (see section Dynamics) is done first, except for dynamics randomization</tei:item>
+                        <tei:item><tei:att>absoluteDelay</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDuration</tei:att></tei:item>
+                        <tei:item><tei:att>relativeDuration</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDurationChange</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteVelocity</tei:att></tei:item>
+                        <tei:item><tei:att>relativeVelocity</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteVelocityChange</tei:att></tei:item>
+                        <tei:item>at this point all timing computations are done (see section Timing), except for the randomization</tei:item>
+                        <tei:item><tei:att>absoluteDelayMs</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDurationMs</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDurationChangeMs</tei:att></tei:item>
+                        <tei:item>the randomizations (see section Random Variations) are applied after articulation rendering is completed.</tei:item>
+                    </tei:list>
+                    
+                    <tei:p>The non-milliseconds duration modifiers (3-5) are omitted if <tei:att>absoluteDurationMs</tei:att> is specified as this will overwrite them anyway. The detune modifiers are not yet supported by the official rendering engine, hence, they do not occur in the sequence so far. Randomizations are applied at the end of the performance rendering pipeline. This includes timing, dynamics and duration randomization.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Articulation Styles</tei:head>
+                    
+                    <tei:p>Articulations can be predefined in the <tei:gi>header</tei:gi>/<tei:gi>articulationStyles</tei:gi> environment and invoked by element <tei:gi>articulation</tei:gi> via attribute <tei:att>name.ref</tei:att>. The following example code shows the definition of an articulation style and its application in the <tei:gi>articulationMap</tei:gi>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <articulationStyles>
+                                <styleDef name="Peterson">
+                                    <articulationDef name="accent" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="breath" absoluteDurationChangeMs="-400.0" absoluteVelocityChange="-5.0"/>
+                                    <articulationDef name="legatissimo" absoluteDurationChangeMs="250.0"/>
+                                    <articulationDef name="legato" relativeDuration="1.0"/>
+                                    <articulationDef name="legatostop" relativeDuration="0.8" relativeVelocity="0.7"/>
+                                    <articulationDef name="marcato" relativeDuration="0.8" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="nonlegato" relativeDuration="0.95"/>
+                                    <articulationDef name="pizzicato" absoluteDuration="1.0"/>
+                                    <articulationDef name="portato" relativeDuration="0.8"/>
+                                    <articulationDef name="sforzato" absoluteVelocity="127.0" relativeDuration="0.8"/>
+                                    <articulationDef name="snap pizzicato" absoluteDuration="1.0" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="spiccato" absoluteDurationMs="140.0" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                                    <articulationDef name="staccatissimo" absoluteDurationMs="140.0" absoluteVelocityChange="5.0"/>
+                                    <articulationDef name="tenuto" relativeDuration="0.9" absoluteVelocityChange="12.0"/>
+                                </styleDef>
+                            </articulationStyles>
+                        </header>
+                        <dated>
+                            <articulationMap>
+                                <style date="0.0" name.ref="Peterson" defaultArticulation="nonlegato"/>
+                                <articulation date="0.0" name.ref="staccato"/>
+                                <articulation date="3450.0" name.ref="legato"/>
+                                <articulation date="3450.0" noteid="#note04706" name.ref="accent"/>
+                                <articulation date="5670.0" name.ref="accent" absoluteDurationMs="155.0"/>
+                                <articulation date="6780.0" name.ref="marcato" relativeDuration="0.75"/>
+                            </articulationMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The first <tei:gi>articulation</tei:gi> in the above <tei:gi>articulationMap</tei:gi> sets all notes at date 0.0 "staccato". The second sets all notes at date 3450.0 legato. The third <tei:gi>articulation</tei:gi> adds an "accent" to one particular note at the same date. This shows that articulations can be combined by placing multiple <tei:gi>articulation</tei:gi> elements at the same date. They are then applied to the notes in the same sequence as they occur in the map. The fourth <tei:gi>articulation</tei:gi> applies an accent to all notes at date 5670.0 and additionally changes their milliseconds duration. This way it is possible to add and overwrite properties of a predefined articulation, as done in the fifth <tei:gi>articulation</tei:gi> element.</tei:p>
+                    
+                    <tei:p>Before the articulation names can be used it is necessary to indicate the style to retrieve the corresponding articulation definitions. Therefor, a <tei:gi>style</tei:gi> element must be placed in the <tei:gi>articulationMap</tei:gi> before the first use of predefined articulations. The <tei:gi>style</tei:gi> element in the articulation context features an additional optional attribute <tei:att>defaultArticulation</tei:att>. If it is not specified, all notes that are not affected by an <tei:gi>articulation</tei:gi> remain unaltered. If <tei:att>defaultArticulation</tei:att> is specified (again by referencing to an <tei:gi>articulationDef</tei:gi>'s <tei:att>name</tei:att>), this articulation definition will be applied to all notes that are not affected by an <tei:gi>articulation</tei:gi> element.</tei:p>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
