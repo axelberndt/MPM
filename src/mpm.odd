@@ -186,7 +186,7 @@
                 <tei:p>Generally speaking, timing is a mapping of symbolic time (e.g. score time and the tick dates in MIDI) to physical time (typically measured in milliseconds). MPM distinguishes between macro and micro timing features. The macro timing, i.e. tempo, defines the rough timing function. The micro timing features (rubato, asynchrony, random imprecision and parts of articulation) add fine-grained details to this timing curve. The timing computation pipeline with all timing aspects is shown in the figure below and detailed in the following sections.</tei:p>
 
                 <tei:figure>
-                    <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/timingPipeline.png" height="310px"/>
+                    <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/timingPipeline.png" height="310px"/>
                     <tei:head>The timing pipeline shows the sequence of timing computation steps and in which domain the computations operate (symbolic or physical).</tei:head>
                 </tei:figure>
                 
@@ -241,7 +241,7 @@
                     <tei:p>This is a value between 0.0 and 1.0 indicating a relative position between start date and end date of the tempo transition. This is the position where half of the tempo change is done. Placing it in the first half (between 0.0 and 0.5) will shift the bulk part of the tempo change at the beginning (the performers get sooner faster/slower), vice versa for the second half (between 0.5 and 1.0, performers get later faster/slower). Value 0.5 will create a perfectly linear tempo transition that typically sounds rather neutral or mechanic.</tei:p>
                     
                     <tei:figure>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/tempoCurves.png" height="420px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/tempoCurves.png" height="420px"/>
                         <tei:head>Tempo curves are constructed from power functions in the interval [0.0, 1.0]. The shape is specified via <tei:att>meanTempoAt</tei:att>.</tei:head>
                     </tei:figure>
                 </tei:div>
@@ -271,7 +271,7 @@
                     <tei:p>The first instruction creates a slight swing timing. However, it is performed only once. If the rubato scheme should be repeated on every subsequent frame, attribute <tei:att>loop</tei:att> should be set true, as done in the second instruction. This ribato starts fast and slows down until the end of the frame. The third instruction does not use the <tei:att>intensity</tei:att> attribute for timing distortions but adds compression. The first ten percent of the frame are delayed by <tei:att>lateStart</tei:att> and the final 10 percent are played early by <tei:att>earlyEnd</tei:att>. Both together cause the frame being played late and so fast that it is finished early. It is also  possible to combine this feature with <tei:att>intensity</tei:att> to create even more complex characteristics. The following figure illustrates the whole rubato model.</tei:p>
 
                     <tei:figure>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/rubato.png" height="470px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/rubato.png" height="470px"/>
                         <tei:head>MPM's rubato model is based on a power function in the interval [0.0, 1.0] that is then scaled to frame length and shifted to the frame's date.</tei:head>
                     </tei:figure>
                     
@@ -345,7 +345,7 @@
                     <tei:p>The shape of continuous dynamics transitions can be further refined by attributes <tei:att>curvature</tei:att> and <tei:att>protraction</tei:att>. Attribute <tei:att>curvature</tei:att> is defined in the interval [0.0, 1.0] and indicates a distinct sigmoidal (S) shape of the dynamics curve (value &gt; 0.0) or a straight linear transition (value = 0.0). The higher the value the more accentuated is the transition. Attribute <tei:att>protraction</tei:att> is defined in the interval [-1.0, 1.0] and indicates whether the transition comes relatively early (value &lt; 0.0), relatively late (value &gt; 0.0) or is equally shared between first and second half of the interval between <tei:gi>date</tei:gi> and the subsequent dynamics instruction's<tei:gi>date</tei:gi>. The mathematical model to construct dynamics curves translates these attributes into cubic Bézier curves as shown in the following figures.</tei:p>
                     
                     <tei:figure>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/dynamics.png" height="250px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/dynamics.png" height="250px"/>
                         <tei:head>Continuous dynamics transitions are constructed from cubic Bézier curves (dashed lines are the control polygon). Their shape is specified by attributes <tei:att>curvature</tei:att> and <tei:att>protraction</tei:att>.</tei:head>
                     </tei:figure>
                     
@@ -430,10 +430,10 @@
                     </tei:list>
                     
                     <tei:figure>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation1.png" height="130px"/>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation2.png" height="130px"/>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation3.png" height="130px"/>
-                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation4.png" height="130px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/metricalAccentuation1.png" height="130px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/metricalAccentuation2.png" height="130px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/metricalAccentuation3.png" height="130px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/metricalAccentuation4.png" height="130px"/>
                         <tei:head>Some example accentuation patterns with varying combinations of attributes <tei:att>value</tei:att>, <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att>. See the above list for details.</tei:head>
                     </tei:figure>
                     
