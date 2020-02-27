@@ -21,12 +21,12 @@
             <header>
                 <metricalAccentuationStyles>
                     <styleDef name="my accentuation patterns">
-                        <accentuationPatternDef name="quad time" length="4.0" stickToMeasures="true">
+                        <accentuationPatternDef name="quad time" length="4.0">
                             <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
                             <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>
                             <accentuation beat="4" value="0.5" transition.from="0.0" transition.to="1.0"/>
                         </accentuationPatternDef>
-                        <accentuationPatternDef name="triple time" length="3.0" stickToMeasures="true">
+                        <accentuationPatternDef name="triple time" length="3.0">
                             <accentuation beat="1.0" value="1.0" transition.from="1.0" transition.to="0.0"/>
                             <accentuation beat="2.0" value="0.5" transition.from="0.5" transition.to="-1.0"/>
                             <accentuation beat="3.0" value="0.0" transition.from="0.0" transition.to="1.0"/>

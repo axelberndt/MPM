@@ -68,7 +68,7 @@
                 
                 <tei:p>Each feature is designed on the basis of a mathematical model that was derived from empirical performance research. These models not only reproduce the typical characteristics of their respective features. Two musicians may perform the same features (say an articulation, a crescendo, or a ritardando) very differently. Thus, the models are also equipped with expressive parameters to recreate the whole bandwidth of such variations.</tei:p>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Application Scenarios</tei:head>
                     
                     <tei:p>MPM was developed with several application scenarios in mind. It is an editorial tool for the philological registration and critical analysis of musical interpretations in the context of digital music editions. This directly leads to usage scenarios in the library context for archiving sound documents and their editions. For the analysis of individual performances, the model-based approach of MPM provides feature classes that allow for an abstracted and differentiated view. With larger data sets of musical performances, corpus analyses with methods from the field of information retrieval promise new insights, e.g. into personal and contemporary styles or the influence of performers from certain schools.</tei:p> 
@@ -76,14 +76,14 @@
                     <tei:p>MPM does not primarily serve a purely positivistic quantification of music, though. Along the lines of "transformative digital intermedia studies" and coupled with the possibilities to apply the modeled performances to symbolic music data in the standard MIDI file format and render them into audio files, MPM can be a tool for the hermeneutic approximation of the interpretation description. As an experimenting tool, it can be used for the (re-)construction of performances that have not been handed down as sound documents but in textual form, e.g. in music-practical texts and performance scores. Beyond the purely scientific use, it has also applications in digital music production, e.g. for creating expressive performances which can then be rendered into high-quality music productions using sound libraries and synthesizers. Last but not least, the model-based basic concept of MPM also motivates new research questions in the field of music performance research that could not be approached systematically before.</tei:p>
                 </tei:div>
                 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Development History</tei:head>
                     
                     <tei:p>The roots of MPM lie in a performance research project in 2008-2011. In cooperation with the <tei:ref target="https://www.telemann.org">"Zentrum für Telemann-Pflege und -Forschung Magdeburg"</tei:ref> (Center for Telemann Care and Research Magdeburg) Tilo Hähnel and Axel Berndt conducted a series of empirical studies with musicians, measurements in music recordings, experiments with listeners and software implementations that ultimately yielded a corpus of mathematical models used to synthesize musical performances. What was used as a proprietary scripting format was effectively the first incarnation of what would later become MPM.</tei:p> 
                     
                     <tei:p>It took another five years until in 2016 Benjamin Wolff Bohl and Axel Berndt, in the context of the <tei:ref target="https://www.zenmem.de/">Center "Music - Edition - Media"</tei:ref> project, started a comprehensive redesign and created version 1 of MPM, yet incomplete in some regards but the initiation of a project dedicated to MPM exclusively. Funded by the <tei:ref target="https://www.fritz-thyssen-stiftung.de/en/">Fritz Thyssen Foundation</tei:ref> the MPM schema definition was fully revamped into the present version 2. Throughout 2019-2022 the project is dedicated to the development of comprehensive documentation, guidelines, sample encodings, workshops, and several software tools.</tei:p>
                 </tei:div>
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Software Tools for MPM</tei:head>
                     <tei:list>
                         <tei:item>The official MPM API (application programming interface) has been written in Java and is published under GPL 3.0 as part of the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework.</tei:item>
@@ -94,14 +94,14 @@
                 </tei:div>
             </tei:div>
             
-            <tei:div type="chapter">
+            <tei:div type="section">
                 <tei:head>Introduction to MPM</tei:head>
                 
                 <tei:p>The performance of a piece of music transforms the symbolic music data (also called logical music data, typically a score representation) into sounding output. An MPM encoded performance describes this transformation. One piece of music can be performed in many different ways. In other words, there can be many different performances for the same logical music data rendering it impractical to combine both domains in one and the same data structure. Thus, in the MPM ecosystem both are clearly separated. MPM itself represents only the gestural domain, i.e. the performance descriptions. Logical domain data comes as a separate entity, e.g. as MIDI, MEI or MSM (Musical Sequence Markup) file. The <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> converter framework can be used to convert these formats. Hence, MPM is always used in tandem with a logical music representation format. Simply put, the latter contributes the notes, MPM says how they are performed.</tei:p>
                 
                 <tei:p>Yet not included in MPM's vocabulary is the sound generation. The typical workflow for listening to a music performance is to transform the logical music representation and an MPM performance into an expressive MIDI sequence, then play it back directly or render it to audio (meico is a convenient tool for doing this). In both cases certain sound generators are involved, be it sample libraries or synthesizers. If the sounds do not match the requirements, others may be tested. It is even possible to import the generated expressive MIDI file in a Digital Audio Workstation (DAW) and produce the music in a more dedicated, professional environment.</tei:p>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>The Basic Structure</tei:head>
                     
                     <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has two kinds of children, one element <tei:gi>relatedResources</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
@@ -122,7 +122,7 @@
                     </egXML>
                 </tei:div>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Linking Related Resources</tei:head>
 
                     <tei:p>Element <tei:gi>relatedResources</tei:gi> provides a list of references to other data resources that are somehow related to this MPM. This might be the logical music data file, an audio file whose performance is recreated here or an accompanying text document. This list is basically of an informal nature and does not imply any specific meaning. E.g., performances are not restricted to be applied only to the sources listed here. It is up to the user/application to be more specific with this, e.g. by means of edition guidelines for a historical-critical music edition.</tei:p>
@@ -141,7 +141,7 @@
                     </egXML>
                 </tei:div>
                 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Timing Concept</tei:head>
 
                     <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 time. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. This measure is independent of tempo, i.e. the duration and timing values stay the same regardless of the tempo of the music. Even if the music plays twice as fast, a quarter note has 720 ticks, only the clock ticks faster. If we place an articulation on a note at tick position 54320, it will be that same position even if another tempo is set. Later, in the timing section, we will see how this translates to milliseconds.</tei:p>
@@ -149,57 +149,529 @@
                     <tei:p>Typical <tei:att>pulsesPerQuarter</tei:att> values are 360, 480 and 720. Why this? Now, in MPM time positions (dates) and durations can be floating point numbers which provide very high precision, but in MIDI they are integers. If a quarter note would have just 1 tick, it would be impossible to express eighth notes or sexteenth notes etc. The same with dotted note values. In the MIDI world the granularity of the timing grid must provide integer representation of such smaller subdivisions and even odd subdivisions such as triplets and quintuplets. It is not really necessary to follow this convention in the MPM world and the API implementation in meico can even handle differing <tei:att>pulsesPerQuarter</tei:att> values in the logical source and MPM. But it makes editing easier and prevents numeric problems when the dates and durations align.</tei:p>
                 </tei:div>
 
-                <tei:div type="chapter">
+                <tei:div type="section">
                     <tei:head>Scopes</tei:head>
                     
-                    <tei:p>...</tei:p>
+                    <tei:p>All information of a <tei:gi>performance</tei:gi> are organizes along two categorizations that define the scope of the information.</tei:p>
                     
-                    <tei:list>
-                        <tei:item>Global vs. part-specific data</tei:item>
-                        <tei:item>Header vs. datable information</tei:item>
-                    </tei:list>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <performance name="a performance" pulsesPerQuarter="720">
+                            <global>
+                                <header>...</header>
+                                <dated>...</dated>
+                            </global>
+                            <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+                                <header>...</header>
+                                <dated>...</dated>
+                            </part>
+                            <part name="Alto" number="2" midi.channel="1" midi.port="0">
+                                <header>...</header>
+                                <dated>...</dated>
+                            </part>
+                            ...
+                        </performance>
+                    </egXML>
+                    
+                    <tei:p>Information can be global, i.e. they apply to all musical parts, and local, i.e. they apply to a single part. Technically, the parts correspond with MEI staffs and MIDI channels. Here is a typical example: If dynamics instructions are placed in the <tei:gi>global</tei:gi> environment, they are performed by all parts. If the dynamics instructions are placed in a <tei:gi>part</tei:gi> environment, only this particular part will perform them. If both is given, global and part-specific dynamics instructions, the specific part will ignore the global ones and perform its local intructions while all others will follow the global instructions as long they have no local ones. In other words: Local information dominate the global. This pays off, e.g., in solo-plus-accompaniment constellations. Global performance instructions are executed by the whole ensemble; only the solo part features its own local instructions that "overwrite" the global.</tei:p>
+                    
+                    <tei:p>The interplay of global and local information is the key to complex polyphonic performance structures. Each part can feature its own performance plan. One part may perform a decrescendo while another part plays a crescendo. One part may perform a swing timing, another an even timing, while they all follow the same basic tempo. A key feature of our models to allow such multifarious performance representations is the self-containedness of each single model. This gives precise and independent control of each performance detail without any distorting interference from another detail. It is possible, for instance, to change the tempo completely while keeping all micro timing features unaltered.</tei:p>
+                    
+                    <tei:p>Both, global and local information, are subdivided into <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> information. Header information apply to the whole movement, it is the place for style definitions, the place to define articulations, literal dynamics instructions etc. Dated information are organized in sequential lists, so-called maps, one for each type of performance features. Each element in a map has a required date attribute (in ticks). Discrete performance features, e.g. articulation instructions, are applied at the respective time position. Most performance features, however, extend over a certain timeframe. A dynamics instruction, such as forte for instance, lasts from its date until the date of the subsequent instruction.</tei:p>
                 </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
                 <tei:head>Timing</tei:head>
-                <tei:list>
-                    <tei:item>Macro and micro timing features and how they interact</tei:item>
-                    <tei:item>All the following definitions include header and datable information</tei:item>
-                    <tei:item>Tempo</tei:item>
-                    <tei:item>Rubato</tei:item>
-                    <tei:item>Asynchrony</tei:item>
-                    <tei:item>Reference to the articulation and imprecision section</tei:item>
-                </tei:list>
+                
+                <tei:p>Generally speaking, timing is a mapping of symbolic time (e.g. score time and the tick dates in MIDI) to physical time (typically measured in milliseconds). MPM distinguishes between macro and micro timing features. The macro timing, i.e. tempo, defines the rough timing function. The micro timing features (rubato, asynchrony, random imprecision and parts of articulation) add fine-grained details to this timing curve. The timing computation pipeline with all timing aspects is shown in the figure below and detailed in the following sections.</tei:p>
+
+                <tei:figure>
+                    <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/timingPipeline.png" height="310px"/>
+                    <tei:head>The timing pipeline shows the sequence of timing computation steps and in which domain the computations operate (symbolic or physical).</tei:head>
+                </tei:figure>
+                
+                <tei:div type="section">
+                    <tei:head>Tempo</tei:head>
+                    <tei:p>Tempo information can be located in the <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> environment. In the header, tempo styles can be defined. A tempo style is, basically, a lookup table that associates literal tempo instructions with numerical values (in beats per minute). These can then be used in the <tei:gi>tempoMap</tei:gi> as shown in the following example.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <tempoStyles>
+                                <styleDef name="Karajan">
+                                    <tempoDef name="Adagio" value="60.0"/>
+                                    <tempoDef name="Allegro" value="130.0"/>
+                                    <tempoDef name="Vivace" value="152.0"/>
+                                </styleDef>
+                                <styleDef name="Rattle">
+                                    <tempoDef name="Adagio" value="67.0"/>
+                                    <tempoDef name="Allegro" value="133.6"/>
+                                    <tempoDef name="Vivace" value="163.0"/>
+                                </styleDef>
+                            </tempoStyles>
+                        </header>
+                        <dated>
+                            <tempoMap>
+                                <style date="0.0" name.ref="Rattle"/>
+                                <tempo date="0.0" bpm="Allegro" beatLength="0.25"/>
+                                <tempo date="47000.0" bpm="Adagio" beatLength="0.5"/>
+                            </tempoMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>Let us have a closer look at the <tei:gi>tempoMap</tei:gi>. This is the place where the actual <tei:gi>tempo</tei:gi> instructions are formulated and placed along the symbolic time axis, together with <tei:gi>style</tei:gi> switches. The latter are required only if literal tempo values are used as in the above example. The style switch informs about the tempo style at which the corresponding numeric value is to be found. <tei:gi>tempo</tei:gi> instructions can dictate either a constant tempo or a continuous tempo transition (accelerando/ritardando).</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <!-- constant tempo -->
+                        <tempo date="0.0" bpm="100.0" beatLength="0.25"/>
+                        
+                        <!-- continuous tempo transition -->
+                        <tempo date="0.0" bpm="100.0" transition.to="120.0" beatLength="0.25"/>
+                    </egXML>
+                    
+                    <tei:p>In the above example we used numeric instead of literal tempo values. Both, <tei:att>bpm</tei:att> and <tei:att>transition.to</tei:att> can be either numeric bpm values or literals from the underlying tempo style. If <tei:att>transition.to</tei:att> is present and has a different value than <tei:att>bpm</tei:att> the tempo instructions represents a continuous tempo transition beginning at <tei:att>date</tei:att> and ending at the <tei:att>date</tei:att> of the subsequent tempo instruction in the map. Hence, it is not advisable to have a continuous tempo transition as last child of a <tei:gi>tempoMap</tei:gi>.</tei:p>
+                    
+                    <tei:p>Since the tempo values are in beats per minute, we need to know the note value of one beat. This is specified by the required attribute <tei:att>beatLength</tei:att>. Here the numerical interpretation of musical note values are used, e.g. quarter note = 1/4 = 0.25, eighth note = 1/8 = 0.125, half note = 1/2 = 0.5, whole note = 1.0 and so forth.</tei:p>
+                    
+                    <tei:p>The shape of continuous tempo transitions can be further refined by attribute <tei:att>meanTempoAt</tei:att>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <tempo date="0.0" bpm="100.0" transition.to="120.0" beatLength="0.25" meanTempoAt="0.2"/>
+                    </egXML>
+                    
+                    <tei:p>This is a value between 0.0 and 1.0 indicating a relative position between start date and end date of the tempo transition. This is the position where half of the tempo change is done. Placing it in the first half (between 0.0 and 0.5) will shift the bulk part of the tempo change at the beginning (the performers get sooner faster/slower), vice versa for the second half (between 0.5 and 1.0, performers get later faster/slower). Value 0.5 will create a perfectly linear tempo transition that typically sounds rather neutral or mechanic.</tei:p>
+                    
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/tempoCurves.png" height="420px"/>
+                        <tei:head>Tempo curves are constructed from power functions in the interval [0.0, 1.0]. The shape is specified via <tei:att>meanTempoAt</tei:att>.</tei:head>
+                    </tei:figure>
+                </tei:div>
+
+                <tei:div type="section">
+                    <tei:head>Rubato</tei:head>
+                    <tei:p>Several different definitions of rubato can be found in the literature. It is often understood according to Riemann as a free treatment of tempo, short-term tempo fluctuations or "expressive timing". This is already covered by the concept of tempo (see the section on tempo) and needs no further concurrent representation. Reginald Gatty ("Tempo Rubato". In The Musical Times 53, 1912, No. 829, pp 160-162), however, lists three further definitions:</tei:p>
+                    
+                    <tei:list>
+                        <tei:item>accent shifts (see metrical accentuation),</tei:item>
+                        <tei:item>non-metronomic irregular timing (agogic offsets of single notes, see articulation), and</tei:item>
+                        <tei:item>the metronomic tempo variation in the sense of a deceleration or acceleration, which is compensated within a defined timeframe, so that the end of the timeframe is again synchronous with the underlying meter.</tei:item>
+                    </tei:list>
+                    
+                    <tei:p>The latter definition is also ideal for describing phenomena such as swing timing, Viennese waltz and inégalité. And it is not covered by any other feature type, so this is MPM's definition of rubato. Rubato instructions are organized in maps in the <tei:gi>dated</tei:gi> environment. The following <tei:gi>rubatoMap</tei:gi> features three variants of <tei:gi>rubato</tei:gi> instructions.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <dated>
+                            <rubatoMap>
+                                <rubato date="0.0" intensity="0.8" frameLength="720.0"/>
+                                <rubato date="720.0" intensity="2.0" frameLength="2160.0" loop="true"/>
+                                <rubato date="14400.0" frameLength="2160.0" lateStart="0.1" earlyEnd="0.9" loop="false"/>
+                            </rubatoMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The first instruction creates a slight swing timing. However, it is performed only once. If the rubato scheme should be repeated on every subsequent frame, attribute <tei:att>loop</tei:att> should be set true, as done in the second instruction. This ribato starts fast and slows down until the end of the frame. The third instruction does not use the <tei:att>intensity</tei:att> attribute for timing distortions but adds compression. The first ten percent of the frame are delayed by <tei:att>lateStart</tei:att> and the final 10 percent are played early by <tei:att>earlyEnd</tei:att>. Both together cause the frame being played late and so fast that it is finished early. It is also  possible to combine this feature with <tei:att>intensity</tei:att> to create even more complex characteristics. The following figure illustrates the whole rubato model.</tei:p>
+
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/rubato.png" height="470px"/>
+                        <tei:head>MPM's rubato model is based on a power function in the interval [0.0, 1.0] that is then scaled to frame length and shifted to the frame's date.</tei:head>
+                    </tei:figure>
+                    
+                    <tei:p>It is also possible to define rubato styles in the <tei:gi>header</tei:gi>. These can then be obtained via <tei:att>name.ref</tei:att> as shown in the following code example.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <rubatoStyles>
+                                <styleDef name="Jones">
+                                    <rubatoDef name="swing" frameLength="720.0" intensity="0.6"/>
+                                    <rubatoDef name="Viennese waltz" frameLength="2160.0" intensity="1.5"/>
+                                </styleDef>
+                                <styleDef name="Henry">
+                                    <rubatoDef name="swing" frameLength="720.0" intensity="0.8"/>
+                                    <rubatoDef name="Viennese waltz" frameLength="2160.0" intensity="1.2" lateStart="0.1" earlyEnd="0.95"/>
+                                </styleDef>
+                            </rubatoStyles>
+                        </header>
+                        <dated>
+                            <rubatoMap>
+                                <style date="0.0" name.ref="Henry"/>
+                                <rubato date="0.0" name.ref="swing" loop="true"/>
+                                <rubato date="45600.0" name.ref="swing" frameLength="1440.0" loop="true"/>
+                            </rubatoMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>In the <tei:gi>rubatoMap</tei:gi>, element <tei:gi>style</tei:gi> must be used first to indicate the style to look for the rubato definition <tei:gi>rubatoDef</tei:gi>. The first <tei:gi>rubato</tei:gi> element takes the "swing" definition from style "Henry" and applies it repeatedly beginning at symbolic date 0.0. At date 45600.0 the same rubato definition is used but with a change of frame length. This shows that all attributes from the <tei:gi>rubatoDef</tei:gi> can be overwritten by local attributes at the <tei:gi>rubato</tei:gi> element. A typical application scenario for this mechanism is to predefine a basic rubato that is obtained by several parts but each with a slight variation.</tei:p>
+                </tei:div>
+
+                <tei:div type="section">
+                    <tei:head>Asynchrony</tei:head>
+                    <tei:p>In the <tei:gi>dated</tei:gi> environment, an <tei:gi>asynchronyMap</tei:gi> can be used to express milliseconds offsets to the timing, as shown in the following example. Positive vylues delay the timing, negative shift it ahead.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <asnchronyMap>
+                            <asynchrony date="0.0" milliseconds.offset="100.0"/>
+                            <asynchrony date="34650.0" milliseconds.offset="-50.0"/>
+                        </asnchronyMap>
+                    </egXML>
+                </tei:div>
+
+                <tei:div type="section">
+                    <tei:head>Further Timing Features</tei:head>
+                    <tei:p>The timing function can be further enriched by single-note offsets (e.g. agogic accents) that are part of the articulation model. Furthermore, MPM offers <tei:gi>imprecisionMap.timing</tei:gi> to model non-systematic/quasi-random timing fluctuations. This is described in section "Randomization".</tei:p>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
                 <tei:head>Dynamics</tei:head>
-                <tei:list>
-                    <tei:item>Macro and micro dynamics features and how they interact</tei:item>
-                    <tei:item>All the following definitions include header and datable information</tei:item>
-                    <tei:item>Dynamics</tei:item>
-                    <tei:item>Metrical Accentuation</tei:item>
-                    <tei:item>Reference to the articulation and imprecision section</tei:item>
-                </tei:list>
+                
+                <tei:p>The concept of macro and micro features in dynamics is similar to that of timing. Macro dynamics (simply called dynamics in MPM) defines a basic loudness curve while micro dynamics (metrical accentuation, articulation, random imprecision) add deviations to the curve. This additive relation also implies that the micro dynamics features are relative values, the respective sections will expand on this. However, the loudness of a tone is not sufficiently defined by its amplitude. Equally important is its timbre. Loud tones sound loud. The attack phase of a tone’s amplitude envelope influences its loudness perception, too. And even if we focus solely on amplitude, what is the unit of measurement of our values? Consequently, it is important to be aware of what the dynamics values in a particular context should actually express. MPM makes no restrictions in this regard. MPM's dynamics values are plain floating point numbers. It is up to the user/application to decide about the feature domain, unit of measurement and scaling.</tei:p>
+                
+                <tei:p>If MPM is used for expressive performance rendering, most probably in combination with the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework that integrates the official MPM API and rendering engine, dynamics values are interpreted as MIDI velocity values. In this case it is important to be aware of the numerical limits of MIDI that reach from 0 to 127. It is up to the sound generators in use, i.e. synthesizers and/or samplers, to create audio and, thus, interpret the dynamics/velocity values. Since this in not standardized, the results can be very different with each sound generator. If the audio is unsatisfactory it is not the fault of MIDI or the dynamics values! But it might help to adapt the dynamics values or import the expressive MIDI data in a digital audio workstation where both the MIDI data and the sound generators may be further edited. Regarding the numerical limits of MIDI velocity, the interplay of macro and micro dynamics features may, nonetheless, sometimes go beyond these limits (i.e. below 0 or above 127). The rendering engine will detect these situations and scale down the dynamics range, accordingly. The result should suffice for most cases. Alternatively the dynamics values should be adapted.</tei:p>
+                
+                <tei:div type="chapter">
+                    <tei:head>Macro Dynamics</tei:head>
+                    
+                    <tei:p>MPM's macro dynamics defines the basic dynamics curve, including discrete changes (terraced dynamics) and continuous transitions (crescendo, decrescendo). These are defined in the <tei:gi>dated</tei:gi> environment's <tei:gi>dynamicsMap</tei:gi>. The following code snippet shows a <tei:gi>dynamicsMap</tei:gi> with three <tei:gi>dynamics</tei:gi> instructions. It starts with a volume level of 80.0. At date 14400.0 we see a terraced dynamics change from 80.0 to 50.0. However, this second dynamics instruction does not remain constant as it actually defines a crescendo from 50.0 to 115.0 starting at date 14400.0 and ending right before the subsequent dynamics instruction at date 164520.0. That third dynamics instruction defines a constant dynamics level of 80.0, just as the first instruction did. Hence, we have a crescendo followed by "subito 80.0".</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <dynamicsMap>
+                            <dynamics date="0.0" volume="80.0"/>
+                            <dynamics date="14400.0" volume="50.0" transition.to="115.0" curvature="0.3" protraction="0.5" subNoteDynamics="true"/>
+                            <dynamics date="164520.0" volume="80.0"/>
+                        </dynamicsMap>
+                    </egXML>
+                    
+                    <tei:p>Each continuous dynamics transition should be followed by another dynamics instruction (continuous or constant) as it provides the end date of the transition. Otherwise the transition would stretch to infinity. The second dynamics instruction sets the optional attribute <tei:att>subNoteDynamics</tei:att> true (default value is false) which expresses that the dynamics transition is performed not only in a note-wise fashion but also within each tone. This feature may not be applicable to, e.g., struck instruments such as piano and harp. Other instruments, however, have the possibility to modulate the dynamics of a held tone, such as the human voice, wind and string instruments.</tei:p> 
+                    
+                    <tei:p>The shape of continuous dynamics transitions can be further refined by attributes <tei:att>curvature</tei:att> and <tei:att>protraction</tei:att>. Attribute <tei:att>curvature</tei:att> is defined in the interval [0.0, 1.0] and indicates a distinct sigmoidal (S) shape of the dynamics curve (value &gt; 0.0) or a straight linear transition (value = 0.0). The higher the value the more accentuated is the transition. Attribute <tei:att>protraction</tei:att> is defined in the interval [-1.0, 1.0] and indicates whether the transition comes relatively early (value &lt; 0.0), relatively late (value &gt; 0.0) or is equally shared between first and second half of the interval between <tei:gi>date</tei:gi> and the subsequent dynamics instruction's<tei:gi>date</tei:gi>. The mathematical model to construct dynamics curves translates these attributes into cubic Bézier curves as shown in the following figures.</tei:p>
+                    
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/dynamics.png" height="250px"/>
+                        <tei:head>Continuous dynamics transitions are constructed from cubic Bézier curves (dashed lines are the control polygon). Their shape is specified by attributes <tei:att>curvature</tei:att> and <tei:att>protraction</tei:att>.</tei:head>
+                    </tei:figure>
+                    
+                    <tei:p>Attributes <tei:att>volume</tei:att> and <tei:att>transition.to</tei:att> are not restricted to purely numeric values. It is also possible to use literals such as "pp", "mf", "forte", "as loud as possible". These literals must be associated with a numeric value in the <tei:gi>header</tei:gi>/<tei:gi>dynamicsStyles</tei:gi> environment as shown below.</tei:p>
+                
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <dynamicsStyles>
+                                <styleDef name="Karajan">
+                                    <dynamicsDef name="p" value="30.0"/>
+                                    <dynamicsDef name="f" value="95.0"/>
+                                    <dynamicsDef name="ff" value="122.0"/>
+                                </styleDef>
+                                <styleDef name="Rattle">
+                                    <dynamicsDef name="p" value="26.0"/>
+                                    <dynamicsDef name="f" value="101.0"/>
+                                    <dynamicsDef name="ff" value="125.0"/>
+                                </styleDef>
+                            </dynamicsStyles>
+                        </header>
+                        <dated>
+                            <dynamicsMap>
+                                <style date="0.0" name.ref="Rattle"/>
+                                <dynamics date="0.0" bpm="f" transition.to="p" protraction="0.8"/>
+                                <dynamics date="32000" bpm="p" transition.to="105.0"/>
+                                <dynamics date="47000.0" bpm="ff"/>
+                            </dynamicsMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The third dynamics instruction shows that literals and numeric values can be mixed. The preceding <tei:gi>style</tei:gi> element is mandatory to make clear which dynamics style should be used.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Metrical Accentuation</tei:head>
+                    
+                    <tei:p>Metrical and rhythmical structure often suggest specific accentuation patterns that recur usually measure-wise. They render the distinction between "weak" beats and "strong" beats, the perceptual grouping of pulses according to a metrical and rhythmical structure. Such an accentuation pattern specifies the contour of deviations from the underlying macro dynamics curve. In MPM accentuation patterns are defined in the <tei:gi>header</tei:gi> environment's <tei:gi>metricalAccentuationStyles</tei:gi>. Their application at a specific position in the music takes place in the <tei:gi>dated</tei:gi> environment's <tei:gi>metricalAccentuationMap</tei:gi>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <metricalAccentuationStyles>
+                                <styleDef name="my accentuation patterns">
+                                    <accentuationPatternDef name="quad time" length="4.0">
+                                        <accentuation beat="1" value="1.0" transition.from="0.0" transition.to="0.25"/>
+                                        <accentuation beat="2.5" value="0.5" transition.from="-0.5" transition.to="-1"/>
+                                        <accentuation beat="4" value="0.5" transition.from="0.0" transition.to="1.0"/>
+                                    </accentuationPatternDef>
+                                    <accentuationPatternDef name="triple time" length="3.0">
+                                        <accentuation beat="1.0" value="1.0" transition.from="1.0" transition.to="0.0"/>
+                                        <accentuation beat="2.0" value="0.5" transition.from="0.5" transition.to="-1.0"/>
+                                        <accentuation beat="3.0" value="0.0" transition.from="0.0" transition.to="1.0"/>
+                                    </accentuationPatternDef>
+                                </styleDef>
+                            </metricalAccentuationStyles>
+                        </header>
+                        <dated>
+                            <metricalAccentuationMap>
+                                <style date="0.0" name.ref="my accentuation patterns"/>
+                                <accentuationPattern date="0.0" name.ref="quad time" scale="50.0" loop="true" stickToMeasures="true"/>
+                            </metricalAccentuationMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The above code example defines two accentuation patterns, "quad time" and "triple time" and applies the former in the <tei:gi>metricalAccentuationMap</tei:gi>. Element <tei:gi>accentuationPattern</tei:gi>'s attribute <tei:att>loop</tei:att> indicates that the pattern is repeatedly applied. Attribute <tei:att>stickToMeasures</tei:att> (true by default) sais that the pattern starts anew with each measure, even if the measure is shorter than the pattern's <tei:att>length</tei:att>, and will not loop within the same measure. This behavior can be deactivated by setting <tei:att>stickToMeasures</tei:att> false.</tei:p>
+                    
+                    <tei:p>Of key importance for the interpretation of accentuation patterns is attribute <tei:att>scale</tei:att> because the patterns are defined in the range [-1.0, 1.0] and need to be scaled up to actual dynamics values. In the above example, the actual dynamics range is set to [-50.0, 50.0] by attribute <tei:att>scale</tei:att>. This means that the maximum accentuation (1.0 in the <tei:gi>accentuationPatternDef</tei:gi>/<tei:gi>accentuation</tei:gi>/<tei:att>value</tei:att>) is 50.0 and the maximum restraint (-1.0) is actually -50.0.</tei:p>
+                    
+                    <tei:p>Let us have a closer look at the definition of metrical accentuation patterns in element <tei:gi>accentuationPatternDef</tei:gi>. The element itself defines a <tei:att>name</tei:att> that is refered in the <tei:gi>metricalAccentuationMap</tei:gi> and the <tei:att>length</tei:att> of the pattern in musical beats. Pattern "quad time" is 4.0 beats long and "triple time" 3.0 beats. The length of a beat is defined by the time signature's denominator at the musical position where the pattern is applied. The child elements of <tei:gi>accentuationPatternDef</tei:gi> define each an individual <tei:gi>accentuation</tei:gi>, i.e., a dynamics change (attribute <tei:att>value</tei:att> in [-1.0, 1.0]) at a the specified <tei:att>beat</tei:att> position. If nothing else is given, this accentuation level will also be used for all notes that might occur between this beat and the subsequent accentuation's beat position. Often, however, this should be accentuated different than the beat itself. Therefore, attributes <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att> are used. Here, we have the following options, also illustrated in the figures below.</tei:p>
+                    
+                    <tei:list type="gloss">
+                        <tei:label><tei:att>value</tei:att> is specified, nothing else</tei:label>
+                        <tei:item>The accentuation level will be used for all notes that might occur between this and the next <tei:gi>accentuation</tei:gi> (see subfigure 1).</tei:item>
+                        
+                        <tei:label><tei:att>value</tei:att> and <tei:att>transition.from</tei:att> are specified</tei:label>
+                        <tei:item>For all notes between this and the next <tei:gi>accentuation</tei:gi>, their accentuation levels are set to a constant accentuation level of <tei:att>transition.from</tei:att>. Only the notes that are placed exactly at the <tei:att>beat</tei:att> position are accentuated with <tei:att>value</tei:att> (see subfigure 2).</tei:item>
+                        
+                        <tei:label><tei:att>value</tei:att> and <tei:att>transition.to</tei:att> are specified</tei:label>
+                        <tei:item>For all notes between this and the next <tei:gi>accentuation</tei:gi>, their accentuation levels are linearly interpolated from <tei:att>value</tei:att> to <tei:att>transition.to</tei:att> (see subfigure 3).</tei:item>
+                        
+                        <tei:label><tei:att>value</tei:att>, <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att> are specified</tei:label>
+                        <tei:item>For all notes between this and the next <tei:gi>accentuation</tei:gi>, their accentuation levels are linearly interpolated from <tei:att>transition.from</tei:att> to <tei:att>transition.to</tei:att>. Only the notes that are placed exactly at the <tei:att>beat</tei:att> position are accentuated with <tei:att>value</tei:att> (see subfigure 4).</tei:item>
+                    </tei:list>
+                    
+                    <tei:figure>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation1.png" height="130px"/>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation2.png" height="130px"/>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation3.png" height="130px"/>
+                        <tei:graphic url="https://github.com/axelberndt/MPM/blob/master/figures/metricalAccentuation4.png" height="130px"/>
+                        <tei:head>Some example accentuation patterns with varying combinations of attributes <tei:att>value</tei:att>, <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att>. See the above list for details.</tei:head>
+                    </tei:figure>
+                    
+                    <tei:p>By the way, <tei:att>beat</tei:att> does not have to be integer. Accentuations can also be defined for positions between integer beat positions. And not every beat needs to have an accentuation.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Further Dynamics Features</tei:head>
+                    
+                    <tei:p>The musical dynamics can be further enriched by articulation (see the articulation model) and by non-systematic/quasi-random timing fluctuations via <tei:gi>imprecisionMap.dynamics</tei:gi>. This is described in section "Randomization".</tei:p>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
                 <tei:head>Articulation</tei:head>
-                <tei:list>
-                    <tei:item>Articulations shapes a tone. It can affect all of its facets and may even affect its dynamics and timing.</tei:item>
-                    <tei:item>Articulations are defined by modifiers ...</tei:item>
-                    <tei:item>Reference to the imprecision section</tei:item>
-                </tei:list>
+                <tei:p>An articulation shapes a tone. While the note symbol gives only rough information about how the corresponding tone should be played (pitch and rhythmical indication) articulations provide information about how the tone is shaped in terms of duration, dynamics, timing, and tuning. In contrast to all other performance features in MPM articulations are discrete, i.e. an articulation instruction does not span over a certain time frame. It takes effect only at the symbolic time position where it is positioned in the <tei:gi>articulationMap</tei:gi> and only on those notes that are placed at this same date. An articulation that does not coincide with a note has no effect.</tei:p>
+
+                <tei:div type="chapter">
+                    <tei:head>Note Associtation</tei:head>
+
+                    <tei:p>The <tei:gi>articulationMap</tei:gi>, just as all maps in MPM, is child of the <tei:gi>dated</tei:gi> environment. Let us start with the following incomplete code snippet.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <articulationMap>
+                            <articulation date="0.0"/>
+                            <articulation date="720.0" noteid="#2358d"/>
+                        </articulationMap>
+                    </egXML>
+                    
+                    <tei:p>This map has two articulation instructions. Yet, they do nothing but we will add more information soon. The first articulation affects all notes at symbolic date 0.0. If the map is in the <tei:gi>global</tei:gi> environment, it affects all notes of all parts at this time position. If it is in a <tei:gi>part</tei:gi> environment, then it affects only notes of this particular part. The second instruction uses a further attribute, <tei:att>noteid</tei:att>, to make sure that only one particular note will be affected, even if further notes occur at the same date.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Modifiers</tei:head>
+                    
+                    <tei:p>Articulations are defined by modifiers. These affect the properties of a note-tone mapping. The following list gives an overview of which modifiers MPM currently includes.</tei:p>
+                    
+                    <tei:list type="gloss">
+                        <tei:label><tei:att>absoluteDuration</tei:att></tei:label>
+                        <tei:item>Set the absolute duration of the note (in symbolic time).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDurationChange</tei:att></tei:label>
+                        <tei:item>Change the absolute duration of the note by the specified value (in symbolic time).</tei:item>
+                        
+                        <tei:label><tei:att>relativeDuration</tei:att></tei:label>
+                        <tei:item>Change the duration of the note relatively to its initial value. E.g. a value of 0.5 halves the duration.</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDurationMs</tei:att></tei:label>
+                        <tei:item>Set the absolute duration of the note (in milliseconds).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDurationChangeMs</tei:att></tei:label>
+                        <tei:item>Change the absolute duration of the note by the specified value (in milliseceonds).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDelay</tei:att></tei:label>
+                        <tei:item>Delay the note by the specified value (in symbolic time).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteDelayMs</tei:att></tei:label>
+                        <tei:item>Delay the note by the specified value (in milliseconds).</tei:item>
+                        
+                        <tei:label><tei:att>absoluteVelocity</tei:att></tei:label>
+                        <tei:item>Set the absolute velocity of a note.</tei:item>
+                        
+                        <tei:label><tei:att>relativeVelocity</tei:att></tei:label>
+                        <tei:item>Change the velocity of a note relative to its initial velocity. E.g., a value of 0.5 halves the velocity.</tei:item>
+                        
+                        <tei:label><tei:att>absoluteVelocityChange</tei:att></tei:label>
+                        <tei:item>Change the velocity of a note by the specified amount.</tei:item>
+                        
+                        <tei:label><tei:att>detuneCents</tei:att></tei:label>
+                        <tei:item>Change a note's tuning by the specified amount in cents.</tei:item>
+                        
+                        <tei:label><tei:att>detuneHz</tei:att></tei:label>
+                        <tei:item>Change a note's tuning by the specified amount in Hertz.</tei:item>
+                    </tei:list>
+                    
+                    <tei:p>An <tei:gi>articulation</tei:gi> element can apply any combination of modifiers.</tei:p>
+
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <articulation date="6570.0" relativeDuration="0.4" absoluteDelayMs="14.0" absoluteVelocityChange="-21.0"/>
+                        <articulation date="7850.0" noteid="#note05821" absoluteDurationChangeMs="40.0" detuneCents="-13.0"/>
+                        <articulation date="8765.0" relativeDuration="0.5" absoluteDurationChange="3.0" absoluteDurationChangeMa="-10.0"/>
+                    </egXML>
+
+                    <tei:p>Some of these modifiers affect the same domain and may conflict. Thus it is useful to know the sequence in which the performance rendering engine applies them. The official MPM rendering engine in <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> does the following sequence.</tei:p>
+
+                    <tei:list rend="numbered">
+                        <tei:item>dynamics rendering (see section Dynamics) is done first, except for dynamics randomization</tei:item>
+                        <tei:item><tei:att>absoluteDelay</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDuration</tei:att></tei:item>
+                        <tei:item><tei:att>relativeDuration</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDurationChange</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteVelocity</tei:att></tei:item>
+                        <tei:item><tei:att>relativeVelocity</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteVelocityChange</tei:att></tei:item>
+                        <tei:item>at this point all timing computations are done (see section Timing), except for the randomization</tei:item>
+                        <tei:item><tei:att>absoluteDelayMs</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDurationMs</tei:att></tei:item>
+                        <tei:item><tei:att>absoluteDurationChangeMs</tei:att></tei:item>
+                        <tei:item>the randomizations (see section Randomization) are applied after articulation rendering is completed.</tei:item>
+                    </tei:list>
+                    
+                    <tei:p>The non-milliseconds duration modifiers (3-5) are omitted if <tei:att>absoluteDurationMs</tei:att> is specified as this will overwrite them anyway. The detune modifiers are not yet supported by the official rendering engine, hence, they do not occur in the sequence so far. Randomizations are applied at the end of the performance rendering pipeline. This includes timing, dynamics and duration randomization.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Articulation Styles</tei:head>
+                    
+                    <tei:p>Articulations can be predefined in the <tei:gi>header</tei:gi>/<tei:gi>articulationStyles</tei:gi> environment and invoked by element <tei:gi>articulation</tei:gi> via attribute <tei:att>name.ref</tei:att>. The following example code shows the definition of an articulation style and its application in the <tei:gi>articulationMap</tei:gi>.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <header>
+                            <articulationStyles>
+                                <styleDef name="Peterson">
+                                    <articulationDef name="accent" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="breath" absoluteDurationChangeMs="-400.0" absoluteVelocityChange="-5.0"/>
+                                    <articulationDef name="legatissimo" absoluteDurationChangeMs="250.0"/>
+                                    <articulationDef name="legato" relativeDuration="1.0"/>
+                                    <articulationDef name="legatostop" relativeDuration="0.8" relativeVelocity="0.7"/>
+                                    <articulationDef name="marcato" relativeDuration="0.8" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="nonlegato" relativeDuration="0.95"/>
+                                    <articulationDef name="pizzicato" absoluteDuration="1.0"/>
+                                    <articulationDef name="portato" relativeDuration="0.8"/>
+                                    <articulationDef name="sforzato" absoluteVelocity="127.0" relativeDuration="0.8"/>
+                                    <articulationDef name="snap pizzicato" absoluteDuration="1.0" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="spiccato" absoluteDurationMs="140.0" absoluteVelocityChange="25.0"/>
+                                    <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                                    <articulationDef name="staccatissimo" absoluteDurationMs="140.0" absoluteVelocityChange="5.0"/>
+                                    <articulationDef name="tenuto" relativeDuration="0.9" absoluteVelocityChange="12.0"/>
+                                </styleDef>
+                            </articulationStyles>
+                        </header>
+                        <dated>
+                            <articulationMap>
+                                <style date="0.0" name.ref="Peterson" defaultArticulation="nonlegato"/>
+                                <articulation date="0.0" name.ref="staccato"/>
+                                <articulation date="3450.0" name.ref="legato"/>
+                                <articulation date="3450.0" noteid="#note04706" name.ref="accent"/>
+                                <articulation date="5670.0" name.ref="accent" absoluteDurationMs="155.0"/>
+                                <articulation date="6780.0" name.ref="marcato" relativeDuration="0.75"/>
+                            </articulationMap>
+                        </dated>
+                    </egXML>
+                    
+                    <tei:p>The first <tei:gi>articulation</tei:gi> in the above <tei:gi>articulationMap</tei:gi> sets all notes at date 0.0 "staccato". The second sets all notes at date 3450.0 legato. The third <tei:gi>articulation</tei:gi> adds an "accent" to one particular note at the same date. This shows that articulations can be combined by placing multiple <tei:gi>articulation</tei:gi> elements at the same date. They are then applied to the notes in the same sequence as they occur in the map. The fourth <tei:gi>articulation</tei:gi> applies an accent to all notes at date 5670.0 and additionally changes their milliseconds duration. This way it is possible to add and overwrite properties of a predefined articulation, as done in the fifth <tei:gi>articulation</tei:gi> element.</tei:p>
+                    
+                    <tei:p>Before the articulation names can be used it is necessary to indicate the style to retrieve the corresponding articulation definitions. Therefore, a <tei:gi>style</tei:gi> element must be placed in the <tei:gi>articulationMap</tei:gi> before the first use of predefined articulations. The <tei:gi>style</tei:gi> element in the articulation context features an additional optional attribute <tei:att>defaultArticulation</tei:att>. If it is not specified, all notes that are not affected by an <tei:gi>articulation</tei:gi> remain unaltered. If <tei:att>defaultArticulation</tei:att> is specified (again by referencing to an <tei:gi>articulationDef</tei:gi>'s <tei:att>name</tei:att>), this articulation definition will be applied to all notes that are not affected by an <tei:gi>articulation</tei:gi> element.</tei:p>
+                </tei:div>
             </tei:div>
             
             <tei:div type="chapter">
-                <tei:head>Random Imprecisions</tei:head>
-                <tei:list>
-                    <tei:item>What is humanization?</tei:item>
-                    <tei:item>Domains for applying humanization</tei:item>
-                    <tei:item>Distribution types</tei:item>
-                </tei:list>
+                <tei:head>Randomization</tei:head>
+                
+                <tei:p>Anyone who has ever tried to analyze a musical performance by measuring the audio recording knows that quite a substantial amount of variations in timing, dynamics etc. exhibits a rather unsystematic behavior. This can hardly be emulated by the feature models described so far. On the one hand, this is an interesting indication that can help musical performance researchers to identify new and relevant research questions, investigate these phenomena systematically and develop new models that could be added to MPM. On the other hand, MPM needs to provide a way to recreate these phenomena now, at least in an approximate fashion, for those who simply want to create rich expressive performances for their music production.</tei:p>
+                
+                <tei:p>This is the point where "humanizing" comes into play. In music production so far, humanizers are almost exclusively applied to the timing domain. A humanizer shakes up, i.e. randomizes, the timing of the musical events so they are played less precise. MPM goes further. Randomization can be applied not only to the timing domain but also to dynamics, tone duration and tuning. Moreover, MPM offers a variety of different stochastic models to shape the randomizations in a number of ways. Randomization is the last step in the performance rendering pipeline, added after computing all other features. This also implies that it is a micro feature, i.e. it does not set absolute values but adds deviations.</tei:p>
+                
+                <tei:div type="chapter">
+                    <tei:head>Stochastic Models</tei:head>
+                    
+                    <tei:p>MPM provides the following stochastic models.</tei:p>
+                    
+                    <tei:list type="gloss">
+                        <tei:label>Uniform Distribution</tei:label>
+                        <tei:item>This defines a uniform distribution within the specified limits (inclusive). 
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><distribution.uniform date="0.0" limit.lower="-10.0" limit.upper="10.0"/></egXML></tei:item>
+                        
+                        <tei:label>Gaussian Distribution</tei:label>
+                        <tei:item>This defines a gaussian distribution. Its expectation value is 0.0. Attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att> are used to clip the range of random values.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><distribution.gaussian date="0.0" limit.lower="-10.0" limit.upper="10.0" deviation.standard="3.0"/></egXML></tei:item>
+
+                        <tei:label>Triangular Distribution</tei:label>
+                        <tei:item>This defines a triangular distribution. The lower and upper limit of the triangular distribution are set by attributes <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The peak of the triangular distribution is set by attribute <tei:att>mode</tei:att>. Attribute <tei:att>mode</tei:att> does not have to be perfectly centered between the limits, hence, triangle distribution is well suited to create and approximate skewed distributions. Attributes <tei:att>clip.lower</tei:att> and <tei:att>clip.upper</tei:att> can be used to narrow the output range even further, i.e. values outside the clipping window are set to the closest clipping border.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><distribution.triangular date="0.0" mode="0.0" limit.lower="-1.0" limit.upper="1.0" clip.lower="-0.7" clip.upper="0.6"/></egXML>
+                        </tei:item>
+
+                        <tei:label>Brownian Noise Distribution</tei:label>
+                        <tei:item>This defines a correlated distribution based on Brownian noise. An intuitive explanation of Brownian noise in MPM is the random walk in 1D. Suppose at time position t we have a random value x. The next time position is at t+<tei:att>milliseconds.timingBasis</tei:att>. The value at this position is determined by making a random step starting at x. The step width is delimited by <tei:att>stepWidth.max</tei:att>. Thus, possible values are in the interval [x-<tei:att>stepWidth.max</tei:att>, x+<tei:att>stepWidth.max</tei:att>] and further delimited by <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The fact that the value range at any iteration depends on the values of previous iterations makes this a correlated distribution.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><distribution.correlated.brownianNoise date="0.0" limit.lower="-1.0" limit.upper="1.0" stepWidth.max="400.0" milliseconds.timingBasis="300.0"/></egXML>
+                        </tei:item>
+
+                        <tei:label>Compensating Triangle Distribution</tei:label>
+                        <tei:item>This defines a Compensating Triangle Distribution, a correlated distribution based on triangular distribution. The difference to triangular distribution is that, before computing the next random value, the mode (the triangle's peak) is placed at the position of the last random value. If <tei:att>degreeOfCorrelation</tei:att> = 1.0, the triangle's lower and upper edge are fixed at <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The greater <tei:att>degreeOfCorrelation</tei:att>, the narrower is the triangle while wandering around between the limits. This stochastic model has been developed to simulate a specific phenomenon, especially relevant to timing imprecision in ensemble play: If a musician is far off, the probability increases that he/she notices it and tries to synchronize again. This implies an unsymmetrical distribution function that Brownian noise does not have. With Brownian noise the musician can be far off for quite a long time as if he/she does not listen to the rest of the ensemble.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><distribution.correlated.compensatingTriangle date="0.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" degreeOfCorrelation="4.0" milliseconds.timingBasis="300.0"/></egXML>
+                        </tei:item>
+
+                        <tei:label>Distribution List</tei:label>
+                        <tei:item>Distribution lists are deterministic alternatives to stochastic distributions. A distribution list defines a list of static values which are used instead of a random number series. A typical scenario for the usage of a distribution list is the following. During timing analysis of a music recording we already created a global <tei:gi>tempoMap</tei:gi> and a local <tei:gi>rubatoMap</tei:gi> for a musician. But there are still timing offsets left that we cannot explain systematically. We put these offsets into a distribution list for further analysis and to reproduce them during performance rendering. It is important to set the timing basis as fine as necessary as these lists can become very long.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <distribution.list date="0.0" milliseconds.timingBasis="300.0">
+                                    <measurement value="2.7"/>
+                                    <measurement value="6.67"/>
+                                    <measurement value="10.45"/>
+                                    <measurement value="-7.13"/>
+                                    <measurement value="3.2"/>
+                                    <measurement value="-2.63"/>
+                                    <measurement value="-8.4"/>
+                                    <measurement value="6.0"/>
+                                    <!-- ... -->
+                                </distribution.list>
+                            </egXML>
+                        </tei:item>
+                    </tei:list>
+                    
+                    <tei:p>Attribute <tei:att>milliseconds.timingBasis</tei:att> (used by <tei:gi>distribution.correlated.brownianNoise</tei:gi>, <tei:gi>distribution.correlated.compensatingTriangle</tei:gi> and <tei:gi>distribution.list</tei:gi>) can be understood as the rate in milliseconds at which new random values are generated. Except for the distribution list model, all other models support seeding by specifying attribute <tei:att>seed</tei:att>. It allows the user to set the seed value for the random distributions. Initialized with this seed, a random number generator generates always the same series of "random" numbers. Thus, by using the <tei:att>seed</tei:att> attribute the imprecisions become reproducible.</tei:p>
+                </tei:div>
+                
+                <tei:div type="chapter">
+                    <tei:head>Application Example: Building a Basic Humanizer</tei:head>
+                    
+                    <tei:p>Let us build a <tei:gi>performance</tei:gi> that can be used to add humanizing/randomization to any music it is applied to. Since it is not made for a particular piece of music we do not know how many parts it has. The randomizations should apply to all parts anyway, thus, we place them in the <tei:gi>global</tei:gi> environment, the <tei:gi>part</tei:gi> elements are not needed in this example. Randomizations are organized in so-called imprecision maps, i.e. chronologically sorted lists of imprecision instructions. Hence, they are children of the <tei:gi>dated</tei:gi> environment. Four types of imprecision maps do exist, <tei:gi>imprecisionMap.timing</tei:gi>, <tei:gi>imprecisionMap.dynamics</tei:gi>, <tei:gi>imprecisionMap.toneduration</tei:gi>, <tei:gi>imprecisionMap.tuning</tei:gi>. The latter is not yet supported by the official performance rendering engine in <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref>, so we leave it out. Any of the above distribution elements can be placed in the imprecision maps.</tei:p>
+                    
+                    <tei:p>For timing we highly recommend using a correlated distribution type because uncorrelated deviations tend to produce implausible rhythmic stumbling. In this example we use <tei:gi>distribution.correlated.compensatingTriangle</tei:gi> as it best imitates the behavior described above. Attribute <tei:att>milliseconds.timingBasis</tei:att> is set to 300.0 milliseconds. This is approximately the timeframe a human needs to adapt his/her motor program to a stimulus such as "I am off". We allow them to be off by up to +/-80 milliseconds.</tei:p>
+                    
+                    <tei:p>For dynamics we use an uncorrelated distribution in this example because we regard each tone being a new independent effort of force. The stroke velocity of a key on the piano, a string on the guitar, or the blowing pressure of a wind instrument, all these may, for the sake of this example, be regarded as independent of the preceding tones. Be aware that this is not a general statement. We use a Gaussian distribution with a standard deviation of 7.5 dynamics units (here MIDI velocity) and limit the range of random dynamics deviations by +/-50.0. This means that we allow the virtual musicians to play the tones up to 50.0 (MIDI velocity) units softer or louder than the perfect dynamics.</tei:p>
+                    
+                    <tei:p>Imprecision in the tone duration domain may also be regarded as uncorrelated. Intuitively speaking, the fact that a musician played the previous tone too short or too long has no influence on the duration of the next tone. For demonstration purposes and as we want to construct a skewed distribution here, we use a triangular distribution. Let us say that we have no polyphonic instruments (piano, organ, guitar etc.) in the music and that the tones of an instrument are not allowed to overlap. Hence, we exclude duration increases, only decreases are allowed. Therefore, we set attribute <tei:att>limit.upper</tei:att> to 0.0 milliseconds and <tei:att>limit.lower</tei:att> to -30.0 milliseconds. To make sure that the perfect duration has, nonetheless, highest probability we set the <tei:att>mode</tei:att> (peak of the triangle) to 0.0 milliseconds.</tei:p>
+                    
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <performance name="humanizer" pulsesPerQuarter="720">
+                            <global>
+                                <header/>
+                                <dated>
+                                    <imprecisionMap.timing>
+                                        <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/>
+                                    </imprecisionMap.timing>
+                                    <imprecisionMap.dynamics>
+                                        <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/>
+                                    </imprecisionMap.dynamics>
+                                    <imprecisionMap.toneduration>
+                                        <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0"/>
+                                    </imprecisionMap.toneduration>
+                                </dated>
+                            </global>
+                        </performance>
+                    </egXML>
+                    
+                    <tei:p>Applying this <tei:gi>performance</tei:gi> to a piece of music (the easiest way is to use the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> app) will add the above randomizations to all musical parts. These imprecision maps may also be added to other performances. When working on a performance for a particular piece of music it is advisable to have a closer look into the parts and create part-specific imprecision maps. If a musical section is very difficult to play, why not increasing the variance of the corresponding distribution during this section? Or do you want to simulate an ensemble with an inattentive flute player? Then let this flute player perform less precise than the rest of the ensemble. You can contrast an ensemble of professionals that play well together and a less experienced amateur ensemble.</tei:p>
+                    </tei:div>
             </tei:div>
         </tei:body>
         

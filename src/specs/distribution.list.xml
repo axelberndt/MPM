@@ -21,7 +21,7 @@
         <tei:p>This example shows a distribution list that captures dynamics fluctuations.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <imprecisionMap.dynamics>
-                <distribution.list date="0.0" timingBasis.milliseconds="300.0">
+                <distribution.list date="0.0" milliseconds.timingBasis="300.0">
                     <measurement value="2.7"/>
                     <measurement value="6.67"/>
                     <measurement value="10.45"/>

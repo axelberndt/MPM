@@ -6,7 +6,7 @@
     xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>rubato definition</tei:gloss>
     
-    <tei:desc>A rubato definition associates a literal rubato instruction with a rubato scheme. Rubato in MPM is defined as a metronomic tempo variation, i.e. it compensates within a certain frame of symbolic time so that the end of the frame is synchronous again with the underlying meter.</tei:desc>
+    <tei:desc>A rubato definition associates a literal rubato instruction with a rubato schema. Rubato in MPM is defined as a metronomic tempo variation, i.e. it compensates within a certain frame of symbolic time so that the end of the frame is synchronous again with the underlying meter.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="att.name"/>
