@@ -144,7 +144,9 @@
                 <tei:div type="section">
                     <tei:head>Timing Concept</tei:head>
 
-                    <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 time. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. This measure is independent of tempo, i.e. the duration and timing values stay the same regardless of the tempo of the music. Even if the music plays twice as fast, a quarter note has 720 ticks, only the clock ticks faster. If we place an articulation on a note at tick position 54320, it will be that same position even if another tempo is set. Later, in the timing section, we will see how this translates to milliseconds.</tei:p>
+                    <tei:p>Each <tei:gi>performance</tei:gi> must specify attribute <tei:att>pulsesPerQuarter</tei:att>. This defines the numeric timing basis used throughout the performance. MPM's timing model is equivalent to that used in the MIDI standard and in many DAWs. Instead of measure, beat and subbeat numbers MPM uses a metronomic clock to indicate musical time positions and durations. The attribute says how often the clock ticks in one quarter note. In this example it is 720 times. A half note corresponds with 1440 ticks, an eighth note with 360 and so on. The tick position (symbolic date) of the second measure in a 4/4 time signature is 720 * 4 = 2880. The symbolic date of the second quarter in the third measure is (720 * 4 * 2) + 720 = 6480.</tei:p>  
+                        
+                    <tei:p>This symbolic representation of time is independent of tempo, i.e. the symbolic dates and durations stay the same regardless of the tempo of the music. Even if the music plays twice as fast, a quarter note has 720 ticks. This is because, a tempo instruction makes the internal clock tick faster or slower. If we place an articulation on a note at symbolic date 54320, it will always be that same position even if another tempo is set. Since we want this "positional stability" for all our performance instructions, all time-related attributes, such as <tei:att>date</tei:att>, <tei:att>frameLength</tei:att> and <tei:att>absoluteDuration</tei:att>, are symbolic. Attributes with physical time values have "milliseconds" or "Ms" in their name, e.g. <tei:att>absoluteDurationMs</tei:att>, <tei:att>milliseconds.timingBasis</tei:att> and <tei:att> milliseconds.offset</tei:att>. Later, in the timing section, we will see how symbolic time values translate to milliseconds.</tei:p>
                     
                     <tei:p>Typical <tei:att>pulsesPerQuarter</tei:att> values are 360, 480 and 720. Why this? Now, in MPM time positions (dates) and durations can be floating point numbers which provide very high precision, but in MIDI they are integers. If a quarter note would have just 1 tick, it would be impossible to express eighth notes or sexteenth notes etc. The same with dotted note values. In the MIDI world the granularity of the timing grid must provide integer representation of such smaller subdivisions and even odd subdivisions such as triplets and quintuplets. It is not really necessary to follow this convention in the MPM world and the API implementation in meico can even handle differing <tei:att>pulsesPerQuarter</tei:att> values in the logical source and MPM. But it makes editing easier and prevents numeric problems when the dates and durations align.</tei:p>
                 </tei:div>
@@ -152,7 +154,7 @@
                 <tei:div type="section">
                     <tei:head>Scopes</tei:head>
                     
-                    <tei:p>All information of a <tei:gi>performance</tei:gi> are organizes along two categorizations that define the scope of the information.</tei:p>
+                    <tei:p>All information of a <tei:gi>performance</tei:gi> are organized along two categorizations that define the scope of the information.</tei:p>
                     
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <performance name="a performance" pulsesPerQuarter="720">
@@ -213,7 +215,7 @@
                             <tempoMap>
                                 <style date="0.0" name.ref="Rattle"/>
                                 <tempo date="0.0" bpm="Allegro" beatLength="0.25"/>
-                                <tempo date="47000.0" bpm="Adagio" beatLength="0.5"/>
+                                <tempo date="12340.0" bpm="Adagio" beatLength="0.5"/>
                             </tempoMap>
                         </dated>
                     </egXML>
@@ -241,7 +243,7 @@
                     <tei:p>This is a value between 0.0 and 1.0 indicating a relative position between start date and end date of the tempo transition. This is the position where half of the tempo change is done. Placing it in the first half (between 0.0 and 0.5) will shift the bulk part of the tempo change at the beginning (the performers get sooner faster/slower), vice versa for the second half (between 0.5 and 1.0, performers get later faster/slower). Value 0.5 will create a perfectly linear tempo transition that typically sounds rather neutral or mechanic.</tei:p>
                     
                     <tei:figure>
-                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/tempoCurves.png" height="420px"/>
+                        <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/tempoCurves.PNG" height="420px"/>
                         <tei:head>Tempo curves are constructed from power functions in the interval [0.0, 1.0]. The shape is specified via <tei:att>meanTempoAt</tei:att>.</tei:head>
                     </tei:figure>
                 </tei:div>
@@ -514,7 +516,7 @@
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <articulation date="6570.0" relativeDuration="0.4" absoluteDelayMs="14.0" absoluteVelocityChange="-21.0"/>
                         <articulation date="7850.0" noteid="#note05821" absoluteDurationChangeMs="40.0" detuneCents="-13.0"/>
-                        <articulation date="8765.0" relativeDuration="0.5" absoluteDurationChange="3.0" absoluteDurationChangeMa="-10.0"/>
+                        <articulation date="8765.0" relativeDuration="0.5" absoluteDurationChange="3.0" absoluteDurationChangeMs="-10.0"/>
                     </egXML>
 
                     <tei:p>Some of these modifiers affect the same domain and may conflict. Thus it is useful to know the sequence in which the performance rendering engine applies them. The official MPM rendering engine in <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> does the following sequence.</tei:p>
@@ -615,7 +617,7 @@
                         </tei:item>
 
                         <tei:label>Compensating Triangle Distribution</tei:label>
-                        <tei:item>This defines a Compensating Triangle Distribution, a correlated distribution based on triangular distribution. The difference to triangular distribution is that, before computing the next random value, the mode (the triangle's peak) is placed at the position of the last random value. If <tei:att>degreeOfCorrelation</tei:att> = 1.0, the triangle's lower and upper edge are fixed at <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The greater <tei:att>degreeOfCorrelation</tei:att>, the narrower is the triangle while wandering around between the limits. This stochastic model has been developed to simulate a specific phenomenon, especially relevant to timing imprecision in ensemble play: If a musician is far off, the probability increases that he/she notices it and tries to synchronize again. This implies an unsymmetrical distribution function that Brownian noise does not have. With Brownian noise the musician can be far off for quite a long time as if he/she does not listen to the rest of the ensemble.
+                        <tei:item>This defines a Compensating Triangle Distribution, a correlated distribution based on triangular distribution. The difference to triangular distribution is that, before computing the next value in the random number series, the mode (the triangle's peak) is placed at the position of the last random value. If <tei:att>degreeOfCorrelation</tei:att> = 1.0, the triangle's lower and upper edge are fixed at <tei:att>limit.lower</tei:att> and <tei:att>limit.upper</tei:att>. The greater <tei:att>degreeOfCorrelation</tei:att>, the narrower is the triangle while wandering around between the limits. This stochastic model has been developed to simulate a specific phenomenon, especially relevant to timing imprecision in ensemble play: If a musician is far off, the probability increases that he/she notices it and tries to synchronize again. This implies an unsymmetrical distribution function that Brownian noise does not have. With Brownian noise the musician can be far off for quite a long time as if he/she does not listen to the rest of the ensemble.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><distribution.correlated.compensatingTriangle date="0.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" degreeOfCorrelation="4.0" milliseconds.timingBasis="300.0"/></egXML>
                         </tei:item>
 
