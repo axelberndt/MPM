@@ -18,7 +18,7 @@ There are several ways to contribute to MPM's development:
 The encoding guidelines and schema documentation are certainly not perfect or final. If you find anything unclear, insufficient, or have suggestions for improvement, please let us know and post them on the GitHub [Issues](https://github.com/axelberndt/MPM/issues) page so we can discuss them and see how best we can integrate them. We are also looking for tutorials. If you have one, let us know so we can link it or host it on the repository.
 
 
-## Contribute to the Sample Encodings
+## Contributing to the Sample Encodings
 
 The major role of the sample encodings is to complement the encoding guidelines. The sample encodings demonstrate the capabilities of MPM. Users can consult them to see what the XML looks like and how certain features are applied. Hence, they have to validate against the latest official MPM schema. Each MPM must be accompanied by at least one MEI, MSM or MIDI file to which it is meant to be applied so that all users can reproduce the performance by use of the official performance renderer in [meico](https://github.com/cemfi/meico).
 
