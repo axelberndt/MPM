@@ -2,6 +2,17 @@
 <?xml-model href="../src/out/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../src/out/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <metadata>
+        <author>Axel Berndt</author>
+        <author>Max Mustermann</author>
+        <comment>
+            dikvbwiehvg  ergbvieuprbger gtergrwth
+            wsrthwr
+            th
+            wrt sfgnsrtjn  rthwrthrth 2309vg ergt
+            wrthwrthwrthwrth
+        </comment>
+    </metadata>
     <performance name="a performance" pulsesPerQuarter="720">
         <global>
             <header>

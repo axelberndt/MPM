@@ -10,6 +10,7 @@
     
     <tei:content>
         <relaxng:interleave>
+            <tei:elementRef key="metadata" minOccurs="0" maxOccurs="1"/>
             <tei:elementRef key="relatedResources" minOccurs="0" maxOccurs="1"/>
             <tei:elementRef key="performance" minOccurs="1" maxOccurs="unbounded"/>
         </relaxng:interleave>
