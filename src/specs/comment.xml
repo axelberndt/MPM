@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="comment" module="mpm.metadata" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>textual comment</tei:gloss>
+    
+    <tei:desc>A textual comment.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+
+    <tei:content>
+        <tei:textNode/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <comment>
+                This comment comments on the music performance at hand ...
+            </comment>
+        </egXML>
+    </tei:exemplum>
+
+    <tei:remarks>
+        <tei:p>...</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

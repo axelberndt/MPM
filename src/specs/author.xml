@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="author" module="mpm.metadata" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>author</tei:gloss>
+    
+    <tei:desc>The author of the present encoding.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.number"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+
+    <tei:content>
+        <tei:textNode/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="number" mode="change" usage="opt"/>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>The following list of authors uses the optional attribute <tei:att>number</tei:att> to indicate the primary and secondary author.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <author number="1">Jane Doe</author>
+            <author number="2">John Smith</author>
+        </egXML>
+    </tei:exemplum>
+
+    <tei:remarks>
+        <tei:p>If the encoding is a joint effort of multiple authors, attribute <tei:att>number</tei:att> can be used to indicate hierarchy. The <tei:att>number</tei:att> can instead also be used to associate authors with performances.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

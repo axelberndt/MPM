@@ -4,7 +4,7 @@
 <tei:elementSpec ident="relatedResources" module="mpm.resources" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>related resources</tei:gloss>
     
-    <tei:desc>This element can be used to proved references to related resources of (musical) data.</tei:desc>
+    <tei:desc>This element can be used to provide references to related resources of (musical) data.</tei:desc>
     
     <tei:content>
         <tei:elementRef key="resource" minOccurs="1" maxOccurs="unbounded"/>

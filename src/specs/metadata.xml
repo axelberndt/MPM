@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="metadata" module="mpm.metadata" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>metadata</tei:gloss>
+    
+    <tei:desc>This element can be used to provide contextual information about the encoding in this MPM file.</tei:desc>
+    
+    <tei:content>
+        <tei:alternate minOccurs="1" maxOccurs="unbounded">
+            <tei:elementRef key="author"/>
+            <tei:elementRef key="comment"/>
+        </tei:alternate>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <metadata>
+                <author number="1">Jane Doe</author>
+                <comment>The first performance, authored by author no. 1, is based on a violin treatise from 1678.</comment>
+                <author number="2">John Smith</author>
+                <comment>Author no. 2 made the second performance on the basis of a tape recording by famous pianist Clare Clear.</comment>
+            </metadata>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:moduleSpec ident="mpm.metadata" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>MPM metadata module</tei:gloss>
+    <tei:desc>All of MPM's metadata-related elements, attributes, macros, and classes.</tei:desc>
+</tei:moduleSpec>
