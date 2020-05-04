@@ -92,7 +92,7 @@
             </tei:datatype>
             <tei:defaultVal>false</tei:defaultVal>
             <tei:remarks>
-                <tei:p>If the value is false (default), dynamics applies only to note onsets, the remainder of the note keeps that volume. If true, the volume of the held tone modulates.</tei:p>
+                <tei:p>If the value is false (default), dynamics applies only to note onsets, the remainder of the note keeps that volume. If true, the volume of the held tone modulates. Be aware that metrical accentuation and articulation add on top of dynamics, this means that a continuous crescendo or decrescendo (even with sub-note dynamics) are not necessarily smooth as far as they incorporate fluctuations originating from these domains.</tei:p>
             </tei:remarks>
         </tei:attDef>
     </tei:attList>

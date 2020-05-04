@@ -18,10 +18,10 @@
     <tei:exemplum>
         <tei:p>With the following <tei:gi>asynchronyMap</tei:gi> the musical part starts with a delay of 100 milliseconds. Later the offset changes to -50 milliseconds, i.e. the part comes 50 milliseconds early.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <asnchronyMap>
+            <asynchronyMap>
                 <asynchrony date="0.0" milliseconds.offset="100.0"/>
                 <asynchrony date="34650.0" milliseconds.offset="-50.0"/>
-            </asnchronyMap>
+            </asynchronyMap>
         </egXML>
     </tei:exemplum>
     
