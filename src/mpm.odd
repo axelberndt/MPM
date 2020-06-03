@@ -480,7 +480,7 @@
                 <tei:p>An articulation shapes a tone. While the note symbol gives only rough information about how the corresponding tone should be played (pitch and rhythmical indication) articulations provide information about how the tone is shaped in terms of duration, dynamics, timing, and tuning. In contrast to all other performance features in MPM articulations are discrete, i.e. an articulation instruction does not span over a certain time frame. It takes effect only at the symbolic time position where it is positioned in the <tei:gi>articulationMap</tei:gi> and only on those notes that are placed at this same date. An articulation that does not coincide with a note has no effect.</tei:p>
 
                 <tei:div type="chapter">
-                    <tei:head>Note Associtation</tei:head>
+                    <tei:head>Note Association</tei:head>
 
                     <tei:p>The <tei:gi>articulationMap</tei:gi>, just as all maps in MPM, is child of the <tei:gi>dated</tei:gi> environment. Let us start with the following incomplete code snippet.</tei:p>
                     

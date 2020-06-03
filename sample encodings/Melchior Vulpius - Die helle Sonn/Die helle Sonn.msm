@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<msm title="Die helle Sonn' leucht' jetzt herfuer" xml:id="471ddcba-3db2-4a16-b535-2fe6de6db97d" pulsesPerQuarter="480">
+    <global>
+        <header/>
+        <dated>
+            <timeSignatureMap>
+                <timeSignature date="0.0" numerator="3.0" denominator="2"/>
+                <timeSignature date="5760.0" numerator="6.0" denominator="4"/>
+            </timeSignatureMap>
+            <keySignatureMap>
+                <keySignature date="0.0">
+                    <accidental midi.pitch="11.0" pitchname="B" value="-1.0"/>
+                </keySignature>
+            </keySignatureMap>
+        </dated>
+    </global>
+    <part name="Soprano" number="0" midi.channel="0" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="960.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="1920.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="2400.0" midi.pitch="70.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="2880.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="1460.0"/>
+                <note date="4320.0" midi.pitch="77.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="4800.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="5280.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="5760.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="7200.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="7680.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="8160.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="480.0"/>
+                <note date="8640.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="9600.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="10080.0" midi.pitch="77.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="11040.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="11520.0" midi.pitch="77.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="12960.0" midi.pitch="77.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="13440.0" midi.pitch="77.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="13920.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="14400.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="960.0"/>
+                <note date="15360.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="15840.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="16800.0" midi.pitch="70.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="17280.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="18720.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="19200.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="19680.0" midi.pitch="70.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="20160.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="21120.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="21600.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="22560.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="23040.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="2880.0"/>
+            </score>
+            <programChangeMap>
+                <!-- oboe -->
+                <programChange date="0.0" value="68"/>
+            </programChangeMap>
+        </dated>
+    </part>
+    <part name="Alto" number="1" midi.channel="1" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="960.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="1920.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="2400.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="2880.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="3840.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="4320.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="5280.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="480.0"/>
+                <note date="5760.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="7200.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="7680.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="8160.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="8640.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="960.0"/>
+                <note date="9600.0" midi.pitch="70.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="10080.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="11040.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="11520.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="12960.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="13440.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="13920.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="14400.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="15360.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="15840.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="16800.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="17280.0" midi.pitch="66.0" pitchname="G" accidentals="-1.0" duration="960.0"/>
+                <note date="18720.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="19200.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="19680.0" midi.pitch="70.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="20160.0" midi.pitch="72.0" pitchname="C" accidentals="0.0" duration="1460.0"/>
+                <note date="21600.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="22080.0" midi.pitch="70.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="22560.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="23040.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="2880.0"/>
+            </score>
+            <programChangeMap>
+                <!-- violin -->
+                <programChange date="0.0" value="40"/>
+            </programChangeMap>
+        </dated>
+    </part>
+    <part name="Tenor" number="2" midi.channel="2" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="960.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="1920.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="2400.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="2880.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="3360.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="260.0"/>
+                <note date="3600.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="260.0"/>
+                <note date="3840.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="4320.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="4800.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="5280.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="5760.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="960.0"/>
+                <note date="7200.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="7680.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="8160.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="8640.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="960.0"/>
+                <note date="9600.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="10080.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="11040.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="11520.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="960.0"/>
+                <note date="12960.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="13440.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="13920.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="14400.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="15360.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="480.0"/>
+                <note date="15840.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="16800.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="17280.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="960.0"/>
+                <note date="18720.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="19200.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="19680.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="20160.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1460.0"/>
+                <note date="21600.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="22080.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="22560.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="23040.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="2880.0"/>
+            </score>
+            <programChangeMap>
+                <!-- viola -->
+                <programChange date="0.0" value="41"/>
+            </programChangeMap>
+        </dated>
+    </part>
+    <part name="Bass" number="3" midi.channel="3" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="960.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="1920.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="480.0"/>
+                <note date="2400.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="2880.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="260.0"/>
+                <note date="3120.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="260.0"/>
+                <note date="3360.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="260.0"/>
+                <note date="3600.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="260.0"/>
+                <note date="3840.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="4320.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="4800.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="5280.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="5760.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="7200.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="7680.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="8160.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="8640.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="960.0"/>
+                <note date="9600.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="10080.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="960.0"/>
+                <note date="11040.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="11520.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="12960.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="13440.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="13920.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="14400.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="960.0"/>
+                <note date="15360.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="480.0"/>
+                <note date="15840.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="960.0"/>
+                <note date="16800.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="17280.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="960.0"/>
+                <note date="18720.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="19200.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="19680.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0"/>
+                <note date="20160.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="760.0"/>
+                <note date="20880.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="260.0"/>
+                <note date="21120.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="21600.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="480.0"/>
+                <note date="22080.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="480.0"/>
+                <note date="22560.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="480.0"/>
+                <note date="23040.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="2880.0"/>
+            </score>
+            <programChangeMap>
+                <!-- bassoon -->
+                <programChange date="0.0" value="70"/>
+            </programChangeMap>
+        </dated>
+    </part>
+</msm>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msm title="Grave" xml:id="758a9044-b529-4024-aa9a-fc6ddfd23a8b" pulsesPerQuarter="720">
+    <global>
+        <header/>
+        <dated>
+            <timeSignatureMap>
+                <timeSignature date="0.0" numerator="3.0" denominator="2"/>
+            </timeSignatureMap>
+        </dated>
+    </global>
+    
+    <part name="Violino Primo" number="0" midi.channel="0" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="0.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="1440.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="2880.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="4320.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="7200.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="8640.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="10080.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="10800.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="11520.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="12240.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="12960.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="2160.0" velocity="100.0"/>
+                <note date="15120.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="15840.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="17280.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="20160.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="23040.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="25920.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="28800.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="31680.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="33120.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="36000.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="36720.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="37440.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="38160.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="38880.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="41760.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="43200.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="44640.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="47520.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="4320.0" velocity="100.0"/>
+                <note date="51840.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="53280.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="54000.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="54720.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="55440.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="56160.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="61920.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="62640.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="63360.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="64080.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="64800.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="66240.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="66960.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="67680.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="68400.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="69120.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="70560.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="71280.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="72000.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="72720.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="73440.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="74880.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="76320.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="79200.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="2160.0" velocity="100.0"/>
+                <note date="81360.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="82080.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="87840.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="88560.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="89280.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="90000.0" midi.pitch="81.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="90720.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="96480.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="97200.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="97920.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="98640.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="99360.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="102240.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="105120.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="106560.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="109440.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="110880.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="113760.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="114480.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="115200.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="116640.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="118080.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="2160.0" velocity="100.0"/>
+                <note date="120240.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="120960.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="122400.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="123120.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="123840.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="124560.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="125280.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="126720.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="127440.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="128160.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="128880.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="129600.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="131040.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="131760.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="132480.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="133200.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="133920.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="135360.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="136800.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="138240.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="139680.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="2160.0" velocity="100.0"/>
+                <note date="141840.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="142560.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="4320.0" velocity="100.0"/>
+            </score>
+            
+            <programChangeMap>
+                <!-- Violin -->
+                <programChange date="0.0" value="40"/>
+            </programChangeMap>
+        </dated>
+    </part>
+    
+    <part name="Violino Secondo" number="1" midi.channel="1" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="12960.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="14400.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="15840.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="17280.0" midi.pitch="65.0" pitchname="F" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="20160.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="21600.0" midi.pitch="68.0" pitchname="G" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="23040.0" midi.pitch="68.0" pitchname="G" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="23760.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="24480.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="25200.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="25920.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="27360.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="28800.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="30240.0" midi.pitch="68.0" pitchname="G" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="33120.0" midi.pitch="68.0" pitchname="G" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="34560.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="36000.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="38880.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="41760.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="44640.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="47520.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="48960.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="49680.0" midi.pitch="68.0" pitchname="G" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="50400.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="51120.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="51840.0" midi.pitch="68.0" pitchname="G" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="56160.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="57600.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="58320.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="59040.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="59760.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="60480.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="63360.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="66240.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="67680.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="70560.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="72000.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="74880.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="75600.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="76320.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="77760.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="79200.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="2160.0" velocity="100.0"/>
+                <note date="81360.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="82080.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="83520.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="84960.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="87840.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="4320.0" velocity="100.0"/>
+                <note date="92160.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="93600.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="96480.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="99360.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="100800.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="101520.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="102240.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="102960.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="103680.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="105120.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="105840.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="106560.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="107280.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="108000.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="109440.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="110160.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="110880.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="111600.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="112320.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="113760.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="115200.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="116640.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="118080.0" midi.pitch="70.0" pitchname="A" accidentals="1.0" duration="2160.0" velocity="100.0"/>
+                <note date="120240.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="120960.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="123840.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="126720.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="128160.0" midi.pitch="78.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="131040.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="132480.0" midi.pitch="76.0" pitchname="E" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="135360.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="136080.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="136800.0" midi.pitch="74.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="138240.0" midi.pitch="79.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="139680.0" midi.pitch="73.0" pitchname="C" accidentals="1.0" duration="2160.0" velocity="100.0"/>
+                <note date="141840.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="142560.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="4320.0" velocity="100.0"/>
+            </score>
+            
+            <programChangeMap>
+                <!-- Violin -->
+                <programChange date="0.0" value="40"/>
+            </programChangeMap>
+        </dated>
+    </part>
+    
+    <part name="Basso" number="2" midi.channel="2" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="0.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="1440.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="2880.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="4320.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="5760.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="7200.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="8640.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="10080.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="11520.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="12960.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="15840.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="17280.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="20160.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="21600.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="23040.0" midi.pitch="49.0" pitchname="C" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="25920.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="34560.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="36000.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="37440.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="38880.0" midi.pitch="46.0" pitchname="A" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="41760.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="43200.0" midi.pitch="49.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="44640.0" midi.pitch="49.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="45360.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="46080.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="46800.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="47520.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="48960.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="50400.0" midi.pitch="51.0" pitchname="D" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="51840.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="54720.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="56160.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="2880.0" velocity="100.0"/>
+                <note date="59040.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="60480.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="61920.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="62640.0" midi.pitch="61.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="63360.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="64080.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="64800.0" midi.pitch="61.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="66240.0" midi.pitch="61.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="66960.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="67680.0" midi.pitch="61.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="68400.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="69120.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="70560.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="71280.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="72000.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="72720.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="73440.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="4320.0" velocity="100.0"/>
+                <note date="77760.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="79200.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="80640.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="82080.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="83520.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="84240.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="84960.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="85680.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="86400.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="87840.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="89280.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="90720.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="92160.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="92880.0" midi.pitch="49.0" pitchname="C" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="93600.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="94320.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="95040.0" midi.pitch="49.0" pitchname="C" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="96480.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="97920.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="99360.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="100800.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="101520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="102240.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="102960.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="103680.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="105120.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="105840.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="106560.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="107280.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="108000.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="109440.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="110160.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="110880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="111600.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="112320.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="4320.0" velocity="100.0"/>
+                <note date="116640.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="118080.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="119520.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="1440.0" velocity="100.0"/>
+                <note date="120960.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="122400.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="123120.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="123840.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="124560.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="125280.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="126720.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="127440.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="128160.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="128880.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="129600.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="131040.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="131760.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="720.0" velocity="100.0"/>
+                <note date="132480.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="133200.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="720.0" velocity="100.0"/>
+                <note date="133920.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="4320.0" velocity="100.0"/>
+                <note date="138240.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="1440.0" velocity="100.0"/>
+                <note date="139680.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="2880.0" velocity="100.0"/>
+                <note date="142560.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="4320.0" velocity="100.0"/>
+            </score>
+            
+            <programChangeMap>
+                <!-- Violoncello -->
+                <programChange date="0.0" value="42"/>
+            </programChangeMap>
+        </dated>
+    </part>
+</msm>
