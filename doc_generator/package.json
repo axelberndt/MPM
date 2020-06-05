@@ -1,0 +1,20 @@
+{
+  "name": "mpm",
+  "version": "1.0.0",
+  "description": "Music Performance Markup",
+  "author": "Simon Waloschek",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "vue-scrollto": "^2.18.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}
