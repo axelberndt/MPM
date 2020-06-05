@@ -1,0 +1,135 @@
+/* purgecss start ignore */
+/* @import 'tailwindcss/base'; */
+@tailwind base; */
+body {
+    background-color: #F6F7F9;
+    @apply overflow-y-scroll;
+}
+
+.code-example {
+    @apply px-3 py-2 mt-1 mb-2 font-mono bg-gray-100 border border-gray-400 rounded;
+    /* white-space: pre-wrap; */
+    @apply overflow-x-auto;
+}
+
+a.gi {
+    @apply underline;
+    @apply font-semibold;
+}
+
+a.gi::before {
+    content: '<';
+}
+
+a.gi::after {
+    content: '>';
+}
+
+span.att {
+    @apply font-semibold;
+}
+
+span.att::before {
+    content: '@';
+}
+
+.link-icon::after {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJ3LTYgaC02IiB2aWV3Qm94PSIwIDAgNDQ4IDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNNDAwIDMySDQ4QzIxLjQ5IDMyIDAgNTMuNDkgMCA4MHYzNTJjMCAyNi41MSAyMS40OSA0OCA0OCA0OGgzNTJjMjYuNTEgMCA0OC0yMS40OSA0OC00OFY4MGMwLTI2LjUxLTIxLjQ5LTQ4LTQ4LTQ4em0xNiA0MDBjMCA4LjgyMi03LjE3OCAxNi0xNiAxNkg0OGMtOC44MjIgMC0xNi03LjE3OC0xNi0xNlY4MGMwLTguODIyIDcuMTc4LTE2IDE2LTE2aDM1MmM4LjgyMiAwIDE2IDcuMTc4IDE2IDE2djM1MnpNOTkuNTE1IDM3NC44MjhjLTQuNjg2LTQuNjg2LTQuNjg2LTEyLjI4NCAwLTE2Ljk3MWwxOTUuMTUtMTk1LjE1LS43MDctLjcwNy04OS45NTguMzQyYy02LjYyNyAwLTEyLTUuMzczLTEyLTEydi05Ljk5OWMwLTYuNjI4IDUuMzcyLTEyIDEyLTEyTDM0MCAxMjhjNi42MjcgMCAxMiA1LjM3MiAxMiAxMmwtLjM0MyAxMzZjMCA2LjYyNy01LjM3MyAxMi0xMiAxMmgtOS45OTljLTYuNjI3IDAtMTItNS4zNzMtMTItMTJsLjM0Mi04OS45NTgtLjcwNy0uNzA3LTE5NS4xNSAxOTUuMTVjLTQuNjg2IDQuNjg2LTEyLjI4NCA0LjY4Ni0xNi45NzEgMGwtNS42NTctNS42NTd6Ii8+PC9zdmc+');
+    @apply w-6 h-6;
+}
+
+h1 {
+    @apply mt-3 text-3xl font-bold tracking-wide uppercase;
+}
+
+h2 {
+    @apply text-xl font-bold;
+}
+
+.subchapter {
+    @apply mt-4;
+}
+
+ul {
+    @apply mb-3;
+}
+
+p {
+    /*@apply mb-3;*/
+    /* @apply text-justify; */
+    /*@apply .leading-relaxed;*/
+}
+
+.subchapter>.content {
+    /* @apply ml-2; */
+}
+
+.content p,
+.content ul {
+    @apply mb-3;
+    /* @apply text-justify; */
+}
+
+.content ul {
+    @apply ml-8 list-disc list-inside;
+}
+
+.content li {
+    @apply mb-2;
+}
+
+.content p>a {
+    @apply font-semibold text-blue-800 underline;
+}
+
+.figure {
+    @apply self-center;
+    @apply italic font-normal;
+    @apply my-4;
+}
+
+pre {
+    @apply font-normal;
+}
+
+img {
+    @apply italic font-normal;
+    @apply block mx-auto;
+    @apply mb-2;
+}
+
+.label {
+    @apply italic;
+}
+
+/* @screen lg {
+    .subchapter {
+        @apply flex;
+    }
+    .subchapter>h2 {
+        @apply w-1/4;
+    }
+    .subchapter>.content {
+        @apply w-3/4 ml-3;
+    }
+} */
+
+
+/* table tr td {
+    @apply py-1 text-justify;
+} */
+
+table tr:nth-child(odd) {
+    background-color: #00000007;
+}
+
+
+/* @import 'tailwindcss/components'; */
+@tailwind components;
+/* purgecss end ignore */
+/* @import 'tailwindcss/utilities'; */
+@tailwind utilities;
+
+* {
+    transition: 0.2s all;
+}
