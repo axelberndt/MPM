@@ -1,4 +1,6 @@
-language: generic
+language: python
+python:
+  - "3.8"
 
 branches:
   only:
@@ -6,7 +8,8 @@ branches:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y libxml2-utils
+  - sudo apt-get install -y libxml2-utils python3-pip
+  - nvm install 10.15.3
 
 script:
   # Merge single ODD files to one monolithic ODD
@@ -24,12 +27,18 @@ script:
   - curl -s -o mpm_xsd.zip -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/xsd%3Aapplication%3Axml-xsd/conversion
   - unzip -p mpm_xsd.zip document.xsd >mpm.xsd
 
-  # Build docs for GitHub Pages
-  - mkdir -p docs
+  # Get docs for download assets
   - curl -s -o docs.zip -F upload=@mpm-monolithic.odd https://oxgarage-humanum.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/TEI%3Atext%3Axml/xhtml%3Aapplication%3Axhtml%2Bxml/conversion
-  - unzip docs.zip -d docs
-  - mv docs/document.html docs/index.html
-  - sed -i -e 's/href="http:/href="https:/g' docs/index.html
+
+  # Build docs for GitHub Pages
+  - python3 -m pip install setuptools
+  - python3 -m pip install yattag lxml
+  - python3 doc_generator/transformer.py
+  - cd doc_generator
+  - yarn
+  - yarn run generate
+  - cd ..
+  - mv -f doc_generator/dist docs
 
   # Set git tag for release
   - export VERSION=`xmllint --xpath 'string(//*[local-name()="edition"]/@n)' src/mpm.odd`
