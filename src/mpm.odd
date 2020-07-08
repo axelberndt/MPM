@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.0.3"/>
+                <tei:edition n="2.1.0"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -51,6 +51,7 @@
             <tei:change status="2.0.1" who="Axel Berndt">The order of child elements of <tei:gi>mpm</tei:gi> has been removed.</tei:change>
             <tei:change status="2.0.2" who="Axel Berndt">Fix in <tei:gi>accentuationPattern</tei:gi>, removed memberOf with non-existing class att.accentuationPatternDef.</tei:change>
             <tei:change status="2.0.3" who="Axel Berndt">Added package mpm.metadata with elements <tei:gi>metadata</tei:gi>, <tei:gi>author</tei:gi> and <tei:gi>comment</tei:gi>.</tei:change>
+            <tei:change status="2.1.0" who="Axel Berndt">Moved element <tei:gi>relatedResources</tei:gi> to element <tei:gi>metadata</tei:gi>.</tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
     
@@ -105,16 +106,13 @@
                 <tei:div type="chapter">
                     <tei:head>The Basic Structure</tei:head>
                     
-                    <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has three kinds of children, one element <tei:gi>metadata</tei:gi> (optional), one element <tei:gi>relatedResources</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
+                    <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has three kinds of children, one element <tei:gi>metadata</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
                     
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <mpm>
                             <metadata>
                                 ...
                             </metadata>
-                            <relatedResources> 
-                                ... 
-                            </relatedResources>
                             <performance name="a performance" pulsesPerQuarter="720">
                                 ...
                             </performance>
@@ -129,7 +127,7 @@
                 <tei:div type="chapter">
                     <tei:head>Metadata</tei:head>
                     
-                    <tei:p>Element <tei:gi>metadata</tei:gi> is optional. Here authorship can be stated and/or textual comments made.</tei:p>
+                    <tei:p>Element <tei:gi>metadata</tei:gi> is optional. Here authorship can be stated, textual comments made and related resources referred.</tei:p>
                     
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <metadata>
@@ -137,6 +135,9 @@
                             <comment>The first performance, authored by author no. 1, is based on a violin treatise from 1678.</comment>
                             <author number="2">John Smith</author>
                             <comment>Author no. 2 made the second performance on the basis of a tape recording by famous pianist Clare Clear.</comment>
+                            <relatedResources>
+                                ...
+                            </relatedResources>
                         </metadata>
                     </egXML>
                 </tei:div>

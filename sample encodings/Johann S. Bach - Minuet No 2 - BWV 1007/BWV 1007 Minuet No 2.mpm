@@ -5,12 +5,13 @@
     <metadata>
         <author>Pablo Carra</author>
         <comment>This MPM describes a performance of the Minuet No 2 by Johann Sebastian Bach from the first Cello Suite (BWV 1007). Heinrich Schiff's performance was used as inspiration, but this is in no way an attempt at reconstruction.</comment>
+        <relatedResources>
+            <resource uri="BWV 1007 Minuet No 2.mid" type="midi"/>
+            <resource uri="BWV 1007 Minuet No 2.msm" type="msm"/>
+            <resource uri="BWV 1007 Minuet No 2.pdf" type="pdf"/>
+        </relatedResources>
     </metadata>
-    <relatedResources>
-        <resource uri="BWV 1007 Minuet No 2.mid" type="midi"/>
-        <resource uri="BWV 1007 Minuet No 2.msm" type="msm"/>
-        <resource uri="BWV 1007 Minuet No 2.pdf" type="pdf"/>
-    </relatedResources>
+
     <performance name="like Heinrich Schiff" pulsesPerQuarter="480">
         <global>
             <header>

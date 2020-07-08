@@ -2,29 +2,29 @@
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:elementSpec ident="mpm" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>MPM document</tei:gloss>
     
     <tei:desc>The root element of an MPM-conformant document.</tei:desc>
     
     <tei:content>
-        <relaxng:interleave>
-            <tei:elementRef key="metadata" minOccurs="0" maxOccurs="1"/>
-            <tei:elementRef key="relatedResources" minOccurs="0" maxOccurs="1"/>
-            <tei:elementRef key="performance" minOccurs="1" maxOccurs="unbounded"/>
-        </relaxng:interleave>
+        <tei:elementRef key="metadata" minOccurs="0" maxOccurs="1"/>
+        <tei:elementRef key="performance" minOccurs="1" maxOccurs="unbounded"/>
     </tei:content>
     
     <tei:exemplum>
         <tei:p>The basic structure of an MPM document looks like this.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <mpm>
-                <relatedResources>
-                    <resource uri="pathTo/music.mei" type="mei"/>
-                    <resource uri="pathTo/music.msm" type="msm"/>
-                    <!-- further resource references -->
-                </relatedResources>
+                <metadata>
+                    <author>Some One</author>
+                    <comment>comment</comment>
+                    <relatedResources>
+                        <resource uri="pathTo/music.mei" type="mei"/>
+                        <resource uri="pathTo/music.msm" type="msm"/>
+                        <!-- further resource references -->
+                    </relatedResources>
+                </metadata>
                 <performance name="a performance" pulsesPerQuarter="720">
                     <global>
                         <header>
