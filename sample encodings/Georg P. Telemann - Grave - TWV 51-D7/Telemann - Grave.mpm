@@ -13,15 +13,14 @@
             
             3. Romantic: This performance features distinct macro dynamics and timing. Quite prominent is also the swing-like micro timing (rubato), more pronounced in the violins, less in the bass. It is based on a performance by Ludwig Güttler and the "Neues Bachisches Collegium Musicum".
         </comment>
+        <relatedResources>
+            <resource uri="Telemann - Grave.mid" type="midi"/>
+            <resource uri="Telemann - Grave.msm" type="msm"/>
+            <resource uri="Telemann - Grave_Baroque.pdf" type="pdf"/>
+            <resource uri="Telemann - Grave_Romantic.pdf" type="pdf"/>
+            <resource uri="Telemann - Grave_Fast.pdf" type="pdf"/>
+        </relatedResources>
     </metadata>
-
-    <relatedResources>
-        <resource uri="Telemann - Grave.mid" type="midi"/>
-        <resource uri="Telemann - Grave.msm" type="msm"/>
-        <resource uri="Telemann - Grave_Baroque.pdf" type="pdf"/>
-        <resource uri="Telemann - Grave_Romantic.pdf" type="pdf"/>
-        <resource uri="Telemann - Grave_Fast.pdf" type="pdf"/>
-    </relatedResources>
 
     <performance name="Baroque" pulsesPerQuarter="720">
         <global>

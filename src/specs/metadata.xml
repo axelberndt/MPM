@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:elementSpec ident="metadata" module="mpm.metadata" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:elementSpec ident="metadata" module="mpm.metadata" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0" 
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>metadata</tei:gloss>
     
     <tei:desc>This element can be used to provide contextual information about the encoding in this MPM file.</tei:desc>
     
     <tei:content>
-        <tei:alternate minOccurs="1" maxOccurs="unbounded">
-            <tei:elementRef key="author"/>
-            <tei:elementRef key="comment"/>
-        </tei:alternate>
+        <relaxng:interleave>
+            <tei:elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+            <tei:elementRef key="comment" minOccurs="0" maxOccurs="unbounded"/>
+            <tei:elementRef key="relatedResources" minOccurs="0" maxOccurs="1"/>
+        </relaxng:interleave>
     </tei:content>
+    
+    <tei:constraintSpec ident="metadata_nonempty_constraint" scheme="schematron">
+        <tei:desc>Element <tei:gi>metadata</tei:gi> is not allowed to be empty</tei:desc>
+        <tei:constraint>
+            <schematron:assert test="count(child::*) > 0">
+                Element metadata is not allowed to be empty.
+            </schematron:assert>
+        </tei:constraint>
+    </tei:constraintSpec>
     
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -20,6 +33,11 @@
                 <comment>The first performance, authored by author no. 1, is based on a violin treatise from 1678.</comment>
                 <author number="2">John Smith</author>
                 <comment>Author no. 2 made the second performance on the basis of a tape recording by famous pianist Clare Clear.</comment>
+                <relatedResources>
+                    <resource uri="pathTo/music.mei" type="mei"/>
+                    <resource uri="pathTo/music.msm" type="msm"/>
+                    <!-- further resource references -->
+                </relatedResources>
             </metadata>
         </egXML>
     </tei:exemplum>

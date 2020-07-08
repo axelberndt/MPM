@@ -13,14 +13,13 @@
             
             All performances were coneived by author 1 Pablo Carra. Author 2 Axel Berndt has added minor editings, mostly code polishing. 
         </comment>
+        <relatedResources>
+            <resource uri="Die helle Sonn.mid" type="midi"/>
+            <resource uri="Die helle Sonn.msm" type="msm"/>
+            <resource uri="Die helle Sonn_Baroque.pdf" type="pdf"/>
+            <resource uri="Die helle Sonn_Romantic.pdf" type="pdf"/>
+        </relatedResources>
     </metadata>
-
-    <relatedResources>
-        <resource uri="Die helle Sonn.mid" type="midi"/>
-        <resource uri="Die helle Sonn.msm" type="msm"/>
-        <resource uri="Die helle Sonn_Baroque.pdf" type="pdf"/>
-        <resource uri="Die helle Sonn_Romantic.pdf" type="pdf"/>
-    </relatedResources>
 
     <performance name="Baroque" pulsesPerQuarter="480">
         <global>
