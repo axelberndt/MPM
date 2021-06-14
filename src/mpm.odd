@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.1.0"/>
+                <tei:edition n="2.1.1"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -52,6 +52,7 @@
             <tei:change status="2.0.2" who="Axel Berndt">Fix in <tei:gi>accentuationPattern</tei:gi>, removed memberOf with non-existing class att.accentuationPatternDef.</tei:change>
             <tei:change status="2.0.3" who="Axel Berndt">Added package mpm.metadata with elements <tei:gi>metadata</tei:gi>, <tei:gi>author</tei:gi> and <tei:gi>comment</tei:gi>.</tei:change>
             <tei:change status="2.1.0" who="Axel Berndt">Moved element <tei:gi>relatedResources</tei:gi> to element <tei:gi>metadata</tei:gi>.</tei:change>
+            <tei:change status="2.1.1" who="Axel Berndt">Some minor documentation updates.</tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
     
@@ -91,7 +92,7 @@
                         <tei:item>The official MPM API (application programming interface) has been written in Java and is published under GPL 3.0 as part of the <tei:ref target="https://github.com/cemfi/meico">meico</tei:ref> framework.</tei:item>
                         <tei:item>An MEI to MPM converter is part of the meico framework.</tei:item>
                         <tei:item>A performance rendering engine is also part of the MPM API. End users can utilize it via meico's graphical user interface. It can be used to combine MEI, MSM or MIDI data with performance encodings and render them into expressive MIDI sequences and audio data. As part of the API it may also be integrated with other applications.</tei:item>
-                        <tei:item>Further editing and analysis tools will follow.</tei:item>
+                        <tei:item>With <tei:ref target="https://github.com/axelberndt/MPM-Toolbox">MPM Toolbox</tei:ref> we also provide a convenient graphical editor software. This is the most efficient way of creating and editing musical performances, analyzing performance scores, and rendering expressive MIDI and audio from it.</tei:item>
                     </tei:list>
                 </tei:div>
             </tei:div>
@@ -106,7 +107,7 @@
                 <tei:div type="chapter">
                     <tei:head>The Basic Structure</tei:head>
                     
-                    <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has three kinds of children, one element <tei:gi>metadata</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
+                    <tei:p>The following code example shows the topmost structure of MPM documents. The root node <tei:gi>mpm</tei:gi> has two kinds of children, one element <tei:gi>metadata</tei:gi> (optional) and one or more elements <tei:gi>performance</tei:gi>, each with a unique <tei:att>name</tei:att>.</tei:p>
                     
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <mpm>
