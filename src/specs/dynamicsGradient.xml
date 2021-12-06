@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="dynamicsGradient" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>dynamics gradient</tei:gloss>
+    
+    <tei:desc>This element defines a relative dynamics transition throughout the ornament. It will be scaled to absolute values by element <tei:gi>ornament</tei:gi>'s <tei:att>scale</tei:att> in the <tei:gi>ornamentationMap</tei:gi>.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.transition.from"/>
+        <tei:memberOf key="att.transition.to"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.ornamentDefContent"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:attList>
+        <tei:attDef ident="transition.from" mode="change">
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="-1.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="transition.to" mode="change" usage="opt">
+            <tei:gloss>target value of continuous transition</tei:gloss>
+            <tei:desc>This attribute specifies the final value that a continuous transition ends with.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minInclusive" value="-1.0"/>
+                    <tei:dataFacet name="maxInclusive" value="1.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>...</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <ornamentationStyles>
+                <styleDef name="Stylename">
+                    <ornamentDef name="arpeggio">
+                        <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
+                    </ornamentDef>
+                </styleDef>
+            </ornamentationStyles>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>
