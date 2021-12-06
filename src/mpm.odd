@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.1.1"/>
+                <tei:edition n="2.1.2"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -53,6 +53,13 @@
             <tei:change status="2.0.3" who="Axel Berndt">Added package mpm.metadata with elements <tei:gi>metadata</tei:gi>, <tei:gi>author</tei:gi> and <tei:gi>comment</tei:gi>.</tei:change>
             <tei:change status="2.1.0" who="Axel Berndt">Moved element <tei:gi>relatedResources</tei:gi> to element <tei:gi>metadata</tei:gi>.</tei:change>
             <tei:change status="2.1.1" who="Axel Berndt">Some minor documentation updates.</tei:change>
+            <tei:change status="2.1.2" who="Axel Berndt">
+                <tei:list>
+                    <tei:item>Added <tei:att>source</tei:att> to element <tei:gi>schemaSpec</tei:gi> to indicate the latest TEI ODD version that this schema is developed with.</tei:item>
+                    <tei:item>Corrections in the guidelines as of <tei:ref target="https://github.com/axelberndt/MPM/issues/56">GitHub issue 56</tei:ref>: Wrong attribute <tei:att>bpm</tei:att> in a <tei:gi>dynamics</tei:gi> element has been changed to <tei:att>volume</tei:att>.</tei:item>
+                    <tei:item>Moved <tei:att>scale</tei:att> from element <tei:gi>accentuationPattern</tei:gi> to attribute class att.scale so it can be used also in other elements.</tei:item>
+                </tei:list>
+            </tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
     
@@ -399,9 +406,9 @@
                         <dated>
                             <dynamicsMap>
                                 <style date="0.0" name.ref="Rattle"/>
-                                <dynamics date="0.0" bpm="f" transition.to="p" protraction="0.8"/>
-                                <dynamics date="32000" bpm="p" transition.to="105.0"/>
-                                <dynamics date="47000.0" bpm="ff"/>
+                                <dynamics date="0.0" volume="f" transition.to="p" protraction="0.8"/>
+                                <dynamics date="32000" volume="p" transition.to="105.0"/>
+                                <dynamics date="47000.0" volume="ff"/>
                             </dynamicsMap>
                         </dated>
                     </egXML>
@@ -707,7 +714,7 @@
         
         <tei:back>
             <tei:div>
-                <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="http://www.cemfi.de/mpm/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML http://www.cemfi.de/mpm/ns/1.0">
+                <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="http://www.cemfi.de/mpm/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML http://www.cemfi.de/mpm/ns/1.0" source="tei:4.3.0">
                     
                     <!-- declare the mpm namespace prefix, required to be done once before any Schematron tests are defined -->
                     <tei:constraintSpec scheme="schematron" ident="mpmPrefixDeclaration">
@@ -753,6 +760,7 @@
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
+                    <xinclude:include href="specs/att.scale.xml"/>
                     
                     <!-- the model classes -->
                     <xinclude:include href="specs/model.partContent.xml"/>

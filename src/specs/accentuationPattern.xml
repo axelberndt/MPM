@@ -11,6 +11,7 @@
     <tei:classes>
         <tei:memberOf key="att.time.symbolic.date"/>
         <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.scale"/>
         <tei:memberOf key="att.loop"/>
         <tei:memberOf key="att.id"/>
     </tei:classes>
@@ -20,17 +21,6 @@
     </tei:content>
     
     <tei:attList>
-        <tei:attDef ident="scale" usage="req">
-            <tei:gloss>accentuation scaling factor</tei:gloss>
-            <tei:desc>This attribute is required to scale the pattern's accentuation values (which are defined in [0.0; 1.0]) to actual loudness values.</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="double"/>
-            </tei:datatype>
-            <tei:remarks>
-                <tei:p>Typically, the value is non-negative. It sets the value of the strongest accentuation. Its negative marks the strongest restraint. Setting scale to a negative value will invert the accentuation pattern. Setting scale to 0.0 effectively deactivates the accentuation.</tei:p>
-            </tei:remarks>
-        </tei:attDef>
-    
         <tei:attDef ident="stickToMeasures" usage="opt">
             <tei:gloss>stick to measures flag</tei:gloss>
             <tei:desc>Set this attribute true if the accentuation pattern should restart at the beginning of each measure.</tei:desc>
