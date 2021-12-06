@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:classSpec ident="att.scale" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>scale attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attribute <tei:att>scare</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="scale" usage="req">
+            <tei:gloss>scaling factor</tei:gloss>
+            <tei:desc>This attribute is required to scale relative values (which are defined in [0.0; 1.0]) to explicit values.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:remarks>
+                <tei:p>Typically, the scale value is non-negative. In element <tei:gi>accentuationPattern</tei:gi> it sets the value of the strongest accentuation. Its negative marks the strongest restraint. Setting scale to a negative value will have an inverted effet. Setting scale to 0.0 effectively deactivates any effect.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>
