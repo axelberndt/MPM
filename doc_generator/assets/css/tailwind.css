@@ -78,6 +78,10 @@ p {
     @apply mb-2;
 }
 
+.content li a {
+    @apply font-semibold text-blue-800 underline;
+}
+
 .content p>a {
     @apply font-semibold text-blue-800 underline;
 }
