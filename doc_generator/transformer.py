@@ -55,7 +55,7 @@ def body_to_chapters(body):
                 elem.set('class', 'figure')
             elif elem.tag == 'gi':
                 elem.tag = 'a'
-                elem.set('href', 'docs#' + elem.text.strip()) # TODO: Fix!
+                elem.set('href', '/MPM/docs#' + elem.text.strip())
                 elem.set('class', 'gi')
                 elem.text = elem.text.strip()
             elif elem.tag == 'att':
