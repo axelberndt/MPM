@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:classSpec ident="att.temporalSpread" type="atts" module="mpm.core" mode="add" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
+    <tei:gloss>temporalSpread definition attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes needed to define a temporalSpread.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="intensity" usage="opt">
+            <tei:gloss>intensity</tei:gloss>
+            <tei:desc>The intensity of the <tei:gi>temporalSpread</tei:gi>'s timing distortion effect.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minExclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+            <tei:defaultVal>1.0</tei:defaultVal>
+            <tei:remarks>
+                <tei:p>This attribute specifies the type of the temporal distortion.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+        
+        <tei:attDef ident="frame.start" usage="opt">
+            <tei:gloss>frame start in symbolic time</tei:gloss>
+            <tei:desc>The attribute <tei:att>frame.start</tei:att> provides start of a frame in symbolic (i.e. tempo-independent) time.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double" />
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="frame.end" usage="opt">
+            <tei:gloss>frame end in symbolic time</tei:gloss>
+            <tei:desc>The attribute <tei:att>frame.end</tei:att> provides end of a frame in symbolic (i.e. tempo-independent) time.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double" />
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="milliseconds.frame.start" usage="opt">
+            <tei:gloss>frame start in milliseconds</tei:gloss>
+            <tei:desc>This attribute defines the beginning of a frame in milliseconds.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="milliseconds.frame.end" usage="opt">
+            <tei:gloss>frame end milliseconds</tei:gloss>
+            <tei:desc>This attribute defines the end of a frame in milliseconds.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+        </tei:attDef>
+
+        <tei:attDef ident="noteoff.shift" usage="opt">
+            <tei:gloss>shift of note offsets</tei:gloss>
+            <tei:desc>This attribute defines whether the note offsets should shift (true results in a "rolling" effect).</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string" /> <!-- true, false, monophonic -->
+            </tei:datatype>
+            <tei:defaultVal>false</tei:defaultVal>
+            <tei:remarks>
+                <tei:p>monophonic means ...</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

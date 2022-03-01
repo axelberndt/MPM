@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="ornament" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
+    <tei:gloss>ornament</tei:gloss>
+    
+    <tei:desc>An ornament instruction</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.time.symbolic.date"/>
+        <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.reference.noteid"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="att.scale"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+
+    <tei:attList>
+        <tei:attDef ident="name.ref" mode="change" usage="opt"/>        
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>
+            Apply an arpeggio to all notes (listed lowest to highest pitch) at date 0.0. The scale is applied on the dynamics gradient.
+            direction sets the sequence of notes ordered by in-/decreasing pitch; default is up.
+            
+            The second ornament applies an arpeggio to the notes listed and in the sequence of the list. 
+        </tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <ornament date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch|descending pitch"/>
+            <ornament date="720.0" name.ref="arpeggio" scale="20.0" noteids="id1 id3 id2 id4"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The use of attribute <tei:att>name.ref</tei:att> requires the presence of an <tei:gi>ornamentDef</tei:gi> with the same name and within an ornament style. In the <tei:gi>ornamentationMap</tei:gi> there must be a <tei:gi>style</tei:gi> element switching to this style before the first reference to an <tei:gi>ornamentationDef</tei:gi> within that style.</tei:p>
+    </tei:remarks>
+
+    <tei:remarks>
+        <tei:p></tei:p>
+    </tei:remarks>
+</tei:elementSpec>

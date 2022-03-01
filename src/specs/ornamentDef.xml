@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="ornamentDef" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron"
+    xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
+    <tei:gloss>ornamentation definition</tei:gloss>
+    
+    <tei:desc>A ornamentation definition describes the an ornament a series of transformers.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.name"/>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="model.defLike"/>
+    </tei:classes>
+    
+    <tei:content>
+        <relaxng:interleave>
+            <tei:classRef key="model.ornamentDefContent" expand="sequence" minOccurs="1" maxOccurs="1"/>
+        </relaxng:interleave>
+    </tei:content>
+    
+    <tei:constraintSpec scheme="schematron" ident="ornamentDef_ancestor_constraint">
+        <tei:desc>This element is allowed only within the <tei:gi>ornamentationStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
+        <tei:constraint>
+            <schematron:assert test="parent::*/parent::mpm:ornamentationStyles">
+                Element <schematron:value-of select="local-name()"/> is allowed only as child of a styleDef that is child of a ornamentationStyles element.
+            </schematron:assert>
+        </tei:constraint>
+    </tei:constraintSpec>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <ornamentDef name="arpeggio">
+                <temporalSpread frame.start="-100.0" frame.end="100.0"
+                    milliseconds.frame.start="-200.0" milliseconds.frame.end="200.0"
+                    intensity="1.4"
+                    noteoff.shift="true|false|monophonic"/>
+
+                <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
+            </ornamentDef>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p></tei:p>
+    </tei:remarks>
+</tei:elementSpec>

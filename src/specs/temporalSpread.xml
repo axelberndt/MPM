@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="temporalSpread" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
+    <tei:gloss>temporalSpread</tei:gloss>
+    
+    <tei:desc>The <tei:gi>temporalSpread</tei:gi> transformer offsets all elements at a given time by a certain amount defined by a power function</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.temporalSpread" />
+        <tei:memberOf key="model.ornamentDefContent"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <temporalSpread
+                frame.start="-100.0" frame.end="100.0"
+                intensity="1.4"
+                noteoff.shift="true"/>
+            <temporalSpread
+                milliseconds.frame.start="-200.0" milliseconds.frame.end="200.0"
+                intensity="1.4"
+                noteoff.shift="false"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The frame attributes are either symbolic or physical but not both (e.g. <tei:att>frame.start</tei:att> or <tei:att>milliseconds.frame.start</tei:att>)</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

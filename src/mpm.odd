@@ -765,6 +765,7 @@
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.temporalSpread.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
                     <xinclude:include href="specs/att.scale.xml"/>
                     
@@ -800,11 +801,14 @@
                     <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
                         <xinclude:include href="specs/accentuationPatternDef.xml"/>
                             <xinclude:include href="specs/accentuation.xml"/>
+                    <xinclude:include href="specs/ornamentationStyles.xml"/>
+                        <xinclude:include href="specs/ornamentDef.xml"/>
                     <xinclude:include href="specs/rubatoStyles.xml"/>
                         <xinclude:include href="specs/rubatoDef.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
                         <xinclude:include href="specs/tempoDef.xml"/>
                     <xinclude:include href="specs/dynamicsGradient.xml"/>
+                    <xinclude:include href="specs/temporalSpread.xml"/>
                     
                     <xinclude:include href="specs/style.xml"/>
                     <xinclude:include href="specs/articulationMap.xml"/>
@@ -815,6 +819,8 @@
                         <xinclude:include href="specs/dynamics.xml"/>
                     <xinclude:include href="specs/metricalAccentuationMap.xml"/>
                         <xinclude:include href="specs/accentuationPattern.xml"/>
+                    <xinclude:include href="specs/ornamentationMap.xml"/>
+                        <xinclude:include href="specs/ornament.xml"/>
                     <xinclude:include href="specs/tempoMap.xml"/>
                         <xinclude:include href="specs/tempo.xml"/>
                     <xinclude:include href="specs/rubatoMap.xml"/>
