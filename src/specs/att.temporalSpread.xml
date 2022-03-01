@@ -19,7 +19,7 @@
             </tei:datatype>
             <tei:defaultVal>1.0</tei:defaultVal>
             <tei:remarks>
-                <tei:p>This attribute specifies the type of the temporal distortion.</tei:p>
+                <tei:p>This attribute is modelled on <tei:gi>rubatoDef</tei:gi>'s <tei:att>intensity</tei:att> attribute.</tei:p>
             </tei:remarks>
         </tei:attDef>
         
@@ -58,10 +58,11 @@
         <tei:attDef ident="noteoff.shift" usage="opt">
             <tei:gloss>shift of note offsets</tei:gloss>
             <tei:desc>This attribute defines whether the note offsets should shift (true results in a "rolling" effect).</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="string" /> <!-- true, false, monophonic -->
-            </tei:datatype>
-            <tei:defaultVal>false</tei:defaultVal>
+            <tei:valList type="closed">
+                <tei:valItem ident="true"/>
+                <tei:valItem ident="false"/>
+                <tei:valItem ident="monophonic"/>
+            </tei:valList>
             <tei:remarks>
                 <tei:p>monophonic means ...</tei:p>
             </tei:remarks>

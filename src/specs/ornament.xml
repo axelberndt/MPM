@@ -21,18 +21,28 @@
     </tei:content>
 
     <tei:attList>
-        <tei:attDef ident="name.ref" mode="change" usage="opt"/>        
+        <tei:attDef ident="name.ref" mode="change" usage="opt"/>
+        <tei:attDef ident="scale" mode="change" usage="opt">
+            <tei:gloss>scaling factor for dynamics gradient</tei:gloss>
+            <tei:desc>This attribute is used to scale a dynamic gradient defined in an <tei:gi>ornamentDef</tei:gi>.</tei:desc>
+                <tei:datatype>
+                    <tei:dataRef name="double"/>
+                </tei:datatype>
+                <tei:remarks>
+                    <tei:p>Typically, the scale value is non-negative. In element <tei:gi>accentuationPattern</tei:gi> it sets the value of the strongest accentuation. Its negative marks the strongest restraint. Setting scale to a negative value will have an inverted effet. Setting scale to 0.0 effectively deactivates any effect.</tei:p>
+                </tei:remarks>
+        </tei:attDef>
     </tei:attList>
     
     <tei:exemplum>
         <tei:p>
-            Apply an arpeggio to all notes (listed lowest to highest pitch) at date 0.0. The scale is applied on the dynamics gradient.
-            direction sets the sequence of notes ordered by in-/decreasing pitch; default is up.
-            
-            The second ornament applies an arpeggio to the notes listed and in the sequence of the list. 
+            The first <tei:gi>ornament</tei:gi> defines an upwards arpeggio to all notes (listed lowest to highest pitch) at date 0.0 with 
+            a scaled dynamic gradient.
+            The second ornament applies an arpeggio to the notes listed and in the sequence of the list and
+            specifies the sequence of notes using the <tei:att>noteids</tei:att> attribute.
         </tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <ornament date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch|descending pitch"/>
+            <ornament date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch"/>
             <ornament date="720.0" name.ref="arpeggio" scale="20.0" noteids="id1 id3 id2 id4"/>
         </egXML>
     </tei:exemplum>
