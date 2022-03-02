@@ -2,8 +2,7 @@
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:elementSpec ident="ornament" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>ornament</tei:gloss>
     
     <tei:desc>An ornament instruction</tei:desc>
@@ -28,9 +27,6 @@
                 <tei:datatype>
                     <tei:dataRef name="double"/>
                 </tei:datatype>
-                <tei:remarks>
-                    <tei:p>Typically, the scale value is non-negative. In element <tei:gi>accentuationPattern</tei:gi> it sets the value of the strongest accentuation. Its negative marks the strongest restraint. Setting scale to a negative value will have an inverted effet. Setting scale to 0.0 effectively deactivates any effect.</tei:p>
-                </tei:remarks>
         </tei:attDef>
     </tei:attList>
     
@@ -38,7 +34,7 @@
         <tei:p>
             The first <tei:gi>ornament</tei:gi> defines an upwards arpeggio to all notes (listed lowest to highest pitch) at date 0.0 with 
             a scaled dynamic gradient.
-            The second ornament applies an arpeggio to the notes listed and in the sequence of the list and
+            The second <tei:gi>ornament</tei:gi> applies an arpeggio to the notes listed and in the sequence of the list and
             specifies the sequence of notes using the <tei:att>noteids</tei:att> attribute.
         </tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -49,9 +45,5 @@
     
     <tei:remarks>
         <tei:p>The use of attribute <tei:att>name.ref</tei:att> requires the presence of an <tei:gi>ornamentDef</tei:gi> with the same name and within an ornament style. In the <tei:gi>ornamentationMap</tei:gi> there must be a <tei:gi>style</tei:gi> element switching to this style before the first reference to an <tei:gi>ornamentationDef</tei:gi> within that style.</tei:p>
-    </tei:remarks>
-
-    <tei:remarks>
-        <tei:p></tei:p>
     </tei:remarks>
 </tei:elementSpec>

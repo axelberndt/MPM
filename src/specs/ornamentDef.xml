@@ -34,16 +34,10 @@
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <ornamentDef name="arpeggio">
                 <temporalSpread frame.start="-100.0" frame.end="100.0"
-                    milliseconds.frame.start="-200.0" milliseconds.frame.end="200.0"
                     intensity="1.4"
-                    noteoff.shift="true|false|monophonic"/>
-
+                    noteoff.shift="true"/>
                 <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
             </ornamentDef>
         </egXML>
     </tei:exemplum>
-    
-    <tei:remarks>
-        <tei:p></tei:p>
-    </tei:remarks>
 </tei:elementSpec>

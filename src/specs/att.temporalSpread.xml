@@ -64,7 +64,7 @@
                 <tei:valItem ident="monophonic"/>
             </tei:valList>
             <tei:remarks>
-                <tei:p>monophonic means ...</tei:p>
+                <tei:p>The value monophonic refers to a temporal spread in which the note offset of one note coincides with the note onset of the next.</tei:p>
             </tei:remarks>
         </tei:attDef>
     </tei:attList>
