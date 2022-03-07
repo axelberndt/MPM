@@ -803,12 +803,12 @@
                             <xinclude:include href="specs/accentuation.xml"/>
                     <xinclude:include href="specs/ornamentationStyles.xml"/>
                         <xinclude:include href="specs/ornamentDef.xml"/>
+                            <xinclude:include href="specs/dynamicsGradient.xml"/>
+                            <xinclude:include href="specs/temporalSpread.xml"/>
                     <xinclude:include href="specs/rubatoStyles.xml"/>
                         <xinclude:include href="specs/rubatoDef.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
                         <xinclude:include href="specs/tempoDef.xml"/>
-                    <xinclude:include href="specs/dynamicsGradient.xml"/>
-                    <xinclude:include href="specs/temporalSpread.xml"/>
                     
                     <xinclude:include href="specs/style.xml"/>
                     <xinclude:include href="specs/articulationMap.xml"/>
