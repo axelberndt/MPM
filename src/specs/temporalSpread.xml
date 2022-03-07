@@ -3,7 +3,7 @@
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:elementSpec ident="temporalSpread" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
     xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <tei:gloss>temporalSpread</tei:gloss>
+    <tei:gloss>temporal spread</tei:gloss>
     
     <tei:desc>The <tei:gi>temporalSpread</tei:gi> transformer offsets all elements at a given time by a certain amount defined by a power function</tei:desc>
     
