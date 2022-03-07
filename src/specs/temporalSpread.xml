@@ -8,7 +8,10 @@
     <tei:desc>The <tei:gi>temporalSpread</tei:gi> transformer offsets all elements at a given time by a certain amount defined by a power function</tei:desc>
     
     <tei:classes>
-        <tei:memberOf key="att.temporalSpread" />
+        <tei:memberOf key="att.intensity"/>
+        <tei:memberOf key="att.temporalSpread"/>
+        <tei:memberOf key="att.time.physical.frame"/>
+        <tei:memberOf key="att.time.symbolic.frame"/>
         <tei:memberOf key="model.ornamentDefContent"/>
     </tei:classes>
     
