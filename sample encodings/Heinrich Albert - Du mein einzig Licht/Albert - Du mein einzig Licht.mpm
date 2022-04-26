@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <metadata>
+        <author>Axel Berndt</author>
+        <comment>This MPM has been generated from 'Albert - Du mein einzig Licht.mei' using the meico MEI converter.</comment>
+        <relatedResources xmlns="">
+            <resource uri="D:\Arbeit\Software\Java\MPM Toolbox\test files\Heinrich Albert - Du mein einzig Licht\Albert - Du mein einzig Licht.mei" type="mei" xmlns="http://www.cemfi.de/mpm/ns/1.0"/>
+            <resource uri="D:\Arbeit\Software\Java\MPM Toolbox\test files\Heinrich Albert - Du mein einzig Licht\Albert - Du mein einzig Licht.msm" type="msm" xmlns="http://www.cemfi.de/mpm/ns/1.0"/>
+        </relatedResources>
+    </metadata>
+    <performance name="Axel Berndt" pulsesPerQuarter="720">
+        <global>
+            <header>
+                <articulationStyles>
+                    <styleDef name="Default Articulation Style">
+                        <articulationDef name="legato" relativeDuration="1.0"/>
+                        <articulationDef name="accent" absoluteVelocityChange="25.0"/>
+                        <articulationDef name="legatissimo" absoluteDurationChange="250.0"/>
+                        <articulationDef name="marcato" relativeDuration="0.8" absoluteVelocityChange="25.0"/>
+                        <articulationDef name="portato" relativeDuration="0.8"/>
+                        <articulationDef name="sforzato" relativeDuration="0.8" absoluteVelocity="127.0"/>
+                        <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                        <articulationDef name="staccatissimo" absoluteDurationMs="140.0" absoluteVelocityChange="5.0"/>
+                        <articulationDef name="tenuto" relativeDuration="0.9" absoluteVelocityChange="12.0"/>
+                        <articulationDef name="standard articulation" absoluteDurationChange="-70.0"/>
+                        <articulationDef name="nonlegato" absoluteDurationChangeMs="-96.0"/>
+                        <articulationDef name="breath" absoluteDurationChangeMs="-400.0" absoluteVelocityChange="-5.0"/>
+                        <articulationDef name="legatoStop" relativeDuration="0.8" relativeVelocity="0.9"/>
+                    </styleDef>
+                </articulationStyles>
+                <tempoStyles>
+                    <styleDef name="Default Tempo Style">
+                        <tempoDef name="Grave" value="42.0"/>
+                        <tempoDef name="Largo" value="50.0"/>
+                        <tempoDef name="Lento" value="51.0"/>
+                        <tempoDef name="Adagietto" value="66.0"/>
+                        <tempoDef name="Larghetto" value="69.0"/>
+                        <tempoDef name="Adagio" value="79.0"/>
+                        <tempoDef name="Andantino" value="80.0"/>
+                        <tempoDef name="Maestoso" value="88.0"/>
+                        <tempoDef name="Andante" value="101.0"/>
+                        <tempoDef name="Moderato" value="106.0"/>
+                        <tempoDef name="Allegretto" value="110.0"/>
+                        <tempoDef name="Animato" value="121.0"/>
+                        <tempoDef name="Assai" value="145.0"/>
+                        <tempoDef name="Allegro" value="147.0"/>
+                        <tempoDef name="Vivace" value="164.0"/>
+                        <tempoDef name="Presto" value="189.0"/>
+                        <tempoDef name="Prestissimo" value="206.0"/>
+                    </styleDef>
+                </tempoStyles>
+                <dynamicsStyles>
+                    <styleDef name="Default Dynamics Style">
+                        <dynamicsDef name="pppp" value="5.0"/>
+                        <dynamicsDef name="ppp" value="12.0"/>
+                        <dynamicsDef name="pp" value="36.0"/>
+                        <dynamicsDef name="p" value="48.0"/>
+                        <dynamicsDef name="mp" value="64.0"/>
+                        <dynamicsDef name="mf" value="83.0"/>
+                        <dynamicsDef name="f" value="97.0"/>
+                        <dynamicsDef name="ff" value="111.0"/>
+                        <dynamicsDef name="fff" value="120.0"/>
+                        <dynamicsDef name="ffff" value="125.0"/>
+                        <dynamicsDef name="sf" value="127.0"/>
+                    </styleDef>
+                </dynamicsStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <tempo date="0.0" bpm="59.0" transition.to="71.0" meanTempoAt="0.3" beatLength="0.5" xml:id="mpmToolbox_fcb98b54-5a5c-4a3c-b1c6-203ad40a402d"/>
+                    <tempo date="5760.0" bpm="68.0" beatLength="0.5" xml:id="mpmToolbox_0b5f501c-940a-4fb6-a300-3959227f5aa7"/>
+                    <tempo date="10080.0" bpm="68.0" transition.to="30.0" meanTempoAt="0.83704" beatLength="0.5" xml:id="mpmToolbox_2a57ab8a-3962-4bc2-8aa8-f40110fcf4fe"/>
+                    <tempo date="11520.0" bpm="55.0" beatLength="0.5" xml:id="mpmToolbox_08b6053c-a155-4570-bb62-b71f28187ee6"/>
+                    <tempo date="12960.0" bpm="65.0" beatLength="0.5" xml:id="mpmToolbox_26877538-b780-4375-8e8f-da160bb45ef6"/>
+                    <tempo date="20880.0" bpm="62.0" transition.to="40.0" meanTempoAt="0.91852" beatLength="0.5" xml:id="mpmToolbox_3a604dda-1d8b-4d0f-bf50-c241c274b792"/>
+                    <tempo date="23040.0" bpm="20.0" beatLength="0.5" xml:id="mpmToolbox_5a955b50-f25a-4859-ad49-3cd665a6069d"/>
+                    <tempo date="23760.0" bpm="52.0" transition.to="68.0" meanTempoAt="0.36296" beatLength="0.5" xml:id="mpmToolbox_46cac29d-53fc-4266-8486-8de8dd2f8fa7"/>
+                    <tempo date="28800.0" bpm="62.0" beatLength="0.5" xml:id="mpmToolbox_8d63a459-225d-4ea5-8f49-2c5564dd48d3"/>
+                    <tempo date="33120.0" bpm="62.0" transition.to="50.0" meanTempoAt="0.9037" beatLength="0.5" xml:id="mpmToolbox_b0bb63f2-0131-4854-be56-1bc85b3fa8a4"/>
+                    <tempo date="34560.0" bpm="53.0" beatLength="0.5" xml:id="mpmToolbox_a3cd9279-c4ce-4b48-8744-d4d182002e7d"/>
+                    <tempo date="35280.0" bpm="60.0" transition.to="67.0" meanTempoAt="0.34074" beatLength="0.5" xml:id="mpmToolbox_811a9805-5888-46a8-9b51-6a3185060ab1"/>
+                    <tempo date="40320.0" bpm="62.0" beatLength="0.5" xml:id="mpmToolbox_97cc233f-edc6-4ac3-89a3-ef5043d814e3"/>
+                    <tempo date="43920.0" bpm="59.0" transition.to="6.0" meanTempoAt="0.84815" beatLength="0.5" xml:id="mpmToolbox_f895e584-bf71-4777-93fb-9169e9e01797"/>
+                    <tempo date="46080.0" bpm="36.0" beatLength="0.5" xml:id="mpmToolbox_5646965b-c03c-49ff-8ae9-544cc4deced4"/> 
+                </tempoMap>
+                <imprecisionMap.timing>
+                    <distribution.correlated.compensatingTriangle date="0.0" limit.lower="-80.0" limit.upper="80.0" degreeOfCorrelation="3.8" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/> 
+                </imprecisionMap.timing>
+                <dynamicsMap>
+                    <dynamics date="0.0" volume="80.0" transition.to="100.0" curvature="0.54643" protraction="0.35" xml:id="mpmToolbox_dbf9e10a-28f5-46bc-87cc-129540d01731"/>
+                    <dynamics date="5760.0" volume="100.0" transition.to="70.0" curvature="0.24643" protraction="0.54286" xml:id="mpmToolbox_215ba4c0-33da-47a1-8e88-4a0382e8681a"/>
+                    <dynamics date="11520.0" volume="70.0" transition.to="90.0" curvature="0.69286" protraction="0.39286" xml:id="mpmToolbox_b63c1b93-3bc7-4655-a389-a8bbce64464d"/>
+                    <dynamics date="20160.0" volume="90.0" transition.to="80.0" curvature="0.54643" protraction="-0.42857" xml:id="mpmToolbox_41fda978-df43-4959-a046-d9d0d66c90a3"/>
+                    <dynamics date="23040.0" volume="80.0" xml:id="mpmToolbox_f72e7634-868d-4a8b-b928-8a065509c1eb"/>
+                    <dynamics date="23760.0" volume="70.0" transition.to="100.0" curvature="0.53571" protraction="0.39286" xml:id="mpmToolbox_81e01978-ea94-4cb3-90c4-0c154598eaba"/>
+                    <dynamics date="31680.0" volume="100.0" transition.to="80.0" curvature="0.27143" protraction="-0.67143" xml:id="mpmToolbox_47a809dc-067b-4c07-833d-df655adfa3cf"/>
+                    <dynamics date="34560.0" volume="80.0" transition.to="95.0" curvature="0.54643" protraction="0.48571" xml:id="mpmToolbox_c13e4c52-2413-4e65-b88e-875a215507e6"/>
+                    <dynamics date="43200.0" volume="95.0" transition.to="60.0" curvature="0.4" protraction="0.02857" xml:id="mpmToolbox_4c79d6f4-0dfb-4c2b-9c61-ecd438715d5b"/>
+                    <dynamics date="46080.0" volume="60.0" xml:id="mpmToolbox_35ad8cd9-8d0b-4d62-b5ed-2bf3f1bb38b0"/> 
+                </dynamicsMap>
+                <asynchronyMap>
+                    <asynchrony date="0.0" milliseconds.offset="-475.0"/> 
+                </asynchronyMap>
+            </dated>
+        </global>
+        <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="2880.0" name.ref="legato" noteid="#meico_e4b009ae-d20a-4b4f-88fa-2c8403396f32" xml:id="mpmToolbox_1960e0df-ac3a-4af6-81c7-b1fd937a50e8"/>
+                    <articulation date="6840.0" name.ref="legato" noteid="#meico_430a4841-1800-4353-b822-7e5bb65248ec" xml:id="mpmToolbox_e2d448a9-c47e-454c-a579-86a69b5c4875"/>
+                    <articulation date="8640.0" name.ref="legato" noteid="#meico_c5c98042-2b08-4810-ac41-1a8933c9efae" xml:id="mpmToolbox_b58ff53a-cb02-4635-b92a-91807b420d83"/>
+                    <articulation date="11520.0" name.ref="breath" noteid="#meico_8978bbc5-c99a-4b83-b1b4-bbd7f4833b95" xml:id="mpmToolbox_eedeb32f-e18e-43fa-90e4-0d8f07f04a35"/>
+                    <articulation date="14400.0" name.ref="legato" noteid="#meico_c7537c94-591e-49a9-b29b-2720834b2871" xml:id="mpmToolbox_65482523-edc8-4f8c-90a2-a51a93241215"/>
+                    <articulation date="15840.0" name.ref="legato" noteid="#meico_fd205d59-40cd-4634-8032-9f5cfa0c2895" xml:id="mpmToolbox_f5c83e1d-4673-4a4c-aa35-fab2bcbd9398"/>
+                    <articulation date="18720.0" name.ref="legato" noteid="#meico_0423c8dc-b516-49f8-afbe-6b40d0452c14" xml:id="mpmToolbox_58415cf0-4f51-4bd7-9cff-165c792d4902"/>
+                    <articulation date="20160.0" name.ref="legato" noteid="#meico_1b23201c-2c6a-4ad8-9640-6174d999c819" xml:id="mpmToolbox_035820b8-5cf5-4291-a202-227d039f9b4f"/>
+                    <articulation date="23040.0" name.ref="breath" noteid="#meico_090429eb-0ac8-4a0f-a00e-6b0d78b20ebb" xml:id="mpmToolbox_ccbbe992-ce18-4c88-9ed6-33650a586a53"/>
+                    <articulation date="23760.0" name.ref="legato" noteid="#meico_f3c4abab-f998-49cf-b3d8-3d8a2bb32284" xml:id="mpmToolbox_f8180569-9ad8-424d-b845-9c6f2038ee77"/>
+                    <articulation date="25200.0" name.ref="legato" noteid="#meico_f465a7d2-138a-4e4d-ab95-d792009ab1cc" xml:id="mpmToolbox_77ebfbec-afc0-4e28-92cb-54522d812f86"/>
+                    <articulation date="25920.0" name.ref="legato" noteid="#meico_7a1fd970-c9ad-44f8-80c0-7ea91b70f717" xml:id="mpmToolbox_48b6bbf7-8395-4d64-873f-c436ee12dc81"/>
+                    <articulation date="27360.0" name.ref="legato" noteid="#meico_e420af76-62b1-4583-b4b8-e4969182c2a1" xml:id="mpmToolbox_63679094-cca9-413c-8015-43a43831bedb"/>
+                    <articulation date="31680.0" name.ref="legato" noteid="#meico_53edcf41-4527-46f0-890b-1627f69ce72c" xml:id="mpmToolbox_dc439ec0-5108-4a3a-b882-0aaa87adc978"/>
+                    <articulation date="34560.0" name.ref="breath" noteid="#p1n33" xml:id="mpmToolbox_da307868-5e66-48c2-b2a6-b804760fb4bf"/>
+                    <articulation date="35280.0" name.ref="legato" noteid="#meico_6a88ff25-8bcb-40f6-b5ba-03fc6d9e8d65" xml:id="mpmToolbox_23eb3b1a-0489-49c6-b04b-1690572881d9"/>
+                    <articulation date="36720.0" name.ref="legato" noteid="#meico_97968049-acff-4e64-a23b-8ef0cad33737" xml:id="mpmToolbox_e7b9adad-324b-474e-bed0-2c9ad64e8587"/>
+                    <articulation date="37440.0" name.ref="legato" noteid="#meico_c4e332fa-ca7b-4e77-9f27-9d250bc0d5a3" xml:id="mpmToolbox_c1516586-ad7c-4ade-9a50-a0e69acda2d7"/>
+                    <articulation date="38880.0" name.ref="legato" noteid="#meico_d80c8bf9-bc3c-40d0-b042-c2de34fd0fa0" xml:id="mpmToolbox_b4e4cf93-0736-4fd1-a511-09b4d46f6bf8"/>
+                    <articulation date="43200.0" name.ref="legato" noteid="#meico_7682305b-e717-4f33-a7d7-b298b2b99e8c" xml:id="mpmToolbox_0f92dcf2-50f0-4231-bc6a-51ae5c8ebed9"/> 
+                </articulationMap>
+                <rubatoMap>
+                    <rubato date="5760.0" frameLength="1440.0" intensity="0.93" loop="false" xml:id="mpmToolbox_24fcb272-636e-412d-990c-cb3dafb4def3"/>
+                    <rubato date="12960.0" frameLength="1440.0" intensity="0.9" loop="false" xml:id="mpmToolbox_03728289-0528-4217-a15a-e5a5fd982d6f"/> 
+                </rubatoMap>
+            </dated>
+        </part>
+        <part name="Alto" number="2" midi.channel="1" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="4320.0" name.ref="legato" noteid="#meico_2ba8516a-4207-4c07-ac98-4672daac05d0" xml:id="mpmToolbox_708f1e3b-ba89-4620-be9b-bd7f546b6101"/>
+                    <articulation date="6840.0" name.ref="legato" noteid="#meico_f3fe687c-155e-424f-89ed-99880b315845" xml:id="mpmToolbox_32f8a6af-c26f-4066-8d46-c0a9284c772d"/>
+                    <articulation date="9360.0" name.ref="legato" noteid="#meico_07911e78-19a3-428e-b74d-3233b633f5fe" xml:id="mpmToolbox_c7f3e5e4-1e4e-49b3-97c6-90da8f107b81"/>
+                    <articulation date="11520.0" name.ref="breath" noteid="#meico_c80cce6e-aa8c-4826-8007-d2305df1f575" xml:id="mpmToolbox_91170723-1549-4992-8ac7-664e2fc23002"/>
+                    <articulation date="20880.0" name.ref="legato" noteid="#meico_a2754952-2f22-495d-baa7-83fee89adecd" xml:id="mpmToolbox_3ec1390b-76ff-454f-a104-7f8e98e4d52e"/>
+                    <articulation date="25200.0" name.ref="legato" noteid="#meico_d35b4778-5636-448a-a83d-4a07d73ee432" xml:id="mpmToolbox_ce19e228-3e7b-4654-b10f-0c35bddf47f7"/>
+                    <articulation date="26640.0" name.ref="legato" noteid="#meico_05e53639-1b0a-40a4-96b4-1a236f333346" xml:id="mpmToolbox_2afc2381-d036-42d1-8302-7ca44e07d4c1"/>
+                    <articulation date="27360.0" name.ref="legato" noteid="#meico_ff91e485-2fac-4c2f-8a7d-e634096d00f6" xml:id="mpmToolbox_ab6a44e2-d7c2-4afc-9f66-2a6d62a84026"/>
+                    <articulation date="28080.0" name.ref="legato" noteid="#meico_4a860906-c5ea-46ea-915d-bd450a0937d3" xml:id="mpmToolbox_22d2c4c3-80ca-430c-bd3d-41d4cb017cdc"/>
+                    <articulation date="30960.0" name.ref="legato" noteid="#p2n31" xml:id="mpmToolbox_cafc1b74-6473-4faa-9c7e-70cb5a5abcdb"/>
+                    <articulation date="32040.0" name.ref="legatoStop" noteid="#p2n32" xml:id="mpmToolbox_dc6e23db-caf4-47f9-9fd2-20098292c9ce"/>
+                    <articulation date="32400.0" name.ref="legato" noteid="#meico_6782252c-0d8d-460e-ba3e-5abef965ce43" xml:id="mpmToolbox_b9d7bcbd-4875-42d5-b44b-f074e830a3d2"/>
+                    <articulation date="36720.0" name.ref="legato" noteid="#meico_02a707f2-6edc-474f-a797-3ce3cc6210f8" xml:id="mpmToolbox_c6c1f4a2-3764-4638-9006-add8230a8446"/>
+                    <articulation date="38160.0" name.ref="legato" noteid="#meico_16dc2d67-61bd-459c-af2a-31f59fc371db" xml:id="mpmToolbox_63a41257-1a45-496c-a944-8436e3c0ae13"/>
+                    <articulation date="38880.0" name.ref="legato" noteid="#meico_e1f16f4c-78eb-48cf-9192-1ed43c75a964" xml:id="mpmToolbox_02e20ba1-0ac8-4797-872a-1468c4d2a5d8"/>
+                    <articulation date="39600.0" name.ref="legato" noteid="#meico_b26bb22c-a7ba-4a90-b967-26c263b3fc48" xml:id="mpmToolbox_2cb45459-a138-4776-bd72-fd6e29885db7"/>
+                    <articulation date="41760.0" name.ref="legato" noteid="#meico_18e5df52-4b62-47e8-ba37-d50cb068404d" xml:id="mpmToolbox_05626801-8190-4dab-b1c1-b6f9e81b4496"/>
+                    <articulation date="42480.0" name.ref="legato" noteid="#p2n44" xml:id="mpmToolbox_052fb5e6-83b1-4265-8fd6-aa13cc6b3185"/>
+                    <articulation date="43560.0" name.ref="legatoStop" noteid="#p2n45" xml:id="mpmToolbox_ea5a0152-0c05-4572-ae88-d58b6a4f346a"/>
+                    <articulation date="43920.0" name.ref="legato" noteid="#meico_064323cd-2407-47a8-b7a8-4d6a48651f69" xml:id="mpmToolbox_ec21eca9-6f82-4743-a8bd-deeac3dfda9a"/> 
+                </articulationMap>
+                <rubatoMap>
+                    <rubato date="5760.0" frameLength="1440.0" intensity="0.95" loop="false" xml:id="mpmToolbox_f3e5d81f-a4eb-46cb-ac52-a2bcb2a72329"/>
+                    <rubato date="14400.0" frameLength="1440.0" intensity="1.11" loop="false" xml:id="mpmToolbox_b982fe69-2605-4a38-8ae7-195a6be38173"/>
+                    <rubato date="19440.0" frameLength="1440.0" intensity="1.08" loop="false" xml:id="mpmToolbox_e2af2126-113d-4229-9c48-77079176272a"/>
+                    <rubato date="28800.0" frameLength="1440.0" intensity="0.89" loop="false" xml:id="mpmToolbox_1c3b72be-d629-4c32-af36-246c580ebb7f"/>
+                    <rubato date="40320.0" frameLength="1440.0" intensity="0.92" loop="false" xml:id="mpmToolbox_67556f5d-374b-4dd1-aab1-b0dff2a6f4e1"/>
+                    <rubato date="44640.0" frameLength="1440.0" intensity="0.63" loop="false" xml:id="mpmToolbox_0f156a14-85b6-42f7-bb47-2306093ad7c7_mpmToolbox-copy_a7aee248-58e8-47fb-83d9-578dbf92ec86"/> 
+                </rubatoMap>
+            </dated>
+        </part>
+        <part name="Tenor" number="3" midi.channel="2" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="4320.0" name.ref="legato" noteid="#meico_ce797a08-84c3-4832-8f3f-abb0677bb8c9" xml:id="mpmToolbox_d472751e-e27e-4d71-931f-4a483c907d55"/>
+                    <articulation date="10080.0" name.ref="legato" noteid="#meico_e229469e-06ef-47b0-abc8-d996cdbc2416" xml:id="mpmToolbox_cf745e21-0732-4c91-9a40-8194d306d05a"/>
+                    <articulation date="11520.0" name.ref="breath" noteid="#meico_41de939b-cf15-4185-9738-b68830543e50" xml:id="mpmToolbox_29c446b8-24bd-4989-86fe-a97bff7e0173"/>
+                    <articulation date="18000.0" name.ref="legato" noteid="#p3n17" xml:id="mpmToolbox_3956b619-4420-4628-b86b-f0a130ceef6a"/>
+                    <articulation date="18720.0" name.ref="legato" noteid="#meico_0d8211a4-051e-4613-b930-2fefcb0188dc" xml:id="mpmToolbox_e590d683-594f-4095-9bf5-c43f45c13d03"/>
+                    <articulation date="19080.0" name.ref="legato" noteid="#meico_fe256101-bc7c-4a0e-91d4-398913565da1" xml:id="mpmToolbox_aa71bdbc-52e8-4ea2-adc4-1092c0d9dd2d"/>
+                    <articulation date="19440.0" name.ref="legato" noteid="#meico_04b2eff1-f93a-4669-8b77-684a676e5079" xml:id="mpmToolbox_1923a540-238d-4140-bcfb-4ae588643a4f"/>
+                    <articulation date="19800.0" name.ref="legato" noteid="#meico_9cd2da68-eb26-45b7-aec8-52b6a8a9ca05" xml:id="mpmToolbox_3ea8026c-484f-4a11-9323-676d1d88f43d"/>
+                    <articulation date="19980.0" xml:id="mpmToolbox_64703950-3684-45da-a1ed-9e216d554e19" name.ref="legatoStop" noteid="#p3n22"/>
+                    <articulation date="25200.0" name.ref="legato" noteid="#meico_b72b6c5f-911f-4087-bf80-bf84dc99aa18" xml:id="mpmToolbox_07526c09-fb0c-4d39-a0a4-3d54a157c2db"/>
+                    <articulation date="26640.0" name.ref="legato" noteid="#meico_0d6c5c0e-bde8-4d18-bd9f-f54aa9476fbd" xml:id="mpmToolbox_7c3def32-e25f-4083-a1db-99067f2295d9"/>
+                    <articulation date="27360.0" name.ref="legato" noteid="#meico_8957ba2e-3647-46be-9e85-99ca367f3fb5" xml:id="mpmToolbox_83d81593-6f0b-4e71-b002-21555cee1ba6"/>
+                    <articulation date="28080.0" name.ref="legato" noteid="#meico_53ca9ec5-7e0e-45ea-9b4e-15d4d12f50e6" xml:id="mpmToolbox_51c655d9-20ff-4449-b8cb-2eda0685c2c9"/>
+                    <articulation date="30240.0" name.ref="legato" noteid="#p3n35" xml:id="mpmToolbox_6681b36a-1fbe-4149-af00-e319377ddc98"/>
+                    <articulation date="30600.0" name.ref="legato" noteid="#meico_31e83ef1-b76c-43b8-9a40-5ee7b368e5be" xml:id="mpmToolbox_93fc83bc-772d-45b8-af75-bb3bca0a3415"/>
+                    <articulation date="30960.0" name.ref="legato" noteid="#meico_a6467156-b6d1-46b9-b37b-da23318bf368" xml:id="mpmToolbox_d9113415-b365-4fd9-acff-7eae6263afc4"/>
+                    <articulation date="31320.0" name.ref="legato" noteid="#meico_45763538-a85c-40d6-ad7d-a32c4c2fdb72" xml:id="mpmToolbox_bb72f27d-f710-4b0b-9aea-8ac2fec24aa2"/>
+                    <articulation date="31680.0" name.ref="legatoStop" noteid="#p3n39" xml:id="mpmToolbox_27e141e7-b736-4aef-aa09-aee7fde69dd3"/>
+                    <articulation date="36720.0" name.ref="legato" noteid="#meico_ac4465bd-b1cc-49e2-ad6f-a72872d634c4" xml:id="mpmToolbox_69a45b05-6ae0-4f96-aea3-dd459c695477"/>
+                    <articulation date="38160.0" name.ref="legato" noteid="#meico_a411c8c4-cef0-40db-9656-4261922896d7" xml:id="mpmToolbox_e01c8287-169a-450d-8a3e-a6028830a4ba"/>
+                    <articulation date="38880.0" name.ref="legato" noteid="#meico_f9cb4be6-d786-49e7-8ce9-1673567c1da1" xml:id="mpmToolbox_4d2dd2dc-06d7-4cc0-8258-99dcc518649a"/>
+                    <articulation date="39600.0" name.ref="legato" noteid="#meico_b3627384-3ceb-4ea0-ad3d-9a248b60d5d3" xml:id="mpmToolbox_a88f539f-5a76-473f-9d67-8945e4e8762b"/>
+                    <articulation date="41760.0" name.ref="legato" noteid="#p3n51" xml:id="mpmToolbox_ab0000a1-7aaf-424e-9a5b-63e447cf8db2"/>
+                    <articulation date="42120.0" name.ref="legato" noteid="#meico_f931bfc2-59c1-4072-9947-7890681bf13d" xml:id="mpmToolbox_dff909b5-6f22-4b2a-b4f5-dd57952fb790"/>
+                    <articulation date="42480.0" name.ref="legato" noteid="#meico_fefee44e-e000-47ba-af22-5b44fce7195a" xml:id="mpmToolbox_cf5f47b2-0937-41f7-9fc1-401ae9b6fa82"/>
+                    <articulation date="42840.0" name.ref="legato" noteid="#meico_7437d7ce-96d9-42c8-9eae-d77d7e03a6e0" xml:id="mpmToolbox_5ebdf44f-55e2-457b-9b85-298f33785188"/>
+                    <articulation date="43200.0" name.ref="legatoStop" noteid="#p3n55" xml:id="mpmToolbox_903e02b2-c4c2-4a64-9265-25910519e354"/> 
+                </articulationMap>
+                <rubatoMap>
+                    <rubato date="10080.0" frameLength="1440.0" intensity="0.89" loop="false" xml:id="mpmToolbox_f0d8347f-69c7-4802-b4d8-649ba792faf5"/>
+                    <rubato date="14400.0" frameLength="1440.0" intensity="1.07" loop="false" xml:id="mpmToolbox_80921a47-d1f5-42b2-a4cc-7fe568e67efd"/>
+                    <rubato date="18720.0" frameLength="720.0" intensity="0.81" loop="false" xml:id="mpmToolbox_09602c01-a346-4146-b51b-d2a7e02d1650"/>
+                    <rubato date="19440.0" frameLength="720.0" intensity="1.09" loop="false" xml:id="mpmToolbox_c7120054-1b91-4a0e-a853-22ff1c46ff97"/>
+                    <rubato date="21600.0" frameLength="1440.0" intensity="1.14" loop="false" xml:id="mpmToolbox_ff4210e7-165e-4de5-b7f1-62b70c9a6cca"/>
+                    <rubato date="28800.0" frameLength="1440.0" intensity="0.92" loop="false" xml:id="mpmToolbox_559ded38-206d-4079-9625-ef7bd11b7686"/>
+                    <rubato date="33120.0" frameLength="1440.0" intensity="0.9" loop="false" xml:id="mpmToolbox_7fc032e2-e40e-4134-9519-e0ccb00540a5"/>
+                    <rubato date="40320.0" frameLength="1440.0" intensity="0.92" loop="false" xml:id="mpmToolbox_e11ca7ab-4fd8-4004-808e-e21a7445f5dc"/>
+                    <rubato date="41760.0" frameLength="1440.0" intensity="0.98" earlyEnd="0.953" loop="false" xml:id="mpmToolbox_8d5a64e5-39b1-4ff2-bd0c-0621a91e4862"/>
+                    <rubato date="43200.0" frameLength="1440.0" intensity="1.16" loop="false" xml:id="mpmToolbox_154b6f24-e1f1-4f81-93d1-04c1eb4f9486"/>
+                    <rubato date="44640.0" frameLength="1440.0" intensity="0.32" loop="false" xml:id="mpmToolbox_0f156a14-85b6-42f7-bb47-2306093ad7c7"/> 
+                </rubatoMap>
+            </dated>
+        </part>
+    </performance>
+    <performance name="Like a robot" pulsesPerQuarter="720">
+        <global>
+            <header>
+                <articulationStyles>
+                    <styleDef name="robot">
+                        <articulationDef name="nonlegato" absoluteDurationChange="-60.0"/>
+                        <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                    </styleDef>
+                </articulationStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <tempo date="0.0" bpm="62.0" beatLength="0.5"/> 
+                </tempoMap>
+                <articulationMap>
+                    <style date="0.0" name.ref="robot" defaultArticulation="nonlegato"/> 
+                </articulationMap>
+            </dated>
+        </global>
+    </performance>
+</mpm>
