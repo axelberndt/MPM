@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.note.order" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.note.order" type="atts" module="mpm.core" mode="add"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>note order attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides the attribute <tei:att>note.order</tei:att>.</tei:desc>
@@ -13,6 +15,15 @@
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
+            
+            <tei:constraintSpec ident="att.note.order_target" scheme="schematron">
+                <tei:constraint>
+                    <schematron:rule context="attribute::note.order">
+                        <schematron:assert role="warning" test="not(normalize-space(.) eq '')">@note.order attribute should have content.</schematron:assert>
+                        <schematron:assert role="warning" test=". eq 'descending pitch' or . eq 'ascending pitch' or (every $i in tokenize(., '\s+') satisfies starts-with($i, '#'))">The value of @note.order should either be 'ascending pitch', 'descending pitch' or a list of references, each starting with '#'.</schematron:assert>
+                    </schematron:rule>
+                </tei:constraint>
+            </tei:constraintSpec>
         </tei:attDef>
     </tei:attList>
 </tei:classSpec>
