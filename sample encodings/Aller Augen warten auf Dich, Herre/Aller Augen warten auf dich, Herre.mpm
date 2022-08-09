@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <performance name="My Performance" pulsesPerQuarter="720">
+        <global>
+            <header>
+                <articulationStyles>
+                    <styleDef name="My Articulations">
+                        <articulationDef name="legato" relativeDuration="1.0"/>
+                        <articulationDef name="accent" absoluteVelocityChange="10.0"/>
+                        <articulationDef name="nonlegato" relativeDuration="0.92"/>
+                        <articulationDef name="strong accent" absoluteVelocityChange="18.0"/>
+                        <articulationDef name="breath" absoluteDurationChangeMs="-450.0" absoluteVelocityChange="-5.0"/>
+                    </styleDef>
+                </articulationStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <tempo date="0.0" bpm="68.0" beatLength="0.5" xml:id="mpmToolbox_b7d5c8e1-d50c-4be9-bdb0-6d316ad8b712"/>
+                    <tempo date="7200.0" bpm="68.0" transition.to="60.0" meanTempoAt="0.21852" beatLength="0.5" xml:id="mpmToolbox_418d983d-5d30-4f90-8106-498198f7935e"/>
+                    <tempo date="10800.0" bpm="62.0" transition.to="68.0" meanTempoAt="0.77407" beatLength="0.5" xml:id="mpmToolbox_82c4ff47-b3ce-4e70-ba1c-481104c0de18"/>
+                    <tempo date="14400.0" bpm="68.0" beatLength="0.5" xml:id="mpmToolbox_9380eeb4-8135-4507-a800-1f64d4e9ef1d"/>
+                    <tempo date="17280.0" bpm="68.0" transition.to="54.0" meanTempoAt="0.7963" beatLength="0.5" xml:id="mpmToolbox_8739e0cc-c14a-417a-9c51-d07eacb4f631"/>
+                    <tempo date="20160.0" bpm="58.0" beatLength="0.5" xml:id="mpmToolbox_d285caea-cb04-4580-a568-8a7c60ad55e8"/>
+                    <tempo date="22320.0" bpm="63.0" beatLength="0.5" xml:id="mpmToolbox_5ed582e0-4c89-4dc2-858f-45e8b3cb9e07"/>
+                    <tempo date="25920.0" bpm="61.0" transition.to="63.0" meanTempoAt="0.80741" beatLength="0.5" xml:id="mpmToolbox_3b436e93-d45a-4744-a340-d152b03841fb"/>
+                    <tempo date="29520.0" bpm="60.0" transition.to="62.0" meanTempoAt="0.25185" beatLength="0.5" xml:id="mpmToolbox_53bd8eba-e567-425a-bc7f-8beba543c75b"/>
+                    <tempo date="34560.0" bpm="63.0" transition.to="47.0" meanTempoAt="0.75185" beatLength="0.5" xml:id="mpmToolbox_b3469d52-355c-4020-9e74-19580131b120"/>
+                    <tempo date="37440.0" bpm="52.0" beatLength="0.5" xml:id="mpmToolbox_42d2db2b-e18e-4241-95ad-013ed3f5a67b"/>
+                    <tempo date="40320.0" bpm="50.0" beatLength="0.5" xml:id="mpmToolbox_434a5c03-a499-42b8-ac26-0fc58222de02"/> 
+                </tempoMap>
+                <dynamicsMap>
+                    <dynamics date="0.0" volume="60.0" transition.to="80.0" curvature="0.5" protraction="0.27536" xml:id="mpmToolbox_22661dad-bb2e-4cad-97b1-92ebf92f71a8"/>
+                    <dynamics date="1440.0" volume="80.0" transition.to="60.0" curvature="0.53261" protraction="-0.17391" xml:id="mpmToolbox_e6950ad1-93d4-4e08-9bd9-b62a38ce0592"/>
+                    <dynamics date="5760.0" volume="60.0" transition.to="90.0" curvature="0.57246" xml:id="mpmToolbox_ae78573c-7e1f-4d11-a7ec-2d97a76ad912"/>
+                    <dynamics date="7200.0" volume="90.0" transition.to="60.0" curvature="0.5797" protraction="0.38406" xml:id="mpmToolbox_9cb21984-5d12-46e7-90a9-f1b388aaba00"/>
+                    <dynamics date="8640.0" volume="60.0" xml:id="mpmToolbox_3fd6662b-424f-4f87-8a50-b11a1d1e25bd"/>
+                    <dynamics date="10800.0" volume="60.0" transition.to="100.0" curvature="0.30072" protraction="0.19565" xml:id="mpmToolbox_6689ba9a-50cc-45f0-8b2e-919be3021d6e"/>
+                    <dynamics date="14400.0" volume="100.0" transition.to="60.0" curvature="0.56159" protraction="-0.52174" xml:id="mpmToolbox_023a085f-d15e-4cb8-b3ce-fbff2a7b80b7"/>
+                    <dynamics date="20160.0" volume="60.0" xml:id="mpmToolbox_f5968c83-7058-4f3e-8693-d22310a8ae43"/>
+                    <dynamics date="22320.0" volume="60.0" transition.to="82.0" curvature="0.56159" protraction="0.56521" xml:id="mpmToolbox_98663a71-9105-4137-834f-86c0d96c5a1f"/>
+                    <dynamics date="25920.0" volume="82.0" transition.to="60.0" curvature="0.46739" protraction="-0.3913" xml:id="mpmToolbox_efe2d879-dff7-4011-a10e-eac30f1b5590"/>
+                    <dynamics date="28080.0" volume="60.0" transition.to="100.0" curvature="0.6558" protraction="0.65942" xml:id="mpmToolbox_8b880cdd-8d00-4f2f-8dc5-ffd415cdb002"/>
+                    <dynamics date="31680.0" volume="100.0" transition.to="58.0" curvature="0.31884" protraction="-0.72464" xml:id="mpmToolbox_67d96cb6-cb58-4429-81a3-71cfb0acbc24"/>
+                    <dynamics date="37440.0" volume="54.0" xml:id="mpmToolbox_64de9d9e-2e5b-409b-a2ba-dbb9ea0f294f"/> 
+                </dynamicsMap>
+                <imprecisionMap.dynamics>
+                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="15.0" mode="0.0" clip.lower="-30.0" clip.upper="15.0"/> 
+                </imprecisionMap.dynamics>
+                <imprecisionMap.timing>
+                    <distribution.correlated.compensatingTriangle date="0.0" limit.lower="-70.0" limit.upper="70.0" degreeOfCorrelation="5.0" clip.lower="-70.0" clip.upper="70.0" milliseconds.timingBasis="300.0"/> 
+                </imprecisionMap.timing>
+                <imprecisionMap.toneduration>
+                    <distribution.gaussian date="0.0" deviation.standard="6.3" limit.lower="-20.0" limit.upper="0.0"/> 
+                </imprecisionMap.toneduration>
+            </dated>
+        </global>
+        <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="My Articulations" defaultArticulation="nonlegato"/>
+                    <articulation date="1440.0" name.ref="accent" noteid="#meico_24594751-c697-412a-a786-8e41207cbdde" xml:id="mpmToolbox_66712f4a-f122-4632-a128-45ae2bc0ef31"/>
+                    <articulation date="7200.0" name.ref="accent" noteid="#meico_2c985368-4c94-4293-9134-952dcfe60d80" xml:id="mpmToolbox_94210623-4bf2-4110-b289-d9c38e194baa"/>
+                    <articulation date="11520.0" name.ref="accent" noteid="#meico_e15700b8-9630-4765-b8bd-965c6133bda2" xml:id="mpmToolbox_fb6048ec-44b3-4ff3-a568-a570f1650434"/>
+                    <articulation date="14400.0" name.ref="accent" noteid="#meico_02559f78-0f17-4f6a-91fe-047e7b3150f9" xml:id="mpmToolbox_db8f0f05-7311-4347-a728-82e85aa8dce5"/>
+                    <articulation date="17280.0" name.ref="legato" noteid="#meico_e14f5c50-306c-4767-adab-2ba64d12cef8" xml:id="mpmToolbox_96548cce-cd17-446a-af80-eb5d5dc09642"/>
+                    <articulation date="30240.0" name.ref="accent" noteid="#meico_e67b8b71-45af-4cfe-b846-ce91b9698d90" xml:id="mpmToolbox_6458c339-4098-422a-b462-a98a8eb4b2ec"/>
+                    <articulation date="31680.0" xml:id="mpmToolbox_e8231e57-8a28-42dd-bdeb-312099c90778" name.ref="strong accent" noteid="#meico_685f6d95-a04b-48e8-8431-ca28adec0e8f"/>
+                    <articulation date="37440.0" name.ref="breath" noteid="#meico_e483d3c3-c5a6-41fe-b81f-36746f40bd77" xml:id="mpmToolbox_99fec225-b664-4a5f-9fde-4fb1ae853c58"/>
+                    <articulation date="40320.0" name.ref="strong accent" noteid="#meico_axel_e483d3c3-c5a6-41fe-b81f-36746f40bd77-0" xml:id="mpmToolbox_76f6a432-34a3-4f92-9b05-e1bbc44a6c7e"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="Alto" number="2" midi.channel="1" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="My Articulations" defaultArticulation="nonlegato"/>
+                    <articulation date="1440.0" name.ref="accent" noteid="#meico_3af51878-38f5-4064-b968-2620d172e234" xml:id="mpmToolbox_d561f054-00d2-4a4d-a62a-f1edb318c7f1"/>
+                    <articulation date="7200.0" name.ref="accent" noteid="#meico_025ae474-5a25-40d3-ae0b-5b25798466a5" xml:id="mpmToolbox_de895df3-7c13-4e20-ba0a-3990932869f0"/>
+                    <articulation date="11520.0" name.ref="accent" noteid="#meico_131aa808-63d2-4611-ade4-57d6f6c1470f" xml:id="mpmToolbox_832abb26-a603-475a-83e7-78491ed614a6"/>
+                    <articulation date="14400.0" name.ref="accent" noteid="#meico_26cdaee3-3a17-4e9b-973f-3fa29020d1b7" xml:id="mpmToolbox_fa229073-9372-4f55-9d4c-d52cc70d71ea"/>
+                    <articulation date="30240.0" name.ref="accent" noteid="#meico_20b7f065-9a5f-4e59-9f4b-fc9ba48a885c" xml:id="mpmToolbox_584aeda8-e1f4-4c55-8925-58f0afdb13c7"/>
+                    <articulation date="31680.0" xml:id="mpmToolbox_dabfff8d-9526-43f5-a0bb-2a580913c085" name.ref="strong accent" noteid="#meico_166b3f76-b2b7-4ac6-b282-83837e10efa3"/>
+                    <articulation date="34560.0" name.ref="legato" noteid="#meico_865c9514-d6e0-488e-b463-d7b072d2169b" xml:id="mpmToolbox_347c7eda-08b5-451a-add1-51da2e37cfbb"/>
+                    <articulation date="35280.0" name.ref="legato" noteid="#meico_f118690e-012f-4f07-bda1-bf95ac5faccf" xml:id="mpmToolbox_6dd9fd02-8886-4924-a0b3-291daef728a9"/>
+                    <articulation date="37440.0" name.ref="breath" noteid="#meico_ed944b5c-7a87-4180-8fce-c032e5170281" xml:id="mpmToolbox_8f29d380-24bf-4f85-b637-eaeeddac9481"/>
+                    <articulation date="40320.0" name.ref="strong accent" noteid="#meico_axel_e483d3c3-c5a6-41fe-b81f-36746f40bd77-2" xml:id="mpmToolbox_469c13d1-ec28-4b31-b885-81d79e014434"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="Tenor" number="3" midi.channel="2" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="My Articulations" defaultArticulation="nonlegato"/>
+                    <articulation date="1440.0" name.ref="accent" noteid="#meico_8fa9d850-8956-47cb-9c77-f7baea70aef7" xml:id="mpmToolbox_d7cd0e74-c37b-4c88-bb41-4ba503b82ab1"/>
+                    <articulation date="7200.0" name.ref="accent" noteid="#meico_14ad955a-805a-49d5-9cb0-7a3ac067cc13" xml:id="mpmToolbox_af535eba-90a3-4070-97ea-56aa18e775e8"/>
+                    <articulation date="11520.0" name.ref="accent" noteid="#meico_6ee289fc-cd01-48a7-a25d-7111bbf6ee02" xml:id="mpmToolbox_a2d5d77d-991c-4b56-b2db-ff2bce362c60"/>
+                    <articulation date="14400.0" name.ref="accent" noteid="#meico_b44db330-4b86-427f-8945-d33a51d9a667" xml:id="mpmToolbox_46642ab0-7532-40db-9bbe-3d4ebe48557b"/>
+                    <articulation date="30240.0" name.ref="accent" noteid="#meico_a3905e7d-17d2-4550-91dd-53a0f03be762" xml:id="mpmToolbox_4ff71be6-259b-4b5c-9fb6-54d1c0e2a0a9"/>
+                    <articulation date="31680.0" xml:id="mpmToolbox_7dfb6453-cf62-422b-9d82-942f78518c28" name.ref="strong accent" noteid="#meico_1239a4d8-b3ed-48a5-9b32-6a626b9c0198"/>
+                    <articulation date="37440.0" name.ref="breath" noteid="#meico_64d6a154-edc1-4d15-b712-0d5832c3897d" xml:id="mpmToolbox_eac9b83e-bb4f-4353-8189-b68fcde5a4f1"/>
+                    <articulation date="40320.0" name.ref="strong accent" noteid="#meico_axel_e483d3c3-c5a6-41fe-b81f-36746f40bd77-4" xml:id="mpmToolbox_8c03d6c7-d16d-4362-83e4-2c8ebed02c81"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="Basso" number="4" midi.channel="3" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="My Articulations" defaultArticulation="nonlegato"/>
+                    <articulation date="1440.0" name.ref="accent" noteid="#meico_a5ae573e-92e1-40ce-ba8f-c0687f6950d2" xml:id="mpmToolbox_7a7c6ba0-dbc9-4106-9765-0cbab6dbc805"/>
+                    <articulation date="7200.0" name.ref="accent" noteid="#meico_c0e3d1c7-9aa1-4306-b678-7779302f4dbf" xml:id="mpmToolbox_bba1221d-13aa-4c66-8c85-bdfa9b702798"/>
+                    <articulation date="11520.0" name.ref="accent" noteid="#meico_4c19a097-7159-4639-8c84-85cb743746e1" xml:id="mpmToolbox_c030f426-43ee-4657-95db-359320c8b9bc"/>
+                    <articulation date="14400.0" name.ref="accent" noteid="#meico_786e3a08-dac0-404a-b0a8-78acc2bcd351" xml:id="mpmToolbox_5c7ae1c5-4ac0-4f1f-b957-8165aa789887"/>
+                    <articulation date="30240.0" name.ref="accent" noteid="#meico_bb3c93ea-5813-42e1-89e2-9ef980b0a35b" xml:id="mpmToolbox_ab942942-1159-4f89-8743-5834c3bbc846"/>
+                    <articulation date="31680.0" xml:id="mpmToolbox_06bf6e74-f581-4c01-98c2-0ee309b0b668" name.ref="strong accent" noteid="#meico_d8531ac2-ee2f-407c-a60b-d54f8dd995d9"/>
+                    <articulation date="37440.0" name.ref="breath" noteid="#meico_1b31978d-f0fb-4309-a576-2d35fdd29d30" xml:id="mpmToolbox_185f250f-a0e3-4f6a-8bb5-9b1a5144c826"/>
+                    <articulation date="40320.0" name.ref="strong accent" noteid="#meico_axel_e483d3c3-c5a6-41fe-b81f-36746f40bd77-6" xml:id="mpmToolbox_e71d4752-4d66-46b9-8a36-c63c80fa11c9"/> 
+                </articulationMap>
+            </dated>
+        </part>
+    </performance>
+</mpm>
