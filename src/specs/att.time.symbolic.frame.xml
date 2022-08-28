@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<tei:classSpec ident="att.time.symbolic.frame" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:classSpec ident="att.time.symbolic.frame" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>frame attribute class</tei:gloss>
     
     <tei:desc>This attribute class provides attributes <tei:att>frame.start</tei:att> und <tei:att>frame.end</tei:att>.</tei:desc>
     
+    <tei:constraintSpec ident="frame_constraint" scheme="schematron">
+        <tei:gloss>frame constraint</tei:gloss>
+        <tei:desc><tei:att>frame.start</tei:att> &#x2264; <tei:att>frame.end</tei:att></tei:desc>
+        <tei:constraint>
+            <!-- for every @frame.start in conjunction with @frame.end -->
+            <schematron:rule context="attribute::frame.start[parent::*[attribute::frame.end]]">
+                <schematron:let name="frameStart" value="number()"/>
+                <schematron:let name="frameEnd" value="number(parent::*/attribute::frame.end)"/>
+                <schematron:assert test="$frameStart le $frameEnd">
+                    Value constraint validation in element <schematron:value-of select="local-name(parent::*)"/>: @frame.start (<schematron:value-of select="$frameStart"/>) &#x2264; @frame.end (<schematron:value-of select="$frameEnd"/>)
+                </schematron:assert>
+            </schematron:rule>
+        </tei:constraint>
+    </tei:constraintSpec>
+
     <tei:attList>
         <tei:attDef ident="frame.start" usage="opt">
             <tei:gloss>frame start in symbolic time</tei:gloss>
@@ -13,6 +28,7 @@
             <tei:datatype>
                 <tei:dataRef name="double" />
             </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
         </tei:attDef>
         
         <tei:attDef ident="frame.end" usage="opt">
@@ -21,6 +37,7 @@
             <tei:datatype>
                 <tei:dataRef name="double" />
             </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
         </tei:attDef>
     </tei:attList>
 </tei:classSpec>
