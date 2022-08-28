@@ -748,6 +748,7 @@
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.note.order.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.reference.name.xml"/>
