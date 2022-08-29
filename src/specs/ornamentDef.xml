@@ -17,7 +17,7 @@
     
     <tei:content>
         <relaxng:interleave>
-            <tei:classRef key="model.ornamentDefContent" expand="sequence" minOccurs="1" maxOccurs="1"/>
+            <tei:classRef key="model.ornamentDefContent" expand="sequence" minOccurs="0" maxOccurs="1"/>
         </relaxng:interleave>
     </tei:content>
     
