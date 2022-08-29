@@ -20,7 +20,6 @@
     </tei:content>
 
     <tei:attList>
-        <tei:attDef ident="name.ref" mode="change" usage="opt"/>
         <tei:attDef ident="scale" mode="change" usage="opt">
             <tei:gloss>scaling factor for dynamics gradient</tei:gloss>
             <tei:desc>This attribute is used to scale a dynamic gradient defined in an <tei:gi>ornamentDef</tei:gi>.</tei:desc>
