@@ -12,6 +12,7 @@
         <tei:memberOf key="att.time.symbolic.date"/>
         <tei:memberOf key="att.reference.name"/>
         <tei:memberOf key="att.rubatoDef"/>
+        <tei:memberOf key="att.intensity"/>
         <tei:memberOf key="att.loop"/>
         <tei:memberOf key="att.id"/>
     </tei:classes>
