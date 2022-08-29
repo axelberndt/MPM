@@ -7,7 +7,7 @@
     xmlns:relaxng="http://relaxng.org/ns/structure/1.0">
     <tei:gloss>ornamentation definition</tei:gloss>
     
-    <tei:desc>A ornamentation definition describes the an ornament a series of transformers.</tei:desc>
+    <tei:desc>An ornamentation definition describes an ornament as a series of transformations.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="att.name"/>
