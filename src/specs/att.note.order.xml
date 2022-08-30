@@ -11,7 +11,7 @@
     <tei:attList>
         <tei:attDef ident="note.order" usage="opt">
             <tei:gloss>note.order attribute</tei:gloss>
-            <tei:desc>This attribute defines the order of notes e.g. inside an arpeggiation. It can take the values "ascending pitch", "descending pitch" or a list of ids specifying the exact order of notes.</tei:desc>
+            <tei:desc>This attribute defines the order of notes. It can take the values "ascending pitch", "descending pitch" or a list of ids specifying the exact order of notes.</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="string"/>
             </tei:datatype>
