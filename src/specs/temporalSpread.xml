@@ -11,6 +11,7 @@
         <tei:memberOf key="att.id"/>
         <tei:memberOf key="att.temporalSpread"/>
         <tei:memberOf key="att.time.symbolic.frame"/>
+        <tei:memberOf key="att.time.frameLength" />
         <tei:memberOf key="model.ornamentDefContent"/>
     </tei:classes>
     
@@ -27,13 +28,13 @@
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <temporalSpread
-                frame.start="-100.0"
+                frame.start="-100.0" frameLength="200.0"
                 intensity="1.4"
                 noteoff.shift="true"/>
         </egXML>
     </tei:exemplum>
     
     <tei:remarks>
-        <tei:p>The frame attributes are either symbolic or physical but not both.</tei:p>
+        <tei:p>The unit of the frame attributes is defined by <tei:att>time.unit</tei:att>.</tei:p>
     </tei:remarks>
 </tei:elementSpec>

@@ -22,7 +22,7 @@
                 <ornamentationStyles>
                     <styleDef name="Stylename">
                         <ornamentDef name="arpeggio">
-                            <temporalSpread frame.start="-100.0" frame.end="100.0" />
+                            <temporalSpread frame.start="-100.0" frameLength="200.0"/>
                             <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
                         </ornamentDef>
                     </styleDef>

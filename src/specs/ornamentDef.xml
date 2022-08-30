@@ -33,7 +33,7 @@
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <ornamentDef name="arpeggio">
-                <temporalSpread frame.start="-100.0"
+                <temporalSpread frame.start="-100.0" frameLength="200.0"
                     intensity="1.4"
                     noteoff.shift="true"/>
                 <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
