@@ -9,6 +9,7 @@
     <tei:desc>This attribute class provides attributes needed to define a rubato.</tei:desc>
     
     <tei:classes>
+        <tei:memberOf key="att.time.frameLength" />
         <tei:memberOf key="att.intensity" />
     </tei:classes>
     
@@ -27,16 +28,6 @@
     </tei:constraintSpec>
     
     <tei:attList>
-        <tei:attDef ident="frameLength" usage="req">
-            <tei:gloss>frame length</tei:gloss>
-            <tei:desc>The length of a rubato frame (in symbolic time), i.e. the time window within which the timing deviation takes place and compensates again.</tei:desc>
-            <tei:datatype>
-                <tei:dataRef name="double">
-                    <tei:dataFacet name="minExclusive" value="0.0"/>
-                </tei:dataRef>
-            </tei:datatype>
-        </tei:attDef>
-
         <tei:attDef ident="lateStart" usage="opt">
             <tei:gloss>late start</tei:gloss>
             <tei:desc>Add an initial delay to the rubato frame.</tei:desc>
