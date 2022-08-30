@@ -757,6 +757,7 @@
                     <xinclude:include href="specs/att.transition.from.xml"/>
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
+                    <xinclude:include href="specs/att.time.frameLength.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.beat.xml"/>
@@ -766,7 +767,6 @@
                     <xinclude:include href="specs/att.time.symbolic.length.xml"/>
                     <xinclude:include href="specs/att.time.physical.xml"/>
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
-                    <xinclude:include href="specs/att.time.physical.frame.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
                     <xinclude:include href="specs/att.temporalSpread.xml"/>

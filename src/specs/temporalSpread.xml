@@ -10,7 +10,6 @@
     <tei:classes>
         <tei:memberOf key="att.id"/>
         <tei:memberOf key="att.temporalSpread"/>
-        <tei:memberOf key="att.time.physical.frame"/>
         <tei:memberOf key="att.time.symbolic.frame"/>
         <tei:memberOf key="model.ornamentDefContent"/>
     </tei:classes>
@@ -31,14 +30,10 @@
                 frame.start="-100.0" frame.end="100.0"
                 intensity="1.4"
                 noteoff.shift="true"/>
-            <temporalSpread
-                milliseconds.frame.start="-200.0" milliseconds.frame.end="200.0"
-                intensity="1.4"
-                noteoff.shift="false"/>
         </egXML>
     </tei:exemplum>
     
     <tei:remarks>
-        <tei:p>The frame attributes are either symbolic or physical but not both (e.g. <tei:att>frame.start</tei:att> or <tei:att>milliseconds.frame.start</tei:att>)</tei:p>
+        <tei:p>The frame attributes are either symbolic or physical but not both.</tei:p>
     </tei:remarks>
 </tei:elementSpec>
