@@ -757,13 +757,13 @@
                     <xinclude:include href="specs/att.transition.from.xml"/>
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
+                    <xinclude:include href="specs/att.time.frame.xml"/>
                     <xinclude:include href="specs/att.time.frameLength.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.beat.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.date.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.duration.xml"/>
-                    <xinclude:include href="specs/att.time.symbolic.frame.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.length.xml"/>
                     <xinclude:include href="specs/att.time.physical.xml"/>
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>

@@ -27,7 +27,7 @@
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <temporalSpread
-                frame.start="-100.0" frame.end="100.0"
+                frame.start="-100.0"
                 intensity="1.4"
                 noteoff.shift="true"/>
         </egXML>

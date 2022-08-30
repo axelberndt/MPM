@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:classSpec ident="att.time.symbolic.frame" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
+    <tei:gloss>frame attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides the attribute <tei:att>frame.start</tei:att>.</tei:desc>
+    
+    <tei:attList>
+        <tei:attDef ident="frame.start" usage="opt">
+            <tei:gloss>frame start</tei:gloss>
+            <tei:desc>The attribute <tei:att>frame.start</tei:att> provides the start of a frame.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double" />
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>
