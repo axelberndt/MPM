@@ -12,7 +12,6 @@
         <tei:memberOf key="att.name"/>
         <tei:memberOf key="att.rubatoDef"/>
         <tei:memberOf key="att.id"/>
-        <tei:memberOf key="att.intensity"/>
         <tei:memberOf key="model.defLike"/>
     </tei:classes>
     

@@ -8,6 +8,10 @@
     
     <tei:desc>This attribute class provides attributes needed to define a temporalSpread.</tei:desc>
     
+    <tei:classes>
+        <tei:memberOf key="att.intensity"/>
+    </tei:classes>
+    
     <tei:attList>
         <tei:attDef ident="noteoff.shift" usage="opt">
             <tei:gloss>shift of note offsets</tei:gloss>

@@ -8,6 +8,10 @@
     
     <tei:desc>This attribute class provides attributes needed to define a rubato.</tei:desc>
     
+    <tei:classes>
+        <tei:memberOf key="att.intensity" />
+    </tei:classes>
+    
     <tei:constraintSpec ident="lateStart_earlyEnd_constraint" scheme="schematron">
         <tei:gloss>lateStar earlyEnd constraint</tei:gloss>
         <tei:desc>Attributes <tei:att>lateStart</tei:att> and <tei:att>earlyEnd</tei:att> have to conform with the following relation: 0.0 &#x2264; <tei:att>lateStart</tei:att> &lt; <tei:att>earlyEnd</tei:att> &#x2264; 1.0</tei:desc>

@@ -9,7 +9,6 @@
     
     <tei:classes>
         <tei:memberOf key="att.id"/>
-        <tei:memberOf key="att.intensity"/>
         <tei:memberOf key="att.temporalSpread"/>
         <tei:memberOf key="att.time.physical.frame"/>
         <tei:memberOf key="att.time.symbolic.frame"/>
