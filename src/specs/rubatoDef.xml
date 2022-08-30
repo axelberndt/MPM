@@ -22,6 +22,11 @@
     <tei:attList>
         <tei:attDef ident="frameLength" usage="req" mode="change">
             <tei:desc>The length of a rubato frame (in symbolic time), i.e. the time window within which the timing deviation takes place and compensates again.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minExclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
         </tei:attDef>
         
         <tei:attDef ident="intensity" usage="opt" mode="change">

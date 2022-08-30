@@ -12,9 +12,7 @@
             <tei:gloss>frame length</tei:gloss>
             <tei:desc>The length of a time frame.</tei:desc>
             <tei:datatype>
-                <tei:dataRef name="double">
-                    <tei:dataFacet name="minExclusive" value="0.0"/>
-                </tei:dataRef>
+                <tei:dataRef name="double"/>
             </tei:datatype>
         </tei:attDef>
     </tei:attList>

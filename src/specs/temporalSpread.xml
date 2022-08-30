@@ -21,6 +21,9 @@
     </tei:content>
     
     <tei:attList>
+        <tei:attDef ident="frameLength" usage="opt" mode="change">
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
         <tei:attDef ident="time.unit" usage="opt" mode="change">
             <tei:defaultVal>ticks</tei:defaultVal>
         </tei:attDef>
