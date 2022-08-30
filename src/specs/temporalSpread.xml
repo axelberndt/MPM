@@ -10,8 +10,9 @@
     <tei:classes>
         <tei:memberOf key="att.id"/>
         <tei:memberOf key="att.temporalSpread"/>
-        <tei:memberOf key="att.time.symbolic.frame"/>
-        <tei:memberOf key="att.time.frameLength" />
+        <tei:memberOf key="att.time.frame"/>
+        <tei:memberOf key="att.time.frameLength"/>
+        <tei:memberOf key="att.time.unit" />
         <tei:memberOf key="model.ornamentDefContent"/>
     </tei:classes>
     
@@ -20,6 +21,9 @@
     </tei:content>
     
     <tei:attList>
+        <tei:attDef ident="time.unit" usage="opt" mode="change">
+            <tei:defaultVal>ticks</tei:defaultVal>
+        </tei:attDef>
         <tei:attDef ident="noteoff.shift" usage="opt" mode="change">
             <tei:defaultVal>false</tei:defaultVal>
         </tei:attDef>

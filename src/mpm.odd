@@ -769,6 +769,7 @@
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.time.unit.xml"/>
                     <xinclude:include href="specs/att.temporalSpread.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
                     <xinclude:include href="specs/att.scale.xml"/>
