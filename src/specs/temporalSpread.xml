@@ -20,6 +20,12 @@
         <tei:empty/>
     </tei:content>
     
+    <tei:attList>
+        <tei:attDef ident="noteoff.shift" usage="opt" mode="change">
+            <tei:defaultVal>false</tei:defaultVal>
+        </tei:attDef>
+    </tei:attList>
+    
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <temporalSpread
