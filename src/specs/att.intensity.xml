@@ -4,12 +4,12 @@
 <tei:classSpec ident="att.intensity" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>intensity attribute class</tei:gloss>
     
-    <tei:desc>This attribute class provides attribute <tei:att>intensity</tei:att>.</tei:desc>
+    <tei:desc>This attribute class provides the attribute <tei:att>intensity</tei:att>.</tei:desc>
     
     <tei:attList>
         <tei:attDef ident="intensity" usage="opt">
             <tei:gloss>intensity</tei:gloss>
-            <tei:desc>The intensity of the timing distortion effect.</tei:desc>
+            <tei:desc>The intensity of a timing distortion effect.</tei:desc>
             <tei:datatype>
                 <tei:dataRef name="double">
                     <tei:dataFacet name="minExclusive" value="0.0"/>

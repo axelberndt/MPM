@@ -10,7 +10,7 @@
     <tei:attList>
         <tei:attDef ident="time.unit" usage="opt">
             <tei:gloss>time unit</tei:gloss>
-            <tei:desc>specifies the time unit to be either symbolic ("ticks") or physical ("milliseconds").</tei:desc>
+            <tei:desc>This attribute specifies the time unit to be either ticks (symbolic) or milliseconds (physical).</tei:desc>
             <tei:valList type="closed">
                 <tei:valItem ident="ticks"/>
                 <tei:valItem ident="milliseconds"/>

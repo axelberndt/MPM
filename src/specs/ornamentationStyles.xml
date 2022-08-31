@@ -16,7 +16,7 @@
     </tei:content>
     
     <tei:exemplum>
-        <tei:p>This example shows the definition of an ornamentation style with an ornamentation and the later use of one of it in an <tei:gi>ornamentationMap</tei:gi>.</tei:p>
+        <tei:p>This example shows the definition of an ornamentation style including an <tei:gi>ornamentDef</tei:gi> and its later use in an <tei:gi>ornamentationMap</tei:gi>.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <header>
                 <ornamentationStyles>
