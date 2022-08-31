@@ -3,7 +3,7 @@
     <metadata>
         <author>Axel Berndt</author>
         <comment>This MPM has been generated from 'Albert - Du mein einzig Licht.mei' using the meico MEI converter.</comment>
-        <relatedResources xmlns="">
+        <relatedResources>
             <resource uri="D:\Arbeit\Software\Java\MPM Toolbox\test files\Heinrich Albert - Du mein einzig Licht\Albert - Du mein einzig Licht.mei" type="mei" xmlns="http://www.cemfi.de/mpm/ns/1.0"/>
             <resource uri="D:\Arbeit\Software\Java\MPM Toolbox\test files\Heinrich Albert - Du mein einzig Licht\Albert - Du mein einzig Licht.msm" type="msm" xmlns="http://www.cemfi.de/mpm/ns/1.0"/>
         </relatedResources>
