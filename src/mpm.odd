@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.1.4"/>
+                <tei:edition n="2.1.3"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -64,10 +64,6 @@
                 <tei:list>
                     <tei:item>Minor typo correction in the guidelines.</tei:item>
                     <tei:item>Added element <tei:gi>dynamicsGradient</tei:gi> and model class model.ornamentDefContent to the project.</tei:item>
-                </tei:list>
-            </tei:change>
-            <tei:change status="2.1.4" who="Niels Pfeffer">
-                <tei:list>
                     <tei:item>Added several elements and attribute classes for encoding ornamentation (<tei:gi>ornamentDef</tei:gi>, <tei:gi>temporalSpread</tei:gi>, <tei:gi>ornamentationStyles</tei:gi>, <tei:gi>ornamentationMap</tei:gi> and <tei:gi>ornament</tei:gi>)</tei:item>
                 </tei:list>
             </tei:change>
