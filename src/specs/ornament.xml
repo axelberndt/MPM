@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="ornament" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>ornament</tei:gloss>
+    
+    <tei:desc>An ornament instruction</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.id"/>
+        <tei:memberOf key="att.note.order"/>
+        <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.scale"/>
+        <tei:memberOf key="att.time.symbolic.date"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:empty/>
+    </tei:content>
+
+    <tei:attList>
+        <tei:attDef ident="scale" mode="change" usage="opt">
+            <tei:gloss>scaling factor for dynamics gradient</tei:gloss>
+            <tei:desc>This attribute is used to scale a dynamic gradient defined in an <tei:gi>ornamentDef</tei:gi>.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double"/>
+            </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
+        </tei:attDef>
+    </tei:attList>
+    
+    <tei:exemplum>
+        <tei:p>
+            The first <tei:gi>ornament</tei:gi> applies an upwards arpeggiation to all notes (listed lowest to highest pitch) at date 0.0 with 
+            a scaled dynamic gradient.
+            The second <tei:gi>ornament</tei:gi> defines an arpeggiation of the notes listed in
+            <tei:att>note.order</tei:att> in the given order.
+        </tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <ornament date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch"/>
+            <ornament date="720.0" name.ref="arpeggio" scale="20.0" note.order="#id1 #id3 #id2 #id4"/>
+        </egXML>
+    </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>The use of attribute <tei:att>name.ref</tei:att> requires the presence of an <tei:gi>ornamentDef</tei:gi> of the same name within an ornament style. In the <tei:gi>ornamentationMap</tei:gi> there must be a <tei:gi>style</tei:gi> element switching to this style before the first reference to an <tei:gi>ornamentationDef</tei:gi> within that style.</tei:p>
+    </tei:remarks>
+</tei:elementSpec>

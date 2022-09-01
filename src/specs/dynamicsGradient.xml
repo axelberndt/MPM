@@ -25,6 +25,7 @@
                     <tei:dataFacet name="maxInclusive" value="1.0"/>
                 </tei:dataRef>
             </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
         </tei:attDef>
         
         <tei:attDef ident="transition.to" mode="change" usage="opt">
@@ -36,11 +37,12 @@
                     <tei:dataFacet name="maxInclusive" value="1.0"/>
                 </tei:dataRef>
             </tei:datatype>
+            <tei:defaultVal>0.0</tei:defaultVal>
         </tei:attDef>
     </tei:attList>
     
     <tei:exemplum>
-        <tei:p>...</tei:p>
+        <tei:p>Defines a dynamic transition from -1 to 1, resulting in a crescendo effect.</tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <ornamentationStyles>
                 <styleDef name="Stylename">
@@ -51,4 +53,8 @@
             </ornamentationStyles>
         </egXML>
     </tei:exemplum>
+    
+    <tei:remarks>
+        <tei:p>Either <tei:att>transition.to</tei:att> or <tei:att>transition.from</tei:att> or both must be present.</tei:p>
+    </tei:remarks>
 </tei:elementSpec>

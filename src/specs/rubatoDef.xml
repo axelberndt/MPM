@@ -19,6 +19,23 @@
         <tei:empty/>
     </tei:content>
     
+    <tei:attList>
+        <tei:attDef ident="frameLength" usage="req" mode="change">
+            <tei:desc>The length of a rubato frame (in symbolic time), i.e. the time window within which the timing deviation takes place and compensates again.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="double">
+                    <tei:dataFacet name="minExclusive" value="0.0"/>
+                </tei:dataRef>
+            </tei:datatype>
+        </tei:attDef>
+        
+        <tei:attDef ident="intensity" usage="opt" mode="change">
+            <tei:remarks>
+                <tei:p>This attribute specifies the type of the rubato distortion: short-long (0.0 &lt; <tei:att>intensity</tei:att> &lt; 1.0; e.g. Viennese waltz), long-short (1.0 &lt; <tei:att>intensity</tei:att>; e.g. swing timing), even timing (<tei:att>intensity</tei:att> = 1.0). The more the value differs from 0.0 the more pronounced is the rubato distortion.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+    
     <tei:constraintSpec scheme="schematron" ident="rubatoDef_ancestor_constraint">
         <tei:desc>This element is allowed only within the <tei:gi>rubatoStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
         <tei:constraint>

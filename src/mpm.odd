@@ -64,6 +64,7 @@
                 <tei:list>
                     <tei:item>Minor typo correction in the guidelines.</tei:item>
                     <tei:item>Added element <tei:gi>dynamicsGradient</tei:gi> and model class model.ornamentDefContent to the project.</tei:item>
+                    <tei:item>Added several elements and attribute classes for encoding ornamentation (<tei:gi>ornamentDef</tei:gi>, <tei:gi>temporalSpread</tei:gi>, <tei:gi>ornamentationStyles</tei:gi>, <tei:gi>ornamentationMap</tei:gi> and <tei:gi>ornament</tei:gi>)</tei:item>
                 </tei:list>
             </tei:change>
         </tei:revisionDesc>
@@ -743,10 +744,12 @@
                     <xinclude:include href="specs/att.distribution.limits.xml"/>
                     <xinclude:include href="specs/att.distribution.seed.xml"/>
                     <xinclude:include href="specs/att.id.xml"/>
+                    <xinclude:include href="specs/att.intensity.xml"/>
                     <xinclude:include href="specs/att.loop.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.note.order.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.reference.name.xml"/>
@@ -755,6 +758,8 @@
                     <xinclude:include href="specs/att.transition.from.xml"/>
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
+                    <xinclude:include href="specs/att.time.frame.xml"/>
+                    <xinclude:include href="specs/att.time.frameLength.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.beat.xml"/>
@@ -765,6 +770,8 @@
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.time.unit.xml"/>
+                    <xinclude:include href="specs/att.temporalSpread.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
                     <xinclude:include href="specs/att.scale.xml"/>
                     
@@ -800,11 +807,14 @@
                     <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
                         <xinclude:include href="specs/accentuationPatternDef.xml"/>
                             <xinclude:include href="specs/accentuation.xml"/>
+                    <xinclude:include href="specs/ornamentationStyles.xml"/>
+                        <xinclude:include href="specs/ornamentDef.xml"/>
+                            <xinclude:include href="specs/dynamicsGradient.xml"/>
+                            <xinclude:include href="specs/temporalSpread.xml"/>
                     <xinclude:include href="specs/rubatoStyles.xml"/>
                         <xinclude:include href="specs/rubatoDef.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
                         <xinclude:include href="specs/tempoDef.xml"/>
-                    <xinclude:include href="specs/dynamicsGradient.xml"/>
                     
                     <xinclude:include href="specs/style.xml"/>
                     <xinclude:include href="specs/articulationMap.xml"/>
@@ -815,6 +825,8 @@
                         <xinclude:include href="specs/dynamics.xml"/>
                     <xinclude:include href="specs/metricalAccentuationMap.xml"/>
                         <xinclude:include href="specs/accentuationPattern.xml"/>
+                    <xinclude:include href="specs/ornamentationMap.xml"/>
+                        <xinclude:include href="specs/ornament.xml"/>
                     <xinclude:include href="specs/tempoMap.xml"/>
                         <xinclude:include href="specs/tempo.xml"/>
                     <xinclude:include href="specs/rubatoMap.xml"/>
