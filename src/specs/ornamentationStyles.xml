@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:elementSpec ident="ornamentationStyles" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>collection of styles for ornamentations</tei:gloss>
+    
+    <tei:desc>This element groups definitions of ornamentation styles.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="model.styleCollectionLike"/>
+        <tei:memberOf key="att.id"/>
+    </tei:classes>
+    
+    <tei:content>
+        <tei:elementRef key="styleDef" minOccurs="1" maxOccurs="unbounded"/>
+    </tei:content>
+    
+    <tei:exemplum>
+        <tei:p>This example shows the definition of an ornamentation style including an <tei:gi>ornamentDef</tei:gi> and its later use in an <tei:gi>ornamentationMap</tei:gi>.</tei:p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <header>
+                <ornamentationStyles>
+                    <styleDef name="Stylename">
+                        <ornamentDef name="arpeggio">
+                            <temporalSpread frame.start="-100.0" frameLength="200.0"/>
+                            <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
+                        </ornamentDef>
+                    </styleDef>
+                </ornamentationStyles>
+            </header>
+            
+            <dated>
+                <ornamentationMap>
+                    <style date="0.0" name.ref="Stylename"/>
+                    <ornament date="720.0" name.ref="arpeggio" scale="20.0" />
+                </ornamentationMap>
+            </dated>
+        </egXML>
+    </tei:exemplum>
+</tei:elementSpec>

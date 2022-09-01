@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://music-encoding.org/schema/4.0.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://music-encoding.org/schema/4.0.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Du mein einzig Licht</title>
+                <composer><persName>Heinrich Albert</persName></composer>
+                <editor><persName>Axel Berndt</persName></editor>
+            </titleStmt>
+            <pubStmt>
+                <date>17th century</date>
+            </pubStmt>
+            <notesStmt>
+                <annot>This encoding was made for the 2020 Edirom Summer School workschop on Music Performance Markup.</annot>
+            </notesStmt>
+        </fileDesc>
+        <workList>
+            <work>
+                <title>Du mein einzig Licht</title>
+                <composer><persName>Heinrich Albert</persName></composer>
+                <tempo mm="60" mm.unit="2"/>
+            </work>
+        </workList>
+    </meiHead>
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef meter.count="4" meter.unit="2" meter.sym="cut" bar.method="mensur" key.sig="1f" key.pname="f" key.mode="major">
+                        <pgHead>
+                            <rend halign="center" valign="top" fontsize="x-large">Du mein einzig Licht</rend>
+                            <rend halign="right" valign="middle" fontsize="normal">Heinrich Albert</rend>
+                            <rend halign="right" valign="middle" fontsize="normal">1604-1651</rend>
+                        </pgHead>
+                        <staffGrp bar.method="mensur" symbol="brace">
+                            <staffDef n="1" xml:id="soprano" lines="5" clef.line="2" clef.shape="G" label="Soprano"/>
+                            <staffDef n="2" xml:id="alt" lines="5" clef.line="2" clef.shape="G" label="Alto"/>
+                            <staffDef n="3" xml:id="tenor" lines="5" clef.line="2" clef.shape="G" clef.dis="8" clef.dis.place="below" label="Tenor"/>
+                        </staffGrp>
+                    </scoreDef>
+                    <section>
+                        <measure n="1">
+                            <staff n="1">
+                                <layer n="1">
+                                    <rest dur="2"/>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Du</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>1440</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>mein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>2160</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">ein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>2880</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="t">zig</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>4320</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <rest dur="1"/>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Du</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>mein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>3600</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">ein</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">zig</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>5040</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <rest dur="1"/>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Du</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>mein</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">ein</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">zig</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                        </measure>
+                        <measure n="2">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="a" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Licht,</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>5760</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl>die</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>6840</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="5" dur="4">
+                                        <verse n="1">
+                                            <syl>Lil'</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>7200</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="5" dur="4">
+                                        <verse n="1">
+                                            <syl>und</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>7920</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>Ros'</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>8640</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>hat</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>10080</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="f" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Licht,</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl>die</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Lil'</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>und</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>Ros'</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>9360</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>hat</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>10800</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="f" oct="3" dur="2" dots="1">
+                                        <verse n="1">
+                                            <syl>Licht,</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>die</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>Lil'</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>und</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="3" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Ros'</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl>hat</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                        </measure>
+                        <measure n="3">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>nicht,</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>11520</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>was</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>12960</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>an</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>13680</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>Farb</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>14400</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>und</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>15840</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="e" oct="4" dur="1">
+                                        <verse n="1">
+                                            <syl>nicht,</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>was</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>an</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>15120</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Farb</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4" tie="i">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="u">und</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>16560</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="c" oct="4" dur="1">
+                                        <verse n="1">
+                                            <syl>nicht,</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid="n" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>was</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>an</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Farb</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4" tie="i">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="u">und</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                        </measure>
+                        <measure n="4">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>Schein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>17280</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dir</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>18720</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>möcht</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>19440</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">ähn</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>20160</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="t">lich</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>21600</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="f" oct="4" dur="4" tie="t">
+                                        <verse n="1">
+                                            <syl wordpos="t"/>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>Schein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>18000</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>dir</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl>möcht</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>20520</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">ähn</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>20880</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid="n" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">lich</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>22320</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="d" oct="4" dur="4" tie="t">
+                                        <verse n="1">
+                                            <syl wordpos="t"/>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="p3n17" pname="b" accid.ges="f" oct="3" dur="4" slur="i1">
+                                        <accid accid="f" place="above" fontsize="small"/>
+                                        <verse n="1">
+                                            <syl wordpos="i" con="u">Schein</syl>
+                                        </verse>
+                                    </note>
+                                    <beam>
+                                        <note pname="g" oct="3" dur="8" slur="m1"/>
+                                        <note pname="a" oct="3" dur="8" slur="m1"/>
+                                        <note pname="b" accid.ges="f" oct="3" dur="8" slur="m1"/>
+                                        <note pname="a" oct="3" dur="16" slur="m1"/>
+                                        <note xml:id="p3n22" pname="b" accid.ges="f" oct="3" dur="16" slur="t1">
+                                            <verse n="1">
+                                                <syl wordpos="t"/>
+                                            </verse>
+                                        </note>
+                                    </beam>
+                                    <note pname="c" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>dir</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl>möcht</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="3" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">ähn</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl wordpos="t">lich</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <slur startid="#p3n17" endid="#p3n22"/>
+                        </measure>
+                        <measure n="5">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="c" oct="4" dur="4" fermata="above">
+                                        <verse n="1">
+                                            <syl>sein,</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>23040</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>nur</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>23760</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>daß</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>24480</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>25200</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">stol</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>25920</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="t">zer</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>27360</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="c" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>sein,</syl>
+                                        </verse>
+                                    </note>
+                                    <rest dur="4"/>
+                                    <note pname="g" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>nur</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>daß</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>26640</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">stol</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">zer</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>28080</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="c" oct="3" dur="2">
+                                        <verse n="1">
+                                            <syl>sein,</syl>
+                                        </verse>
+                                    </note>
+                                    <rest dur="4"/>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>nur</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>daß</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dein</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">stol</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">zer</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                        </measure>
+                        <measure n="6">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="a" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Mut</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>28800</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="5" dur="4">
+                                        <verse n="1">
+                                            <syl>der</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>29520</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Schön</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>30240</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">heit</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>30960</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Un</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>31680</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="t">recht</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>33120</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="e" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Mut</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl>der</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>29880</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Schön</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="p2n31" pname="g" oct="4" dur="4" dots="1" slur="i1">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="u">heit</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="p2n32" pname="f" oct="4" dur="8" slur="t1">
+                                        <verse n="1">
+                                            <syl wordpos="t"/>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>32040</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Un</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>32400</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">recht</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>33840</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="a" oct="3" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Mut</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl>der</syl>
+                                        </verse>
+                                    </note>
+                                    <beam>
+                                        <note xml:id="p3n35" pname="g" oct="3" dur="8" slur="i1">
+                                            <verse n="1">
+                                                <syl wordpos="i" con="d">Schön</syl>
+                                            </verse>
+                                        </note>
+                                        <note pname="a" oct="3" dur="8" slur="m1"/>
+                                        <note pname="b" accid.ges="f" oct="3" dur="8" slur="m1"/>
+                                        <note pname="c" oct="4" dur="8" slur="m1"/>
+                                    </beam>
+                                    <note xml:id="p3n39" pname="d" oct="4" dur="4" dots="1" slur="t1"/>
+                                    <note pname="a" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl wordpos="t">heit</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Un</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl wordpos="t">recht</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <slur startid="#p2n31" endid="#p2n32"/>
+                            <slur startid="#p3n35" endid="#p3n39"/>
+                        </measure>
+                        <measure n="7">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note xml:id="p1n33" pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>tut,</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>34560</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>nur</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>35280</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>daß</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>36000</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>36720</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">stol</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>37440</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="t">zer</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>38880</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl>tut,</syl>
+                                        </verse>
+                                    </note>
+                                    <rest dur="4"/>
+                                    <note pname="g" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>nur</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>daß</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dein</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>38160</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">stol</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">zer</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>39600</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="f" oct="3" dur="2">
+                                        <verse n="1">
+                                            <syl>tut,</syl>
+                                        </verse>
+                                    </note>
+                                    <rest dur="4"/>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>nur</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl>daß</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>dein</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">stol</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="3" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">zer</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <breath follows="#p1n33" staff="1" tstamp="1.4"/>
+                        </measure>
+                        <measure n="8">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="a" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl>Mut</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>40320</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="5" dur="4">
+                                        <verse n="1">
+                                            <syl>der</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>41040</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Schön</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>41760</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="b" accid.ges="f" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">heit</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>42480</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Un</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>43200</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="g" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="t">recht</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>44640</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="e" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Mut</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="a" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl>der</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>41400</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="d" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Schön</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="p2n44" pname="g" oct="4" dur="4" dots="1" slur="i1">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="u">heit</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="p2n45" pname="f" oct="4" dur="8" slur="t1">
+                                        <verse n="1">
+                                            <syl wordpos="t"/>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>43560</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="4" dur="2">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Un</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>43920</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="e" oct="4" dur="4">
+                                        <verse n="1">
+                                            <syl wordpos="t">recht</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>45360</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="a" oct="3" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl>Mut</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="f" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl>der</syl>
+                                        </verse>
+                                    </note>
+                                    <beam>
+                                        <note xml:id="p3n51" pname="g" oct="3" dur="8" slur="i1">
+                                            <verse n="1">
+                                                <syl wordpos="i" con="d">Schön</syl>
+                                            </verse>
+                                        </note>
+                                        <note pname="a" oct="3" dur="8" slur="m1"/>
+                                        <note pname="b" accid.ges="f" oct="3" dur="8" slur="m1"/>
+                                        <note pname="c" oct="4" dur="8" slur="m1"/>
+                                    </beam>
+                                    <note xml:id="p3n55" pname="d" oct="4" dur="4" dots="1" slur="t1"/>
+                                    <note pname="a" oct="3" dur="8">
+                                        <verse n="1">
+                                            <syl wordpos="t">heit</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="4" dots="1">
+                                        <verse n="1">
+                                            <syl wordpos="i" con="d">Un</syl>
+                                        </verse>
+                                    </note>
+                                    <note pname="c" oct="4" dur="8">
+                                        <verse n="1">
+                                            <syl wordpos="t">recht</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <slur startid="#p2n44" endid="#p2n45"/>
+                            <slur startid="#p3n51" endid="#p3n55"/>
+                        </measure>
+                        <measure n="9" metcon="false" right="end">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note pname="f" oct="4" dur="1">
+                                        <verse n="1">
+                                            <syl>tut.</syl>
+                                        </verse>
+                                        <verse n="2" color="blue">
+                                            <syl>46080</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note pname="f" oct="4" dur="1">
+                                        <verse n="1">
+                                            <syl>tut.</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                            <staff n="3">
+                                <layer n="1">
+                                    <note pname="f" oct="3" dur="1">
+                                        <verse n="1">
+                                            <syl>tut.</syl>
+                                        </verse>
+                                    </note>
+                                </layer>
+                            </staff>
+                        </measure>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>

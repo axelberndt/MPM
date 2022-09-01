@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.1.2"/>
+                <tei:edition n="2.1.3"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -58,6 +58,13 @@
                     <tei:item>Added <tei:att>source</tei:att> to element <tei:gi>schemaSpec</tei:gi> to indicate the latest TEI ODD version that this schema is developed with.</tei:item>
                     <tei:item>Corrections in the guidelines as of <tei:ref target="https://github.com/axelberndt/MPM/issues/56">GitHub issue 56</tei:ref>: Wrong attribute <tei:att>bpm</tei:att> in a <tei:gi>dynamics</tei:gi> element has been changed to <tei:att>volume</tei:att>.</tei:item>
                     <tei:item>Moved <tei:att>scale</tei:att> from element <tei:gi>accentuationPattern</tei:gi> to attribute class att.scale so it can be used also in other elements.</tei:item>
+                </tei:list>
+            </tei:change>
+            <tei:change status="2.1.3" who="Axel Berndt">
+                <tei:list>
+                    <tei:item>Minor typo correction in the guidelines.</tei:item>
+                    <tei:item>Added element <tei:gi>dynamicsGradient</tei:gi> and model class model.ornamentDefContent to the project.</tei:item>
+                    <tei:item>Added several elements and attribute classes for encoding ornamentation (<tei:gi>ornamentDef</tei:gi>, <tei:gi>temporalSpread</tei:gi>, <tei:gi>ornamentationStyles</tei:gi>, <tei:gi>ornamentationMap</tei:gi> and <tei:gi>ornament</tei:gi>)</tei:item>
                 </tei:list>
             </tei:change>
         </tei:revisionDesc>
@@ -298,7 +305,7 @@
                         </dated>
                     </egXML>
                     
-                    <tei:p>The first instruction creates a slight swing timing. However, it is performed only once. If the rubato scheme should be repeated on every subsequent frame, attribute <tei:att>loop</tei:att> should be set true, as done in the second instruction. This ribato starts fast and slows down until the end of the frame. The third instruction does not use the <tei:att>intensity</tei:att> attribute for timing distortions but adds compression. The first ten percent of the frame are delayed by <tei:att>lateStart</tei:att> and the final 10 percent are played early by <tei:att>earlyEnd</tei:att>. Both together cause the frame being played late and so fast that it is finished early. It is also  possible to combine this feature with <tei:att>intensity</tei:att> to create even more complex characteristics. The following figure illustrates the whole rubato model.</tei:p>
+                    <tei:p>The first instruction creates a slight swing timing. However, it is performed only once. If the rubato scheme should be repeated on every subsequent frame, attribute <tei:att>loop</tei:att> should be set true, as done in the second instruction. This rubato starts fast and slows down until the end of the frame. The third instruction does not use the <tei:att>intensity</tei:att> attribute for timing distortions but adds compression. The first ten percent of the frame are delayed by <tei:att>lateStart</tei:att> and the final 10 percent are played early by <tei:att>earlyEnd</tei:att>. Both together cause the frame being played late and so fast that it is finished early. It is also  possible to combine this feature with <tei:att>intensity</tei:att> to create even more complex characteristics. The following figure illustrates the whole rubato model.</tei:p>
 
                     <tei:figure>
                         <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/rubato.png" height="470px"/>
@@ -737,10 +744,12 @@
                     <xinclude:include href="specs/att.distribution.limits.xml"/>
                     <xinclude:include href="specs/att.distribution.seed.xml"/>
                     <xinclude:include href="specs/att.id.xml"/>
+                    <xinclude:include href="specs/att.intensity.xml"/>
                     <xinclude:include href="specs/att.loop.xml"/>
                     <xinclude:include href="specs/att.midiRouting.xml"/>
                     <xinclude:include href="specs/att.name.xml"/>
                     <xinclude:include href="specs/att.number.xml"/>
+                    <xinclude:include href="specs/att.note.order.xml"/>
                     <xinclude:include href="specs/att.pulsesPerQuarter.xml"/>
                     <xinclude:include href="specs/att.reference.resource.xml"/>
                     <xinclude:include href="specs/att.reference.name.xml"/>
@@ -749,6 +758,8 @@
                     <xinclude:include href="specs/att.transition.from.xml"/>
                     <xinclude:include href="specs/att.transition.to.xml"/>
                     <xinclude:include href="specs/att.time.xml"/>
+                    <xinclude:include href="specs/att.time.frame.xml"/>
+                    <xinclude:include href="specs/att.time.frameLength.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.articulation.xml"/>
                     <xinclude:include href="specs/att.time.symbolic.beat.xml"/>
@@ -759,6 +770,8 @@
                     <xinclude:include href="specs/att.time.physical.articulation.xml"/>
                     <xinclude:include href="specs/att.time.physical.offset.xml"/>
                     <xinclude:include href="specs/att.time.physical.timingBasis.xml"/>
+                    <xinclude:include href="specs/att.time.unit.xml"/>
+                    <xinclude:include href="specs/att.temporalSpread.xml"/>
                     <xinclude:include href="specs/att.value.double.xml"/>
                     <xinclude:include href="specs/att.scale.xml"/>
                     
@@ -768,6 +781,7 @@
                     <xinclude:include href="specs/model.defLike.xml"/>
                     <xinclude:include href="specs/model.mapLike.xml"/>
                     <xinclude:include href="specs/model.distributionLike.xml"/>
+                    <xinclude:include href="specs/model.ornamentDefContent.xml"/>
                     
                     <!-- the elements -->
                     <xinclude:include href="specs/mpm.xml"/>
@@ -793,6 +807,10 @@
                     <xinclude:include href="specs/metricalAccentuationStyles.xml"/>
                         <xinclude:include href="specs/accentuationPatternDef.xml"/>
                             <xinclude:include href="specs/accentuation.xml"/>
+                    <xinclude:include href="specs/ornamentationStyles.xml"/>
+                        <xinclude:include href="specs/ornamentDef.xml"/>
+                            <xinclude:include href="specs/dynamicsGradient.xml"/>
+                            <xinclude:include href="specs/temporalSpread.xml"/>
                     <xinclude:include href="specs/rubatoStyles.xml"/>
                         <xinclude:include href="specs/rubatoDef.xml"/>
                     <xinclude:include href="specs/tempoStyles.xml"/>
@@ -807,6 +825,8 @@
                         <xinclude:include href="specs/dynamics.xml"/>
                     <xinclude:include href="specs/metricalAccentuationMap.xml"/>
                         <xinclude:include href="specs/accentuationPattern.xml"/>
+                    <xinclude:include href="specs/ornamentationMap.xml"/>
+                        <xinclude:include href="specs/ornament.xml"/>
                     <xinclude:include href="specs/tempoMap.xml"/>
                         <xinclude:include href="specs/tempo.xml"/>
                     <xinclude:include href="specs/rubatoMap.xml"/>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tei:classSpec ident="att.temporalSpread" type="atts" module="mpm.core" mode="add" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:gloss>temporalSpread definition attribute class</tei:gloss>
+    
+    <tei:desc>This attribute class provides attributes needed to define a temporalSpread.</tei:desc>
+    
+    <tei:classes>
+        <tei:memberOf key="att.intensity"/>
+    </tei:classes>
+    
+    <tei:attList>
+        <tei:attDef ident="noteoff.shift" usage="opt">
+            <tei:gloss>shift of note offsets</tei:gloss>
+            <tei:desc>This attribute defines whether the note offsets should shift in parallel with the note onsets.</tei:desc>
+            <tei:valList type="closed">
+                <tei:valItem ident="true"/>
+                <tei:valItem ident="false"/>
+                <tei:valItem ident="monophonic"/>
+            </tei:valList>
+            <tei:remarks>
+                <tei:p>The value monophonic refers to a temporal spread in which the note offset of one note coincides with the note onset of the next note.</tei:p>
+            </tei:remarks>
+        </tei:attDef>
+    </tei:attList>
+</tei:classSpec>

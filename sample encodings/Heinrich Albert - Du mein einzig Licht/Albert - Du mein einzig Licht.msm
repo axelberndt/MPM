@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msm title="Du mein einzig Licht" xml:id="meico_dbdad83c-379a-43fc-8e6a-3ff3d24299c5" pulsesPerQuarter="720">
+    <global>
+        <header/>
+        <dated>
+            <timeSignatureMap>
+                <timeSignature date="0.0" numerator="4.0" denominator="2"/>
+                <timeSignature date="46080.0" numerator="2.0" denominator="2"/>
+                <timeSignature date="48960.0" numerator="4.0" denominator="2"/>
+            </timeSignatureMap>
+            <keySignatureMap>
+                <keySignature date="0.0">
+                    <accidental midi.pitch="11.0" pitchname="B" value="-1.0"/>
+                </keySignature>
+            </keySignatureMap>
+            <sectionMap>
+                <section date="0.0" date.end="48960.0"/>
+            </sectionMap>
+            <sequencingMap>
+                <marker date="48960.0" message="fine" xml:id="meico_70d6a3d4-59d3-4a63-94c4-99453c55cd69"/>
+            </sequencingMap>
+        </dated>
+    </global>
+    <part name="Soprano" number="1" midi.channel="0" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="1440.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_577dcf12-fc45-4319-8e95-d4cf342a0535">
+                    <lyrics verse="1">Du</lyrics>
+                    <lyrics verse="2">1440</lyrics>
+                </note>
+                <note date="2160.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_470cd544-7d81-4ab3-b3d9-f80fa016509f">
+                    <lyrics verse="1">mein</lyrics>
+                    <lyrics verse="2">2160</lyrics>
+                </note>
+                <note date="2880.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_e4b009ae-d20a-4b4f-88fa-2c8403396f32">
+                    <lyrics verse="1">ein-</lyrics>
+                    <lyrics verse="2">2880</lyrics>
+                </note>
+                <note date="4320.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_8c7ab352-1974-437d-8c47-772dcbd3086f">
+                    <lyrics verse="1">zig</lyrics>
+                    <lyrics verse="2">4320</lyrics>
+                </note>
+                <note date="5760.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_dace8186-aaec-47a8-9dc7-af69a91ca5ec">
+                    <lyrics verse="1">Licht,</lyrics>
+                    <lyrics verse="2">5760</lyrics>
+                </note>
+                <note date="6840.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="360.0" xml:id="meico_430a4841-1800-4353-b822-7e5bb65248ec">
+                    <lyrics verse="1">die</lyrics>
+                    <lyrics verse="2">6840</lyrics>
+                </note>
+                <note date="7200.0" midi.pitch="72.0" pitchname="c" accidentals="0.0" octave="4.0" duration="720.0" xml:id="meico_94185cee-1082-428f-bee6-db3dc927861f">
+                    <lyrics verse="1">Lil'</lyrics>
+                    <lyrics verse="2">7200</lyrics>
+                </note>
+                <note date="7920.0" midi.pitch="72.0" pitchname="c" accidentals="0.0" octave="4.0" duration="720.0" xml:id="meico_67a3d50f-12cc-4db5-8d30-1db3ed1b7f89">
+                    <lyrics verse="1">und</lyrics>
+                    <lyrics verse="2">7920</lyrics>
+                </note>
+                <note date="8640.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="1440.0" xml:id="meico_c5c98042-2b08-4810-ac41-1a8933c9efae">
+                    <lyrics verse="1">Ros'</lyrics>
+                    <lyrics verse="2">8640</lyrics>
+                </note>
+                <note date="10080.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_cac540b4-9488-4adb-862e-395d51491fc9">
+                    <lyrics verse="1">hat</lyrics>
+                    <lyrics verse="2">10080</lyrics>
+                </note>
+                <note date="11520.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_8978bbc5-c99a-4b83-b1b4-bbd7f4833b95">
+                    <lyrics verse="1">nicht,</lyrics>
+                    <lyrics verse="2">11520</lyrics>
+                </note>
+                <note date="12960.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_f86c0f12-caa8-4432-8aa3-3cae77aad7e9">
+                    <lyrics verse="1">was</lyrics>
+                    <lyrics verse="2">12960</lyrics>
+                </note>
+                <note date="13680.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_9a811935-9a0b-4ffe-9297-04ae9aac322f">
+                    <lyrics verse="1">an</lyrics>
+                    <lyrics verse="2">13680</lyrics>
+                </note>
+                <note date="14400.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_c7537c94-591e-49a9-b29b-2720834b2871">
+                    <lyrics verse="1">Farb</lyrics>
+                    <lyrics verse="2">14400</lyrics>
+                </note>
+                <note date="15840.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_fd205d59-40cd-4634-8032-9f5cfa0c2895">
+                    <lyrics verse="1">und</lyrics>
+                    <lyrics verse="2">15840</lyrics>
+                </note>
+                <note date="17280.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_161e9e3f-354d-4984-a883-5d06ccee402f">
+                    <lyrics verse="1">Schein</lyrics>
+                    <lyrics verse="2">17280</lyrics>
+                </note>
+                <note date="18720.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_0423c8dc-b516-49f8-afbe-6b40d0452c14">
+                    <lyrics verse="1">dir</lyrics>
+                    <lyrics verse="2">18720</lyrics>
+                </note>
+                <note date="19440.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_1bf6765f-20a0-430b-ba63-0d4ad85fe678">
+                    <lyrics verse="1">möcht</lyrics>
+                    <lyrics verse="2">19440</lyrics>
+                </note>
+                <note date="20160.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_1b23201c-2c6a-4ad8-9640-6174d999c819">
+                    <lyrics verse="1">ähn-</lyrics>
+                    <lyrics verse="2">20160</lyrics>
+                </note>
+                <note date="21600.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_6223e43d-8b92-4add-a367-d7c27c3c4d5a">
+                    <lyrics verse="1">lich</lyrics>
+                    <lyrics verse="2">21600</lyrics>
+                </note>
+                <note date="23040.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_090429eb-0ac8-4a0f-a00e-6b0d78b20ebb">
+                    <lyrics verse="1">sein,</lyrics>
+                    <lyrics verse="2">23040</lyrics>
+                </note>
+                <note date="23760.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_f3c4abab-f998-49cf-b3d8-3d8a2bb32284">
+                    <lyrics verse="1">nur</lyrics>
+                    <lyrics verse="2">23760</lyrics>
+                </note>
+                <note date="24480.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_69833ad0-3ffd-4c88-81cb-bfea58d96343">
+                    <lyrics verse="1">daß</lyrics>
+                    <lyrics verse="2">24480</lyrics>
+                </note>
+                <note date="25200.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_f465a7d2-138a-4e4d-ab95-d792009ab1cc">
+                    <lyrics verse="1">dein</lyrics>
+                    <lyrics verse="2">25200</lyrics>
+                </note>
+                <note date="25920.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_7a1fd970-c9ad-44f8-80c0-7ea91b70f717">
+                    <lyrics verse="1">stol-</lyrics>
+                    <lyrics verse="2">25920</lyrics>
+                </note>
+                <note date="27360.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_e420af76-62b1-4583-b4b8-e4969182c2a1">
+                    <lyrics verse="1">zer</lyrics>
+                    <lyrics verse="2">27360</lyrics>
+                </note>
+                <note date="28800.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_6174d76d-3cbc-4511-b506-21db5857f72c">
+                    <lyrics verse="1">Mut</lyrics>
+                    <lyrics verse="2">28800</lyrics>
+                </note>
+                <note date="29520.0" midi.pitch="72.0" pitchname="c" accidentals="0.0" octave="4.0" duration="720.0" xml:id="meico_8ed12b2c-b97b-4069-a99e-9f599bb150cf">
+                    <lyrics verse="1">der</lyrics>
+                    <lyrics verse="2">29520</lyrics>
+                </note>
+                <note date="30240.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="720.0" xml:id="meico_5b8afd8e-ced0-4c33-8b9d-fcf208f9234a">
+                    <lyrics verse="1">Schön-</lyrics>
+                    <lyrics verse="2">30240</lyrics>
+                </note>
+                <note date="30960.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="720.0" xml:id="meico_55f18e2d-348e-45b9-8dce-86c78fd2c45c">
+                    <lyrics verse="1">heit</lyrics>
+                    <lyrics verse="2">30960</lyrics>
+                </note>
+                <note date="31680.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_53edcf41-4527-46f0-890b-1627f69ce72c">
+                    <lyrics verse="1">Un-</lyrics>
+                    <lyrics verse="2">31680</lyrics>
+                </note>
+                <note date="33120.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_f5c8750c-15f2-48bf-9c94-35853bbf3963">
+                    <lyrics verse="1">recht</lyrics>
+                    <lyrics verse="2">33120</lyrics>
+                </note>
+                <note xml:id="p1n33" date="34560.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0">
+                    <lyrics verse="1">tut,</lyrics>
+                    <lyrics verse="2">34560</lyrics>
+                </note>
+                <note date="35280.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_6a88ff25-8bcb-40f6-b5ba-03fc6d9e8d65">
+                    <lyrics verse="1">nur</lyrics>
+                    <lyrics verse="2">35280</lyrics>
+                </note>
+                <note date="36000.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_a502cabf-2f15-424d-99a5-47f955ab6b80">
+                    <lyrics verse="1">daß</lyrics>
+                    <lyrics verse="2">36000</lyrics>
+                </note>
+                <note date="36720.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_97968049-acff-4e64-a23b-8ef0cad33737">
+                    <lyrics verse="1">dein</lyrics>
+                    <lyrics verse="2">36720</lyrics>
+                </note>
+                <note date="37440.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_c4e332fa-ca7b-4e77-9f27-9d250bc0d5a3">
+                    <lyrics verse="1">stol-</lyrics>
+                    <lyrics verse="2">37440</lyrics>
+                </note>
+                <note date="38880.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_d80c8bf9-bc3c-40d0-b042-c2de34fd0fa0">
+                    <lyrics verse="1">zer</lyrics>
+                    <lyrics verse="2">38880</lyrics>
+                </note>
+                <note date="40320.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_247bf50a-09f2-4438-88c3-773711da08b1">
+                    <lyrics verse="1">Mut</lyrics>
+                    <lyrics verse="2">40320</lyrics>
+                </note>
+                <note date="41040.0" midi.pitch="72.0" pitchname="c" accidentals="0.0" octave="4.0" duration="720.0" xml:id="meico_023257fc-136e-4e32-9405-d94769ccefb2">
+                    <lyrics verse="1">der</lyrics>
+                    <lyrics verse="2">41040</lyrics>
+                </note>
+                <note date="41760.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="720.0" xml:id="meico_87a9e25c-e3c1-437a-8a3f-892286250e9d">
+                    <lyrics verse="1">Schön-</lyrics>
+                    <lyrics verse="2">41760</lyrics>
+                </note>
+                <note date="42480.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="720.0" xml:id="meico_bc37a966-3ebb-41f2-989b-badd5d3eec6f">
+                    <lyrics verse="1">heit</lyrics>
+                    <lyrics verse="2">42480</lyrics>
+                </note>
+                <note date="43200.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_7682305b-e717-4f33-a7d7-b298b2b99e8c">
+                    <lyrics verse="1">Un-</lyrics>
+                    <lyrics verse="2">43200</lyrics>
+                </note>
+                <note date="44640.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_dcde7593-a457-4816-a6f2-25d7c39ad112">
+                    <lyrics verse="1">recht</lyrics>
+                    <lyrics verse="2">44640</lyrics>
+                </note>
+                <note date="46080.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="2880.0" xml:id="meico_18961f8a-7f54-4479-beed-00d4502032b6">
+                    <lyrics verse="1">tut.</lyrics>
+                    <lyrics verse="2">46080</lyrics>
+                </note>
+            </score>
+        </dated>
+    </part>
+    <part name="Alto" number="2" midi.channel="1" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="2880.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_b78f942e-95ea-4591-b6dc-b4615f27bc18">
+                    <lyrics verse="1">Du</lyrics>
+                </note>
+                <note date="3600.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_d89472c6-22d9-44b2-b4c3-6982ab7687a3">
+                    <lyrics verse="1">mein</lyrics>
+                    <lyrics verse="2">3600</lyrics>
+                </note>
+                <note date="4320.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_2ba8516a-4207-4c07-ac98-4672daac05d0">
+                    <lyrics verse="1">ein-</lyrics>
+                </note>
+                <note date="5040.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_4e1faf70-d86d-4042-b887-c4b4480fbb1c">
+                    <lyrics verse="1">zig</lyrics>
+                    <lyrics verse="2">5040</lyrics>
+                </note>
+                <note date="5760.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_d545549d-566e-438b-a536-1c8810e34614">
+                    <lyrics verse="1">Licht,</lyrics>
+                </note>
+                <note date="6840.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="360.0" xml:id="meico_f3fe687c-155e-424f-89ed-99880b315845">
+                    <lyrics verse="1">die</lyrics>
+                </note>
+                <note date="7200.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_853d8872-490e-4afb-a5c5-15c113be4cdc">
+                    <lyrics verse="1">Lil'</lyrics>
+                </note>
+                <note date="7920.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_4d464a89-febf-49ff-ac25-ef810b864d34">
+                    <lyrics verse="1">und</lyrics>
+                </note>
+                <note date="9360.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_07911e78-19a3-428e-b74d-3233b633f5fe">
+                    <lyrics verse="1">Ros'</lyrics>
+                    <lyrics verse="2">9360</lyrics>
+                </note>
+                <note date="10800.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_81d7bfcf-c244-4b08-84fa-ad9c01518e65">
+                    <lyrics verse="1">hat</lyrics>
+                    <lyrics verse="2">10800</lyrics>
+                </note>
+                <note date="11520.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="2880.0" xml:id="meico_c80cce6e-aa8c-4826-8007-d2305df1f575">
+                    <lyrics verse="1">nicht,</lyrics>
+                </note>
+                <note date="14400.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_37c3d58d-86a3-4a37-aa0d-6f1449b9c7de">
+                    <lyrics verse="1">was</lyrics>
+                </note>
+                <note date="15120.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_aecfe521-08d8-4a91-9193-5fce90ec2ed5">
+                    <lyrics verse="1">an</lyrics>
+                    <lyrics verse="2">15120</lyrics>
+                </note>
+                <note date="15840.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_406ab5fe-d70a-485b-b418-5a5cbe224d12">
+                    <lyrics verse="1">Farb</lyrics>
+                </note>
+                <note date="16560.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_c24c0ef8-09ca-4fd4-9148-df8d9958ad6d">
+                    <lyrics verse="1">und_</lyrics>
+                    <lyrics verse="2">16560</lyrics>
+                </note>
+                <note date="18000.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_d9521b81-369d-4225-bea2-076e02a0646a">
+                    <lyrics verse="1"/>
+                    <lyrics verse="1">Schein</lyrics>
+                    <lyrics verse="2">18000</lyrics>
+                </note>
+                <note date="19440.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_c5266263-954d-47dc-aa3d-c8981efe80fb">
+                    <lyrics verse="1">dir</lyrics>
+                </note>
+                <note date="20520.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="360.0" xml:id="meico_327ae755-b062-4815-a975-336c9bb48768">
+                    <lyrics verse="1">möcht</lyrics>
+                    <lyrics verse="2">20520</lyrics>
+                </note>
+                <note date="20880.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_a2754952-2f22-495d-baa7-83fee89adecd">
+                    <lyrics verse="1">ähn-</lyrics>
+                    <lyrics verse="2">20880</lyrics>
+                </note>
+                <note date="22320.0" midi.pitch="59.0" pitchname="b" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_38310ef0-6d51-4bde-ae55-1bb67de60099">
+                    <lyrics verse="1">lich</lyrics>
+                    <lyrics verse="2">22320</lyrics>
+                </note>
+                <note date="23040.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_8786af2f-a4ea-46c0-a6fc-b6fa1caa5c13">
+                    <lyrics verse="1">sein,</lyrics>
+                </note>
+                <note date="25200.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_d35b4778-5636-448a-a83d-4a07d73ee432">
+                    <lyrics verse="1">nur</lyrics>
+                </note>
+                <note date="25920.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_4d241255-1dde-4bc3-b1ad-c44763f6bab3">
+                    <lyrics verse="1">daß</lyrics>
+                </note>
+                <note date="26640.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_05e53639-1b0a-40a4-96b4-1a236f333346">
+                    <lyrics verse="1">dein</lyrics>
+                    <lyrics verse="2">26640</lyrics>
+                </note>
+                <note date="27360.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_ff91e485-2fac-4c2f-8a7d-e634096d00f6">
+                    <lyrics verse="1">stol-</lyrics>
+                </note>
+                <note date="28080.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_4a860906-c5ea-46ea-915d-bd450a0937d3">
+                    <lyrics verse="1">zer</lyrics>
+                    <lyrics verse="2">28080</lyrics>
+                </note>
+                <note date="28800.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_e402d5ed-b1e2-40e7-8de1-8830a24b3790">
+                    <lyrics verse="1">Mut</lyrics>
+                </note>
+                <note date="29880.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="360.0" xml:id="meico_48fa4033-0386-4744-a50f-c183314d4244">
+                    <lyrics verse="1">der</lyrics>
+                    <lyrics verse="2">29880</lyrics>
+                </note>
+                <note date="30240.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_4256c5f0-011f-41d1-8451-884eb0b4c6af">
+                    <lyrics verse="1">Schön-</lyrics>
+                </note>
+                <note xml:id="p2n31" date="30960.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1080.0">
+                    <lyrics verse="1">heit_</lyrics>
+                </note>
+                <note xml:id="p2n32" date="32040.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="360.0">
+                    <lyrics verse="1"/>
+                    <lyrics verse="2">32040</lyrics>
+                </note>
+                <note date="32400.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_6782252c-0d8d-460e-ba3e-5abef965ce43">
+                    <lyrics verse="1">Un-</lyrics>
+                    <lyrics verse="2">32400</lyrics>
+                </note>
+                <note date="33840.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_d6d8b926-84bb-4878-aa54-049f83e1a6dd">
+                    <lyrics verse="1">recht</lyrics>
+                    <lyrics verse="2">33840</lyrics>
+                </note>
+                <note date="34560.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_5f69bde3-ca9c-425f-b7a3-c3eb5b4cfa5b">
+                    <lyrics verse="1">tut,</lyrics>
+                </note>
+                <note date="36720.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_02a707f2-6edc-474f-a797-3ce3cc6210f8">
+                    <lyrics verse="1">nur</lyrics>
+                </note>
+                <note date="37440.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_99f85ca2-2f19-4e75-bd09-72d1b146f236">
+                    <lyrics verse="1">daß</lyrics>
+                </note>
+                <note date="38160.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_16dc2d67-61bd-459c-af2a-31f59fc371db">
+                    <lyrics verse="1">dein</lyrics>
+                    <lyrics verse="2">38160</lyrics>
+                </note>
+                <note date="38880.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_e1f16f4c-78eb-48cf-9192-1ed43c75a964">
+                    <lyrics verse="1">stol-</lyrics>
+                </note>
+                <note date="39600.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_b26bb22c-a7ba-4a90-b967-26c263b3fc48">
+                    <lyrics verse="1">zer</lyrics>
+                    <lyrics verse="2">39600</lyrics>
+                </note>
+                <note date="40320.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_6b20235e-637f-4fa4-88de-cd667e8dd466">
+                    <lyrics verse="1">Mut</lyrics>
+                </note>
+                <note date="41400.0" midi.pitch="69.0" pitchname="a" accidentals="0.0" octave="3.0" duration="360.0" xml:id="meico_e0d749e0-9c12-4845-beb6-eb76c72bc609">
+                    <lyrics verse="1">der</lyrics>
+                    <lyrics verse="2">41400</lyrics>
+                </note>
+                <note date="41760.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_18e5df52-4b62-47e8-ba37-d50cb068404d">
+                    <lyrics verse="1">Schön-</lyrics>
+                </note>
+                <note xml:id="p2n44" date="42480.0" midi.pitch="67.0" pitchname="g" accidentals="0.0" octave="3.0" duration="1080.0">
+                    <lyrics verse="1">heit_</lyrics>
+                </note>
+                <note xml:id="p2n45" date="43560.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="360.0">
+                    <lyrics verse="1"/>
+                    <lyrics verse="2">43560</lyrics>
+                </note>
+                <note date="43920.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_064323cd-2407-47a8-b7a8-4d6a48651f69">
+                    <lyrics verse="1">Un-</lyrics>
+                    <lyrics verse="2">43920</lyrics>
+                </note>
+                <note date="45360.0" midi.pitch="64.0" pitchname="e" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_76774be7-8095-42e2-a9b7-48d1b094e855">
+                    <lyrics verse="1">recht</lyrics>
+                    <lyrics verse="2">45360</lyrics>
+                </note>
+                <note date="46080.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="2880.0" xml:id="meico_81bf6505-632c-4d05-81a6-ebf4a13bc9de">
+                    <lyrics verse="1">tut.</lyrics>
+                </note>
+            </score>
+        </dated>
+    </part>
+    <part name="Tenor" number="3" midi.channel="2" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="2880.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_d9d92608-04d8-4e36-8330-f8d8f571b9ee">
+                    <lyrics verse="1">Du</lyrics>
+                </note>
+                <note date="3600.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_92455f85-b80e-4bb3-94b0-b57a1c793cd6">
+                    <lyrics verse="1">mein</lyrics>
+                </note>
+                <note date="4320.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="720.0" xml:id="meico_ce797a08-84c3-4832-8f3f-abb0677bb8c9">
+                    <lyrics verse="1">ein-</lyrics>
+                </note>
+                <note date="5040.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_4e5db888-8836-49af-bce7-3fced9e9c7a5">
+                    <lyrics verse="1">zig</lyrics>
+                </note>
+                <note date="5760.0" midi.pitch="53.0" pitchname="f" accidentals="0.0" octave="2.0" duration="2160.0" xml:id="meico_fb911a45-dbf0-4ff8-af2b-615d6777d103">
+                    <lyrics verse="1">Licht,</lyrics>
+                </note>
+                <note date="7920.0" midi.pitch="53.0" pitchname="f" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_031a249e-554a-4cae-98e1-a2e0550bb1c7">
+                    <lyrics verse="1">die</lyrics>
+                </note>
+                <note date="8640.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_73b95526-af31-4031-b932-e6c02ff0f598">
+                    <lyrics verse="1">Lil'</lyrics>
+                </note>
+                <note date="9360.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_e4effc3c-80db-4e12-97d3-b2495da276fb">
+                    <lyrics verse="1">und</lyrics>
+                </note>
+                <note date="10080.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="1080.0" xml:id="meico_e229469e-06ef-47b0-abc8-d996cdbc2416">
+                    <lyrics verse="1">Ros'</lyrics>
+                </note>
+                <note date="11160.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="360.0" xml:id="meico_8e4c01a7-7169-4e3c-bee2-a363f1fdd5d6">
+                    <lyrics verse="1">hat</lyrics>
+                </note>
+                <note date="11520.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="2880.0" xml:id="meico_41de939b-cf15-4185-9738-b68830543e50">
+                    <lyrics verse="1">nicht,</lyrics>
+                </note>
+                <note date="14400.0" midi.pitch="59.0" pitchname="b" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_d8673306-0161-4cf2-ad85-2346cb81eab0">
+                    <lyrics verse="1">was</lyrics>
+                </note>
+                <note date="15120.0" midi.pitch="59.0" pitchname="b" accidentals="0.0" octave="2.0" duration="720.0" xml:id="meico_3e094fbe-cfd6-44b4-b4d3-abdd82acfa27">
+                    <lyrics verse="1">an</lyrics>
+                </note>
+                <note date="15840.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_615f3643-0be9-49bb-add7-b7479672cdbd">
+                    <lyrics verse="1">Farb</lyrics>
+                </note>
+                <note date="16560.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="1440.0" xml:id="meico_0de75e0a-6007-4a13-a616-bfdf38d19612">
+                    <lyrics verse="1">und_</lyrics>
+                </note>
+                <note xml:id="p3n17" date="18000.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="720.0">
+                    <lyrics verse="1"/>
+                    <lyrics verse="1">Schein_</lyrics>
+                </note>
+                <note xml:id="meico_0d8211a4-051e-4613-b930-2fefcb0188dc" date="18720.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_fe256101-bc7c-4a0e-91d4-398913565da1" date="19080.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_04b2eff1-f93a-4669-8b77-684a676e5079" date="19440.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_9cd2da68-eb26-45b7-aec8-52b6a8a9ca05" date="19800.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="180.0"/>
+                <note xml:id="p3n22" date="19980.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="180.0">
+                    <lyrics verse="1"/>
+                </note>
+                <note date="20160.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_811f4d43-8910-49db-9823-c9d00913d0cb">
+                    <lyrics verse="1">dir</lyrics>
+                </note>
+                <note date="21240.0" midi.pitch="48.0" pitchname="c" accidentals="0.0" octave="2.0" duration="360.0" xml:id="meico_8d08eac3-71be-49d8-a5b0-e1f5d45c4370">
+                    <lyrics verse="1">möcht</lyrics>
+                </note>
+                <note date="21600.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="1080.0" xml:id="meico_0edf4b73-2e5d-43b7-ba12-652fe2edd989">
+                    <lyrics verse="1">ähn-</lyrics>
+                </note>
+                <note date="22680.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="360.0" xml:id="meico_86c7ab68-88ef-40e1-942a-a8721cf7d3e0">
+                    <lyrics verse="1">lich</lyrics>
+                </note>
+                <note date="23040.0" midi.pitch="48.0" pitchname="c" accidentals="0.0" octave="2.0" duration="1440.0" xml:id="meico_fbb70464-ba08-4fdf-9b89-b6555e3b13c5">
+                    <lyrics verse="1">sein,</lyrics>
+                </note>
+                <note date="25200.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_b72b6c5f-911f-4087-bf80-bf84dc99aa18">
+                    <lyrics verse="1">nur</lyrics>
+                </note>
+                <note date="25920.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="720.0" xml:id="meico_7ea89e4c-b07e-47e6-ad5f-a0c9488bad4e">
+                    <lyrics verse="1">daß</lyrics>
+                </note>
+                <note date="26640.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_0d6c5c0e-bde8-4d18-bd9f-f54aa9476fbd">
+                    <lyrics verse="1">dein</lyrics>
+                </note>
+                <note date="27360.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_8957ba2e-3647-46be-9e85-99ca367f3fb5">
+                    <lyrics verse="1">stol-</lyrics>
+                </note>
+                <note date="28080.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="720.0" xml:id="meico_53ca9ec5-7e0e-45ea-9b4e-15d4d12f50e6">
+                    <lyrics verse="1">zer</lyrics>
+                </note>
+                <note date="28800.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="1080.0" xml:id="meico_4ebcb941-fc78-491b-906a-d878f6c32cf8">
+                    <lyrics verse="1">Mut</lyrics>
+                </note>
+                <note date="29880.0" midi.pitch="53.0" pitchname="f" accidentals="0.0" octave="2.0" duration="360.0" xml:id="meico_6d141bef-6438-45f6-8484-95c37f0102e8">
+                    <lyrics verse="1">der</lyrics>
+                </note>
+                <note xml:id="p3n35" date="30240.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="360.0">
+                    <lyrics verse="1">Schön-</lyrics>
+                </note>
+                <note xml:id="meico_31e83ef1-b76c-43b8-9a40-5ee7b368e5be" date="30600.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_a6467156-b6d1-46b9-b37b-da23318bf368" date="30960.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_45763538-a85c-40d6-ad7d-a32c4c2fdb72" date="31320.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="360.0"/>
+                <note xml:id="p3n39" date="31680.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="1080.0"/>
+                <note date="32760.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="360.0" xml:id="meico_4a89881f-ffee-4190-b6a8-5490d52e312d">
+                    <lyrics verse="1">heit</lyrics>
+                </note>
+                <note date="33120.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_15094d5a-b0b8-4294-a09d-15df02fd5200">
+                    <lyrics verse="1">Un-</lyrics>
+                </note>
+                <note date="34200.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="360.0" xml:id="meico_8fb4b54b-7d61-4dac-aaba-84bb5b6828b3">
+                    <lyrics verse="1">recht</lyrics>
+                </note>
+                <note date="34560.0" midi.pitch="53.0" pitchname="f" accidentals="0.0" octave="2.0" duration="1440.0" xml:id="meico_572938de-f34d-449f-81a5-4df0a8cc7940">
+                    <lyrics verse="1">tut,</lyrics>
+                </note>
+                <note date="36720.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_ac4465bd-b1cc-49e2-ad6f-a72872d634c4">
+                    <lyrics verse="1">nur</lyrics>
+                </note>
+                <note date="37440.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="720.0" xml:id="meico_830ab751-6470-4bbd-b3e8-5135a586bf02">
+                    <lyrics verse="1">daß</lyrics>
+                </note>
+                <note date="38160.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_a411c8c4-cef0-40db-9656-4261922896d7">
+                    <lyrics verse="1">dein</lyrics>
+                </note>
+                <note date="38880.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="720.0" xml:id="meico_f9cb4be6-d786-49e7-8ce9-1673567c1da1">
+                    <lyrics verse="1">stol-</lyrics>
+                </note>
+                <note date="39600.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="720.0" xml:id="meico_b3627384-3ceb-4ea0-ad3d-9a248b60d5d3">
+                    <lyrics verse="1">zer</lyrics>
+                </note>
+                <note date="40320.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="1080.0" xml:id="meico_009b293c-1267-489b-8359-ba92d220d1f2">
+                    <lyrics verse="1">Mut</lyrics>
+                </note>
+                <note date="41400.0" midi.pitch="53.0" pitchname="f" accidentals="0.0" octave="2.0" duration="360.0" xml:id="meico_3d9bab0b-6623-42f2-b814-f09c0f2b1a17">
+                    <lyrics verse="1">der</lyrics>
+                </note>
+                <note xml:id="p3n51" date="41760.0" midi.pitch="55.0" pitchname="g" accidentals="0.0" octave="2.0" duration="360.0">
+                    <lyrics verse="1">Schön-</lyrics>
+                </note>
+                <note xml:id="meico_f931bfc2-59c1-4072-9947-7890681bf13d" date="42120.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_fefee44e-e000-47ba-af22-5b44fce7195a" date="42480.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="360.0"/>
+                <note xml:id="meico_7437d7ce-96d9-42c8-9eae-d77d7e03a6e0" date="42840.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="360.0"/>
+                <note xml:id="p3n55" date="43200.0" midi.pitch="62.0" pitchname="d" accidentals="0.0" octave="3.0" duration="1080.0"/>
+                <note date="44280.0" midi.pitch="57.0" pitchname="a" accidentals="0.0" octave="2.0" duration="360.0" xml:id="meico_f9f9091c-731b-4dd0-a062-0ff96037d95d">
+                    <lyrics verse="1">heit</lyrics>
+                </note>
+                <note date="44640.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="1080.0" xml:id="meico_daa02da9-0d63-4270-8ee5-00091bb245a3">
+                    <lyrics verse="1">Un-</lyrics>
+                </note>
+                <note date="45720.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="360.0" xml:id="meico_76aa3a39-55a4-45d9-8b29-96d1b61b98c6">
+                    <lyrics verse="1">recht</lyrics>
+                </note>
+                <note date="46080.0" midi.pitch="53.0" pitchname="f" accidentals="0.0" octave="2.0" duration="2880.0" xml:id="meico_fe47d864-244a-456d-925d-22e812fa02aa">
+                    <lyrics verse="1">tut.</lyrics>
+                </note>
+            </score>
+        </dated>
+    </part>
+</msm>
