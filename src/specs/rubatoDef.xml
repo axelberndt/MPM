@@ -19,6 +19,15 @@
         <tei:empty/>
     </tei:content>
     
+    <tei:constraintSpec scheme="schematron" ident="rubatoDef_ancestor_constraint">
+        <tei:desc>This element is allowed only within the <tei:gi>rubatoStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
+        <tei:constraint>
+            <schematron:assert test="parent::*/parent::mpm:rubatoStyles">
+                Element <schematron:value-of select="local-name()"/> is allowed only as child of a styleDef that is child of a rubatoStyles element.
+            </schematron:assert>
+        </tei:constraint>
+    </tei:constraintSpec>
+    
     <tei:attList>
         <tei:attDef ident="frameLength" usage="req" mode="change">
             <tei:desc>The length of a rubato frame (in symbolic time), i.e. the time window within which the timing deviation takes place and compensates again.</tei:desc>
@@ -35,15 +44,6 @@
             </tei:remarks>
         </tei:attDef>
     </tei:attList>
-    
-    <tei:constraintSpec scheme="schematron" ident="rubatoDef_ancestor_constraint">
-        <tei:desc>This element is allowed only within the <tei:gi>rubatoStyles</tei:gi>/<tei:gi>styleDef</tei:gi> environment.</tei:desc>
-        <tei:constraint>
-            <schematron:assert test="parent::*/parent::mpm:rubatoStyles">
-                Element <schematron:value-of select="local-name()"/> is allowed only as child of a styleDef that is child of a rubatoStyles element.
-            </schematron:assert>
-        </tei:constraint>
-    </tei:constraintSpec>
     
     <tei:exemplum>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
