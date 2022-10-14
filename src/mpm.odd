@@ -244,13 +244,6 @@
                     <tei:hi style="color:blue;">&#8595;</tei:hi> <tei:lb/>
                     <tei:hi style="color:blue;">date in physical time (milliseconds)</tei:hi></tei:p>
 
-                <!--
-                <tei:figure>
-                    <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/timingPipeline.png" height="310px"/>
-                    <tei:head>The timing pipeline shows the sequence of timing computation steps and in which domain the computations operate (symbolic or physical).</tei:head>
-                </tei:figure>
-                -->
-                
                 <tei:div type="chapter">
                     <tei:head>Tempo</tei:head>
                     <tei:p>Tempo information can be located in the <tei:gi>header</tei:gi> and <tei:gi>dated</tei:gi> environment. In the header, tempo styles can be defined. A tempo style is, basically, a lookup table that associates literal tempo instructions with numerical values (in beats per minute). These can then be used in the <tei:gi>tempoMap</tei:gi> as shown in the following example.</tei:p>
@@ -657,22 +650,22 @@
             <tei:div type="chapter">
                 <tei:head>Ornamentation</tei:head>
                 
-                <tei:p>Musical ornamentation and embellishment is a complex conglomeration of effects to the music. It may affect the way a group of events/notes are played or alter their chronological sequence (e.g. through arpeggiations). It might add further notes (e.g. grace notes and passing notes) or even replace the musical material. The current state of research is still rather fragmented and far away from a cohesive, theoretical model. Therefore, MPM's ornamentation section is yet very basic and desires substantial extensions with future in-depth research. In MPM, an ornament as defined by a series of transformations. These describe how the musical material, that it is applied to, is altered. The following transformations are currently available.</tei:p>
+                <tei:p>Musical ornamentation and embellishment is a complex conglomeration of effects to the music. It may affect the way a group of events/notes are played or alter their chronological sequence (e.g. through arpeggiations). It might add further notes (e.g. grace notes and passing notes) or even replace the musical material. The current state of research is still rather fragmented and far away from a cohesive, theoretical model. Therefore, MPM's ornamentation section is yet very basic and desires substantial extensions with future in-depth research. In MPM, an ornament is defined by a series of transformations. These describe how the musical material, that it is applied to, is altered. The following transformations are currently available.</tei:p>
 
                 <tei:list type="gloss">
                     <tei:label><tei:gi>temporalSpread</tei:gi></tei:label>
-                    <tei:item>This transformer offsets the notes at a given time by a certain amount defined by a power function. The offset window starts at initial date - <tei:att>frame.start</tei:att> and it ends at initial date - <tei:att>frame.start</tei:att> + <tei:att>frameLength</tei:att>. The unit of these offsets can be "ticks" (default) or "milliseconds", as specified by <tei:att>time.unit</tei:att>. The notes will be distributed over this time frame, just as with an arpeggiated chord. Their placement can be further refined by <tei:att>intensity</tei:att> which sets the course of a power function (default is 1.0 for an equidistant placement). The offset of the notes can get further treatment via <tei:att>noteoff.shift</tei:att>. By default, the offset remains at its initial date, so the notes end at he same time as before they were offset. Setting <tei:att>noteoff.shift</tei:att> true shifts the offset by the same amount as the note's onset. If <tei:att>noteoff.shift</tei:att> is set "monoponic" the notes are played sequentially and non-overlapping.</tei:item>
+                    <tei:item>This transformer offsets the notes at a given time by a certain amount defined by a power function. The offset window starts at initial date - <tei:att>frame.start</tei:att> and it ends at initial date - <tei:att>frame.start</tei:att> + <tei:att>frameLength</tei:att>. The unit of these offsets can be "ticks" (default) or "milliseconds", as specified by <tei:att>time.unit</tei:att>. The notes will be distributed over this time frame, just as with an arpeggiated chord. Their placement can be further refined by <tei:att>intensity</tei:att> which sets the course of a power function (default is 1.0 for an equidistant placement). The offset of the notes can get further treatment via <tei:att>noteoff.shift</tei:att>. By default, the offset remains at its initial date, so the notes end at he same time as before the offset. Setting <tei:att>noteoff.shift</tei:att> true shifts the offset by the same amount as the note's onset. If <tei:att>noteoff.shift</tei:att> is set "monoponic" the notes are played sequentially and non-overlapping.</tei:item>
 
                     <tei:label><tei:gi>dynamicsGradient</tei:gi></tei:label>
-                    <tei:item>This transformer adds deviations to the ornament's notes underlying dynamics. Following the same concept as metrical accentuation this can feature a constant or linear course, specified by <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att>.</tei:item>
+                    <tei:item>This transformer adds dynamics to an ornament. Following the same concept as metrical accentuation this can feature a constant or linear course, specified by <tei:att>transition.from</tei:att> and <tei:att>transition.to</tei:att>, both in [-1.0, 1.0] where 1.0 means maximum accentuation and -1.0 maximum restraint.</tei:item>
                 </tei:list>
                     
                 <tei:figure>
                     <tei:graphic url="https://raw.githubusercontent.com/axelberndt/MPM/master/figures/modelling_an_arpeggio.png" height="300px"/>
-                    <tei:head>Defining arpeggio ornaments with MPM's ornamentation transformers <tei:gi>temporalSpread</tei:gi> and <tei:gi>dynamicsGradient</tei:gi>.</tei:head>
+                    <tei:head>Defining arpeggio ornaments with MPM's ornamentation transformers <tei:gi>temporalSpread</tei:gi> and <tei:gi>dynamicsGradient</tei:gi>. The modelling of arpeggios is more deeply discussed in <tei:ref target="https://github.com/axelberndt/MPM/issues/55">this issue</tei:ref>.</tei:head>
                 </tei:figure>
                 
-                <tei:p>As ornaments can become relatively complex, they are generally defined in the <tei:gi>header</tei:gi>'s <tei:gi>ornamentationStyles</tei:gi> and referenced in the <tei:gi>ornamentationMap</tei:gi>. In the following code example we define arpeggio in two styles and apply one via <tei:gi>ornament</tei:gi> in the <tei:gi>ornamentationMap</tei:gi>.</tei:p>
+                <tei:p>As ornaments can become relatively complex, they are generally defined in the <tei:gi>header</tei:gi>'s <tei:gi>ornamentationStyles</tei:gi> and referenced in the <tei:gi>ornamentationMap</tei:gi>. In the following code example we define "arpeggio" in two styles and apply one via <tei:gi>ornament</tei:gi> in the <tei:gi>ornamentationMap</tei:gi>.</tei:p>
                 
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <header>
@@ -684,7 +677,7 @@
                                 </ornamentDef>
                                 <styleDef name="your style">
                                     <ornamentDef name="arpeggio">
-                                        <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
+                                        <dynamicsGradient transition.from="0.5" transition.to="-1.0"/>
                                         <temporalSpread frame.start="0.0" frameLength="300.0" time.unit="milliseconds" intensity="0.5" noteoff.shift="false"/>
                                     </ornamentDef>
                                 </styleDef>
@@ -699,7 +692,7 @@
                     </dated>
                 </egXML>
                 
-                <tei:p>Attribute <tei:att>scale</tei:att> (optional, default value is 0.0) has the same function as in <tei:gi>accentuationPattern</tei:gi>, it scales the ornament's dynamics gradient to loudness/velocity values. With <tei:att>note.order</tei:att> (optional) we can specify which notes are part of the ornament and in which sequence. Possible values are "ascending pitch" (order all notes in the scope at the <tei:att>date</tei:att> by increasing pitch), "descending pitch" (opposite of "ascending pitch"), or a space separated list of note ID references.</tei:p>
+                <tei:p>In element <tei:gi>ornament</tei:gi> attribute <tei:att>scale</tei:att> (optional, default value is 0.0) has the same function as in <tei:gi>accentuationPattern</tei:gi>, it scales the ornament's dynamics gradient to loudness/velocity values. With <tei:att>note.order</tei:att> (optional) we can specify which notes in the current scope are part of the ornament and in which sequence. Possible values are "ascending pitch" (order all notes at <tei:att>date</tei:att> by increasing pitch), "descending pitch" (opposite of "ascending pitch"), or a space separated list of note ID references as in the above code example.</tei:p>
             </tei:div>
             
             <tei:div type="chapter">
