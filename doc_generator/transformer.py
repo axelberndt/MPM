@@ -40,6 +40,10 @@ def body_to_chapters(body):
                 elem.tag = 'ul'
             elif elem.tag == 'item':
                 elem.tag = 'li'
+            elif elem.tag == 'lb':
+                elem.tag = 'br'
+            elif elem.tag == 'hi':
+                elem.tag = 'span'
             elif elem.tag == 'ref':
                 elem.tag = 'a'
                 elem.set('href', elem.get('target').strip())
@@ -118,6 +122,10 @@ def element_to_string(root):
                 child.tag = 'ul'
             elif child.tag == 'item':
                 child.tag = 'li'
+            elif child.tag == 'lb':
+                child.tag = 'br'
+            elif child.tag == 'hi':
+                child.tag = 'span'
             elif child.tag == 'ref':
                 child.tag = 'a'
                 child.set('href', '#' + child.get('target').strip())

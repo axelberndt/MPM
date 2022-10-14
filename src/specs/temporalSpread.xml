@@ -5,7 +5,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0">
     <tei:gloss>temporal spread</tei:gloss>
     
-    <tei:desc>The <tei:gi>temporalSpread</tei:gi> transformer offsets all elements at a given time by a certain amount defined by a power function</tei:desc>
+    <tei:desc>The <tei:gi>temporalSpread</tei:gi> transformer offsets all elements at a given time by a certain amount defined by a power function.</tei:desc>
     
     <tei:classes>
         <tei:memberOf key="att.id"/>
