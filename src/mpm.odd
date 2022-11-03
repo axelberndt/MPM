@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="2.1.3"/>
+                <tei:edition n="2.1.4"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -68,6 +68,7 @@
                     <tei:item>Added documentation of the ornamentation features to the guidelines.</tei:item>
                 </tei:list>
             </tei:change>
+            <tei:change status="2.1.4" who="Axel Berndt">Value range of attribute <tei:att>frameLength</tei:att> of element <tei:gi>temporalSpread</tei:gi> must be greater or equal to 0.0. Negative values are not allowed, at least in this context.</tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
     
