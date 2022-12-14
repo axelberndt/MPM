@@ -2,10 +2,12 @@
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
     <metadata>
         <author>Axel Berndt</author>
-        <comment>This MPM has been generated from 'Albert - Du mein einzig Licht.mei' using the meico MEI converter.</comment>
+        <comment>This MPM contains two performances. 'Like a robot' is a nearly minimal performance that defines only a constant tempo and a default articulation for all notes. 'Axel Berndt' is an elaborate performance that demonstrates the use of macro timing (tempo) and micro timing (rubato) features, Dynamics and articulation. The global asynchrony reduces the initial rest. Timing imprecision adds a certain amount of random offsets to all notes, emulating the non-systematic deviations from exact timing in human musicians' performances. This performance is annotated in the MPM Toolbox Score tab. An audio rendering of this performance is also provided.</comment>
         <relatedResources>
-            <resource uri="D:\Arbeit\Software\Java\MPM Toolbox\test files\Heinrich Albert - Du mein einzig Licht\Albert - Du mein einzig Licht.mei" type="mei" xmlns="http://www.cemfi.de/mpm/ns/1.0"/>
-            <resource uri="D:\Arbeit\Software\Java\MPM Toolbox\test files\Heinrich Albert - Du mein einzig Licht\Albert - Du mein einzig Licht.msm" type="msm" xmlns="http://www.cemfi.de/mpm/ns/1.0"/>
+            <resource uri="Albert - Du mein einzig Licht.mei" type="mei"/>
+            <resource uri="Albert - Du mein einzig Licht.msm" type="msm"/>
+            <resource uri="Du mein einzig Licht.png" type="png"/>
+            <resource uri="Axel Berndt performance rendering.mp3" type="mp3"/>
         </relatedResources>
     </metadata>
     <performance name="Axel Berndt" pulsesPerQuarter="720">
@@ -225,8 +227,7 @@
             <header>
                 <articulationStyles>
                     <styleDef name="robot">
-                        <articulationDef name="nonlegato" absoluteDurationChange="-60.0"/>
-                        <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                        <articulationDef name="nonlegato" absoluteDurationChange="-60.0"/> 
                     </styleDef>
                 </articulationStyles>
             </header>
