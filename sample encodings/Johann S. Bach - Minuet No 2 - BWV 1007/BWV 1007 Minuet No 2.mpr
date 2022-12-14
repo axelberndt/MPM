@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpmToolboxProject>
+    <msm file="BWV 1007 Minuet No 2.msm"/>
+    <mpm file="BWV 1007 Minuet No 2.mpm"/>
+    <score overlayElementSize="0">
+        <page file="BWV 1007 Minuet No 2 - copy by Anna Magdalena Bach.png" width.pixels="2027" height.pixels="1015">
+            <note ref="meico_702a3476-eecb-4d19-a022-c18cdac9265c" x="717.0" y="177.0"/>
+            <note ref="meico_2620bf0a-9626-4844-97a2-62bab5bcbf64" x="1220.0" y="603.0"/>
+            <note ref="meico_49bb0128-5e0f-4389-943b-383c64bf6140" x="1524.0" y="636.0"/>
+            <note ref="meico_3571449b-f340-4656-9b35-6b7fb5d87d4f" x="225.0" y="936.0"/>
+            <note ref="meico_b6db0044-1413-4f84-afd6-418b828bc3f9" x="1595.0" y="631.0"/>
+            <note ref="meico_5f34e204-6f63-4474-bdb1-bb03f1199fa7" x="349.0" y="848.0"/>
+            <note ref="meico_4926ad46-a8f3-42df-a68f-b2fc8cc1a55b" x="1008.0" y="85.0"/>
+            <note ref="meico_fc57e7aa-9e95-4632-a86a-1831ce4efc6d" x="1352.0" y="134.0"/>
+            <note ref="meico_ccdd85f8-56e3-4157-b087-e80ef0b34dde" x="1898.0" y="371.0"/>
+            <note ref="meico_3849fa13-48f9-43af-9833-1006a4a2a7f3" x="820.0" y="808.0"/>
+            <note ref="meico_8b4146fb-4c4e-4088-bb57-82dac362a66c" x="330.0" y="352.0"/>
+            <note ref="meico_39d92c03-2778-4855-bbd8-7a69c0bc429d" x="1144.0" y="310.0"/>
+            <note ref="meico_8e04f720-30e8-4c64-80cc-daf1edd31060" x="579.0" y="604.0"/>
+            <note ref="meico_e3017f5d-33a9-4881-945b-8ef65cfdf6e2" x="490.0" y="890.0"/>
+            <note ref="meico_892c226b-c75c-47b0-a230-5a02a905ef08" x="955.0" y="624.0"/>
+            <note ref="meico_24baaf50-0918-4f06-923d-85128f46ae6b" x="1042.0" y="583.0"/>
+            <note ref="meico_9ec9f78c-2144-49d9-8c6a-e1b4f7d038c2" x="1509.0" y="91.0"/>
+            <note ref="meico_71909d42-9da3-449c-8e02-a354f02525a3" x="1042.0" y="567.0"/>
+            <note ref="meico_36a2eecd-3149-407e-9d8c-da5579b87305" x="528.0" y="489.0"/>
+            <note ref="meico_4e61d03c-7585-4809-ab1d-522a47b807ce" x="602.0" y="82.0"/>
+            <note ref="meico_610c4fd9-9423-491e-8ab1-c2be096dc325" x="253.0" y="624.0"/>
+            <note ref="meico_3ce7e8df-55b4-4c5e-aac8-61d8295d3a5a" x="1448.0" y="266.0"/>
+            <note ref="meico_4090fdad-3de6-4920-ac0a-9955a01c5fea" x="1521.0" y="620.0"/>
+            <note ref="meico_b0cbda96-e76c-496b-8fff-a0a2183c1545" x="1194.0" y="627.0"/>
+            <note ref="meico_0115da8f-a3b6-46ee-8ac1-f66d963fe038" x="921.0" y="653.0"/>
+            <note ref="meico_7a92f20b-317a-4f69-be0d-c3b75dbe29c4" x="1145.0" y="326.0"/>
+            <note ref="meico_b2d9a880-750e-4a16-acf4-257ea26ec054" x="1417.0" y="682.0"/>
+            <note ref="meico_8dc30dd2-5471-4a11-a956-fadba4937b31" x="1762.0" y="644.0"/>
+            <note ref="meico_fddfc91b-903e-4c97-8ddc-26c75f32ee30" x="1759.0" y="630.0"/>
+            <note ref="meico_b32d2cd4-a325-4632-af5c-da156d556ca6" x="692.0" y="131.0"/>
+            <note ref="meico_bf9553fd-f3d6-401c-8c79-4816a2a6a3e4" x="731.0" y="852.0"/>
+            <note ref="meico_e123611b-c32f-4886-899d-c08e50370742" x="1578.0" y="342.0"/>
+            <note ref="meico_ac84644f-83b4-42a5-920c-1ff3e9caad29" x="1093.0" y="97.0"/>
+            <note ref="meico_41caca5a-f8cc-4f27-a1d4-f7c4078d8336" x="918.0" y="635.0"/>
+            <note ref="meico_1725b8ef-210c-4089-97aa-36a8986470ef" x="1835.0" y="364.0"/>
+            <note ref="meico_cc704b88-5857-4206-9b82-44e3893a3412" x="1714.0" y="385.0"/>
+            <note ref="meico_8c88d7f1-5a49-4a3d-a3e7-6885509dac9b" x="899.0" y="823.0"/>
+            <note ref="meico_92acee82-63f6-4208-ae43-d0abeab38ea3" x="488.0" y="504.0"/>
+            <note ref="meico_07e86404-82f2-4340-b4e8-613992c0063a" x="1639.0" y="83.0"/>
+            <note ref="meico_d5c991c8-0e42-4752-9985-069fd42681e9" x="249.0" y="608.0"/>
+            <note ref="meico_05625d8b-4522-46f8-afec-731af651f46a" x="289.0" y="367.0"/>
+            <note ref="meico_2828210d-18c0-4089-9be1-2a54a6077df8" x="850.0" y="844.0"/>
+            <note ref="meico_22900a19-2c9f-4e98-83dc-3d2fec58c099" x="693.0" y="566.0"/>
+            <note ref="meico_998548ee-f3b1-494f-b9f5-4dd699a6a8de" x="1253.0" y="546.0"/>
+            <note ref="meico_fb98991e-dbbd-484d-ad50-210172609e99" x="927.0" y="342.0"/>
+            <note ref="meico_8b14fc52-f586-48cd-a272-a3aa87990942" x="1140.0" y="157.0"/>
+            <note ref="meico_c6515dab-c02d-422d-b124-2be9e45d503d" x="367.0" y="407.0"/>
+            <note ref="meico_8ec55aef-2426-4231-b207-5ae044fa0bc6" x="920.0" y="137.0"/>
+            <note ref="meico_3d6c44c5-e853-4256-9ce3-fdfbbc52ea5e" x="1180.0" y="141.0"/>
+            <note ref="meico_78ed0250-07c9-4f8d-8fe7-38764f77ada3" x="413.0" y="393.0"/>
+            <note ref="meico_c945f8d3-b27e-4e81-b99a-b4143f3c86b9" x="1210.0" y="326.0"/>
+            <note ref="meico_de58ad93-5490-44f1-8027-4885706dc9a7" x="1009.0" y="100.0"/>
+            <note ref="meico_a8b3bcf4-9b1d-47b5-b791-79f6783c6f7c" x="616.0" y="581.0"/>
+            <note ref="meico_8a59a486-0b09-4398-bd5b-2ae9aa6c77a9" x="1483.0" y="297.0"/>
+            <note ref="meico_ab014ef0-3d59-4876-ad7d-c911f10e1537" x="1018.0" y="250.0"/>
+            <note ref="meico_13bd9b9e-0480-40b7-b899-fe1dae521299" x="328.0" y="336.0"/>
+            <note ref="meico_9650f29d-ba80-483f-9d04-e7188a4fab45" x="925.0" y="359.0"/>
+            <note ref="meico_8e06d54a-26b0-4c96-a656-bb5d085a1885" x="1833.0" y="349.0"/>
+            <note ref="meico_e0ce30cc-e00e-4cc1-9c43-fea3725a80ef" x="533.0" y="78.0"/>
+            <note ref="meico_5ce0fa4e-f205-483c-9794-1887b2386f67" x="1509.0" y="77.0"/>
+            <note ref="meico_3a3e3b6f-4d94-40e0-91e1-5a8f27528191" x="1820.0" y="583.0"/>
+            <note ref="meico_95ba35e0-05fd-43ae-865b-c0dfc4602d1e" x="1886.0" y="108.0"/>
+            <note ref="meico_d64f65a5-828d-4778-b43f-1cab9d0e3ee5" x="960.0" y="321.0"/>
+            <note ref="meico_26a08b0b-cb85-4384-9827-e519576348c9" x="795.0" y="796.0"/>
+            <note ref="meico_10856be8-d1db-4e91-93e3-ccf359bacbc7" x="1430.0" y="335.0"/>
+            <note ref="meico_38e3b4af-c562-454d-b9d5-0c2b507d0cda" x="562.0" y="823.0"/>
+            <note ref="meico_ea3bb97b-5a54-4b74-957a-0dccbbf64ab8" x="924.0" y="122.0"/>
+            <note ref="meico_f776170a-1ca2-4eae-afd3-6a89b9042b44" x="804.0" y="212.0"/>
+            <note ref="meico_6fdac2e5-ccab-41f0-8825-dbc6d92e6bef" x="1671.0" y="130.0"/>
+            <note ref="meico_efdef6db-6c56-4cda-8ea1-a4b178f9cb4a" x="1894.0" y="356.0"/>
+            <note ref="meico_93b5ee8e-346d-4364-ade1-292464fc1b33" x="258.0" y="339.0"/>
+            <note ref="meico_a6fd6137-e358-4619-ac90-39990b71f8e6" x="816.0" y="823.0"/>
+            <note ref="meico_5fd2c151-37b9-44d8-b6b5-6228ef9a56b0" x="637.0" y="132.0"/>
+            <note ref="meico_358c1cff-43c3-4d87-8a4e-d2ded3c5812d" x="1482.0" y="314.0"/>
+            <note ref="meico_17ead5e5-605d-4b9e-a6ce-71530f810533" x="1636.0" y="66.0"/>
+            <note ref="meico_b9c2ffe6-21fa-45fd-ac85-6e41d40bf94d" x="1637.0" y="358.0"/>
+            <note ref="meico_1d8471e3-16d1-49b4-b03f-5747681c0a1c" x="457.0" y="440.0"/>
+            <note ref="meico_3d8741b8-b0f9-4d4f-9e27-59657c356721" x="418.0" y="873.0"/>
+            <note ref="meico_d18032de-cc64-445f-afaa-a273c873d4f9" x="1567.0" y="77.0"/>
+            <note ref="meico_fddade8c-b61f-4ed0-8e48-a29fd1fff25c" x="1316.0" y="149.0"/>
+            <note ref="meico_8a00706b-831d-4141-9722-75469a795367" x="1823.0" y="599.0"/>
+            <note ref="meico_ed23b650-b1b5-41dd-bbb7-d2eba10a71b2" x="901.0" y="841.0"/>
+            <note ref="meico_013151b6-64e7-4041-a1f3-03fcd35ca58d" x="723.0" y="586.0"/>
+            <note ref="meico_d1cbd71e-7bd0-4c9d-b8bf-35f963b67912" x="527.0" y="522.0"/>
+            <note ref="meico_5a5d781b-c344-418d-8402-1aa6ee728cdd" x="1353.0" y="117.0"/>
+            <note ref="meico_af007aa5-8bfd-42bb-a3cd-4ffbc48895b3" x="603.0" y="68.0"/>
+            <note ref="meico_b9e878e5-c661-4989-958e-015ad2ce3ad3" x="1567.0" y="62.0"/>
+            <note ref="meico_d37c98bd-46f4-4cbc-8da2-bbc918350a5f" x="748.0" y="628.0"/>
+            <note ref="meico_ffaf89fe-61ee-4a15-ad99-af2043893764" x="1049.0" y="285.0"/>
+            <note ref="meico_4f2c6ee7-8bab-42a0-94cc-86662a7e2382" x="827.0" y="652.0"/>
+            <note ref="meico_cf838aba-e667-4332-8be8-8703d532b2ef" x="1209.0" y="192.0"/>
+            <note ref="meico_902da5b2-7a5f-4d38-ba3f-3353bb69b531" x="1609.0" y="356.0"/>
+            <note ref="meico_e5381a22-771e-4342-ba70-4232b846b42e" x="364.0" y="554.0"/>
+            <note ref="meico_8bf06e5b-8cd0-4c77-93b2-ff9d19223ac2" x="1772.0" y="400.0"/>
+            <note ref="meico_44732deb-33f0-47e4-98b9-a03e2856e720" x="262.0" y="902.0"/>
+            <note ref="meico_88200d8f-0b5f-45fc-8bd6-c82705449966" x="880.0" y="378.0"/>
+            <note ref="meico_ca819bec-f4b2-4b52-bd18-bb440ebd5a4b" x="603.0" y="343.0"/>
+            <note ref="meico_efa0e0dd-913d-4c99-9e46-cd11af84af2e" x="552.0" y="567.0"/>
+            <note ref="meico_649916a1-5b6d-4485-bccc-bd45ef54e72f" x="596.0" y="814.0"/>
+            <note ref="meico_f8b8393c-a618-428a-994a-546df4544207" x="1248.0" y="563.0"/>
+            <note ref="meico_8685da0c-e381-442c-8e22-d231954ca931" x="765.0" y="795.0"/>
+            <note ref="meico_42d4d13f-a85a-4dba-9361-48e62eec9a9f" x="1458.0" y="642.0"/>
+            <note ref="meico_cd2d199f-91a2-46b8-b119-2e965663ad04" x="254.0" y="357.0"/>
+            <note ref="meico_295b98b1-79b6-4a2d-9547-6ebd22a36984" x="1139.0" y="140.0"/>
+            <note ref="meico_df38ee8c-fb7f-459b-959e-30aa1e347d3e" x="1208.0" y="310.0"/>
+            <note ref="meico_2847a635-dad3-4908-8ae4-b98283c6749b" x="1093.0" y="82.0"/>
+            <note ref="meico_29559cbc-1a5b-43bc-aca8-19420bdf1dd3" x="1661.0" y="385.0"/>
+            <note ref="meico_96d5764b-e4a6-41a5-a707-81ed9e509925" x="1178.0" y="126.0"/>
+            <note ref="meico_cf0888f3-32ba-465f-afb5-7fcc3ee6e879" x="1253.0" y="351.0"/>
+            <note ref="meico_5cd53555-9c6c-4c03-b6d7-08b7af8138ab" x="223.0" y="917.0"/>
+            <note ref="meico_4d4a5651-e7a8-4e36-9bb9-a23d6f412624" x="1290.0" y="540.0"/>
+            <note ref="meico_18363bad-1a44-4870-aef2-75fe3ce12d85" x="1358.0" y="520.0"/>
+            <note ref="meico_5106dc14-66f5-4010-814a-0b3f46df25e7" x="1751.0" y="205.0"/>
+            <note ref="meico_5b9ccc97-482a-4e6e-a68d-04fa866d567a" x="1752.0" y="188.0"/>
+            <note ref="meico_9ab1339f-0bd9-4bcd-aadf-b2628cf1d052" x="552.0" y="551.0"/>
+            <note ref="meico_ed6b1705-035b-4834-94d0-2277be01f845" x="602.0" y="329.0"/>
+            <note ref="meico_d9596536-886c-4178-9029-4127344c9b01" x="974.0" y="916.0"/>
+            <note ref="meico_bc998407-6537-41c0-87b4-ff90480780fb" x="824.0" y="636.0"/>
+            <note ref="meico_7134fe89-685c-4c0e-8d64-e3ce4de654ef" x="1658.0" y="645.0"/>
+            <note ref="meico_0879c287-9f04-4215-bd41-42533fd158f2" x="1775.0" y="418.0"/>
+            <note ref="meico_a7a657a0-cea2-46b9-b016-b9d86cfa9d80" x="1290.0" y="525.0"/>
+            <note ref="meico_06a1f4be-a52f-458d-9fb2-f17cf430edbc" x="1106.0" y="609.0"/>
+            <note ref="meico_21cfff7e-335a-4b83-9044-0d750b0fa0c2" x="1394.0" y="354.0"/>
+            <note ref="meico_8f3c175b-fe74-4e62-a924-0abf14aed5de" x="1736.0" y="122.0"/>
+            <note ref="meico_ac37626d-0757-4d53-a3e5-70368646562e" x="338.0" y="588.0"/>
+            <note ref="meico_ecff8ca1-3760-401f-bfac-1ba3510bfa83" x="1562.0" y="616.0"/>
+            <note ref="meico_89d91f99-d27b-4cf9-8beb-5c88faf39282" x="382.0" y="847.0"/>
+            <note ref="meico_cdfeda19-153a-43f3-aa3a-847abf100723" x="788.0" y="585.0"/>
+            <note ref="meico_dc3d1eb8-14af-421e-807f-12c42f3a2bd6" x="526.0" y="539.0"/>
+            <note ref="meico_6bcbc468-d3eb-4bf9-bd28-e1ca2939702c" x="1354.0" y="378.0"/>
+            <note ref="meico_b071c859-0323-47f1-af28-45813f01ff9c" x="677.0" y="823.0"/>
+            <note ref="meico_554bd0c3-0adf-4612-8d43-b1af5fcc81f0" x="1104.0" y="590.0"/>
+            <note ref="meico_06fc0373-42ca-4713-8429-f4720585ddb2" x="1672.0" y="149.0"/>
+            <note ref="meico_2f163d52-1535-45e9-9595-4da16bcd52be" x="306.0" y="564.0"/>
+            <note ref="meico_2f084caf-2255-44e2-b5e7-06f5b73fb04d" x="598.0" y="794.0"/>
+            <note ref="meico_62ffc887-f364-49d9-bf9f-9d93a023a19b" x="790.0" y="812.0"/>
+            <note ref="meico_a154e99e-070e-4202-965d-5e3a9b879509" x="532.0" y="93.0"/>
+            <note ref="meico_7c9e63bd-d6ae-40bf-a7bb-eab14fb133e1" x="1653.0" y="628.0"/>
+            <note ref="meico_80b6d5bb-b427-4599-8c41-6f94af9e5c2d" x="983.0" y="603.0"/>
+            <note ref="meico_bf1b96e0-6894-46b2-b7d8-a9d92ee1f286" x="1789.0" y="601.0"/>
+            <note ref="meico_11940c9d-15ac-437d-adbf-46e523227df3" x="1792.0" y="618.0"/>
+            <note ref="meico_fcd5969f-155a-4c86-a68c-e3c32099337e" x="988.0" y="287.0"/>
+            <note ref="meico_f53ee0bc-1e27-4f75-8583-dad1d79707d3" x="706.0" y="363.0"/>
+            <note ref="meico_5b3a9333-96e7-4821-86be-027c8fe9c927" x="881.0" y="363.0"/>
+            <note ref="meico_50d15cb0-f8d6-4c55-876f-7bf2ac431047" x="1930.0" y="440.0"/>
+            <note ref="meico_e97b2a2d-a95c-4aaa-b036-d4f5bf88184b" x="1832.0" y="219.0"/>
+            <note ref="meico_c6771530-6e0f-493f-8f54-a24a53139f01" x="955.0" y="610.0"/>
+            <note ref="meico_ffd823aa-5466-4933-b634-cb17b1c05e69" x="487.0" y="520.0"/>
+            <note ref="meico_c83e6672-cb68-452d-8933-7ee02291fc71" x="1253.0" y="334.0"/>
+            <note ref="meico_80e97d4b-2afd-4678-b9ce-e1fb8fd402bf" x="1933.0" y="423.0"/>
+            <note ref="meico_ad319dc1-ae2b-44f6-8d17-9fa020be7558" x="565.0" y="101.0"/>
+            <note ref="meico_7fc9a96b-1433-4675-bed7-500f9a0f15c9" x="287.0" y="351.0"/>
+            <note ref="meico_27bcbe04-cd22-41e2-bc0c-0079b8b337d7" x="706.0" y="341.0"/>
+            <note ref="meico_503dbb9e-d4e5-4aa3-b6a6-53a0730d6c8f" x="787.0" y="601.0"/>
+            <note ref="meico_c1743b32-c99d-4453-a587-ea199f8bdc41" x="490.0" y="871.0"/>
+            <note ref="meico_ebd5c9c8-138f-4367-a381-bff97eef609b" x="1312.0" y="166.0"/>
+            <note ref="meico_24761900-f525-4e50-ac5e-cbb727fceb6e" x="1069.0" y="596.0"/>
+            <note ref="meico_e89592f7-894e-4d7c-b0ce-de638c8dbef4" x="1666.0" y="371.0"/>
+            <note ref="meico_ea628c47-4bdb-4d71-bb0e-73755b0b9fb4" x="1733.0" y="140.0"/>
+            <note ref="meico_a2b717a0-bc1b-4574-86bc-8ec8cecd0668" x="1191.0" y="609.0"/>
+            <note ref="meico_1621e5ef-0e00-4e9f-b181-f2f4ea7cfc05" x="1178.0" y="341.0"/>
+            <note ref="meico_5fdf81de-04fd-4dbf-b3a3-91c16904a9fd" x="1407.0" y="101.0"/>
+            <note ref="meico_bc65f485-94bd-4b15-ab59-cb2247a1f9c1" x="1452.0" y="281.0"/>
+            <note ref="meico_08081a49-d74d-4b08-b227-06a084c4a377" x="411.0" y="379.0"/>
+            <note ref="meico_b8bfdc52-9de3-43b9-89db-ddcd3a664078" x="1802.0" y="385.0"/>
+            <note ref="meico_46805701-2034-42c8-ac5a-9fa9ee6a9931" x="1598.0" y="94.0"/>
+            <note ref="meico_9625b4ae-29ae-431f-9e3d-722b2cc970b4" x="637.0" y="149.0"/>
+            <note ref="meico_105dddc6-74e0-4907-8d65-cb7dfcffc7ea" x="297.0" y="874.0"/>
+            <note ref="meico_06adbd11-ec49-406d-991a-865c21e56c31" x="1546.0" y="340.0"/>
+            <note ref="meico_297411b5-6885-40e8-b2e5-732cade8a723" x="1868.0" y="372.0"/>
+            <note ref="meico_e1f1598f-e818-4824-8563-42876f9dbd1f" x="1551.0" y="325.0"/>
+            <note ref="meico_a9d365f3-2c26-42f9-8014-77438642494b" x="281.0" y="596.0"/>
+            <note ref="meico_9b0c5a16-2fb7-4a9e-9ffd-9972c8da0439" x="1933.0" y="165.0"/>
+            <note ref="meico_e6380f69-a717-4cfc-9f32-4c2d1b7063ae" x="690.0" y="549.0"/>
+            <note ref="meico_44492f5d-9528-49c1-b59e-5daceb722cad" x="1016.0" y="267.0"/>
+            <note ref="meico_e0829987-24b9-476b-8279-1abc76a4b14f" x="529.0" y="471.0"/>
+            <note ref="meico_a5cfeb80-f3cb-48de-ab33-4de61a386e0e" x="1807.0" y="401.0"/>
+            <note ref="meico_1f09b708-d4ad-4f88-95cc-b9faeddb8eac" x="748.0" y="612.0"/>
+            <note ref="meico_6c8558f9-5381-4cab-9052-fdc4cf3dfe23" x="977.0" y="895.0"/>
+            <note ref="meico_95e089e5-ffd9-47fa-9f52-b44528efbb4a" x="1270.0" y="234.0"/>
+            <note ref="meico_0988299d-b4ab-4c40-b3d7-fcf63180be4b" x="1455.0" y="659.0"/>
+            <note ref="meico_8324f92c-95e5-45c0-8cfb-63dfa32f5cb7" x="1406.0" y="85.0"/>
+            <note ref="meico_f64c82dd-f661-4609-bc92-6396f75e5a2a" x="1117.0" y="287.0"/>
+            <note ref="meico_24e65d44-e09f-4c6e-a12f-cbc7f19a7401" x="463.0" y="534.0"/>
+            <note ref="meico_4b9aa215-cbc9-4009-a652-93dea391ad0a" x="567.0" y="88.0"/>
+            <note ref="meico_49cf8717-57ee-4128-a3f3-42bfeb05520d" x="1057.0" y="95.0"/>
+            <note ref="meico_87d662f4-c549-41e2-8825-16caa96ef419" x="1599.0" y="615.0"/>
+            <note ref="meico_43c2d3b2-7a82-4229-9ab8-39a36fb0f401" x="1415.0" y="665.0"/>
+            <note ref="meico_f3e977e8-911b-4dc9-b6c9-b891a78137fc" x="416.0" y="856.0"/>
+            <note ref="meico_a35bfbce-aded-4d8b-9821-d316c01f6078" x="1829.0" y="240.0"/>
+            <note ref="meico_65936cc9-54b0-4372-bb84-ce9693afbfa1" x="306.0" y="548.0"/>
+            <note ref="meico_3fdc93da-bfe6-4539-9e6c-a1cf7aa3acc8" x="1469.0" y="114.0"/>
+            <note ref="meico_837cf19c-7f85-4be2-941a-76a1e3cfb6d0" x="1393.0" y="337.0"/>
+            <note ref="meico_703b0e44-7f96-4eb9-8118-1ec2a1db3d59" x="1724.0" y="666.0"/>
+            <note ref="meico_1b9e8adb-f98e-4810-88b4-3825f0373fa3" x="1563.0" y="599.0"/>
+            <note ref="meico_4dc50af3-e1db-44b4-9f26-bd7564e854ad" x="454.0" y="456.0"/>
+            <note ref="meico_31f3f39b-8395-470d-b203-de08870babe5" x="1218.0" y="586.0"/>
+            <note ref="meico_f127da5c-c42b-489c-8e2c-c0bed4f6d088" x="1354.0" y="534.0"/>
+            <note ref="meico_6e1ef5b8-21e2-4d51-a98a-3afb3b31a1cd" x="279.0" y="582.0"/>
+            <note ref="meico_d4b2a00c-4754-490b-9503-9c4fc1e60709" x="716.0" y="192.0"/>
+            <note ref="meico_f01ea455-aafe-4365-a47e-0aa618b1898b" x="579.0" y="586.0"/>
+            <note ref="meico_f26036bf-14db-4a12-99a7-28ef29a0b89c" x="962.0" y="338.0"/>
+            <note ref="meico_77887477-23a8-48f8-aa17-c74bbec8b228" x="1316.0" y="404.0"/>
+            <note ref="meico_c0e899df-6914-457a-aabd-c2c5146d4908" x="1723.0" y="652.0"/>
+            <note ref="meico_1b735aef-c8de-417c-b4df-eea2032588df" x="1598.0" y="78.0"/>
+            <note ref="meico_38a0a65c-43c1-4974-99c5-d88e9ce1946e" x="263.0" y="884.0"/>
+            <note ref="meico_d2fe8e17-fc32-4011-a591-008e8603f49a" x="297.0" y="856.0"/>
+            <note ref="meico_80eec265-b027-4c31-a7dc-b4b2f093d016" x="1274.0" y="213.0"/>
+            <note ref="meico_b66cfc48-16be-410b-ac83-dc2220bd1242" x="990.0" y="588.0"/>
+            <note ref="meico_ea531a38-3559-4bec-b05c-bf8fd5902932" x="856.0" y="78.0"/>
+            <note ref="meico_0d7e4ed4-1cae-4cb4-b50e-235e04c8ca28" x="639.0" y="786.0"/>
+            <note ref="meico_2ba55c00-a3ef-4a26-9fa3-3f50204b506d" x="1607.0" y="372.0"/>
+            <note ref="meico_0c807a0b-7357-4ec5-9e6a-14aa2a7e45b6" x="520.0" y="862.0"/>
+            <note ref="meico_03c0bd39-43ae-4708-96f3-17ee714b5bd6" x="768.0" y="780.0"/>
+            <note ref="meico_140d0334-94aa-4359-a9ef-17cc1ae4fa34" x="638.0" y="804.0"/>
+            <note ref="meico_dddaa04e-5389-4ba5-8fea-8ed0fad3c945" x="676.0" y="807.0"/>
+            <note ref="meico_d20c71e5-457e-443e-999c-13fe3f50de36" x="987.0" y="302.0"/>
+            <note ref="meico_e00d1eba-7022-4d92-8085-678f894c652e" x="562.0" y="807.0"/>
+            <note ref="meico_f6208055-2808-488f-8c4f-af5ac6027c79" x="395.0" y="524.0"/>
+            <note ref="meico_67a7b0cb-c275-4d2b-8bef-b973282b9073" x="1575.0" y="356.0"/>
+            <note ref="meico_d7c18472-a102-4b71-bb02-a560a13c4ac8" x="369.0" y="393.0"/>
+            <note ref="meico_b4244e38-8e31-44dd-9873-5cc795e6bae1" x="1208.0" y="209.0"/>
+            <note ref="meico_e3ff07a6-4bb3-4d30-9773-01b9c1477135" x="856.0" y="91.0"/>
+            <note ref="meico_91cafb28-54b7-44e8-a3b5-9183897224a1" x="693.0" y="117.0"/>
+            <note ref="meico_9eba2447-2518-4915-aece-8442742f06a3" x="1713.0" y="402.0"/>
+            <note ref="meico_8defd6bf-b8ac-4064-bcb8-4f4726835b27" x="330.0" y="570.0"/>
+            <note ref="meico_947b9c76-eeec-42c5-bc6f-0c8d591c5880" x="355.0" y="830.0"/>
+            <note ref="meico_071c64d3-8648-4480-ab93-1b1da1a9b6d5" x="733.0" y="871.0"/>
+            <note ref="meico_cd0fe628-1704-42f2-8ca3-ef5a74dd0cb1" x="1934.0" y="182.0"/>
+            <note ref="meico_546acaf3-e03f-4d64-bdb6-d7377c15e0db" x="1317.0" y="386.0"/>
+            <note ref="meico_97e3496e-bd85-44ce-b8b5-c766a0a305a7" x="1872.0" y="584.0"/>
+            <note ref="meico_3811ba22-c006-46aa-a405-525f728970bb" x="463.0" y="548.0"/>
+            <note ref="meico_1971111a-a1a1-4217-8fa8-68f3bcbae86f" x="390.0" y="508.0"/>
+            <note ref="meico_d2bd2d02-ee43-43d7-bbe2-15f0ea1de906" x="1069.0" y="579.0"/>
+            <note ref="meico_4dab12a2-4fd8-4684-8ace-6cb168255c43" x="1468.0" y="97.0"/>
+            <note ref="meico_4ee4a590-3891-406a-8501-8d97f81d4a5d" x="1056.0" y="110.0"/>
+            <note ref="meico_e7f7c394-8929-4b32-814c-e03a55773342" x="1117.0" y="305.0"/>
+            <note ref="meico_6429a4cb-c48a-477e-9efb-1c4b9b852a23" x="1634.0" y="341.0"/>
+            <note ref="meico_0fd56df4-4dc4-4ba7-85f2-e26ef8458a5d" x="366.0" y="570.0"/>
+            <note ref="meico_4df65477-7149-42ff-82ec-56b2bdf1942b" x="807.0" y="195.0"/>
+            <note ref="meico_71b6a32b-617d-4fab-a05f-3e3dcbd22514" x="1176.0" y="324.0"/>
+            <note ref="meico_eb023ad1-bc96-46d7-8d5a-d926c8a6580b" x="520.0" y="843.0"/>
+            <note ref="meico_fc1e0b7e-cd32-458e-b5d2-322ae02b7237" x="382.0" y="862.0"/>
+            <note ref="meico_55e3e56e-2e4d-4c4d-8387-1fe83b438a74" x="613.0" y="566.0"/>
+            <note ref="meico_f7a9d490-58ca-427b-bb3c-a4449d4c92cb" x="1864.0" y="387.0"/>
+            <note ref="meico_a28a3ffb-6180-405f-9680-b4a52775a096" x="1429.0" y="319.0"/>
+            <note ref="meico_b92c3d47-b050-4cfb-ada5-1b572b628a08" x="1048.0" y="267.0"/>
+            <note ref="meico_18e23c14-d6dc-4c9e-8c54-513ff569146d" x="1874.0" y="564.0"/>
+            <note ref="meico_e4761122-bd8a-4f12-8ea3-08b02fb400cc" x="1886.0" y="125.0"/>
+            <note ref="meico_9fa4b673-00d4-48cd-b526-21c886159f1e" x="717.0" y="602.0"/>
+            <note ref="meico_3bfe6937-7915-4ed2-991a-c0cc7c1886fc" x="848.0" y="860.0"/>
+            <note ref="meico_1fded8ff-d8dd-431d-90fb-8687ac87d9af" x="1355.0" y="360.0"/>
+        </page>
+        <page file="Score with performance annotations.png" width.pixels="2479" height.pixels="3508">
+            <note ref="meico_702a3476-eecb-4d19-a022-c18cdac9265c" x="577.0" y="556.0"/>
+            <note ref="meico_2620bf0a-9626-4844-97a2-62bab5bcbf64" x="2121.0" y="2462.0"/>
+            <note ref="meico_49bb0128-5e0f-4389-943b-383c64bf6140" x="414.0" y="2878.0"/>
+            <note ref="meico_3571449b-f340-4656-9b35-6b7fb5d87d4f" x="1045.0" y="2942.0"/>
+            <note ref="meico_b6db0044-1413-4f84-afd6-418b828bc3f9" x="535.0" y="2869.0"/>
+            <note ref="meico_5f34e204-6f63-4474-bdb1-bb03f1199fa7" x="1228.0" y="2880.0"/>
+            <note ref="meico_4926ad46-a8f3-42df-a68f-b2fc8cc1a55b" x="848.0" y="482.0"/>
+            <note ref="meico_fc57e7aa-9e95-4632-a86a-1831ce4efc6d" x="1600.0" y="910.0"/>
+            <note ref="meico_ccdd85f8-56e3-4157-b087-e80ef0b34dde" x="763.0" y="2441.0"/>
+            <note ref="meico_3849fa13-48f9-43af-9833-1006a4a2a7f3" x="1086.0" y="2066.0"/>
+            <note ref="meico_8b4146fb-4c4e-4088-bb57-82dac362a66c" x="406.0" y="1274.0"/>
+            <note ref="meico_39d92c03-2778-4855-bbd8-7a69c0bc429d" x="1307.0" y="1254.0"/>
+            <note ref="meico_8e04f720-30e8-4c64-80cc-daf1edd31060" x="1394.0" y="2472.0"/>
+            <note ref="meico_e3017f5d-33a9-4881-945b-8ef65cfdf6e2" x="1436.0" y="2911.0"/>
+            <note ref="meico_892c226b-c75c-47b0-a230-5a02a905ef08" x="1811.0" y="2494.0"/>
+            <note ref="meico_24baaf50-0918-4f06-923d-85128f46ae6b" x="1914.0" y="2450.0"/>
+            <note ref="meico_9ec9f78c-2144-49d9-8c6a-e1b4f7d038c2" x="1765.0" y="869.0"/>
+            <note ref="meico_71909d42-9da3-449c-8e02-a354f02525a3" x="1338.0" y="1660.0"/>
+            <note ref="meico_36a2eecd-3149-407e-9d8c-da5579b87305" x="652.0" y="1381.0"/>
+            <note ref="meico_4e61d03c-7585-4809-ab1d-522a47b807ce" x="657.0" y="858.0"/>
+            <note ref="meico_610c4fd9-9423-491e-8ab1-c2be096dc325" x="886.0" y="2481.0"/>
+            <note ref="meico_3ce7e8df-55b4-4c5e-aac8-61d8295d3a5a" x="1690.0" y="1232.0"/>
+            <note ref="meico_4090fdad-3de6-4920-ac0a-9955a01c5fea" x="1931.0" y="1692.0"/>
+            <note ref="meico_b0cbda96-e76c-496b-8fff-a0a2183c1545" x="2084.0" y="2481.0"/>
+            <note ref="meico_0115da8f-a3b6-46ee-8ac1-f66d963fe038" x="1768.0" y="2515.0"/>
+            <note ref="meico_7a92f20b-317a-4f69-be0d-c3b75dbe29c4" x="1856.0" y="2046.0"/>
+            <note ref="meico_b2d9a880-750e-4a16-acf4-257ea26ec054" x="290.0" y="2921.0"/>
+            <note ref="meico_8dc30dd2-5471-4a11-a956-fadba4937b31" x="741.0" y="2868.0"/>
+            <note ref="meico_fddfc91b-903e-4c97-8ddc-26c75f32ee30" x="2176.0" y="1681.0"/>
+            <note ref="meico_b32d2cd4-a325-4632-af5c-da156d556ca6" x="768.0" y="899.0"/>
+            <note ref="meico_bf9553fd-f3d6-401c-8c79-4816a2a6a3e4" x="946.0" y="2107.0"/>
+            <note ref="meico_e123611b-c32f-4886-899d-c08e50370742" x="1860.0" y="1263.0"/>
+            <note ref="meico_ac84644f-83b4-42a5-920c-1ff3e9caad29" x="1234.0" y="877.0"/>
+            <note ref="meico_41caca5a-f8cc-4f27-a1d4-f7c4078d8336" x="1192.0" y="1724.0"/>
+            <note ref="meico_1725b8ef-210c-4089-97aa-36a8986470ef" x="681.0" y="2440.0"/>
+            <note ref="meico_cc704b88-5857-4206-9b82-44e3893a3412" x="2049.0" y="1295.0"/>
+            <note ref="meico_8c88d7f1-5a49-4a3d-a3e7-6885509dac9b" x="1201.0" y="2077.0"/>
+            <note ref="meico_92acee82-63f6-4208-ae43-d0abeab38ea3" x="672.0" y="1619.0"/>
+            <note ref="meico_07e86404-82f2-4340-b4e8-613992c0063a" x="1945.0" y="858.0"/>
+            <note ref="meico_d5c991c8-0e42-4752-9985-069fd42681e9" x="316.0" y="1693.0"/>
+            <note ref="meico_05625d8b-4522-46f8-afec-731af651f46a" x="358.0" y="1285.0"/>
+            <note ref="meico_2828210d-18c0-4089-9be1-2a54a6077df8" x="1135.0" y="2097.0"/>
+            <note ref="meico_22900a19-2c9f-4e98-83dc-3d2fec58c099" x="1521.0" y="2440.0"/>
+            <note ref="meico_998548ee-f3b1-494f-b9f5-4dd699a6a8de" x="1587.0" y="1639.0"/>
+            <note ref="meico_fb98991e-dbbd-484d-ad50-210172609e99" x="952.0" y="1284.0"/>
+            <note ref="meico_8b14fc52-f586-48cd-a272-a3aa87990942" x="1290.0" y="930.0"/>
+            <note ref="meico_c6515dab-c02d-422d-b124-2be9e45d503d" x="453.0" y="1327.0"/>
+            <note ref="meico_8ec55aef-2426-4231-b207-5ae044fa0bc6" x="995.0" y="909.0"/>
+            <note ref="meico_3d6c44c5-e853-4256-9ce3-fdfbbc52ea5e" x="1346.0" y="920.0"/>
+            <note ref="meico_78ed0250-07c9-4f8d-8fe7-38764f77ada3" x="501.0" y="1316.0"/>
+            <note ref="meico_c945f8d3-b27e-4e81-b99a-b4143f3c86b9" x="1941.0" y="2045.0"/>
+            <note ref="meico_de58ad93-5490-44f1-8027-4885706dc9a7" x="1112.0" y="877.0"/>
+            <note ref="meico_a8b3bcf4-9b1d-47b5-b791-79f6783c6f7c" x="1446.0" y="2450.0"/>
+            <note ref="meico_8a59a486-0b09-4398-bd5b-2ae9aa6c77a9" x="1741.0" y="1244.0"/>
+            <note ref="meico_ab014ef0-3d59-4876-ad7d-c911f10e1537" x="1122.0" y="1222.0"/>
+            <note ref="meico_13bd9b9e-0480-40b7-b899-fe1dae521299" x="2158.0" y="484.0"/>
+            <note ref="meico_9650f29d-ba80-483f-9d04-e7188a4fab45" x="1481.0" y="2075.0"/>
+            <note ref="meico_8e06d54a-26b0-4c96-a656-bb5d085a1885" x="2203.0" y="1254.0"/>
+            <note ref="meico_e0ce30cc-e00e-4cc1-9c43-fea3725a80ef" x="337.0" y="462.0"/>
+            <note ref="meico_5ce0fa4e-f205-483c-9794-1887b2386f67" x="1457.0" y="472.0"/>
+            <note ref="meico_3a3e3b6f-4d94-40e0-91e1-5a8f27528191" x="2260.0" y="1639.0"/>
+            <note ref="meico_95ba35e0-05fd-43ae-865b-c0dfc4602d1e" x="1892.0" y="472.0"/>
+            <note ref="meico_d64f65a5-828d-4778-b43f-1cab9d0e3ee5" x="1005.0" y="1265.0"/>
+            <note ref="meico_26a08b0b-cb85-4384-9827-e519576348c9" x="1039.0" y="2057.0"/>
+            <note ref="meico_10856be8-d1db-4e91-93e3-ccf359bacbc7" x="2227.0" y="2045.0"/>
+            <note ref="meico_38e3b4af-c562-454d-b9d5-0c2b507d0cda" x="1548.0" y="2859.0"/>
+            <note ref="meico_ea3bb97b-5a54-4b74-957a-0dccbbf64ab8" x="735.0" y="515.0"/>
+            <note ref="meico_f776170a-1ca2-4eae-afd3-6a89b9042b44" x="896.0" y="963.0"/>
+            <note ref="meico_6fdac2e5-ccab-41f0-8825-dbc6d92e6bef" x="1668.0" y="512.0"/>
+            <note ref="meico_efdef6db-6c56-4cda-8ea1-a4b178f9cb4a" x="2286.0" y="1252.0"/>
+            <note ref="meico_93b5ee8e-346d-4364-ade1-292464fc1b33" x="2043.0" y="482.0"/>
+            <note ref="meico_a6fd6137-e358-4619-ac90-39990b71f8e6" x="1979.0" y="2858.0"/>
+            <note ref="meico_5fd2c151-37b9-44d8-b6b5-6228ef9a56b0" x="471.0" y="515.0"/>
+            <note ref="meico_358c1cff-43c3-4d87-8a4e-d2ded3c5812d" x="2325.0" y="2035.0"/>
+            <note ref="meico_17ead5e5-605d-4b9e-a6ce-71530f810533" x="1621.0" y="462.0"/>
+            <note ref="meico_b9c2ffe6-21fa-45fd-ac85-6e41d40bf94d" x="422.0" y="2451.0"/>
+            <note ref="meico_1d8471e3-16d1-49b4-b03f-5747681c0a1c" x="2322.0" y="577.0"/>
+            <note ref="meico_3d8741b8-b0f9-4d4f-9e27-59657c356721" x="1348.0" y="2900.0"/>
+            <note ref="meico_d18032de-cc64-445f-afaa-a273c873d4f9" x="1844.0" y="859.0"/>
+            <note ref="meico_fddade8c-b61f-4ed0-8e48-a29fd1fff25c" x="1258.0" y="546.0"/>
+            <note ref="meico_8a00706b-831d-4141-9722-75469a795367" x="856.0" y="2825.0"/>
+            <note ref="meico_ed23b650-b1b5-41dd-bbb7-d2eba10a71b2" x="2102.0" y="2868.0"/>
+            <note ref="meico_013151b6-64e7-4041-a1f3-03fcd35ca58d" x="989.0" y="1680.0"/>
+            <note ref="meico_d1cbd71e-7bd0-4c9d-b8bf-35f963b67912" x="725.0" y="1627.0"/>
+            <note ref="meico_5a5d781b-c344-418d-8402-1aa6ee728cdd" x="1303.0" y="512.0"/>
+            <note ref="meico_af007aa5-8bfd-42bb-a3cd-4ffbc48895b3" x="426.0" y="462.0"/>
+            <note ref="meico_b9e878e5-c661-4989-958e-015ad2ce3ad3" x="1533.0" y="462.0"/>
+            <note ref="meico_d37c98bd-46f4-4cbc-8da2-bbc918350a5f" x="1598.0" y="2492.0"/>
+            <note ref="meico_ffaf89fe-61ee-4a15-ad99-af2043893764" x="1717.0" y="2023.0"/>
+            <note ref="meico_4f2c6ee7-8bab-42a0-94cc-86662a7e2382" x="1672.0" y="2515.0"/>
+            <note ref="meico_cf838aba-e667-4332-8be8-8703d532b2ef" x="1127.0" y="576.0"/>
+            <note ref="meico_902da5b2-7a5f-4d38-ba3f-3353bb69b531" x="1900.0" y="1274.0"/>
+            <note ref="meico_e5381a22-771e-4342-ba70-4232b846b42e" x="482.0" y="1650.0"/>
+            <note ref="meico_8bf06e5b-8cd0-4c77-93b2-ff9d19223ac2" x="2124.0" y="1305.0"/>
+            <note ref="meico_44732deb-33f0-47e4-98b9-a03e2856e720" x="1106.0" y="2922.0"/>
+            <note ref="meico_88200d8f-0b5f-45fc-8bd6-c82705449966" x="1416.0" y="2099.0"/>
+            <note ref="meico_ca819bec-f4b2-4b52-bd18-bb440ebd5a4b" x="682.0" y="1274.0"/>
+            <note ref="meico_efa0e0dd-913d-4c99-9e46-cd11af84af2e" x="1348.0" y="2440.0"/>
+            <note ref="meico_649916a1-5b6d-4485-bccc-bd45ef54e72f" x="1601.0" y="2847.0"/>
+            <note ref="meico_f8b8393c-a618-428a-994a-546df4544207" x="2160.0" y="2432.0"/>
+            <note ref="meico_8685da0c-e381-442c-8e22-d231954ca931" x="1856.0" y="2837.0"/>
+            <note ref="meico_42d4d13f-a85a-4dba-9361-48e62eec9a9f" x="1871.0" y="1712.0"/>
+            <note ref="meico_cd2d199f-91a2-46b8-b119-2e965663ad04" x="291.0" y="1274.0"/>
+            <note ref="meico_295b98b1-79b6-4a2d-9547-6ebd22a36984" x="1012.0" y="537.0"/>
+            <note ref="meico_df38ee8c-fb7f-459b-959e-30aa1e347d3e" x="1383.0" y="1252.0"/>
+            <note ref="meico_2847a635-dad3-4908-8ae4-b98283c6749b" x="961.0" y="483.0"/>
+            <note ref="meico_29559cbc-1a5b-43bc-aca8-19420bdf1dd3" x="465.0" y="2472.0"/>
+            <note ref="meico_96d5764b-e4a6-41a5-a707-81ed9e509925" x="1062.0" y="523.0"/>
+            <note ref="meico_cf0888f3-32ba-465f-afb5-7fcc3ee6e879" x="1983.0" y="2065.0"/>
+            <note ref="meico_5cd53555-9c6c-4c03-b6d7-08b7af8138ab" x="319.0" y="2150.0"/>
+            <note ref="meico_4d4a5651-e7a8-4e36-9bb9-a23d6f412624" x="2208.0" y="2420.0"/>
+            <note ref="meico_18363bad-1a44-4870-aef2-75fe3ce12d85" x="1697.0" y="1619.0"/>
+            <note ref="meico_5106dc14-66f5-4010-814a-0b3f46df25e7" x="2106.0" y="952.0"/>
+            <note ref="meico_5b9ccc97-482a-4e6e-a68d-04fa866d567a" x="1774.0" y="557.0"/>
+            <note ref="meico_9ab1339f-0bd9-4bcd-aadf-b2628cf1d052" x="774.0" y="1649.0"/>
+            <note ref="meico_ed6b1705-035b-4834-94d0-2277be01f845" x="338.0" y="879.0"/>
+            <note ref="meico_d9596536-886c-4178-9029-4127344c9b01" x="2192.0" y="2931.0"/>
+            <note ref="meico_bc998407-6537-41c0-87b4-ff90480780fb" x="1099.0" y="1722.0"/>
+            <note ref="meico_7134fe89-685c-4c0e-8d64-e3ce4de654ef" x="595.0" y="2878.0"/>
+            <note ref="meico_0879c287-9f04-4215-bd41-42533fd158f2" x="602.0" y="2494.0"/>
+            <note ref="meico_a7a657a0-cea2-46b9-b016-b9d86cfa9d80" x="1634.0" y="1628.0"/>
+            <note ref="meico_06a1f4be-a52f-458d-9fb2-f17cf430edbc" x="2001.0" y="2472.0"/>
+            <note ref="meico_21cfff7e-335a-4b83-9044-0d750b0fa0c2" x="2178.0" y="2067.0"/>
+            <note ref="meico_8f3c175b-fe74-4e62-a924-0abf14aed5de" x="1729.0" y="503.0"/>
+            <note ref="meico_ac37626d-0757-4d53-a3e5-70368646562e" x="1011.0" y="2450.0"/>
+            <note ref="meico_ecff8ca1-3760-401f-bfac-1ba3510bfa83" x="474.0" y="2857.0"/>
+            <note ref="meico_89d91f99-d27b-4cf9-8beb-5c88faf39282" x="522.0" y="2097.0"/>
+            <note ref="meico_cdfeda19-153a-43f3-aa3a-847abf100723" x="1063.0" y="1679.0"/>
+            <note ref="meico_dc3d1eb8-14af-421e-807f-12c42f3a2bd6" x="1296.0" y="2419.0"/>
+            <note ref="meico_6bcbc468-d3eb-4bf9-bd28-e1ca2939702c" x="2129.0" y="2085.0"/>
+            <note ref="meico_b071c859-0323-47f1-af28-45813f01ff9c" x="1711.0" y="2857.0"/>
+            <note ref="meico_554bd0c3-0adf-4612-8d43-b1af5fcc81f0" x="1425.0" y="1679.0"/>
+            <note ref="meico_06fc0373-42ca-4713-8429-f4720585ddb2" x="1994.0" y="911.0"/>
+            <note ref="meico_2f163d52-1535-45e9-9595-4da16bcd52be" x="969.0" y="2440.0"/>
+            <note ref="meico_2f084caf-2255-44e2-b5e7-06f5b73fb04d" x="780.0" y="2055.0"/>
+            <note ref="meico_62ffc887-f364-49d9-bf9f-9d93a023a19b" x="1915.0" y="2845.0"/>
+            <note ref="meico_a154e99e-070e-4202-965d-5e3a9b879509" x="557.0" y="857.0"/>
+            <note ref="meico_7c9e63bd-d6ae-40bf-a7bb-eab14fb133e1" x="2059.0" y="1691.0"/>
+            <note ref="meico_80b6d5bb-b427-4599-8c41-6f94af9e5c2d" x="1854.0" y="2472.0"/>
+            <note ref="meico_bf1b96e0-6894-46b2-b7d8-a9d92ee1f286" x="2218.0" y="1649.0"/>
+            <note ref="meico_11940c9d-15ac-437d-adbf-46e523227df3" x="800.0" y="2837.0"/>
+            <note ref="meico_fcd5969f-155a-4c86-a68c-e3c32099337e" x="1057.0" y="1244.0"/>
+            <note ref="meico_f53ee0bc-1e27-4f75-8583-dad1d79707d3" x="749.0" y="1285.0"/>
+            <note ref="meico_5b3a9333-96e7-4821-86be-027c8fe9c927" x="888.0" y="1307.0"/>
+            <note ref="meico_50d15cb0-f8d6-4c55-876f-7bf2ac431047" x="803.0" y="2494.0"/>
+            <note ref="meico_e97b2a2d-a95c-4aaa-b036-d4f5bf88184b" x="1851.0" y="567.0"/>
+            <note ref="meico_c6771530-6e0f-493f-8f54-a24a53139f01" x="1237.0" y="1702.0"/>
+            <note ref="meico_ffd823aa-5466-4933-b634-cb17b1c05e69" x="1246.0" y="2408.0"/>
+            <note ref="meico_c83e6672-cb68-452d-8933-7ee02291fc71" x="1424.0" y="1274.0"/>
+            <note ref="meico_80e97d4b-2afd-4678-b9ce-e1fb8fd402bf" x="2326.0" y="1306.0"/>
+            <note ref="meico_ad319dc1-ae2b-44f6-8d17-9fa020be7558" x="606.0" y="867.0"/>
+            <note ref="meico_7fc9a96b-1433-4675-bed7-500f9a0f15c9" x="2109.0" y="493.0"/>
+            <note ref="meico_27bcbe04-cd22-41e2-bc0c-0079b8b337d7" x="406.0" y="888.0"/>
+            <note ref="meico_503dbb9e-d4e5-4aa3-b6a6-53a0730d6c8f" x="1636.0" y="2473.0"/>
+            <note ref="meico_c1743b32-c99d-4453-a587-ea199f8bdc41" x="648.0" y="2119.0"/>
+            <note ref="meico_ebd5c9c8-138f-4367-a381-bff97eef609b" x="1550.0" y="941.0"/>
+            <note ref="meico_24761900-f525-4e50-ac5e-cbb727fceb6e" x="1957.0" y="2460.0"/>
+            <note ref="meico_e89592f7-894e-4d7c-b0ce-de638c8dbef4" x="1988.0" y="1284.0"/>
+            <note ref="meico_ea628c47-4bdb-4d71-bb0e-73755b0b9fb4" x="2057.0" y="899.0"/>
+            <note ref="meico_a2b717a0-bc1b-4574-86bc-8ec8cecd0668" x="1512.0" y="1692.0"/>
+            <note ref="meico_1621e5ef-0e00-4e9f-b181-f2f4ea7cfc05" x="1896.0" y="2057.0"/>
+            <note ref="meico_5fdf81de-04fd-4dbf-b3a3-91c16904a9fd" x="1652.0" y="879.0"/>
+            <note ref="meico_bc65f485-94bd-4b15-ab59-cb2247a1f9c1" x="2276.0" y="2023.0"/>
+            <note ref="meico_08081a49-d74d-4b08-b227-06a084c4a377" x="2259.0" y="524.0"/>
+            <note ref="meico_b8bfdc52-9de3-43b9-89db-ddcd3a664078" x="2166.0" y="1284.0"/>
+            <note ref="meico_46805701-2034-42c8-ac5a-9fa9ee6a9931" x="1894.0" y="869.0"/>
+            <note ref="meico_9625b4ae-29ae-431f-9e3d-722b2cc970b4" x="708.0" y="909.0"/>
+            <note ref="meico_105dddc6-74e0-4907-8d65-cb7dfcffc7ea" x="1168.0" y="2899.0"/>
+            <note ref="meico_06adbd11-ec49-406d-991a-865c21e56c31" x="291.0" y="2441.0"/>
+            <note ref="meico_297411b5-6885-40e8-b2e5-732cade8a723" x="2245.0" y="1264.0"/>
+            <note ref="meico_e1f1598f-e818-4824-8563-42876f9dbd1f" x="1815.0" y="1254.0"/>
+            <note ref="meico_a9d365f3-2c26-42f9-8014-77438642494b" x="931.0" y="2460.0"/>
+            <note ref="meico_9b0c5a16-2fb7-4a9e-9ffd-9972c8da0439" x="1934.0" y="515.0"/>
+            <note ref="meico_e6380f69-a717-4cfc-9f32-4c2d1b7063ae" x="950.0" y="1648.0"/>
+            <note ref="meico_44492f5d-9528-49c1-b59e-5daceb722cad" x="1661.0" y="2011.0"/>
+            <note ref="meico_e0829987-24b9-476b-8279-1abc76a4b14f" x="300.0" y="984.0"/>
+            <note ref="meico_a5cfeb80-f3cb-48de-ab33-4de61a386e0e" x="640.0" y="2473.0"/>
+            <note ref="meico_1f09b708-d4ad-4f88-95cc-b9faeddb8eac" x="1024.0" y="1702.0"/>
+            <note ref="meico_6c8558f9-5381-4cab-9052-fdc4cf3dfe23" x="1277.0" y="2138.0"/>
+            <note ref="meico_95e089e5-ffd9-47fa-9f52-b44528efbb4a" x="1499.0" y="982.0"/>
+            <note ref="meico_0988299d-b4ab-4c40-b3d7-fcf63180be4b" x="354.0" y="2902.0"/>
+            <note ref="meico_8324f92c-95e5-45c0-8cfb-63dfa32f5cb7" x="1348.0" y="482.0"/>
+            <note ref="meico_f64c82dd-f661-4609-bc92-6396f75e5a2a" x="1263.0" y="1243.0"/>
+            <note ref="meico_24e65d44-e09f-4c6e-a12f-cbc7f19a7401" x="608.0" y="1640.0"/>
+            <note ref="meico_4b9aa215-cbc9-4009-a652-93dea391ad0a" x="381.0" y="471.0"/>
+            <note ref="meico_49cf8717-57ee-4128-a3f3-42bfeb05520d" x="912.0" y="493.0"/>
+            <note ref="meico_87d662f4-c549-41e2-8825-16caa96ef419" x="2015.0" y="1680.0"/>
+            <note ref="meico_43c2d3b2-7a82-4229-9ab8-39a36fb0f401" x="1828.0" y="1734.0"/>
+            <note ref="meico_f3e977e8-911b-4dc9-b6c9-b891a78137fc" x="571.0" y="2108.0"/>
+            <note ref="meico_a35bfbce-aded-4d8b-9821-d316c01f6078" x="2184.0" y="963.0"/>
+            <note ref="meico_65936cc9-54b0-4372-bb84-ce9693afbfa1" x="400.0" y="1649.0"/>
+            <note ref="meico_3fdc93da-bfe6-4539-9e6c-a1cf7aa3acc8" x="1717.0" y="889.0"/>
+            <note ref="meico_837cf19c-7f85-4be2-941a-76a1e3cfb6d0" x="1601.0" y="1273.0"/>
+            <note ref="meico_703b0e44-7f96-4eb9-8118-1ec2a1db3d59" x="682.0" y="2890.0"/>
+            <note ref="meico_1b9e8adb-f98e-4810-88b4-3825f0373fa3" x="1975.0" y="1670.0"/>
+            <note ref="meico_4dc50af3-e1db-44b4-9f26-bd7564e854ad" x="566.0" y="1369.0"/>
+            <note ref="meico_31f3f39b-8395-470d-b203-de08870babe5" x="1549.0" y="1672.0"/>
+            <note ref="meico_f127da5c-c42b-489c-8e2c-c0bed4f6d088" x="2273.0" y="2410.0"/>
+            <note ref="meico_6e1ef5b8-21e2-4d51-a98a-3afb3b31a1cd" x="358.0" y="1670.0"/>
+            <note ref="meico_d4b2a00c-4754-490b-9503-9c4fc1e60709" x="818.0" y="951.0"/>
+            <note ref="meico_f01ea455-aafe-4365-a47e-0aa618b1898b" x="823.0" y="1680.0"/>
+            <note ref="meico_f26036bf-14db-4a12-99a7-28ef29a0b89c" x="1538.0" y="2056.0"/>
+            <note ref="meico_77887477-23a8-48f8-aa17-c74bbec8b228" x="2078.0" y="2106.0"/>
+            <note ref="meico_c0e899df-6914-457a-aabd-c2c5146d4908" x="2136.0" y="1702.0"/>
+            <note ref="meico_1b735aef-c8de-417c-b4df-eea2032588df" x="1580.0" y="473.0"/>
+            <note ref="meico_38a0a65c-43c1-4974-99c5-d88e9ce1946e" x="370.0" y="2129.0"/>
+            <note ref="meico_d2fe8e17-fc32-4011-a591-008e8603f49a" x="416.0" y="2109.0"/>
+            <note ref="meico_80eec265-b027-4c31-a7dc-b4b2f093d016" x="1213.0" y="588.0"/>
+            <note ref="meico_b66cfc48-16be-410b-ac83-dc2220bd1242" x="1280.0" y="1682.0"/>
+            <note ref="meico_ea531a38-3559-4bec-b05c-bf8fd5902932" x="695.0" y="472.0"/>
+            <note ref="meico_0d7e4ed4-1cae-4cb4-b50e-235e04c8ca28" x="823.0" y="2045.0"/>
+            <note ref="meico_2ba55c00-a3ef-4a26-9fa3-3f50204b506d" x="382.0" y="2462.0"/>
+            <note ref="meico_0c807a0b-7357-4ec5-9e6a-14aa2a7e45b6" x="1492.0" y="2889.0"/>
+            <note ref="meico_03c0bd39-43ae-4708-96f3-17ee714b5bd6" x="990.0" y="2046.0"/>
+            <note ref="meico_140d0334-94aa-4359-a9ef-17cc1ae4fa34" x="1657.0" y="2835.0"/>
+            <note ref="meico_dddaa04e-5389-4ba5-8fea-8ed0fad3c945" x="868.0" y="2066.0"/>
+            <note ref="meico_d20c71e5-457e-443e-999c-13fe3f50de36" x="1595.0" y="2035.0"/>
+            <note ref="meico_e00d1eba-7022-4d92-8085-678f894c652e" x="735.0" y="2067.0"/>
+            <note ref="meico_f6208055-2808-488f-8c4f-af5ac6027c79" x="1096.0" y="2419.0"/>
+            <note ref="meico_67a7b0cb-c275-4d2b-8bef-b973282b9073" x="335.0" y="2450.0"/>
+            <note ref="meico_d7c18472-a102-4b71-bb02-a560a13c4ac8" x="2209.0" y="534.0"/>
+            <note ref="meico_b4244e38-8e31-44dd-9873-5cc795e6bae1" x="1410.0" y="972.0"/>
+            <note ref="meico_e3ff07a6-4bb3-4d30-9773-01b9c1477135" x="945.0" y="868.0"/>
+            <note ref="meico_91cafb28-54b7-44e8-a3b5-9183897224a1" x="533.0" y="503.0"/>
+            <note ref="meico_9eba2447-2518-4915-aece-8442742f06a3" x="525.0" y="2484.0"/>
+            <note ref="meico_8defd6bf-b8ac-4064-bcb8-4f4726835b27" x="440.0" y="1660.0"/>
+            <note ref="meico_947b9c76-eeec-42c5-bc6f-0c8d591c5880" x="474.0" y="2086.0"/>
+            <note ref="meico_071c64d3-8648-4480-ab93-1b1da1a9b6d5" x="1796.0" y="2898.0"/>
+            <note ref="meico_cd0fe628-1704-42f2-8ca3-ef5a74dd0cb1" x="2284.0" y="909.0"/>
+            <note ref="meico_546acaf3-e03f-4d64-bdb6-d7377c15e0db" x="1511.0" y="1317.0"/>
+            <note ref="meico_97e3496e-bd85-44ce-b8b5-c766a0a305a7" x="912.0" y="2817.0"/>
+            <note ref="meico_3811ba22-c006-46aa-a405-525f728970bb" x="1182.0" y="2431.0"/>
+            <note ref="meico_1971111a-a1a1-4217-8fa8-68f3bcbae86f" x="527.0" y="1627.0"/>
+            <note ref="meico_d2bd2d02-ee43-43d7-bbe2-15f0ea1de906" x="1384.0" y="1670.0"/>
+            <note ref="meico_4dab12a2-4fd8-4684-8ace-6cb168255c43" x="1411.0" y="494.0"/>
+            <note ref="meico_4ee4a590-3891-406a-8501-8d97f81d4a5d" x="1178.0" y="890.0"/>
+            <note ref="meico_e7f7c394-8929-4b32-814c-e03a55773342" x="1813.0" y="2034.0"/>
+            <note ref="meico_6429a4cb-c48a-477e-9efb-1c4b9b852a23" x="1946.0" y="1262.0"/>
+            <note ref="meico_0fd56df4-4dc4-4ba7-85f2-e26ef8458a5d" x="1054.0" y="2440.0"/>
+            <note ref="meico_4df65477-7149-42ff-82ec-56b2bdf1942b" x="653.0" y="567.0"/>
+            <note ref="meico_71b6a32b-617d-4fab-a05f-3e3dcbd22514" x="1342.0" y="1264.0"/>
+            <note ref="meico_eb023ad1-bc96-46d7-8d5a-d926c8a6580b" x="691.0" y="2098.0"/>
+            <note ref="meico_fc1e0b7e-cd32-458e-b5d2-322ae02b7237" x="1289.0" y="2889.0"/>
+            <note ref="meico_55e3e56e-2e4d-4c4d-8387-1fe83b438a74" x="872.0" y="1659.0"/>
+            <note ref="meico_f7a9d490-58ca-427b-bb3c-a4449d4c92cb" x="721.0" y="2451.0"/>
+            <note ref="meico_a28a3ffb-6180-405f-9680-b4a52775a096" x="1647.0" y="1252.0"/>
+            <note ref="meico_b92c3d47-b050-4cfb-ada5-1b572b628a08" x="1175.0" y="1232.0"/>
+            <note ref="meico_18e23c14-d6dc-4c9e-8c54-513ff569146d" x="2308.0" y="1628.0"/>
+            <note ref="meico_e4761122-bd8a-4f12-8ea3-08b02fb400cc" x="2233.0" y="868.0"/>
+            <note ref="meico_9fa4b673-00d4-48cd-b526-21c886159f1e" x="1561.0" y="2472.0"/>
+            <note ref="meico_3bfe6937-7915-4ed2-991a-c0cc7c1886fc" x="2037.0" y="2892.0"/>
+            <note ref="meico_1fded8ff-d8dd-431d-90fb-8687ac87d9af" x="1557.0" y="1295.0"/>
+        </page>
+    </score>
+    <audios>
+        <audio file="BWV 1007 Minuet No 2_rendering.mp3">
+            <alignment>
+                <part midi.port="0" midi.channel="0" number="0" name="Cello">
+                    <note ref="meico_e0ce30cc-e00e-4cc1-9c43-fea3725a80ef" midi.pitch="58.0" milliseconds.date="0.0" milliseconds.date.end="298.140589569161" velocity="80.0" fixed="true"/>
+                    <note ref="meico_4b9aa215-cbc9-4009-a652-93dea391ad0a" midi.pitch="57.0" milliseconds.date="298.140589569161" milliseconds.date.end="596.281179138322" velocity="80.0" fixed="false"/>
+                    <note ref="meico_af007aa5-8bfd-42bb-a3cd-4ffbc48895b3" midi.pitch="58.0" milliseconds.date="596.281179138322" milliseconds.date.end="894.4217687074831" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5fd2c151-37b9-44d8-b6b5-6228ef9a56b0" midi.pitch="50.0" milliseconds.date="894.4217687074831" milliseconds.date.end="1192.562358276644" velocity="80.0" fixed="false"/>
+                    <note ref="meico_91cafb28-54b7-44e8-a3b5-9183897224a1" midi.pitch="51.0" milliseconds.date="1192.562358276644" milliseconds.date.end="1490.702947845805" velocity="80.0" fixed="false"/>
+                    <note ref="meico_702a3476-eecb-4d19-a022-c18cdac9265c" midi.pitch="43.0" milliseconds.date="1490.702947845805" milliseconds.date.end="1788.8435374149662" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4df65477-7149-42ff-82ec-56b2bdf1942b" midi.pitch="41.0" milliseconds.date="1788.8435374149662" milliseconds.date.end="2385.124716553288" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ea531a38-3559-4bec-b05c-bf8fd5902932" midi.pitch="57.0" milliseconds.date="2385.124716553288" milliseconds.date.end="2981.40589569161" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ea3bb97b-5a54-4b74-957a-0dccbbf64ab8" midi.pitch="50.0" milliseconds.date="2981.40589569161" milliseconds.date.end="3577.6870748299325" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4926ad46-a8f3-42df-a68f-b2fc8cc1a55b" midi.pitch="55.0" milliseconds.date="3577.6870748299325" milliseconds.date.end="3875.8276643990935" velocity="80.0" fixed="false"/>
+                    <note ref="meico_49cf8717-57ee-4128-a3f3-42bfeb05520d" midi.pitch="54.0" milliseconds.date="3875.8276643990935" milliseconds.date.end="4173.968253968254" velocity="80.0" fixed="false"/>
+                    <note ref="meico_2847a635-dad3-4908-8ae4-b98283c6749b" midi.pitch="55.0" milliseconds.date="4173.968253968254" milliseconds.date.end="4472.108843537416" velocity="80.0" fixed="false"/>
+                    <note ref="meico_295b98b1-79b6-4a2d-9547-6ebd22a36984" midi.pitch="46.0" milliseconds.date="4472.108843537416" milliseconds.date.end="4770.249433106576" velocity="80.0" fixed="false"/>
+                    <note ref="meico_96d5764b-e4a6-41a5-a707-81ed9e509925" midi.pitch="48.0" milliseconds.date="4770.249433106576" milliseconds.date.end="5068.390022675738" velocity="80.0" fixed="false"/>
+                    <note ref="meico_cf838aba-e667-4332-8be8-8703d532b2ef" midi.pitch="40.0" milliseconds.date="5068.390022675738" milliseconds.date.end="5366.530612244898" velocity="80.0" fixed="false"/>
+                    <note ref="meico_80eec265-b027-4c31-a7dc-b4b2f093d016" midi.pitch="38.0" milliseconds.date="5366.530612244898" milliseconds.date.end="5664.67120181406" velocity="80.0" fixed="false"/>
+                    <note ref="meico_fddade8c-b61f-4ed0-8e48-a29fd1fff25c" midi.pitch="45.0" milliseconds.date="5664.67120181406" milliseconds.date.end="5962.81179138322" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5a5d781b-c344-418d-8402-1aa6ee728cdd" midi.pitch="50.0" milliseconds.date="5962.81179138322" milliseconds.date.end="6260.952380952382" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8324f92c-95e5-45c0-8cfb-63dfa32f5cb7" midi.pitch="55.0" milliseconds.date="6260.952380952382" milliseconds.date.end="6559.092970521543" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4dab12a2-4fd8-4684-8ace-6cb168255c43" midi.pitch="54.0" milliseconds.date="6559.092970521543" milliseconds.date.end="6857.233560090704" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5ce0fa4e-f205-483c-9794-1887b2386f67" midi.pitch="57.0" milliseconds.date="6857.233560090704" milliseconds.date.end="7155.374149659865" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b9e878e5-c661-4989-958e-015ad2ce3ad3" midi.pitch="58.0" milliseconds.date="7155.374149659865" milliseconds.date.end="7453.5147392290255" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1b735aef-c8de-417c-b4df-eea2032588df" midi.pitch="57.0" milliseconds.date="7453.5147392290255" milliseconds.date.end="7751.655328798187" velocity="80.0" fixed="false"/>
+                    <note ref="meico_17ead5e5-605d-4b9e-a6ce-71530f810533" midi.pitch="58.0" milliseconds.date="7751.655328798187" milliseconds.date.end="8049.795918367347" velocity="80.0" fixed="false"/>
+                    <note ref="meico_6fdac2e5-ccab-41f0-8825-dbc6d92e6bef" midi.pitch="50.0" milliseconds.date="8049.795918367347" milliseconds.date.end="8347.936507936509" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8f3c175b-fe74-4e62-a924-0abf14aed5de" midi.pitch="51.0" milliseconds.date="8347.936507936509" milliseconds.date.end="8646.07709750567" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5b9ccc97-482a-4e6e-a68d-04fa866d567a" midi.pitch="43.0" milliseconds.date="8646.07709750567" milliseconds.date.end="8944.217687074832" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e97b2a2d-a95c-4aaa-b036-d4f5bf88184b" midi.pitch="41.0" milliseconds.date="8944.217687074832" milliseconds.date.end="9540.498866213153" velocity="80.0" fixed="false"/>
+                    <note ref="meico_95ba35e0-05fd-43ae-865b-c0dfc4602d1e" midi.pitch="57.0" milliseconds.date="9540.498866213153" milliseconds.date.end="10136.780045351476" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9b0c5a16-2fb7-4a9e-9ffd-9972c8da0439" midi.pitch="50.0" milliseconds.date="10136.780045351476" milliseconds.date.end="10733.061224489797" velocity="80.0" fixed="false"/>
+                    <note ref="meico_93b5ee8e-346d-4364-ade1-292464fc1b33" midi.pitch="55.0" milliseconds.date="10733.061224489797" milliseconds.date.end="11031.201814058959" velocity="80.0" fixed="false"/>
+                    <note ref="meico_7fc9a96b-1433-4675-bed7-500f9a0f15c9" midi.pitch="54.0" milliseconds.date="11031.201814058959" milliseconds.date.end="11329.34240362812" velocity="80.0" fixed="false"/>
+                    <note ref="meico_13bd9b9e-0480-40b7-b899-fe1dae521299" midi.pitch="55.0" milliseconds.date="11329.34240362812" milliseconds.date.end="11627.48299319728" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d7c18472-a102-4b71-bb02-a560a13c4ac8" midi.pitch="46.0" milliseconds.date="11627.48299319728" milliseconds.date.end="11925.62358276644" velocity="80.0" fixed="false"/>
+                    <note ref="meico_08081a49-d74d-4b08-b227-06a084c4a377" midi.pitch="48.0" milliseconds.date="11925.62358276644" milliseconds.date.end="12223.764172335603" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1d8471e3-16d1-49b4-b03f-5747681c0a1c" midi.pitch="40.0" milliseconds.date="12223.764172335603" milliseconds.date.end="12521.904761904763" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e0829987-24b9-476b-8279-1abc76a4b14f" midi.pitch="38.0" milliseconds.date="12521.904761904763" milliseconds.date.end="12820.045351473924" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ed6b1705-035b-4834-94d0-2277be01f845" midi.pitch="55.0" milliseconds.date="12820.045351473924" milliseconds.date.end="13118.185941043086" velocity="80.0" fixed="false"/>
+                    <note ref="meico_27bcbe04-cd22-41e2-bc0c-0079b8b337d7" midi.pitch="54.0" milliseconds.date="13118.185941043086" milliseconds.date.end="14310.74829931973" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a154e99e-070e-4202-965d-5e3a9b879509" midi.pitch="58.0" milliseconds.date="14310.74829931973" milliseconds.date.end="14608.88888888889" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ad319dc1-ae2b-44f6-8d17-9fa020be7558" midi.pitch="57.0" milliseconds.date="14608.88888888889" milliseconds.date.end="14907.029478458051" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4e61d03c-7585-4809-ab1d-522a47b807ce" midi.pitch="58.0" milliseconds.date="14907.029478458051" milliseconds.date.end="15205.170068027213" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9625b4ae-29ae-431f-9e3d-722b2cc970b4" midi.pitch="50.0" milliseconds.date="15205.170068027213" milliseconds.date.end="15503.310657596374" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b32d2cd4-a325-4632-af5c-da156d556ca6" midi.pitch="51.0" milliseconds.date="15503.310657596374" milliseconds.date.end="15801.451247165534" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d4b2a00c-4754-490b-9503-9c4fc1e60709" midi.pitch="43.0" milliseconds.date="15801.451247165534" milliseconds.date.end="16099.591836734695" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f776170a-1ca2-4eae-afd3-6a89b9042b44" midi.pitch="41.0" milliseconds.date="16099.591836734695" milliseconds.date.end="16695.873015873018" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e3ff07a6-4bb3-4d30-9773-01b9c1477135" midi.pitch="57.0" milliseconds.date="16695.873015873018" milliseconds.date.end="17292.15419501134" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8ec55aef-2426-4231-b207-5ae044fa0bc6" midi.pitch="50.0" milliseconds.date="17292.15419501134" milliseconds.date.end="17888.435374149663" velocity="80.0" fixed="false"/>
+                    <note ref="meico_de58ad93-5490-44f1-8027-4885706dc9a7" midi.pitch="55.0" milliseconds.date="17888.435374149663" milliseconds.date.end="18186.575963718824" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4ee4a590-3891-406a-8501-8d97f81d4a5d" midi.pitch="54.0" milliseconds.date="18186.575963718824" milliseconds.date.end="18484.716553287984" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ac84644f-83b4-42a5-920c-1ff3e9caad29" midi.pitch="55.0" milliseconds.date="18484.716553287984" milliseconds.date.end="18782.857142857145" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8b14fc52-f586-48cd-a272-a3aa87990942" midi.pitch="46.0" milliseconds.date="18782.857142857145" milliseconds.date.end="19080.997732426305" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3d6c44c5-e853-4256-9ce3-fdfbbc52ea5e" midi.pitch="48.0" milliseconds.date="19080.997732426305" milliseconds.date.end="19379.138321995466" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b4244e38-8e31-44dd-9873-5cc795e6bae1" midi.pitch="40.0" milliseconds.date="19379.138321995466" milliseconds.date.end="19677.278911564626" velocity="80.0" fixed="false"/>
+                    <note ref="meico_95e089e5-ffd9-47fa-9f52-b44528efbb4a" midi.pitch="38.0" milliseconds.date="19677.278911564626" milliseconds.date.end="19975.41950113379" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ebd5c9c8-138f-4367-a381-bff97eef609b" midi.pitch="45.0" milliseconds.date="19975.41950113379" milliseconds.date.end="20273.56009070295" velocity="80.0" fixed="false"/>
+                    <note ref="meico_fc57e7aa-9e95-4632-a86a-1831ce4efc6d" midi.pitch="50.0" milliseconds.date="20273.56009070295" milliseconds.date.end="20571.70068027211" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5fdf81de-04fd-4dbf-b3a3-91c16904a9fd" midi.pitch="55.0" milliseconds.date="20571.70068027211" milliseconds.date.end="20869.841269841272" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3fdc93da-bfe6-4539-9e6c-a1cf7aa3acc8" midi.pitch="54.0" milliseconds.date="20869.841269841272" milliseconds.date.end="21167.981859410433" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9ec9f78c-2144-49d9-8c6a-e1b4f7d038c2" midi.pitch="57.0" milliseconds.date="21167.981859410433" milliseconds.date.end="21466.122448979593" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d18032de-cc64-445f-afaa-a273c873d4f9" midi.pitch="58.0" milliseconds.date="21466.122448979593" milliseconds.date.end="21764.263038548754" velocity="80.0" fixed="false"/>
+                    <note ref="meico_46805701-2034-42c8-ac5a-9fa9ee6a9931" midi.pitch="57.0" milliseconds.date="21764.263038548754" milliseconds.date.end="22062.403628117918" velocity="80.0" fixed="false"/>
+                    <note ref="meico_07e86404-82f2-4340-b4e8-613992c0063a" midi.pitch="58.0" milliseconds.date="22062.403628117918" milliseconds.date.end="22360.54421768708" velocity="80.0" fixed="false"/>
+                    <note ref="meico_06fc0373-42ca-4713-8429-f4720585ddb2" midi.pitch="50.0" milliseconds.date="22360.54421768708" milliseconds.date.end="22658.68480725624" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ea628c47-4bdb-4d71-bb0e-73755b0b9fb4" midi.pitch="51.0" milliseconds.date="22658.68480725624" milliseconds.date.end="22956.8253968254" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5106dc14-66f5-4010-814a-0b3f46df25e7" midi.pitch="43.0" milliseconds.date="22956.8253968254" milliseconds.date.end="23254.96598639456" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a35bfbce-aded-4d8b-9821-d316c01f6078" midi.pitch="41.0" milliseconds.date="23254.96598639456" milliseconds.date.end="23851.24716553288" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e4761122-bd8a-4f12-8ea3-08b02fb400cc" midi.pitch="57.0" milliseconds.date="23851.24716553288" milliseconds.date.end="24447.528344671206" velocity="80.0" fixed="false"/>
+                    <note ref="meico_cd0fe628-1704-42f2-8ca3-ef5a74dd0cb1" midi.pitch="50.0" milliseconds.date="24447.528344671206" milliseconds.date.end="25043.809523809527" velocity="80.0" fixed="false"/>
+                    <note ref="meico_cd2d199f-91a2-46b8-b119-2e965663ad04" midi.pitch="55.0" milliseconds.date="25043.809523809527" milliseconds.date.end="25341.950113378687" velocity="80.0" fixed="false"/>
+                    <note ref="meico_05625d8b-4522-46f8-afec-731af651f46a" midi.pitch="54.0" milliseconds.date="25341.950113378687" milliseconds.date.end="25640.090702947848" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8b4146fb-4c4e-4088-bb57-82dac362a66c" midi.pitch="55.0" milliseconds.date="25640.090702947848" milliseconds.date.end="25938.231292517008" velocity="80.0" fixed="false"/>
+                    <note ref="meico_c6515dab-c02d-422d-b124-2be9e45d503d" midi.pitch="46.0" milliseconds.date="25938.231292517008" milliseconds.date.end="26236.371882086172" velocity="80.0" fixed="false"/>
+                    <note ref="meico_78ed0250-07c9-4f8d-8fe7-38764f77ada3" midi.pitch="48.0" milliseconds.date="26236.371882086172" milliseconds.date.end="26534.512471655333" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4dc50af3-e1db-44b4-9f26-bd7564e854ad" midi.pitch="40.0" milliseconds.date="26534.512471655333" milliseconds.date.end="26832.653061224493" velocity="80.0" fixed="false"/>
+                    <note ref="meico_36a2eecd-3149-407e-9d8c-da5579b87305" midi.pitch="38.0" milliseconds.date="26832.653061224493" milliseconds.date.end="27130.793650793654" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ca819bec-f4b2-4b52-bd18-bb440ebd5a4b" midi.pitch="55.0" milliseconds.date="27130.793650793654" milliseconds.date.end="27428.934240362814" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f53ee0bc-1e27-4f75-8583-dad1d79707d3" midi.pitch="54.0" milliseconds.date="27428.934240362814" milliseconds.date.end="28621.49659863946" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5b3a9333-96e7-4821-86be-027c8fe9c927" midi.pitch="50.0" milliseconds.date="28621.49659863946" milliseconds.date.end="28919.63718820862" velocity="80.0" fixed="false"/>
+                    <note ref="meico_fb98991e-dbbd-484d-ad50-210172609e99" midi.pitch="54.0" milliseconds.date="28919.63718820862" milliseconds.date.end="29217.77777777778" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d64f65a5-828d-4778-b43f-1cab9d0e3ee5" midi.pitch="57.0" milliseconds.date="29217.77777777778" milliseconds.date.end="29515.91836734694" velocity="80.0" fixed="false"/>
+                    <note ref="meico_fcd5969f-155a-4c86-a68c-e3c32099337e" midi.pitch="60.0" milliseconds.date="29515.91836734694" milliseconds.date.end="29814.058956916102" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ab014ef0-3d59-4876-ad7d-c911f10e1537" midi.pitch="63.0" milliseconds.date="29814.058956916102" milliseconds.date.end="30112.199546485263" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b92c3d47-b050-4cfb-ada5-1b572b628a08" midi.pitch="62.0" milliseconds.date="30112.199546485263" milliseconds.date.end="30410.340136054427" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f64c82dd-f661-4609-bc92-6396f75e5a2a" midi.pitch="60.0" milliseconds.date="30410.340136054427" milliseconds.date.end="30708.480725623587" velocity="80.0" fixed="false"/>
+                    <note ref="meico_39d92c03-2778-4855-bbd8-7a69c0bc429d" midi.pitch="58.0" milliseconds.date="30708.480725623587" milliseconds.date.end="31006.621315192748" velocity="80.0" fixed="false"/>
+                    <note ref="meico_71b6a32b-617d-4fab-a05f-3e3dcbd22514" midi.pitch="57.0" milliseconds.date="31006.621315192748" milliseconds.date.end="31304.76190476191" velocity="80.0" fixed="false"/>
+                    <note ref="meico_df38ee8c-fb7f-459b-959e-30aa1e347d3e" midi.pitch="58.0" milliseconds.date="31304.76190476191" milliseconds.date.end="31602.90249433107" velocity="80.0" fixed="false"/>
+                    <note ref="meico_c83e6672-cb68-452d-8933-7ee02291fc71" midi.pitch="55.0" milliseconds.date="31602.90249433107" milliseconds.date.end="32199.18367346939" velocity="80.0" fixed="false"/>
+                    <note ref="meico_546acaf3-e03f-4d64-bdb6-d7377c15e0db" midi.pitch="48.0" milliseconds.date="32199.18367346939" milliseconds.date.end="32497.324263038554" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1fded8ff-d8dd-431d-90fb-8687ac87d9af" midi.pitch="52.0" milliseconds.date="32497.324263038554" milliseconds.date.end="32795.464852607714" velocity="80.0" fixed="false"/>
+                    <note ref="meico_837cf19c-7f85-4be2-941a-76a1e3cfb6d0" midi.pitch="55.0" milliseconds.date="32795.464852607714" milliseconds.date.end="33093.60544217687" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a28a3ffb-6180-405f-9680-b4a52775a096" midi.pitch="58.0" milliseconds.date="33093.60544217687" milliseconds.date.end="33391.746031746035" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3ce7e8df-55b4-4c5e-aac8-61d8295d3a5a" midi.pitch="62.0" milliseconds.date="33391.746031746035" milliseconds.date.end="33689.8866213152" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8a59a486-0b09-4398-bd5b-2ae9aa6c77a9" midi.pitch="60.0" milliseconds.date="33689.8866213152" milliseconds.date.end="33988.02721088436" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e1f1598f-e818-4824-8563-42876f9dbd1f" midi.pitch="58.0" milliseconds.date="33988.02721088436" milliseconds.date.end="34286.16780045352" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e123611b-c32f-4886-899d-c08e50370742" midi.pitch="57.0" milliseconds.date="34286.16780045352" milliseconds.date.end="34584.30839002268" velocity="80.0" fixed="false"/>
+                    <note ref="meico_902da5b2-7a5f-4d38-ba3f-3353bb69b531" midi.pitch="55.0" milliseconds.date="34584.30839002268" milliseconds.date.end="34882.44897959184" velocity="80.0" fixed="false"/>
+                    <note ref="meico_6429a4cb-c48a-477e-9efb-1c4b9b852a23" midi.pitch="57.0" milliseconds.date="34882.44897959184" milliseconds.date.end="35180.589569161" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e89592f7-894e-4d7c-b0ce-de638c8dbef4" midi.pitch="53.0" milliseconds.date="35180.589569161" milliseconds.date.end="35478.73015873016" velocity="80.0" fixed="false"/>
+                    <note ref="meico_cc704b88-5857-4206-9b82-44e3893a3412" midi.pitch="51.0" milliseconds.date="35478.73015873016" milliseconds.date.end="35776.87074829933" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8bf06e5b-8cd0-4c77-93b2-ff9d19223ac2" midi.pitch="50.0" milliseconds.date="35776.87074829933" milliseconds.date.end="36075.011337868484" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b8bfdc52-9de3-43b9-89db-ddcd3a664078" midi.pitch="53.0" milliseconds.date="36075.011337868484" milliseconds.date.end="36373.15192743765" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8e06d54a-26b0-4c96-a656-bb5d085a1885" midi.pitch="58.0" milliseconds.date="36373.15192743765" milliseconds.date.end="36671.292517006805" velocity="80.0" fixed="false"/>
+                    <note ref="meico_297411b5-6885-40e8-b2e5-732cade8a723" midi.pitch="57.0" milliseconds.date="36671.292517006805" milliseconds.date.end="36969.43310657597" velocity="80.0" fixed="false"/>
+                    <note ref="meico_efdef6db-6c56-4cda-8ea1-a4b178f9cb4a" midi.pitch="58.0" milliseconds.date="36969.43310657597" milliseconds.date.end="37267.573696145126" velocity="80.0" fixed="false"/>
+                    <note ref="meico_80e97d4b-2afd-4678-b9ce-e1fb8fd402bf" midi.pitch="50.0" milliseconds.date="37267.573696145126" milliseconds.date.end="37565.71428571429" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d5c991c8-0e42-4752-9985-069fd42681e9" midi.pitch="51.0" milliseconds.date="37565.71428571429" milliseconds.date.end="37863.854875283454" velocity="80.0" fixed="false"/>
+                    <note ref="meico_6e1ef5b8-21e2-4d51-a98a-3afb3b31a1cd" midi.pitch="55.0" milliseconds.date="37863.854875283454" milliseconds.date.end="38161.99546485261" velocity="80.0" fixed="false"/>
+                    <note ref="meico_65936cc9-54b0-4372-bb84-ce9693afbfa1" midi.pitch="58.0" milliseconds.date="38161.99546485261" milliseconds.date.end="38460.136054421775" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8defd6bf-b8ac-4064-bcb8-4f4726835b27" midi.pitch="57.0" milliseconds.date="38460.136054421775" milliseconds.date.end="38758.27664399093" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e5381a22-771e-4342-ba70-4232b846b42e" midi.pitch="58.0" milliseconds.date="38758.27664399093" milliseconds.date.end="39056.417233560096" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1971111a-a1a1-4217-8fa8-68f3bcbae86f" midi.pitch="62.0" milliseconds.date="39056.417233560096" milliseconds.date.end="39354.55782312925" velocity="80.0" fixed="false"/>
+                    <note ref="meico_24e65d44-e09f-4c6e-a12f-cbc7f19a7401" midi.pitch="60.0" milliseconds.date="39354.55782312925" milliseconds.date.end="39652.69841269842" velocity="80.0" fixed="false"/>
+                    <note ref="meico_92acee82-63f6-4208-ae43-d0abeab38ea3" midi.pitch="63.0" milliseconds.date="39652.69841269842" milliseconds.date.end="39950.83900226758" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d1cbd71e-7bd0-4c9d-b8bf-35f963b67912" midi.pitch="62.0" milliseconds.date="39950.83900226758" milliseconds.date.end="40248.97959183674" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9ab1339f-0bd9-4bcd-aadf-b2628cf1d052" midi.pitch="58.0" milliseconds.date="40248.97959183674" milliseconds.date.end="40547.1201814059" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f01ea455-aafe-4365-a47e-0aa618b1898b" midi.pitch="53.0" milliseconds.date="40547.1201814059" milliseconds.date.end="40845.26077097506" velocity="80.0" fixed="false"/>
+                    <note ref="meico_55e3e56e-2e4d-4c4d-8387-1fe83b438a74" midi.pitch="57.0" milliseconds.date="40845.26077097506" milliseconds.date.end="41143.40136054422" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e6380f69-a717-4cfc-9f32-4c2d1b7063ae" midi.pitch="58.0" milliseconds.date="41143.40136054422" milliseconds.date.end="41441.54195011338" velocity="80.0" fixed="false"/>
+                    <note ref="meico_013151b6-64e7-4041-a1f3-03fcd35ca58d" midi.pitch="53.0" milliseconds.date="41441.54195011338" milliseconds.date.end="41739.682539682544" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1f09b708-d4ad-4f88-95cc-b9faeddb8eac" midi.pitch="50.0" milliseconds.date="41739.682539682544" milliseconds.date.end="42037.82312925171" velocity="80.0" fixed="false"/>
+                    <note ref="meico_cdfeda19-153a-43f3-aa3a-847abf100723" midi.pitch="53.0" milliseconds.date="42037.82312925171" milliseconds.date.end="42335.963718820865" velocity="80.0" fixed="false"/>
+                    <note ref="meico_bc998407-6537-41c0-87b4-ff90480780fb" midi.pitch="46.0" milliseconds.date="42335.963718820865" milliseconds.date.end="42932.244897959186" velocity="80.0" fixed="false"/>
+                    <note ref="meico_41caca5a-f8cc-4f27-a1d4-f7c4078d8336" midi.pitch="47.0" milliseconds.date="42932.244897959186" milliseconds.date.end="43230.38548752835" velocity="80.0" fixed="false"/>
+                    <note ref="meico_c6771530-6e0f-493f-8f54-a24a53139f01" midi.pitch="50.0" milliseconds.date="43230.38548752835" milliseconds.date.end="43528.52607709751" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b66cfc48-16be-410b-ac83-dc2220bd1242" midi.pitch="53.0" milliseconds.date="43528.52607709751" milliseconds.date.end="43826.66666666667" velocity="80.0" fixed="false"/>
+                    <note ref="meico_71909d42-9da3-449c-8e02-a354f02525a3" midi.pitch="56.0" milliseconds.date="43826.66666666667" milliseconds.date.end="44124.807256235836" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d2bd2d02-ee43-43d7-bbe2-15f0ea1de906" midi.pitch="55.0" milliseconds.date="44124.807256235836" milliseconds.date.end="44422.94784580499" velocity="80.0" fixed="false"/>
+                    <note ref="meico_554bd0c3-0adf-4612-8d43-b1af5fcc81f0" midi.pitch="53.0" milliseconds.date="44422.94784580499" milliseconds.date.end="44721.08843537416" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a2b717a0-bc1b-4574-86bc-8ec8cecd0668" midi.pitch="51.0" milliseconds.date="44721.08843537416" milliseconds.date.end="45019.22902494331" velocity="80.0" fixed="false"/>
+                    <note ref="meico_31f3f39b-8395-470d-b203-de08870babe5" midi.pitch="55.0" milliseconds.date="45019.22902494331" milliseconds.date.end="45317.36961451248" velocity="80.0" fixed="false"/>
+                    <note ref="meico_998548ee-f3b1-494f-b9f5-4dd699a6a8de" midi.pitch="60.0" milliseconds.date="45317.36961451248" milliseconds.date.end="45615.510204081635" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a7a657a0-cea2-46b9-b016-b9d86cfa9d80" midi.pitch="62.0" milliseconds.date="45615.510204081635" milliseconds.date.end="45913.6507936508" velocity="80.0" fixed="false"/>
+                    <note ref="meico_18363bad-1a44-4870-aef2-75fe3ce12d85" midi.pitch="63.0" milliseconds.date="45913.6507936508" milliseconds.date.end="46509.93197278912" velocity="80.0" fixed="false"/>
+                    <note ref="meico_43c2d3b2-7a82-4229-9ab8-39a36fb0f401" midi.pitch="45.0" milliseconds.date="46509.93197278912" milliseconds.date.end="46808.072562358284" velocity="80.0" fixed="false"/>
+                    <note ref="meico_42d4d13f-a85a-4dba-9361-48e62eec9a9f" midi.pitch="48.0" milliseconds.date="46808.072562358284" milliseconds.date.end="47106.21315192744" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4090fdad-3de6-4920-ac0a-9955a01c5fea" midi.pitch="51.0" milliseconds.date="47106.21315192744" milliseconds.date.end="47404.353741496605" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1b9e8adb-f98e-4810-88b4-3825f0373fa3" midi.pitch="55.0" milliseconds.date="47404.353741496605" milliseconds.date.end="47702.49433106576" velocity="80.0" fixed="false"/>
+                    <note ref="meico_87d662f4-c549-41e2-8825-16caa96ef419" midi.pitch="53.0" milliseconds.date="47702.49433106576" milliseconds.date.end="48000.634920634926" velocity="80.0" fixed="false"/>
+                    <note ref="meico_7c9e63bd-d6ae-40bf-a7bb-eab14fb133e1" midi.pitch="51.0" milliseconds.date="48000.634920634926" milliseconds.date.end="48298.77551020409" velocity="80.0" fixed="false"/>
+                    <note ref="meico_c0e899df-6914-457a-aabd-c2c5146d4908" midi.pitch="50.0" milliseconds.date="48298.77551020409" milliseconds.date.end="48596.91609977325" velocity="80.0" fixed="false"/>
+                    <note ref="meico_fddfc91b-903e-4c97-8ddc-26c75f32ee30" midi.pitch="53.0" milliseconds.date="48596.91609977325" milliseconds.date.end="48895.05668934241" velocity="80.0" fixed="false"/>
+                    <note ref="meico_bf1b96e0-6894-46b2-b7d8-a9d92ee1f286" midi.pitch="58.0" milliseconds.date="48895.05668934241" milliseconds.date.end="49193.19727891157" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3a3e3b6f-4d94-40e0-91e1-5a8f27528191" midi.pitch="60.0" milliseconds.date="49193.19727891157" milliseconds.date.end="49491.33786848073" velocity="80.0" fixed="false"/>
+                    <note ref="meico_18e23c14-d6dc-4c9e-8c54-513ff569146d" midi.pitch="62.0" milliseconds.date="49491.33786848073" milliseconds.date.end="50087.61904761905" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5cd53555-9c6c-4c03-b6d7-08b7af8138ab" midi.pitch="42.0" milliseconds.date="50087.61904761905" milliseconds.date.end="50385.75963718822" velocity="80.0" fixed="false"/>
+                    <note ref="meico_38a0a65c-43c1-4974-99c5-d88e9ce1946e" midi.pitch="45.0" milliseconds.date="50385.75963718822" milliseconds.date.end="50683.900226757374" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d2fe8e17-fc32-4011-a591-008e8603f49a" midi.pitch="48.0" milliseconds.date="50683.900226757374" milliseconds.date.end="50982.04081632654" velocity="80.0" fixed="false"/>
+                    <note ref="meico_947b9c76-eeec-42c5-bc6f-0c8d591c5880" midi.pitch="51.0" milliseconds.date="50982.04081632654" milliseconds.date.end="51280.181405895695" velocity="80.0" fixed="false"/>
+                    <note ref="meico_89d91f99-d27b-4cf9-8beb-5c88faf39282" midi.pitch="50.0" milliseconds.date="51280.181405895695" milliseconds.date.end="51578.32199546486" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f3e977e8-911b-4dc9-b6c9-b891a78137fc" midi.pitch="48.0" milliseconds.date="51578.32199546486" milliseconds.date.end="51876.462585034016" velocity="80.0" fixed="false"/>
+                    <note ref="meico_c1743b32-c99d-4453-a587-ea199f8bdc41" midi.pitch="46.0" milliseconds.date="51876.462585034016" milliseconds.date.end="52174.60317460318" velocity="80.0" fixed="false"/>
+                    <note ref="meico_eb023ad1-bc96-46d7-8d5a-d926c8a6580b" midi.pitch="50.0" milliseconds.date="52174.60317460318" milliseconds.date.end="52472.743764172345" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e00d1eba-7022-4d92-8085-678f894c652e" midi.pitch="55.0" milliseconds.date="52472.743764172345" milliseconds.date.end="52770.8843537415" velocity="80.0" fixed="false"/>
+                    <note ref="meico_2f084caf-2255-44e2-b5e7-06f5b73fb04d" midi.pitch="57.0" milliseconds.date="52770.8843537415" milliseconds.date.end="53069.024943310666" velocity="80.0" fixed="false"/>
+                    <note ref="meico_0d7e4ed4-1cae-4cb4-b50e-235e04c8ca28" midi.pitch="58.0" milliseconds.date="53069.024943310666" milliseconds.date.end="53367.16553287982" velocity="80.0" fixed="false"/>
+                    <note ref="meico_dddaa04e-5389-4ba5-8fea-8ed0fad3c945" midi.pitch="55.0" milliseconds.date="53367.16553287982" milliseconds.date.end="53665.30612244899" velocity="80.0" fixed="false"/>
+                    <note ref="meico_bf9553fd-f3d6-401c-8c79-4816a2a6a3e4" midi.pitch="48.0" milliseconds.date="53665.30612244899" milliseconds.date.end="53963.44671201814" velocity="80.0" fixed="false"/>
+                    <note ref="meico_03c0bd39-43ae-4708-96f3-17ee714b5bd6" midi.pitch="58.0" milliseconds.date="53963.44671201814" milliseconds.date.end="54261.58730158731" velocity="80.0" fixed="false"/>
+                    <note ref="meico_26a08b0b-cb85-4384-9827-e519576348c9" midi.pitch="57.0" milliseconds.date="54261.58730158731" milliseconds.date.end="54559.72789115647" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3849fa13-48f9-43af-9833-1006a4a2a7f3" midi.pitch="55.0" milliseconds.date="54559.72789115647" milliseconds.date.end="54857.86848072563" velocity="80.0" fixed="false"/>
+                    <note ref="meico_2828210d-18c0-4089-9be1-2a54a6077df8" midi.pitch="50.0" milliseconds.date="54857.86848072563" milliseconds.date.end="55156.00907029479" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8c88d7f1-5a49-4a3d-a3e7-6885509dac9b" midi.pitch="54.0" milliseconds.date="55156.00907029479" milliseconds.date.end="55454.14965986395" velocity="80.0" fixed="false"/>
+                    <note ref="meico_6c8558f9-5381-4cab-9052-fdc4cf3dfe23" midi.pitch="43.0" milliseconds.date="55454.14965986395" milliseconds.date.end="57242.99319727892" velocity="80.0" fixed="false"/>
+                    <note ref="meico_88200d8f-0b5f-45fc-8bd6-c82705449966" midi.pitch="50.0" milliseconds.date="57242.99319727892" milliseconds.date.end="57541.13378684808" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9650f29d-ba80-483f-9d04-e7188a4fab45" midi.pitch="54.0" milliseconds.date="57541.13378684808" milliseconds.date.end="57839.27437641724" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f26036bf-14db-4a12-99a7-28ef29a0b89c" midi.pitch="57.0" milliseconds.date="57839.27437641724" milliseconds.date.end="58137.4149659864" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d20c71e5-457e-443e-999c-13fe3f50de36" midi.pitch="60.0" milliseconds.date="58137.4149659864" milliseconds.date.end="58435.55555555556" velocity="80.0" fixed="false"/>
+                    <note ref="meico_44492f5d-9528-49c1-b59e-5daceb722cad" midi.pitch="63.0" milliseconds.date="58435.55555555556" milliseconds.date.end="58733.696145124726" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ffaf89fe-61ee-4a15-ad99-af2043893764" midi.pitch="62.0" milliseconds.date="58733.696145124726" milliseconds.date.end="59031.83673469388" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e7f7c394-8929-4b32-814c-e03a55773342" midi.pitch="60.0" milliseconds.date="59031.83673469388" milliseconds.date.end="59329.97732426305" velocity="80.0" fixed="false"/>
+                    <note ref="meico_7a92f20b-317a-4f69-be0d-c3b75dbe29c4" midi.pitch="58.0" milliseconds.date="59329.97732426305" milliseconds.date.end="59628.117913832204" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1621e5ef-0e00-4e9f-b181-f2f4ea7cfc05" midi.pitch="57.0" milliseconds.date="59628.117913832204" milliseconds.date.end="59926.25850340137" velocity="80.0" fixed="false"/>
+                    <note ref="meico_c945f8d3-b27e-4e81-b99a-b4143f3c86b9" midi.pitch="58.0" milliseconds.date="59926.25850340137" milliseconds.date.end="60224.399092970525" velocity="80.0" fixed="false"/>
+                    <note ref="meico_cf0888f3-32ba-465f-afb5-7fcc3ee6e879" midi.pitch="55.0" milliseconds.date="60224.399092970525" milliseconds.date.end="60820.68027210885" velocity="80.0" fixed="false"/>
+                    <note ref="meico_77887477-23a8-48f8-aa17-c74bbec8b228" midi.pitch="48.0" milliseconds.date="60820.68027210885" milliseconds.date.end="61118.82086167801" velocity="80.0" fixed="false"/>
+                    <note ref="meico_6bcbc468-d3eb-4bf9-bd28-e1ca2939702c" midi.pitch="52.0" milliseconds.date="61118.82086167801" milliseconds.date.end="61416.961451247174" velocity="80.0" fixed="false"/>
+                    <note ref="meico_21cfff7e-335a-4b83-9044-0d750b0fa0c2" midi.pitch="55.0" milliseconds.date="61416.961451247174" milliseconds.date.end="61715.10204081633" velocity="80.0" fixed="false"/>
+                    <note ref="meico_10856be8-d1db-4e91-93e3-ccf359bacbc7" midi.pitch="58.0" milliseconds.date="61715.10204081633" milliseconds.date.end="62013.242630385495" velocity="80.0" fixed="false"/>
+                    <note ref="meico_bc65f485-94bd-4b15-ab59-cb2247a1f9c1" midi.pitch="62.0" milliseconds.date="62013.242630385495" milliseconds.date.end="62311.38321995465" velocity="80.0" fixed="false"/>
+                    <note ref="meico_358c1cff-43c3-4d87-8a4e-d2ded3c5812d" midi.pitch="60.0" milliseconds.date="62311.38321995465" milliseconds.date.end="62609.52380952382" velocity="80.0" fixed="false"/>
+                    <note ref="meico_06adbd11-ec49-406d-991a-865c21e56c31" midi.pitch="58.0" milliseconds.date="62609.52380952382" milliseconds.date.end="62907.66439909298" velocity="80.0" fixed="false"/>
+                    <note ref="meico_67a7b0cb-c275-4d2b-8bef-b973282b9073" midi.pitch="57.0" milliseconds.date="62907.66439909298" milliseconds.date.end="63205.80498866214" velocity="80.0" fixed="false"/>
+                    <note ref="meico_2ba55c00-a3ef-4a26-9fa3-3f50204b506d" midi.pitch="55.0" milliseconds.date="63205.80498866214" milliseconds.date.end="63503.9455782313" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b9c2ffe6-21fa-45fd-ac85-6e41d40bf94d" midi.pitch="57.0" milliseconds.date="63503.9455782313" milliseconds.date.end="63802.08616780046" velocity="80.0" fixed="false"/>
+                    <note ref="meico_29559cbc-1a5b-43bc-aca8-19420bdf1dd3" midi.pitch="53.0" milliseconds.date="63802.08616780046" milliseconds.date.end="64100.22675736962" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9eba2447-2518-4915-aece-8442742f06a3" midi.pitch="51.0" milliseconds.date="64100.22675736962" milliseconds.date.end="64398.36734693878" velocity="80.0" fixed="false"/>
+                    <note ref="meico_0879c287-9f04-4215-bd41-42533fd158f2" midi.pitch="50.0" milliseconds.date="64398.36734693878" milliseconds.date.end="64696.507936507944" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a5cfeb80-f3cb-48de-ab33-4de61a386e0e" midi.pitch="53.0" milliseconds.date="64696.507936507944" milliseconds.date.end="64994.64852607711" velocity="80.0" fixed="false"/>
+                    <note ref="meico_1725b8ef-210c-4089-97aa-36a8986470ef" midi.pitch="58.0" milliseconds.date="64994.64852607711" milliseconds.date.end="65292.789115646265" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f7a9d490-58ca-427b-bb3c-a4449d4c92cb" midi.pitch="57.0" milliseconds.date="65292.789115646265" milliseconds.date.end="65590.92970521543" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ccdd85f8-56e3-4157-b087-e80ef0b34dde" midi.pitch="58.0" milliseconds.date="65590.92970521543" milliseconds.date.end="65889.07029478459" velocity="80.0" fixed="false"/>
+                    <note ref="meico_50d15cb0-f8d6-4c55-876f-7bf2ac431047" midi.pitch="50.0" milliseconds.date="65889.07029478459" milliseconds.date.end="66187.21088435374" velocity="80.0" fixed="false"/>
+                    <note ref="meico_610c4fd9-9423-491e-8ab1-c2be096dc325" midi.pitch="51.0" milliseconds.date="66187.21088435374" milliseconds.date.end="66485.35147392291" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a9d365f3-2c26-42f9-8014-77438642494b" midi.pitch="55.0" milliseconds.date="66485.35147392291" milliseconds.date.end="66783.49206349207" velocity="80.0" fixed="false"/>
+                    <note ref="meico_2f163d52-1535-45e9-9595-4da16bcd52be" midi.pitch="58.0" milliseconds.date="66783.49206349207" milliseconds.date.end="67081.63265306123" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ac37626d-0757-4d53-a3e5-70368646562e" midi.pitch="57.0" milliseconds.date="67081.63265306123" milliseconds.date.end="67379.7732426304" velocity="80.0" fixed="false"/>
+                    <note ref="meico_0fd56df4-4dc4-4ba7-85f2-e26ef8458a5d" midi.pitch="58.0" milliseconds.date="67379.7732426304" milliseconds.date.end="67677.91383219956" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f6208055-2808-488f-8c4f-af5ac6027c79" midi.pitch="62.0" milliseconds.date="67677.91383219956" milliseconds.date.end="67976.05442176871" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3811ba22-c006-46aa-a405-525f728970bb" midi.pitch="60.0" milliseconds.date="67976.05442176871" milliseconds.date.end="68274.19501133787" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ffd823aa-5466-4933-b634-cb17b1c05e69" midi.pitch="63.0" milliseconds.date="68274.19501133787" milliseconds.date.end="68572.33560090704" velocity="80.0" fixed="false"/>
+                    <note ref="meico_dc3d1eb8-14af-421e-807f-12c42f3a2bd6" midi.pitch="62.0" milliseconds.date="68572.33560090704" milliseconds.date.end="68870.4761904762" velocity="80.0" fixed="false"/>
+                    <note ref="meico_efa0e0dd-913d-4c99-9e46-cd11af84af2e" midi.pitch="58.0" milliseconds.date="68870.4761904762" milliseconds.date.end="69168.61678004535" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8e04f720-30e8-4c64-80cc-daf1edd31060" midi.pitch="53.0" milliseconds.date="69168.61678004535" milliseconds.date.end="69466.75736961453" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a8b3bcf4-9b1d-47b5-b791-79f6783c6f7c" midi.pitch="57.0" milliseconds.date="69466.75736961453" milliseconds.date.end="69764.89795918368" velocity="80.0" fixed="false"/>
+                    <note ref="meico_22900a19-2c9f-4e98-83dc-3d2fec58c099" midi.pitch="58.0" milliseconds.date="69764.89795918368" milliseconds.date.end="70063.03854875284" velocity="80.0" fixed="false"/>
+                    <note ref="meico_9fa4b673-00d4-48cd-b526-21c886159f1e" midi.pitch="53.0" milliseconds.date="70063.03854875284" milliseconds.date.end="70361.179138322" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d37c98bd-46f4-4cbc-8da2-bbc918350a5f" midi.pitch="50.0" milliseconds.date="70361.179138322" milliseconds.date.end="70659.31972789117" velocity="80.0" fixed="false"/>
+                    <note ref="meico_503dbb9e-d4e5-4aa3-b6a6-53a0730d6c8f" midi.pitch="53.0" milliseconds.date="70659.31972789117" milliseconds.date.end="70957.46031746033" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4f2c6ee7-8bab-42a0-94cc-86662a7e2382" midi.pitch="46.0" milliseconds.date="70957.46031746033" milliseconds.date.end="71553.74149659865" velocity="80.0" fixed="false"/>
+                    <note ref="meico_0115da8f-a3b6-46ee-8ac1-f66d963fe038" midi.pitch="47.0" milliseconds.date="71553.74149659865" milliseconds.date.end="71851.88208616781" velocity="80.0" fixed="false"/>
+                    <note ref="meico_892c226b-c75c-47b0-a230-5a02a905ef08" midi.pitch="50.0" milliseconds.date="71851.88208616781" milliseconds.date.end="72150.02267573697" velocity="80.0" fixed="false"/>
+                    <note ref="meico_80b6d5bb-b427-4599-8c41-6f94af9e5c2d" midi.pitch="53.0" milliseconds.date="72150.02267573697" milliseconds.date.end="72448.16326530612" velocity="80.0" fixed="false"/>
+                    <note ref="meico_24baaf50-0918-4f06-923d-85128f46ae6b" midi.pitch="56.0" milliseconds.date="72448.16326530612" milliseconds.date.end="72746.3038548753" velocity="80.0" fixed="false"/>
+                    <note ref="meico_24761900-f525-4e50-ac5e-cbb727fceb6e" midi.pitch="55.0" milliseconds.date="72746.3038548753" milliseconds.date.end="73044.44444444445" velocity="80.0" fixed="false"/>
+                    <note ref="meico_06a1f4be-a52f-458d-9fb2-f17cf430edbc" midi.pitch="53.0" milliseconds.date="73044.44444444445" milliseconds.date.end="73342.58503401361" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b0cbda96-e76c-496b-8fff-a0a2183c1545" midi.pitch="51.0" milliseconds.date="73342.58503401361" milliseconds.date.end="73640.72562358278" velocity="80.0" fixed="false"/>
+                    <note ref="meico_2620bf0a-9626-4844-97a2-62bab5bcbf64" midi.pitch="55.0" milliseconds.date="73640.72562358278" milliseconds.date.end="73938.86621315194" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f8b8393c-a618-428a-994a-546df4544207" midi.pitch="60.0" milliseconds.date="73938.86621315194" milliseconds.date.end="74237.0068027211" velocity="80.0" fixed="false"/>
+                    <note ref="meico_4d4a5651-e7a8-4e36-9bb9-a23d6f412624" midi.pitch="62.0" milliseconds.date="74237.0068027211" milliseconds.date.end="74535.14739229025" velocity="80.0" fixed="false"/>
+                    <note ref="meico_f127da5c-c42b-489c-8e2c-c0bed4f6d088" midi.pitch="63.0" milliseconds.date="74535.14739229025" milliseconds.date.end="75131.42857142858" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b2d9a880-750e-4a16-acf4-257ea26ec054" midi.pitch="45.0" milliseconds.date="75131.42857142858" milliseconds.date.end="75429.56916099774" velocity="80.0" fixed="false"/>
+                    <note ref="meico_0988299d-b4ab-4c40-b3d7-fcf63180be4b" midi.pitch="48.0" milliseconds.date="75429.56916099774" milliseconds.date.end="75727.70975056691" velocity="80.0" fixed="false"/>
+                    <note ref="meico_49bb0128-5e0f-4389-943b-383c64bf6140" midi.pitch="51.0" milliseconds.date="75727.70975056691" milliseconds.date.end="76025.85034013606" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ecff8ca1-3760-401f-bfac-1ba3510bfa83" midi.pitch="55.0" milliseconds.date="76025.85034013606" milliseconds.date.end="76323.99092970522" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b6db0044-1413-4f84-afd6-418b828bc3f9" midi.pitch="53.0" milliseconds.date="76323.99092970522" milliseconds.date.end="76622.13151927438" velocity="80.0" fixed="false"/>
+                    <note ref="meico_7134fe89-685c-4c0e-8d64-e3ce4de654ef" midi.pitch="51.0" milliseconds.date="76622.13151927438" milliseconds.date.end="76920.27210884355" velocity="80.0" fixed="false"/>
+                    <note ref="meico_703b0e44-7f96-4eb9-8118-1ec2a1db3d59" midi.pitch="50.0" milliseconds.date="76920.27210884355" milliseconds.date.end="77218.4126984127" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8dc30dd2-5471-4a11-a956-fadba4937b31" midi.pitch="53.0" milliseconds.date="77218.4126984127" milliseconds.date.end="77516.55328798186" velocity="80.0" fixed="false"/>
+                    <note ref="meico_11940c9d-15ac-437d-adbf-46e523227df3" midi.pitch="58.0" milliseconds.date="77516.55328798186" milliseconds.date.end="77814.69387755104" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8a00706b-831d-4141-9722-75469a795367" midi.pitch="60.0" milliseconds.date="77814.69387755104" milliseconds.date.end="78112.83446712019" velocity="80.0" fixed="false"/>
+                    <note ref="meico_97e3496e-bd85-44ce-b8b5-c766a0a305a7" midi.pitch="62.0" milliseconds.date="78112.83446712019" milliseconds.date.end="78709.1156462585" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3571449b-f340-4656-9b35-6b7fb5d87d4f" midi.pitch="42.0" milliseconds.date="78709.1156462585" milliseconds.date.end="79007.25623582768" velocity="80.0" fixed="false"/>
+                    <note ref="meico_44732deb-33f0-47e4-98b9-a03e2856e720" midi.pitch="45.0" milliseconds.date="79007.25623582768" milliseconds.date.end="79305.39682539683" velocity="80.0" fixed="false"/>
+                    <note ref="meico_105dddc6-74e0-4907-8d65-cb7dfcffc7ea" midi.pitch="48.0" milliseconds.date="79305.39682539683" milliseconds.date.end="79603.53741496599" velocity="80.0" fixed="false"/>
+                    <note ref="meico_5f34e204-6f63-4474-bdb1-bb03f1199fa7" midi.pitch="51.0" milliseconds.date="79603.53741496599" milliseconds.date.end="79901.67800453516" velocity="80.0" fixed="false"/>
+                    <note ref="meico_fc1e0b7e-cd32-458e-b5d2-322ae02b7237" midi.pitch="50.0" milliseconds.date="79901.67800453516" milliseconds.date.end="80199.81859410432" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3d8741b8-b0f9-4d4f-9e27-59657c356721" midi.pitch="48.0" milliseconds.date="80199.81859410432" milliseconds.date.end="80497.95918367348" velocity="80.0" fixed="false"/>
+                    <note ref="meico_e3017f5d-33a9-4881-945b-8ef65cfdf6e2" midi.pitch="46.0" milliseconds.date="80497.95918367348" milliseconds.date.end="80796.09977324263" velocity="80.0" fixed="false"/>
+                    <note ref="meico_0c807a0b-7357-4ec5-9e6a-14aa2a7e45b6" midi.pitch="50.0" milliseconds.date="80796.09977324263" milliseconds.date.end="81094.2403628118" velocity="80.0" fixed="false"/>
+                    <note ref="meico_38e3b4af-c562-454d-b9d5-0c2b507d0cda" midi.pitch="55.0" milliseconds.date="81094.2403628118" milliseconds.date.end="81392.38095238096" velocity="80.0" fixed="false"/>
+                    <note ref="meico_649916a1-5b6d-4485-bccc-bd45ef54e72f" midi.pitch="57.0" milliseconds.date="81392.38095238096" milliseconds.date.end="81690.52154195012" velocity="80.0" fixed="false"/>
+                    <note ref="meico_140d0334-94aa-4359-a9ef-17cc1ae4fa34" midi.pitch="58.0" milliseconds.date="81690.52154195012" milliseconds.date.end="81988.66213151929" velocity="80.0" fixed="false"/>
+                    <note ref="meico_b071c859-0323-47f1-af28-45813f01ff9c" midi.pitch="55.0" milliseconds.date="81988.66213151929" milliseconds.date.end="82286.80272108845" velocity="80.0" fixed="false"/>
+                    <note ref="meico_071c64d3-8648-4480-ab93-1b1da1a9b6d5" midi.pitch="48.0" milliseconds.date="82286.80272108845" milliseconds.date.end="82584.9433106576" velocity="80.0" fixed="false"/>
+                    <note ref="meico_8685da0c-e381-442c-8e22-d231954ca931" midi.pitch="58.0" milliseconds.date="82584.9433106576" milliseconds.date.end="82883.08390022676" velocity="80.0" fixed="false"/>
+                    <note ref="meico_62ffc887-f364-49d9-bf9f-9d93a023a19b" midi.pitch="57.0" milliseconds.date="82883.08390022676" milliseconds.date.end="83181.22448979593" velocity="80.0" fixed="false"/>
+                    <note ref="meico_a6fd6137-e358-4619-ac90-39990b71f8e6" midi.pitch="55.0" milliseconds.date="83181.22448979593" milliseconds.date.end="83479.36507936509" velocity="80.0" fixed="false"/>
+                    <note ref="meico_3bfe6937-7915-4ed2-991a-c0cc7c1886fc" midi.pitch="50.0" milliseconds.date="83479.36507936509" milliseconds.date.end="83777.50566893425" velocity="80.0" fixed="false"/>
+                    <note ref="meico_ed23b650-b1b5-41dd-bbb7-d2eba10a71b2" midi.pitch="54.0" milliseconds.date="83777.50566893425" milliseconds.date.end="84075.64625850342" velocity="80.0" fixed="false"/>
+                    <note ref="meico_d9596536-886c-4178-9029-4127344c9b01" midi.pitch="43.0" milliseconds.date="84075.64625850342" milliseconds.date.end="85864.48979591837" velocity="80.0" fixed="true"/>
+                </part>
+            </alignment>
+        </audio>
+    </audios>
+</mpmToolboxProject>

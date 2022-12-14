@@ -17,258 +17,258 @@
         <header/>
         <dated>
             <score>
-                <note date="0.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="240.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="480.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="720.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="960.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="1200.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="1440.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="1920.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="2400.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="2880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="3120.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="3360.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="3600.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="3840.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="4080.0" midi.pitch="39.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="4320.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="4560.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="4800.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="5040.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="5280.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="5520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="5760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="6000.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="6240.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="6480.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="6720.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="6960.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="7200.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="7680.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="8160.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="8640.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="8880.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="9120.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="9360.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="9600.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="9840.0" midi.pitch="39.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="10080.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="10320.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="10560.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="959.0" velocity="80.0"/>
-                <note date="11520.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="11760.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="12000.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="12240.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="12480.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="12720.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="12960.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="13440.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="13920.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="14400.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="14640.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="14880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="15120.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="15360.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="15600.0" midi.pitch="39.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="15840.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="16080.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="16320.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="16560.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="16800.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="17040.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="17280.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="17520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="17760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="18000.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="18240.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="18480.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="18720.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="19200.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="19680.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="20160.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="20400.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="20640.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="20880.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="21120.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="21360.0" midi.pitch="39.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="21600.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="21840.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="22080.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="959.0" velocity="80.0"/>
-                <note date="23040.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="23280.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="23520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="23760.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="24000.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="24240.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="24480.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="24720.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="24960.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="25200.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="25440.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="25920.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="26160.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="26400.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="26640.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="26880.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="27120.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="27360.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="27600.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="27840.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="28080.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="28320.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="28560.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="28800.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="29040.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="29280.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="29520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="29760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="30000.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="30240.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="30480.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="30720.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="30960.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="31200.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="31440.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="31680.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="31920.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="32160.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="32400.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="32640.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="32880.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="33120.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="33360.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="33600.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="33840.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="34080.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="479.0" velocity="80.0"/>
-                <note date="34560.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="34800.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="35040.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="35280.0" midi.pitch="56.0" pitchname="A" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="35520.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="35760.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="36000.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="36240.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="36480.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="36720.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="36960.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="479.0" velocity="80.0"/>
-                <note date="37440.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="37680.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="37920.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="38160.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="38400.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="38640.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="38880.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="39120.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="39360.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="39600.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="39840.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="40320.0" midi.pitch="42.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="40560.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="40800.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="41040.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="41280.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="41520.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="41760.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="42000.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="42240.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="42480.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="42720.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="42960.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="43200.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="43440.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="43680.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="43920.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="44160.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="44400.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="44640.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1439.0" velocity="80.0"/>
-                <note date="46080.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="46320.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="46560.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="46800.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="47040.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="47280.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="47520.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="47760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="48000.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="48240.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="48480.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="48960.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="49200.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="49440.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="49680.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="49920.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="50160.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="50400.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="50640.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="50880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="51120.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="51360.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="51600.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="51840.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="52080.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="52320.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="52560.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="52800.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="53040.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="53280.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="53520.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="53760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="54000.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="54240.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="54480.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="54720.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="54960.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="55200.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="55440.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="55680.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="55920.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="56160.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="56400.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="56640.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="56880.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="57120.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="479.0" velocity="80.0"/>
-                <note date="57600.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="57840.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="58080.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="58320.0" midi.pitch="56.0" pitchname="A" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="58560.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="58800.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="59040.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="59280.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="59520.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="59760.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="60000.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="479.0" velocity="80.0"/>
-                <note date="60480.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="60720.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="60960.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="61200.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="61440.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="61680.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="61920.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="62160.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="62400.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="62640.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="62880.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="479.0" velocity="80.0"/>
-                <note date="63360.0" midi.pitch="42.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="63600.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="63840.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="64080.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="64320.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="64560.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="64800.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="65040.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="65280.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="65520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="65760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="66000.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="66240.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="66480.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="66720.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="66960.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="67200.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="239.0" velocity="80.0"/>
-                <note date="67440.0" midi.pitch="54.0" pitchname="G" accidentals="-1.0" duration="239.0" velocity="80.0"/>
-                <note date="67680.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1439.0" velocity="80.0"/>
+                <note date="0.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_e0ce30cc-e00e-4cc1-9c43-fea3725a80ef"/>
+                <note date="240.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_4b9aa215-cbc9-4009-a652-93dea391ad0a"/>
+                <note date="480.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_af007aa5-8bfd-42bb-a3cd-4ffbc48895b3"/>
+                <note date="720.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5fd2c151-37b9-44d8-b6b5-6228ef9a56b0"/>
+                <note date="960.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_91cafb28-54b7-44e8-a3b5-9183897224a1"/>
+                <note date="1200.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_702a3476-eecb-4d19-a022-c18cdac9265c"/>
+                <note date="1440.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_4df65477-7149-42ff-82ec-56b2bdf1942b"/>
+                <note date="1920.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_ea531a38-3559-4bec-b05c-bf8fd5902932"/>
+                <note date="2400.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_ea3bb97b-5a54-4b74-957a-0dccbbf64ab8"/>
+                <note date="2880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_4926ad46-a8f3-42df-a68f-b2fc8cc1a55b"/>
+                <note date="3120.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_49cf8717-57ee-4128-a3f3-42bfeb05520d"/>
+                <note date="3360.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_2847a635-dad3-4908-8ae4-b98283c6749b"/>
+                <note date="3600.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_295b98b1-79b6-4a2d-9547-6ebd22a36984"/>
+                <note date="3840.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_96d5764b-e4a6-41a5-a707-81ed9e509925"/>
+                <note date="4080.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_cf838aba-e667-4332-8be8-8703d532b2ef"/>
+                <note date="4320.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_80eec265-b027-4c31-a7dc-b4b2f093d016"/>
+                <note date="4560.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_fddade8c-b61f-4ed0-8e48-a29fd1fff25c"/>
+                <note date="4800.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5a5d781b-c344-418d-8402-1aa6ee728cdd"/>
+                <note date="5040.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8324f92c-95e5-45c0-8cfb-63dfa32f5cb7"/>
+                <note date="5280.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_4dab12a2-4fd8-4684-8ace-6cb168255c43"/>
+                <note date="5520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5ce0fa4e-f205-483c-9794-1887b2386f67"/>
+                <note date="5760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_b9e878e5-c661-4989-958e-015ad2ce3ad3"/>
+                <note date="6000.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1b735aef-c8de-417c-b4df-eea2032588df"/>
+                <note date="6240.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_17ead5e5-605d-4b9e-a6ce-71530f810533"/>
+                <note date="6480.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_6fdac2e5-ccab-41f0-8825-dbc6d92e6bef"/>
+                <note date="6720.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_8f3c175b-fe74-4e62-a924-0abf14aed5de"/>
+                <note date="6960.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5b9ccc97-482a-4e6e-a68d-04fa866d567a"/>
+                <note date="7200.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_e97b2a2d-a95c-4aaa-b036-d4f5bf88184b"/>
+                <note date="7680.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_95ba35e0-05fd-43ae-865b-c0dfc4602d1e"/>
+                <note date="8160.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_9b0c5a16-2fb7-4a9e-9ffd-9972c8da0439"/>
+                <note date="8640.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_93b5ee8e-346d-4364-ade1-292464fc1b33"/>
+                <note date="8880.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_7fc9a96b-1433-4675-bed7-500f9a0f15c9"/>
+                <note date="9120.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_13bd9b9e-0480-40b7-b899-fe1dae521299"/>
+                <note date="9360.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_d7c18472-a102-4b71-bb02-a560a13c4ac8"/>
+                <note date="9600.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_08081a49-d74d-4b08-b227-06a084c4a377"/>
+                <note date="9840.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1d8471e3-16d1-49b4-b03f-5747681c0a1c"/>
+                <note date="10080.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_e0829987-24b9-476b-8279-1abc76a4b14f"/>
+                <note date="10320.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ed6b1705-035b-4834-94d0-2277be01f845"/>
+                <note date="10560.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="960.0" velocity="80.0" xml:id="meico_27bcbe04-cd22-41e2-bc0c-0079b8b337d7"/>
+                <note date="11520.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_a154e99e-070e-4202-965d-5e3a9b879509"/>
+                <note date="11760.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ad319dc1-ae2b-44f6-8d17-9fa020be7558"/>
+                <note date="12000.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_4e61d03c-7585-4809-ab1d-522a47b807ce"/>
+                <note date="12240.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_9625b4ae-29ae-431f-9e3d-722b2cc970b4"/>
+                <note date="12480.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_b32d2cd4-a325-4632-af5c-da156d556ca6"/>
+                <note date="12720.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d4b2a00c-4754-490b-9503-9c4fc1e60709"/>
+                <note date="12960.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_f776170a-1ca2-4eae-afd3-6a89b9042b44"/>
+                <note date="13440.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_e3ff07a6-4bb3-4d30-9773-01b9c1477135"/>
+                <note date="13920.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_8ec55aef-2426-4231-b207-5ae044fa0bc6"/>
+                <note date="14400.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_de58ad93-5490-44f1-8027-4885706dc9a7"/>
+                <note date="14640.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_4ee4a590-3891-406a-8501-8d97f81d4a5d"/>
+                <note date="14880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ac84644f-83b4-42a5-920c-1ff3e9caad29"/>
+                <note date="15120.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_8b14fc52-f586-48cd-a272-a3aa87990942"/>
+                <note date="15360.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3d6c44c5-e853-4256-9ce3-fdfbbc52ea5e"/>
+                <note date="15600.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b4244e38-8e31-44dd-9873-5cc795e6bae1"/>
+                <note date="15840.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_95e089e5-ffd9-47fa-9f52-b44528efbb4a"/>
+                <note date="16080.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ebd5c9c8-138f-4367-a381-bff97eef609b"/>
+                <note date="16320.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_fc57e7aa-9e95-4632-a86a-1831ce4efc6d"/>
+                <note date="16560.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5fdf81de-04fd-4dbf-b3a3-91c16904a9fd"/>
+                <note date="16800.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_3fdc93da-bfe6-4539-9e6c-a1cf7aa3acc8"/>
+                <note date="17040.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_9ec9f78c-2144-49d9-8c6a-e1b4f7d038c2"/>
+                <note date="17280.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_d18032de-cc64-445f-afaa-a273c873d4f9"/>
+                <note date="17520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_46805701-2034-42c8-ac5a-9fa9ee6a9931"/>
+                <note date="17760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_07e86404-82f2-4340-b4e8-613992c0063a"/>
+                <note date="18000.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_06fc0373-42ca-4713-8429-f4720585ddb2"/>
+                <note date="18240.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_ea628c47-4bdb-4d71-bb0e-73755b0b9fb4"/>
+                <note date="18480.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5106dc14-66f5-4010-814a-0b3f46df25e7"/>
+                <note date="18720.0" midi.pitch="41.0" pitchname="F" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_a35bfbce-aded-4d8b-9821-d316c01f6078"/>
+                <note date="19200.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_e4761122-bd8a-4f12-8ea3-08b02fb400cc"/>
+                <note date="19680.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_cd0fe628-1704-42f2-8ca3-ef5a74dd0cb1"/>
+                <note date="20160.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_cd2d199f-91a2-46b8-b119-2e965663ad04"/>
+                <note date="20400.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_05625d8b-4522-46f8-afec-731af651f46a"/>
+                <note date="20640.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8b4146fb-4c4e-4088-bb57-82dac362a66c"/>
+                <note date="20880.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_c6515dab-c02d-422d-b124-2be9e45d503d"/>
+                <note date="21120.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_78ed0250-07c9-4f8d-8fe7-38764f77ada3"/>
+                <note date="21360.0" midi.pitch="40.0" pitchname="E" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_4dc50af3-e1db-44b4-9f26-bd7564e854ad"/>
+                <note date="21600.0" midi.pitch="38.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_36a2eecd-3149-407e-9d8c-da5579b87305"/>
+                <note date="21840.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ca819bec-f4b2-4b52-bd18-bb440ebd5a4b"/>
+                <note date="22080.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="960.0" velocity="80.0" xml:id="meico_f53ee0bc-1e27-4f75-8583-dad1d79707d3"/>
+                <note date="23040.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_5b3a9333-96e7-4821-86be-027c8fe9c927"/>
+                <note date="23280.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_fb98991e-dbbd-484d-ad50-210172609e99"/>
+                <note date="23520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d64f65a5-828d-4778-b43f-1cab9d0e3ee5"/>
+                <note date="23760.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_fcd5969f-155a-4c86-a68c-e3c32099337e"/>
+                <note date="24000.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_ab014ef0-3d59-4876-ad7d-c911f10e1537"/>
+                <note date="24240.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b92c3d47-b050-4cfb-ada5-1b572b628a08"/>
+                <note date="24480.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f64c82dd-f661-4609-bc92-6396f75e5a2a"/>
+                <note date="24720.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_39d92c03-2778-4855-bbd8-7a69c0bc429d"/>
+                <note date="24960.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_71b6a32b-617d-4fab-a05f-3e3dcbd22514"/>
+                <note date="25200.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_df38ee8c-fb7f-459b-959e-30aa1e347d3e"/>
+                <note date="25440.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_c83e6672-cb68-452d-8933-7ee02291fc71"/>
+                <note date="25920.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_546acaf3-e03f-4d64-bdb6-d7377c15e0db"/>
+                <note date="26160.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1fded8ff-d8dd-431d-90fb-8687ac87d9af"/>
+                <note date="26400.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_837cf19c-7f85-4be2-941a-76a1e3cfb6d0"/>
+                <note date="26640.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_a28a3ffb-6180-405f-9680-b4a52775a096"/>
+                <note date="26880.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3ce7e8df-55b4-4c5e-aac8-61d8295d3a5a"/>
+                <note date="27120.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8a59a486-0b09-4398-bd5b-2ae9aa6c77a9"/>
+                <note date="27360.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_e1f1598f-e818-4824-8563-42876f9dbd1f"/>
+                <note date="27600.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_e123611b-c32f-4886-899d-c08e50370742"/>
+                <note date="27840.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_902da5b2-7a5f-4d38-ba3f-3353bb69b531"/>
+                <note date="28080.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_6429a4cb-c48a-477e-9efb-1c4b9b852a23"/>
+                <note date="28320.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_e89592f7-894e-4d7c-b0ce-de638c8dbef4"/>
+                <note date="28560.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_cc704b88-5857-4206-9b82-44e3893a3412"/>
+                <note date="28800.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8bf06e5b-8cd0-4c77-93b2-ff9d19223ac2"/>
+                <note date="29040.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b8bfdc52-9de3-43b9-89db-ddcd3a664078"/>
+                <note date="29280.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_8e06d54a-26b0-4c96-a656-bb5d085a1885"/>
+                <note date="29520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_297411b5-6885-40e8-b2e5-732cade8a723"/>
+                <note date="29760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_efdef6db-6c56-4cda-8ea1-a4b178f9cb4a"/>
+                <note date="30000.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_80e97d4b-2afd-4678-b9ce-e1fb8fd402bf"/>
+                <note date="30240.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_d5c991c8-0e42-4752-9985-069fd42681e9"/>
+                <note date="30480.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_6e1ef5b8-21e2-4d51-a98a-3afb3b31a1cd"/>
+                <note date="30720.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_65936cc9-54b0-4372-bb84-ce9693afbfa1"/>
+                <note date="30960.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8defd6bf-b8ac-4064-bcb8-4f4726835b27"/>
+                <note date="31200.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_e5381a22-771e-4342-ba70-4232b846b42e"/>
+                <note date="31440.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1971111a-a1a1-4217-8fa8-68f3bcbae86f"/>
+                <note date="31680.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_24e65d44-e09f-4c6e-a12f-cbc7f19a7401"/>
+                <note date="31920.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_92acee82-63f6-4208-ae43-d0abeab38ea3"/>
+                <note date="32160.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d1cbd71e-7bd0-4c9d-b8bf-35f963b67912"/>
+                <note date="32400.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_9ab1339f-0bd9-4bcd-aadf-b2628cf1d052"/>
+                <note date="32640.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f01ea455-aafe-4365-a47e-0aa618b1898b"/>
+                <note date="32880.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_55e3e56e-2e4d-4c4d-8387-1fe83b438a74"/>
+                <note date="33120.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_e6380f69-a717-4cfc-9f32-4c2d1b7063ae"/>
+                <note date="33360.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_013151b6-64e7-4041-a1f3-03fcd35ca58d"/>
+                <note date="33600.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1f09b708-d4ad-4f88-95cc-b9faeddb8eac"/>
+                <note date="33840.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_cdfeda19-153a-43f3-aa3a-847abf100723"/>
+                <note date="34080.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="480.0" velocity="80.0" xml:id="meico_bc998407-6537-41c0-87b4-ff90480780fb"/>
+                <note date="34560.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_41caca5a-f8cc-4f27-a1d4-f7c4078d8336"/>
+                <note date="34800.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_c6771530-6e0f-493f-8f54-a24a53139f01"/>
+                <note date="35040.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b66cfc48-16be-410b-ac83-dc2220bd1242"/>
+                <note date="35280.0" midi.pitch="56.0" pitchname="A" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_71909d42-9da3-449c-8e02-a354f02525a3"/>
+                <note date="35520.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d2bd2d02-ee43-43d7-bbe2-15f0ea1de906"/>
+                <note date="35760.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_554bd0c3-0adf-4612-8d43-b1af5fcc81f0"/>
+                <note date="36000.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_a2b717a0-bc1b-4574-86bc-8ec8cecd0668"/>
+                <note date="36240.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_31f3f39b-8395-470d-b203-de08870babe5"/>
+                <note date="36480.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_998548ee-f3b1-494f-b9f5-4dd699a6a8de"/>
+                <note date="36720.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_a7a657a0-cea2-46b9-b016-b9d86cfa9d80"/>
+                <note date="36960.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="480.0" velocity="80.0" xml:id="meico_18363bad-1a44-4870-aef2-75fe3ce12d85"/>
+                <note date="37440.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_43c2d3b2-7a82-4229-9ab8-39a36fb0f401"/>
+                <note date="37680.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_42d4d13f-a85a-4dba-9361-48e62eec9a9f"/>
+                <note date="37920.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_4090fdad-3de6-4920-ac0a-9955a01c5fea"/>
+                <note date="38160.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1b9e8adb-f98e-4810-88b4-3825f0373fa3"/>
+                <note date="38400.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_87d662f4-c549-41e2-8825-16caa96ef419"/>
+                <note date="38640.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_7c9e63bd-d6ae-40bf-a7bb-eab14fb133e1"/>
+                <note date="38880.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_c0e899df-6914-457a-aabd-c2c5146d4908"/>
+                <note date="39120.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_fddfc91b-903e-4c97-8ddc-26c75f32ee30"/>
+                <note date="39360.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_bf1b96e0-6894-46b2-b7d8-a9d92ee1f286"/>
+                <note date="39600.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3a3e3b6f-4d94-40e0-91e1-5a8f27528191"/>
+                <note date="39840.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_18e23c14-d6dc-4c9e-8c54-513ff569146d"/>
+                <note date="40320.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_5cd53555-9c6c-4c03-b6d7-08b7af8138ab"/>
+                <note date="40560.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_38a0a65c-43c1-4974-99c5-d88e9ce1946e"/>
+                <note date="40800.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d2fe8e17-fc32-4011-a591-008e8603f49a"/>
+                <note date="41040.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_947b9c76-eeec-42c5-bc6f-0c8d591c5880"/>
+                <note date="41280.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_89d91f99-d27b-4cf9-8beb-5c88faf39282"/>
+                <note date="41520.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f3e977e8-911b-4dc9-b6c9-b891a78137fc"/>
+                <note date="41760.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_c1743b32-c99d-4453-a587-ea199f8bdc41"/>
+                <note date="42000.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_eb023ad1-bc96-46d7-8d5a-d926c8a6580b"/>
+                <note date="42240.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_e00d1eba-7022-4d92-8085-678f894c652e"/>
+                <note date="42480.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_2f084caf-2255-44e2-b5e7-06f5b73fb04d"/>
+                <note date="42720.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_0d7e4ed4-1cae-4cb4-b50e-235e04c8ca28"/>
+                <note date="42960.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_dddaa04e-5389-4ba5-8fea-8ed0fad3c945"/>
+                <note date="43200.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_bf9553fd-f3d6-401c-8c79-4816a2a6a3e4"/>
+                <note date="43440.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_03c0bd39-43ae-4708-96f3-17ee714b5bd6"/>
+                <note date="43680.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_26a08b0b-cb85-4384-9827-e519576348c9"/>
+                <note date="43920.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3849fa13-48f9-43af-9833-1006a4a2a7f3"/>
+                <note date="44160.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_2828210d-18c0-4089-9be1-2a54a6077df8"/>
+                <note date="44400.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_8c88d7f1-5a49-4a3d-a3e7-6885509dac9b"/>
+                <note date="44640.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="80.0" xml:id="meico_6c8558f9-5381-4cab-9052-fdc4cf3dfe23"/>
+                <note date="46080.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_88200d8f-0b5f-45fc-8bd6-c82705449966"/>
+                <note date="46320.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_9650f29d-ba80-483f-9d04-e7188a4fab45"/>
+                <note date="46560.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f26036bf-14db-4a12-99a7-28ef29a0b89c"/>
+                <note date="46800.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d20c71e5-457e-443e-999c-13fe3f50de36"/>
+                <note date="47040.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_44492f5d-9528-49c1-b59e-5daceb722cad"/>
+                <note date="47280.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ffaf89fe-61ee-4a15-ad99-af2043893764"/>
+                <note date="47520.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_e7f7c394-8929-4b32-814c-e03a55773342"/>
+                <note date="47760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_7a92f20b-317a-4f69-be0d-c3b75dbe29c4"/>
+                <note date="48000.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_1621e5ef-0e00-4e9f-b181-f2f4ea7cfc05"/>
+                <note date="48240.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_c945f8d3-b27e-4e81-b99a-b4143f3c86b9"/>
+                <note date="48480.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_cf0888f3-32ba-465f-afb5-7fcc3ee6e879"/>
+                <note date="48960.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_77887477-23a8-48f8-aa17-c74bbec8b228"/>
+                <note date="49200.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_6bcbc468-d3eb-4bf9-bd28-e1ca2939702c"/>
+                <note date="49440.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_21cfff7e-335a-4b83-9044-0d750b0fa0c2"/>
+                <note date="49680.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_10856be8-d1db-4e91-93e3-ccf359bacbc7"/>
+                <note date="49920.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_bc65f485-94bd-4b15-ab59-cb2247a1f9c1"/>
+                <note date="50160.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_358c1cff-43c3-4d87-8a4e-d2ded3c5812d"/>
+                <note date="50400.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_06adbd11-ec49-406d-991a-865c21e56c31"/>
+                <note date="50640.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_67a7b0cb-c275-4d2b-8bef-b973282b9073"/>
+                <note date="50880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_2ba55c00-a3ef-4a26-9fa3-3f50204b506d"/>
+                <note date="51120.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b9c2ffe6-21fa-45fd-ac85-6e41d40bf94d"/>
+                <note date="51360.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_29559cbc-1a5b-43bc-aca8-19420bdf1dd3"/>
+                <note date="51600.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_9eba2447-2518-4915-aece-8442742f06a3"/>
+                <note date="51840.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_0879c287-9f04-4215-bd41-42533fd158f2"/>
+                <note date="52080.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_a5cfeb80-f3cb-48de-ab33-4de61a386e0e"/>
+                <note date="52320.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_1725b8ef-210c-4089-97aa-36a8986470ef"/>
+                <note date="52560.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f7a9d490-58ca-427b-bb3c-a4449d4c92cb"/>
+                <note date="52800.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_ccdd85f8-56e3-4157-b087-e80ef0b34dde"/>
+                <note date="53040.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_50d15cb0-f8d6-4c55-876f-7bf2ac431047"/>
+                <note date="53280.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_610c4fd9-9423-491e-8ab1-c2be096dc325"/>
+                <note date="53520.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_a9d365f3-2c26-42f9-8014-77438642494b"/>
+                <note date="53760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_2f163d52-1535-45e9-9595-4da16bcd52be"/>
+                <note date="54000.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ac37626d-0757-4d53-a3e5-70368646562e"/>
+                <note date="54240.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_0fd56df4-4dc4-4ba7-85f2-e26ef8458a5d"/>
+                <note date="54480.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f6208055-2808-488f-8c4f-af5ac6027c79"/>
+                <note date="54720.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3811ba22-c006-46aa-a405-525f728970bb"/>
+                <note date="54960.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_ffd823aa-5466-4933-b634-cb17b1c05e69"/>
+                <note date="55200.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_dc3d1eb8-14af-421e-807f-12c42f3a2bd6"/>
+                <note date="55440.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_efa0e0dd-913d-4c99-9e46-cd11af84af2e"/>
+                <note date="55680.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8e04f720-30e8-4c64-80cc-daf1edd31060"/>
+                <note date="55920.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_a8b3bcf4-9b1d-47b5-b791-79f6783c6f7c"/>
+                <note date="56160.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_22900a19-2c9f-4e98-83dc-3d2fec58c099"/>
+                <note date="56400.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_9fa4b673-00d4-48cd-b526-21c886159f1e"/>
+                <note date="56640.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_d37c98bd-46f4-4cbc-8da2-bbc918350a5f"/>
+                <note date="56880.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_503dbb9e-d4e5-4aa3-b6a6-53a0730d6c8f"/>
+                <note date="57120.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="480.0" velocity="80.0" xml:id="meico_4f2c6ee7-8bab-42a0-94cc-86662a7e2382"/>
+                <note date="57600.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_0115da8f-a3b6-46ee-8ac1-f66d963fe038"/>
+                <note date="57840.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_892c226b-c75c-47b0-a230-5a02a905ef08"/>
+                <note date="58080.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_80b6d5bb-b427-4599-8c41-6f94af9e5c2d"/>
+                <note date="58320.0" midi.pitch="56.0" pitchname="A" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_24baaf50-0918-4f06-923d-85128f46ae6b"/>
+                <note date="58560.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_24761900-f525-4e50-ac5e-cbb727fceb6e"/>
+                <note date="58800.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_06a1f4be-a52f-458d-9fb2-f17cf430edbc"/>
+                <note date="59040.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_b0cbda96-e76c-496b-8fff-a0a2183c1545"/>
+                <note date="59280.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_2620bf0a-9626-4844-97a2-62bab5bcbf64"/>
+                <note date="59520.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_f8b8393c-a618-428a-994a-546df4544207"/>
+                <note date="59760.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_4d4a5651-e7a8-4e36-9bb9-a23d6f412624"/>
+                <note date="60000.0" midi.pitch="63.0" pitchname="E" accidentals="-1.0" duration="480.0" velocity="80.0" xml:id="meico_f127da5c-c42b-489c-8e2c-c0bed4f6d088"/>
+                <note date="60480.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b2d9a880-750e-4a16-acf4-257ea26ec054"/>
+                <note date="60720.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_0988299d-b4ab-4c40-b3d7-fcf63180be4b"/>
+                <note date="60960.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_49bb0128-5e0f-4389-943b-383c64bf6140"/>
+                <note date="61200.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_ecff8ca1-3760-401f-bfac-1ba3510bfa83"/>
+                <note date="61440.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b6db0044-1413-4f84-afd6-418b828bc3f9"/>
+                <note date="61680.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_7134fe89-685c-4c0e-8d64-e3ce4de654ef"/>
+                <note date="61920.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_703b0e44-7f96-4eb9-8118-1ec2a1db3d59"/>
+                <note date="62160.0" midi.pitch="53.0" pitchname="F" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8dc30dd2-5471-4a11-a956-fadba4937b31"/>
+                <note date="62400.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_11940c9d-15ac-437d-adbf-46e523227df3"/>
+                <note date="62640.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_8a00706b-831d-4141-9722-75469a795367"/>
+                <note date="62880.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="480.0" velocity="80.0" xml:id="meico_97e3496e-bd85-44ce-b8b5-c766a0a305a7"/>
+                <note date="63360.0" midi.pitch="42.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_3571449b-f340-4656-9b35-6b7fb5d87d4f"/>
+                <note date="63600.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_44732deb-33f0-47e4-98b9-a03e2856e720"/>
+                <note date="63840.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_105dddc6-74e0-4907-8d65-cb7dfcffc7ea"/>
+                <note date="64080.0" midi.pitch="51.0" pitchname="E" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_5f34e204-6f63-4474-bdb1-bb03f1199fa7"/>
+                <note date="64320.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_fc1e0b7e-cd32-458e-b5d2-322ae02b7237"/>
+                <note date="64560.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3d8741b8-b0f9-4d4f-9e27-59657c356721"/>
+                <note date="64800.0" midi.pitch="46.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_e3017f5d-33a9-4881-945b-8ef65cfdf6e2"/>
+                <note date="65040.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_0c807a0b-7357-4ec5-9e6a-14aa2a7e45b6"/>
+                <note date="65280.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_38e3b4af-c562-454d-b9d5-0c2b507d0cda"/>
+                <note date="65520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_649916a1-5b6d-4485-bccc-bd45ef54e72f"/>
+                <note date="65760.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_140d0334-94aa-4359-a9ef-17cc1ae4fa34"/>
+                <note date="66000.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_b071c859-0323-47f1-af28-45813f01ff9c"/>
+                <note date="66240.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_071c64d3-8648-4480-ab93-1b1da1a9b6d5"/>
+                <note date="66480.0" midi.pitch="58.0" pitchname="B" accidentals="-1.0" duration="240.0" velocity="80.0" xml:id="meico_8685da0c-e381-442c-8e22-d231954ca931"/>
+                <note date="66720.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_62ffc887-f364-49d9-bf9f-9d93a023a19b"/>
+                <note date="66960.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_a6fd6137-e358-4619-ac90-39990b71f8e6"/>
+                <note date="67200.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="240.0" velocity="80.0" xml:id="meico_3bfe6937-7915-4ed2-991a-c0cc7c1886fc"/>
+                <note date="67440.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="240.0" velocity="80.0" xml:id="meico_ed23b650-b1b5-41dd-bbb7-d2eba10a71b2"/>
+                <note date="67680.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1440.0" velocity="80.0" xml:id="meico_d9596536-886c-4178-9029-4127344c9b01"/>
             </score>
         </dated>
     </part>
