@@ -122,4 +122,12 @@
             </dated>
         </part>
     </performance>
+    <metadata>
+        <relatedResources>
+            <resource uri="Aller Augen warten auf dich, Herre.msm" type="msm"/>
+            <resource uri="Aller Augen warten auf dich, Herre_score.png" type="png"/>
+        </relatedResources>
+        <author>Axel Berndt</author>
+        <comment>This MPM contains one performance, 'My Performance', with mostly global features. Only the articulations are defined locally in the parts.</comment>
+    </metadata>
 </mpm>
