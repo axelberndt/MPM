@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://music-encoding.org/schema/4.0.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://music-encoding.org/schema/4.0.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Moment Musical Op. 13 No. 4</title>
+                <composer>
+                    <persName role="creator">Max Reger</persName>
+                </composer>
+                <respStmt>
+                    <persName role="encoder">Axel Berndt</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt>
+                <publisher>
+                    <name>Edition Schott</name>
+                    <corpName>B. Schott's Söhne</corpName>
+                </publisher>
+                <pubPlace>
+                    <address>
+                        <addrLine>Mainz</addrLine>
+                    </address>
+                </pubPlace>
+                <date>1910</date>
+            </pubStmt>
+            <notesStmt>
+                <annot>This encoding was made for a Music Performance Markup sample encoding.</annot>
+            </notesStmt>
+            <sourceDesc>
+                <source>
+                    <bibl>Edition Schott S-5400a Heft 1</bibl>
+                </source>
+            </sourceDesc>
+        </fileDesc>
+        <workList>
+            <head>
+                <title>Lose Blätter Op. 13 No. 4</title>
+            </head>
+            <work>
+                <title>Moment Musical</title>
+                <tempo>Andantino</tempo>
+            </work>
+        </workList>
+    </meiHead>
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef meter.count="6" meter.unit="16" bar.method="mensur" key.sig="4f" key.pname="a" key.accid="f" key.mode="major">
+                        <pgHead>
+                            <rend halign="center" valign="top" fontsize="x-large">Moment Musical</rend>
+                            <rend halign="right" valign="middle" fontsize="normal">Max Reger</rend>
+                            <rend halign="right" valign="middle" fontsize="normal">Lose Blätter Op. 13 No. 4</rend>
+                        </pgHead>
+                        <staffGrp bar.thru="true" symbol="brace">
+                            <staffDef n="1" xml:id="right_hand" label="piano right hand" lines="5" clef.line="2" clef.shape="G"/>
+                            <staffDef n="2" xml:id="left_hand" label="piano left hand" lines="5" clef.line="4" clef.shape="F"/>
+                        </staffGrp>
+                    </scoreDef>
+                    <section>
+                        <measure n="0" type="upbeat" metcon="false">
+                            <staff n="1">
+                                <layer n="1">
+                                    <beam>
+                                        <note xml:id="n1" pname="e" accid.ges="f" oct="5" dur="16"/>
+                                        <note xml:id="n2" pname="d" accid.ges="f" oct="5" dur="16"/>
+                                        <note xml:id="n3" pname="c" oct="5" dur="16"/>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <chord xml:id="c1" dur="8" dots="1">
+                                        <note xml:id="n4" pname="a" oct="4" accid.ges="f"/>
+                                        <note xml:id="n5" pname="e" oct="4" accid.ges="f"/>
+                                    </chord>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <beam>
+                                        <note xml:id="n6" pname="c" oct="4" dur="16"/>
+                                        <note xml:id="n7" pname="b" accid.ges="f" oct="3" dur="16"/>
+                                        <note xml:id="n8" pname="a" accid.ges="f" oct="3" dur="16" tie="i"/>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <chord xml:id="c2" dur="8" dots="1">
+                                        <note xml:id="n9" pname="a" accid.ges="f" oct="3"/>
+                                        <note xml:id="n10" pname="c" oct="3"/>
+                                    </chord>
+                                </layer>
+                            </staff>
+                            <tempo xml:id="t1" tstamp="1" place="above" staff="1" part="%all">Andantino</tempo>
+                            <dir xml:id="dir1" startid="#n3" staff="1" part="%all" place="above">con espress.</dir>
+                            <slur staff="1" startid="#n1" endid="#n11"/>
+                            <slur staff="2" startid="#c2" endid="#n23"/>
+                            <dynam xml:id="d1" startid="#n1" staff="1 2" part="%all" place="between">dolciss.</dynam>
+                            <hairpin xml:id="d2" form="cres" staff="1 2" part="%all" place="between" startid="#n3" endid="#n11"/>
+                        </measure>
+                        <measure n="1">
+                            <staff n="1">
+                                <layer n="1">
+                                    <note xml:id="n11" pname="b" accid.ges="f" oct="4" dur="8"/>
+                                    <note xml:id="n12" pname="c" oct="5" dur="16"/>
+                                    <beam>
+                                        <chord xml:id="c3" dur="16">
+                                            <note xml:id="n13" pname="d" accid.ges="f" oct="5"/>
+                                            <note xml:id="n14" pname="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c4" dur="16">
+                                            <note xml:id="n15" pname="b" accid.ges="f" oct="4"/>
+                                            <note xml:id="n16" pname="d" accid.ges="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c5" dur="16">
+                                            <note xml:id="n17" pname="c" oct="5"/>
+                                            <note xml:id="n18" pname="e" accid.ges="f" oct="4"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <chord xml:id="c6" dur="8" dots="1">
+                                        <note xml:id="n19" pname="a" accid.ges="f" oct="4"/>
+                                        <note xml:id="n20" pname="f" oct="4"/>
+                                    </chord>
+                                    <space dur="8" dots="1"/>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <note xml:id="n21" pname="a" accid.ges="f" oct="3" dur="8" dots="1" tie="t"/>
+                                    <note xml:id="n22" pname="g" oct="3" dur="8" dots="1"/>
+                                </layer>
+                                <layer n="2">
+                                    <note xml:id="n23" pname="d" accid.ges="f" oct="3" dur="8" dots="1"/>
+                                    <note xml:id="n24" pname="e" accid.ges="f" oct="3" dur="8" dots="1"/>
+                                </layer>
+                            </staff>
+                            <slur staff="1" startid="#n12" endid="#c7"/>
+                            <slur staff="2" startid="#n24" endid="#n36"/>
+                            <hairpin xml:id="d3" form="dim" staff="1 2" part="%all" place="between" startid="#c5" endid="#c7"/>
+                        </measure>
+                        <measure n="2">
+                            <staff n="1">
+                                <layer n="1">
+                                    <chord xml:id="c7" dur="8" dots="1">
+                                        <note xml:id="n25" pname="a" accid.ges="f" oct="4"/>
+                                        <note xml:id="n26" pname="c" oct="4"/>
+                                    </chord>
+                                    <beam>
+                                        <chord xml:id="c8" dur="16">
+                                            <note xml:id="n27" pname="e" accid.ges="f" oct="5"/>
+                                            <note xml:id="n28" pname="e" accid.ges="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c9" dur="16">
+                                            <note xml:id="n29" pname="g" accid="f" oct="5"/>
+                                            <note xml:id="n30" pname="g" accid="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c10" dur="16">
+                                            <note xml:id="n31" pname="f" oct="5"/>
+                                            <note xml:id="n32" pname="f" oct="4"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <space dur="8" dots="1"/>
+                                    <note xml:id="n33" pname="a" accid.ges="f" oct="4" dur="8" dots="1" tie="i"/>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <space dur="8" dots="1"/>
+                                    <note xml:id="n34" pname="a" accid.ges="f" oct="3" dur="8" dots="1" tie="i"/>
+                                </layer>
+                                <layer n="2">
+                                    <chord xml:id="c11" dur="8" dots="1">
+                                        <note xml:id="n35" pname="a" accid.ges="f" oct="3"/>
+                                        <note xml:id="n36" pname="f" oct="3"/>
+                                    </chord>
+                                    <beam>
+                                        <chord xml:id="c12" dur="16">
+                                            <note xml:id="n37" pname="c" oct="4"/>
+                                            <note xml:id="n38" pname="c" oct="3"/>
+                                        </chord>
+                                        <chord xml:id="c13" dur="16">
+                                            <note xml:id="n39" pname="e" accid.ges="f" oct="4"/>
+                                            <note xml:id="n40" pname="e" accid.ges="f" oct="3"/>
+                                        </chord>
+                                        <chord xml:id="c14" dur="16">
+                                            <note xml:id="n41" pname="d" accid.ges="f" oct="4"/>
+                                            <note xml:id="n42" pname="d" accid.ges="f" oct="3"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                            </staff>
+                            <slur staff="1" startid="#c8" endid="#c15"/>
+                            <slur staff="2" startid="#c12" endid="#n55"/>
+                            <hairpin xml:id="d4" form="cres" staff="1 2" part="%all" place="between" startid="#c8" endid="#c10"/>
+                        </measure>
+                        <sb/>
+                        <measure n="3">
+                            <staff n="1">
+                                <layer n="1">
+                                    <chord xml:id="c15" dur="8" dots="1">
+                                        <note xml:id="n43" pname="d" accid.ges="f" oct="5" tie="i"/>
+                                        <note xml:id="n44" pname="d" accid.ges="f" oct="4" tie="i"/>
+                                    </chord>
+                                    <beam>
+                                        <chord xml:id="c16" dur="16">
+                                            <note xml:id="n45" pname="d" accid.ges="f" oct="5" tie="t"/>
+                                            <note xml:id="n46" pname="d" accid.ges="f" oct="4" tie="t"/>
+                                        </chord>
+                                        <chord xml:id="c17" dur="16">
+                                            <note xml:id="n47" pname="f" oct="5"/>
+                                            <note xml:id="n48" pname="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c18" dur="16">
+                                            <note xml:id="n49" pname="e" accid.ges="f" oct="5"/>
+                                            <note xml:id="n50" pname="e" accid.ges="f" oct="4"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <beam>
+                                        <note xml:id="n51" pname="a" accid.ges="f" oct="4" dur="8" tie="t"/>
+                                        <note xml:id="n52" pname="g" accid="n" oct="4" dur="16" tie="i"/>
+                                    </beam>
+                                    <note xml:id="n53" pname="g" oct="4" dur="8" dots="1" tie="m"/>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <beam>
+                                        <note xml:id="n54" pname="a" accid.ges="f" oct="3" dur="8" tie="t"/>
+                                        <note xml:id="n55" pname="g" accid="n" oct="3" dur="16" tie="i"/>
+                                    </beam>
+                                    <note xml:id="n56" pname="g" oct="3" dur="8" dots="1" tie="m"/>
+                                </layer>
+                                <layer n="2">
+                                    <chord xml:id="c19" dur="8" dots="1">
+                                        <note xml:id="n57" pname="b" accid.ges="f" oct="3" tie="i"/>
+                                        <note xml:id="n58" pname="b" accid.ges="f" oct="2" tie="i"/>
+                                    </chord>
+                                    <beam>
+                                        <chord xml:id="c20" dur="16">
+                                            <note xml:id="n59" pname="b" accid.ges="f" oct="3" tie="t"/>
+                                            <note xml:id="n60" pname="b" accid.ges="f" oct="2" tie="t"/>
+                                        </chord>
+                                        <chord xml:id="c21" dur="16">
+                                            <note xml:id="n61" pname="d" accid.ges="f" oct="4"/>
+                                            <note xml:id="n62" pname="d" accid.ges="f" oct="3"/>
+                                        </chord>
+                                        <chord xml:id="c22" dur="16">
+                                            <note xml:id="n63" pname="c" oct="4"/>
+                                            <note xml:id="n64" pname="c" oct="3"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                            </staff>
+                            <slur staff="1" startid="#c16" endid="#c23"/>
+                            <slur staff="2" startid="#c21" endid="#n79"/>
+                            <hairpin xml:id="d5" form="dim" staff="1 2" part="%all" place="between" startid="#c18" endid="#n74"/>
+                        </measure>
+                        <measure n="4">
+                            <staff n="1">
+                                <layer n="1">
+                                    <chord xml:id="c23" dur="8" dots="1">
+                                        <note xml:id="n65" pname="c" oct="5"/>
+                                        <note xml:id="n66" pname="c" oct="4"/>
+                                    </chord>
+                                    <beam>
+                                        <chord xml:id="c24" dur="16">
+                                            <note xml:id="n67" pname="e" accid.ges="f" oct="5"/>
+                                            <note xml:id="n68" pname="e" accid.ges="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c25" dur="16">
+                                            <note xml:id="n69" pname="d" accid.ges="f" oct="5"/>
+                                            <note xml:id="n70" pname="d" accid.ges="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c26" dur="16">
+                                            <note xml:id="n71" pname="c" accid.ges="f" oct="5"/>
+                                            <note xml:id="n72" pname="c" accid.ges="f" oct="4"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <beam>
+                                        <note xml:id="n73" pname="g" oct="4" dur="8" tie="t"/>
+                                        <note xml:id="n74" pname="a" accid.ges="f" oct="4" dur="16" tie="i"/>
+                                    </beam>
+                                    <note xml:id="n75" pname="a" accid.ges="f" oct="4" dur="8" dots="1" tie="m"/>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <beam>
+                                        <note xml:id="n76" pname="g" oct="3" dur="8" tie="t"/>
+                                        <note xml:id="n77" pname="a" accid.ges="f" oct="3" dur="16" tie="i"/>
+                                    </beam>
+                                    <note xml:id="n78" pname="a" accid.ges="f" oct="3" dur="8" dots="1" tie="m"/>
+                                </layer>
+                                <layer n="2">
+                                    <note xml:id="n79" pname="a" accid.ges="f" oct="2" dur="8" dots="1"/>
+                                    <beam>
+                                        <note xml:id="n80" pname="f" oct="2" dur="8"/>
+                                        <note xml:id="n81" pname="e" accid.ges="f" oct="2" dur="16"/>
+                                    </beam>
+                                </layer>
+                                <layer n="3">
+                                    <space dur="8" dots="1"/>
+                                    <beam>
+                                        <note xml:id="n82" pname="e" accid.ges="f" oct="3" dur="16"/>
+                                        <note xml:id="n83" pname="d" accid.ges="f" oct="3" dur="16"/>
+                                        <note xml:id="n84" pname="c" oct="3" dur="16"/>
+                                    </beam>
+                                </layer>
+                            </staff>
+                            <slur staff="1" startid="#c24" endid="#c27"/>
+                            <slur staff="2" startid="#n80" endid="#c31"/>
+                            <dynam xml:id="d6" startid="#c24" staff="1 2" part="%all" place="between">mf</dynam>
+                            <hairpin xml:id="d7" form="cres" staff="1 2" part="%all" place="between" startid="#c24" endid="#c26"/>
+                        </measure>
+                        <measure n="5">
+                            <staff n="1">
+                                <layer n="1">
+                                    <chord xml:id="c27" dur="8" dots="1">
+                                        <note xml:id="n85" pname="b" accid.ges="f" oct="4"/>
+                                        <note xml:id="n86" pname="a" accid.ges="f" oct="4" tie="t"/>
+                                        <note xml:id="n87" pname="f" oct="4"/>
+                                        <note xml:id="n88" pname="b" accid.ges="f" oct="3"/>
+                                    </chord>
+                                    <beam>
+                                        <chord xml:id="c28" dur="16">
+                                            <note xml:id="n89" pname="d" accid="f" oct="5"/>
+                                            <note xml:id="n90" pname="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c29" dur="16">
+                                            <note xml:id="n91" pname="b" accid.ges="f" oct="4"/>
+                                            <note xml:id="n92" pname="d" accid.ges="f" oct="4"/>
+                                        </chord>
+                                        <chord xml:id="c30" dur="16">
+                                            <note xml:id="n93" pname="c" oct="5"/>
+                                            <note xml:id="n94" pname="e" accid.ges="f" oct="4"/>
+                                        </chord>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <space dur="8" dots="1"/>
+                                    <note xml:id="n95" pname="g" oct="4" dur="8"/>
+                                    <space dur="16"/>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <chord xml:id="c31" dur="8" dots="1">
+                                        <note xml:id="n96" pname="f" oct="3"/>
+                                        <note xml:id="n97" pname="b" accid.ges="f" oct="2"/>
+                                        <note xml:id="n98" pname="d" accid="n" oct="2"/>
+                                    </chord>
+                                    <beam>
+                                        <note xml:id="n99" pname="b" accid.ges="f" oct="2" dur="8"/>
+                                        <note xml:id="n100" pname="g" oct="3" dur="16"/>
+                                    </beam>
+                                </layer>
+                                <layer n="2">
+                                    <space dur="8" dots="1"/>
+                                    <note xml:id="n101" pname="e" accid.ges="f" oct="2" dur="8" dots="1"/>
+                                </layer>
+                            </staff>
+                            <arpeg staff="2" plist="#c31" order="down"/>
+                            <slur staff="1" startid="#c28" endid="#c32"/>
+                            <slur staff="2" startid="#n101" endid="#c33"/>
+                            <hairpin xml:id="d8" form="dim" staff="1 2" part="%all" place="between" startid="#c27" endid="#c32"/>
+                        </measure>
+                        <measure n="6" metcon="false" right="end">
+                            <staff n="1">
+                                <layer n="1">
+                                    <chord xml:id="c32" dur="8" dots="1" fermata="above">
+                                        <note xml:id="n102" pname="a" accid.ges="f" oct="4"/>
+                                        <note xml:id="n103" pname="c" oct="4"/>
+                                    </chord>
+                                </layer>
+                            </staff>
+                            <staff n="2">
+                                <layer n="1">
+                                    <chord xml:id="c33" dur="8" dots="1" fermata="below">
+                                        <note xml:id="n104" pname="a" accid.ges="f" oct="3"/>
+                                        <note xml:id="n105" pname="e" accid.ges="f" oct="3"/>
+                                        <note xml:id="n106" pname="a" accid.ges="f" oct="2"/>
+                                    </chord>
+                                </layer>
+                            </staff>
+                            <dynam xml:id="d9" startid="#c33" staff="1 2" part="%all" place="between">pp</dynam>
+                            <dir xml:id="dir2" startid="#c33" staff="2" part="%all" place="below">D. C. ad lib.</dir>
+                        </measure>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>
