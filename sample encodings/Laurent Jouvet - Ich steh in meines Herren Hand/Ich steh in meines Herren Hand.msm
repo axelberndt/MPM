@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msm title="Ich steh in meines Herren Hand" xml:id="dc9785da-d159-4a92-bd8f-d1908518fc90" pulsesPerQuarter="780">
+    <global>
+        <header/>
+        <dated>
+            <timeSignatureMap>
+                <timeSignature date="0.0" numerator="3.0" denominator="2"/>
+                <timeSignature date="4680.0" numerator="2.0" denominator="2"/>
+                <timeSignature date="7800.0" numerator="3.0" denominator="2"/>
+                <timeSignature date="21840.0" numerator="2.0" denominator="2"/>
+                <timeSignature date="24960.0" numerator="3.0" denominator="2"/>
+                <timeSignature date="39000.0" numerator="2.0" denominator="2"/>
+                <timeSignature date="42120.0" numerator="3.0" denominator="2"/>
+                <timeSignature date="46800.0" numerator="2.0" denominator="2"/>
+                <timeSignature date="49920.0" numerator="3.0" denominator="2"/>
+            </timeSignatureMap>
+        </dated>
+    </global>
+    <part name="Sopran" number="1" midi.channel="1" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="0.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_ce293e64-44f4-45ed-ac02-6810259a5efc"/>
+                <note date="1560.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_dd8b457d-ee16-4b39-b174-9759f04890b7"/>
+                <note date="2340.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_de489e7c-9155-4106-89af-ee4e9971e770"/>
+                <note date="3120.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_a1257d7d-4efc-4151-9e91-dd0748743b16"/>
+                <note date="3900.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_dcc21e3c-391d-4b58-b03e-2486212eea5d"/>
+                <note date="4680.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_210d5c4b-37ab-411d-9013-1b4053549f6d"/>
+                <note date="5460.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_21e9fae1-4a6b-4e74-ba79-c64a83ccb94a"/>
+                <note date="6240.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_a553d050-a411-4d14-a04d-1f01ee1bcb60"/>
+                <note date="7800.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_f427c691-9bea-4adf-bc15-e600f575e61a"/>
+                <note date="9360.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_191f5cd4-d92b-4e88-bcfc-da06d70caabb"/>
+                <note date="10140.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_474a24eb-3e79-4e98-a168-2fc087f02fc2"/>
+                <note date="10920.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_5790450b-e0a8-4c67-abd2-5dcb09ba92f8"/>
+                <note date="11700.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_fa1c943d-2062-4cd7-864f-298a0fb41b37"/>
+                <note date="12480.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_b4628e44-7a86-471d-860a-4184c3497640"/>
+                <note date="14040.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_2918a735-0a98-4f74-a13a-cf3d3222e74b"/>
+                <note date="17160.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_f28e04a5-f479-4b48-bb9b-d59e31c71a03"/>
+                <note date="18720.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_f797f48a-f0af-457c-b2e5-420d51c29b91"/>
+                <note date="19500.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_a493f48a-952b-44c6-941d-262ab3705333"/>
+                <note date="20280.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_7a0b2ce2-157c-4114-afb1-7793218e80ee"/>
+                <note date="21060.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_79490e76-5679-4542-b677-27e194b3c477"/>
+                <note date="21840.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_a528fecf-98f2-465a-b58e-0a97cae945f1"/>
+                <note date="22620.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_1f2530ca-2b91-4afc-9a1f-94d45c3fdc72"/>
+                <note date="23400.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_e40d1cdb-8d24-47c9-8b39-a0b3b711b9ec"/>
+                <note date="24960.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_edcfef01-920c-4158-9f86-d016d1c51cf4"/>
+                <note date="26520.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_cb8e61bf-dceb-4d14-ae40-50ce3156861a"/>
+                <note date="27300.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_e60aa2c1-eb84-4afb-92d0-54031f67de8b"/>
+                <note date="28080.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_65b80c4c-00cf-4b90-947f-6ed456e68afc"/>
+                <note date="28860.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_e8058084-d6f8-477d-a8ba-5e988ee12bd9"/>
+                <note date="29640.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_9f98aa66-e274-4f4f-9a1d-987d3f7346dd"/>
+                <note date="31200.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_7bbd4b56-3859-4476-b2eb-df5bcc96c4ee"/>
+                <note date="34320.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_76f0861b-2501-401b-94e4-1875b22e4880"/>
+                <note date="35880.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_2d964073-8db5-4d58-990b-5facddc04a16"/>
+                <note date="36660.0" midi.pitch="71.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_0a1083ff-662e-48e0-8cd2-7ed9c3a1abdb"/>
+                <note date="37440.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_fa7a7326-bff3-4480-83de-fa2401475571"/>
+                <note date="38220.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_6ec85533-44b8-4a7e-bc95-9f5afc8dfa59"/>
+                <note date="39000.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_fe41f853-3037-4ec2-989c-e83ad906961a"/>
+                <note date="39780.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_f06cf879-8549-4518-91e6-fce629135081"/>
+                <note date="40560.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_49c9ebc5-28c6-442a-9728-5859c526428c"/>
+                <note date="42120.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_507b8ca7-4cc6-4674-ab99-0936659cdd36"/>
+                <note date="43680.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_217e3ed8-ba51-42f0-aed7-d5305b5f186d"/>
+                <note date="44460.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_934c7f08-ce37-48b6-b759-7d5a69dcaa67"/>
+                <note date="45240.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_72f4b683-1ba7-45c1-9fcd-aa38000dff28"/>
+                <note date="46020.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_878887fe-a2e1-4b47-85ce-313d68d14bb3"/>
+                <note date="46800.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_8b4cbf94-5221-4971-972c-3c6b6b5f6c67"/>
+                <note date="47580.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_51a65cd8-9206-4038-9194-8a6f24eba33e"/>
+                <note date="48360.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_6ea1d367-dca9-41bb-8eb2-0ec697e726e9"/>
+                <note date="49920.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_d046160c-d037-40cb-9a03-6730dbbe2a11"/>
+                <note date="51480.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_f025461b-301f-4533-843d-8b3284d4ff10"/>
+                <note date="52260.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_9d84576e-9b27-483b-8708-14ec44afc8ec"/>
+                <note date="53040.0" midi.pitch="67.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_0d759d1f-9adc-4564-9bf1-e28b0c7302bd"/>
+                <note date="53820.0" midi.pitch="69.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_86085e86-687f-47e3-9d9e-b0c2f63771e2"/>
+                <note date="54600.0" midi.pitch="66.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_f0a9a317-9941-49bd-b928-27c8b1738927"/>
+                <note date="56160.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_15f48fe2-a672-45da-a7d2-24a275431622"/>
+            </score>
+        </dated>
+    </part>
+    <part name="Alt" number="2" midi.channel="0" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="0.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_58dd1d2b-b1a1-4fee-b8e7-c67152239bf4"/>
+                <note date="1560.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_c17f024a-6f70-4b63-a77d-5ac03e743ae7"/>
+                <note date="3120.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_bf36ecea-97fd-41af-8fb7-90a5567cad3a"/>
+                <note date="6240.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_44fbd6ca-4ff8-4f1f-b9e2-a91a5804db1e"/>
+                <note date="7800.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_d7e73220-86e9-4c23-82c1-8fcecc24fd6c"/>
+                <note date="9360.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_921d2cbb-1c9f-4121-9e9f-0ecfaf48a52c"/>
+                <note date="10920.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_fd78d3db-33b3-40e5-92c9-3da1ccf2f73f"/>
+                <note date="11700.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_2c245d3e-c567-4b06-b72f-4f575efa0a22"/>
+                <note date="13260.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_e589b1d4-295a-4f59-8878-60cc1b864356"/>
+                <note date="14040.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_dd494250-d8ea-4a85-91bb-e2f36e63bb74"/>
+                <note date="17160.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_386a25dc-0bda-4dd7-a441-a17e5e4233c4"/>
+                <note date="18720.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_a2b7146b-7f7e-4a32-a219-327d6992d5df"/>
+                <note date="19500.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_8bf7ccf4-72b2-4cd9-9750-047d8b5e2364"/>
+                <note date="20280.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_28dbc062-c407-43a0-bc6a-5b0fecac04a4"/>
+                <note date="21840.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_fac534e8-e246-49c5-8a89-c3ec1740da98"/>
+                <note date="23400.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_4cdead2f-598f-4dd3-aba0-d8bdeff60218"/>
+                <note date="24960.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="2340.0" velocity="80.0" xml:id="meico_7047fc1b-52a7-4e86-acfe-8bc4201df625"/>
+                <note date="27300.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_04ca6927-d1a2-4369-8985-8dc1e8f498c8"/>
+                <note date="28080.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="2340.0" velocity="80.0" xml:id="meico_c5a3ddff-1315-4691-ba99-40c06e2fe031"/>
+                <note date="30420.0" midi.pitch="63.0" pitchname="D" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_da1bec72-8d99-4c4d-91d7-abb75bbd8c68"/>
+                <note date="31200.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_9f9a5f64-cde7-44de-9c43-19abd4fd6199"/>
+                <note date="34320.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_3644eaae-4cbe-4dbc-97e8-33659b2aaa36"/>
+                <note date="35880.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_9a08fc75-fb0b-4034-8086-0c5929f6e54a"/>
+                <note date="36660.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_98aaa37f-6450-46df-99ef-340b991715ee"/>
+                <note date="37440.0" midi.pitch="61.0" pitchname="C" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_c8e8c8f1-0f5d-427d-abc8-415a48b3d306"/>
+                <note date="38220.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_71d6db61-39b4-444b-839c-2a889903cb11"/>
+                <note date="39780.0" midi.pitch="61.0" pitchname="C" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_8cc3e7e3-5f6c-4ff1-ab4f-481e65be8351"/>
+                <note date="40560.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_60a9f670-d3fa-4755-8cb1-5d14a193d521"/>
+                <note date="42120.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_afaeb4b3-f0b6-4524-8573-91ff90a5863b"/>
+                <note date="43680.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_015d0a8e-7e4d-4c9e-b6de-99cc9279c63d"/>
+                <note date="45240.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="2340.0" velocity="80.0" xml:id="meico_ef66e718-5a0f-47ce-ba8d-68a881cfb54b"/>
+                <note date="47580.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_081fa946-3150-40a1-b99f-47605dbfe126"/>
+                <note date="48360.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_e5cda05c-827d-4546-9b34-a98eac17c1f7"/>
+                <note date="49920.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_38c9b64b-787c-496b-9840-fd8ce4a0ada9"/>
+                <note date="51480.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_43c6dc85-1a70-4629-8a17-1c0787f3f618"/>
+                <note date="53040.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_9adfb079-4013-4ad8-933f-aa59ce27e8bb"/>
+                <note date="53820.0" midi.pitch="64.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_8c8b8f3d-f52c-4767-b724-f0ac1b0f33ed"/>
+                <note date="55380.0" midi.pitch="62.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_2dc9165f-0c34-4e35-89fe-a2a221ca0da4"/>
+                <note date="56160.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_31a8cb70-7a11-4f15-aed3-e8a55b00358b"/>
+            </score>
+        </dated>
+    </part>
+    <part name="Tenor" number="3" midi.channel="2" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="0.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_e10281f9-53d8-43a6-b9ac-cf3e2bf7e32f"/>
+                <note date="1560.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_d4ad8579-3cb0-40ec-8876-b666d99032df"/>
+                <note date="3120.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="2340.0" velocity="80.0" xml:id="meico_42e082ac-f69f-4799-b6ff-3c22b0eae2d3"/>
+                <note date="5460.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_1742a6dc-552b-4b32-8d1b-2be851be27ce"/>
+                <note date="6240.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_94774712-1d8a-4bfc-a9b5-30a9157dc1ed"/>
+                <note date="7800.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_caaf4def-b54f-4fec-9d0c-8c96f27d2de1"/>
+                <note date="9360.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_f08b4d00-c76d-43d5-a950-8f718efec2b4"/>
+                <note date="10920.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_5613e811-cabf-4b84-aef1-0d01167db48c"/>
+                <note date="11700.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_66134f51-e87c-4ef3-8c0d-6b934c881da2"/>
+                <note date="12480.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_e0c853b6-a7db-4ad0-9696-6924357bf75f"/>
+                <note date="14040.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_85e694f1-354d-490f-9738-e2d38334566a"/>
+                <note date="17160.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_96107dcd-a8c0-44ac-a03a-c1b44743327e"/>
+                <note date="18720.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_6c230891-a050-4b49-ae51-2d42f240dcd6"/>
+                <note date="19500.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_c79793a8-571d-479e-b655-04578da2616e"/>
+                <note date="20280.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_08ac1aef-24df-4fe2-adca-9353e6260b4e"/>
+                <note date="21840.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_fed0e729-44be-4e6b-8a4c-9eb0770ba1e5"/>
+                <note date="22620.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="780.0" velocity="80.0" xml:id="meico_add851ce-8981-4b77-a7f4-46974c9bb06e"/>
+                <note date="23400.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_2ec4d28b-cf1b-46c3-8867-e25a89664fd6"/>
+                <note date="24960.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_dcbaf4c8-2f8a-4cfd-a333-8bcc20990c7f"/>
+                <note date="26520.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_0020e78c-7da7-4499-9414-2c8f9ac53fb3"/>
+                <note date="27300.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_937b67c8-90d4-407d-a2ef-d353c702e5cc"/>
+                <note date="28860.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_ec7821ed-803d-4138-934f-c8227ae6ff8d"/>
+                <note date="29640.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_80f7e9de-7cf3-4e5e-805c-bf5fb3417bdc"/>
+                <note date="31200.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_2170f0fb-deba-4faa-8f3e-b6ff9a46c20d"/>
+                <note date="34320.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_f3c3e2b2-ba3d-43e6-8963-d1b575f2bac7"/>
+                <note date="35880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_389050f4-3d54-43b1-9384-404c7b6d91ed"/>
+                <note date="37440.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_f95d5970-adc2-4b67-ab96-be9e09ad7720"/>
+                <note date="39000.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_c706b3ff-7715-404f-975e-4b75ac782357"/>
+                <note date="39780.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_88f264fb-1fcd-4713-9948-e537bd80df93"/>
+                <note date="40560.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_4a6ad326-96bb-45a4-ad22-1ea07b1c0544"/>
+                <note date="42120.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_07f944c9-f9c2-4ce6-b17b-bf5146dbe65c"/>
+                <note date="43680.0" midi.pitch="60.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_3c0deead-00d5-4d5b-a95a-9f4541860590"/>
+                <note date="45240.0" midi.pitch="59.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_2d2784ac-cd1f-4b58-8b33-a0dab9e59968"/>
+                <note date="46020.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_3a5fddd8-ace9-4c86-a11f-767b8ac026ec"/>
+                <note date="46800.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_6d2694b7-f130-45f7-a3a1-84c483c6e4de"/>
+                <note date="48360.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_a0dc613c-e499-4af2-bf06-5de1d5c9cbb9"/>
+                <note date="49920.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_2078edaa-6129-4011-8d52-28282c269125"/>
+                <note date="51480.0" midi.pitch="57.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_b6275836-27fd-4e55-8150-e4327ac88864"/>
+                <note date="53040.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_908caf71-f7d5-4ecb-8ffc-717fe501c5ea"/>
+                <note date="53820.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_c6ebecee-31fc-4b9a-a741-393557796b6d"/>
+                <note date="54600.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_a812653e-9e64-4a69-842e-76d284781a6f"/>
+                <note date="56160.0" midi.pitch="56.0" pitchname="G" accidentals="1.0" duration="3120.0" velocity="80.0" xml:id="meico_ae183a20-fc53-49ff-8b7a-b25aed388181"/>
+            </score>
+        </dated>
+    </part>
+    <part name="Bass" number="4" midi.channel="7" midi.port="0">
+        <header/>
+        <dated>
+            <score>
+                <note date="0.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_6ccdafcd-b46e-4354-8fc1-e122403fe5cb"/>
+                <note date="780.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_058efb8e-8bb3-4973-b38f-342973160907"/>
+                <note date="1560.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_c4382074-dfd0-4340-9f54-bcbab0c8e8ec"/>
+                <note date="3120.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_7d091c47-bea3-4af7-aefe-60521e2e2fce"/>
+                <note date="4680.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_b0304a6c-b373-47b4-b842-c954a2d5f2e5"/>
+                <note date="6240.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_43d94d5d-cd59-49eb-b5d3-a7b03d6df5bf"/>
+                <note date="7800.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_4272696d-cf5d-4273-bf11-962d23282fbe"/>
+                <note date="9360.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_9667da88-360c-4465-9f37-6652969dd4fd"/>
+                <note date="10920.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_649a309b-d747-4b77-9ee4-edecbcdc3e89"/>
+                <note date="11700.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_ebfc90f0-2c9a-4439-a2fa-c1d225918f2e"/>
+                <note date="12480.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_30e20f43-3bd4-49c0-89ee-8e58cb215168"/>
+                <note date="14040.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_503cfc9b-c735-4c9a-924a-dfbde42e6374"/>
+                <note date="17160.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_3a39ffc0-8c9e-43d7-a332-ad50c3df19cf"/>
+                <note date="18720.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_0fe38248-d6dd-4550-9415-ce936b720d46"/>
+                <note date="19500.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_97ff55d0-6388-46b4-a71d-e42e9729587f"/>
+                <note date="20280.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1170.0" velocity="80.0" xml:id="meico_26fd970d-148c-41f1-a3f1-6b978a32e0d1"/>
+                <note date="21450.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="390.0" velocity="80.0" xml:id="meico_e2d4c7a5-5997-403e-8500-d4a3fc221164"/>
+                <note date="21840.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_387eb5d2-ff31-41b0-8868-c4cc069be6f9"/>
+                <note date="23400.0" midi.pitch="43.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_30a24334-618e-4a01-b59b-d2d62c50f39f"/>
+                <note date="24960.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_3df37adc-8780-4d5a-807d-5200078049cb"/>
+                <note date="26520.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_0e7d1f4f-3482-4ee3-81d5-d07ee0bdcbc4"/>
+                <note date="27300.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_055a59eb-e7c2-4daf-802d-9675e12271de"/>
+                <note date="28080.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_135e3e6d-8223-4f98-b63f-1df463d12e49"/>
+                <note date="28860.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_22339ed5-64e3-4caa-86d3-9547bf8a5a5d"/>
+                <note date="29640.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_ca8419d0-89be-4503-8613-046a0d3627ab"/>
+                <note date="31200.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_4fbdea44-1f25-434f-88cb-0a242853f9b1"/>
+                <note date="34320.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_def3b181-a40c-49a7-b70e-81876723137b"/>
+                <note date="35880.0" midi.pitch="55.0" pitchname="G" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_15cf165b-382b-4bab-92b5-091b2fb875b0"/>
+                <note date="37440.0" midi.pitch="54.0" pitchname="F" accidentals="1.0" duration="1560.0" velocity="80.0" xml:id="meico_e01962b2-deb1-4fe9-95f2-87d028f97eed"/>
+                <note date="39000.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_923f32e4-a306-4b97-8b16-30c19c5c8107"/>
+                <note date="40560.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_250e1f61-8786-4f20-a2b6-e42060ebb164"/>
+                <note date="42120.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_ad50672d-1197-41c8-befb-d58bd89dc043"/>
+                <note date="42900.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_b026ad99-4626-4abb-9feb-920b5ba08d45"/>
+                <note date="43680.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_45e0e453-e942-46d2-9e31-b3fc66f5ea3d"/>
+                <note date="45240.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_f8b8478d-d76f-4e76-8a8c-abd35b966762"/>
+                <note date="46800.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_6e3ddae4-e689-4d22-a91f-17571d1f1624"/>
+                <note date="48360.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_087ee673-0c82-4439-8ec0-fbae1638cf8b"/>
+                <note date="49920.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_0af1ccdc-8fb5-42a7-ab47-2c90988214c2"/>
+                <note date="51480.0" midi.pitch="45.0" pitchname="A" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_c1999767-c703-4036-a0f1-af85f5b2de76"/>
+                <note date="53040.0" midi.pitch="47.0" pitchname="B" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_6d538c70-e28d-4aa7-b830-ab92088e02c4"/>
+                <note date="53820.0" midi.pitch="48.0" pitchname="C" accidentals="0.0" duration="780.0" velocity="80.0" xml:id="meico_591378ac-c6ff-43ab-8249-03631f988c83"/>
+                <note date="54600.0" midi.pitch="50.0" pitchname="D" accidentals="0.0" duration="1560.0" velocity="80.0" xml:id="meico_1c7b3dc7-7a31-4875-92ec-83a222625ed7"/>
+                <note date="56160.0" midi.pitch="52.0" pitchname="E" accidentals="0.0" duration="3120.0" velocity="80.0" xml:id="meico_72253a04-2658-4051-b94f-aebbb209204d"/>
+            </score>
+        </dated>
+    </part>
+</msm>
