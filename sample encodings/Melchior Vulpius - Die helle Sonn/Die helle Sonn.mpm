@@ -1,18 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
     <metadata>
         <author number="1">Pablo Carra</author>
         <author number="2">Axel Berndt</author>
-        <comment>
-            Three performances of Melchior Vulpius' chorale "Die helle Sonn' leucht' jetzt herfür". The performances are conceived for an instrumental setting consisting of oboe, violin, viola and bassoon.
-            1. Baroque: A typical performance of the chorale.
-            2. Romantic: A performance in a more romantic style.
-            3. Amateur: Meant to be a sloppy performance of an amateur ensemble. It is based on the romantic performance but introduces asynchrony and more significant imprecision on the level of timing, dynamics and articulation. This causes, for instance, the bass being late and the alto being too loud every now and then.
-            
-            All performances were coneived by author 1 Pablo Carra. Author 2 Axel Berndt has added minor editings, mostly code polishing. 
-        </comment>
+        <comment> Three performances of Melchior Vulpius' chorale "Die helle Sonn' leucht' jetzt herfür". The performances are conceived for an instrumental setting consisting of oboe, violin, viola and bassoon. 1. Baroque: A typical performance of the chorale. 2. Romantic: A performance in a more romantic style. 3. Amateur: Meant to be a sloppy performance of an amateur ensemble. It is based on the romantic performance but introduces asynchrony and more significant imprecision on the level of timing, dynamics and articulation. This causes, for instance, the bass being late and the alto being too loud every now and then. All performances were conceived by author 1 Pablo Carra. Author 2 Axel Berndt has added minor editings, mostly code polishing. </comment>
         <relatedResources>
             <resource uri="Die helle Sonn.mid" type="midi"/>
             <resource uri="Die helle Sonn.msm" type="msm"/>
@@ -20,7 +13,6 @@
             <resource uri="Die helle Sonn_Romantic.pdf" type="pdf"/>
         </relatedResources>
     </metadata>
-
     <performance name="Baroque" pulsesPerQuarter="480">
         <global>
             <header>
@@ -32,7 +24,6 @@
                         <dynamicsDef name="mezzoforte" value="80.0"/>
                     </styleDef>
                 </dynamicsStyles>
-
                 <articulationStyles>
                     <styleDef name="articulation definitions">
                         <articulationDef name="caesura" relativeVelocity="0.85" relativeDuration="0.9"/>
@@ -42,36 +33,32 @@
                         <articulationDef name="shortstop" relativeDuration="0.95" relativeVelocity="0.85"/>
                     </styleDef>
                 </articulationStyles>
-
                 <metricalAccentuationStyles>
                     <styleDef name="accentuation definitions">
                         <accentuationPatternDef name="tripleTime" length="3.0">
                             <accentuation beat="1" value="0.8" transition.from="1.0" transition.to="-0.4"/>
                             <accentuation beat="2" value="-0.4" transition.from="-0.4" transition.to="0.0"/>
-                            <accentuation beat="3" value="0.0" transition.from="0.0" transition.to="0.8"/>
+                            <accentuation beat="3" value="0.0" transition.from="0.0" transition.to="0.8"/> 
                         </accentuationPatternDef>
-
                         <accentuationPatternDef name="sextupleTime" length="6.0">
                             <accentuation beat="1.0" value="0.5" transition.from="0.5" transition.to="0.0"/>
                             <accentuation beat="2.0" value="0.0"/>
                             <accentuation beat="3.0" value="0.0" transition.from="0.0" transition.to="0.5"/>
                             <accentuation beat="4.0" value="0.5" transition.from="0.5" transition.to="0.0"/>
                             <accentuation beat="5.0" value="0.0"/>
-                            <accentuation beat="6.0" value="0.0" transition.from="0.0" transition.to="0.5"/>
+                            <accentuation beat="6.0" value="0.0" transition.from="0.0" transition.to="0.5"/> 
                         </accentuationPatternDef>
                     </styleDef>
                 </metricalAccentuationStyles>
             </header>
-
             <dated>
                 <tempoMap>
                     <tempo date="0.0" bpm="140.0" beatLength="0.25"/>
                     <tempo date="7200.0" bpm="150.0" beatLength="0.25"/>
                     <tempo date="18720.0" bpm="140.0" beatLength="0.25"/>
                     <tempo date="21120.0" bpm="150.0" transition.to="120.0" meanTempoAt="0.2" beatLength="0.25"/>
-                    <tempo date="23040.0" bpm="150.0" beatLength="0.25"/>
+                    <tempo date="23040.0" bpm="150.0" beatLength="0.25"/> 
                 </tempoMap>
-
                 <rubatoMap>
                     <rubato date="960.0" frameLength="960.0" intensity="1.1" earlyEnd="0.95"/>
                     <rubato date="1920.0" frameLength="960.0" intensity="0.95"/>
@@ -91,9 +78,8 @@
                     <rubato date="14400.0" frameLength="960.0" lateStart="0.02"/>
                     <rubato date="15360.0" frameLength="480.0" lateStart="0.02"/>
                     <rubato date="18720.0" frameLength="480.0" lateStart="0.02"/>
-                    <rubato date="19680.0" frameLength="480.0" lateStart="0.02"/>
+                    <rubato date="19680.0" frameLength="480.0" lateStart="0.02"/> 
                 </rubatoMap>
-
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="960.0" volume="piano" transition.to="mezzopiano" curvature="0.8" protraction="0.0" subNoteDynamics="true"/>
@@ -114,12 +100,11 @@
                     <dynamics date="18720.0" volume="piano" transition.to="mezzoforte" curvature="0.2" protraction="0.5" subNoteDynamics="true"/>
                     <dynamics date="21600.0" volume="mezzoforte" transition.to="mezzopiano" curvature="0.2" protraction="0.0" subNoteDynamics="true"/>
                     <dynamics date="22560.0" volume="mezzopiano" subNoteDynamics="true"/>
-                    <!-- dim on the last note -->
                     <dynamics date="23040.0" volume="mezzopiano" transition.to="piano" curvature="0.5" protraction="0.7" subNoteDynamics="true"/>
+                    <dynamics date="26300.0" volume="piano" subNoteDynamics="true"/> 
+                    <!-- dim on the last note -->
                     <!-- This sets the end point for the diminuendo-->
-                    <dynamics date="26300.0" volume="piano" subNoteDynamics="true"/>
                 </dynamicsMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions"/>
                     <articulation date="7200.0" relativeDuration="0.9"/>
@@ -133,23 +118,20 @@
                     <articulation date="14400.0" relativeDuration="0.95"/>
                     <articulation date="19200.0" relativeDuration="0.9"/>
                     <articulation date="19680.0" name.ref="shortstop"/>
-                    <articulation date="22560.0" name.ref="caesura"/>
+                    <articulation date="22560.0" name.ref="caesura"/> 
                 </articulationMap>
-
                 <metricalAccentuationMap>
                     <style date="0.0" name.ref="accentuation definitions"/>
                     <accentuationPattern date="0.0" name.ref="tripleTime" scale="15.0" loop="true" stickToMeasures="true"/>
-                    <!-- change from tertiary 3/2 to binary  6/4 on the third measure-->
-                    <accentuationPattern date="5760.0" name.ref="sextupleTime" scale="25.0" loop="true" stickToMeasures="true"/>
+                    <accentuationPattern date="5760.0" name.ref="sextupleTime" scale="25.0" loop="true" stickToMeasures="true"/> 
+                    <!-- change from tertiary 3/2 to binary 6/4 on the third measure-->
                 </metricalAccentuationMap>
             </dated>
         </global>
-
         <part name="Soprano" number="0" midi.channel="0" midi.port="0">
             <header/>
             <dated/>
         </part>
-
         <part name="Alto" number="1" midi.channel="1" midi.port="0">
             <header>
                 <dynamicsStyles>
@@ -164,25 +146,19 @@
             </header>
             <dated/>
         </part>
-
         <part name="Tenor" number="2" midi.channel="2" midi.port="0">
             <header/>
             <dated/>
         </part>
-
         <part name="Bass" number="3" midi.channel="3" midi.port="0">
             <header/>
             <dated>
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions"/>
-                    
-                    <!-- voice-specific articulations -->
                     <articulation date="960.0" name.ref="caesura"/>
                     <articulation date="2400.0" name.ref="detache"/>
                     <articulation date="4800.0" name.ref="detache"/>
                     <articulation date="5280.0" name.ref="detache"/>
-                    
-                    <!-- same as global articulations -->
                     <articulation date="7200.0" relativeDuration="0.9"/>
                     <articulation date="7680.0" name.ref="softer"/>
                     <articulation date="8160.0" name.ref="shortstop"/>
@@ -194,12 +170,13 @@
                     <articulation date="14400.0" relativeDuration="0.95"/>
                     <articulation date="19200.0" relativeDuration="0.9"/>
                     <articulation date="19680.0" name.ref="shortstop"/>
-                    <articulation date="22560.0" name.ref="caesura"/>
+                    <articulation date="22560.0" name.ref="caesura"/> 
+                    <!-- voice-specific articulations -->
+                    <!-- same as global articulations -->
                 </articulationMap>
             </dated>
         </part>
     </performance>
-
     <performance name="Romantic" pulsesPerQuarter="480">
         <global>
             <header>
@@ -215,34 +192,30 @@
                         <dynamicsDef name="piuForte" value="120.0"/>
                     </styleDef>
                 </dynamicsStyles>
-                
                 <articulationStyles>
                     <styleDef name="articulation definitions">
                         <articulationDef name="caesura" relativeDuration="0.9" relativeVelocity="0.85"/>
                         <articulationDef name="marcato" relativeDuration="0.95" absoluteVelocityChange="15.0"/>
                     </styleDef>
                 </articulationStyles>
-
                 <metricalAccentuationStyles>
                     <styleDef name="accentuation definitions">
                         <accentuationPatternDef name="tripleTime" length="3.0">
                             <accentuation beat="1" value="0.8" transition.from="1.0" transition.to="0.4"/>
                             <accentuation beat="2" value="-0.4" transition.from="-0.4" transition.to="0.0"/>
-                            <accentuation beat="3" value="0.0" transition.from="0.0" transition.to="0.8"/>
+                            <accentuation beat="3" value="0.0" transition.from="0.0" transition.to="0.8"/> 
                         </accentuationPatternDef>
-
                         <accentuationPatternDef name="sextupleTime" length="6.0">
                             <accentuation beat="1.0" value="0.0" transition.from="0.0" transition.to="-0.5"/>
                             <accentuation beat="2.0" value="-0.5"/>
                             <accentuation beat="3.0" value="-0.5" transition.from="-0.5" transition.to="0.0"/>
                             <accentuation beat="4.0" value="0.0" transition.from="0.0" transition.to="-0.5"/>
                             <accentuation beat="5.0" value="-0.5"/>
-                            <accentuation beat="6.0" value="-0.5" transition.from="-0.5" transition.to="0.0"/>
+                            <accentuation beat="6.0" value="-0.5" transition.from="-0.5" transition.to="0.0"/> 
                         </accentuationPatternDef>
                     </styleDef>
                 </metricalAccentuationStyles>
             </header>
-            
             <dated>
                 <tempoMap>
                     <tempo date="0.0" bpm="100.0" beatLength="0.25"/>
@@ -251,46 +224,39 @@
                     <tempo date="12960.0" bpm="120.0" transition.to="100.0" meanTempoAt="0.6" beatLength="0.25"/>
                     <tempo date="18720.0" bpm="120.0" beatLength="0.25"/>
                     <tempo date="18720.0" bpm="120.0" transition.to="82.0" meanTempoAt="0.4" beatLength="0.25"/>
-                    <tempo date="23040.0" bpm="135.0" beatLength="0.25"/>
+                    <tempo date="23040.0" bpm="135.0" beatLength="0.25"/> 
                 </tempoMap>
-
                 <rubatoMap>
                     <rubato date="960.0" frameLength="1920.0" intensity="1.1"/>
                     <rubato date="7680.0" frameLength="960.0" intensity="0.92"/>
-                    <rubato date="22080.0" frameLength="960.0" intensity="0.9"/>
+                    <rubato date="22080.0" frameLength="960.0" intensity="0.9"/> 
                 </rubatoMap>
-
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamic definitions"/>
                     <dynamics date="0.0" volume="mezzopiano"/>
-                    <!-- measures 1-3 beginning mp, cresc to f on "Sonn" and back to mp after "leucht" -->
                     <dynamics date="960.0" volume="mezzopiano" transition.to="mezzoforte" curvature="0.5" protraction="0.0" subNoteDynamics="true"/>
                     <dynamics date="1920.0" volume="mezzoforte" subNoteDynamics="true"/>
                     <dynamics date="2880.0" volume="mezzoforte" transition.to="piuForte" curvature="0.8" protraction="0.4" subNoteDynamics="true"/>
                     <dynamics date="4320.0" volume="piuForte" subNoteDynamics="true"/>
                     <dynamics date="5760.0" volume="piuForte" transition.to="mezzoforte" curvature="0.4" protraction="-0.2" subNoteDynamics="true"/>
-
-                    <!-- slight crescendo on the second phrase-->
                     <dynamics date="7200.0" volume="mezzoforte"/>
                     <dynamics date="8640.0" volume="mezzoforte" transition.to="cuasi-mf" curvature="0.4" protraction="-0.2" subNoteDynamics="true"/>
                     <dynamics date="9600.0" volume="cuasi-mf" subNoteDynamics="true"/>
                     <dynamics date="10080.0" volume="cuasi-mf" transition.to="forte" curvature="0.4" protraction="-0.2" subNoteDynamics="true"/>
                     <dynamics date="11040.0" volume="forte" subNoteDynamics="true"/>
-
-                    <!-- -diminuendo on the third phrase -->
                     <dynamics date="12960.0" volume="mezzoforte"/>
                     <dynamics date="14440.0" volume="mezzoforte" transition.to="cuasi-mp" curvature="0.3" protraction="0.2" subNoteDynamics="true"/>
                     <dynamics date="15360.0" volume="cuasi-mp" subNoteDynamics="true"/>
                     <dynamics date="15840.0" volume="cuasi-mp" transition.to="mezzopiano" curvature="0.3" protraction="0.2" subNoteDynamics="true"/>
                     <dynamics date="16800.0" volume="mezzopiano" subNoteDynamics="true"/>
-
-                    <!-- measure 7 to end-->
                     <dynamics date="18720.0" volume="mezzopiano" subNoteDynamics="true"/>
                     <dynamics date="23040.0" volume="mezzopiano" transition.to="piuPiano" curvature="0.5" protraction="0.2" subNoteDynamics="true"/>
-                    <dynamics date="26380.0" volume="piuPiano"/>
-
+                    <dynamics date="26380.0" volume="piuPiano"/> 
+                    <!-- measures 1-3 beginning mp, cresc to f on "Sonn" and back to mp after "leucht" -->
+                    <!-- slight crescendo on the second phrase-->
+                    <!-- -diminuendo on the third phrase -->
+                    <!-- measure 7 to end-->
                 </dynamicsMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions"/>
                     <articulation date="7200.0" name.ref="caesura"/>
@@ -298,30 +264,25 @@
                     <articulation date="17280.0" name.ref="caesura"/>
                     <articulation date="18720.0" name.ref="marcato"/>
                     <articulation date="19200.0" name.ref="marcato"/>
-                    <articulation date="19680.0" name.ref="marcato"/>
+                    <articulation date="19680.0" name.ref="marcato"/> 
                 </articulationMap>
-
                 <metricalAccentuationMap>
                     <style date="0.0" name.ref="accentuation definitions"/>
                     <accentuationPattern date="0.0" name.ref="tripleTime" scale="15.0" loop="true" stickToMeasures="true"/>
-                    <!-- change from tertiary 3/2 to binary  6/4 on the third measure-->
-                    <accentuationPattern date="5760.0" name.ref="sextupleTime" scale="25.0" loop="true" stickToMeasures="true"/>
+                    <accentuationPattern date="5760.0" name.ref="sextupleTime" scale="25.0" loop="true" stickToMeasures="true"/> 
+                    <!-- change from tertiary 3/2 to binary 6/4 on the third measure-->
                 </metricalAccentuationMap>
-
                 <imprecisionMap.timing>
-                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="5.0" limit.lower="-20.0" limit.upper="20.0" clip.lower="-20.0" clip.upper="20.0" milliseconds.timingBasis="300.0"/>
+                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="5.0" limit.lower="-20.0" limit.upper="20.0" clip.lower="-20.0" clip.upper="20.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
-
                 <imprecisionMap.dynamics>
-                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-10.0" limit.upper="10.0"/>
+                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-10.0" limit.upper="10.0"/> 
                 </imprecisionMap.dynamics>
-
                 <imprecisionMap.toneduration>
-                    <distribution.triangular date="0.0" limit.lower="-10.0" limit.upper="0.0" mode="0.0" clip.lower="-10.0" clip.upper="0.0"/>
+                    <distribution.triangular date="0.0" limit.lower="-10.0" limit.upper="0.0" mode="0.0" clip.lower="-10.0" clip.upper="0.0"/> 
                 </imprecisionMap.toneduration>
             </dated>
         </global>
-
         <part name="Alto" number="1" midi.channel="1" midi.port="0">
             <header>
                 <dynamicsStyles>
@@ -340,7 +301,6 @@
             </header>
             <dated/>
         </part>
-
         <part name="Tenor" number="2" midi.channel="2" midi.port="0">
             <header/>
             <dated>
@@ -348,18 +308,16 @@
                     <style date="0.0" name.ref="articulation definitions"/>
                     <articulation date="7200.0" name.ref="caesura"/>
                     <articulation date="11520.0" name.ref="caesura"/>
-                    <articulation date="17280.0" name.ref="caesura"/>
+                    <articulation date="17280.0" name.ref="caesura"/> 
                 </articulationMap>
-
                 <rubatoMap>
                     <rubato date="960.0" intensity="1.1" frameLength="1920.0"/>
                     <rubato date="2880.0" intensity="1.1" frameLength="960.0"/>
                     <rubato date="7680.0" intensity="0.92" frameLength="960.0"/>
-                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/>
+                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/> 
                 </rubatoMap>
             </dated>
         </part>
-
         <part name="Bass" number="3" midi.channel="3" midi.port="0">
             <header/>
             <dated>
@@ -368,12 +326,11 @@
                     <rubato date="2880.0" intensity="1.1" frameLength="960.0"/>
                     <rubato date="7680.0" intensity="0.92" frameLength="960.0"/>
                     <rubato date="20160.0" intensity="1.1" frameLength="1440.0"/>
-                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/>
+                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/> 
                 </rubatoMap>
             </dated>
         </part>
     </performance>
-
     <performance name="Amateur" pulsesPerQuarter="480">
         <global>
             <header>
@@ -388,34 +345,30 @@
                         <dynamicsDef name="piuForte" value="120.0"/>
                     </styleDef>
                 </dynamicsStyles>
-                
                 <articulationStyles>
                     <styleDef name="articulation definitions">
                         <articulationDef name="caesura" relativeDuration="0.9" relativeVelocity="0.85"/>
                         <articulationDef name="marcato" relativeDuration="0.95" absoluteVelocityChange="15.0"/>
                     </styleDef>
                 </articulationStyles>
-
                 <metricalAccentuationStyles>
                     <styleDef name="accentuation definitions">
                         <accentuationPatternDef name="tripleTime" length="3.0">
                             <accentuation beat="1" value="0.8" transition.from="1.0" transition.to="0.4"/>
                             <accentuation beat="2" value="-0.4" transition.from="-0.4" transition.to="0.0"/>
-                            <accentuation beat="3" value="0.0" transition.from="0.0" transition.to="0.8"/>
+                            <accentuation beat="3" value="0.0" transition.from="0.0" transition.to="0.8"/> 
                         </accentuationPatternDef>
-
                         <accentuationPatternDef name="sextupleTime" length="6.0">
                             <accentuation beat="1.0" value="0.0" transition.from="0.0" transition.to="-0.5"/>
                             <accentuation beat="2.0" value="-0.5"/>
                             <accentuation beat="3.0" value="-0.5" transition.from="-0.5" transition.to="0.0"/>
                             <accentuation beat="4.0" value="0.0" transition.from="0.0" transition.to="-0.5"/>
                             <accentuation beat="5.0" value="-0.5"/>
-                            <accentuation beat="6.0" value="-0.5" transition.from="-0.5" transition.to="0.0"/>
+                            <accentuation beat="6.0" value="-0.5" transition.from="-0.5" transition.to="0.0"/> 
                         </accentuationPatternDef>
                     </styleDef>
                 </metricalAccentuationStyles>
             </header>
-            
             <dated>
                 <tempoMap>
                     <tempo date="0.0" bpm="100.0" beatLength="0.25"/>
@@ -424,45 +377,39 @@
                     <tempo date="12960.0" bpm="120.0" transition.to="100.0" meanTempoAt="0.6" beatLength="0.25"/>
                     <tempo date="18720.0" bpm="120.0" beatLength="0.25"/>
                     <tempo date="18720.0" bpm="120.0" transition.to="82.0" meanTempoAt="0.4" beatLength="0.25"/>
-                    <tempo date="23040.0" bpm="135.0" beatLength="0.25"/>
+                    <tempo date="23040.0" bpm="135.0" beatLength="0.25"/> 
                 </tempoMap>
-
                 <rubatoMap>
                     <rubato date="960.0" intensity="1.1" frameLength="1920.0"/>
                     <rubato date="7680.0" intensity="0.92" frameLength="960.0"/>
-                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/>
+                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/> 
                 </rubatoMap>
-
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamic definitions"/>
                     <dynamics date="0.0" volume="mezzopiano"/>
-                    <!-- Measures 1-3 beginning mp, cresc to f on "Sonn" and back to mp after "leucht" -->
                     <dynamics date="960.0" volume="mezzopiano" transition.to="mezzoforte" curvature="0.5" protraction="0.0" subNoteDynamics="true"/>
                     <dynamics date="1920.0" volume="mezzoforte"/>
                     <dynamics date="2880.0" volume="mezzoforte" transition.to="piuForte" curvature="0.8" protraction="0.4" subNoteDynamics="true"/>
                     <dynamics date="4320.0" volume="piuForte"/>
                     <dynamics date="5760.0" volume="piuForte" transition.to="mezzoforte" curvature="0.4" protraction="-0.2" subNoteDynamics="true"/>
-
-                    <!-- slight crescendo on the second phrase-->
                     <dynamics date="7200.0" volume="mezzoforte"/>
                     <dynamics date="8640.0" volume="mezzoforte" transition.to="cuasi-mf" curvature="0.4" protraction="-0.2" subNoteDynamics="true"/>
                     <dynamics date="9600.0" volume="cuasi-mf" subNoteDynamics="true"/>
                     <dynamics date="10080.0" volume="cuasi-mf" transition.to="forte" curvature="0.4" protraction="-0.2" subNoteDynamics="true"/>
                     <dynamics date="11040.0" volume="forte" subNoteDynamics="true"/>
-
-                    <!-- -diminuendo on the third phrase -->
                     <dynamics date="12960.0" volume="mezzoforte"/>
                     <dynamics date="14440.0" volume="mezzoforte" transition.to="cuasi-mp" curvature="0.3" protraction="0.4" subNoteDynamics="true"/>
                     <dynamics date="15360.0" volume="cuasi-mp" subNoteDynamics="true"/>
                     <dynamics date="15840.0" volume="cuasi-mp" transition.to="mezzopiano" curvature="0.3" protraction="0.4" subNoteDynamics="true"/>
                     <dynamics date="16800.0" volume="mezzopiano" subNoteDynamics="true"/>
-                    
-                    <!-- measure 7 to end-->
                     <dynamics date="18720.0" volume="mezzopiano"/>
                     <dynamics date="23040.0" volume="mezzopiano" transition.to="piuPiano" curvature="0.5" protraction="0.2" subNoteDynamics="true"/>
-                    <dynamics date="26380" volume="piuPiano"/>
+                    <dynamics date="26380" volume="piuPiano"/> 
+                    <!-- Measures 1-3 beginning mp, cresc to f on "Sonn" and back to mp after "leucht" -->
+                    <!-- slight crescendo on the second phrase-->
+                    <!-- -diminuendo on the third phrase -->
+                    <!-- measure 7 to end-->
                 </dynamicsMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions"/>
                     <articulation date="7200.0" name.ref="caesura"/>
@@ -470,92 +417,79 @@
                     <articulation date="17280.0" name.ref="caesura"/>
                     <articulation date="18720.0" name.ref="marcato"/>
                     <articulation date="19200.0" name.ref="marcato"/>
-                    <articulation date="19680.0" name.ref="marcato"/>
+                    <articulation date="19680.0" name.ref="marcato"/> 
                 </articulationMap>
-
                 <metricalAccentuationMap>
                     <style date="0.0" name.ref="accentuation definitions"/>
                     <accentuationPattern date="0.0" name.ref="tripleTime" scale="10.0" loop="true" stickToMeasures="true"/>
-                    <!-- change from tertiary 3/2 to binary  6/4 on the third measure-->
-                    <accentuationPattern date="5760.0" name.ref="sextupleTime" scale="16.0" loop="true" stickToMeasures="true"/>
+                    <accentuationPattern date="5760.0" name.ref="sextupleTime" scale="16.0" loop="true" stickToMeasures="true"/> 
+                    <!-- change from tertiary 3/2 to binary 6/4 on the third measure-->
                 </metricalAccentuationMap>
-
                 <imprecisionMap.timing>
-                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="5.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/>
+                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="5.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
-
                 <imprecisionMap.dynamics>
-                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/>
+                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/> 
                 </imprecisionMap.dynamics>
-
                 <imprecisionMap.toneduration>
-                    <distribution.triangular date="0.0" limit.lower="-15.0" limit.upper="0.0" mode="0.0" clip.lower="-10.0" clip.upper="0.0"/>
+                    <distribution.triangular date="0.0" limit.lower="-15.0" limit.upper="0.0" mode="0.0" clip.lower="-10.0" clip.upper="0.0"/> 
                 </imprecisionMap.toneduration>
             </dated>
         </global>
-
         <part name="Soprano" number="0" midi.channel="0" midi.port="0">
             <header/>
             <dated>
                 <imprecisionMap.dynamics>
-                    <distribution.gaussian date="0.0" deviation.standard="9.0" limit.lower="-15.0" limit.upper="15.0"/>
+                    <distribution.gaussian date="0.0" deviation.standard="9.0" limit.lower="-15.0" limit.upper="15.0"/> 
                 </imprecisionMap.dynamics>
-                
                 <imprecisionMap.timing>
-                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="3.0" limit.lower="-40.0" limit.upper="40.0" clip.lower="-40.0" clip.upper="40.0" milliseconds.timingBasis="300.0"/>
+                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="3.0" limit.lower="-40.0" limit.upper="40.0" clip.lower="-40.0" clip.upper="40.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
             </dated>
         </part>
-
         <part name="Alto" number="1" midi.channel="1" midi.port="0">
             <header/>
             <dated>
                 <imprecisionMap.dynamics>
-                    <distribution.correlated.brownianNoise date="0.0" stepWidth.max="20.0" limit.lower="-30.0" limit.upper="30.0" milliseconds.timingBasis="300.0"/>
+                    <distribution.correlated.brownianNoise date="0.0" stepWidth.max="20.0" limit.lower="-30.0" limit.upper="30.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.dynamics>
-                
                 <imprecisionMap.timing>
-                    <distribution.correlated.brownianNoise date="0.0" stepWidth.max="10.0" limit.lower="-60.0" limit.upper="60.0" milliseconds.timingBasis="300.0"/>
+                    <distribution.correlated.brownianNoise date="0.0" stepWidth.max="10.0" limit.lower="-60.0" limit.upper="60.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
             </dated>
         </part>
-
         <part name="Tenor" number="2" midi.channel="2" midi.port="0">
             <header/>
             <dated>
                 <imprecisionMap.toneduration>
-                    <distribution.triangular date="0.0" limit.lower="-25.0" limit.upper="0.0" mode="0.0" clip.lower="-25.0" clip.upper="0.0"/>
+                    <distribution.triangular date="0.0" limit.lower="-25.0" limit.upper="0.0" mode="0.0" clip.lower="-25.0" clip.upper="0.0"/> 
                 </imprecisionMap.toneduration>
-                
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions"/>
                     <articulation date="7200.0" name.ref="caesura"/>
                     <articulation date="11520.0" name.ref="caesura"/>
-                    <articulation date="17280.0" name.ref="caesura"/>
+                    <articulation date="17280.0" name.ref="caesura"/> 
                 </articulationMap>
-                
                 <rubatoMap>
                     <rubato date="960.0" intensity="1.1" frameLength="1920.0"/>
                     <rubato date="2880.0" intensity="1.1" frameLength="960.0"/>
                     <rubato date="7680.0" intensity="0.92" frameLength="960.0"/>
-                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/>
+                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/> 
                 </rubatoMap>
             </dated>
         </part>
-
         <part name="Bass" number="3" midi.channel="3" midi.port="0">
             <header/>
             <dated>
                 <asynchronyMap>
-                    <asynchrony date="0.0" milliseconds.offset="100.0"/>
+                    <asynchrony date="0.0" milliseconds.offset="100.0"/> 
                 </asynchronyMap>
-
                 <rubatoMap>
                     <rubato date="960.0" intensity="1.1" frameLength="1920.0"/>
                     <rubato date="2880.0" intensity="1.1" frameLength="960.0"/>
                     <rubato date="7680.0" intensity="0.92" frameLength="960.0"/>
                     <rubato date="20160.0" intensity="1.1" frameLength="1440.0"/>
-                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/>
+                    <rubato date="22080.0" intensity="0.9" frameLength="960.0"/> 
                 </rubatoMap>
             </dated>
         </part>

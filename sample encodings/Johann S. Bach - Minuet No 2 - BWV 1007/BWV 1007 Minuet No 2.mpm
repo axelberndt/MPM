@@ -1,6 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
     <metadata>
         <author>Pablo Carra</author>
@@ -8,15 +6,16 @@
         <relatedResources>
             <resource uri="BWV 1007 Minuet No 2.mid" type="midi"/>
             <resource uri="BWV 1007 Minuet No 2.msm" type="msm"/>
-            <resource uri="BWV 1007 Minuet No 2.pdf" type="pdf"/>
+            <resource uri="BWV 1007 Minuet No 2 - copy by Anna Magdalena Bach.png" type="png"/>
+            <resource uri="Score with performance annotations.png" type="png"/>
         </relatedResources>
+        <comment>In the MPM Toolbox's Score tab, the first page is a historical sheet. Since the repetitions are notated only by repetition marks, each note represents both, the first and second volta. The first is annotated a bit above the printed note, the second a bit below. On the second page is a modern print with annotated performance instructions by Pablo Carra.</comment>
     </metadata>
-
     <performance name="like Heinrich Schiff" pulsesPerQuarter="480">
         <global>
             <header>
                 <tempoStyles>
-                    <!-- list of general tempo instructions for easier  workflow -->
+                    <!-- list of general tempo instructions for easier workflow -->
                     <styleDef name="GeneralTempoDefinitions">
                         <tempoDef name="Adagio" value="72.0"/>
                         <tempoDef name="Andante" value="80.0"/>
@@ -60,8 +59,6 @@
             <dated>
                 <tempoMap>
                     <style date="0.0" name.ref="GeneralTempoDefinitions"/>
-
-                    <!-- section 1-->
                     <tempo date="0.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="720.0" bpm="Allegro" beatLength="0.25"/>
                     <tempo date="1440.0" bpm="Allegretto" transition.to="Moderato" meanTempoAt="0.15" beatLength="0.25"/>
@@ -74,11 +71,7 @@
                     <tempo date="8640.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="9360.0" bpm="Allegro" beatLength="0.25"/>
                     <tempo date="10080.0" bpm="Moderato" beatLength="0.25"/>
-                    <!--return to normal tempo during the half-note, so it does not play too long-->
                     <tempo date="10560.0" bpm="Andantino" transition.to="Moderato" meanTempoAt="0.5" beatLength="0.25"/>
-
-
-                    <!-- section 1 repetition -->
                     <tempo date="11520.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="12240.0" bpm="Allegro" beatLength="0.25"/>
                     <tempo date="12960.0" bpm="Allegretto" transition.to="Moderato" meanTempoAt="0.15" beatLength="0.25"/>
@@ -91,15 +84,11 @@
                     <tempo date="20160.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="20880.0" bpm="Allegro" beatLength="0.25"/>
                     <tempo date="21600.0" bpm="Moderato" beatLength="0.25"/>
-                    <!--return to normal tempo during the half-note, so it does not play too long-->
                     <tempo date="22080.0" bpm="Andantino" transition.to="Moderato" meanTempoAt="0.5" beatLength="0.25"/>
-
-                    <!-- section 2 -->
                     <tempo date="23040.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="24480.0" bpm="Moderato" transition.to="Andantino" meanTempoAt="0.5" beatLength="0.25"/>
                     <tempo date="25920.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="27360.0" bpm="Moderato" transition.to="Andantino" meanTempoAt="0.8" beatLength="0.25"/>
-                    <!-- desired tempo 115 bpm is not captured in the definitions, instead of predefining it we can use numeric values here -->
                     <tempo date="28320.0" bpm="Moderato" transition.to="115.0" meanTempoAt="0.5" beatLength="0.25"/>
                     <tempo date="31680.0" bpm="115.0" transition.to="Moderato" meanTempoAt="0.5" beatLength="0.25"/>
                     <tempo date="33120.0" bpm="Moderato" beatLength="0.25"/>
@@ -107,8 +96,6 @@
                     <tempo date="37440.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="38880.0" bpm="Moderato" transition.to="Andante" meanTempoAt="0.7" beatLength="0.25"/>
                     <tempo date="40320.0" bpm="Moderato" beatLength="0.25"/>
-
-                    <!-- section 2 repetition -->
                     <tempo date="46080.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="47520.0" bpm="Moderato" transition.to="Andantino" meanTempoAt="0.5" beatLength="0.25"/>
                     <tempo date="48960.0" bpm="Moderato" beatLength="0.25"/>
@@ -120,23 +107,25 @@
                     <tempo date="61920.0" bpm="Moderato" transition.to="Andantino" meanTempoAt="0.5" beatLength="0.25"/>
                     <tempo date="63360.0" bpm="Moderato" beatLength="0.25"/>
                     <tempo date="66240.0" bpm="Moderato" transition.to="Adagio" meanTempoAt="0.8" beatLength="0.25"/>
-                    <tempo date="67680.0" bpm="Moderato" beatLength="0.25"/>
+                    <tempo date="67680.0" bpm="Moderato" beatLength="0.25"/> 
+                    <!-- section 1-->
+                    <!--return to normal tempo during the half-note, so it does not play too long-->
+                    <!-- section 1 repetition -->
+                    <!--return to normal tempo during the half-note, so it does not play too long-->
+                    <!-- section 2 -->
+                    <!-- desired tempo 115 bpm is not captured in the definitions, instead of predefining it we can use numeric values here -->
+                    <!-- section 2 repetition -->
                 </tempoMap>
-
                 <rubatoMap>
-                    <!-- section 1 -->
-                    <!-- A slightly retarded beginning of the phrase (while staying in tempo) gives a "marcato" feeling without resorting to volume modifications -->
                     <rubato date="720.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="1440.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="3600.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
-                    <rubato date="6480.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="5760.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
+                    <rubato date="6480.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="6480.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="8640.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="9360.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="10080.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
-
-                    <!-- section 1 repetition -->
                     <rubato date="12440.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="12960.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="15120.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
@@ -145,23 +134,21 @@
                     <rubato date="20160.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="20880.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="21600.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
-
-                    <!-- section 2 -->
                     <rubato date="23760.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="26640.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="29520.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
                     <rubato date="34560.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
-                    
-                    <!-- section 2 repetition-->
                     <rubato date="66480.0" frameLength="720" intensity="1.0" lateStart="0.02"/>
+                    <rubato date="69120.0" frameLength="960" intensity="1.0" lateStart="0.05"/> 
+                    <!-- section 1 -->
+                    <!-- A slightly retarded beginning of the phrase (while staying in tempo) gives a "marcato" feeling without resorting to volume modifications -->
+                    <!-- section 1 repetition -->
+                    <!-- section 2 -->
+                    <!-- section 2 repetition-->
                     <!-- a bit more for the last note-->
-                    <rubato date="69120.0" frameLength="960" intensity="1.0" lateStart="0.05"/>
                 </rubatoMap>
-
                 <dynamicsMap>
                     <style date="0.0" name.ref="GeneralDynamicDefinitions"/>
-
-                    <!-- section 1 -->
                     <dynamics date="0.0" volume="mezzoforte"/>
                     <dynamics date="720.0" volume="75.0" transition.to="mezzoforte" curvature="0.8" protraction="0.6"/>
                     <dynamics date="2880.0" volume="mezzoforte"/>
@@ -172,8 +159,6 @@
                     <dynamics date="8640.0" volume="mezzoforte"/>
                     <dynamics date="9360.0" volume="mezzoforte" transition.to="mezzopiano" curvature="0.7" protraction="-0.7"/>
                     <dynamics date="10560.0" volume="mezzopiano" transition.to="piano" curvature="0.7" protraction="-0.7"/>
-
-                    <!-- section 1 repetition -->
                     <dynamics date="11520.0" volume="piano"/>
                     <dynamics date="15120.0" volume="piano" transition.to="mezzopiano" curvature="0.8" protraction="0.0"/>
                     <dynamics date="15840.0" volume="mezzopiano" transition.to="piano" curvature="0.8" protraction="0.0"/>
@@ -182,10 +167,6 @@
                     <dynamics date="19440.0" volume="mezzopiano" transition.to="pianissimo" curvature="0.6" protraction="-0.2"/>
                     <dynamics date="20880.0" volume="piano" transition.to="mezzoforte" curvature="0.4" protraction="0.0"/>
                     <dynamics date="21600.0" volume="mezzoforte" transition.to="mezzopiano" curvature="0.4" protraction="0.0"/>
-
-
-                    <!-- section 2 -->
-
                     <dynamics date="23040.0" volume="mezzoforte"/>
                     <dynamics date="24480.0" volume="mezzoforte" transition.to="mezzopiano" curvature="0.2" protraction="0.4"/>
                     <dynamics date="25920.0" volume="mezzopiano"/>
@@ -196,22 +177,20 @@
                     <dynamics date="37440.0" volume="mezzoforte"/>
                     <dynamics date="38880.0" volume="mezzoforte" transition.to="piano" curvature="0.2" protraction="0.4"/>
                     <dynamics date="40320.0" volume="mezzoforte"/>
-
-                    <!-- section 2 repetition -->
                     <dynamics date="46080.0" volume="piano"/>
                     <dynamics date="60480.0" volume="mezzopiano" transition.to="piano" curvature="0.0" protraction="-0.8"/>
                     <dynamics date="61200.0" volume="mezzopiano"/>
                     <dynamics date="63360.0" volume="mezzopiano" transition.to="piano" curvature="0.0" protraction="-0.8"/>
-                    <dynamics date="64080.0" volume="mezzopiano"/>
+                    <dynamics date="64080.0" volume="mezzopiano"/> 
+                    <!-- section 1 -->
+                    <!-- section 1 repetition -->
+                    <!-- section 2 -->
+                    <!-- section 2 repetition -->
                 </dynamicsMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="GeneralArticulationDefinitions" defaultArticulation="nonlegato"/>
-
-                    <!-- section 1 -->
                     <articulation date="0.0" name.ref="legato"/>
                     <articulation date="240.0" name.ref="legato"/>
-                    <!-- instead of legatostop we use ceasura3 here which gives the start a more "bouncy" feeling for the first round of the theme-->
                     <articulation date="480.0" name.ref="caesura3"/>
                     <articulation date="720.0" name.ref="staccato"/>
                     <articulation date="960.0" name.ref="staccato"/>
@@ -219,13 +198,11 @@
                     <articulation date="1440.0" name.ref="staccato"/>
                     <articulation date="1920.0" name.ref="staccato"/>
                     <articulation date="2400" name.ref="staccato"/>
-                    <!-- ending phrase -->
                     <articulation date="2400.0" name.ref=" caesura1"/>
                     <articulation date="2880.0" name.ref="accent"/>
                     <articulation date="2880.0" name.ref="legato"/>
                     <articulation date="3120.0" name.ref="legato"/>
                     <articulation date="3360.0" name.ref="legatostop"/>
-                    <!-- ending phrase, but without modifying velocity -->
                     <articulation date="3360.0" name.ref="caesura3"/>
                     <articulation date="3600.0" name.ref="detache"/>
                     <articulation date="3840.0" name.ref="detache"/>
@@ -245,7 +222,6 @@
                     <articulation date="7200.0" name.ref="staccato"/>
                     <articulation date="7680.0" name.ref="staccato"/>
                     <articulation date="8160" name.ref="staccato"/>
-                    <!-- phrase ending -->
                     <articulation date="8160.0" name.ref=" caesura1"/>
                     <articulation date="8640.0" name.ref="legato"/>
                     <articulation date="8880.0" name.ref="legato"/>
@@ -255,10 +231,7 @@
                     <articulation date="9840.0" name.ref="detache"/>
                     <articulation date="10080.0" name.ref="legato"/>
                     <articulation date="10320.0" name.ref="legatostop"/>
-                    <!-- phrase ending -->
                     <articulation date="10560.0" name.ref="caesura2"/>
-
-                    <!-- section 1 repetittion-->
                     <articulation date="11520.0" name.ref="legato"/>
                     <articulation date="11760.0" name.ref="legato"/>
                     <articulation date="12000.0" name.ref="legatostop"/>
@@ -268,7 +241,6 @@
                     <articulation date="12960.0" name.ref="staccato"/>
                     <articulation date="13440.0" name.ref="staccato"/>
                     <articulation date="13920.0" name.ref="staccato"/>
-                    <!-- phrase ending -->
                     <articulation date="13920.0" name.ref=" caesura1"/>
                     <articulation date="14400.0" name.ref="accent"/>
                     <articulation date="14400.0" name.ref="legato"/>
@@ -292,7 +264,6 @@
                     <articulation date="18720.0" name.ref="caesura1"/>
                     <articulation date="19200.0" name.ref="caesura1"/>
                     <articulation date="19680.0" name.ref="caesura1"/>
-                    <!-- phrase ending -->
                     <articulation date="19680.0" name.ref=" caesura1"/>
                     <articulation date="20160.0" name.ref="legato"/>
                     <articulation date="20400.0" name.ref="legato"/>
@@ -302,10 +273,7 @@
                     <articulation date="21360.0" name.ref="detache"/>
                     <articulation date="21600.0" name.ref="legato"/>
                     <articulation date="21840.0" name.ref="legatostop"/>
-                    <!-- phrase ending -->
                     <articulation date="22080.0" name.ref="caesura2"/>
-
-                    <!-- section 2 -->
                     <articulation date="23040.0" name.ref="legato"/>
                     <articulation date="23280.0" name.ref="legato"/>
                     <articulation date="23520.0" name.ref="legatostop"/>
@@ -317,7 +285,6 @@
                     <articulation date="24960.0" name.ref="legato"/>
                     <articulation date="25200.0" name.ref="legatostop"/>
                     <articulation date="25440.0" name.ref="detache"/>
-                    <!-- phrase ending -->
                     <articulation date="25440.0" name.ref="caesura2"/>
                     <articulation date="25920.0" name.ref="legato"/>
                     <articulation date="26160.0" name.ref="legato"/>
@@ -347,7 +314,6 @@
                     <articulation date="32880.0" name.ref="staccato"/>
                     <articulation date="33600.0" name.ref="staccato"/>
                     <articulation date="33840.0" name.ref="staccato"/>
-                    <!-- phrase ending -->
                     <articulation date="34080.0" name.ref="caesura2"/>
                     <articulation date="34560.0" name.ref="legato"/>
                     <articulation date="34800.0" name.ref="legato"/>
@@ -357,12 +323,10 @@
                     <articulation date="36240.0" name.ref="legato"/>
                     <articulation date="36480.0" name.ref="staccato"/>
                     <articulation date="36720.0" name.ref="staccato"/>
-                    <!-- phrase ending -->
                     <articulation date="36960.0" name.ref="caesura2"/>
                     <articulation date="37440.0" name.ref="legato"/>
                     <articulation date="37680.0" name.ref="legato"/>
                     <articulation date="37920.0" name.ref="legatostop"/>
-                    <!-- phrase ending -->
                     <articulation date="38400.0" name.ref="caesura2"/>
                     <articulation date="38880.0" name.ref="legato"/>
                     <articulation date="39120.0" name.ref="legato"/>
@@ -379,8 +343,6 @@
                     <articulation date="43680.0" name.ref="legato"/>
                     <articulation date="43920.0" name.ref="legatostop"/>
                     <articulation date="44640.0" name.ref="breath"/>
-
-                    <!-- section 2 repetition -->
                     <articulation date="46080.0" name.ref="legato"/>
                     <articulation date="46320.0" name.ref="legato"/>
                     <articulation date="46560.0" name.ref="legatostop"/>
@@ -388,7 +350,6 @@
                     <articulation date="47760.0" name.ref="legato"/>
                     <articulation date="48000.0" name.ref="legato"/>
                     <articulation date="48240.0" name.ref="legatostop"/>
-                    <!-- phrase ending -->
                     <articulation date="48480.0" name.ref="caesura2"/>
                     <articulation date="48960.0" name.ref="legato"/>
                     <articulation date="49200.0" name.ref="legato"/>
@@ -405,7 +366,6 @@
                     <articulation date="53760.0" name.ref="legato"/>
                     <articulation date="54000.0" name.ref="legato"/>
                     <articulation date="54240.0" name.ref="legatostop"/>
-                    <!-- phrase ending -->
                     <articulation date="57120.0" name.ref="caesura2"/>
                     <articulation date="57600.0" name.ref="legato"/>
                     <articulation date="57840.0" name.ref="legato"/>
@@ -415,7 +375,6 @@
                     <articulation date="59520.0" name.ref="legato"/>
                     <articulation date="59760.0" name.ref="legato"/>
                     <articulation date="60000.0" name.ref="legatostop"/>
-                    <!-- phrase ending -->
                     <articulation date="60000.0" name.ref=" caesura1"/>
                     <articulation date="60480.0" name.ref="legato"/>
                     <articulation date="60720.0" name.ref="legato"/>
@@ -433,7 +392,26 @@
                     <articulation date="65760.0" name.ref="legatostop"/>
                     <articulation date="66480.0" name.ref="legato"/>
                     <articulation date="66720.0" name.ref="legato"/>
-                    <articulation date="66906.0" name.ref="legatostop"/>
+                    <articulation date="66906.0" name.ref="legatostop"/> 
+                    <!-- section 1 -->
+                    <!-- instead of legatostop we use ceasura3 here which gives the start a more "bouncy" feeling for the first round of the theme-->
+                    <!-- ending phrase -->
+                    <!-- ending phrase, but without modifying velocity -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- section 1 repetittion-->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- section 2 -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- section 2 repetition -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
+                    <!-- phrase ending -->
                 </articulationMap>
             </dated>
         </global>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../../MPM/MPM%20(develop%20branch)/src/out/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <metadata>
+        <author>Axel Berndt</author>
+        <comment>This MPM is part of a tutorial project for the MPM Toolbox. The audio recording and the corresponding annotated score were kindly authorized by pianist Maria Waloschek. The performance "Maria Waloschek score annotations" is constructed after the handwritten markings of the pianist in the score.</comment>
+        <relatedResources>
+            <resource uri="Reger - Moment Musical op 13 no 4.mei" type="mei"/>
+            <resource uri="Reger - Moment Musical op 13 no 4.msm" type="msm"/>
+            <resource uri="score/page-01.png" type="png"/>
+            <resource uri="score/page-02.png" type="png"/>
+            <resource uri="score/page-03.png" type="png"/>
+            <resource uri="score/page-04.png" type="png"/>
+            <resource uri="score/page-05.png" type="png"/>
+            <resource uri="score/page-06.png" type="png"/>
+            <resource uri="score/page-07.png" type="png"/>
+            <resource uri="Performance Score Maria Waloschek.png" type="png"/>
+            <resource uri="audio/Maria Waloschek - Moment Musical.wav" type="wav"/>
+        </relatedResources>
+    </metadata>
+    <performance name="MEI export performance" pulsesPerQuarter="720">
+        <global>
+            <header>
+                <tempoStyles>
+                    <styleDef name="MEI export">
+                        <tempoDef name="Andantino" value="80.0"/>
+                    </styleDef>
+                </tempoStyles>
+                <dynamicsStyles>
+                    <styleDef name="MEI export">
+                        <dynamicsDef name="dolciss." value="74.0"/>
+                        <dynamicsDef name="mf" value="83.0"/>
+                        <dynamicsDef name="pp" value="36.0"/>
+                    </styleDef>
+                </dynamicsStyles>
+                <articulationStyles>
+                    <styleDef name="MEI export">
+                        <articulationDef name="nonlegato" relativeDuration="0.95"/>
+                        <articulationDef name="legato" relativeDuration="1.0"/>
+                        <articulationDef name="legatoStop" relativeDuration="0.8" relativeVelocity="0.7"/>
+                    </styleDef>
+                </articulationStyles>
+                <ornamentationStyles>
+                    <styleDef name="MEI export">
+                        <ornamentDef name="arpeggio">
+                            <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
+                            <temporalSpread frame.start="-22.0" frameLength="44.0"/>
+                        </ornamentDef>
+                    </styleDef>
+                </ornamentationStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <style date="0.0" name.ref="MEI export"/>
+                    <tempo date="0.0" bpm="Andantino" beatLength="0.0625" xml:id="t1"/> 
+                </tempoMap>
+                <dynamicsMap>
+                    <style date="0.0" name.ref="MEI export"/>
+                    <dynamics date="0.0" volume="dolciss." xml:id="d1"/>
+                    <dynamics date="360.0" volume="dolciss." transition.to="+" curvature="0.0" protraction="0.0" xml:id="d2"/>
+                    <dynamics date="900.0" volume="+"/>
+                    <dynamics date="1440.0" volume="+" transition.to="-" curvature="0.0" protraction="0.0" xml:id="d3"/>
+                    <dynamics date="2160.0" volume="-" transition.to="+" curvature="0.0" protraction="0.0" xml:id="d4"/>
+                    <dynamics date="2700.0" volume="+"/>
+                    <dynamics date="3600.0" volume="+" transition.to="mf" curvature="0.0" protraction="0.0" xml:id="d5"/>
+                    <dynamics date="4320.0" volume="mf" xml:id="d6"/>
+                    <dynamics date="4320.0" volume="mf" transition.to="+" curvature="0.0" protraction="0.0" xml:id="d7"/>
+                    <dynamics date="4860.0" volume="+" transition.to="pp" curvature="0.0" protraction="0.0" xml:id="d8"/>
+                    <dynamics date="5940.0" volume="pp" xml:id="d9"/> 
+                </dynamicsMap>
+            </dated>
+        </global>
+        <part name="piano right hand" number="1" midi.channel="0" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="MEI export" defaultArticulation="nonlegato"/>
+                    <articulation date="0.0" name.ref="legato" noteid="#n1"/>
+                    <articulation date="180.0" name.ref="legato" noteid="#n2"/>
+                    <articulation date="360.0" name.ref="legato" noteid="#n3"/>
+                    <articulation date="540.0" name.ref="legatoStop" noteid="#n11"/>
+                    <articulation date="900.0" name.ref="legato" noteid="#n12"/>
+                    <articulation date="1080.0" name.ref="legato" noteid="#n13"/>
+                    <articulation date="1080.0" name.ref="legato" noteid="#n14"/>
+                    <articulation date="1260.0" name.ref="legato" noteid="#n15"/>
+                    <articulation date="1260.0" name.ref="legato" noteid="#n16"/>
+                    <articulation date="1440.0" name.ref="legato" noteid="#n17"/>
+                    <articulation date="1440.0" name.ref="legato" noteid="#n18"/>
+                    <articulation date="1620.0" name.ref="legatoStop" noteid="#n25"/>
+                    <articulation date="1620.0" name.ref="legatoStop" noteid="#n26"/>
+                    <articulation date="2160.0" name.ref="legato" noteid="#n27"/>
+                    <articulation date="2160.0" name.ref="legato" noteid="#n28"/>
+                    <articulation date="2340.0" name.ref="legato" noteid="#n29"/>
+                    <articulation date="2340.0" name.ref="legato" noteid="#n30"/>
+                    <articulation date="2520.0" name.ref="legato" noteid="#n31"/>
+                    <articulation date="2520.0" name.ref="legato" noteid="#n32"/>
+                    <articulation date="2700.0" name.ref="legatoStop" noteid="#n43"/>
+                    <articulation date="2700.0" name.ref="legatoStop" noteid="#n44"/>
+                    <articulation date="3240.0" name.ref="legato" noteid="#n45"/>
+                    <articulation date="3240.0" name.ref="legato" noteid="#n46"/>
+                    <articulation date="3420.0" name.ref="legato" noteid="#n47"/>
+                    <articulation date="3420.0" name.ref="legato" noteid="#n48"/>
+                    <articulation date="3600.0" name.ref="legato" noteid="#n49"/>
+                    <articulation date="3600.0" name.ref="legato" noteid="#n50"/>
+                    <articulation date="3780.0" name.ref="legatoStop" noteid="#n65"/>
+                    <articulation date="3780.0" name.ref="legatoStop" noteid="#n66"/>
+                    <articulation date="4320.0" name.ref="legato" noteid="#n67"/>
+                    <articulation date="4320.0" name.ref="legato" noteid="#n68"/>
+                    <articulation date="4500.0" name.ref="legato" noteid="#n69"/>
+                    <articulation date="4500.0" name.ref="legato" noteid="#n70"/>
+                    <articulation date="4680.0" name.ref="legato" noteid="#n71"/>
+                    <articulation date="4680.0" name.ref="legato" noteid="#n72"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n85"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n86"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n87"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n88"/>
+                    <articulation date="5400.0" name.ref="legato" noteid="#n89"/>
+                    <articulation date="5400.0" name.ref="legato" noteid="#n90"/>
+                    <articulation date="5580.0" name.ref="legato" noteid="#n91"/>
+                    <articulation date="5580.0" name.ref="legato" noteid="#n92"/>
+                    <articulation date="5760.0" name.ref="legato" noteid="#n93"/>
+                    <articulation date="5760.0" name.ref="legato" noteid="#n94"/>
+                    <articulation date="5940.0" name.ref="legatoStop" noteid="#n102"/>
+                    <articulation date="5940.0" name.ref="legatoStop" noteid="#n103"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="piano left hand" number="2" midi.channel="1" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="MEI export" defaultArticulation="nonlegato"/>
+                    <articulation date="0.0" name.ref="legato" noteid="#n9"/>
+                    <articulation date="0.0" name.ref="legato" noteid="#n10"/>
+                    <articulation date="540.0" name.ref="legatoStop" noteid="#n23"/>
+                    <articulation date="1080.0" name.ref="legato" noteid="#n24"/>
+                    <articulation date="1620.0" name.ref="legato" noteid="#n35"/>
+                    <articulation date="1620.0" name.ref="legatoStop" noteid="#n36"/>
+                    <articulation date="2160.0" name.ref="legato" noteid="#n37"/>
+                    <articulation date="2160.0" name.ref="legato" noteid="#n38"/>
+                    <articulation date="2340.0" name.ref="legato" noteid="#n39"/>
+                    <articulation date="2340.0" name.ref="legato" noteid="#n40"/>
+                    <articulation date="2520.0" name.ref="legato" noteid="#n41"/>
+                    <articulation date="2520.0" name.ref="legato" noteid="#n42"/>
+                    <articulation date="2700.0" name.ref="legato" noteid="#n54"/>
+                    <articulation date="2700.0" name.ref="legato" noteid="#n57"/>
+                    <articulation date="2700.0" name.ref="legato" noteid="#n58"/>
+                    <articulation date="3060.0" name.ref="legatoStop" noteid="#n55"/>
+                    <articulation date="3420.0" name.ref="legato" noteid="#n61"/>
+                    <articulation date="3420.0" name.ref="legato" noteid="#n62"/>
+                    <articulation date="3600.0" name.ref="legato" noteid="#n63"/>
+                    <articulation date="3600.0" name.ref="legato" noteid="#n64"/>
+                    <articulation date="3780.0" name.ref="legatoStop" noteid="#n79"/>
+                    <articulation date="4320.0" name.ref="legato" noteid="#n80"/>
+                    <articulation date="4320.0" name.ref="legato" noteid="#n82"/>
+                    <articulation date="4500.0" name.ref="legato" noteid="#n83"/>
+                    <articulation date="4680.0" name.ref="legato" noteid="#n81"/>
+                    <articulation date="4680.0" name.ref="legato" noteid="#n84"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n96"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n97"/>
+                    <articulation date="4860.0" name.ref="legatoStop" noteid="#n98"/>
+                    <articulation date="5400.0" name.ref="legato" noteid="#n101"/>
+                    <articulation date="5940.0" name.ref="legatoStop" noteid="#n104"/>
+                    <articulation date="5940.0" name.ref="legatoStop" noteid="#n105"/>
+                    <articulation date="5940.0" name.ref="legatoStop" noteid="#n106"/> 
+                </articulationMap>
+                <ornamentationMap>
+                    <style date="0.0" name.ref="MEI export"/>
+                    <ornament date="4860.0" name.ref="arpeggio" scale="0.0" note.order="#n96 #n97 #n98"/> 
+                </ornamentationMap>
+            </dated>
+        </part>
+    </performance>
+    <performance name="Maria Waloschek score annotations" pulsesPerQuarter="720">
+        <global>
+            <header>
+                <tempoStyles>
+                    <styleDef name="Maria Waloschek">
+                        <tempoDef name="Andantino" value="58.0"/>
+                    </styleDef>
+                </tempoStyles>
+                <dynamicsStyles>
+                    <styleDef name="Maria Waloschek">
+                        <dynamicsDef name="pppp" value="5.0"/>
+                        <dynamicsDef name="ppp" value="12.0"/>
+                        <dynamicsDef name="pp" value="36.0"/>
+                        <dynamicsDef name="p" value="48.0"/>
+                        <dynamicsDef name="mp" value="64.0"/>
+                        <dynamicsDef name="mf" value="83.0"/>
+                        <dynamicsDef name="f" value="97.0"/>
+                        <dynamicsDef name="ff" value="111.0"/>
+                        <dynamicsDef name="fff" value="120.0"/>
+                        <dynamicsDef name="ffff" value="125.0"/>
+                        <dynamicsDef name="sforzato" value="127.0"/>
+                        <dynamicsDef name="dolcissimo" value="40.0"/>
+                    </styleDef>
+                </dynamicsStyles>
+                <articulationStyles>
+                    <styleDef name="Maria Waloschek">
+                        <articulationDef name="reserved" relativeVelocity="0.7"/>
+                        <articulationDef name="marked" relativeVelocity="1.2"/>
+                        <articulationDef name="cesura" absoluteDurationChangeMs="-100.0"/>
+                    </styleDef>
+                </articulationStyles>
+                <ornamentationStyles>
+                    <styleDef name="Maria Waloschek">
+                        <ornamentDef name="arpeggio">
+                            <dynamicsGradient transition.from="-1.0" transition.to="1.0"/>
+                            <temporalSpread frame.start="0.0" frameLength="300.0" time.unit="milliseconds"/>
+                        </ornamentDef>
+                    </styleDef>
+                </ornamentationStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <style date="0.0" name.ref="Maria Waloschek"/>
+                    <tempo date="0.0" bpm="Andantino" beatLength="0.1875" xml:id="mpmToolbox_6422117f-ead6-4de3-a6d5-a65ec4e90a45"/>
+                    <tempo date="180.0" bpm="Andantino" transition.to="63.0" beatLength="0.1875" xml:id="mpmToolbox_44836c64-f8cb-4c3d-ae15-87992768fa76"/>
+                    <tempo date="540.0" bpm="63.0" beatLength="0.1875" xml:id="mpmToolbox_e83ea442-776f-4a27-bc94-e06f23a13968"/>
+                    <tempo date="900.0" bpm="63.0" transition.to="Andantino" beatLength="0.1875" xml:id="mpmToolbox_b060041b-a09b-46d7-be44-ee87d805909c"/>
+                    <tempo date="1620.0" bpm="Andantino" beatLength="0.1875" xml:id="mpmToolbox_5eaeadbc-37d7-41c4-b4db-076b29935d42"/>
+                    <tempo date="2340.0" bpm="Andantino" transition.to="63.0" beatLength="0.1875" xml:id="mpmToolbox_356f88af-8097-4ab6-aa80-2dd0c0451132"/>
+                    <tempo date="2520.0" bpm="63.0" beatLength="0.1875" xml:id="mpmToolbox_4bb06702-61b1-4606-94c4-dd6f9fb5bb19"/>
+                    <tempo date="4500.0" bpm="Andantino" transition.to="63.0" beatLength="0.1875" xml:id="mpmToolbox_2818110b-e1c0-4ca6-ac76-10c9a877b3d5"/>
+                    <tempo date="4860.0" bpm="63.0" beatLength="0.1875" xml:id="mpmToolbox_93515166-733d-4a08-8df2-19afb24ae758"/>
+                    <tempo date="5580.0" bpm="63.0" transition.to="30.0" beatLength="0.1875" xml:id="mpmToolbox_359ad7c2-aa8b-4773-bd5c-a9e441a96214"/>
+                    <tempo date="5940.0" bpm="30.0" beatLength="0.1875" xml:id="mpmToolbox_94cf5b12-2c6b-41ad-82c4-8406b8d0370b"/> 
+                </tempoMap>
+                <dynamicsMap>
+                    <style date="0.0" name.ref="Maria Waloschek"/>
+                    <dynamics date="0.0" volume="dolcissimo" transition.to="mp" xml:id="mpmToolbox_6e0469ee-e70d-40a1-ad60-da51c1807f30"/>
+                    <dynamics date="540.0" volume="mp" xml:id="mpmToolbox_7d587f36-fb48-4c87-bcbe-19dc5b3dc627"/>
+                    <dynamics date="1440.0" volume="mp" transition.to="dolcissimo" xml:id="mpmToolbox_24bbc70b-005f-4f1c-9890-0858cd8cf878"/>
+                    <dynamics date="1620.0" volume="dolcissimo" xml:id="mpmToolbox_17de4f89-734b-40e2-8f61-9c1236d2d7af"/>
+                    <dynamics date="2160.0" volume="dolcissimo" transition.to="mp" xml:id="mpmToolbox_659ad39e-f26d-4244-8aaf-0b8610a67b96"/>
+                    <dynamics date="2520.0" volume="mp" xml:id="mpmToolbox_fd46cd10-93a9-4b34-93fc-f17e4fc1b629"/>
+                    <dynamics date="3600.0" volume="mp" transition.to="dolcissimo" xml:id="mpmToolbox_6ed87565-0054-47c8-bf4a-6395df4d1b86"/>
+                    <dynamics date="3780.0" volume="dolcissimo" transition.to="mf" protraction="-0.5" xml:id="mpmToolbox_489ec839-2c04-413c-9f5a-09224e0ffcb4"/>
+                    <dynamics date="4320.0" volume="mf" transition.to="f" xml:id="mpmToolbox_409b70f3-a60e-4013-b739-3bbac253fd73"/>
+                    <dynamics date="4680.0" volume="f" xml:id="mpmToolbox_65e8f7df-22ed-4884-8121-cbd2a233f285"/>
+                    <dynamics date="4860.0" volume="f" transition.to="pp" xml:id="mpmToolbox_3c223812-c9d9-4cd0-a683-d20bd8f4656f"/>
+                    <dynamics date="5940.0" volume="pp" xml:id="mpmToolbox_2d350ec3-1498-4d81-967c-0ea318e14d77"/> 
+                </dynamicsMap>
+                <articulationMap>
+                    <style date="0.0" name.ref="Maria Waloschek"/>
+                    <articulation date="0.0" xml:id="mpmToolbox_db4ffd19-9a5d-4ad1-8ceb-34f99c7d67c2" name.ref="marked" noteid="#n10"/>
+                    <articulation date="540.0" xml:id="mpmToolbox_38591bf0-0716-4e67-8207-1a9cd7358a3f" name.ref="marked" noteid="#n23"/>
+                    <articulation date="1080.0" xml:id="mpmToolbox_6d5b8bef-b117-4471-a94b-f1ca68fcaf28" name.ref="reserved" noteid="#n14"/>
+                    <articulation date="1080.0" xml:id="mpmToolbox_5007a7c5-3759-40ad-9e16-9e30718f761d" name.ref="marked" noteid="#n22"/>
+                    <articulation date="1260.0" xml:id="mpmToolbox_cceae45d-12d9-4446-9a62-9690685d1102" name.ref="reserved" noteid="#n16"/>
+                    <articulation date="1440.0" xml:id="mpmToolbox_6cba0310-ca9b-49b3-9b0f-41c028e89082" name.ref="reserved" noteid="#n18"/>
+                    <articulation date="1620.0" xml:id="mpmToolbox_40884886-4726-4605-a9d0-561e8106fc50" name.ref="reserved" noteid="#n26"/>
+                    <articulation date="1620.0" xml:id="mpmToolbox_599cd450-1f02-494c-b00d-584d9b479ef1" name.ref="marked" noteid="#n36"/>
+                    <articulation date="1620.0" xml:id="mpmToolbox_7c955297-4404-4848-9f58-f7279cbe6679" name.ref="cesura"/>
+                    <articulation date="4320.0" xml:id="mpmToolbox_05015005-97d7-45b1-9805-4fab994dd921" name.ref="marked" noteid="#n80"/>
+                    <articulation date="4680.0" xml:id="mpmToolbox_7ca8c3d3-0b05-41bd-872c-3de1b8d2dbf5" name.ref="marked" noteid="#n81"/>
+                    <articulation date="4860.0" xml:id="mpmToolbox_7077cbd5-2dc7-45ea-9203-0311a90eb9ee" name.ref="marked" noteid="#n98"/>
+                    <articulation date="5400.0" xml:id="mpmToolbox_94fb8825-c6cf-49d4-b819-2143ee605857" name.ref="marked" noteid="#n101"/>
+                    <articulation date="5940.0" xml:id="mpmToolbox_0618d5f2-7c2c-47d2-8d71-ad74c07b7ce6" name.ref="marked" noteid="#n106"/> 
+                </articulationMap>
+            </dated>
+        </global>
+        <part name="piano left hand" number="2" midi.channel="1" midi.port="0">
+            <header/>
+            <dated>
+                <ornamentationMap>
+                    <style date="0.0" name.ref="Maria Waloschek"/>
+                    <ornament date="4860.0" name.ref="arpeggio" scale="0.0" note.order="#n98 #n97 #n96" xml:id="mpmToolbox_25e138a8-a537-4505-90ea-b43a2bbf33f6"/> 
+                </ornamentationMap>
+            </dated>
+        </part>
+    </performance>
+</mpm>

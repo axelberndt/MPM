@@ -1,27 +1,17 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
     <metadata>
         <author>Axel Berndt</author>
-        <comment>
-            Three performances of Georg Philipp Telemann's Grave from the Concert for Trumpet, Strings and Basso Continuo (TWV 51-D7). This movement is without trumpet.
-            
-            1. Baroque: This performance has constant macro dynamics (mp) and distinct micro dynamics (metrical accentuation, articulation), slow tempo and slight inégalité (via rubato and articulation).
-            
-            2. Fast: Not quite a typical performance for a Grave, this features a relatively fast tempo with distinct ritardandi on phrase endings coupled with similarly shaped macro dynamics. Articulation is generally short to support the more rhythmical idea of the performance. Micro timing (rubato) is snappy in so far as every two quarter notes are played in a short-long manner (do not let your ears fool you by the quasi-inverse articulation, long-short or legato-nonlegato).
-            
-            3. Romantic: This performance features distinct macro dynamics and timing. Quite prominent is also the swing-like micro timing (rubato), more pronounced in the violins, less in the bass. It is based on a performance by Ludwig Güttler and the "Neues Bachisches Collegium Musicum".
-        </comment>
-        <relatedResources>
-            <resource uri="Telemann - Grave.mid" type="midi"/>
+        <comment>Three performances of Georg Philipp Telemann's Grave from the Concert for Trumpet, Strings and Basso Continuo (TWV 51-D7). This movement is without trumpet. 1. Baroque: This performance has constant macro dynamics (mp) and distinct micro dynamics (metrical accentuation, articulation), slow tempo and slight inégalité (via rubato and articulation). 2. Fast: Not quite a typical performance for a Grave, this features a relatively fast tempo with distinct ritardandi on phrase endings coupled with similarly shaped macro dynamics. Articulation is generally short to support the more rhythmical idea of the performance. Micro timing (rubato) is snappy in so far as every two quarter notes are played in a short-long manner (do not let your ears fool you by the quasi-inverse articulation, long-short or legato-nonlegato). 3. Romantic: This performance features distinct macro dynamics and timing. Quite prominent is also the swing-like micro timing (rubato), more pronounced in the violins, less in the bass. It is based on a performance by Ludwig Güttler and the "Neues Bachisches Collegium Musicum". </comment>
+        <relatedResources> 
+            <resource uri="Telemann - Grave.mid" type="mid"/>
             <resource uri="Telemann - Grave.msm" type="msm"/>
-            <resource uri="Telemann - Grave_Baroque.pdf" type="pdf"/>
-            <resource uri="Telemann - Grave_Romantic.pdf" type="pdf"/>
-            <resource uri="Telemann - Grave_Fast.pdf" type="pdf"/>
+            <resource uri="Telemann - Grave.png" type="png"/>
+            <resource uri="Telemann - Grave_Baroque.mp3" type="mp3"/>
+            <resource uri="Telemann - Grave_Fast.mp3" type="mp3"/>
+            <resource uri="Telemann - Grave_Romantic.mp3" type="mp3"/>
         </relatedResources>
     </metadata>
-
     <performance name="Baroque" pulsesPerQuarter="720">
         <global>
             <header>
@@ -30,24 +20,21 @@
                         <dynamicsDef name="mp" value="64.0"/>
                     </styleDef>
                 </dynamicsStyles>
-                
                 <metricalAccentuationStyles>
                     <styleDef name="accentuation definitions">
                         <accentuationPatternDef name="tripleTime" length="3.0">
                             <accentuation beat="1.0" value="0.5" transition.from="0.0"/>
                             <accentuation beat="2.0" value="0.0" transition.from="-1.0"/>
-                            <accentuation beat="3.0" value="0.25" transition.from="-0.5"/>
+                            <accentuation beat="3.0" value="0.25" transition.from="-0.5"/> 
                         </accentuationPatternDef>
-                        
                         <accentuationPatternDef name="hemiola" length="6.0">
                             <accentuation beat="1.0" value="0.5" transition.from="0.0"/>
                             <accentuation beat="3.0" value="0.0" transition.from="-1.0"/>
-                            <accentuation beat="5.0" value="0.25" transition.from="-0.5"/>
+                            <accentuation beat="5.0" value="0.25" transition.from="-0.5"/> 
                         </accentuationPatternDef>
                     </styleDef>
                 </metricalAccentuationStyles>
             </header>
-            
             <dated>
                 <tempoMap>
                     <tempo date="0.0" bpm="58.0" beatLength="0.5"/>
@@ -56,15 +43,13 @@
                     <tempo date="112320.0" bpm="58.0" beatLength="0.5" transition.to="47.0" meanTempoAt="0.1"/>
                     <tempo date="120960.0" bpm="58.0" beatLength="0.5"/>
                     <tempo date="133920.0" bpm="58.0" beatLength="0.5" transition.to="25.0" meanTempoAt="0.7"/>
-                    <tempo date="142560.0" bpm="40.0" beatLength="0.5"/>
+                    <tempo date="142560.0" bpm="40.0" beatLength="0.5"/> 
                 </tempoMap>
-
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mp"/>
-                    <dynamics date="142560.0" volume="40.0"/>
+                    <dynamics date="142560.0" volume="40.0"/> 
                 </dynamicsMap>
-
                 <metricalAccentuationMap>
                     <style date="0.0" name.ref="accentuation definitions"/>
                     <accentuationPattern date="0.0" name.ref="tripleTime" scale="15.0" loop="true" stickToMeasures="true"/>
@@ -77,23 +62,19 @@
                     <accentuationPattern date="112320.0" name.ref="hemiola" scale="15.0" loop="true" stickToMeasures="false"/>
                     <accentuationPattern date="120960.0" name.ref="tripleTime" scale="15.0" loop="true" stickToMeasures="true"/>
                     <accentuationPattern date="133920.0" name.ref="hemiola" scale="15.0" loop="true" stickToMeasures="false"/>
-                    <accentuationPattern date="142560.0" name.ref="tripleTime" scale="15.0" loop="true" stickToMeasures="true"/>
+                    <accentuationPattern date="142560.0" name.ref="tripleTime" scale="15.0" loop="true" stickToMeasures="true"/> 
                 </metricalAccentuationMap>
-                
                 <imprecisionMap.timing>
-                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0" />
+                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
-                
                 <imprecisionMap.toneduration>
-                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0" />
+                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0"/> 
                 </imprecisionMap.toneduration>
-                
                 <imprecisionMap.dynamics>
-                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0" />
+                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/> 
                 </imprecisionMap.dynamics>
             </dated>
         </global>
-
         <part name="Violino Primo" number="0" midi.channel="0" midi.port="0">
             <header>
                 <articulationStyles>
@@ -105,7 +86,6 @@
                     </styleDef>
                 </articulationStyles>
             </header>
-            
             <dated>
                 <rubatoMap>
                     <rubato date="0.0" frameLength="4320.0" intensity="0.93" loop="true"/>
@@ -119,9 +99,8 @@
                     <rubato date="99360.0" frameLength="4320.0" intensity="0.93" loop="true"/>
                     <rubato date="120960.0" frameLength="4320.0" intensity="1.05" loop="true"/>
                     <rubato date="133920.0" frameLength="4320.0" intensity="0.93" loop="true"/>
-                    <rubato date="138240.0" frameLength="4320.0" intensity="1.2" loop="true"/>
+                    <rubato date="138240.0" frameLength="4320.0" intensity="1.2" loop="true"/> 
                 </rubatoMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="Violin 1 articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="10080.0" name.ref="accentuated legato"/>
@@ -131,33 +110,26 @@
                     <articulation date="53280.0" name.ref="accentuated legato"/>
                     <articulation date="54720.0" name.ref="accentuated legato"/>
                     <articulation date="61920.0" name.ref="accentuated legato"/>
-                    <!-- legato on the tone repetition -->
                     <articulation date="64800.0" name.ref="legato"/>
                     <articulation date="66240.0" name.ref="accentuated legato"/>
-                    <!-- legato on the tone repetition -->
                     <articulation date="69120.0" name.ref="legato"/>
                     <articulation date="70560.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 19 -->
                     <articulation date="79200.0" name.ref="accentuated legato"/>
                     <articulation date="87840.0" name.ref="accentuated legato"/>
                     <articulation date="89280.0" name.ref="accentuated legato"/>
                     <articulation date="96480.0" name.ref="accentuated legato"/>
                     <articulation date="97920.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 27 -->
                     <articulation date="113760.0" name.ref="accentuated legato"/>
                     <articulation date="114480.0" name.ref="legato"/>
                     <articulation date="118080.0" name.ref="accentuated legato"/>
                     <articulation date="122400.0" name.ref="accentuated legato"/>
                     <articulation date="126720.0" name.ref="accentuated legato"/>
                     <articulation date="131040.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 33 -->
                     <articulation date="139680.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
-
         <part name="Violino Secondo" number="1" midi.channel="1" midi.port="0">
             <header>
                 <articulationStyles>
@@ -178,9 +150,8 @@
                     <rubato date="60480.0" frameLength="4320.0" intensity="0.93" loop="true"/>
                     <rubato date="99360.0" frameLength="4320.0" intensity="1.05" loop="true"/>
                     <rubato date="112320.0" frameLength="4320.0" intensity="0.93" loop="true"/>
-                    <rubato date="138240.0" frameLength="4320.0" intensity="1.25" loop="true"/>
+                    <rubato date="138240.0" frameLength="4320.0" intensity="1.25" loop="true"/> 
                 </rubatoMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="Violin 2 articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="23040.0" name.ref="accentuated legato"/>
@@ -189,25 +160,20 @@
                     <articulation date="50400.0" name.ref="accentuated legato"/>
                     <articulation date="57600.0" name.ref="accentuated legato"/>
                     <articulation date="59040.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 15 -->
                     <articulation date="74880.0" name.ref="accentuated legato"/>
                     <articulation date="75600.0" name.ref="legato"/>
                     <articulation date="79200.0" name.ref="accentuated legato"/>
                     <articulation date="100800.0" name.ref="accentuated legato"/>
                     <articulation date="105120.0" name.ref="accentuated legato"/>
                     <articulation date="109440.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 28 -->
                     <articulation date="118080.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 32 -->
                     <articulation date="135360.0" name.ref="accentuated legato"/>
                     <articulation date="136080.0" name.ref="legato"/>
                     <articulation date="139680.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
-
         <part name="Basso" number="2" midi.channel="2" midi.port="0">
             <header>
                 <articulationStyles>
@@ -218,7 +184,6 @@
                     </styleDef>
                 </articulationStyles>
             </header>
-            
             <dated>
                 <rubatoMap>
                     <rubato date="0.0" frameLength="4320.0" intensity="0.97" loop="true"/>
@@ -230,13 +195,11 @@
                     <rubato date="112320.0" frameLength="4320.0" intensity="0.97" loop="true"/>
                     <rubato date="120960.0" frameLength="4320.0" intensity="1.03" loop="true"/>
                     <rubato date="133920.0" frameLength="4320.0" intensity="0.97" loop="true"/>
-                    <rubato date="138240.0" frameLength="4320.0" intensity="1.1" loop="true"/>
+                    <rubato date="138240.0" frameLength="4320.0" intensity="1.1" loop="true"/> 
                 </rubatoMap>
-                
                 <asynchronyMap>
-                    <asynchrony date="0.0" milliseconds.offset="7.0"/>
+                    <asynchrony date="0.0" milliseconds.offset="7.0"/> 
                 </asynchronyMap>
-                
                 <articulationMap>
                     <style date="0.0" name.ref="Basso articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="44640.0" name.ref="accentuated legato"/>
@@ -254,13 +217,11 @@
                     <articulation date="122400.0" name.ref="accentuated legato"/>
                     <articulation date="126720.0" name.ref="accentuated legato"/>
                     <articulation date="131040.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
     </performance>
-
     <performance name="Fast" pulsesPerQuarter="720">
         <global>
             <header>
@@ -272,7 +233,6 @@
                         <dynamicsDef name="mf" value="83.0"/>
                     </styleDef>
                 </dynamicsStyles>
-                
                 <articulationStyles>
                     <styleDef name="articulation definitions">
                         <articulationDef name="nonlegato" absoluteDurationChange="-360.0"/>
@@ -281,24 +241,21 @@
                         <articulationDef name="cesura" absoluteDurationChangeMs="-200.0"/>
                     </styleDef>
                 </articulationStyles>
-                
                 <metricalAccentuationStyles>
                     <styleDef name="accentuation definitions">
                         <accentuationPatternDef name="tripleTime" length="3.0">
                             <accentuation beat="1.0" value="1.0" transition.from="-1.0"/>
                             <accentuation beat="2.0" value="0.0" transition.from="-0.5"/>
-                            <accentuation beat="3.0" value="0.0" transition.from="-0.5"/>
+                            <accentuation beat="3.0" value="0.0" transition.from="-0.5"/> 
                         </accentuationPatternDef>
-                        
                         <accentuationPatternDef name="hemiola" length="6.0">
                             <accentuation beat="1.0" value="1.0" transition.from="-1.0"/>
                             <accentuation beat="3.0" value="0.0" transition.from="-0.5"/>
-                            <accentuation beat="5.0" value="0.0" transition.from="-0.5"/>
+                            <accentuation beat="5.0" value="0.0" transition.from="-0.5"/> 
                         </accentuationPatternDef>
                     </styleDef>
                 </metricalAccentuationStyles>
             </header>
-            
             <dated>
                 <tempoMap>
                     <tempo date="0.0" bpm="123.0" beatLength="0.5"/>
@@ -307,9 +264,8 @@
                     <tempo date="112320.0" bpm="123.0" beatLength="0.5" transition.to="90.0" meanTempoAt="0.1"/>
                     <tempo date="120960.0" bpm="123.0" beatLength="0.5"/>
                     <tempo date="133920.0" bpm="123.0" beatLength="0.5" transition.to="50.0" meanTempoAt="0.8"/>
-                    <tempo date="142560.0" bpm="70.0" beatLength="0.5"/>
+                    <tempo date="142560.0" bpm="70.0" beatLength="0.5"/> 
                 </tempoMap>
-
                 <metricalAccentuationMap>
                     <style date="0.0" name.ref="accentuation definitions"/>
                     <accentuationPattern date="0.0" name.ref="tripleTime" scale="10.0" loop="true" stickToMeasures="true"/>
@@ -322,30 +278,25 @@
                     <accentuationPattern date="112320.0" name.ref="hemiola" scale="10.0" loop="true" stickToMeasures="false"/>
                     <accentuationPattern date="120960.0" name.ref="tripleTime" scale="10.0" loop="true" stickToMeasures="true"/>
                     <accentuationPattern date="133920.0" name.ref="hemiola" scale="10.0" loop="true" stickToMeasures="false"/>
-                    <accentuationPattern date="142560.0" name.ref="tripleTime" scale="10.0" loop="true" stickToMeasures="true"/>
+                    <accentuationPattern date="142560.0" name.ref="tripleTime" scale="10.0" loop="true" stickToMeasures="true"/> 
                 </metricalAccentuationMap>
-                
                 <imprecisionMap.timing>
-                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0" />
+                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
-                
                 <imprecisionMap.toneduration>
-                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0" />
+                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0"/> 
                 </imprecisionMap.toneduration>
-                
                 <imprecisionMap.dynamics>
-                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0" />
+                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/> 
                 </imprecisionMap.dynamics>
             </dated>
         </global>
-
         <part name="Violino Primo" number="0" midi.channel="0" midi.port="0">
             <header/>
             <dated>
                 <rubatoMap>
-                    <rubato date="0.0" frameLength="1440.0" intensity="1.1" loop="true"/>
+                    <rubato date="0.0" frameLength="1440.0" intensity="1.1" loop="true"/> 
                 </rubatoMap>
-                
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mf"/>
@@ -358,9 +309,8 @@
                     <dynamics date="82080.0" volume="p"/>
                     <dynamics date="113760.0" volume="mp" transition.to="p" curvature="0.3"/>
                     <dynamics date="122400.0" volume="mf" transition.to="pp" curvature="0.3"/>
-                    <dynamics date="142560.0" volume="pp"/>
+                    <dynamics date="142560.0" volume="pp"/> 
                 </dynamicsMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="10080.0" name.ref="accentuated legato"/>
@@ -370,40 +320,32 @@
                     <articulation date="53280.0" name.ref="accentuated legato"/>
                     <articulation date="54720.0" name.ref="accentuated legato"/>
                     <articulation date="61920.0" name.ref="accentuated legato"/>
-                    <!-- legato on the tone repetition -->
                     <articulation date="64800.0" name.ref="legato"/>
                     <articulation date="66240.0" name.ref="accentuated legato"/>
-                    <!-- legato on the tone repetition -->
                     <articulation date="69120.0" name.ref="legato"/>
                     <articulation date="70560.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 19 -->
                     <articulation date="79200.0" name.ref="accentuated legato"/>
                     <articulation date="87840.0" name.ref="accentuated legato"/>
                     <articulation date="89280.0" name.ref="accentuated legato"/>
                     <articulation date="96480.0" name.ref="accentuated legato"/>
                     <articulation date="97920.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 27 -->
                     <articulation date="113760.0" name.ref="accentuated legato"/>
                     <articulation date="114480.0" name.ref="legato"/>
                     <articulation date="118080.0" name.ref="accentuated legato"/>
                     <articulation date="122400.0" name.ref="accentuated legato"/>
                     <articulation date="126720.0" name.ref="accentuated legato"/>
                     <articulation date="131040.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 33 -->
                     <articulation date="139680.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
-
         <part name="Violino Secondo" number="1" midi.channel="1" midi.port="0">
             <header/>
             <dated>
                 <rubatoMap>
-                    <rubato date="0.0" frameLength="1440.0" intensity="1.15" loop="true"/>
+                    <rubato date="0.0" frameLength="1440.0" intensity="1.15" loop="true"/> 
                 </rubatoMap>
-                
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mf"/>
@@ -419,9 +361,8 @@
                     <dynamics date="100800.0" volume="mf" transition.to="pp" curvature="0.3"/>
                     <dynamics date="120960.0" volume="p"/>
                     <dynamics date="135360.0" volume="mp" transition.to="pp" curvature="0.3"/>
-                    <dynamics date="142560.0" volume="pp"/>
+                    <dynamics date="142560.0" volume="pp"/> 
                 </dynamicsMap>
-                
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="23040.0" name.ref="accentuated legato"/>
@@ -430,25 +371,20 @@
                     <articulation date="50400.0" name.ref="accentuated legato"/>
                     <articulation date="57600.0" name.ref="accentuated legato"/>
                     <articulation date="59040.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 15 -->
                     <articulation date="74880.0" name.ref="accentuated legato"/>
                     <articulation date="75600.0" name.ref="legato"/>
                     <articulation date="79200.0" name.ref="accentuated legato"/>
                     <articulation date="100800.0" name.ref="accentuated legato"/>
                     <articulation date="105120.0" name.ref="accentuated legato"/>
                     <articulation date="109440.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 28 -->
                     <articulation date="118080.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 32 -->
                     <articulation date="135360.0" name.ref="accentuated legato"/>
                     <articulation date="136080.0" name.ref="legato"/>
                     <articulation date="139680.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
-
         <part name="Basso" number="2" midi.channel="2" midi.port="0">
             <header>
                 <articulationStyles>
@@ -459,16 +395,13 @@
                     </styleDef>
                 </articulationStyles>
             </header>
-            
             <dated>
                 <rubatoMap>
-                    <rubato date="0.0" frameLength="1440.0" intensity="1.05" loop="true"/>
+                    <rubato date="0.0" frameLength="1440.0" intensity="1.05" loop="true"/> 
                 </rubatoMap>
-                
                 <asynchronyMap>
-                    <asynchrony date="0.0" milliseconds.offset="5.0"/>
+                    <asynchrony date="0.0" milliseconds.offset="5.0"/> 
                 </asynchronyMap>
-                
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mp"/>
@@ -478,9 +411,8 @@
                     <dynamics date="83520.0" volume="p"/>
                     <dynamics date="100800.0" volume="mf" transition.to="pp" curvature="0.3"/>
                     <dynamics date="122400.0" volume="mf" transition.to="pp" curvature="0.3"/>
-                    <dynamics date="142560.0" volume="pp"/>
+                    <dynamics date="142560.0" volume="pp"/> 
                 </dynamicsMap>
-
                 <articulationMap>
                     <style date="0.0" name.ref="Basso articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="44640.0" name.ref="accentuated legato"/>
@@ -498,13 +430,11 @@
                     <articulation date="122400.0" name.ref="accentuated legato"/>
                     <articulation date="126720.0" name.ref="accentuated legato"/>
                     <articulation date="131040.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
     </performance>
-
     <performance name="Romantic" pulsesPerQuarter="720">
         <global>
             <header>
@@ -517,7 +447,6 @@
                         <dynamicsDef name="f" value="97.0"/>
                     </styleDef>
                 </dynamicsStyles>
-
                 <articulationStyles>
                     <styleDef name="articulation definitions">
                         <articulationDef name="nonlegato" relativeDuration="1.0"/>
@@ -526,20 +455,17 @@
                         <articulationDef name="cesura" absoluteDurationChangeMs="-200.0"/>
                     </styleDef>
                 </articulationStyles>
-
                 <metricalAccentuationStyles>
                     <styleDef name="accentuation definitions">
                         <accentuationPatternDef name="singleTime" length="1.0">
-                            <accentuation beat="1.0" value="1.0" transition.from="-1.0" transition.to="1.0"/>
+                            <accentuation beat="1.0" value="1.0" transition.from="-1.0" transition.to="1.0"/> 
                         </accentuationPatternDef>
-                        
                         <accentuationPatternDef name="hemiola" length="6.0">
-                            <accentuation beat="1.0" value="1.0" transition.from="-1.0" transition.to="1.0"/>
+                            <accentuation beat="1.0" value="1.0" transition.from="-1.0" transition.to="1.0"/> 
                         </accentuationPatternDef>
                     </styleDef>
                 </metricalAccentuationStyles>
             </header>
-            
             <dated>
                 <tempoMap>
                     <tempo date="0.0" bpm="62.0" beatLength="0.5"/>
@@ -548,9 +474,8 @@
                     <tempo date="112320.0" bpm="62.0" beatLength="0.5" transition.to="50.0" meanTempoAt="0.1"/>
                     <tempo date="120960.0" bpm="62.0" beatLength="0.5"/>
                     <tempo date="133920.0" bpm="62.0" beatLength="0.5" transition.to="30.0" meanTempoAt="0.8"/>
-                    <tempo date="142560.0" bpm="45.0" beatLength="0.5"/>
+                    <tempo date="142560.0" bpm="45.0" beatLength="0.5"/> 
                 </tempoMap>
-
                 <metricalAccentuationMap>
                     <style date="0.0" name.ref="accentuation definitions"/>
                     <accentuationPattern date="0.0" name.ref="singleTime" scale="2.0" loop="true" stickToMeasures="true"/>
@@ -563,31 +488,26 @@
                     <accentuationPattern date="112320.0" name.ref="hemiola" scale="2.0" loop="true" stickToMeasures="false"/>
                     <accentuationPattern date="120960.0" name.ref="singleTime" scale="2.0" loop="true" stickToMeasures="true"/>
                     <accentuationPattern date="133920.0" name.ref="hemiola" scale="2.0" loop="true" stickToMeasures="false"/>
-                    <accentuationPattern date="142560.0" name.ref="singleTime" scale="2.0" loop="true" stickToMeasures="true"/>
+                    <accentuationPattern date="142560.0" name.ref="singleTime" scale="2.0" loop="true" stickToMeasures="true"/> 
                 </metricalAccentuationMap>
-                
                 <imprecisionMap.timing>
-                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0" />
+                    <distribution.correlated.compensatingTriangle date="0.0" degreeOfCorrelation="4.0" limit.lower="-80.0" limit.upper="80.0" clip.lower="-80.0" clip.upper="80.0" milliseconds.timingBasis="300.0"/> 
                 </imprecisionMap.timing>
-                
                 <imprecisionMap.toneduration>
-                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0" />
+                    <distribution.triangular date="0.0" limit.lower="-30.0" limit.upper="0.0" mode="0.0" clip.lower="-30.0" clip.upper="0.0"/> 
                 </imprecisionMap.toneduration>
-                
                 <imprecisionMap.dynamics>
-                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0" />
+                    <distribution.gaussian date="0.0" deviation.standard="7.5" limit.lower="-15.0" limit.upper="15.0"/> 
                 </imprecisionMap.dynamics>
             </dated>
         </global>
-        
         <part name="Violino Primo" number="0" midi.channel="0" midi.port="0">
             <header/>
             <dated>
                 <rubatoMap>
                     <rubato date="0.0" frameLength="1440.0" intensity="0.7" loop="true"/>
-                    <rubato date="138240.0" frameLength="4320.0" intensity="1.2" loop="true"/>
+                    <rubato date="138240.0" frameLength="4320.0" intensity="1.2" loop="true"/> 
                 </rubatoMap>
-                
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mf"/>
@@ -598,9 +518,8 @@
                     <dynamics date="61920.0" volume="f" transition.to="mp" curvature="0.3"/>
                     <dynamics date="82080.0" volume="mf" transition.to="p" curvature="0.3"/>
                     <dynamics date="122400.0" volume="mp" transition.to="pp" curvature="0.3"/>
-                    <dynamics date="142560.0" volume="pp"/>
+                    <dynamics date="142560.0" volume="pp"/> 
                 </dynamicsMap>
-                
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="10080.0" name.ref="accentuated legato"/>
@@ -610,45 +529,36 @@
                     <articulation date="53280.0" name.ref="accentuated legato"/>
                     <articulation date="54720.0" name.ref="accentuated legato"/>
                     <articulation date="61920.0" name.ref="accentuated legato"/>
-                    <!-- legato on the tone repetition -->
                     <articulation date="64800.0" name.ref="legato"/>
                     <articulation date="66240.0" name.ref="accentuated legato"/>
-                    <!-- legato on the tone repetition -->
                     <articulation date="69120.0" name.ref="legato"/>
                     <articulation date="70560.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 19 -->
                     <articulation date="79200.0" name.ref="accentuated legato"/>
                     <articulation date="87840.0" name.ref="accentuated legato"/>
                     <articulation date="89280.0" name.ref="accentuated legato"/>
                     <articulation date="96480.0" name.ref="accentuated legato"/>
                     <articulation date="97920.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 27 -->
                     <articulation date="113760.0" name.ref="accentuated legato"/>
                     <articulation date="114480.0" name.ref="legato"/>
                     <articulation date="118080.0" name.ref="accentuated legato"/>
                     <articulation date="122400.0" name.ref="accentuated legato"/>
                     <articulation date="126720.0" name.ref="accentuated legato"/>
                     <articulation date="131040.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 33 -->
                     <articulation date="139680.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
-
         <part name="Violino Secondo" number="1" midi.channel="1" midi.port="0">
             <header/>
             <dated>
                 <rubatoMap>
                     <rubato date="0.0" frameLength="1440.0" intensity="0.6" loop="true"/>
-                    <rubato date="138240.0" frameLength="4320.0" intensity="1.25" loop="true"/>
+                    <rubato date="138240.0" frameLength="4320.0" intensity="1.25" loop="true"/> 
                 </rubatoMap>
-                
                 <asynchronyMap>
-                    <asynchrony date="0.0" milliseconds.offset="7.0"/>
+                    <asynchrony date="0.0" milliseconds.offset="7.0"/> 
                 </asynchronyMap>
-                
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mf"/>
@@ -658,9 +568,8 @@
                     <dynamics date="83520.0" volume="mp" transition.to="p" curvature="0.3"/>
                     <dynamics date="100800.0" volume="mf" transition.to="mp" curvature="0.3"/>
                     <dynamics date="120960.0" volume="p" transition.to="pp" curvature="0.3"/>
-                    <dynamics date="142560.0" volume="pp"/>
+                    <dynamics date="142560.0" volume="pp"/> 
                 </dynamicsMap>
-                
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="23040.0" name.ref="accentuated legato"/>
@@ -669,37 +578,30 @@
                     <articulation date="50400.0" name.ref="accentuated legato"/>
                     <articulation date="57600.0" name.ref="accentuated legato"/>
                     <articulation date="59040.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 15 -->
                     <articulation date="74880.0" name.ref="accentuated legato"/>
                     <articulation date="75600.0" name.ref="legato"/>
                     <articulation date="79200.0" name.ref="accentuated legato"/>
                     <articulation date="100800.0" name.ref="accentuated legato"/>
                     <articulation date="105120.0" name.ref="accentuated legato"/>
                     <articulation date="109440.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 28 -->
                     <articulation date="118080.0" name.ref="accentuated legato"/>
-                    <!-- cadenza on measure 32 -->
                     <articulation date="135360.0" name.ref="accentuated legato"/>
                     <articulation date="136080.0" name.ref="legato"/>
                     <articulation date="139680.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>
-
         <part name="Basso" number="2" midi.channel="2" midi.port="0">
             <header/>
             <dated>
                 <rubatoMap>
                     <rubato date="0.0" frameLength="1440.0" intensity="0.8" loop="true"/>
-                    <rubato date="138240.0" frameLength="4320.0" intensity="1.1" loop="true"/>
+                    <rubato date="138240.0" frameLength="4320.0" intensity="1.1" loop="true"/> 
                 </rubatoMap>
-                
                 <asynchronyMap>
-                    <asynchrony date="0.0" milliseconds.offset="12.0"/>
+                    <asynchrony date="0.0" milliseconds.offset="12.0"/> 
                 </asynchronyMap>
-                
                 <dynamicsMap>
                     <style date="0.0" name.ref="dynamics definitions"/>
                     <dynamics date="0.0" volume="mf" transition.to="mp" curvature="0.3"/>
@@ -709,9 +611,8 @@
                     <dynamics date="82080.0" volume="mp" transition.to="p" curvature="0.3"/>
                     <dynamics date="100800.0" volume="mf" transition.to="mp" curvature="0.3"/>
                     <dynamics date="122400.0" volume="mp" transition.to="pp" curvature="0.3"/>
-                    <dynamics date="142560.0" volume="pp"/>
+                    <dynamics date="142560.0" volume="pp"/> 
                 </dynamicsMap>
-                
                 <articulationMap>
                     <style date="0.0" name.ref="articulation definitions" defaultArticulation="nonlegato"/>
                     <articulation date="44640.0" name.ref="accentuated legato"/>
@@ -729,8 +630,7 @@
                     <articulation date="122400.0" name.ref="accentuated legato"/>
                     <articulation date="126720.0" name.ref="accentuated legato"/>
                     <articulation date="131040.0" name.ref="accentuated legato"/>
-                    <!-- breathing mark on the last tone -->
-                    <articulation date="142560.0" name.ref="cesura"/>
+                    <articulation date="142560.0" name.ref="cesura"/> 
                 </articulationMap>
             </dated>
         </part>

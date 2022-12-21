@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+    <performance name="Robot" pulsesPerQuarter="780">
+        <global>
+            <header>
+                <articulationStyles>
+                    <styleDef name="Default Articulation Style">
+                        <articulationDef name="nonlegato" absoluteDurationChangeMs="-96.0"/>
+                    </styleDef>
+                </articulationStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <tempo date="0.0" bpm="110.0" beatLength="0.25"/> 
+                </tempoMap>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/> 
+                </articulationMap>
+            </dated>
+        </global>
+    </performance>
+    <performance name="Nagold Organ Performance" pulsesPerQuarter="780">
+        <global>
+            <header>
+                <articulationStyles>
+                    <styleDef name="Default Articulation Style">
+                        <articulationDef name="legato" relativeDuration="1.0"/>
+                        <articulationDef name="legatoStop" relativeDuration="0.8" relativeVelocity="0.7"/>
+                        <articulationDef name="accent" absoluteVelocityChange="25.0"/>
+                        <articulationDef name="legatissimo" absoluteDurationChange="250.0"/>
+                        <articulationDef name="marcato" relativeDuration="0.8" absoluteVelocityChange="25.0"/>
+                        <articulationDef name="portato" relativeDuration="0.8"/>
+                        <articulationDef name="sforzato" relativeDuration="0.8" absoluteVelocity="127.0"/>
+                        <articulationDef name="staccato" absoluteDurationMs="160.0" absoluteVelocityChange="-5.0"/>
+                        <articulationDef name="staccatissimo" absoluteDurationMs="140.0" absoluteVelocityChange="5.0"/>
+                        <articulationDef name="tenuto" relativeDuration="0.9" absoluteVelocityChange="12.0"/>
+                        <articulationDef name="standard articulation" absoluteDurationChange="-70.0"/>
+                        <articulationDef name="nonlegato" absoluteDurationChangeMs="-96.0"/>
+                        <articulationDef name="long breath" absoluteDurationChangeMs="-550.0"/>
+                        <articulationDef name="breath" absoluteDurationChangeMs="-300.0"/>
+                    </styleDef>
+                </articulationStyles>
+            </header>
+            <dated>
+                <tempoMap>
+                    <tempo date="0.0" bpm="105.0" transition.to="110.0" meanTempoAt="0.67407" beatLength="0.25" xml:id="mpmToolbox_fcf62c0a-ebf2-4bf2-b013-18b80168c162"/>
+                    <tempo date="3900.0" bpm="110.0" transition.to="80.0" meanTempoAt="0.87276" beatLength="0.25" xml:id="mpmToolbox_7d823621-0f68-4561-b197-ae5c52f6a813"/>
+                    <tempo date="7800.0" bpm="110.0" transition.to="90.0" meanTempoAt="0.88889" beatLength="0.25" xml:id="mpmToolbox_8d58bd0e-7a28-4ab4-985e-0b671e729c82"/>
+                    <tempo date="14040.0" bpm="135.0" beatLength="0.25" xml:id="mpmToolbox_f42b9490-ba75-4f90-89a1-a7e358ee65c3"/>
+                    <tempo date="17160.0" bpm="110.0" transition.to="80.0" meanTempoAt="0.83704" beatLength="0.25" xml:id="mpmToolbox_88a0c105-7989-4c84-b7b7-0f50512292db"/>
+                    <tempo date="24960.0" bpm="110.0" transition.to="90.0" meanTempoAt="0.88148" beatLength="0.25" xml:id="mpmToolbox_e30d7a72-c39a-45f0-8f74-4801f1ba9c56"/>
+                    <tempo date="31200.0" bpm="127.0" beatLength="0.25" xml:id="mpmToolbox_26d3103a-460b-4f27-82ce-b74a57b7bce2"/>
+                    <tempo date="34320.0" bpm="103.0" beatLength="0.25" xml:id="mpmToolbox_3002cfed-ca69-483f-8f80-84a8a497ea00"/>
+                    <tempo date="42120.0" bpm="106.0" transition.to="60.0" meanTempoAt="0.91111" beatLength="0.25" xml:id="mpmToolbox_7cae51a1-fb8a-4904-8790-abec0b514cac"/>
+                    <tempo date="49920.0" bpm="110.0" transition.to="70.0" meanTempoAt="0.9" beatLength="0.25" xml:id="mpmToolbox_286d8772-1f27-4732-b4a5-78f16dc98899"/>
+                    <tempo date="56160.0" bpm="98.0" beatLength="0.25" xml:id="mpmToolbox_c84d97d6-9d99-4942-8dd2-8e88ddbbbae2"/> 
+                </tempoMap>
+                <imprecisionMap.timing>
+                    <distribution.correlated.compensatingTriangle date="0.0" limit.lower="-100.0" limit.upper="100.0" degreeOfCorrelation="4.1" clip.lower="-100.0" clip.upper="100.0" milliseconds.timingBasis="300.0"/> 
+                </imprecisionMap.timing>
+                <asynchronyMap>
+                    <asynchrony date="0.0" milliseconds.offset="100.0"/> 
+                </asynchronyMap>
+            </dated>
+        </global>
+        <part name="Sopran" number="1" midi.channel="1" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="6240.0" name.ref="breath" noteid="#meico_a553d050-a411-4d14-a04d-1f01ee1bcb60" xml:id="mpmToolbox_3b969002-1aa3-4921-985d-2f5a750c6bce"/>
+                    <articulation date="14040.0" xml:id="mpmToolbox_224d7e75-1beb-4d7b-87fb-7f035bc5d125" name.ref="long breath" noteid="#meico_2918a735-0a98-4f74-a13a-cf3d3222e74b"/>
+                    <articulation date="23400.0" name.ref="breath" noteid="#meico_e40d1cdb-8d24-47c9-8b39-a0b3b711b9ec" xml:id="mpmToolbox_ecc130b4-3cfc-415d-85e9-e0b10a38b557"/>
+                    <articulation date="31200.0" xml:id="mpmToolbox_e50d0acf-b3b3-4e5f-8258-920ff6e41c4b" name.ref="long breath" noteid="#meico_7bbd4b56-3859-4476-b2eb-df5bcc96c4ee"/>
+                    <articulation date="40560.0" name.ref="breath" noteid="#meico_49c9ebc5-28c6-442a-9728-5859c526428c" xml:id="mpmToolbox_7aceeddc-562e-4781-87bc-26ed9e78fea8"/>
+                    <articulation date="48360.0" xml:id="mpmToolbox_036268cd-65ce-43a1-b61c-9e3a187be6ae" noteid="#meico_6ea1d367-dca9-41bb-8eb2-0ec697e726e9" absoluteDurationChangeMs="-300.0"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="Alt" number="2" midi.channel="0" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="6240.0" name.ref="breath" noteid="#meico_44fbd6ca-4ff8-4f1f-b9e2-a91a5804db1e" xml:id="mpmToolbox_eadd90d9-1c35-4bd7-ae53-694f22e35357"/>
+                    <articulation date="14040.0" xml:id="mpmToolbox_953c4d02-ef19-40bc-9cb2-9902d409649f" name.ref="long breath" noteid="#meico_dd494250-d8ea-4a85-91bb-e2f36e63bb74"/>
+                    <articulation date="23400.0" name.ref="breath" noteid="#meico_4cdead2f-598f-4dd3-aba0-d8bdeff60218" xml:id="mpmToolbox_f84e93f1-9d44-474f-8899-8385a0d405e2"/>
+                    <articulation date="31200.0" xml:id="mpmToolbox_e7b9c62b-9e19-4db3-88c8-404ffaed9762" name.ref="long breath" noteid="#meico_9f9a5f64-cde7-44de-9c43-19abd4fd6199"/>
+                    <articulation date="40560.0" name.ref="breath" noteid="#meico_60a9f670-d3fa-4755-8cb1-5d14a193d521" xml:id="mpmToolbox_40adc6fe-b61a-434d-98b6-1a2cb8b13796"/>
+                    <articulation date="48360.0" xml:id="mpmToolbox_e2bc4389-1d3c-47aa-95a6-3fc72acafdf8" noteid="#meico_e5cda05c-827d-4546-9b34-a98eac17c1f7" absoluteDurationChangeMs="-300.0"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="Tenor" number="3" midi.channel="2" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="6240.0" name.ref="breath" noteid="#meico_94774712-1d8a-4bfc-a9b5-30a9157dc1ed" xml:id="mpmToolbox_d8fca6f5-95f6-481c-99c0-9b7f290e1495"/>
+                    <articulation date="14040.0" xml:id="mpmToolbox_7f8208f2-09bc-4a1b-9713-02cabc1f8367" name.ref="long breath" noteid="#meico_85e694f1-354d-490f-9738-e2d38334566a"/>
+                    <articulation date="23400.0" name.ref="breath" noteid="#meico_2ec4d28b-cf1b-46c3-8867-e25a89664fd6" xml:id="mpmToolbox_a0880c4d-7cf7-4a3b-8367-253fe0b39b02"/>
+                    <articulation date="31200.0" xml:id="mpmToolbox_0eb865d8-73fd-4af7-883c-35458e10aa9d" name.ref="long breath" noteid="#meico_2170f0fb-deba-4faa-8f3e-b6ff9a46c20d"/>
+                    <articulation date="40560.0" name.ref="breath" noteid="#meico_4a6ad326-96bb-45a4-ad22-1ea07b1c0544" xml:id="mpmToolbox_fb8f4e2d-506d-402c-ab8c-8f4e46fc3f64"/>
+                    <articulation date="48360.0" xml:id="mpmToolbox_656353bb-ac99-4633-9121-e3e96c9a1550" noteid="#meico_a0dc613c-e499-4af2-bf06-5de1d5c9cbb9" absoluteDurationChangeMs="-300.0"/> 
+                </articulationMap>
+            </dated>
+        </part>
+        <part name="Bass" number="4" midi.channel="7" midi.port="0">
+            <header/>
+            <dated>
+                <articulationMap>
+                    <style date="0.0" name.ref="Default Articulation Style" defaultArticulation="nonlegato"/>
+                    <articulation date="6240.0" name.ref="breath" noteid="#meico_43d94d5d-cd59-49eb-b5d3-a7b03d6df5bf" xml:id="mpmToolbox_a01fa904-cbb3-44e9-afa1-a6e4fa7ede6e"/>
+                    <articulation date="14040.0" xml:id="mpmToolbox_5dbb634d-b738-4a4e-926f-25bfccbfe581" name.ref="long breath" noteid="#meico_503cfc9b-c735-4c9a-924a-dfbde42e6374"/>
+                    <articulation date="23400.0" name.ref="breath" noteid="#meico_30a24334-618e-4a01-b59b-d2d62c50f39f" xml:id="mpmToolbox_76388301-4550-4599-88c8-74f97f35b4ce"/>
+                    <articulation date="31200.0" xml:id="mpmToolbox_7e3ae5d8-3f13-41c0-bd0c-f16083b545f1" name.ref="long breath" noteid="#meico_4fbdea44-1f25-434f-88cb-0a242853f9b1"/>
+                    <articulation date="40560.0" name.ref="breath" noteid="#meico_250e1f61-8786-4f20-a2b6-e42060ebb164" xml:id="mpmToolbox_88c3f6cd-d279-4f48-b665-9485f18c3d31"/>
+                    <articulation date="48360.0" xml:id="mpmToolbox_0f12881c-105d-477d-ab6a-dea892fe0d5c" noteid="#meico_087ee673-0c82-4439-8ec0-fbae1638cf8b" absoluteDurationChangeMs="-300.0"/> 
+                </articulationMap>
+                <asynchronyMap>
+                    <asynchrony date="0.0" milliseconds.offset="0.0"/> 
+                </asynchronyMap>
+            </dated>
+        </part>
+    </performance>
+    <metadata>
+        <relatedResources>
+            <resource uri="Ich steh in meines Herren Hand.msm" type="msm"/>
+            <resource uri="Ich steh in meines Herren Hand.png" type="png"/>
+        </relatedResources>
+        <author>Axel Berndt</author>
+        <comment>The 'Nagold Organ Performance' was specifically prepared for the organ of the Evangelische Stadtkirche Nagold, Germany. The performance uses articulations to create cesuras at phrase endings. Phrasing is acheived solely with tempo variations. The imprecisionMap.timing adds a bit of humanizing. With asynchrony, all but the Bass part is delayed by 100 milliseconds to compensate for the 'sluggish' 16' and 32' registers of the pedals. This offset will sound odd on other instruments or when played back with MPM Toolbox's internal synthesis.</comment>
+    </metadata>
+</mpm>
