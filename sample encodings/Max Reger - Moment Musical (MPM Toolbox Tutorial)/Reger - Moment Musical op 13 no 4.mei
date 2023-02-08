@@ -278,8 +278,8 @@
                                             <note xml:id="n70" pname="d" accid.ges="f" oct="4"/>
                                         </chord>
                                         <chord xml:id="c26" dur="16">
-                                            <note xml:id="n71" pname="c" accid.ges="f" oct="5"/>
-                                            <note xml:id="n72" pname="c" accid.ges="f" oct="4"/>
+                                            <note xml:id="n71" pname="c" oct="5"/>
+                                            <note xml:id="n72" pname="c" oct="4"/>
                                         </chord>
                                     </beam>
                                 </layer>
