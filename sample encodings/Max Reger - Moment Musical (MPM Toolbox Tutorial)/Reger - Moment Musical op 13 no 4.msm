@@ -67,8 +67,8 @@
                 <note xml:id="n68" date="4320.0" midi.pitch="63.0" pitchname="e" accidentals="-1.0" octave="3.0" duration="180.0"/>
                 <note xml:id="n69" date="4500.0" midi.pitch="73.0" pitchname="d" accidentals="-1.0" octave="4.0" duration="180.0"/>
                 <note xml:id="n70" date="4500.0" midi.pitch="61.0" pitchname="d" accidentals="-1.0" octave="3.0" duration="180.0"/>
-                <note xml:id="n71" date="4680.0" midi.pitch="71.0" pitchname="c" accidentals="-1.0" octave="4.0" duration="180.0"/>
-                <note xml:id="n72" date="4680.0" midi.pitch="59.0" pitchname="c" accidentals="-1.0" octave="3.0" duration="180.0"/>
+                <note xml:id="n71" date="4680.0" midi.pitch="72.0" pitchname="c" accidentals="0.0" octave="4.0" duration="180.0"/>
+                <note xml:id="n72" date="4680.0" midi.pitch="60.0" pitchname="c" accidentals="0.0" octave="3.0" duration="180.0"/>
                 <note xml:id="n85" date="4860.0" midi.pitch="70.0" pitchname="b" accidentals="-1.0" octave="3.0" duration="540.0"/>
                 <note xml:id="n87" date="4860.0" midi.pitch="65.0" pitchname="f" accidentals="0.0" octave="3.0" duration="540.0"/>
                 <note xml:id="n88" date="4860.0" midi.pitch="58.0" pitchname="b" accidentals="-1.0" octave="2.0" duration="540.0"/>
