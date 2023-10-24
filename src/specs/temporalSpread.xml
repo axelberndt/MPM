@@ -24,7 +24,7 @@
         <tei:attDef ident="frameLength" usage="opt" mode="change">
             <tei:datatype>
                 <tei:dataRef name="double">
-                    <tei:dataFacet name="maxInclusive" value="0.0"/>
+                    <tei:dataFacet name="minInclusive" value="0.0"/>
                 </tei:dataRef>
             </tei:datatype>
             <tei:defaultVal>0.0</tei:defaultVal>
