@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-BSD%202--Clause-orange.svg)](https://github.com/axelberndt/MPM/blob/master/LICENSE)
 [![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://github.com/axelberndt/MPM/blob/master/LICENSE)
 
-Author: [Axel Berndt](https://github.com/axelberndt)<br>
+Author: [Axel Berndt](https://github.com/axelberndt) ([Paderborn University](https://www.muwi-detmold-paderborn.de/personen/professorinnen-und-professoren/prof-dr-ing-axel-berndt), Detmold)<br>
 Contributors: [Benjamin W. Bohl](https://github.com/bwbohl), [Peter Stadler](https://github.com/peterstadler), [Simon Waloschek](https://github.com/sonovice), [Niels Pfeffer](https://github.com/pfefferniels)<br>
 [Center of Music and Film Informatics](http://www.cemfi.de/), Detmold
 
