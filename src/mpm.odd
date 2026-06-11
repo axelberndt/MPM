@@ -14,7 +14,7 @@
             </tei:titleStmt>
             
             <tei:editionStmt>
-                <tei:edition n="3.0.0"/>
+                <tei:edition n="3.0.1"/>
             </tei:editionStmt>
             
             <tei:publicationStmt>
@@ -80,6 +80,13 @@
                     <tei:item>Added <tei:att>repetitions</tei:att> to <tei:gi>ornament</tei:gi> to set the amount of repetitions of the optional <tei:att>note.order</tei:att>'s repetition group.</tei:item>
                     <tei:item>Extended the <tei:att>note.order</tei:att> to support the usage of <tei:gi>note</tei:gi> from an <tei:gi>ornament</tei:gi>'s note pool, repetitions and chord-groups.</tei:item>
                     <tei:item>Added <tei:att>alignment</tei:att> to <tei:gi>temporalSpread</tei:gi> to position the frame of an <tei:gi>ornament</tei:gi> to the end of the principal note.</tei:item>
+                </tei:list>
+            </tei:change>
+            <tei:change status="3.0.1" who="Lars Engeln">
+                <tei:list>
+                    <tei:item>Sets <tei:att>midi.pitch</tei:att> of <tei:gi>note</tei:gi> to optional.</tei:item> 
+                    <tei:item>Adds schematron that only one pitch-specifying attribute of a <tei:gi>note</tei:gi> can be set.</tei:item>
+                    <tei:item>Adds schematron and remark that the <tei:att>note.order</tei:att> of an <tei:gi>ornament</tei:gi> need an ID of a MSM note (a note not being specified in the note pool) to function as principal note.</tei:item>
                 </tei:list>
             </tei:change>
         </tei:revisionDesc>

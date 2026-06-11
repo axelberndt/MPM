@@ -2,7 +2,8 @@
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <tei:elementSpec ident="ornament" module="mpm.core" mode="add" ns="http://www.cemfi.de/mpm/ns/1.0" 
-    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:schematron="http://purl.oclc.org/dsdl/schematron">
     <tei:gloss>ornament</tei:gloss>
     
     <tei:desc>An <tei:gi>ornament</tei:gi> describes how ornaments like arpeggios, trills, mordents, turns, tremolos, etc. are to be performed.</tei:desc>
@@ -18,6 +19,18 @@
     <tei:content>
         <tei:elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
     </tei:content>
+
+    <tei:constraintSpec ident="ornament-principal-note-ref" scheme="schematron">
+        <tei:desc>If <tei:att>note.order</tei:att> contains ID references, at least one must not refer to a child <tei:gi>note</tei:gi> element, so that a principal note (an MSM note) can be identified.</tei:desc>
+        <tei:constraint>
+            <schematron:rule context="attribute::note.order[contains(., '#')]">
+                <schematron:assert role="warning" test="
+                    some $id in tokenize(., '\s+')[starts-with(., '#')]
+                    satisfies not(substring($id, 2) = parent::*/*[local-name()='note']/@xml:id)
+                ">@note.order should contain at least one ID reference that is not an ID of a child note element (that can be treated as the principal note).</schematron:assert>
+            </schematron:rule>
+        </tei:constraint>
+    </tei:constraintSpec>
 
     <tei:attList>
         <tei:attDef ident="scale" mode="change" usage="opt">
@@ -63,5 +76,6 @@
         <tei:p>The use of attribute <tei:att>name.ref</tei:att> requires the presence of an <tei:gi>ornamentDef</tei:gi> of the same name within an ornament style. In the <tei:gi>ornamentationMap</tei:gi> there must be a <tei:gi>style</tei:gi> element switching to this style before the first reference to an <tei:gi>ornamentationDef</tei:gi> within that style.</tei:p>
         <tei:p>If the <tei:gi>ornament</tei:gi> has a pool of <tei:gi>note</tei:gi>s as children, these notes can be referenced in the <tei:att>note.order</tei:att> attribute for usage, but could also stay unused.
         Within the pool of notes, the notes' order have no semantic meaning, as the order is determined by the <tei:att>note.order</tei:att> attribute.</tei:p>
+        <tei:p>The <tei:att>note.order</tei:att> does need to contain an ID reference to a MSM note that is treated as the corresponding principal note. If no such note is found, all <tei:gi>note</tei:gi>'s need an explicit <tei:att>midi.pitch</tei:att>, or the ornament cannot be rendered correctly.</tei:p>
     </tei:remarks>
 </tei:elementSpec>

@@ -16,8 +16,15 @@
         <tei:empty/>
     </tei:content>
 
+    <tei:constraintSpec ident="note-pitch-mutual-exclusion" scheme="schematron">
+        <tei:desc>Only one of the three pitch-specifying attributes <tei:att>midi.pitch</tei:att>, <tei:att>interval.chromatic</tei:att>, or <tei:att>interval.diatonic</tei:att> may be set on a single <tei:gi>note</tei:gi> element.</tei:desc>
+        <tei:constraint>
+            <schematron:assert test="count(@midi.pitch | @interval.chromatic | @interval.diatonic) le 1">Only one of the attributes 'midi.pitch', 'interval.chromatic', or 'interval.diatonic' may be set on a note element.</schematron:assert>
+        </tei:constraint>
+    </tei:constraintSpec>
+
     <tei:attList>
-        <tei:attDef ident="midi.pitch" usage="req">
+        <tei:attDef ident="midi.pitch" usage="opt">
             <tei:gloss>note pitch according to MIDI</tei:gloss>
             <tei:datatype>
                 <tei:dataRef name="integer">
@@ -59,4 +66,6 @@
             </ornament>
         </egXML>
     </tei:exemplum>
+
+    <tei:remarks><tei:p>Only one of the three pitch-specifying attributes can be set on a single note element. Whereby <tei:att>midi.pitch</tei:att> is the most explicit, <tei:att>interval.chromatic</tei:att> is the more general interval specification, and <tei:att>interval.diatonic</tei:att> is context-sensitive.</tei:p></tei:remarks>
 </tei:elementSpec>
