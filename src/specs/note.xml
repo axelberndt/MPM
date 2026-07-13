@@ -57,11 +57,11 @@
             The second <tei:gi>ornament</tei:gi> defines a half tone trill ornament, starting with the auxiliary note (#n4) and landing on the principal note (#princNote2), with no repetition as the <tei:att>repetitions</tei:att> attribute is not specified and <tei:val>0</tei:val> by default.
         </tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <ornament date="0.0" name.ref="upper turn" note.order="#n2 #princNote1 #n3 #princNote1">
+            <ornament correspondence="#princNote1" date="0.0" name.ref="upper turn" note.order="#n2 #princNote1 #n3 #princNote1">
                 <note xml:id="n2" interval.chromatic="1.0"/>
                 <note xml:id="n3" interval.chromatic="-1.0"/>
             </ornament>
-            <ornament date="720.0" name.ref="trill" note.order="|: #n4 #princNote2 :|">
+            <ornament correspondence="#princNote2" date="720.0" name.ref="trill" note.order="|: #n4 #princNote2 :|">
                 <note xml:id="n4" interval.chromatic="1.0"/>
             </ornament>
         </egXML>

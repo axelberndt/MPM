@@ -89,6 +89,12 @@
                     <tei:item>Adds schematron and remark that the <tei:att>note.order</tei:att> of an <tei:gi>ornament</tei:gi> need an ID of a MSM note (a note not being specified in the note pool) to function as principal note.</tei:item>
                 </tei:list>
             </tei:change>
+            <tei:change status="3.0.2" who="Lars Engeln">
+                <tei:list>
+                    <tei:item>Adds <tei:att>correspondence</tei:att> to <tei:gi>ornament</tei:gi> to explicitly link it to a MSM element.</tei:item>
+                </tei:list>
+
+            </tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
     

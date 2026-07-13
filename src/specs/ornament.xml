@@ -21,13 +21,14 @@
     </tei:content>
 
     <tei:constraintSpec ident="ornament-principal-note-ref" scheme="schematron">
-        <tei:desc>If <tei:att>note.order</tei:att> contains ID references, at least one must not refer to a child <tei:gi>note</tei:gi> element, so that a principal note (an MSM note) can be identified.</tei:desc>
+        <tei:desc>If no <tei:att>correspondence</tei:att> is givin, <tei:att>note.order</tei:att> should contain ID references, at least one must not refer to a child <tei:gi>note</tei:gi> element, so that a principal note (an MSM note) can be identified.</tei:desc>
         <tei:constraint>
             <schematron:rule context="attribute::note.order[contains(., '#')]">
                 <schematron:assert role="warning" test="
-                    some $id in tokenize(., '\s+')[starts-with(., '#')]
-                    satisfies not(substring($id, 2) = parent::*/*[local-name()='note']/@xml:id)
-                ">@note.order should contain at least one ID reference that is not an ID of a child note element (that can be treated as the principal note).</schematron:assert>
+                    (some $id in tokenize(., '\s+')[starts-with(., '#')]
+                    satisfies not(substring($id, 2) = parent::*/*[local-name()='note']/@xml:id))
+                    or (parent::*/@correspondence and parent::*/@correspondence[starts-with(., '#')])
+                ">provide a @correpondence, or @note.order should contain at least one ID reference that is not an ID of a child note element (that can be treated as the principal note).</schematron:assert>
             </schematron:rule>
         </tei:constraint>
     </tei:constraintSpec>
@@ -53,6 +54,13 @@
             <tei:defaultVal>0</tei:defaultVal>
         </tei:attDef>
         
+        <tei:attDef ident="correspondence" usage="opt">
+            <tei:gloss>correspondence</tei:gloss>
+            <tei:desc>This attribute explicitly links the ornament to a MSM element. This is needed especially if the <tei:att>note.order</tei:att> does not contain a reference to a MSM note not being in the note pool. Best is to always provide a <tei:att>correspondence</tei:att>.</tei:desc>
+            <tei:datatype>
+                <tei:dataRef name="string"/>
+            </tei:datatype>
+        </tei:attDef>
     </tei:attList>
     
     <tei:exemplum>
@@ -64,9 +72,9 @@
             The third <tei:gi>ornament</tei:gi> applies a half tone (#n1) trill to the note (#princNote), repeating the trill pattern three times within the time frame of the ornament. So, it is played four times.
         </tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <ornament date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch"/>
+            <ornament correspondence="#msmNote1" date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch"/>
             <ornament date="720.0" name.ref="arpeggio" scale="20.0" note.order="#id1 #id3 #id2 #id4"/>
-            <ornament date="720.0" name.ref="trill" note.order="|: #n1 #princNote :|" repetitions="3">
+            <ornament correspondence="#princNote" date="720.0" name.ref="trill" note.order="|: #n1 #princNote :|" repetitions="3">
                 <note xml:id="n1" interval.chromatic="1.0"/>
             </ornament>
         </egXML>
