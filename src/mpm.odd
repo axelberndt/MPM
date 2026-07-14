@@ -725,13 +725,13 @@
                     <dated>
                         <ornamentationMap>
                             <style date="0.0" name.ref="your style"/>
-                            <ornament date="4860.0" name.ref="arpeggio" scale="10.0" note.order="#n96 #n97 #n98"/> 
+                            <ornament correspondence="#n96" date="4860.0" name.ref="arpeggio" scale="10.0" note.order="#n96 #n97 #n98"/> 
                         </ornamentationMap>
                     </dated>
                 </egXML>
                 
                 <tei:p>The <tei:gi>ornament</tei:gi> element's attribute <tei:att>scale</tei:att> (optional, default value is <tei:val>0.0</tei:val>) has the same function as in <tei:gi>accentuationPattern</tei:gi>. It scales the ornament's dynamics gradient to loudness/velocity values.
-                The <tei:gi>ornament</tei:gi> element may contain <tei:gi>note</tei:gi> elements, which define a pool of notes as alterations (e.g. grace notes, passing notes or trill notes) of the principal note via <tei:att>interval.chromatic</tei:att> in (chromatic) halftone steps (see the example of an trill and upper turn below) or via <tei:att>interval.diatonic</tei:att> in (diatonic) tone steps.
+                The <tei:gi>ornament</tei:gi> should always have a <tei:att>correspondence</tei:att> attribute (ID reference to an element) to point to the principal note. In addition, the <tei:gi>ornament</tei:gi> element may contain <tei:gi>note</tei:gi> elements, which define a pool of notes as alterations (e.g. grace notes, passing notes or trill notes) of the principal note via <tei:att>interval.chromatic</tei:att> in (chromatic) halftone steps (see the example of an trill and upper turn below) or via <tei:att>interval.diatonic</tei:att> in (diatonic) tone steps.
                 With <tei:att>note.order</tei:att> (optional) we can specify which notes in the current scope and note pool are part of the ornament and in which sequence. Possible values are "ascending pitch" (orders all notes at <tei:att>date</tei:att> by increasing pitch), "descending pitch" (opposite of "ascending pitch"), or a space separated list of note ID references as in the above code example. In the space separated list of note ID references, chords (notes to be played at the same time) are defined within "["/"]" (e.g. "[ #n97 #98 ]"), and a repetition group, that is repeated <tei:att>repetitions</tei:att> times, is defined with "|:"/":|" (e.g. "|: #n95 #96 :|"). These annotation symbols are space sparated as well.
                 
                 </tei:p>
@@ -754,10 +754,10 @@
                     <dated>
                         <ornamentationMap>
                             <style date="0.0" name.ref="my style"/>
-                            <ornament date="4860.0" name.ref="trill" note.order="|: #on1 #n96 :|" repetitions="3">
+                            <ornament correspondence="#n96" date="4860.0" name.ref="trill" note.order="|: #on1 #n96 :|" repetitions="3">
                                 <note xml:id="on1" interval.chromatic="2.0"/>
                             </ornament> 
-                            <ornament date="6300.0" name.ref="upper turn" note.order="#on2 #n97 #on3 #n97">
+                            <ornament correspondence="#n97" date="6300.0" name.ref="upper turn" note.order="#on2 #n97 #on3 #n97">
                                 <note xml:id="on2" interval.chromatic="2"/>
                                 <note xml:id="on3" interval.chromatic="-1"/>
                             </ornament>
