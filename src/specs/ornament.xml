@@ -12,6 +12,7 @@
         <tei:memberOf key="att.id"/>
         <tei:memberOf key="att.note.order"/>
         <tei:memberOf key="att.reference.name"/>
+        <tei:memberOf key="att.reference.noteid"/>
         <tei:memberOf key="att.scale"/>
         <tei:memberOf key="att.time.symbolic.date"/>
     </tei:classes>
@@ -21,13 +22,14 @@
     </tei:content>
 
     <tei:constraintSpec ident="ornament-principal-note-ref" scheme="schematron">
-        <tei:desc>If <tei:att>note.order</tei:att> contains ID references, at least one must not refer to a child <tei:gi>note</tei:gi> element, so that a principal note (an MSM note) can be identified.</tei:desc>
+        <tei:desc>If no <tei:att>noteid</tei:att> is givin, <tei:att>note.order</tei:att> should contain ID references, at least one must not refer to a child <tei:gi>note</tei:gi> element, so that a principal note (an MSM note) can be identified.</tei:desc>
         <tei:constraint>
             <schematron:rule context="attribute::note.order[contains(., '#')]">
                 <schematron:assert role="warning" test="
-                    some $id in tokenize(., '\s+')[starts-with(., '#')]
-                    satisfies not(substring($id, 2) = parent::*/*[local-name()='note']/@xml:id)
-                ">@note.order should contain at least one ID reference that is not an ID of a child note element (that can be treated as the principal note).</schematron:assert>
+                    (some $id in tokenize(., '\s+')[starts-with(., '#')]
+                    satisfies not(substring($id, 2) = parent::*/*[local-name()='note']/@xml:id))
+                    or (parent::*/@noteid and parent::*/@noteid[starts-with(., '#')])
+                ">provide a @noteid, or @note.order should contain at least one ID reference that is not an ID of a child note element (that can be treated as the principal note).</schematron:assert>
             </schematron:rule>
         </tei:constraint>
     </tei:constraintSpec>
@@ -52,21 +54,19 @@
             </tei:datatype>
             <tei:defaultVal>0</tei:defaultVal>
         </tei:attDef>
-        
     </tei:attList>
     
     <tei:exemplum>
         <tei:p>
             The first <tei:gi>ornament</tei:gi> applies an upwards arpeggiation to all notes (listed lowest to highest pitch) at date 0.0 with 
             a scaled dynamic gradient.
-            The second <tei:gi>ornament</tei:gi> defines an arpeggiation of the notes listed in
-            <tei:att>note.order</tei:att> in the given order.
+            The second <tei:gi>ornament</tei:gi> defines an arpeggiation of the notes listed in <tei:att>note.order</tei:att> in the given order.
             The third <tei:gi>ornament</tei:gi> applies a half tone (#n1) trill to the note (#princNote), repeating the trill pattern three times within the time frame of the ornament. So, it is played four times.
         </tei:p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <ornament date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch"/>
+            <ornament noteid="#msmNote1" date="0.0" name.ref="arpeggio" scale="20.0" note.order="ascending pitch"/>
             <ornament date="720.0" name.ref="arpeggio" scale="20.0" note.order="#id1 #id3 #id2 #id4"/>
-            <ornament date="720.0" name.ref="trill" note.order="|: #n1 #princNote :|" repetitions="3">
+            <ornament noteid="#princNote" date="720.0" name.ref="trill" note.order="|: #n1 #princNote :|" repetitions="3">
                 <note xml:id="n1" interval.chromatic="1.0"/>
             </ornament>
         </egXML>
@@ -75,7 +75,7 @@
     <tei:remarks>
         <tei:p>The use of attribute <tei:att>name.ref</tei:att> requires the presence of an <tei:gi>ornamentDef</tei:gi> of the same name within an ornament style. In the <tei:gi>ornamentationMap</tei:gi> there must be a <tei:gi>style</tei:gi> element switching to this style before the first reference to an <tei:gi>ornamentationDef</tei:gi> within that style.</tei:p>
         <tei:p>If the <tei:gi>ornament</tei:gi> has a pool of <tei:gi>note</tei:gi>s as children, these notes can be referenced in the <tei:att>note.order</tei:att> attribute for usage, but could also stay unused.
-        Within the pool of notes, the notes' order have no semantic meaning, as the order is determined by the <tei:att>note.order</tei:att> attribute.</tei:p>
-        <tei:p>The <tei:att>note.order</tei:att> does need to contain an ID reference to a MSM note that is treated as the corresponding principal note. If no such note is found, all <tei:gi>note</tei:gi>'s need an explicit <tei:att>midi.pitch</tei:att>, or the ornament cannot be rendered correctly.</tei:p>
+        Within the pool of notes, the order of these note elements have no semantic meaning, as the order is determined by the <tei:att>note.order</tei:att> attribute.</tei:p>
+        <tei:p>The <tei:gi>ornament</tei:gi> does need a <tei:att>noteid</tei:att> attribute as reference to the principal note (or element) to which the ornament applies. If not providing a <tei:att>noteid</tei:att>, the <tei:att>note.order</tei:att> does need to contain an ID reference to a MSM note that is treated as the corresponding principal note. If no such note is found, all <tei:gi>note</tei:gi>'s need an explicit <tei:att>midi.pitch</tei:att>, or the ornament cannot be rendered correctly.</tei:p>
     </tei:remarks>
 </tei:elementSpec>
