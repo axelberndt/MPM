@@ -5,7 +5,7 @@
     xmlns:relaxng="http://relaxng.org/ns/structure/1.0"
     xmlns:schematron="http://purl.oclc.org/dsdl/schematron"
     xmlns:xinclude="http://www.w3.org/2001/XInclude"
-    xmlns:mpm="http://www.cemfi.de/mpm/ns/1.0">
+    xmlns:mpm="https://github.com/axelberndt/MPM/ns/1.0">
     <tei:teiHeader>
         <tei:fileDesc>
             <tei:titleStmt>
@@ -93,7 +93,11 @@
                 <tei:list>
                     <tei:item>Adds <tei:att>noteid</tei:att> to <tei:gi>ornament</tei:gi> to explicitly link it to a MSM element.</tei:item>
                 </tei:list>
-
+            </tei:change>
+            <tei:change status="3.0.3" who="Lars Engeln">
+                <tei:list>
+                    <tei:item>Changes MPM namespace to https://github.com/axelberndt/MPM/ns/1.0 where the source is available.</tei:item>
+                </tei:list>
             </tei:change>
         </tei:revisionDesc>
     </tei:teiHeader>
@@ -860,14 +864,14 @@
         
         <tei:back>
             <tei:div>
-                <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="http://www.cemfi.de/mpm/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML http://www.cemfi.de/mpm/ns/1.0" source="tei:4.3.0">
+                <tei:schemaSpec ident="mpm" start="mpm" prefix="mpm." ns="https://github.com/axelberndt/MPM/ns/1.0" docLang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML https://github.com/axelberndt/MPM/ns/1.0" source="tei:4.3.0">
                     
                     <!-- declare the mpm namespace prefix, required to be done once before any Schematron tests are defined -->
                     <tei:constraintSpec scheme="schematron" ident="mpmPrefixDeclaration">
                         <tei:gloss>MPM namespace prefix declaration</tei:gloss>
                         <tei:desc>This declares the namespace prefix to be usesd in Schematron tests.</tei:desc>
                         <tei:constraint>
-                            <schematron:ns prefix="mpm" uri="http://www.cemfi.de/mpm/ns/1.0"/>
+                            <schematron:ns prefix="mpm" uri="https://github.com/axelberndt/MPM/ns/1.0"/>
                         </tei:constraint>
                     </tei:constraintSpec>
                     

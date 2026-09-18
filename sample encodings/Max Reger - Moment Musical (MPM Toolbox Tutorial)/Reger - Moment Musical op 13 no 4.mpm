@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://github.com/axelberndt/MPM/releases/latest/download/mpm.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+<mpm xmlns="https://github.com/axelberndt/MPM/ns/1.0">
     <metadata>
         <author>Axel Berndt</author>
         <comment>This MPM is part of a tutorial project for the MPM Toolbox. The audio recording and the corresponding annotated score were kindly authorized by pianist Maria Waloschek. The performance "Maria Waloschek score annotations" is constructed after the handwritten markings of the pianist in the score.</comment>

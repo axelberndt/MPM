@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+<mpm xmlns="https://github.com/axelberndt/MPM/ns/1.0">
     <metadata>
         <author>Pablo Carra</author>
         <comment>This MPM describes a performance of the Minuet No 2 by Johann Sebastian Bach from the first Cello Suite (BWV 1007). Heinrich Schiff's performance was used as inspiration, but this is in no way an attempt at reconstruction.</comment>
