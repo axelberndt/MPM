@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+<mpm xmlns="https://github.com/axelberndt/MPM/ns/1.0">
     <metadata>
         <author>Axel Berndt</author>
         <comment>Three performances of Georg Philipp Telemann's Grave from the Concert for Trumpet, Strings and Basso Continuo (TWV 51-D7). This movement is without trumpet. 1. Baroque: This performance has constant macro dynamics (mp) and distinct micro dynamics (metrical accentuation, articulation), slow tempo and slight inégalité (via rubato and articulation). 2. Fast: Not quite a typical performance for a Grave, this features a relatively fast tempo with distinct ritardandi on phrase endings coupled with similarly shaped macro dynamics. Articulation is generally short to support the more rhythmical idea of the performance. Micro timing (rubato) is snappy in so far as every two quarter notes are played in a short-long manner (do not let your ears fool you by the quasi-inverse articulation, long-short or legato-nonlegato). 3. Romantic: This performance features distinct macro dynamics and timing. Quite prominent is also the swing-like micro timing (rubato), more pronounced in the violins, less in the bass. It is based on a performance by Ludwig Güttler and the "Neues Bachisches Collegium Musicum". </comment>

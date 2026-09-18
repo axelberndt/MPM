@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+<mpm xmlns="https://github.com/axelberndt/MPM/ns/1.0">
     <metadata>
         <author>Axel Berndt</author>
         <comment>This MPM contains two performances. 'Like a robot' is a nearly minimal performance that defines only a constant tempo and a default articulation for all notes. 'Axel Berndt' is an elaborate performance that demonstrates the use of macro timing (tempo) and micro timing (rubato) features, Dynamics and articulation. The global asynchrony reduces the initial rest. Timing imprecision adds a certain amount of random offsets to all notes, emulating the non-systematic deviations from exact timing in human musicians' performances. This performance is annotated in the MPM Toolbox Score tab. An audio rendering of this performance is also provided.</comment>

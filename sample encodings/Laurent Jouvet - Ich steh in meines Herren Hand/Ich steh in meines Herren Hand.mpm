@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mpm xmlns="http://www.cemfi.de/mpm/ns/1.0">
+<mpm xmlns="https://github.com/axelberndt/MPM/ns/1.0">
     <performance name="Robot" pulsesPerQuarter="780">
         <global>
             <header>
